@@ -1,6 +1,7 @@
 plugins {
+    alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.compose.multiplatform)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlinx.serialization)
     id("com.google.devtools.ksp")
@@ -8,6 +9,66 @@ plugins {
 
 kotlin {
     jvmToolchain(21)
+
+    jvm()
+    androidTarget {
+        publishLibraryVariants("release")
+    }
+    iosX64()
+    iosArm64()
+    iosSimulatorArm64()
+
+    sourceSets {
+        commonMain.dependencies {
+            implementation(project(":domain"))
+            api(project(":core:foundation"))
+            implementation(project(":libs:schedule:core"))
+            implementation(project(":libs:schedule:rksi"))
+            implementation(project(":libs:schedule:dgtu"))
+            implementation(project(":libs:schedule:iubip"))
+            implementation(project(":libs:schedule:rinh"))
+
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.material3)
+            implementation(compose.ui)
+
+            implementation(libs.room.runtime)
+            implementation(libs.room.common)
+            implementation(libs.ktor.core)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.serialization.json)
+            implementation(libs.ktor.client.logging)
+
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose)
+
+            implementation(libs.ksoup.lite)
+            implementation(libs.kotlinx.datetime)
+            implementation(libs.kotlinx.serialization.json)
+        }
+        androidMain.dependencies {
+            implementation(libs.ktor.client.cio)
+            implementation(libs.koin.android)
+            implementation(libs.koin.androidx.compose)
+            implementation(libs.androidx.core.ktx)
+        }
+        jvmMain.dependencies {
+            implementation(libs.ktor.client.cio)
+            implementation(libs.sqlite.bundled)
+        }
+        commonTest.dependencies {
+            implementation(kotlin("test"))
+        }
+    }
+}
+
+dependencies {
+    add("kspAndroid", libs.room.compiler)
+    add("kspJvm", libs.room.compiler)
+    add("kspIosX64", libs.room.compiler)
+    add("kspIosArm64", libs.room.compiler)
+    add("kspIosSimulatorArm64", libs.room.compiler)
 }
 
 android {
@@ -25,41 +86,9 @@ android {
         targetCompatibility = JavaVersion.VERSION_21
     }
 
-    buildFeatures {
-        compose = true
-    }
-
     buildTypes {
         debug {
             isMinifyEnabled = false
         }
     }
-}
-
-dependencies {
-    implementation(project(":domain"))
-    implementation(project(":core:foundation"))
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.material3)
-    implementation(project(":libs:schedule:core"))
-    implementation(project(":libs:schedule:rksi"))
-    implementation(project(":libs:schedule:dgtu"))
-    implementation(project(":libs:schedule:iubip"))
-    implementation(project(":libs:schedule:rinh"))
-
-    ksp(libs.room.compiler)
-    implementation(libs.bundles.room)
-    implementation(libs.bundles.ktor)
-    implementation(libs.bundles.koin)
-
-    implementation(libs.ksoup.lite)
-    implementation(libs.kotlinx.datetime)
-    implementation(libs.kotlinx.serialization.json)
-
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.analytics)
-    implementation(libs.firebase.crashlytics)
-
-    implementation(libs.androidx.core.ktx)
 }

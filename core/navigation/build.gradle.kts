@@ -1,13 +1,50 @@
-
 plugins {
+    alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlinx.serialization)
+    alias(libs.plugins.compose.multiplatform)
+    alias(libs.plugins.kotlin.compose)
 }
 
 kotlin {
     jvmToolchain(21)
+
+    jvm()
+    androidTarget {
+        publishLibraryVariants("release")
+    }
+    iosX64()
+    iosArm64()
+    iosSimulatorArm64()
+    @OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)
+    wasmJs {
+        browser()
+    }
+
+    sourceSets {
+        commonMain.dependencies {
+            api(project(":core:foundation"))
+
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.material3)
+            implementation(compose.ui)
+            implementation(compose.materialIconsExtended)
+            implementation(compose.components.resources)
+
+            api(libs.jetbrains.navigation.compose)
+            implementation(libs.kotlinx.serialization.json)
+        }
+        jvmMain.dependencies {
+            implementation(kotlin("reflect"))
+        }
+        androidMain.dependencies {
+            implementation(kotlin("reflect"))
+        }
+        commonTest.dependencies {
+            implementation(kotlin("test"))
+        }
+    }
 }
 
 android {
@@ -15,42 +52,11 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        minSdk = 24
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
-    }
-
-    buildTypes {
-        debug {
-            isMinifyEnabled = false   // Отключить для отладки
-        }
+        minSdk = 26
     }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
     }
-
-    buildFeatures {
-        compose = true
-    }
-}
-
-dependencies {
-    implementation(kotlin("reflect"))
-    implementation(project(":core:foundation"))
-
-    implementation(libs.androidx.navigation.compose)
-    implementation(libs.kotlinx.serialization.json)
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
-    implementation(libs.androidx.material3.icons)
 }
