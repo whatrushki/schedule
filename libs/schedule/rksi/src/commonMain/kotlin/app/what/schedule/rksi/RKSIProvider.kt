@@ -14,7 +14,7 @@ import app.what.schedule.rksi.parser.XlsxReader
 class RKSIProvider(
     client: HttpClient,
     fileCache: FileCache = NoOpFileCache(),
-    baseUrl: String = "https://www.rksi.ru",
+    baseUrl: String = "https://rksi.ru",
     xlsxReader: XlsxReader? = null,
     log: ((String) -> Unit)? = null
 ) : InstitutionProvider {

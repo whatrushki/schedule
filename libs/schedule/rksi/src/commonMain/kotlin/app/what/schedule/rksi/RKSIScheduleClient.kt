@@ -60,7 +60,7 @@ object RKSILessonsSchedule {
 
 class RKSIScheduleClient(
     private val client: HttpClient,
-    private val baseUrl: String = "https://www.rksi.ru",
+    private val baseUrl: String = "https://rksi.ru",
     private val googleDriveParser: RKSIGoogleDriveParser = RKSIGoogleDriveParser(client),
     private val fileCache: FileCache = NoOpFileCache(),
     private val xlsxReader: XlsxReader? = null,

@@ -14,7 +14,7 @@ import kotlinx.datetime.toLocalDateTime
 
 class RKSINewsClient(
     private val client: HttpClient,
-    private val baseUrl: String = "https://www.rksi.ru"
+    private val baseUrl: String = "https://rksi.ru"
 ) : NewsClient {
 
     private fun formatImageUrl(url: String): String = when {
