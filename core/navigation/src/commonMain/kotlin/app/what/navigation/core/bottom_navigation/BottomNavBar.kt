@@ -16,6 +16,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.FloatingActionButtonDefaults
@@ -140,6 +147,122 @@ fun BottomNavBar(
                 onClick = action.block
             ) {
                 action.icon.Show(
+                    color = colorScheme.onPrimaryContainer,
+                    modifier = Modifier.size(28.dp)
+                )
+            }
+        }
+    }
+}
+
+@Composable
+fun SideNavBar(
+    modifier: Modifier = Modifier,
+    navigator: Navigator = rememberNavigator(),
+    screens: Iterable<NavItem>,
+    canGoBack: Boolean = false,
+    onBack: () -> Unit = {},
+    action: (NavDestination?) -> NavAction?
+) {
+    var currentDestination by useState(navigator.c.currentDestination)
+    val action = remember(currentDestination) { action(currentDestination) }
+
+    val selectedIndex = screens.indexOfFirst {
+        currentDestination != null && it.selected(currentDestination!!)
+    }
+
+    val containerWidth = 68.dp
+    val containerPaddings = 8.dp
+    val spacerBetween = 10.dp
+    val buttonSize = 52.dp
+
+    LaunchedEffect(Unit) {
+        navigator.c.addOnDestinationChangedListener { _, destination, _ ->
+            currentDestination = destination
+        }
+    }
+
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(12.dp),
+        modifier = modifier
+            .width(containerWidth)
+            .padding(vertical = 16.dp)
+            .systemBarsPadding()
+    ) {
+        if (canGoBack) {
+            IconButton(
+                onClick = onBack,
+                modifier = Modifier
+                    .size(52.dp)
+                    .clip(CircleShape)
+                    .background(colorScheme.surfaceContainerHigh)
+            ) {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                    contentDescription = "Назад",
+                    tint = colorScheme.onSurface
+                )
+            }
+        }
+
+        Box(
+            modifier = Modifier
+                .width(containerWidth)
+                .clip(RoundedCornerShape(34.dp))
+                .background(colorScheme.surfaceContainerHigh)
+                .padding(containerPaddings),
+            contentAlignment = Alignment.TopCenter
+        ) {
+            if (selectedIndex >= 0) {
+                val buttonHeight = (containerWidth - containerPaddings * 2).px
+                val indicatorOffset by animateIntAsState(
+                    targetValue = selectedIndex * (buttonHeight + spacerBetween.px),
+                    animationSpec = tween(
+                        durationMillis = 1000,
+                        easing = EaseOutExpo
+                    ),
+                    label = "indicatorOffsetVertical"
+                )
+
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .aspectRatio(1f)
+                        .offset { IntOffset(0, indicatorOffset) }
+                        .background(colorScheme.primary, CircleShape)
+                )
+            }
+
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(spacerBetween)
+            ) {
+                screens.forEachIndexed { index, item ->
+                    NavigationItem(
+                        item = item,
+                        selected = selectedIndex == index,
+                        onClick = {
+                            navigator.c.navigate(item.provider) {
+                                navigator.c.graph.findStartDestination().route?.let { startRoute ->
+                                    popUpTo(startRoute)
+                                }
+                                launchSingleTop = true
+                            }
+                        },
+                        modifier = Modifier.size(buttonSize)
+                    )
+                }
+            }
+        }
+
+        action?.let { act ->
+            FloatingActionButton(
+                containerColor = colorScheme.primaryContainer,
+                elevation = FloatingActionButtonDefaults.elevation(0.dp, 0.dp, 0.dp, 0.dp),
+                onClick = act.block
+            ) {
+                act.icon.Show(
                     color = colorScheme.onPrimaryContainer,
                     modifier = Modifier.size(28.dp)
                 )

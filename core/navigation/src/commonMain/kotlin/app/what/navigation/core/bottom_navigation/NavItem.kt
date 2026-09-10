@@ -52,7 +52,8 @@ inline fun <reified P : NavProvider> navItem(
 fun NavigationItem(
     item: NavItem,
     selected: Boolean,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier.fillMaxHeight().aspectRatio(1f)
 ) {
     val contentColor by animateColorAsState(
         targetValue = if (selected) colorScheme.onPrimary
@@ -67,9 +68,7 @@ fun NavigationItem(
     )
 
     Box(
-        modifier = Modifier
-            .fillMaxHeight()
-            .aspectRatio(1f)
+        modifier = modifier
             .clip(CircleShape)
             .clickable(
                 indication = null, // Убираем ripple эффект

@@ -2,6 +2,9 @@ package app.what.schedule.features.main
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -28,7 +31,10 @@ import app.what.navigation.core.NavComponent
 import app.what.navigation.core.NavProvider
 import app.what.navigation.core.NavigationHost
 import app.what.navigation.core.Registry
+import androidx.compose.runtime.setValue
+import app.what.foundation.ui.useState
 import app.what.navigation.core.bottom_navigation.BottomNavBar
+import app.what.navigation.core.bottom_navigation.SideNavBar
 import app.what.navigation.core.bottom_navigation.NavAction
 import app.what.navigation.core.bottom_navigation.NavItem
 import app.what.navigation.core.bottom_navigation.navItem
@@ -111,29 +117,65 @@ class MainFeature(
         CompositionLocalProvider(
             LocalNotificationService provides notificationService
         ) {
-            Box(
+            BoxWithConstraints(
                 Modifier
                     .fillMaxSize()
                     .background(colorScheme.background)
             ) {
-                NavigationHost(
-                    navigator = navigator,
-                    start = ScheduleProvider(),
-                    registry = childrenRegistry
-                )
-                
-                AnimatedEnter(
-    //                showBottomNavBar,
-                    modifier = Modifier.align(Alignment.BottomCenter)
-                ) {
-                    BottomNavBar(
-                        navigator = navigator,
-                        screens = children,
-                    ) {
-                        if (!devFeaturesEnabled!!) null
-                        else NavAction("Для разработчиков", WHATIcons.FrameBug) {
-                            Analytics.logDevPanelOpen()
-                            navigator.c.navigate(DevProvider)
+                val isWideScreen = maxWidth >= 760.dp
+                var canGoBack by useState(false)
+
+                LaunchedEffect(Unit) {
+                    navigator.c.addOnDestinationChangedListener { _, _, _ ->
+                        canGoBack = navigator.c.previousBackStackEntry != null
+                    }
+                }
+
+                if (isWideScreen) {
+                    Row(Modifier.fillMaxSize()) {
+                        SideNavBar(
+                            navigator = navigator,
+                            screens = children,
+                            canGoBack = canGoBack,
+                            onBack = { navigator.c.popBackStack() },
+                            modifier = Modifier.padding(start = 16.dp, end = 8.dp)
+                        ) {
+                            if (!devFeaturesEnabled!!) null
+                            else NavAction("Для разработчиков", WHATIcons.FrameBug) {
+                                Analytics.logDevPanelOpen()
+                                navigator.c.navigate(DevProvider)
+                            }
+                        }
+
+                        Box(Modifier.weight(1f).fillMaxHeight()) {
+                            NavigationHost(
+                                navigator = navigator,
+                                start = ScheduleProvider(),
+                                registry = childrenRegistry
+                            )
+                        }
+                    }
+                } else {
+                    Box(Modifier.fillMaxSize()) {
+                        NavigationHost(
+                            navigator = navigator,
+                            start = ScheduleProvider(),
+                            registry = childrenRegistry
+                        )
+
+                        AnimatedEnter(
+                            modifier = Modifier.align(Alignment.BottomCenter)
+                        ) {
+                            BottomNavBar(
+                                navigator = navigator,
+                                screens = children,
+                            ) {
+                                if (!devFeaturesEnabled!!) null
+                                else NavAction("Для разработчиков", WHATIcons.FrameBug) {
+                                    Analytics.logDevPanelOpen()
+                                    navigator.c.navigate(DevProvider)
+                                }
+                            }
                         }
                     }
                 }

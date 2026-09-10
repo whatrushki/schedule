@@ -15,6 +15,17 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.Row
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme.colorScheme
+import androidx.compose.material3.MaterialTheme.typography
+import androidx.compose.material3.Text
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.text.font.FontWeight
+import app.what.navigation.core.rememberNavigator
 import app.what.foundation.ui.Gap
 import app.what.foundation.ui.SegmentTab
 import app.what.foundation.ui.useState
@@ -57,7 +68,31 @@ fun DevFeature(
         selectedTabIndex = pagerState.currentPage
     }
     
-    Gap(8)
+    val navigator = rememberNavigator()
+
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 12.dp, vertical = 4.dp)
+    ) {
+        IconButton(onClick = { navigator.c.popBackStack() }) {
+            Icon(
+                imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                contentDescription = "Назад",
+                tint = colorScheme.onSurface
+            )
+        }
+        Gap(8)
+        Text(
+            text = "Панель разработчика",
+            style = typography.titleMedium,
+            fontWeight = FontWeight.Bold,
+            color = colorScheme.onSurface
+        )
+    }
+
+    Gap(4)
     
     SingleChoiceSegmentedButtonRow(
         space = (-4).dp,
