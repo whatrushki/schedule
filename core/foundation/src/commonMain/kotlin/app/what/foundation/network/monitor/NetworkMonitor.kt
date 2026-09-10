@@ -26,7 +26,7 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 
 private var nextRequestId = 0L
-private fun generateNetworkRequestId(): String = "${currentTimeMillis()}_${nextRequestId++}"
+private fun generateNetworkRequestId(): String = "${currentTimeMillis()}_${nextRequestId++}_${kotlin.random.Random.nextInt(1000, 9999)}"
 
 data class NetworkRequest(
     val id: String = generateNetworkRequestId(),
