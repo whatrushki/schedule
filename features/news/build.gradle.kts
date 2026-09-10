@@ -1,12 +1,49 @@
 plugins {
+    alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.compose.multiplatform)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlinx.serialization)
 }
 
 kotlin {
     jvmToolchain(21)
+
+    jvm()
+    androidTarget {
+        publishLibraryVariants("release")
+    }
+    iosX64()
+    iosArm64()
+    iosSimulatorArm64()
+
+    sourceSets {
+        commonMain.dependencies {
+            implementation(project(":domain"))
+            implementation(project(":data"))
+            api(project(":core:foundation"))
+            api(project(":core:navigation"))
+
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.material3)
+            implementation(compose.ui)
+            implementation(compose.materialIconsExtended)
+            implementation(compose.components.resources)
+
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose)
+            implementation(libs.kotlinx.serialization.json)
+            implementation(libs.kotlinx.datetime)
+            implementation(libs.bundles.coil)
+        }
+        androidMain.dependencies {
+            implementation(libs.androidx.core.ktx)
+        }
+        commonTest.dependencies {
+            implementation(kotlin("test"))
+        }
+    }
 }
 
 android {
@@ -24,38 +61,9 @@ android {
         targetCompatibility = JavaVersion.VERSION_21
     }
 
-    buildFeatures {
-        compose = true
-    }
-
     buildTypes {
         debug {
             isMinifyEnabled = false
         }
     }
-}
-
-dependencies {
-    implementation(project(":domain"))
-    implementation(project(":data"))
-    implementation(project(":core:foundation"))
-    implementation(project(":core:navigation"))
-
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
-    implementation(libs.androidx.material3.icons)
-    implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-
-    implementation(libs.bundles.koin)
-    implementation(libs.kotlinx.serialization.json)
-    implementation(libs.bundles.coil)
-    implementation(libs.androidx.navigation.compose)
-
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.analytics)
-    implementation(libs.firebase.crashlytics)
 }

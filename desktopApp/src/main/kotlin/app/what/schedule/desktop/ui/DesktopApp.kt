@@ -9,7 +9,6 @@ import io.ktor.client.HttpClient
 @Composable
 fun DesktopApp(httpClient: HttpClient, updateManager: DesktopAppUpdateManager) {
     App(
-        httpClient = httpClient,
         headerBanner = {
             UpdateBanner(
                 updateInfo = updateManager.updateInfo,

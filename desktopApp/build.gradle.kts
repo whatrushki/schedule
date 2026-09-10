@@ -9,6 +9,7 @@ kotlin {
     jvmToolchain(21)
 }
 
+
 dependencies {
     implementation(project(":domain"))
     implementation(project(":libs:schedule:core"))
@@ -27,6 +28,7 @@ dependencies {
     implementation(libs.koin.core)
     implementation(libs.kotlinx.datetime)
     implementation(libs.kotlinx.serialization.json)
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-swing")
 }
 
 compose.desktop {

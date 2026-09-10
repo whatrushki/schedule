@@ -114,7 +114,7 @@ class ScheduleWidget : GlanceAppWidget(), KoinComponent {
                 when (themeStyle) {
                     ThemeStyle.CustomColor -> DynamicScheme(Color(themeColor!!), isDarkTheme)
                     else -> DynamicScheme(Color(0xFF94FF28), isDarkTheme)
-                }.toColorScheme()
+                }.toColorScheme(isAmoled = false)
             )
             
             GlanceTheme(theme) {

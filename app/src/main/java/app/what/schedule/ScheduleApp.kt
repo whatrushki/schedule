@@ -5,6 +5,7 @@ import androidx.room.Room
 import app.what.foundation.data.settings.PreferenceStorage
 import app.what.foundation.services.AppLogger
 import app.what.foundation.services.AppLogger.Companion.Auditor
+import app.what.foundation.services.initialize
 import app.what.foundation.services.auto_update.AppUpdateManager
 import app.what.foundation.services.auto_update.GitHubUpdateManager
 import app.what.foundation.services.auto_update.GitHubUpdateService

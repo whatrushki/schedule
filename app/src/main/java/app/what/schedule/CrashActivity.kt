@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import androidx.core.content.FileProvider
 import app.what.foundation.services.AppLogger.Companion.Auditor
+import app.what.foundation.services.logFile
 import app.what.foundation.services.crash.CrashScreen
 import app.what.foundation.ui.Show
 import app.what.foundation.ui.controllers.rememberDialogController

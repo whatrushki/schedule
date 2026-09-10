@@ -16,19 +16,20 @@ kotlin {
     iosX64()
     iosArm64()
     iosSimulatorArm64()
-    @OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)
-    wasmJs {
-        browser()
-    }
 
     sourceSets {
         commonMain.dependencies {
             api(project(":domain"))
-            api(project(":libs:schedule:core"))
-            api(project(":libs:schedule:rksi"))
-            api(project(":libs:schedule:dgtu"))
-            api(project(":libs:schedule:iubip"))
-            api(project(":libs:schedule:rinh"))
+            api(project(":data"))
+            api(project(":core:foundation"))
+            api(project(":core:navigation"))
+            api(project(":features:main"))
+            api(project(":features:onboarding"))
+            api(project(":features:news"))
+            api(project(":features:settings"))
+            api(project(":features:account"))
+            api(project(":features:schedule"))
+            api(project(":features:dev"))
 
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -37,10 +38,16 @@ kotlin {
             implementation(compose.materialIconsExtended)
             implementation(compose.components.resources)
 
+            implementation(libs.materialKolor)
+            implementation(libs.bundles.coil)
             implementation(libs.bundles.ktor)
             implementation(libs.koin.core)
+            implementation(libs.koin.compose)
             implementation(libs.kotlinx.datetime)
             implementation(libs.kotlinx.serialization.json)
+        }
+        androidMain.dependencies {
+            implementation(libs.androidx.core.ktx)
         }
         commonTest.dependencies {
             implementation(kotlin("test"))
