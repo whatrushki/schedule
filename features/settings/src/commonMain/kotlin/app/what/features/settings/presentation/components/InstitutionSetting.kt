@@ -74,7 +74,7 @@ fun PreferenceStorage.Value<String>.asInstitutionChoice(
                     .padding(12.dp, 12.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                RadioButton(selected = selected!! == it.metadata.id, onClick = null)
+                RadioButton(selected = selected == it.metadata.id, onClick = null)
                 Gap(12)
                 Text(it.metadata.name)
             }

@@ -9,6 +9,7 @@ import app.what.schedule.data.remote.providers.iubip.IUBIP
 import app.what.schedule.data.remote.providers.rinh.RINH
 import app.what.schedule.data.remote.providers.rksi.RKSI
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 
 typealias AdditionalData = Map<String, Any?>
 
@@ -76,6 +77,11 @@ class InstitutionManager(
 ) {
     init {
         actualize()
+        scope.launch {
+            settings.institution.observe().collect {
+                actualize()
+            }
+        }
     }
     
     fun getInstitutions(): List<Institution.Factory> = insts
