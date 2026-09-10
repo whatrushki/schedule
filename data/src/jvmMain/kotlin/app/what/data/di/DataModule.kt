@@ -59,6 +59,7 @@ val dataModule = module {
     single { DGTUAccountClient(get()) }
     singleOf(::InstitutionManager)
     singleOf(::AppUtils)
+    single<app.what.schedule.rksi.parser.XlsxReader> { app.what.schedule.rksi.parser.JvmXlsxReader() }
     
     single<AppUpdateManager> {
         DesktopUpdateManager(
