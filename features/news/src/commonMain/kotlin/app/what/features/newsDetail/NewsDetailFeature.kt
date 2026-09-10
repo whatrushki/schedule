@@ -46,6 +46,11 @@ class NewsDetailFeature(
             listener(NewsDetailEvent.Init)
         }
         
-        NewsDetailView(viewState, listener)
+        val navigator = app.what.navigation.core.rememberNavigator()
+        NewsDetailView(
+            viewState,
+            listener,
+            onBack = { navigator.parent?.c?.popBackStack() ?: navigator.c.popBackStack() }
+        )
     }
 }

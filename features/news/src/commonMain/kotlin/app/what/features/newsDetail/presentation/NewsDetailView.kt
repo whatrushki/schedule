@@ -25,13 +25,17 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.shapes
+import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -79,7 +83,8 @@ import kotlin.math.min
 @Composable
 fun NewsDetailView(
     state: NewsDetailState,
-    listener: (NewsDetailEvent) -> Unit
+    listener: (NewsDetailEvent) -> Unit,
+    onBack: (() -> Unit)? = null
 ) = Column(
     Modifier
         .fillMaxSize()
@@ -95,7 +100,30 @@ fun NewsDetailView(
         ?: state.newListInfo.description?.let { buildAnnotatedString { append(it) } }
     var descriptionIsExpandable by useState(false)
     
-    Gap(120)
+    if (onBack != null) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 12.dp, vertical = 8.dp)
+        ) {
+            IconButton(onClick = onBack) {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                    contentDescription = "Назад",
+                    tint = colorScheme.onSurface
+                )
+            }
+            Gap(8)
+            Text(
+                text = "Назад к новостям",
+                style = typography.titleSmall,
+                color = colorScheme.onSurface
+            )
+        }
+    } else {
+        Gap(16)
+    }
     Box {
         AsyncImageWithFallback(
             url = state.newListInfo.bannerUrl,

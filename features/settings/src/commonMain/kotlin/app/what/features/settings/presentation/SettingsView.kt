@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
@@ -98,7 +100,12 @@ fun SettingsView(
     CompositionLocalProvider(LocalSettingsNavigator provides navigateToSubScreen) {
         val rootComponents = getSettingsList(appValues, appUtils)
         
-        Column(Modifier.fillMaxSize()) {
+        Column(
+            Modifier
+                .fillMaxSize()
+                .wrapContentWidth(Alignment.CenterHorizontally)
+                .widthIn(max = 760.dp)
+        ) {
             val headerTitle = if (pagerState.currentPage == 0) "Настройки"
             else subScreen?.title ?: ""
             

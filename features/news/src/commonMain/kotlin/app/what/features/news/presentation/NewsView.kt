@@ -10,7 +10,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.border
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.GridItemSpan
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.Button
@@ -44,66 +50,137 @@ import app.what.schedule.ui.components.Fallback
 import app.what.foundation.utils.Analytics
 import app.what.foundation.utils.DateTimeUtils
 
+import app.what.foundation.ui.applyIf
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NewsView(
     state: NewsState,
-    listener: (NewsEvent) -> Unit
+    listener: (NewsEvent) -> Unit,
+    modifier: Modifier = Modifier,
+    isWide: Boolean = false,
+    selectedNewId: String? = null,
+    onSelectNew: ((NewListItem) -> Unit)? = null
 ) = PullToRefreshBox(
     isRefreshing = state.newsState == RemoteState.Loading,
     onRefresh = { listener(NewsEvent.OnRefresh) },
+    modifier = modifier
 ) {
-    var selectedNewId by useState<String?>(null)
-    val lazyListState = rememberLazyListState()
-    
-    LaunchedEffect(lazyListState.canScrollForward) {
-        if (!lazyListState.canScrollForward && state.newsState != RemoteState.Loading)
-            listener(NewsEvent.OnListEndingScrolled)
-    }
-    
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        state = lazyListState,
-        verticalArrangement = Arrangement.spacedBy(12.dp)
-    ) {
-        item {
-            Box(
-                Modifier
-                    .animateContentSize()
-                    .height(116.dp)
-            )
+    if (isWide) {
+        val lazyGridState = rememberLazyGridState()
+
+        LaunchedEffect(lazyGridState.canScrollForward) {
+            if (!lazyGridState.canScrollForward && state.newsState != RemoteState.Loading)
+                listener(NewsEvent.OnListEndingScrolled)
         }
-        
-        item {
-            Text(
-                "Новости",
-                style = typography.headlineLarge,
-                fontWeight = FontWeight.Bold,
-                fontSize = 46.sp,
-                color = colorScheme.primary,
-                modifier = Modifier.padding(horizontal = 16.dp)
-            )
-        }
-        
-        when (state.newsState) {
-            is RemoteState.Error -> item {
-                Fallback(
-                    "Произошла непредвиденная ошибка",
-                    Modifier.fillMaxSize(),
-                    "Попробовать снова" to { listener(NewsEvent.OnRefresh) }
+
+        LazyVerticalGrid(
+            columns = GridCells.Adaptive(240.dp),
+            state = lazyGridState,
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            item(span = { GridItemSpan(maxLineSpan) }) {
+                Text(
+                    "Новости",
+                    style = typography.headlineLarge,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 32.sp,
+                    color = colorScheme.primary,
+                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 8.dp)
                 )
             }
-            
-            RemoteState.Success, RemoteState.Loading -> items(state.news, key = { it.id }) {
-                NewListItemView(Modifier.animateItem(), selectedNewId == it.id, it, {
-                    selectedNewId = if (selectedNewId != it.id) it.id else null
-                }) {
-                    Analytics.logNewsOpen(it.id, it.url, it.title)
-                    listener(NewsEvent.OnNewEnterClicked(it))
+
+            when (state.newsState) {
+                is RemoteState.Error -> item(span = { GridItemSpan(maxLineSpan) }) {
+                    Fallback(
+                        "Произошла непредвиденная ошибка",
+                        Modifier.fillMaxSize(),
+                        "Попробовать снова" to { listener(NewsEvent.OnRefresh) }
+                    )
                 }
+
+                RemoteState.Success, RemoteState.Loading -> items(state.news, key = { it.id }) {
+                    NewListItemView(
+                        modifier = Modifier.animateItem(),
+                        selected = selectedNewId == it.id,
+                        item = it,
+                        isWide = true,
+                        onClick = {
+                            Analytics.logNewsOpen(it.id, it.url, it.title)
+                            onSelectNew?.invoke(it)
+                        },
+                        onSelect = {
+                            Analytics.logNewsOpen(it.id, it.url, it.title)
+                            onSelectNew?.invoke(it)
+                        }
+                    )
+                }
+
+                else -> Unit
             }
-            
-            else -> Unit
+        }
+    } else {
+        var localSelectedNewId by useState<String?>(null)
+        val lazyListState = rememberLazyListState()
+
+        LaunchedEffect(lazyListState.canScrollForward) {
+            if (!lazyListState.canScrollForward && state.newsState != RemoteState.Loading)
+                listener(NewsEvent.OnListEndingScrolled)
+        }
+
+        LazyColumn(
+            modifier = Modifier.fillMaxSize(),
+            state = lazyListState,
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            item {
+                Box(
+                    Modifier
+                        .animateContentSize()
+                        .height(116.dp)
+                )
+            }
+
+            item {
+                Text(
+                    "Новости",
+                    style = typography.headlineLarge,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 46.sp,
+                    color = colorScheme.primary,
+                    modifier = Modifier.padding(horizontal = 16.dp)
+                )
+            }
+
+            when (state.newsState) {
+                is RemoteState.Error -> item {
+                    Fallback(
+                        "Произошла непредвиденная ошибка",
+                        Modifier.fillMaxSize(),
+                        "Попробовать снова" to { listener(NewsEvent.OnRefresh) }
+                    )
+                }
+
+                RemoteState.Success, RemoteState.Loading -> items(state.news, key = { it.id }) {
+                    NewListItemView(
+                        modifier = Modifier.animateItem(),
+                        selected = localSelectedNewId == it.id,
+                        item = it,
+                        isWide = false,
+                        onClick = {
+                            localSelectedNewId = if (localSelectedNewId != it.id) it.id else null
+                        },
+                        onSelect = {
+                            Analytics.logNewsOpen(it.id, it.url, it.title)
+                            listener(NewsEvent.OnNewEnterClicked(it))
+                        }
+                    )
+                }
+
+                else -> Unit
+            }
         }
     }
 }
@@ -113,15 +190,22 @@ fun NewListItemView(
     modifier: Modifier,
     selected: Boolean,
     item: NewListItem,
+    isWide: Boolean = false,
     onClick: () -> Unit,
     onSelect: () -> Unit
-) = Box(
-    modifier
-        .fillMaxWidth()
-        .clip(shapes.large)
-        .background(colorScheme.surfaceBright)
-        .bclick(block = onClick)
 ) {
+    val borderModifier = if (isWide && selected) {
+        Modifier.border(2.dp, colorScheme.primary, shapes.large)
+    } else Modifier
+
+    Box(
+        modifier
+            .fillMaxWidth()
+            .clip(shapes.large)
+            .background(colorScheme.surfaceBright)
+            .then(borderModifier)
+            .bclick(block = onClick)
+    ) {
     Column(
         modifier = Modifier
             .padding(12.dp, 14.dp, 12.dp, 12.dp)
@@ -131,12 +215,12 @@ fun NewListItemView(
             item.bannerUrl,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(150.dp)
+                .height(if (isWide) 130.dp else 150.dp)
                 .clip(shapes.large)
         )
-        
+
         Gap(8)
-        
+
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -148,45 +232,48 @@ fun NewListItemView(
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Medium
             )
-            
+
             Row {
-                item.tags.forEach {
+                item.tags.take(if (isWide) 1 else 3).forEach {
                     FilterChip(true, {}, label = {
                         Text(it.name)
                     })
                 }
             }
         }
-        
+
         Gap(4)
-        
+
         Text(
             item.title,
             color = colorScheme.onSurface,
-            fontSize = if (item.description?.isNotBlank() == true) 22.sp else 18.sp,
+            fontSize = if (isWide) 16.sp else if (item.description?.isNotBlank() == true) 22.sp else 18.sp,
             fontWeight = FontWeight.SemiBold,
+            maxLines = if (isWide) 2 else Int.MAX_VALUE,
+            overflow = TextOverflow.Ellipsis
         )
-        
+
         val description = item.description
         if (!description.isNullOrBlank()) {
             Gap(4)
-            
+
             Text(
                 description.trim(),
                 color = colorScheme.onSurfaceVariant,
-                maxLines = if (selected) Int.MAX_VALUE else 3,
+                maxLines = if (isWide) 2 else if (selected) Int.MAX_VALUE else 3,
                 overflow = TextOverflow.Ellipsis,
-                fontSize = 16.sp,
+                fontSize = 14.sp,
                 lineHeight = 18.sp
             )
         }
-        
-        if (selected) {
+
+        if (!isWide && selected) {
             Gap(12)
-            
+
             Button(onSelect) {
                 Text("Перейти")
             }
         }
     }
+}
 }
