@@ -464,7 +464,7 @@ private fun CommonViewLeftSegment(
 ) = Column(
     modifier = Modifier
         .fillMaxHeight()
-        .width(64.dp),
+        .width(72.dp),
     verticalArrangement = Arrangement.SpaceBetween
 ) {
     Column {
@@ -472,16 +472,20 @@ private fun CommonViewLeftSegment(
         
         Text(
             text = formatTime(startTime),
-            fontSize = 24.sp,
+            fontSize = 20.sp,
+            maxLines = 1,
+            softWrap = false,
             color = accentColor,
             style = typography.headlineSmall.copy(
-                fontWeight = FontWeight.ExtraBold
+                fontWeight = FontWeight.Bold
             )
         )
         
         Text(
             text = formatTime(endTime),
-            fontSize = 20.sp,
+            fontSize = 17.sp,
+            maxLines = 1,
+            softWrap = false,
             color = if (state == LessonState.REMOVED) colorScheme.secondary
             else colorScheme.onPrimaryContainer,
             style = typography.headlineSmall.copy(
