@@ -18,6 +18,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.withTimeoutOrNull
 import kotlinx.datetime.Clock
 import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDate
@@ -213,7 +214,9 @@ class RKSIScheduleClient(
         val replacementsDeferred: kotlinx.coroutines.Deferred<List<LessonDto>>? = if (showReplacements) {
             async(Dispatchers.Default) {
                 try {
-                    fetchReplacements(targetName, isGroup)
+                    withTimeoutOrNull(3500) {
+                        fetchReplacements(targetName, isGroup)
+                    } ?: emptyList()
                 } catch (e: Exception) {
                     log?.invoke("Ошибка получения замен: ${e.message}")
                     emptyList()
@@ -240,16 +243,17 @@ class RKSIScheduleClient(
             var lessons = dayElement.getElementsByTag("p").mapNotNull { lessonRaw ->
                 if (lessonRaw.html().contains("href")) return@mapNotNull null
                 val content = lessonRaw.html().split(Regex("<br\\s*/?>"))
-                if (content.size < 3) return@mapNotNull null
+                if (content.size < 2) return@mapNotNull null
 
                 val timeParts = content[0].split(Regex("[-—–]"))
-                val startTime = parseTime(timeParts.first().trim())
-                val endTime = parseTime(timeParts.last().trim())
+                if (timeParts.size < 2) return@mapNotNull null
+                val startTime = try { parseTime(timeParts.first().trim()) } catch (_: Exception) { return@mapNotNull null }
+                val endTime = try { parseTime(timeParts.last().trim()) } catch (_: Exception) { return@mapNotNull null }
                 val subject = content[1].replace("<.*?>".toRegex(), "").trim()
 
-                val thirdLine = content[2].split(", ")
-                val teacherOrGroup = thirdLine.firstOrNull()?.replace("<.*?>".toRegex(), "")?.trim() ?: ""
-                val audBuilding = thirdLine.lastOrNull()?.split(" ")?.lastOrNull()?.split("/") ?: emptyList()
+                val thirdLine = content.getOrNull(2)?.split(", ")
+                val teacherOrGroup = thirdLine?.firstOrNull()?.replace("<.*?>".toRegex(), "")?.trim() ?: ""
+                val audBuilding = thirdLine?.lastOrNull()?.split(" ")?.lastOrNull()?.split("/") ?: emptyList()
 
                 val aud = if (audBuilding.size > 1) audBuilding.dropLast(1).joinToString("/") else audBuilding.firstOrNull() ?: ""
                 val bld = audBuilding.lastOrNull() ?: "1"

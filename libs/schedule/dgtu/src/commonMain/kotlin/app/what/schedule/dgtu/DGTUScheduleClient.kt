@@ -34,8 +34,19 @@ class DGTUScheduleClient(
         return response
     }
 
+    private suspend fun getActiveYear(): String {
+        val years = getYears()
+        val now = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault())
+        val expectedYear = if (now.monthNumber >= 8) "${now.year}-${now.year + 1}" else "${now.year - 1}-${now.year}"
+        return when {
+            years.contains(expectedYear) -> expectedYear
+            years.size >= 2 -> years[years.size - 2]
+            else -> years.lastOrNull() ?: expectedYear
+        }
+    }
+
     override suspend fun getGroups(): List<GroupDto> {
-        val year = getYears().lastOrNull() ?: "2025-2026"
+        val year = getActiveYear()
         return client.get("$baseUrl/raspGrouplist?year=$year")
             .body<ApiResponse<List<DGTUApi.Models.DGTUGroup>>>()
             .data.map { GroupDto(id = it.id.toString(), name = it.name.trim(), course = it.kurs ?: 1) }
@@ -44,7 +55,7 @@ class DGTUScheduleClient(
     }
 
     override suspend fun getTeachers(): List<TeacherDto> {
-        val year = getYears().lastOrNull() ?: "2025-2026"
+        val year = getActiveYear()
         return client.get("$baseUrl/raspTeacherlist?year=$year")
             .body<ApiResponse<List<DGTUApi.Models.DGTUTeacher>>>()
             .data.map { teacher ->

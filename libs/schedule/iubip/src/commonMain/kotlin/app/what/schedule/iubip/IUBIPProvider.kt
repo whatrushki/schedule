@@ -9,7 +9,7 @@ import io.ktor.client.HttpClient
 
 class IUBIPProvider(
     private val client: HttpClient,
-    private val baseUrl: String = "https://www.iubip.ru",
+    private val baseUrl: String = "https://iubip.ru",
     private val log: ((String) -> Unit)? = null
 ) : InstitutionProvider {
 

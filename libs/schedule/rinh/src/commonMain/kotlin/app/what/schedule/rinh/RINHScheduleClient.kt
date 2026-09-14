@@ -76,12 +76,13 @@ class RINHScheduleClient(
 
     private fun RINHApi.Schedule.Responses.GetSchedule.toDaySchedules(): List<DayScheduleDto> {
         val now = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).date
+        val startOfWeek = now.minus(now.dayOfWeek.ordinal, kotlinx.datetime.DateTimeUnit.DAY)
 
         return weeks.flatMap { week ->
             week.days.filter { day ->
                 try {
                     val d = day.date.toLocalDate()
-                    d >= now && day.pairs.any { it.lessons.isNotEmpty() }
+                    d >= startOfWeek && day.pairs.any { it.lessons.isNotEmpty() }
                 } catch (_: Exception) {
                     false
                 }
