@@ -18,6 +18,7 @@ import kotlinx.serialization.json.Json
 import org.koin.core.context.startKoin
 
 fun main() {
+    System.setProperty("compose.scrolling.smooth.enabled", "false")
     startKoin {
         modules(dataModule, mainFeatureModule)
     }
