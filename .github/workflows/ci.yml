@@ -1,0 +1,49 @@
+name: CI - Test and Verify All Parsers
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+  workflow_dispatch:
+
+jobs:
+  test_parsers:
+    name: Test and Verify All Institution Parsers
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Compile and Test All Schedule Parsers (RKSI, DGTU, IUBIP, RINH)
+        run: |
+          ./gradlew :libs:schedule:core:jvmTest \
+                    :libs:schedule:rksi:jvmTest \
+                    :libs:schedule:dgtu:jvmTest \
+                    :libs:schedule:iubip:jvmTest \
+                    :libs:schedule:rinh:jvmTest \
+                    --stacktrace
+
+      - name: Compile Schedule Sync CLI Tool
+        run: ./gradlew :tools:schedule-sync:compileKotlin --stacktrace
+
+      - name: Compile Desktop and Android Targets
+        run: ./gradlew :desktopApp:compileKotlin :app:compileDebugKotlin --stacktrace

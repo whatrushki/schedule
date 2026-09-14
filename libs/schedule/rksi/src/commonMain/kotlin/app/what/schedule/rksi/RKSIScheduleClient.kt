@@ -223,7 +223,7 @@ class RKSIScheduleClient(
         val replacementsDeferred: kotlinx.coroutines.Deferred<List<LessonDto>>? = if (showReplacements) {
             async(Dispatchers.Default) {
                 try {
-                    withTimeoutOrNull(3500) {
+                    withTimeoutOrNull(25000) {
                         fetchReplacements(targetName, isGroup)
                     } ?: emptyList()
                 } catch (e: Exception) {
@@ -355,8 +355,8 @@ class RKSIScheduleClient(
         val folderId = resolveDriveFolderId()
         val rootItems = googleDriveParser.getFolderContent(folderId)
         val rootFiles = rootItems.files().onEach { it.additionalData["building"] = 1 }
-        val subFolderId = rootItems.folders().firstOrNull()?.id
-        val subItems = if (subFolderId != null) googleDriveParser.getFolderContent(subFolderId) else emptyList()
+        val subFolderId = rootItems.folders().firstOrNull()?.id ?: "1bdHCozxsjzy7BVd76sBTTK_ckhZ78wbo"
+        val subItems = googleDriveParser.getFolderContent(subFolderId)
         val subFiles = subItems.files().onEach { it.additionalData["building"] = 2 }
         val allFiles = rootFiles + subFiles
 
@@ -420,8 +420,11 @@ class RKSIScheduleClient(
         return parsedLists.filterNotNull().flatten()
     }
 
+    private var cachedDriveFolderId: String? = null
+
     private suspend fun resolveDriveFolderId(): String {
-        return try {
+        cachedDriveFolderId?.let { return it }
+        val id = try {
             val response = client.get("$baseUrl/schedule").bodyAsText()
             val document = Ksoup.parse(response)
             val tabletUrl = document.getElementsMatchingText("Планшетка").lastOrNull()?.attr("href")
@@ -430,5 +433,7 @@ class RKSIScheduleClient(
         } catch (_: Exception) {
             "1kUYiSAafghhYR0ARyXwPW1HZPpHcFIag"
         }
+        cachedDriveFolderId = id
+        return id
     }
 }

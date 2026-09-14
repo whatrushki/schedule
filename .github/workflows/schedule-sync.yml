@@ -13,13 +13,16 @@ on:
   workflow_dispatch:
     inputs:
       target:
-        description: 'Target institution (rksi, others, all)'
+        description: 'Target institution (all, rksi, dgtu, iubip, rinh, others)'
         required: true
         default: 'all'
         type: choice
         options:
           - all
           - rksi
+          - dgtu
+          - iubip
+          - rinh
           - others
 
 jobs:
@@ -58,8 +61,8 @@ jobs:
               # 18:00 MSK (15:00 UTC): sync others
               echo "target=others" >> $GITHUB_OUTPUT
             else
-              # 10:00, 13:00, 16:00, 19:00 MSK: sync RKSI replacements & schedule
-              echo "target=rksi" >> $GITHUB_OUTPUT
+              # Daytime updates: sync all institutions
+              echo "target=all" >> $GITHUB_OUTPUT
             fi
           fi
 
