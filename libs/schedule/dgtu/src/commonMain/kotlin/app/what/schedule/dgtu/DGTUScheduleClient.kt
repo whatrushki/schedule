@@ -45,20 +45,27 @@ class DGTUScheduleClient(
         }
     }
 
+    private var cachedGroups: List<GroupDto>? = null
+    private var cachedTeachers: List<TeacherDto>? = null
+
     override suspend fun getGroups(): List<GroupDto> {
+        cachedGroups?.let { return it }
         val year = getActiveYear()
-        return client.get("$baseUrl/raspGrouplist?year=$year")
+        val groups = client.get("$baseUrl/raspGrouplist?year=$year")
             .body<ApiResponse<List<DGTUApi.Models.DGTUGroup>>>()
-            .data.map { GroupDto(id = it.id.toString(), name = it.name.trim(), course = it.kurs ?: 1) }
+            ._data.orEmpty().map { GroupDto(id = it.id.toString(), name = it.name.trim(), course = it.kurs ?: 1) }
             .distinctBy { it.name }
             .sortedBy { it.name }
+        if (groups.isNotEmpty()) cachedGroups = groups
+        return groups
     }
 
     override suspend fun getTeachers(): List<TeacherDto> {
+        cachedTeachers?.let { return it }
         val year = getActiveYear()
-        return client.get("$baseUrl/raspTeacherlist?year=$year")
+        val teachers = client.get("$baseUrl/raspTeacherlist?year=$year")
             .body<ApiResponse<List<DGTUApi.Models.DGTUTeacher>>>()
-            .data.map { teacher ->
+            ._data.orEmpty().map { teacher ->
                 val parts = teacher.name.split(" ")
                 val formattedName = if (parts.size >= 3) {
                     "${parts[0]} ${parts[1].firstOrNull() ?: ""}.${parts[2].firstOrNull() ?: ""}."
@@ -67,6 +74,8 @@ class DGTUScheduleClient(
             }
             .distinctBy { it.name }
             .sortedBy { it.name }
+        if (teachers.isNotEmpty()) cachedTeachers = teachers
+        return teachers
     }
 
     override suspend fun getGroupSchedule(group: String, showReplacements: Boolean): List<DayScheduleDto> =
@@ -78,13 +87,23 @@ class DGTUScheduleClient(
     private suspend fun fetchSchedule(targetId: String, isTeacher: Boolean): List<DayScheduleDto> = coroutineScope {
         log?.invoke("Запрос расписания ДГТУ для ${if (isTeacher) "преподавателя" else "группы"}: $targetId")
 
+        val actualTargetId = if (targetId.all { it.isDigit() }) {
+            targetId
+        } else {
+            if (isTeacher) {
+                getTeachers().firstOrNull { it.name.equals(targetId, ignoreCase = true) || it.name.contains(targetId) }?.id ?: targetId
+            } else {
+                getGroups().firstOrNull { it.name.equals(targetId, ignoreCase = true) }?.id ?: targetId
+            }
+        }
+
         val paramName = if (isTeacher) "idTeacher" else "idGroup"
         
         try {
             // Запрос полного расписания без привязки к дате (возвращает все занятия семестра)
-            val fullUrl = "$baseUrl/Rasp?$paramName=$targetId"
+            val fullUrl = "$baseUrl/Rasp?$paramName=$actualTargetId"
             val response = client.get(fullUrl).body<ApiResponse<DGTUApi.Schedule.Get>>()
-            val schedules = response.data.rasp.toDaySchedules()
+            val schedules = response._data?.rasp?.toDaySchedules() ?: emptyList()
             if (schedules.isNotEmpty()) {
                 return@coroutineScope schedules
             }
@@ -99,9 +118,9 @@ class DGTUScheduleClient(
             async {
                 try {
                     val dateFormatted = weekDate.toString()
-                    val url = "$baseUrl/Rasp?$paramName=$targetId&sdate=$dateFormatted"
+                    val url = "$baseUrl/Rasp?$paramName=$actualTargetId&sdate=$dateFormatted"
                     val response = client.get(url).body<ApiResponse<DGTUApi.Schedule.Get>>()
-                    response.data.rasp.toDaySchedules()
+                    response._data?.rasp?.toDaySchedules() ?: emptyList()
                 } catch (e: Exception) {
                     log?.invoke("Ошибка загрузки недели $weekDate: ${e.message}")
                     emptyList()

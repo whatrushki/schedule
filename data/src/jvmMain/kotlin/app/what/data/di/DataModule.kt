@@ -147,6 +147,9 @@ val dataModule = module {
             }
             
             engine {
+                endpoint.apply {
+                    pipelineMaxSize = 1
+                }
                 https {
                     trustManager = object : X509TrustManager {
                         override fun checkClientTrusted(chain: Array<X509Certificate>, authType: String) {}

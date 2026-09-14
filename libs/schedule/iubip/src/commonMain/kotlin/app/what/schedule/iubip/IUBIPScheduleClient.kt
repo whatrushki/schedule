@@ -38,7 +38,10 @@ class IUBIPScheduleClient(
 
     private val cachedTeachers = mutableSetOf<String>()
 
+    private var cachedGroups: List<GroupDto>? = null
+
     override suspend fun getGroups(): List<GroupDto> {
+        cachedGroups?.let { return it }
         return try {
             val response = client.submitForm(
                 url = "$baseUrl/local/templates/univer/include/schedule/ajax/read-file-groups.php",
@@ -48,6 +51,10 @@ class IUBIPScheduleClient(
             )
 
             val text = response.bodyAsText()
+            if (text.trim().startsWith("<") || !text.trim().startsWith("{")) {
+                log?.invoke("ИУБиП вернул не JSON при запросе групп: ${text.take(100)}")
+                return emptyList()
+            }
             val json = Json { ignoreUnknownKeys = true; isLenient = true }
             val element = json.parseToJsonElement(text)
             val groups = mutableListOf<GroupDto>()
@@ -66,7 +73,9 @@ class IUBIPScheduleClient(
                 }
             }
 
-            groups.distinctBy { it.name }.sortedBy { it.name }
+            val result = groups.distinctBy { it.name }.sortedBy { it.name }
+            if (result.isNotEmpty()) cachedGroups = result
+            result
         } catch (e: Exception) {
             log?.invoke("Ошибка загрузки групп ИУБиП: ${e.message}")
             emptyList()
@@ -131,6 +140,10 @@ class IUBIPScheduleClient(
             )
 
             val text = response.bodyAsText()
+            if (text.trim().startsWith("<") || !text.trim().startsWith("{")) {
+                log?.invoke("ИУБиП вернул не JSON при запросе расписания: ${text.take(100)}")
+                return emptyList()
+            }
             val root = Json.parseToJsonElement(text)
             val groupElement = root.jsonObject[group]
                 ?: root.jsonObject.entries.firstOrNull { it.key.trim().equals(group.trim(), ignoreCase = true) }?.value
@@ -138,7 +151,7 @@ class IUBIPScheduleClient(
                 ?: return emptyList()
 
             val groupData = groupElement.jsonArray.getOrNull(1)?.jsonObject?.values?.toList() ?: return emptyList()
-            val weeksToParse = if (groupData.size > 1) groupData.take(2) else groupData
+            val weeksToParse = groupData
 
             weeksToParse.flatMap { weekElem ->
                 val weekArray = weekElem.jsonArray.toList()

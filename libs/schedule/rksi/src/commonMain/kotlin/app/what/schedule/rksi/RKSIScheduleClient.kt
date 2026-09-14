@@ -96,33 +96,32 @@ class RKSIScheduleClient(
         .lowercase()
 
 
-    override suspend fun getTeachers(): List<TeacherDto> = coroutineScope {
-        val mobileDeferred = async(Dispatchers.Default) {
-            try {
-                val response = client.get("$baseUrl/mobileschedule/teachers").bodyAsText()
-                Ksoup.parse(response).select("a[href*=\"teachers\"]")
-                    .map { TeacherDto(id = it.attr("href").split("/").last(), name = it.text().trim()) }
-            } catch (e: Exception) {
-                log?.invoke("Ошибка получения преподавателей с мобильной версии: ${e.message}")
-                emptyList()
-            }
-        }
-        val activeDeferred = async(Dispatchers.Default) {
-            try {
-                val response = client.get("$baseUrl/schedule").bodyAsText()
-                Ksoup.parse(response).select("select[name=\"teacher\"] option")
-                    .map { it.text().trim() }
-                    .filter { it.isNotEmpty() && !it.startsWith("_") && it.any { char -> char.isLetter() } }
-            } catch (e: Exception) {
-                log?.invoke("Ошибка получения активных преподавателей: ${e.message}")
-                emptyList()
-            }
+    private var cachedGroups: List<GroupDto>? = null
+    private var cachedTeachers: List<TeacherDto>? = null
+
+    override suspend fun getTeachers(): List<TeacherDto> {
+        cachedTeachers?.let { return it }
+
+        val mobileTeachers = try {
+            val response = client.get("$baseUrl/mobileschedule/teachers").bodyAsText()
+            Ksoup.parse(response).select("a[href*=\"teachers\"]")
+                .map { TeacherDto(id = it.attr("href").split("/").last(), name = it.text().trim()) }
+        } catch (e: Exception) {
+            log?.invoke("Ошибка получения преподавателей с мобильной версии: ${e.message}")
+            emptyList()
         }
 
-        val mobileTeachers = mobileDeferred.await()
-        val activeNames = activeDeferred.await()
+        val activeNames = try {
+            val response = client.get("$baseUrl/schedule").bodyAsText()
+            Ksoup.parse(response).select("select[name=\"teacher\"] option")
+                .map { it.text().trim() }
+                .filter { it.isNotEmpty() && !it.startsWith("_") && it.any { char -> char.isLetter() } }
+        } catch (e: Exception) {
+            log?.invoke("Ошибка получения активных преподавателей: ${e.message}")
+            emptyList()
+        }
 
-        if (activeNames.isNotEmpty()) {
+        val result = if (activeNames.isNotEmpty()) {
             val activeNormMap = activeNames.associateBy { normalizeName(it) }
             val filtered = mobileTeachers.mapNotNull { teacher ->
                 val canonical = activeNormMap[normalizeName(teacher.name)]
@@ -131,40 +130,43 @@ class RKSIScheduleClient(
                 } else null
             }
             if (filtered.isNotEmpty()) {
-                return@coroutineScope filtered.distinctBy { normalizeName(it.name) }.sortedBy { it.name }
+                filtered.distinctBy { normalizeName(it.name) }.sortedBy { it.name }
+            } else {
+                mobileTeachers.distinctBy { it.name.trim() }.sortedBy { it.name }
             }
+        } else {
+            mobileTeachers.distinctBy { it.name.trim() }.sortedBy { it.name }
         }
 
-        mobileTeachers.distinctBy { it.name.trim() }.sortedBy { it.name }
+        if (result.isNotEmpty()) {
+            cachedTeachers = result
+        }
+        return result
     }
 
-    override suspend fun getGroups(): List<GroupDto> = coroutineScope {
-        val mobileDeferred = async(Dispatchers.Default) {
-            try {
-                val response = client.get("$baseUrl/mobileschedule/groups").bodyAsText()
-                Ksoup.parse(response).select("a[href*=\"groups\"]")
-                    .map { GroupDto(id = it.attr("href").split("/").last(), name = it.text().trim()) }
-            } catch (e: Exception) {
-                log?.invoke("Ошибка получения групп с мобильной версии: ${e.message}")
-                emptyList()
-            }
-        }
-        val activeDeferred = async(Dispatchers.Default) {
-            try {
-                val response = client.get("$baseUrl/schedule").bodyAsText()
-                Ksoup.parse(response).select("select[name=\"group\"] option")
-                    .map { it.text().trim() }
-                    .filter { it.isNotEmpty() && !it.startsWith("_") && it.any { char -> char.isLetterOrDigit() } }
-            } catch (e: Exception) {
-                log?.invoke("Ошибка получения активных групп: ${e.message}")
-                emptyList()
-            }
+    override suspend fun getGroups(): List<GroupDto> {
+        cachedGroups?.let { return it }
+
+        val mobileGroups = try {
+            val response = client.get("$baseUrl/mobileschedule/groups").bodyAsText()
+            Ksoup.parse(response).select("a[href*=\"groups\"]")
+                .map { GroupDto(id = it.attr("href").split("/").last(), name = it.text().trim()) }
+        } catch (e: Exception) {
+            log?.invoke("Ошибка получения групп с мобильной версии: ${e.message}")
+            emptyList()
         }
 
-        val mobileGroups = mobileDeferred.await()
-        val activeNames = activeDeferred.await()
+        val activeNames = try {
+            val response = client.get("$baseUrl/schedule").bodyAsText()
+            Ksoup.parse(response).select("select[name=\"group\"] option")
+                .map { it.text().trim() }
+                .filter { it.isNotEmpty() && !it.startsWith("_") && it.any { char -> char.isLetterOrDigit() } }
+        } catch (e: Exception) {
+            log?.invoke("Ошибка получения активных групп: ${e.message}")
+            emptyList()
+        }
 
-        if (activeNames.isNotEmpty()) {
+        val result = if (activeNames.isNotEmpty()) {
             val activeNormMap = activeNames.associateBy { normalizeName(it) }
             val filtered = mobileGroups.mapNotNull { group ->
                 val canonical = activeNormMap[normalizeName(group.name)]
@@ -173,11 +175,18 @@ class RKSIScheduleClient(
                 } else null
             }
             if (filtered.isNotEmpty()) {
-                return@coroutineScope filtered.distinctBy { normalizeName(it.name) }.sortedBy { it.name }
+                filtered.distinctBy { normalizeName(it.name) }.sortedBy { it.name }
+            } else {
+                mobileGroups.distinctBy { it.name.trim() }.sortedBy { it.name }
             }
+        } else {
+            mobileGroups.distinctBy { it.name.trim() }.sortedBy { it.name }
         }
 
-        mobileGroups.distinctBy { it.name.trim() }.sortedBy { it.name }
+        if (result.isNotEmpty()) {
+            cachedGroups = result
+        }
+        return result
     }
 
     override suspend fun getGroupSchedule(group: String, showReplacements: Boolean): List<DayScheduleDto> =

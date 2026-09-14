@@ -27,7 +27,7 @@ class RINHScheduleClient(
         cachedGroupsAndTeachers?.let { return it }
         return try {
             val response = client
-                .get("$baseUrl/v1/schedule/search?format=json")
+                .get("$baseUrl/v1/schedule/search/?format=json")
                 .body<List<RINHApi.Schedule.Responses.ScheduleSearch>>()
             cachedGroupsAndTeachers = response
             response
@@ -67,7 +67,7 @@ class RINHScheduleClient(
         return try {
             val encodedValue = value.encodeURLPathPart()
             val schedule = client
-                .get("$baseUrl/v1/schedule/lessons/$encodedValue?format=json")
+                .get("$baseUrl/v1/schedule/lessons/$encodedValue/?format=json")
                 .body<RINHApi.Schedule.Responses.GetSchedule>()
             schedule.toDaySchedules()
         } catch (e: Exception) {
