@@ -15,7 +15,7 @@ import com.materialkolor.toColorScheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 
-private val DarkMonochromeScheme = darkColorScheme(
+val DarkMonochromeScheme = darkColorScheme(
     primary = Color(0xFFFFFFFF),
     onPrimary = Color(0xFF000000),
     primaryContainer = Color(0xFF262626),
@@ -48,7 +48,7 @@ private val DarkMonochromeScheme = darkColorScheme(
     onErrorContainer = Color(0xFFFFB4AB)
 )
 
-private val LightMonochromeScheme = lightColorScheme(
+val LightMonochromeScheme = lightColorScheme(
     primary = Color(0xFF000000),
     onPrimary = Color(0xFFFFFFFF),
     primaryContainer = Color(0xFFE5E5E5),
@@ -81,6 +81,24 @@ private val LightMonochromeScheme = lightColorScheme(
     onErrorContainer = Color(0xFF410002)
 )
 
+fun getAppColorScheme(
+    themeType: ThemeType?,
+    themeStyle: ThemeStyle?,
+    themeColor: ULong?,
+    isSystemDark: Boolean
+): androidx.compose.material3.ColorScheme {
+    val isDarkTheme = when (themeType) {
+        ThemeType.Dark -> true
+        ThemeType.System -> isSystemDark
+        else -> false
+    }
+    return when (themeStyle) {
+        ThemeStyle.Monochrome -> if (isDarkTheme) DarkMonochromeScheme else LightMonochromeScheme
+        ThemeStyle.CustomColor -> DynamicScheme(Color(themeColor ?: 0xFF94FF28u), isDarkTheme).toColorScheme(isAmoled = false)
+        else -> DynamicScheme(Color(0xFF94FF28), isDarkTheme).toColorScheme(isAmoled = false)
+    }
+}
+
 @Composable
 fun AppTheme(
     settings: AppValues = rememberAppValues(),
@@ -89,18 +107,15 @@ fun AppTheme(
     val themeType by settings.themeType.collect()
     val themeStyle by settings.themeStyle.collect()
     val themeColor by settings.themeColor.collect()
+    val isSystemDark = isSystemInDarkTheme()
     
     val isDarkTheme = when (themeType) {
         ThemeType.Dark -> true
-        ThemeType.System -> isSystemInDarkTheme()
+        ThemeType.System -> isSystemDark
         else -> false
     }
     
-    val theme = when (themeStyle) {
-        ThemeStyle.Monochrome -> if (isDarkTheme) DarkMonochromeScheme else LightMonochromeScheme
-        ThemeStyle.CustomColor -> DynamicScheme(Color(themeColor!!), isDarkTheme).toColorScheme(isAmoled = false)
-        else -> DynamicScheme(Color(0xFF94FF28), isDarkTheme).toColorScheme(isAmoled = false)
-    }
+    val theme = getAppColorScheme(themeType, themeStyle, themeColor, isSystemDark)
     
     WHATTheme(
         theme = theme,

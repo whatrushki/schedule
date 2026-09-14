@@ -29,6 +29,8 @@ dependencies {
     implementation(libs.kotlinx.datetime)
     implementation(libs.kotlinx.serialization.json)
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-swing")
+    implementation("net.java.dev.jna:jna:5.14.0")
+    implementation("net.java.dev.jna:jna-platform:5.14.0")
 }
 
 compose.desktop {
@@ -46,6 +48,13 @@ compose.desktop {
                 menu = true
                 shortcut = true
                 menuGroup = "WHAT-Schedule"
+                iconFile.set(project.file("src/main/resources/icons/icon.ico"))
+            }
+            linux {
+                iconFile.set(project.file("src/main/resources/icons/icon.png"))
+            }
+            macOS {
+                iconFile.set(project.file("src/main/resources/icons/icon.png"))
             }
         }
     }

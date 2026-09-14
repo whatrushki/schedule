@@ -40,12 +40,23 @@ class WasmScheduleDataLoader(
             val teachers = data.teachers.map { ScheduleSearch.Teacher(it.name, it.id) }
             groups + teachers
         } catch (_: Exception) {
-            val groups = httpClient.get("$dataBaseUrl/$code/groups.json").body<List<GroupDto>>()
-            val teachers = try {
-                httpClient.get("$dataBaseUrl/$code/teachers.json").body<List<TeacherDto>>()
-            } catch (_: Exception) { emptyList() }
-            groups.map { ScheduleSearch.Group(it.name, it.name) } +
-                teachers.map { ScheduleSearch.Teacher(it.name, it.id) }
+            try {
+                val relativeDataUrl = "${window.location.origin}${window.location.pathname.trimEnd('/')}/schedule/$code/data.json"
+                val data = httpClient.get(relativeDataUrl).body<WebInstitutionData>()
+                fullData = data
+                val groups = data.groups.map { ScheduleSearch.Group(it.name, it.name) }
+                val teachers = data.teachers.map { ScheduleSearch.Teacher(it.name, it.id) }
+                groups + teachers
+            } catch (_: Exception) {
+                val groups = try {
+                    httpClient.get("$dataBaseUrl/$code/groups.json").body<List<GroupDto>>()
+                } catch (_: Exception) { emptyList() }
+                val teachers = try {
+                    httpClient.get("$dataBaseUrl/$code/teachers.json").body<List<TeacherDto>>()
+                } catch (_: Exception) { emptyList() }
+                groups.map { ScheduleSearch.Group(it.name, it.name) } +
+                    teachers.map { ScheduleSearch.Teacher(it.name, it.id) }
+            }
         }
     }
 
@@ -61,7 +72,13 @@ class WasmScheduleDataLoader(
             currentFullData.schedules[search.name] ?: emptyList()
         } else {
             val safeId = search.name.replace("/", "_").replace("\\", "_")
-            httpClient.get("$dataBaseUrl/$code/groups/$safeId.json").body<List<DayScheduleDto>>()
+            try {
+                httpClient.get("$dataBaseUrl/$code/groups/$safeId.json").body<List<DayScheduleDto>>()
+            } catch (_: Exception) {
+                try {
+                    httpClient.get("${window.location.origin}${window.location.pathname.trimEnd('/')}/schedule/$code/groups/$safeId.json").body<List<DayScheduleDto>>()
+                } catch (_: Exception) { emptyList() }
+            }
         }
         return dtos.map { it.toDomain() }
     }
@@ -72,7 +89,12 @@ fun WebApp(httpClient: HttpClient, updateManager: WasmUpdateManager) {
     val dataBaseUrl = remember {
         val origin = window.location.origin
         val pathname = window.location.pathname.trimEnd('/')
-        "$origin$pathname/schedule"
+        val hostname = window.location.hostname
+        if (hostname == "localhost" || hostname == "127.0.0.1") {
+            "$origin$pathname/schedule"
+        } else {
+            "https://raw.githubusercontent.com/whatrushki/WHAT-Schedule-android/master/.github/schedule"
+        }
     }
 
     val dataLoader = remember(httpClient, dataBaseUrl) {
