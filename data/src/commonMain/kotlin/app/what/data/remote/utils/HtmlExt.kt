@@ -48,7 +48,9 @@ private fun AnnotatedString.Builder.appendNode(node: Node) {
                 } else {
                     appendNode(child)
                 }
-                if (isParagraph && child.tagName() == "p") {
+                if (child.tagName() == "br") {
+                    append("\n")
+                } else if (child.tagName() == "p") {
                     append("\n")
                 }
             }

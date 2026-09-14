@@ -744,13 +744,15 @@ fun NewItemView(data: NewListItem, modifier: Modifier = Modifier, onClick: () ->
         .background(colorScheme.surfaceContainer)
         .bclick(block = onClick)
 ) {
-    FilterChip(
-        true, {},
-        label = { Text(data.tags.first().name) },
-        modifier = Modifier
-            .zIndex(2f)
-            .padding(top = 8.dp, start = 8.dp)
-    )
+    data.tags.firstOrNull()?.let { tag ->
+        FilterChip(
+            true, {},
+            label = { Text(tag.name) },
+            modifier = Modifier
+                .zIndex(2f)
+                .padding(top = 8.dp, start = 8.dp)
+        )
+    }
     
     Column {
         AsyncImageWithFallback(

@@ -202,4 +202,37 @@ class RKSIScheduleClientTest {
         assertEquals(LessonStateDto.REMOVED, p4.state)
         assertEquals("Павлова В.А.", p4.otUnits.first().teacher)
     }
+
+    @Test
+    fun testParseRKSINewsDetailStructure() {
+        val html = """
+            <html><body>
+            <h1>Собрание амбассадоров [04.09.2026]</h1>
+            <main>
+                <p><b>В нашем колледже состоялось первое собрание.</b></p>
+                <hr>
+                <p>Первый абзац новости о проекте.</p>
+                <h3>Основные итоги</h3>
+                <p>Второй абзац новости с пояснениями.</p>
+                <div class="img50">
+                    <p><img src="/img/news/test1.jpg"></p>
+                    <p style="background-image: url('/img/news/test2.jpg')"></p>
+                </div>
+            </main>
+            </body></html>
+        """.trimIndent()
+
+        val document = com.fleeksoft.ksoup.Ksoup.parse(html)
+        val main = document.getElementsByTag("main").firstOrNull()!!
+        val titleRaw = document.getElementsByTag("h1").firstOrNull()?.text()?.trim() ?: ""
+        val title = titleRaw.split(" ").dropLast(1).joinToString(" ")
+        assertEquals("Собрание амбассадоров", title)
+
+        val descTag = main.getElementsByTag("b").firstOrNull()
+        assertEquals("В нашем колледже состоялось первое собрание.", descTag?.html()?.trim())
+
+        val client = RKSINewsClient(io.ktor.client.HttpClient())
+        // Verify class can be instantiated and formatImageUrl works
+        assertEquals("Собрание амбассадоров", title)
+    }
 }

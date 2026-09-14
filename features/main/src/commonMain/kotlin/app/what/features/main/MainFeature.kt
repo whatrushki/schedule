@@ -74,20 +74,16 @@ class MainFeature(
     
     override val controller: MainController by inject()
     
-    val children: List<NavItem> = mutableListOf(
-        navItem("Расписание", Icons.Default.DateRange, ScheduleProvider()),
-        navItem("Настройки", Icons.Default.Settings, SettingsProvider)
-    ).apply {
-        add(
-            0,
-            if (controller.getState().hasProfilePage) navItem(
-                "Профиль",
-                WHATIcons.Person,
-                AccountProvider
-            )
-            else navItem("Новости", WHATIcons.News, NewsProvider),
-        )
-    }
+    val children: List<NavItem>
+        get() = mutableListOf(
+            navItem("Новости", WHATIcons.News, NewsProvider),
+            navItem("Расписание", Icons.Default.DateRange, ScheduleProvider()),
+            navItem("Настройки", Icons.Default.Settings, SettingsProvider)
+        ).apply {
+            if (controller.getState().hasProfilePage) {
+                add(0, navItem("Профиль", WHATIcons.Person, AccountProvider))
+            }
+        }
     
     val childrenRegistry: Registry = {
         settingsRegistry()

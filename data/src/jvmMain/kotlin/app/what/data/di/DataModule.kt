@@ -55,7 +55,7 @@ val dataModule = module {
     }
     single { AppValues(get<KeyValueStorage>()) } bind PreferenceStorage::class
     singleOf(::GoogleDriveParser)
-    single<FileCache> { InMemoryFileCache() }
+    single<FileCache> { app.what.data.cache.JvmFileCache() }
     single { DGTUAccountClient(get()) }
     singleOf(::InstitutionManager)
     singleOf(::AppUtils)

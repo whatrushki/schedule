@@ -62,4 +62,40 @@ class DGTUScheduleClientTest {
         val secondLesson = data.rasp[1]
         assertEquals("Петров П.П.", secondLesson.teacher)
     }
+
+    @Test
+    fun testParseDGTUNewsDetail() {
+        val html = """
+            <html><body>
+            <div class="detail-hero__head">
+                <h1>Заседание ученого совета</h1>
+                <div class="detail-hero__subtitle">Краткое описание заседания</div>
+                <div class="detail-hero__img"><img src="/upload/hero.jpg"/></div>
+                <time datetime="14.09.2026">14 сентября</time>
+            </div>
+            <div class="text-content">
+                <p>Первый абзац новости ДГТУ.</p>
+                <div class="gallery">
+                    <div class="gallery__thumbs-item"><img src="/upload/g1.jpg"/></div>
+                    <div class="gallery__thumbs-item"><img src="/upload/g2.jpg"/></div>
+                </div>
+                <blockquote>
+                    <div class="blockquote__author-name">Иванов И.И.</div>
+                    <div class="blockquote__author-post">Ректор</div>
+                    <div class="blockquote__content"><p>Цитата ректора</p></div>
+                </blockquote>
+            </div>
+            </body></html>
+        """.trimIndent()
+
+        val doc = com.fleeksoft.ksoup.Ksoup.parse(html)
+        val title = doc.getElementsByTag("h1").firstOrNull()?.text()?.trim()
+        assertEquals("Заседание ученого совета", title)
+
+        val subtitle = doc.getElementsByClass("detail-hero__subtitle").firstOrNull()?.html()?.trim()
+        assertEquals("Краткое описание заседания", subtitle)
+
+        val heroImg = doc.getElementsByClass("detail-hero__img").firstOrNull()?.getElementsByTag("img")?.firstOrNull()?.attr("src")
+        assertEquals("/upload/hero.jpg", heroImg)
+    }
 }

@@ -16,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -105,7 +106,7 @@ class NewsFeature(
                     ) {
                         val activeItem = selectedItem ?: viewState.news.firstOrNull()
                         if (activeItem != null && (viewState.newsState != RemoteState.Loading || viewState.news.isNotEmpty())) {
-                            key("${activeItem.id}_$refreshKey") {
+                            val detailFeature = remember(activeItem.id, refreshKey) {
                                 NewsDetailFeature(
                                     NewsDetailProvider(
                                         activeItem.id,
@@ -115,8 +116,9 @@ class NewsFeature(
                                         activeItem.description
                                     ),
                                     showBack = false
-                                ).content(Modifier.fillMaxSize())
+                                )
                             }
+                            detailFeature.content(Modifier.fillMaxSize())
                         } else if (viewState.newsState == RemoteState.Loading) {
                             val shimmer = rememberShimmer()
                             Column(

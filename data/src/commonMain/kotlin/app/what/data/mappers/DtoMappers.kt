@@ -8,6 +8,7 @@ import kotlinx.datetime.Instant
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
+import app.what.data.remote.utils.fromHtml
 
 fun GroupDto.toDomain(): Group = Group(name = name, id = id)
 fun TeacherDto.toDomain(): Teacher = Teacher(name = name, id = id)
@@ -75,15 +76,44 @@ fun NewListItemDto.toDomain(): NewListItem = NewListItem(
     tags = emptyList()
 )
 
-fun NewDetailDto.toDomain(): NewItem = NewItem(
-    id = id,
-    url = sourceUrl ?: id,
-    bannerUrl = images.firstOrNull(),
-    title = title,
-    description = null,
-    tags = emptyList(),
-    timestamp = date,
-    content = NewContent.Item.Text(AnnotatedString(fullText))
-)
+fun NewDetailDto.toDomain(): NewItem {
+    val domainDescription = descriptionHtml?.let { AnnotatedString.Companion.fromHtml(it) }
+        ?.takeIf { it.isNotBlank() }
+
+    val domainContent: NewContent = if (contentBlocks.isNotEmpty()) {
+        val domainBlocks = contentBlocks.map { block ->
+            when (block) {
+                is NewContentBlockDto.Text -> NewContent.Item.Text(AnnotatedString.Companion.fromHtml(block.html))
+                is NewContentBlockDto.Subtitle -> NewContent.Item.Subtitle(block.text)
+                is NewContentBlockDto.Image -> NewContent.Item.Image(block.url)
+                is NewContentBlockDto.ImageCarousel -> NewContent.Item.ImageCarousel(block.urls)
+                is NewContentBlockDto.UnsortedList -> NewContent.Item.UnsortedList(block.items)
+                is NewContentBlockDto.SortedList -> NewContent.Item.SortedList(block.items)
+                is NewContentBlockDto.Quote -> NewContent.Item.Quote(
+                    AuthorInfo(block.author.avatarUrl, block.author.name, block.author.role),
+                    block.text
+                )
+                is NewContentBlockDto.Info -> NewContent.Item.Info(block.text)
+                is NewContentBlockDto.VideoVK -> NewContent.Item.Video.VK(block.url)
+            }
+        }
+        NewContent.Container.Column(domainBlocks)
+    } else if (fullText.isNotBlank()) {
+        NewContent.Item.Text(AnnotatedString.Companion.fromHtml(fullText))
+    } else {
+        NewContent.Container.Column(emptyList())
+    }
+
+    return NewItem(
+        id = id,
+        url = sourceUrl ?: id,
+        bannerUrl = bannerUrl ?: images.firstOrNull(),
+        title = title,
+        description = domainDescription,
+        tags = emptyList(),
+        timestamp = date,
+        content = domainContent
+    )
+}
 
 private fun urlOrFallback(id: String): String = id

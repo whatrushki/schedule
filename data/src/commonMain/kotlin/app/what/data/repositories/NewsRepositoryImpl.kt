@@ -18,6 +18,8 @@ class NewsRepositoryImpl(
     private val api
         get() = institutionManager.getSavedInstitution().orThrow { "No provider selected" }
 
+    private val detailsCache = mutableMapOf<String, NewItem>()
+
     override suspend fun getNews(page: Int): List<NewListItem> {
         val newsTag = buildTag(LogScope.NEWS, LogCat.NET)
         Auditor.debug(newsTag, "Запрос новостей, страница: $page")
@@ -29,9 +31,16 @@ class NewsRepositoryImpl(
 
     override suspend fun getNewDetail(id: String): NewItem {
         val newsTag = buildTag(LogScope.NEWS, LogCat.NET)
-        Auditor.debug(newsTag, "Запрос деталей новости: $id")
+        val currentApi = api
+        val cacheKey = "${currentApi.metadata.id}_$id"
+        detailsCache[cacheKey]?.let {
+            Auditor.debug(newsTag, "Детали новости из кеша: ${it.title}")
+            return it
+        }
 
-        val newsDetail = api.newsService.getNewDetail(id)
+        Auditor.debug(newsTag, "Запрос деталей новости: $id")
+        val newsDetail = currentApi.newsService.getNewDetail(id)
+        detailsCache[cacheKey] = newsDetail
         Auditor.debug(newsTag, "Детали новости загружены: ${newsDetail.title}")
         return newsDetail
     }

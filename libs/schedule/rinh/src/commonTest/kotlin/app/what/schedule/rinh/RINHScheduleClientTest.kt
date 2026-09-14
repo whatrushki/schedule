@@ -88,4 +88,38 @@ class RINHScheduleClientTest {
         assertEquals("Базы данных", lesson.subject)
         assertEquals("Иванов И.И.", lesson.teacher.name)
     }
+
+    @Test
+    fun testParseRINHNewsDetail() {
+        val sampleHtml = """
+            <html>
+                <body>
+                    <div id="content-news">
+                        <h1>В РИНХе прошла научная конференция</h1>
+                        <div id="text-news">
+                            <p>В актовом зале собрались ведущие экономисты региона.</p>
+                            <p>Обсуждались перспективы цифровой экономики.</p>
+                        </div>
+                        <div class="slider-news">
+                            <a href="/upload/photo1.jpg"><img src="/upload/photo1_thumb.jpg"/></a>
+                            <a href="/upload/photo2.jpg"><img src="/upload/photo2_thumb.jpg"/></a>
+                        </div>
+                    </div>
+                </body>
+            </html>
+        """.trimIndent()
+
+        val doc = com.fleeksoft.ksoup.Ksoup.parse(sampleHtml)
+        val title = doc.selectFirst("#content-news h1")?.text()?.trim() ?: ""
+        val textContainer = doc.selectFirst("#text-news")
+        val paragraphs = textContainer?.select("p")?.map { it.text().trim() }?.filter { it.isNotEmpty() } ?: emptyList()
+        val images = doc.select(".slider-news a")
+            .map { it.attr("href").trim() }
+            .filter { it.isNotEmpty() }
+
+        assertEquals("В РИНХе прошла научная конференция", title)
+        assertEquals(2, paragraphs.size)
+        assertEquals("В актовом зале собрались ведущие экономисты региона.", paragraphs[0])
+        assertEquals(2, images.size)
+    }
 }

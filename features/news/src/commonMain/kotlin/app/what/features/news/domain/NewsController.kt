@@ -14,21 +14,35 @@ import app.what.schedule.features.news.domain.models.NewsState
 import app.what.foundation.utils.LogCat
 import app.what.foundation.utils.LogScope
 import app.what.foundation.utils.buildTag
+import kotlinx.coroutines.Job
+
 class NewsController(
     private val apiRepository: NewsRepository,
     private val settings: AppValues
 ) : UIController<NewsState, NewsAction, NewsEvent>(
     NewsState()
 ) {
-    override fun obtainEvent(viewEvent: NewsEvent) = when (viewEvent) {
-        NewsEvent.Init -> {}
-        NewsEvent.OnListEndingScrolled -> requestNextPage()
-        NewsEvent.OnRefresh -> requestNextPage(true)
-        is NewsEvent.OnNewEnterClicked -> selectNew(viewEvent.value)
+    private var loadJob: Job? = null
+
+    override fun obtainEvent(viewEvent: NewsEvent) {
+        when (viewEvent) {
+            NewsEvent.Init -> {
+                if (viewState.news.isEmpty() && viewState.newsState !is RemoteState.Loading) {
+                    requestNextPage(rollback = true)
+                }
+            }
+            NewsEvent.OnListEndingScrolled -> requestNextPage()
+            NewsEvent.OnRefresh -> requestNextPage(true)
+            is NewsEvent.OnNewEnterClicked -> selectNew(viewEvent.value)
+        }
     }
     
     init {
-        requestNextPage()
+        viewModelScope.launchSafe(debug = debugMode) {
+            settings.institution.observe().collect {
+                requestNextPage(rollback = true)
+            }
+        }
     }
     
     val debugMode: Boolean
@@ -39,6 +53,13 @@ class NewsController(
     }
     
     private fun requestNextPage(rollback: Boolean = false) {
+        if (!rollback && (loadJob?.isActive == true || viewState.newsState == RemoteState.Loading)) {
+            return
+        }
+        if (rollback) {
+            loadJob?.cancel()
+        }
+
         val newsTag = buildTag(LogScope.NEWS, LogCat.NET)
         val page = if (rollback) 1 else viewState.page
         Auditor.debug(newsTag, "Запрос новостей, страница: $page")
@@ -51,7 +72,7 @@ class NewsController(
             )
         }
         
-        viewModelScope.launchSafe(
+        loadJob = viewModelScope.launchSafe(
             debug = debugMode, onFailure = {
                 Auditor.err(newsTag, "Ошибка загрузки новостей", it)
                 updateState { copy(newsState = RemoteState.Error(it)) }
@@ -61,9 +82,10 @@ class NewsController(
             Auditor.debug(newsTag, "Новости загружены, количество: ${data.size}")
             
             updateState {
+                val combinedNews = if (rollback) data else (viewState.news + data).distinctBy { it.id }
                 copy(
                     newsState = RemoteState.Success,
-                    news = if (rollback) data else viewState.news + data,
+                    news = combinedNews,
                     page = page + 1
                 )
             }

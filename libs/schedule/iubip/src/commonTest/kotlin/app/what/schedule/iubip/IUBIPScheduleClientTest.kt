@@ -53,4 +53,37 @@ class IUBIPScheduleClientTest {
         assertEquals("09:50", times.first().end.toString())
         assertEquals("20:20", times.last().start.toString())
     }
+
+    @Test
+    fun testParseIUBIPNewsDetail() {
+        val sampleHtml = """
+            <html>
+                <body>
+                    <h1 class="detail-news__title">Студенты ИУБиП победили в хакатоне</h1>
+                    <div class="detail-news__date">14.09.2026</div>
+                    <div class="detail-news__text">
+                        <p>В Ростове-на-Дону завершился масштабный IT-хакатон.</p>
+                        <p>Команда института заняла первое место.</p>
+                    </div>
+                    <div class="univer-gallery__sliders">
+                        <img src="/upload/photo1.jpg" />
+                        <img src="/upload/photo2.jpg" />
+                    </div>
+                </body>
+            </html>
+        """.trimIndent()
+
+        val doc = com.fleeksoft.ksoup.Ksoup.parse(sampleHtml)
+        val title = doc.selectFirst(".detail-news__title")?.text()?.trim() ?: ""
+        val textContainer = doc.selectFirst(".detail-news__text")
+        val paragraphs = textContainer?.select("p")?.map { it.text().trim() }?.filter { it.isNotEmpty() } ?: emptyList()
+        val galleryImgs = doc.select(".univer-gallery__sliders img")
+            .map { it.attr("src").trim() }
+            .filter { it.isNotEmpty() }
+
+        assertEquals("Студенты ИУБиП победили в хакатоне", title)
+        assertEquals(2, paragraphs.size)
+        assertEquals("В Ростове-на-Дону завершился масштабный IT-хакатон.", paragraphs[0])
+        assertEquals(2, galleryImgs.size)
+    }
 }
