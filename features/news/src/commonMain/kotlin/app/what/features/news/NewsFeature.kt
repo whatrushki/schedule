@@ -62,11 +62,19 @@ class NewsFeature(
         BoxWithConstraints(modifier = modifier.fillMaxSize()) {
             val isWide = maxWidth >= 840.dp
             var selectedItem by useState<NewListItem?>(null)
+            var refreshKey by useState(0)
 
             LaunchedEffect(viewState.news) {
-                if (selectedItem == null && viewState.news.isNotEmpty()) {
-                    selectedItem = viewState.news.firstOrNull()
+                if (viewState.news.isNotEmpty()) {
+                    selectedItem = viewState.news.firstOrNull { it.id == selectedItem?.id } ?: viewState.news.firstOrNull()
                 }
+            }
+
+            val wrappedListener: (NewsEvent) -> Unit = { event ->
+                if (event == NewsEvent.OnRefresh) {
+                    refreshKey++
+                }
+                listener(event)
             }
             
             if (isWide) {
@@ -80,7 +88,7 @@ class NewsFeature(
                     ) {
                         NewsView(
                             state = viewState,
-                            listener = listener,
+                            listener = wrappedListener,
                             isWide = true,
                             selectedNewId = selectedItem?.id,
                             onSelectNew = { selectedItem = it }
@@ -96,8 +104,8 @@ class NewsFeature(
                             .background(colorScheme.surface)
                     ) {
                         val activeItem = selectedItem ?: viewState.news.firstOrNull()
-                        if (activeItem != null) {
-                            key(activeItem.id) {
+                        if (activeItem != null && (viewState.newsState != RemoteState.Loading || viewState.news.isNotEmpty())) {
+                            key("${activeItem.id}_$refreshKey") {
                                 NewsDetailFeature(
                                     NewsDetailProvider(
                                         activeItem.id,
@@ -140,7 +148,7 @@ class NewsFeature(
                 }
             } else {
                 Column(Modifier.fillMaxSize()) {
-                    NewsView(viewState, listener)
+                    NewsView(viewState, wrappedListener)
                 }
             }
             

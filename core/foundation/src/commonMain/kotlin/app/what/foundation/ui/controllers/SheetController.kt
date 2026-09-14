@@ -48,14 +48,14 @@ fun rememberSheetHostController(
 
             override fun open(full: Boolean) {
                 opened = true
-                if (full) {
-                    scope.launch {
+                scope.launch {
+                    try {
+                        if (full) sheetState?.expand() else sheetState?.show()
+                    } catch (_: Exception) {
+                        delay(100)
                         try {
-                            sheetState?.expand()
-                        } catch (_: Exception) {
-                            delay(100)
-                            try { sheetState?.expand() } catch (_: Exception) {}
-                        }
+                            if (full) sheetState?.expand() else sheetState?.show()
+                        } catch (_: Exception) {}
                     }
                 }
             }

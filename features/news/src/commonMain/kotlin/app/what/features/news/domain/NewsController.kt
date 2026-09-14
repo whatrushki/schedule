@@ -46,7 +46,8 @@ class NewsController(
         updateState {
             copy(
                 newsState = RemoteState.Loading,
-                page = page
+                page = page,
+                news = if (rollback) emptyList() else viewState.news
             )
         }
         

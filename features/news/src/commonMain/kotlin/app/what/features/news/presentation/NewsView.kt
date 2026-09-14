@@ -246,7 +246,7 @@ fun NewListItemView(
         modifier
             .fillMaxWidth()
             .clip(shapes.large)
-            .background(colorScheme.surfaceBright)
+            .background(colorScheme.surfaceContainer)
             .then(borderModifier)
             .bclick(block = onClick)
     ) {
@@ -332,7 +332,7 @@ fun NewListItemShimmer(
         modifier = modifier
             .fillMaxWidth()
             .clip(shapes.large)
-            .background(colorScheme.surfaceBright)
+            .background(colorScheme.surfaceContainer)
     ) {
         Column(
             modifier = Modifier.padding(12.dp, 14.dp, 12.dp, 12.dp)

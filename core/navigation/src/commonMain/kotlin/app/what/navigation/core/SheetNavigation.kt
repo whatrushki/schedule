@@ -135,6 +135,12 @@ fun ProvideGlobalSheet(
 
     LaunchedEffect(Unit) { controller.setSheetState(state) }
 
+    LaunchedEffect(state.currentValue) {
+        if (state.currentValue == SheetValue.Hidden && controller.opened) {
+            controller.close()
+        }
+    }
+
     content()
 
     if (controller.opened) ModalBottomSheet(

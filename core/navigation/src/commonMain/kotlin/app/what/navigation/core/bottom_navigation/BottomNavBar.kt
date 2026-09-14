@@ -241,6 +241,7 @@ fun SideNavBar(
         }
 
         action?.let { act ->
+            Gap(12)
             FloatingActionButton(
                 containerColor = colorScheme.primaryContainer,
                 elevation = FloatingActionButtonDefaults.elevation(0.dp, 0.dp, 0.dp, 0.dp),
