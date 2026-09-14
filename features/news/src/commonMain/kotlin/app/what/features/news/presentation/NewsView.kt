@@ -19,14 +19,21 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.shapes
 import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.Text
-import androidx.compose.material3.pulltorefresh.PullToRefreshBox
+import androidx.compose.ui.graphics.Brush
+import app.what.foundation.ui.AppPullToRefresh
+import app.what.foundation.ui.animations.rememberShimmer
+import app.what.foundation.utils.isDesktop
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -50,6 +57,7 @@ import app.what.schedule.ui.components.Fallback
 import app.what.foundation.utils.Analytics
 import app.what.foundation.utils.DateTimeUtils
 
+import androidx.compose.foundation.layout.width
 import app.what.foundation.ui.applyIf
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -61,47 +69,68 @@ fun NewsView(
     isWide: Boolean = false,
     selectedNewId: String? = null,
     onSelectNew: ((NewListItem) -> Unit)? = null
-) = PullToRefreshBox(
-    isRefreshing = state.newsState == RemoteState.Loading,
-    onRefresh = { listener(NewsEvent.OnRefresh) },
-    modifier = modifier
 ) {
-    if (isWide) {
-        val lazyGridState = rememberLazyGridState()
+    val shimmer = rememberShimmer()
 
-        LaunchedEffect(lazyGridState.canScrollForward) {
-            if (!lazyGridState.canScrollForward && state.newsState != RemoteState.Loading)
-                listener(NewsEvent.OnListEndingScrolled)
-        }
+    AppPullToRefresh(
+        isRefreshing = state.newsState == RemoteState.Loading,
+        onRefresh = { listener(NewsEvent.OnRefresh) },
+        modifier = modifier
+    ) {
+        if (isWide) {
+            val lazyGridState = rememberLazyGridState()
 
-        LazyVerticalGrid(
-            columns = GridCells.Adaptive(240.dp),
-            state = lazyGridState,
-            modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
-            horizontalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            item(span = { GridItemSpan(maxLineSpan) }) {
-                Text(
-                    "Новости",
-                    style = typography.headlineLarge,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 32.sp,
-                    color = colorScheme.primary,
-                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 8.dp)
-                )
+            LaunchedEffect(lazyGridState.canScrollForward) {
+                if (!lazyGridState.canScrollForward && state.newsState != RemoteState.Loading)
+                    listener(NewsEvent.OnListEndingScrolled)
             }
 
-            when (state.newsState) {
-                is RemoteState.Error -> item(span = { GridItemSpan(maxLineSpan) }) {
-                    Fallback(
-                        "Произошла непредвиденная ошибка",
-                        Modifier.fillMaxSize(),
-                        "Попробовать снова" to { listener(NewsEvent.OnRefresh) }
-                    )
+            LazyVerticalGrid(
+                columns = GridCells.Adaptive(240.dp),
+                state = lazyGridState,
+                modifier = Modifier.fillMaxSize(),
+                verticalArrangement = Arrangement.spacedBy(12.dp),
+                horizontalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                item(span = { GridItemSpan(maxLineSpan) }) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 8.dp, vertical = 8.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.SpaceBetween
+                    ) {
+                        Text(
+                            "Новости",
+                            style = typography.headlineLarge,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 32.sp,
+                            color = colorScheme.primary,
+                        )
+                        if (isDesktop) {
+                            IconButton(onClick = { listener(NewsEvent.OnRefresh) }) {
+                                Icon(Icons.Default.Refresh, contentDescription = "Обновить")
+                            }
+                        }
+                    }
                 }
 
-                RemoteState.Success, RemoteState.Loading -> items(state.news, key = { it.id }) {
+                when {
+                    state.newsState is RemoteState.Error && state.news.isEmpty() -> item(span = { GridItemSpan(maxLineSpan) }) {
+                        Fallback(
+                            "Произошла непредвиденная ошибка",
+                            Modifier.fillMaxSize(),
+                            "Попробовать снова" to { listener(NewsEvent.OnRefresh) }
+                        )
+                    }
+
+                    state.news.isEmpty() && state.newsState == RemoteState.Loading -> {
+                        items(6) {
+                            NewListItemShimmer(shimmer = shimmer, isWide = true)
+                        }
+                    }
+
+                else -> items(state.news, key = { it.id }) {
                     NewListItemView(
                         modifier = Modifier.animateItem(),
                         selected = selectedNewId == it.id,
@@ -117,8 +146,6 @@ fun NewsView(
                         }
                     )
                 }
-
-                else -> Unit
             }
         }
     } else {
@@ -144,18 +171,30 @@ fun NewsView(
             }
 
             item {
-                Text(
-                    "Новости",
-                    style = typography.headlineLarge,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 46.sp,
-                    color = colorScheme.primary,
-                    modifier = Modifier.padding(horizontal = 16.dp)
-                )
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(
+                        "Новости",
+                        style = typography.headlineLarge,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 46.sp,
+                        color = colorScheme.primary,
+                    )
+                    if (isDesktop) {
+                        IconButton(onClick = { listener(NewsEvent.OnRefresh) }) {
+                            Icon(Icons.Default.Refresh, contentDescription = "Обновить")
+                        }
+                    }
+                }
             }
 
-            when (state.newsState) {
-                is RemoteState.Error -> item {
+            when {
+                state.newsState is RemoteState.Error && state.news.isEmpty() -> item {
                     Fallback(
                         "Произошла непредвиденная ошибка",
                         Modifier.fillMaxSize(),
@@ -163,7 +202,13 @@ fun NewsView(
                     )
                 }
 
-                RemoteState.Success, RemoteState.Loading -> items(state.news, key = { it.id }) {
+                state.news.isEmpty() && state.newsState == RemoteState.Loading -> {
+                    items(4) {
+                        NewListItemShimmer(shimmer = shimmer, isWide = false)
+                    }
+                }
+
+                else -> items(state.news, key = { it.id }) {
                     NewListItemView(
                         modifier = Modifier.animateItem(),
                         selected = localSelectedNewId == it.id,
@@ -178,11 +223,10 @@ fun NewsView(
                         }
                     )
                 }
-
-                else -> Unit
             }
         }
     }
+}
 }
 
 @Composable
@@ -276,4 +320,75 @@ fun NewListItemView(
         }
     }
 }
+}
+
+@Composable
+fun NewListItemShimmer(
+    shimmer: Brush,
+    isWide: Boolean = false,
+    modifier: Modifier = Modifier
+) {
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(shapes.large)
+            .background(colorScheme.surfaceBright)
+    ) {
+        Column(
+            modifier = Modifier.padding(12.dp, 14.dp, 12.dp, 12.dp)
+        ) {
+            Box(
+                Modifier
+                    .fillMaxWidth()
+                    .height(if (isWide) 130.dp else 150.dp)
+                    .clip(shapes.large)
+                    .background(shimmer)
+            )
+            Gap(8)
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Box(
+                    Modifier
+                        .width(90.dp)
+                        .height(16.dp)
+                        .clip(shapes.small)
+                        .background(shimmer)
+                )
+                Box(
+                    Modifier
+                        .width(60.dp)
+                        .height(24.dp)
+                        .clip(shapes.small)
+                        .background(shimmer)
+                )
+            }
+            Gap(6)
+            Box(
+                Modifier
+                    .fillMaxWidth(0.9f)
+                    .height(20.dp)
+                    .clip(shapes.small)
+                    .background(shimmer)
+            )
+            Gap(4)
+            Box(
+                Modifier
+                    .fillMaxWidth(0.6f)
+                    .height(20.dp)
+                    .clip(shapes.small)
+                    .background(shimmer)
+            )
+            Gap(6)
+            Box(
+                Modifier
+                    .fillMaxWidth()
+                    .height(14.dp)
+                    .clip(shapes.small)
+                    .background(shimmer)
+            )
+        }
+    }
 }

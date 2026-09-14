@@ -25,12 +25,13 @@ class RKSINewsClient(
         else -> "$baseUrl/$url"
     }
 
-    override suspend fun getNews(page: Int): List<NewListItemDto> {
-        val response = client.get("$baseUrl/news/$page").bodyAsText()
+    override suspend fun getNews(page: Int): List<NewListItemDto> = try {
+        val url = if (page <= 1) "$baseUrl/news" else "$baseUrl/news/$page"
+        val response = client.get(url).bodyAsText()
         val document = Ksoup.parse(response)
         val rawData = document.getElementsByClass("flexnews")
 
-        return rawData.mapNotNull { element ->
+        rawData.mapNotNull { element ->
             val link = element.getElementsByTag("a").firstOrNull() ?: return@mapNotNull null
             val url = baseUrl + link.attr("href")
             val id = url.split("_").lastOrNull() ?: return@mapNotNull null
@@ -56,9 +57,11 @@ class RKSINewsClient(
                 sourceUrl = url
             )
         }
+    } catch (_: Exception) {
+        emptyList()
     }
 
-    override suspend fun getNewDetail(id: String): NewDetailDto {
+    override suspend fun getNewDetail(id: String): NewDetailDto = try {
         val url = "$baseUrl/news/n_$id"
         val response = client.get(url).bodyAsText()
         val document = Ksoup.parse(response)
@@ -80,13 +83,21 @@ class RKSINewsClient(
             if (src.isNotBlank()) formatImageUrl(src) else null
         } ?: emptyList()
 
-        return NewDetailDto(
+        NewDetailDto(
             id = id,
             title = title.ifEmpty { titleRaw },
             fullText = fullText,
             date = date,
             images = images,
             sourceUrl = url
+        )
+    } catch (_: Exception) {
+        NewDetailDto(
+            id = id,
+            title = "",
+            fullText = "",
+            date = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).date,
+            sourceUrl = "$baseUrl/news/n_$id"
         )
     }
 }

@@ -34,6 +34,12 @@ import app.what.schedule.features.news.navigation.NewsProvider
 import app.what.schedule.features.news.presentation.NewsView
 import app.what.schedule.features.newsDetail.NewsDetailFeature
 import app.what.schedule.features.newsDetail.navigation.NewsDetailProvider
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import app.what.foundation.ui.Gap
+import app.what.foundation.ui.animations.rememberShimmer
+import app.what.schedule.features.newsDetail.presentation.components.NewDetailContentShimmer
+import app.what.schedule.features.newsDetail.presentation.components.NewDetailTitleShimmer
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
@@ -43,103 +49,121 @@ class NewsFeature(
     override val controller: NewsController by inject()
     
     @Composable
-    override fun content(modifier: Modifier) = BoxWithConstraints(
-        modifier.fillMaxSize()
-    ) {
-        val isWide = maxWidth >= 760.dp
+    override fun content(modifier: Modifier) {
         val viewState by controller.collectStates()
         val viewAction by controller.collectActions()
-        val navigator = rememberNavigator()
-        var selectedItem by useState<NewListItem?>(null)
         
         LaunchedEffect(Unit) {
             listener(NewsEvent.Init)
         }
-
-        LaunchedEffect(viewState.news) {
-            if (selectedItem == null && viewState.news.isNotEmpty()) {
-                selectedItem = viewState.news.firstOrNull()
-            }
-        }
         
-        if (isWide) {
-            Row(Modifier.fillMaxSize()) {
-                // Левая панель: сетка новостей
-                Box(
-                    modifier = Modifier
-                        .weight(1f)
-                        .fillMaxHeight()
-                        .padding(end = 8.dp)
-                ) {
-                    NewsView(
-                        state = viewState,
-                        listener = listener,
-                        isWide = true,
-                        selectedNewId = selectedItem?.id,
-                        onSelectNew = { selectedItem = it }
-                    )
-                }
+        val navigator = rememberNavigator()
 
-                // Правая панель: детальная новость
-                Box(
-                    modifier = Modifier
-                        .weight(1.2f)
-                        .fillMaxHeight()
-                        .clip(shapes.large)
-                        .background(colorScheme.surface)
-                ) {
-                    val activeItem = selectedItem ?: viewState.news.firstOrNull()
-                    if (activeItem != null) {
-                        key(activeItem.id) {
-                            NewsDetailFeature(
-                                NewsDetailProvider(
-                                    activeItem.id,
-                                    activeItem.url,
-                                    activeItem.bannerUrl,
-                                    activeItem.title,
-                                    activeItem.description
-                                )
-                            ).content(Modifier.fillMaxSize())
-                        }
-                    } else if (viewState.newsState == RemoteState.Loading) {
-                        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                            CircularProgressIndicator()
-                        }
-                    } else {
-                        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                            Text(
-                                text = "Выберите новость для просмотра",
-                                color = colorScheme.onSurfaceVariant
-                            )
-                        }
-                    }
+        BoxWithConstraints(modifier = modifier.fillMaxSize()) {
+            val isWide = maxWidth >= 840.dp
+            var selectedItem by useState<NewListItem?>(null)
+
+            LaunchedEffect(viewState.news) {
+                if (selectedItem == null && viewState.news.isNotEmpty()) {
+                    selectedItem = viewState.news.firstOrNull()
                 }
             }
-        } else {
-            Column(Modifier.fillMaxSize()) {
-                NewsView(viewState, listener)
-            }
-        }
-        
-        when (viewAction) {
-            null -> Unit
-            is NewsAction.NavigateToNewsDetail -> {
-                if (!isWide) {
-                    (viewAction as NewsAction.NavigateToNewsDetail).item.let {
-                        navigator.parent!!.c.navigate(
-                            NewsDetailProvider(
-                                it.id,
-                                it.url,
-                                it.bannerUrl,
-                                it.title,
-                                it.description
-                            )
+            
+            if (isWide) {
+                Row(modifier = Modifier.fillMaxSize().padding(12.dp)) {
+                    // Левая панель: сетка новостей
+                    Box(
+                        modifier = Modifier
+                            .weight(1f)
+                            .fillMaxHeight()
+                            .padding(end = 8.dp)
+                    ) {
+                        NewsView(
+                            state = viewState,
+                            listener = listener,
+                            isWide = true,
+                            selectedNewId = selectedItem?.id,
+                            onSelectNew = { selectedItem = it }
                         )
                     }
-                } else {
-                    selectedItem = (viewAction as NewsAction.NavigateToNewsDetail).item
+
+                    // Правая панель: детальная новость
+                    Box(
+                        modifier = Modifier
+                            .weight(1.2f)
+                            .fillMaxHeight()
+                            .clip(shapes.large)
+                            .background(colorScheme.surface)
+                    ) {
+                        val activeItem = selectedItem ?: viewState.news.firstOrNull()
+                        if (activeItem != null) {
+                            key(activeItem.id) {
+                                NewsDetailFeature(
+                                    NewsDetailProvider(
+                                        activeItem.id,
+                                        activeItem.url,
+                                        activeItem.bannerUrl,
+                                        activeItem.title,
+                                        activeItem.description
+                                    ),
+                                    showBack = false
+                                ).content(Modifier.fillMaxSize())
+                            }
+                        } else if (viewState.newsState == RemoteState.Loading) {
+                            val shimmer = rememberShimmer()
+                            Column(
+                                Modifier
+                                    .fillMaxSize()
+                                    .padding(16.dp)
+                            ) {
+                                Box(
+                                    Modifier
+                                        .fillMaxWidth()
+                                        .height(220.dp)
+                                        .clip(shapes.extraLarge)
+                                        .background(shimmer)
+                                )
+                                Gap(16)
+                                NewDetailTitleShimmer(shimmer)
+                                Gap(16)
+                                NewDetailContentShimmer(shimmer)
+                            }
+                        } else {
+                            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                                Text(
+                                    text = "Выберите новость для просмотра",
+                                    color = colorScheme.onSurfaceVariant
+                                )
+                            }
+                        }
+                    }
                 }
-                controller.clearAction()
+            } else {
+                Column(Modifier.fillMaxSize()) {
+                    NewsView(viewState, listener)
+                }
+            }
+            
+            when (viewAction) {
+                null -> Unit
+                is NewsAction.NavigateToNewsDetail -> {
+                    if (!isWide) {
+                        (viewAction as NewsAction.NavigateToNewsDetail).item.let {
+                            navigator.parent!!.c.navigate(
+                                NewsDetailProvider(
+                                    it.id,
+                                    it.url,
+                                    it.bannerUrl,
+                                    it.title,
+                                    it.description
+                                )
+                            )
+                        }
+                    } else {
+                        selectedItem = (viewAction as NewsAction.NavigateToNewsDetail).item
+                    }
+                    controller.clearAction()
+                }
             }
         }
     }

@@ -101,6 +101,7 @@ val dataModule = module {
     
     single {
         HttpClient(CIO) {
+            followRedirects = true
             install(HttpRequestRetry) {
                 maxRetries = 3
                 retryOnExceptionIf { _, cause ->
@@ -140,7 +141,7 @@ val dataModule = module {
             }
             
             defaultRequest {
-                header(HttpHeaders.UserAgent, "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 WHAT-Schedule")
+                header(HttpHeaders.UserAgent, "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36")
                 header(HttpHeaders.Accept, "*/*")
                 header(HttpHeaders.AcceptLanguage, "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7")
             }

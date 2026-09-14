@@ -19,7 +19,9 @@ import app.what.foundation.utils.LogCat
 import app.what.foundation.utils.LogScope
 import app.what.foundation.utils.buildTag
 import app.what.foundation.data.settings.AndroidKeyValueStorage
+import app.what.foundation.data.settings.AndroidPreferenceEncryptor
 import app.what.foundation.data.settings.KeyValueStorage
+import app.what.foundation.data.settings.PreferenceEncryptor
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.HttpRequestRetry
@@ -49,7 +51,8 @@ val dataModule = module {
         val prefs = androidContext().getSharedPreferences("MY_APP_PREFERENCES", android.content.Context.MODE_PRIVATE)
         AndroidKeyValueStorage(prefs)
     }
-    single { AppValues(get<KeyValueStorage>()) } bind PreferenceStorage::class
+    single<PreferenceEncryptor> { AndroidPreferenceEncryptor() }
+    single { AppValues(get<KeyValueStorage>(), get<PreferenceEncryptor>()) } bind PreferenceStorage::class
     singleOf(::GoogleDriveParser)
     singleOf(::FileManager)
     single<FileCache> { AndroidFileCache(androidContext()) }
@@ -77,6 +80,7 @@ val dataModule = module {
     
     single {
         HttpClient(CIO) {
+            followRedirects = true
             install(HttpRequestRetry) {
                 maxRetries = 3
                 retryOnExceptionIf { _, cause ->
@@ -116,7 +120,7 @@ val dataModule = module {
             }
             
             defaultRequest {
-                header(HttpHeaders.UserAgent, "Mozilla/5.0 (Linux; Android 14; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36 WHAT-Schedule")
+                header(HttpHeaders.UserAgent, "Mozilla/5.0 (Linux; Android 14; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36")
                 header(HttpHeaders.Accept, "*/*")
                 header(HttpHeaders.AcceptLanguage, "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7")
             }

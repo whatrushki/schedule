@@ -61,6 +61,7 @@ import app.what.foundation.ui.bclick
 import app.what.foundation.ui.capplyIf
 import app.what.foundation.ui.controllers.rememberSheetController
 import app.what.foundation.ui.useState
+import app.what.foundation.utils.isDesktop
 import app.what.domain.models.NewContent
 import app.what.schedule.features.newsDetail.domain.models.NewsDetailEvent
 import app.what.schedule.features.newsDetail.domain.models.NewsDetailState
@@ -100,7 +101,7 @@ fun NewsDetailView(
         ?: state.newListInfo.description?.let { buildAnnotatedString { append(it) } }
     var descriptionIsExpandable by useState(false)
     
-    if (onBack != null) {
+    if (onBack != null && !isDesktop) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier

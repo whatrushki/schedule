@@ -31,9 +31,9 @@ class IUBIPNewsClient(
                     val url = anchor.attr("href")
                     val id = url.split("/").getOrNull(2) ?: url
                     val style = it.getElementsByClass("news__item-image").attr("style")
-                    val bannerUrl = if ("/" in style) {
-                        baseUrl + style.substring(style.indexOf("/"), style.length - 1)
-                    } else null
+                    val bannerUrl = Regex("""url\(['"]?([^'")]+)['"]?\)""").find(style)?.groupValues?.get(1)?.let { path ->
+                        if (path.startsWith("http")) path else if (path.startsWith("/")) "$baseUrl$path" else "$baseUrl/$path"
+                    }
 
                     val title = it.getElementsByClass("news__item-name").firstOrNull()?.text()?.trim().orEmpty()
                     val description = it.getElementsByClass("news__item-text").firstOrNull()?.text()?.trim().orEmpty()

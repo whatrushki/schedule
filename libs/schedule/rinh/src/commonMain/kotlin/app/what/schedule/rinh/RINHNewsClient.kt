@@ -21,7 +21,8 @@ class RINHNewsClient(
 
     override suspend fun getNews(page: Int): List<NewListItemDto> {
         return try {
-            val response = client.get("$baseUrl/universitet/novosti/?PAGEN_2=$page").bodyAsText()
+            val url = if (page <= 1) "$baseUrl/universitet/novosti/" else "$baseUrl/universitet/novosti/?PAGEN_2=$page"
+            val response = client.get(url).bodyAsText()
             val document = Ksoup.parse(response)
             val rawData = document.getElementsByClass("news-item")
 

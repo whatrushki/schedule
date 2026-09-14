@@ -23,7 +23,8 @@ import kotlinx.datetime.toLocalDateTime
 import app.what.foundation.utils.currentLocalDate
 
 class NewsDetailFeature(
-    override val data: NewsDetailProvider
+    override val data: NewsDetailProvider,
+    private val showBack: Boolean = true
 ) : Feature<NewsDetailController, NewsDetailEvent>(),
     NavComponent<NewsDetailProvider>,
     KoinComponent {
@@ -50,7 +51,7 @@ class NewsDetailFeature(
         NewsDetailView(
             viewState,
             listener,
-            onBack = { navigator.parent?.c?.popBackStack() ?: navigator.c.popBackStack() }
+            onBack = if (showBack) { { navigator.parent?.c?.popBackStack() ?: navigator.c.popBackStack() } } else null
         )
     }
 }
