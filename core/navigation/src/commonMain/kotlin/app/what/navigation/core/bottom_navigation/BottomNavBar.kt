@@ -160,8 +160,6 @@ fun SideNavBar(
     modifier: Modifier = Modifier,
     navigator: Navigator = rememberNavigator(),
     screens: Iterable<NavItem>,
-    canGoBack: Boolean = false,
-    onBack: () -> Unit = {},
     action: (NavDestination?) -> NavAction?
 ) {
     var currentDestination by useState(navigator.c.currentDestination)
@@ -184,27 +182,13 @@ fun SideNavBar(
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(12.dp),
+        verticalArrangement = Arrangement.Center,
         modifier = modifier
             .width(containerWidth)
+            .fillMaxHeight()
             .padding(vertical = 16.dp)
             .systemBarsPadding()
     ) {
-        if (canGoBack) {
-            IconButton(
-                onClick = onBack,
-                modifier = Modifier
-                    .size(52.dp)
-                    .clip(CircleShape)
-                    .background(colorScheme.surfaceContainerHigh)
-            ) {
-                Icon(
-                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = "Назад",
-                    tint = colorScheme.onSurface
-                )
-            }
-        }
 
         Box(
             modifier = Modifier

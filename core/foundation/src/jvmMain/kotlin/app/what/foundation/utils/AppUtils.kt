@@ -3,6 +3,8 @@ package app.what.foundation.utils
 import java.io.File
 import kotlin.system.exitProcess
 
+actual val isDesktop: Boolean = true
+
 actual class AppUtils {
     actual fun restart() {
         try {

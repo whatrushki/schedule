@@ -28,17 +28,16 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Button
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.shapes
 import androidx.compose.material3.MaterialTheme.typography
-import androidx.compose.material3.ProgressIndicatorDefaults
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Text
-import androidx.compose.material3.pulltorefresh.PullToRefreshBox
+import app.what.foundation.ui.AppPullToRefresh
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.State
@@ -94,12 +93,11 @@ import kotlinx.datetime.TimeZone
 import kotlinx.datetime.isoDayNumber
 import kotlinx.datetime.toLocalDateTime
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScheduleView(
     state: State<ScheduleState>,
     listener: (ScheduleEvent) -> Unit
-) = PullToRefreshBox(
+) = AppPullToRefresh(
     isRefreshing = state.value.scheduleState == RemoteState.Loading,
     onRefresh = { listener(ScheduleEvent.OnRefresh) },
 ) {
@@ -140,7 +138,9 @@ fun ScheduleView(
         }
         var showBreaks by useSave(false)
         val scope = rememberCoroutineScope()
-        val weeks = state.value.schedules.groupBy { it.date.getWeekNumber() }
+        val weeks = remember(state.value.schedules) {
+            state.value.schedules.groupBy { it.date.getWeekNumber() }
+        }
         val daysPagerState = rememberPagerState { state.value.schedules.size }
         val weeksPagerState = rememberPagerState { weeks.size }
         
@@ -221,6 +221,15 @@ fun ScheduleView(
                         sheet.open(content = scheduleExportSheet)
                     }
                 }
+
+                if (app.what.foundation.utils.isDesktop) {
+                    StyledIconButton(
+                        Icons.Default.Refresh,
+                        state.value.scheduleState != RemoteState.Loading
+                    ) {
+                        listener(ScheduleEvent.OnRefresh)
+                    }
+                }
             }
             
             
@@ -280,25 +289,40 @@ fun ScheduleView(
                             .padding(top = 8.dp)
                     ) {
                         val date = state.value.schedules[it].date
+                        val lessons = state.value.schedules[it].lessons
                         
                         Column(
                             verticalArrangement = Arrangement.spacedBy(if (showBreaks) 4.dp else 12.dp),
                             modifier = Modifier.fillMaxHeight()
                         ) {
-                            state.value.schedules[it].lessons.zipWithNext()
-                                .forEach { (first, second) ->
-                                    first.Show(date)
-                                    
-                                    AnimatedEnter(showBreaks) {
-                                        BreakInfo(
-                                            (second.startTime.toSecondOfDay() - first.endTime.toSecondOfDay()) / 60,
-                                            currentTime.value in first.startTime..second.startTime && currentDate == first.date
-                                        )
-                                    }
-                                    
+                            if (lessons.isEmpty()) {
+                                Box(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(vertical = 32.dp),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text(
+                                        text = "В этот день занятий нет 🎉",
+                                        style = typography.bodyLarge,
+                                        color = colorScheme.onSurfaceVariant
+                                    )
                                 }
-                            
-                            state.value.schedules[it].lessons.last().Show(date)
+                            } else {
+                                lessons.zipWithNext()
+                                    .forEach { (first, second) ->
+                                        first.Show(date)
+                                        
+                                        AnimatedEnter(showBreaks) {
+                                            BreakInfo(
+                                                (second.startTime.toSecondOfDay() - first.endTime.toSecondOfDay()) / 60,
+                                                currentTime.value in first.startTime..second.startTime && currentDate == first.date
+                                            )
+                                        }
+                                    }
+                                
+                                lessons.lastOrNull()?.Show(date)
+                            }
                             
                             Gap(132)
                         }

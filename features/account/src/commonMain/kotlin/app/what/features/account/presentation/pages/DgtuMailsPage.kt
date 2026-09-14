@@ -14,7 +14,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.pulltorefresh.PullToRefreshBox
+import app.what.foundation.ui.AppPullToRefresh
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.State
@@ -39,12 +39,11 @@ import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
 
-@OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
 @Composable
 fun DgtuMailsPage(
     state: State<DgtuState>,
     listener: Listener<DgtuEvent>
-) = PullToRefreshBox(
+) = AppPullToRefresh(
     isRefreshing = state.value.mailsFetchState == RemoteState.Loading,
     onRefresh = { listener(DgtuEvent.MailsOpened) },
 ) {

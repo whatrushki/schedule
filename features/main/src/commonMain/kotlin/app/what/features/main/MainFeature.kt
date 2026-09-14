@@ -123,21 +123,11 @@ class MainFeature(
                     .background(colorScheme.background)
             ) {
                 val isWideScreen = maxWidth >= 760.dp
-                var canGoBack by useState(false)
-
-                LaunchedEffect(Unit) {
-                    navigator.c.addOnDestinationChangedListener { _, _, _ ->
-                        canGoBack = navigator.c.previousBackStackEntry != null
-                    }
-                }
-
                 if (isWideScreen) {
                     Row(Modifier.fillMaxSize()) {
                         SideNavBar(
                             navigator = navigator,
                             screens = children,
-                            canGoBack = canGoBack,
-                            onBack = { navigator.c.popBackStack() },
                             modifier = Modifier.padding(start = 16.dp, end = 8.dp)
                         ) {
                             if (!devFeaturesEnabled!!) null
