@@ -28,6 +28,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.Warning
@@ -116,7 +117,7 @@ fun NetworksPane(
         vContent = {
             NetworkRequestItem(it) {
                 dialog.open(true) {
-                    NetworkRequestDialog(it)
+                    NetworkRequestDialog(it, onBack = { dialog.close() })
                 }
             }
         },
@@ -366,6 +367,7 @@ fun getStatusTextColor(category: StatusCategory): Color {
 @Composable
 fun NetworkRequestDialog(
     request: NetworkRequest,
+    onBack: (() -> Unit)? = null,
 ) = Surface(
     modifier = Modifier.fillMaxSize(),
     color = colorScheme.surface
@@ -374,6 +376,17 @@ fun NetworkRequestDialog(
     val shareManager = rememberShareManager()
     Column(modifier = Modifier.fillMaxSize()) {
         CenterAlignedTopAppBar(
+            navigationIcon = {
+                if (onBack != null) {
+                    IconButton(onClick = onBack) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = "Назад",
+                            tint = colorScheme.onSurface
+                        )
+                    }
+                }
+            },
             title = {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(

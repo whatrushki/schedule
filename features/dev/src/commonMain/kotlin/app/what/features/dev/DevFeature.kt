@@ -1,16 +1,14 @@
 package app.what.schedule.features.dev
 
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.pager.HorizontalPager
-import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -25,7 +23,7 @@ import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.font.FontWeight
-import app.what.navigation.core.rememberNavigator
+import app.what.navigation.core.LocalNavController
 import app.what.foundation.ui.Gap
 import app.what.foundation.ui.SegmentTab
 import app.what.foundation.ui.useState
@@ -37,7 +35,6 @@ import app.what.schedule.ui.theme.icons.WHATIcons
 import app.what.schedule.ui.theme.icons.filled.Features
 import app.what.schedule.ui.theme.icons.filled.Logs
 import app.what.schedule.ui.theme.icons.filled.Network
-import kotlinx.coroutines.launch
 
 enum class DevToolsTab(
     val title: String, val icon: ImageVector
@@ -53,22 +50,17 @@ enum class DevToolsTab(
 
 @Composable
 fun DevFeature(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onBack: (() -> Unit)? = null
 ) = Column(
-    Modifier.statusBarsPadding()
+    modifier = modifier.fillMaxSize().statusBarsPadding()
 ) {
     var selectedTabIndex by useState(0)
     val devToolsTabs = DevToolsTab.all()
         .dropLast(1)
         .freeze()
-    val pagerState = rememberPagerState { devToolsTabs.size }
-    val scope = rememberCoroutineScope()
     
-    LaunchedEffect(pagerState.currentPage) {
-        selectedTabIndex = pagerState.currentPage
-    }
-    
-    val navigator = rememberNavigator()
+    val navigator = LocalNavController.current
 
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -76,7 +68,13 @@ fun DevFeature(
             .fillMaxWidth()
             .padding(horizontal = 12.dp, vertical = 4.dp)
     ) {
-        IconButton(onClick = { navigator.c.popBackStack() }) {
+        IconButton(onClick = {
+            if (onBack != null) {
+                onBack()
+            } else {
+                navigator?.c?.popBackStack()
+            }
+        }) {
             Icon(
                 imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                 contentDescription = "Назад",
@@ -109,15 +107,19 @@ fun DevFeature(
                 count = devToolsTabs.size,
                 icon = it.icon,
                 label = null
-            ) { scope.launch { pagerState.animateScrollToPage(index) } }
+            ) { selectedTabIndex = index }
         }
     }
     
-    HorizontalPager(pagerState) {
-        when (devToolsTabs[it]) {
-            DevToolsTab.LOGS -> LogsPane()
-            DevToolsTab.NETWORK -> NetworksPane()
-            DevToolsTab.FEATURES -> FeaturePane()
+    Box(
+        modifier = Modifier
+            .weight(1f)
+            .fillMaxWidth()
+    ) {
+        when (devToolsTabs.getOrNull(selectedTabIndex) ?: DevToolsTab.LOGS) {
+            DevToolsTab.LOGS -> LogsPane(Modifier.fillMaxSize())
+            DevToolsTab.NETWORK -> NetworksPane(Modifier.fillMaxSize())
+            DevToolsTab.FEATURES -> FeaturePane(Modifier.fillMaxSize())
         }
     }
 }

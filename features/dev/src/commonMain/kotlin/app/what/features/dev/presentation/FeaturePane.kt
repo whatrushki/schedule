@@ -9,7 +9,7 @@ import app.what.schedule.ui.components.Fallback
 import org.koin.compose.koinInject
 
 @Composable
-fun FeaturePane() = Column {
+fun FeaturePane(modifier: Modifier = Modifier) = Column(modifier) {
     koinInject<AppValues>()
     
     Fallback(

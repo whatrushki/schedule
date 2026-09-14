@@ -90,7 +90,7 @@ fun <T> FilteredList(
     }
     
     Column(
-        modifier = modifier,
+        modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         // Заголовок и управление
