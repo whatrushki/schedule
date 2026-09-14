@@ -121,15 +121,13 @@ fun SettingsView(
             
             SettingsHeader(
                 title = headerTitle,
-                description = headerDesc,
-                showBack = pagerState.currentPage != 0,
-                onBack = { scope.launch { pagerState.animateScrollToPage(0) } }
+                description = headerDesc
             )
             // --------------
             
             HorizontalPager(
                 state = pagerState,
-                userScrollEnabled = false,
+                userScrollEnabled = pagerState.currentPage != 0,
                 modifier = Modifier.weight(1f),
                 verticalAlignment = Alignment.Top
             ) { page ->
@@ -157,18 +155,12 @@ fun SettingsView(
 @Composable
 private fun SettingsHeader(
     title: String,
-    description: String,
-    showBack: Boolean,
-    onBack: () -> Unit
+    description: String
 ) = Box(
     Modifier
         .animateContentSize()
         .height(if (keyboardAsState().value) 20.dp else 240.dp)
 ) {
-    if (showBack) IconButton(modifier = Modifier.padding(start = 8.dp), onClick = onBack) {
-        WHATIcons.Clear.Show(colorScheme.primary)
-    }
-    
     Column(
         Modifier.align(Alignment.BottomStart)
     ) {
