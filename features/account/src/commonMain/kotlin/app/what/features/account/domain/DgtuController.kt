@@ -39,7 +39,7 @@ class DgtuController(
         get() = appValues.debugMode.get() == true
     
     private val newsService
-        get() = institutionManager.getSavedInstitution()!!.newsService
+        get() = institutionManager.getSavedInstitution()?.newsService
     
     init {
         val token = appValues.dgtuToken.get()
@@ -83,7 +83,7 @@ class DgtuController(
             DgtuEvent.GenerateAccessQrCodeClicked -> generateQr()
             is DgtuEvent.OnEventClicked -> loadEventDetail(viewEvent.id)
             is DgtuEvent.OnNewClicked -> {
-                val new = viewState.news.first { it.id == viewEvent.id }
+                val new = viewState.news.firstOrNull { it.id == viewEvent.id } ?: return
                 setAction(OpenNewDetail(new.id, new.url, new.bannerUrl, new.title, new.description))
             }
         }
@@ -111,6 +111,7 @@ class DgtuController(
     }
     
     private fun loadEventDetail(id: String) {
+        val token = appValues.dgtuToken.get() ?: return
         updateState { copy(eventDetailFetchState = RemoteState.Loading) }
         viewModelScope.launchSafe(
             debug = debug,
@@ -119,7 +120,7 @@ class DgtuController(
             }
         ) {
             val response = accountService.getDetailEvent(
-                appValues.dgtuToken.get()!!,
+                token,
                 id
             )
             
@@ -155,6 +156,7 @@ class DgtuController(
     }
     
     private fun loadNews() {
+        val service = newsService ?: return
         updateState { copy(newsFetchState = RemoteState.Loading) }
         viewModelScope.launchSafe(
             debug = debug,
@@ -162,13 +164,14 @@ class DgtuController(
                 updateState { copy(newsFetchState = RemoteState.Error(it)) }
             }
         ) {
-            val response = newsService.getNews(1).take(6)
+            val response = service.getNews(1).take(6)
             updateState { copy(newsFetchState = RemoteState.Success, news = response) }
         }
     }
     
     private fun generateQr() {
         if (viewState.accessQr != null) return
+        val token = appValues.dgtuToken.get() ?: return
         
         updateState { copy(accessQrFetchState = RemoteState.Loading) }
         viewModelScope.launchSafe(
@@ -177,15 +180,14 @@ class DgtuController(
                 updateState { copy(accessQrFetchState = RemoteState.Error(it)) }
             }
         ) {
-            val response = accountService.generatePassNumber(appValues.dgtuToken.get()!!)
+            val response = accountService.generatePassNumber(token)
             
             updateState { copy(accessQrFetchState = RemoteState.Success, accessQr = response.data) }
         }
     }
     
-    
     private fun loadEvents() {
-        if (viewState.accessQr != null) return
+        val token = appValues.dgtuToken.get() ?: return
         
         updateState { copy(eventsFetchState = RemoteState.Loading) }
         viewModelScope.launchSafe(
@@ -194,7 +196,7 @@ class DgtuController(
                 updateState { copy(eventsFetchState = RemoteState.Error(it)) }
             }
         ) {
-            val response = accountService.getEvents(appValues.dgtuToken.get()!!)
+            val response = accountService.getEvents(token)
             
             val today = currentLocalDate()
             val data = response.data.events.mapNotNull {
@@ -212,6 +214,7 @@ class DgtuController(
     }
     
     private fun loadMails(rollback: Boolean = false) {
+        val token = appValues.dgtuToken.get() ?: return
         val page = if (rollback) 1 else viewState.mailsPage
         updateState { copy(mailsFetchState = RemoteState.Loading) }
         viewModelScope.launchSafe(
@@ -221,7 +224,7 @@ class DgtuController(
             }
         ) {
             val response = accountService.getMails(
-                appValues.dgtuToken.get()!!,
+                token,
                 DGTUApi.Mails.GetAllRequest(page = page, 50)
             )
             
@@ -252,7 +255,8 @@ class DgtuController(
     }
     
     private fun getStudentStatInfo() {
-        if (viewState.studentInfo != null) return
+        val token = appValues.dgtuToken.get() ?: return
+        val studentId = appValues.dgtuStudentId.get() ?: return
         
         viewModelScope.launchSafe(
             debug = debug,
@@ -263,12 +267,12 @@ class DgtuController(
             updateState { copy(studentStatInfoFetchState = RemoteState.Loading) }
             
             val response = accountService.getMarksCount(
-                appValues.dgtuToken.get()!!,
-                appValues.dgtuStudentId.get()!!
+                token,
+                studentId
             )
             
             val stats = with(response.data) {
-                val rawAvg = markCountStatistic.sumOf { it.mark * it.count } / count.toFloat()
+                val rawAvg = if (count > 0) markCountStatistic.sumOf { it.mark * it.count } / count.toFloat() else 0f
                 DgtuStudentStatInfo(
                     avgCourse = kotlin.math.round(rawAvg * 100f) / 100f,
                     avg3 = markCountStatistic.firstOrNull { it.mark == 3 }?.avg ?: 0f,
@@ -284,7 +288,7 @@ class DgtuController(
     }
     
     private fun getNotifications() {
-        if (viewState.studentInfo != null) return
+        val token = appValues.dgtuToken.get() ?: return
         
         viewModelScope.launchSafe(
             debug = debug,
@@ -294,7 +298,7 @@ class DgtuController(
         ) {
             updateState { copy(notificationsFetchState = RemoteState.Loading) }
             
-            val response = accountService.getFeed(appValues.dgtuToken.get()!!)
+            val response = accountService.getFeed(token)
             
             val notifications = response.data.feed.mapIndexed { i, it ->
                 Notification(
@@ -320,6 +324,8 @@ class DgtuController(
     
     private fun getProfileInfo() {
         if (viewState.studentInfo != null) return
+        val token = appValues.dgtuToken.get() ?: return
+        val studentId = appValues.dgtuStudentId.get() ?: return
         
         viewModelScope.launchSafe(
             debug = debug,
@@ -330,8 +336,8 @@ class DgtuController(
             updateState { copy(studentInfoFetchState = RemoteState.Loading) }
             
             val response = accountService.getStudentInfo(
-                appValues.dgtuToken.get()!!,
-                appValues.dgtuStudentId.get()!!
+                token,
+                studentId
             )
             
             val profileInfo = with(response.data) {

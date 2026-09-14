@@ -61,7 +61,7 @@ class GitHubUpdateManager(
     }
 
     private fun checkIfAlreadyDownloaded(info: UpdateInfo) {
-        val file = getPublicFile(getFileName(info.version))
+        val file = getDownloadedFile(getFileName(info.version))
         if (file?.exists() == true && file.length() >= info.fileSize) {
             _downloadState.value = DownloadState.Completed(file)
         }
@@ -69,9 +69,15 @@ class GitHubUpdateManager(
 
     private fun getFileName(version: String) = "${config.githubRepo}-$version.apk"
 
-    private fun getPublicFile(fileName: String): File? {
-        val dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-        val file = File(dir, fileName)
+    private fun getUpdatesDir(): File {
+        val dir = context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS) ?: context.cacheDir
+        val updatesDir = File(dir, "updates")
+        updatesDir.mkdirs()
+        return updatesDir
+    }
+
+    private fun getDownloadedFile(fileName: String): File? {
+        val file = File(getUpdatesDir(), fileName)
         return file.takeIf { it.exists() }
     }
 
@@ -97,13 +103,18 @@ class GitHubUpdateManager(
                 _downloadState.value = DownloadState.Preparing
 
                 val fileName = getFileName(info.version)
-                val destination = preparePublicFile(fileName)
+                val destination = File(getUpdatesDir(), fileName)
 
                 val result = gitHubService.downloadUpdate(
                     downloadUrl = info.downloadUrl,
                     destination = destination,
                     onProgress = { progress ->
-                        _downloadState.value = DownloadState.Downloading(progress.progress.toInt())
+                        val percent = if (progress.totalBytes > 0) {
+                            (progress.downloadedBytes * 100 / progress.totalBytes).toInt().coerceIn(0, 100)
+                        } else {
+                            (progress.progress * 100).toInt().coerceIn(0, 100)
+                        }
+                        _downloadState.value = DownloadState.Downloading(percent)
                     }
                 )
 
@@ -115,12 +126,6 @@ class GitHubUpdateManager(
                 _downloadState.value = DownloadState.Error(e.message ?: "Неизвестная ошибка")
             }
         }
-    }
-
-    private fun preparePublicFile(fileName: String): File {
-        val dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-        dir.mkdirs()
-        return File(dir, fileName)
     }
 
     private fun installUpdate(file: File) {

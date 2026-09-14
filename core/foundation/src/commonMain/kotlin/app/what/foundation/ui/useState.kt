@@ -56,7 +56,7 @@ fun <T> useSave(initialValue: T, vararg inputs: Any?): MutableState<T> {
 @Composable
 fun <T> useChange(
     initialValue: T,
-    delayMillis: Long = 10000L,
+    delaySeconds: Long = 10L,
     block: (T) -> T
 ): State<T> {
     val state = remember { mutableStateOf(initialValue) }
@@ -67,7 +67,7 @@ fun <T> useChange(
     LaunchedEffect(isAppInForeground) {
         while (isAppInForeground) {
             state.value = currentBlock(state.value)
-            delay(delayMillis)
+            delay(delaySeconds * 1000L)
         }
     }
 

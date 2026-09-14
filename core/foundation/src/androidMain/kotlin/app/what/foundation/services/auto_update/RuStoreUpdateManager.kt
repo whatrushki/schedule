@@ -131,11 +131,8 @@ class RuStoreUpdateManager(
     }
 
     private fun startFlexibleUpdate(appUpdateInfo: AppUpdateInfo) {
-        if (context !is Activity) {
-            Auditor.err("RuStoreUpdate", "startFlexibleUpdate → context не Activity → невозможно начать обновление")
-            _downloadState.value = DownloadState.Error("Требуется контекст Activity")
-            return
-        }
+        val targetActivity = (context as? Activity) ?: app.what.foundation.utils.CurrentActivityHolder.currentActivity
+        val manager = targetActivity?.let { RuStoreAppUpdateManagerFactory.create(it) } ?: updateManager
 
         val options = AppUpdateOptions.Builder()
             .appUpdateType(AppUpdateType.FLEXIBLE)

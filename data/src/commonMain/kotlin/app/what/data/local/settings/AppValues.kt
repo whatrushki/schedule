@@ -6,6 +6,7 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import app.what.foundation.data.settings.KeyValueStorage
 import app.what.foundation.data.settings.Named
+import app.what.foundation.data.settings.PreferenceEncryptor
 import app.what.foundation.data.settings.PreferenceStorage
 import app.what.domain.models.ScheduleSearch
 import kotlinx.serialization.Serializable
@@ -42,7 +43,10 @@ private val LocalAppValues = staticCompositionLocalOf<AppValues> {
 @Composable
 fun rememberAppValues() = LocalAppValues.current
 
-class AppValues(storage: KeyValueStorage) : PreferenceStorage(storage) {
+class AppValues(
+    storage: KeyValueStorage,
+    encryptor: PreferenceEncryptor? = null
+) : PreferenceStorage(storage, encryptor) {
     val userId = createValue(
         "user_id", null, String.serializer(),
         "Идентификатор пользоваетля", "Уникальный ID установки"
@@ -113,12 +117,14 @@ class AppValues(storage: KeyValueStorage) : PreferenceStorage(storage) {
         "dgtu_token",
         null,
         String.serializer(),
+        isEncrypted = true,
     )
     
     val dgtuStudentId = createValue(
         "dgtu_userId",
         null,
         Int.serializer(),
+        isEncrypted = true,
     )
 }
 

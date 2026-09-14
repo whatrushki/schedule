@@ -90,6 +90,8 @@ fun AboutAppContent(
             
             Analytics.logEasterEggFound("version taps in 'about app'")
             appValues.devSettingsUnlocked.set(true)
+            kotlinx.coroutines.delay(4000L)
+            showFireworks = false
         }
     }
     

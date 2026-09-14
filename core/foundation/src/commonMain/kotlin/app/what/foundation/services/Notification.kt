@@ -40,6 +40,7 @@ import app.what.foundation.utils.delayLaunch
 import kotlinx.coroutines.CoroutineScope
 
 interface Event : UIComponent {
+    val id: String get() = ""
     val title: String
     val message: String
     val urgency: Urgency
@@ -98,7 +99,7 @@ class NotificationService<E : Event>(
             verticalArrangement = Arrangement.spacedBy(8.dp),
             contentPadding = PaddingValues(vertical = 8.dp)
         ) {
-            items(items = _events, key = key ?: { it.hashCode() } ) { event ->
+            items(items = _events, key = key ?: { it.id.ifEmpty { it.hashCode().toString() } } ) { event ->
                 Box(
                     modifier = Modifier.animateItem(
                         fadeInSpec = tween(500),
@@ -113,7 +114,10 @@ class NotificationService<E : Event>(
     }
 }
 
+private var notificationIdCounter = 0L
+
 data class AppNotification(
+    override val id: String = "notif_${++notificationIdCounter}_${kotlin.random.Random.nextInt()}",
     override val title: String,
     override val message: String,
     override val urgency: Event.Urgency = Event.Urgency.HIGH,

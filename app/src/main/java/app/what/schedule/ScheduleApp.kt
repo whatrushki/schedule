@@ -54,6 +54,8 @@ class ScheduleApp : Application() {
         CrashHandler.initialize(applicationContext, CrashActivity::class.java)
             .setSideEffect(crashlytics::recordException)
         
+        app.what.foundation.utils.CurrentActivityHolder.register(this)
+        
         val initTag = buildTag(LogScope.CORE, LogCat.INIT)
         Auditor.info(initTag, "Приложение запущено")
         

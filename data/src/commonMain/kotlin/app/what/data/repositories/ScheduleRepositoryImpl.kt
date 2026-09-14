@@ -27,7 +27,10 @@ class ScheduleRepositoryImpl(
         val dbTag = buildTag(LogScope.DATABASE, LogCat.DB)
         Auditor.debug(dbTag, "Переключение избранного для группы: ${value.id}")
         
-        val group = db.groupsDao.selectByGroupId(getFilialId(), value.id)!!
+        val group = db.groupsDao.selectByGroupId(getFilialId(), value.id) ?: run {
+            Auditor.warn(dbTag, "Группа ${value.id} не найдена в БД для переключения избранного")
+            return
+        }
         val newFavoriteState = !group.favorite
         db.groupsDao.update(group.copy(favorite = newFavoriteState))
         Auditor.debug(
@@ -40,7 +43,10 @@ class ScheduleRepositoryImpl(
         val dbTag = buildTag(LogScope.DATABASE, LogCat.DB)
         Auditor.debug(dbTag, "Переключение избранного для преподавателя: ${value.id}")
         
-        val teacher = db.teachersDao.selectByTeacherId(getFilialId(), value.id)!!
+        val teacher = db.teachersDao.selectByTeacherId(getFilialId(), value.id) ?: run {
+            Auditor.warn(dbTag, "Преподаватель ${value.id} не найден в БД для переключения избранного")
+            return
+        }
         val newFavoriteState = !teacher.favorite
         db.teachersDao.update(teacher.copy(favorite = newFavoriteState))
         Auditor.debug(
@@ -256,8 +262,6 @@ class ScheduleRepositoryImpl(
             "Сохранение расписания в БД: запрос=$query, дней=${daySchedules.size}, последнее изменение=$lastModified"
         )
         
-        db.requestsDao.deleteAll(getFilialId(), query)
-        
         val requestId = db.requestsDao.insert(
             RequestDBO(
                 institutionId = institutionId,
@@ -267,53 +271,70 @@ class ScheduleRepositoryImpl(
         )
         Auditor.debug(dbTag, "Создан запрос с ID: $requestId")
         
-        for (daySchedule in daySchedules) {
-            val dayScheduleId = db.daySchedulesDao.insert(
-                DayScheduleDBO(
-                    fromRequest = requestId,
-                    date = daySchedule.date,
-                    scheduleType = daySchedule.scheduleType
-                )
-            )
-            
-            for (lesson in daySchedule.lessons) {
-                val lessonId = db.lessonsDao.insert(
-                    LessonDBO(
-                        fromDay = dayScheduleId,
-                        number = lesson.number,
-                        startTime = lesson.startTime,
-                        endTime = lesson.endTime,
-                        subject = lesson.subject,
-                        type = lesson.type,
-                        state = lesson.state
+        try {
+            for (daySchedule in daySchedules) {
+                val dayScheduleId = db.daySchedulesDao.insert(
+                    DayScheduleDBO(
+                        fromRequest = requestId,
+                        date = daySchedule.date,
+                        scheduleType = daySchedule.scheduleType
                     )
                 )
                 
-                val otUnitsToInsert = mutableListOf<OneTimeUnitDBO>()
-                for (otUnit in lesson.otUnits) {
-                    val groupId = getOrCreateGroupId(institutionId, otUnit.group)
-                    val teacherId = getOrCreateTeacherId(institutionId, otUnit.teacher)
-                    otUnitsToInsert.add(
-                        OneTimeUnitDBO(
-                            lessonId = lessonId,
-                            groupId = groupId,
-                            teacherId = teacherId,
-                            auditory = otUnit.auditory,
-                            building = otUnit.building
+                for (lesson in daySchedule.lessons) {
+                    val lessonId = db.lessonsDao.insert(
+                        LessonDBO(
+                            fromDay = dayScheduleId,
+                            number = lesson.number,
+                            startTime = lesson.startTime,
+                            endTime = lesson.endTime,
+                            subject = lesson.subject,
+                            type = lesson.type,
+                            state = lesson.state
                         )
                     )
-                }
-                if (otUnitsToInsert.isNotEmpty()) {
-                    db.otUnitsDao.insert(otUnitsToInsert)
+                    
+                    val otUnitsToInsert = mutableListOf<OneTimeUnitDBO>()
+                    for (otUnit in lesson.otUnits) {
+                        val groupId = getOrCreateGroupId(institutionId, otUnit.group)
+                        val teacherId = getOrCreateTeacherId(institutionId, otUnit.teacher)
+                        otUnitsToInsert.add(
+                            OneTimeUnitDBO(
+                                lessonId = lessonId,
+                                groupId = groupId,
+                                teacherId = teacherId,
+                                auditory = otUnit.auditory,
+                                building = otUnit.building
+                            )
+                        )
+                    }
+                    if (otUnitsToInsert.isNotEmpty()) {
+                        db.otUnitsDao.insert(otUnitsToInsert)
+                    }
                 }
             }
+            
+            // Удаляем старые запросы только после успешного сохранения нового
+            val oldRequests = db.requestsDao.selectAll().filter { 
+                it.institutionId == institutionId && it.query == query && it.id != requestId 
+            }
+            for (old in oldRequests) {
+                db.requestsDao.delete(old)
+            }
+            
+            val totalLessons = daySchedules.sumOf { it.lessons.size }
+            Auditor.debug(
+                dbTag,
+                "Расписание сохранено: дней=${daySchedules.size}, уроков=$totalLessons"
+            )
+        } catch (e: Exception) {
+            Auditor.err(dbTag, "Ошибка при сохранении расписания в БД, откат созданного запроса $requestId", e)
+            val created = db.requestsDao.selectLastWithData(requestId)
+            if (created != null) {
+                db.requestsDao.delete(created.request)
+            }
+            throw e
         }
-        
-        val totalLessons = daySchedules.sumOf { it.lessons.size }
-        Auditor.debug(
-            dbTag,
-            "Расписание сохранено: дней=${daySchedules.size}, уроков=$totalLessons"
-        )
     }
 
     private suspend fun getOrCreateGroupId(institutionId: String, group: Group): Long {

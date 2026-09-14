@@ -48,7 +48,7 @@ import app.what.foundation.utils.DateTimeUtils
 val ScheduleExportPane = @Composable { scheduleSearch: ScheduleSearch?,
                                        schedules: List<DaySchedule> ->
     val context = rememberPlatformContext()
-    val selectedDays = useStateList(schedules.first())
+    val selectedDays = useStateList(*schedules.take(1).toTypedArray())
     
     Column(
         Modifier.verticalScroll(rememberScrollState())

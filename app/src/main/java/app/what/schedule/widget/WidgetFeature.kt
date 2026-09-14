@@ -110,10 +110,11 @@ class ScheduleWidget : GlanceAppWidget(), KoinComponent {
                 else -> false
             }
             
+            val defaultColor = Color(0xFF94FF28)
             val theme = ColorProviders(
                 when (themeStyle) {
-                    ThemeStyle.CustomColor -> DynamicScheme(Color(themeColor!!), isDarkTheme)
-                    else -> DynamicScheme(Color(0xFF94FF28), isDarkTheme)
+                    ThemeStyle.CustomColor -> DynamicScheme(themeColor?.let { Color(it) } ?: defaultColor, isDarkTheme)
+                    else -> DynamicScheme(defaultColor, isDarkTheme)
                 }.toColorScheme(isAmoled = false)
             )
             
@@ -139,8 +140,29 @@ fun WidgetContent(
     schedule: List<DaySchedule>,
     currentDayIndex: Int
 ) {
+    if (schedule.isEmpty()) {
+        Column(
+            modifier = GlanceModifier
+                .fillMaxSize()
+                .background(GlanceTheme.colors.widgetBackground)
+                .padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Image(ImageProvider(R.drawable.il_totoro_friends), contentDescription = "No schedule")
+            Spacer(modifier = GlanceModifier.height(8.dp))
+            Text(
+                "Расписание пусто",
+                style = TextStyle(color = GlanceTheme.colors.onBackground, fontSize = 14.sp)
+            )
+        }
+        return
+    }
+
     val safeIndex = currentDayIndex.coerceIn(0, schedule.size - 1)
     val currentDay = schedule[safeIndex]
+    val today = app.what.foundation.utils.currentLocalDate()
+    val diff = currentDay.date.toEpochDays() - today.toEpochDays()
     
     Column(
         modifier = GlanceModifier
@@ -154,10 +176,11 @@ fun WidgetContent(
         ) {
             Text(
                 modifier = GlanceModifier.defaultWeight(),
-                text = when (currentDayIndex) {
+                text = when (diff) {
                     0 -> "Сегодня"
                     1 -> "Завтра"
                     2 -> "Послезавтра"
+                    -1 -> "Вчера"
                     else -> "${currentDay.date.dayOfMonth} " + currentDay.date.dayOfWeek.getDisplayName(
                         java.time.format.TextStyle.FULL_STANDALONE,
                         Locale.getDefault()

@@ -42,7 +42,15 @@ class MemoryKeyValueStorage(
     }
 }
 
-abstract class PreferenceStorage(protected val storage: KeyValueStorage) {
+interface PreferenceEncryptor {
+    fun encrypt(plainText: String): String
+    fun decrypt(cipherText: String): String
+}
+
+abstract class PreferenceStorage(
+    protected val storage: KeyValueStorage,
+    private val encryptor: PreferenceEncryptor? = null,
+) {
     private val preferencesFlow = MutableSharedFlow<String>(extraBufferCapacity = 1)
 
     init {
@@ -57,8 +65,9 @@ abstract class PreferenceStorage(protected val storage: KeyValueStorage) {
         serializer: KSerializer<T>,
         title: String = "",
         description: String? = null,
-        icon: ImageVector? = null
-    ): Value<T> = Value(storage, preferencesFlow, key, defaultValue, serializer, title, description, icon)
+        icon: ImageVector? = null,
+        isEncrypted: Boolean = false,
+    ): Value<T> = Value(storage, preferencesFlow, key, defaultValue, serializer, title, description, icon, isEncrypted, encryptor)
 
     class Value<T : Any>(
         private val storage: KeyValueStorage,
@@ -69,18 +78,43 @@ abstract class PreferenceStorage(protected val storage: KeyValueStorage) {
         val title: String,
         val description: String? = null,
         val icon: ImageVector? = null,
+        val isEncrypted: Boolean = false,
+        private val encryptor: PreferenceEncryptor? = null,
     ) {
-        fun get(): T? = storage
-            .getString(key, null)
-            ?.let { Json.decodeFromString(serializer, it) }
-            ?: defaultValue
+        fun get(): T? {
+            val raw = storage.getString(key, null) ?: return defaultValue
+            val jsonString = if (isEncrypted && encryptor != null) {
+                try {
+                    encryptor.decrypt(raw)
+                } catch (e: Exception) {
+                    raw
+                }
+            } else {
+                raw
+            }
+            return try {
+                Json.decodeFromString(serializer, jsonString)
+            } catch (e: Exception) {
+                defaultValue
+            }
+        }
 
         fun set(value: T?) {
-            storage.putString(
-                key,
-                if (value == null) null
-                else Json.encodeToString(serializer, value)
-            )
+            if (value == null) {
+                storage.putString(key, null)
+            } else {
+                val jsonString = Json.encodeToString(serializer, value)
+                val stored = if (isEncrypted && encryptor != null) {
+                    try {
+                        encryptor.encrypt(jsonString)
+                    } catch (e: Exception) {
+                        jsonString
+                    }
+                } else {
+                    jsonString
+                }
+                storage.putString(key, stored)
+            }
             preferencesFlow.tryEmit(key)
         }
 

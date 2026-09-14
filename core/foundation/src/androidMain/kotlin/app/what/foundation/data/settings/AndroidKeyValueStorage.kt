@@ -13,9 +13,14 @@ class AndroidKeyValueStorage(private val prefs: SharedPreferences) : KeyValueSto
         }
     }
 
+    private var changeListener: SharedPreferences.OnSharedPreferenceChangeListener? = null
+
     override fun setOnChangeListener(listener: (key: String) -> Unit) {
-        prefs.registerOnSharedPreferenceChangeListener { _, key ->
+        changeListener?.let { prefs.unregisterOnSharedPreferenceChangeListener(it) }
+        val newListener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
             key?.let(listener)
         }
+        changeListener = newListener
+        prefs.registerOnSharedPreferenceChangeListener(newListener)
     }
 }

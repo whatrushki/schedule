@@ -58,7 +58,7 @@ class CrashActivity : ComponentActivity() {
                                 .systemBarsPadding()
                                 .padding(bottom = 20.dp, end = 20.dp),
                             onClick = {
-                                dialog.open(full = true) { DevFeature() }
+                                dialog.open(full = true) { DevFeature(onBack = { dialog.close() }) }
                             }
                         ) {
                             WHATIcons.FrameBug.Show(color = colorScheme.onSecondaryContainer)

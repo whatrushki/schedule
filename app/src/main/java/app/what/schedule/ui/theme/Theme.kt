@@ -94,7 +94,7 @@ fun AppTheme(
     
     val theme = when (themeStyle) {
         ThemeStyle.Monochrome -> if (isDarkTheme) DarkMonochromeScheme else LightMonochromeScheme
-        ThemeStyle.CustomColor -> DynamicScheme(Color(themeColor!!), isDarkTheme).toColorScheme(isAmoled = false)
+        ThemeStyle.CustomColor -> DynamicScheme(themeColor?.let { Color(it) } ?: Color(0xFF94FF28), isDarkTheme).toColorScheme(isAmoled = false)
         else -> DynamicScheme(Color(0xFF94FF28), isDarkTheme).toColorScheme(isAmoled = false)
     }
     
