@@ -52,7 +52,7 @@ interface AppUpdateManager {
 
 data class UpdateConfig(
     val githubOwner: String = "whatrushki",
-    val githubRepo: String = "WHAT-Schedule-android",
+    val githubRepo: String = "schedule",
     val currentVersion: String = "1.1.0"
 )
 

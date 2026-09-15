@@ -66,7 +66,7 @@ val dataModule = module {
             gitHubService = GitHubUpdateService(get()),
             config = UpdateConfig(
                 githubOwner = "whatrushki",
-                githubRepo = "WHAT-Schedule-android",
+                githubRepo = "schedule",
                 currentVersion = "1.3.0"
             ),
             openUrl = { url ->

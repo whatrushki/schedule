@@ -31,7 +31,7 @@ import io.ktor.client.request.get
 import io.ktor.client.statement.bodyAsText
 import org.koin.compose.koinInject
 
-private const val PRIVACY_POLICY_URL = "https://raw.githubusercontent.com/whatrushki/WHAT-Schedule-android/refs/heads/master/PRIVACY_POLICY.md"
+private const val PRIVACY_POLICY_URL = "https://raw.githubusercontent.com/whatrushki/schedule/refs/heads/master/PRIVACY_POLICY.md"
 
 @Composable
 fun PolicyView() = Column {

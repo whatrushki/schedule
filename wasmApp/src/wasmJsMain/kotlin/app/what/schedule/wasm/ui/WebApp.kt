@@ -93,7 +93,7 @@ fun WebApp(httpClient: HttpClient, updateManager: WasmUpdateManager) {
         if (hostname == "localhost" || hostname == "127.0.0.1") {
             "$origin$pathname/schedule"
         } else {
-            "https://raw.githubusercontent.com/whatrushki/WHAT-Schedule-android/master/.github/schedule"
+            "https://raw.githubusercontent.com/whatrushki/schedule/master/.github/schedule"
         }
     }
 

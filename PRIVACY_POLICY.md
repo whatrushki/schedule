@@ -53,4 +53,4 @@
 
 **Telegram:** https://t.me/whatrushik
 
-**GitHub:** https://github.com/whatrushki/WHAT-Schedule-android
+**GitHub:** https://github.com/whatrushki/schedule
