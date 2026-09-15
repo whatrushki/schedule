@@ -64,7 +64,7 @@ fun NewsView(
             listener(NewsEvent.OnListEndingScrolled)
     }
 
-    val columns = if (isWide) GridCells.Adaptive(240.dp) else GridCells.Adaptive(170.dp)
+    val columns = if (isWide) GridCells.Adaptive(240.dp) else GridCells.Fixed(1)
     val displayNews = remember(state.news) { state.news.distinctBy { it.id } }
 
     AppPullToRefresh(

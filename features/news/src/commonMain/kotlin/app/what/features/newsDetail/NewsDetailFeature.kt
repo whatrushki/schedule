@@ -23,11 +23,16 @@ import kotlinx.datetime.toLocalDateTime
 import app.what.foundation.utils.currentLocalDate
 
 class NewsDetailFeature(
-    override val data: NewsDetailProvider,
-    private val showBack: Boolean = true
+    override val data: NewsDetailProvider
 ) : Feature<NewsDetailController, NewsDetailEvent>(),
     NavComponent<NewsDetailProvider>,
     KoinComponent {
+    
+    private var showBack: Boolean = true
+
+    constructor(data: NewsDetailProvider, showBack: Boolean) : this(data) {
+        this.showBack = showBack
+    }
     override val controller: NewsDetailController by inject {
         parametersOf(
             NewListItem(

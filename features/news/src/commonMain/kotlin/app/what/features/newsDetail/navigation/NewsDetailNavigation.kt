@@ -3,6 +3,7 @@ package app.what.schedule.features.newsDetail.navigation
 import app.what.navigation.core.NavProvider
 import app.what.navigation.core.Registry
 import app.what.navigation.core.register
+import app.what.navigation.core.registerScreenFactory
 import app.what.schedule.features.newsDetail.NewsDetailFeature
 import kotlinx.serialization.Serializable
 
@@ -16,6 +17,7 @@ data class NewsDetailProvider(
 ) : NavProvider()
 
 val newsDetailRegistry: Registry = {
+    registerScreenFactory(NewsDetailFeature::class) { provider -> NewsDetailFeature(provider) }
     register(NewsDetailFeature::class)
 }
 
