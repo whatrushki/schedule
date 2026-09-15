@@ -127,8 +127,6 @@ dependencies {
     implementation(libs.bundles.coil)
 
     implementation(libs.qrose)
-    implementation(libs.poi)
-    implementation(libs.poi.ooxml)
     implementation(libs.process.phoenix)
     implementation(libs.ksoup.lite)
     implementation(libs.materialKolor)

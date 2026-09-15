@@ -11,6 +11,7 @@ on:
         default: '1.1.0'
 
 env:
+  GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx6144m -XX:MaxMetaspaceSize=1024m -XX:+HeapDumpOnOutOfMemoryError"
   KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
   RELEASE_SIGN_KEY_ALIAS: ${{ secrets.RELEASE_SIGN_KEY_ALIAS }}
   RELEASE_SIGN_KEY_PASSWORD: ${{ secrets.RELEASE_SIGN_KEY_PASSWORD }}
@@ -37,6 +38,11 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
+
       - name: Checkout keystore repo
         continue-on-error: true
         uses: actions/checkout@v4
@@ -47,14 +53,6 @@ jobs:
 
       - name: Make gradlew executable
         run: chmod +x ./gradlew
-
-      - name: Cache Gradle packages
-        uses: actions/cache@v4
-        with:
-          path: ~/.gradle/caches
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
 
       - name: Determine Version
         id: get_version
@@ -146,6 +144,11 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
 
       - name: Make gradlew executable
         run: chmod +x ./gradlew
