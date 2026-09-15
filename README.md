@@ -94,6 +94,69 @@ WHAT Schedule — мультиплатформенная экосистема д
 
 #### Архитектура
 
+```mermaid
+graph TD
+    subgraph Targets["Точки сборки приложений"]
+        APP["app (Android APK / AAB)"]
+        DESKTOP["desktopApp (Desktop JVM)"]
+        WASM["wasmApp (Web Wasm)"]
+    end
+
+    subgraph Presentation["Презентационный слой"]
+        COMP_APP["composeApp (Root UI & Navigation)"]
+        FEATURES["features (schedule, news, settings, account, dev)"]
+    end
+
+    subgraph CoreLayer["Ядро и навигация"]
+        CORE_NAV["core:navigation"]
+        CORE_FOUND["core:foundation"]
+    end
+
+    subgraph BusinessLayer["Бизнес-логика и данные"]
+        DOMAIN["domain (Модели, Use Cases)"]
+        DATA["data (Room DB, Репозитории, Кэш)"]
+    end
+
+    subgraph ParsersLayer["Парсеры заведений (libs:schedule)"]
+        CORE_PARSER["core (Базовые DTO и клиенты)"]
+        P_RKSI["rksi (Колледж связи)"]
+        P_DGTU["dgtu (Донской тех. ун-т)"]
+        P_IUBIP["iubip (Институт упр-я и права)"]
+        P_RINH["rinh (РГЭУ РИНХ)"]
+    end
+
+    subgraph ToolsLayer["Инструменты"]
+        SYNC["tools:schedule-sync (CLI & CI Health Check)"]
+    end
+
+    APP --> COMP_APP
+    DESKTOP --> COMP_APP
+    WASM --> COMP_APP
+
+    COMP_APP --> FEATURES
+    FEATURES --> CORE_NAV
+    FEATURES --> CORE_FOUND
+    FEATURES --> DOMAIN
+
+    DATA --> DOMAIN
+    DATA --> CORE_PARSER
+    DATA --> P_RKSI
+    DATA --> P_DGTU
+    DATA --> P_IUBIP
+    DATA --> P_RINH
+
+    P_RKSI --> CORE_PARSER
+    P_DGTU --> CORE_PARSER
+    P_IUBIP --> CORE_PARSER
+    P_RINH --> CORE_PARSER
+
+    SYNC --> CORE_PARSER
+    SYNC --> P_RKSI
+    SYNC --> P_DGTU
+    SYNC --> P_IUBIP
+    SYNC --> P_RINH
+```
+
 ```
 ├── app/             Точка сборки Android-приложения (AAR/APK/AAB)
 ├── desktopApp/      Точка сборки Desktop-клиента (JVM, Windows DWM)
