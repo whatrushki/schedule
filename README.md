@@ -1,89 +1,169 @@
-# 🌿 WHAT Schedule · Умное расписание
+﻿<div align="center">
 
-![Banner](.github/res/app_banner.jpg)
+<br />
 
-**Твой цифровой сад учебного времени**  
-_Вырасти свой идеальный график — просто, быстро, зелёно._ 🌱
+<!-- 1. Закругленная иконка проекта -->
+<img src=".github/res/icon.png" width="80" height="80" alt="Project Icon" style="border-radius: 50%;" />
+
+# WHAT SCHEDULE
+
+Кроссплатформенный клиент и экосистема синхронизации академического расписания для студентов и преподавателей.
+
+<br />
+
+<!-- 2. Информационные чипсы (height="24") -->
+<img src="https://img.shields.io/badge/status-stable-09090b?style=for-the-badge&labelColor=000000" height="24" />
+<img src="https://img.shields.io/badge/version-1.3.1-09090b?style=for-the-badge&labelColor=000000" height="24" />
+<img src="https://img.shields.io/badge/platform-Android_%7C_Desktop_%7C_Web-09090b?style=for-the-badge&labelColor=000000" height="24" />
+<img src="https://img.shields.io/badge/license-MIT-09090b?style=for-the-badge&labelColor=000000" height="24" />
+
+<br />
+<br />
+
+<!-- 3. Кнопки дистрибуции и установки -->
+[![Releases](https://img.shields.io/badge/Releases-APK_%2F_Desktop-09090b?style=for-the-badge&logo=github&logoColor=white&labelColor=000000)](https://github.com/whatrushki/schedule/releases)
+&nbsp;
+[![Web](https://img.shields.io/badge/Launch-Web_WASM-09090b?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=000000)](https://whatrushki.github.io/schedule/)
+&nbsp;
+[![GitHub Packages](https://img.shields.io/badge/Packages-Maven_KMP-09090b?style=for-the-badge&logo=apachemaven&logoColor=white&labelColor=000000)](https://github.com/whatrushki/schedule/packages)
+
+<br />
+<br />
+<br />
+
+<!-- 4. Витрина (Showcase) -->
+<img src=".github/res/image1.png" width="31%" />
+&nbsp;
+<img src=".github/res/image2.png" width="31%" />
+&nbsp;
+<img src=".github/res/image3.png" width="31%" />
+
+<br />
+<br />
+
+</div>
 
 ---
 
-## 🌱 Посади расписание в свой телефон
+### О проекте
 
-[<img src=".github/res/badge_github.png?raw=true" alt="Get it on GitHub" height="82"
-align="center">](https://github.com/whatrushki/schedule/releases/latest/download/what-schedule.apk)
+WHAT Schedule — мультиплатформенная экосистема для получения, парсинга и отображения расписания учебных заведений (РКСИ, ДГТУ, ИУБиП, РГЭУ РИНХ). Проект объединяет гетерогенные источники данных (от закрытых веб-API и XLSX-файлов до облачных таблиц) в единую нормализованную модель данных с поддержкой оперативного отслеживания замен, звонков и академических новостей.
 
-[<img src=".github/res/badge_rustore.png?raw=true" alt="Get it on RuStore" height="82"
-align="center">](https://www.rustore.ru/catalog/app/app.what.schedule)
+Архитектура построена на базе Kotlin Multiplatform и Compose Multiplatform, обеспечивая консистентный пользовательский опыт и единый стек бизнес-логики на Android, десктопных операционных системах (Windows, macOS, Linux) и в браузере через WebAssembly.
 
-## 🎋 Screenshots
+#### Ключевые возможности
 
-| ![Image 1](.github/res/image1.png) | ![Image 2](.github/res/image2.png) | ![Image 3](.github/res/image3.png) |
-|:----------------------------------:|:----------------------------------:|:----------------------------------:|
-| ![Image 4](.github/res/image4.png) | ![Image 5](.github/res/image5.png) | ![Image 6](.github/res/image6.png) |
+* **Мультипровайдерная синхронизация**  
+  Автономные клиенты парсинга для каждого учебного заведения с извлечением групп, преподавателей, аудиторий и расписания звонков.
 
-## 🍃 Почему WHAT Schedule?
+* **Автоматическое наложение замен**  
+  Интеллектуальное сопоставление базового расписания с оперативными изменениями, вычисление добавленных, отмененных и перенесенных занятий.
 
-**WHAT Schedule** — это не просто ещё одно приложение с расписанием. Это твой персональный
-ассистент, который чувствует ритм студенческой жизни.
+* **Академические новости и галереи**  
+  Интегрированная лента новостей учебных заведений с адаптивной версткой, предпросмотром медиафайлов и полноэкранным просмотром деталей.
 
-* 🌳 **Естественная простота**  
-  Чистый интерфейс без шелухи. Ничего лишнего — только ясные учебные маршруты и интуитивное
-  управление.
+* **Автономность и фоновый кэш**  
+  Многоуровневое кэширование расписания и метаданных для бесперебойной работы клиентов в условиях нестабильной сети или недоступности серверов учреждений.
 
-* ⚡ **Мгновенная синхронизация**  
-  Все изменения в расписании подхватываются автоматически. Обновления приходят как весенний
-  ветерок — незаметно, но всегда вовремя.
+* **Еженедельный мониторинг стабильности**  
+  Автоматизированный CI-конвейер проверки доступности парсеров с независимой матрицей исполнения и мгновенными алертами в Telegram.
 
-* 🎨 **Живые, дышащие темы**  
-  Под любое настроение и время суток. Светлая, тёмная, зелёная — выбирай, во что окрасится твой
-  день.
+---
 
-* 📱 **Виджеты-саженцы**  
-  Вырасти своё расписание прямо на главном экране. Все нужные детали — в один взгляд, без лишних
-  taps.
+### Инженерная спецификация
 
-## 🌍 Экосистема возможностей
+#### Стек и инструменты
 
-### 📚 Поддержка учебных заведений
+<p align="left">
+  <img src="https://img.shields.io/badge/Kotlin-2.1.20--RC-09090b?style=for-the-badge&logo=kotlin&logoColor=white&labelColor=000000" height="24" />
+  <img src="https://img.shields.io/badge/Compose_Multiplatform-1.8.0--alpha03-09090b?style=for-the-badge&logo=jetpackcompose&logoColor=white&labelColor=000000" height="24" />
+  <img src="https://img.shields.io/badge/Ktor_Client-3.1.0-09090b?style=for-the-badge&logo=ktor&logoColor=white&labelColor=000000" height="24" />
+  <img src="https://img.shields.io/badge/Koin-4.0.2-09090b?style=for-the-badge&logo=koin&logoColor=white&labelColor=000000" height="24" />
+  <img src="https://img.shields.io/badge/Room_DB-2.7.0--alpha13-09090b?style=for-the-badge&logo=sqlite&logoColor=white&labelColor=000000" height="24" />
+  <img src="https://img.shields.io/badge/Ksoup-0.2.0-09090b?style=for-the-badge&logo=html5&logoColor=white&labelColor=000000" height="24" />
+</p>
 
-| **Вуз**     | **Статус**                                               | 
-|-------------|----------------------------------------------------------| 
-| РКСИ        | 🌟 Цветёт                                                | 
-| ДГТУ        | 🌟 Цветёт                                                | 
-| РГЭУ (РИНХ) | 🌟 Цветёт                                                | 
-| ИУБиП       | 🛟 Тех работы                                            | 
-| Твой вуз?   | 🪴 Готов к посадке [Предложить](https://t.me/whatrushik) |
+#### Архитектура
 
-### 🌿 Технологический сад
+```
+├── app/             Точка сборки Android-приложения (AAR/APK/AAB)
+├── desktopApp/      Точка сборки Desktop-клиента (JVM, Windows DWM)
+├── wasmApp/         Точка сборки Web-клиента (Kotlin/Wasm)
+├── composeApp/      Общий UI-каркас и навигационный граф
+├── features/        Модули пользовательских сценариев (schedule, news, account, settings, dev)
+├── domain/          Бизнес-правила, Use Cases, сущности предметной области
+├── data/            Реализация репозиториев, локальная база Room, сетевые адаптеры
+├── core/            Дизайн-система, навигационный движок, утилиты
+├── libs/schedule/   Независимые KMP-библиотеки парсеров учебных заведений
+│   ├── core/        Общие контракты, DTO и структуры расписания
+│   ├── rksi/        Парсер и клиент колледжа РКСИ
+│   ├── dgtu/        Парсер и API-клиент университета ДГТУ
+│   ├── iubip/       Парсер и клиент института ИУБиП
+│   └── rinh/        Парсер и клиент университета РГЭУ (РИНХ)
+└── tools/           CLI-инструменты синхронизации данных (schedule-sync)
+```
+
+#### Подключение библиотек парсеров (Maven Packages)
 
 ```kotlin
-Jetpack Compose   // Современный UI 
-Glance            // Compose виджеты на рабочий стол
-Ktor              // Лёгкий как перо клиент для общения с API
-Koin              // Практичный и производительный DI-фреймворк
-Room              // Надёжная и типобезопасная прослойка для базы данных
+// settings.gradle.kts
+dependencyResolutionManagement {
+    repositories {
+        maven {
+            url = uri("https://maven.pkg.github.com/whatrushki/schedule")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
+// build.gradle.kts
+dependencies {
+    implementation("app.what.schedule:core:1.3.1")
+    implementation("app.what.schedule:rksi:1.3.1")
+    implementation("app.what.schedule:dgtu:1.3.1")
+    implementation("app.what.schedule:iubip:1.3.1")
+    implementation("app.what.schedule:rinh:1.3.1")
+}
 ```
 
-## 🌻 Что расцветает в ближайшем будущем?
+#### Сборка и запуск
 
-- [x] MVP
-- [x] Кеширование
-- [x] Виджеты на главный экран
-- [x] Темы
-- [x] Интеграция новостей
-- [x] Личные кабинеты
+```bash
+# Клонирование репозитория
+git clone https://github.com/whatrushki/schedule.git
+cd schedule
 
-## 💚 Стань садовником проекта
+# Сборка Android APK
+./gradlew assembleDebug
 
-1. **Тестировщик-ботаник** → [Написать](https://t.me/whatrushik)
-2. **Инициатор новых сортов** → [Написать](https://t.me/whatrushik)
-3. **Дизайнер экосистемы** → [Написать](https://t.me/whatrushik)
+# Запуск Desktop-приложения
+./gradlew :desktopApp:run
 
-```text
-MIT License · © 2024 whatrushik
-Свободно расти и процветать 🌍
+# Запуск Web (Wasm) в dev-режиме
+./gradlew :wasmApp:wasmJsBrowserDevelopmentRun
 ```
+
+#### Конфигурация
+
+Параметры окружения и секреты GitHub Actions:
+
+* `TELEGRAM_BOT_TOKEN` — токен Telegram-бота для отправки отчетов о сбоях парсеров.
+* `TELEGRAM_CHAT_ID` — ID чата или канала получателя сервисных оповещений.
+* `KEYSTORE_GIT_REPOSITORY` — защищенный репозиторий с релизным keystore для подписи APK/AAB.
+* `KEYSTORE_PASSWORD` / `RELEASE_SIGN_KEY_PASSWORD` — пароли доступа к ключам сборщика.
+
+---
+
+### Обратная связь и участие
+
+* Ошибки и запросы функционала оформляются через [GitHub Issues](https://github.com/whatrushki/schedule/issues).
+* Официальные каналы коммуникации и вопросы разработки: [Telegram](https://t.me/whatrushki).
+
+<br />
 
 <div align="center">
-  <sub>С любовью выращено для студентов и преподавателей. Поливайте звездочкой ⭐ — и наш сад станет краше!</sub><br>
+<sub>© WHAT Technologies. Все права защищены. Лицензия MIT.</sub>
 </div>
