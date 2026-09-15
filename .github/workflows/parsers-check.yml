@@ -1,0 +1,118 @@
+﻿name: Weekly Schedule Parsers Health Check
+
+on:
+  schedule:
+    # Runs every Monday at 06:00 UTC (09:00 MSK)
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  check_parser:
+    name: Check ${{ matrix.name }} Parser
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: rksi
+            name: "РКСИ"
+            target: "rksi"
+          - id: dgtu
+            name: "ДГТУ"
+            target: "dgtu"
+          - id: iubip
+            name: "ИУБиП"
+            target: "iubip"
+          - id: rinh
+            name: "РИНХ"
+            target: "rinh"
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
+
+      - name: Test ${{ matrix.name }} Parser
+        id: test_step
+        run: |
+          ./gradlew :tools:schedule-sync:run --args="--target ${{ matrix.target }} --fail-on-error" --stacktrace
+
+      - name: Record failure
+        if: failure()
+        run: |
+          mkdir -p parser-failures
+          echo "${{ matrix.name }}" > parser-failures/${{ matrix.id }}.txt
+
+      - name: Upload failure artifact
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: failure-${{ matrix.id }}
+          path: parser-failures/${{ matrix.id }}.txt
+          retention-days: 1
+
+  notify_telegram:
+    name: Report Health Status to Telegram
+    needs: check_parser
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download failure artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: failures/
+          pattern: failure-*
+          merge-multiple: true
+        continue-on-error: true
+
+      - name: Inspect failures and send Telegram alert
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          RUN_URL: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        run: |
+          FAILED_PARSERS=""
+          if [ -d "failures" ] && [ "$(ls -A failures 2>/dev/null)" ]; then
+            for f in failures/*.txt; do
+              if [ -f "$f" ]; then
+                NAME=$(cat "$f" | tr -d '\r\n')
+                FAILED_PARSERS="${FAILED_PARSERS}• <b>${NAME}</b>%0A"
+              fi
+            done
+          fi
+
+          if [ -n "$FAILED_PARSERS" ]; then
+            echo "Failed parsers detected:"
+            printf "$FAILED_PARSERS\n"
+
+            if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
+              MSG="🚨 <b>Внимание: сбой в парсерах расписания!</b>%0A%0AОбнаружены ошибки при проверке следующих парсеров:%0A${FAILED_PARSERS}%0A🔗 <a href=\"${RUN_URL}\">Лог запуска в GitHub Actions</a>"
+
+              curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+                -d "chat_id=${TELEGRAM_CHAT_ID}" \
+                -d "text=${MSG}" \
+                -d "parse_mode=HTML" \
+                -d "disable_web_page_preview=true"
+
+              echo "Telegram alert successfully sent."
+            else
+              echo "WARNING: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID is not configured in repository secrets."
+            fi
+
+            exit 1
+          else
+            echo "All parsers passed successfully! Everything is healthy."
+          fi

@@ -1,4 +1,4 @@
-name: CI - Test and Verify All Parsers
+name: CI - Build & Test
 
 on:
   push:
@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  test_parsers:
-    name: Test and Verify All Institution Parsers
+  build_and_test:
+    name: Build and Run Unit Tests
     runs-on: ubuntu-latest
 
     steps:

@@ -60,9 +60,12 @@ fun main(args: Array<String>) = runBlocking(Dispatchers.IO) {
     val outDir = File(outPath)
     outDir.mkdirs()
 
+    val failOnError = args.contains("--fail-on-error")
+
     println("=== Starting Schedule Sync ===")
     println("Target: $target")
     println("Output: ${outDir.absolutePath}")
+    println("Fail on error: $failOnError")
 
     val client = HttpClient(CIO) {
         install(HttpTimeout) {
@@ -80,14 +83,17 @@ fun main(args: Array<String>) = runBlocking(Dispatchers.IO) {
 
     try {
         when (target.lowercase()) {
-            "rksi" -> syncRksi(client, outDir)
-            "others" -> syncOthers(client, outDir)
+            "rksi" -> syncRksi(client, outDir, failOnError)
+            "dgtu" -> syncDgtu(client, outDir, failOnError)
+            "iubip" -> syncIubip(client, outDir, failOnError)
+            "rinh" -> syncRinh(client, outDir, failOnError)
+            "others" -> syncOthers(client, outDir, failOnError)
             "all" -> {
-                syncRksi(client, outDir)
-                syncOthers(client, outDir)
+                syncRksi(client, outDir, failOnError)
+                syncOthers(client, outDir, failOnError)
             }
             else -> {
-                println("Unknown target: $target. Use 'rksi', 'others', or 'all'.")
+                println("Unknown target: $target. Use 'rksi', 'dgtu', 'iubip', 'rinh', 'others', or 'all'.")
             }
         }
     } finally {
@@ -96,7 +102,7 @@ fun main(args: Array<String>) = runBlocking(Dispatchers.IO) {
     }
 }
 
-suspend fun syncRksi(client: HttpClient, rootDir: File) {
+suspend fun syncRksi(client: HttpClient, rootDir: File, failOnError: Boolean = false) {
     println("\n--- Syncing RKSI ---")
     val dir = File(rootDir, "rksi").apply { mkdirs() }
     val groupsDir = File(dir, "groups").apply { mkdirs() }
@@ -113,6 +119,9 @@ suspend fun syncRksi(client: HttpClient, rootDir: File) {
         val groups = rksiClient.getGroups()
         val teachers = rksiClient.getTeachers()
         println("  Found ${groups.size} groups and ${teachers.size} teachers")
+        if (groups.isEmpty()) {
+            error("RKSI returned 0 groups")
+        }
 
         File(dir, "groups.json").writeText(json.encodeToString(groups))
         File(dir, "teachers.json").writeText(json.encodeToString(teachers))
@@ -161,16 +170,17 @@ suspend fun syncRksi(client: HttpClient, rootDir: File) {
     }.onFailure {
         println("  [RKSI] Error syncing: ${it.message}")
         it.printStackTrace()
+        if (failOnError) throw it
     }
 }
 
-suspend fun syncOthers(client: HttpClient, rootDir: File) {
-    syncDgtu(client, rootDir)
-    syncIubip(client, rootDir)
-    syncRinh(client, rootDir)
+suspend fun syncOthers(client: HttpClient, rootDir: File, failOnError: Boolean = false) {
+    syncDgtu(client, rootDir, failOnError)
+    syncIubip(client, rootDir, failOnError)
+    syncRinh(client, rootDir, failOnError)
 }
 
-suspend fun syncDgtu(client: HttpClient, rootDir: File) {
+suspend fun syncDgtu(client: HttpClient, rootDir: File, failOnError: Boolean = false) {
     println("\n--- Syncing DGTU ---")
     val dir = File(rootDir, "dgtu").apply { mkdirs() }
     val groupsDir = File(dir, "groups").apply { mkdirs() }
@@ -183,9 +193,19 @@ suspend fun syncDgtu(client: HttpClient, rootDir: File) {
         val groups = dgtuClient.getGroups()
         val teachers = dgtuClient.getTeachers()
         println("  Found ${groups.size} groups and ${teachers.size} teachers")
+        if (groups.isEmpty()) {
+            error("DGTU returned 0 groups")
+        }
 
         File(dir, "groups.json").writeText(json.encodeToString(groups))
         File(dir, "teachers.json").writeText(json.encodeToString(teachers))
+
+        val sampleGroup = groups.firstOrNull()
+        if (sampleGroup != null) {
+            println("  Fetching sample DGTU schedule for group ${sampleGroup.name}...")
+            val schedule = dgtuClient.getGroupSchedule(sampleGroup.name)
+            println("  Sample schedule fetched: ${schedule.size} days found")
+        }
 
         val meta = InstitutionMeta(
             lastSync = nowStr,
@@ -198,10 +218,11 @@ suspend fun syncDgtu(client: HttpClient, rootDir: File) {
     }.onFailure {
         println("  [DGTU] Error syncing: ${it.message}")
         it.printStackTrace()
+        if (failOnError) throw it
     }
 }
 
-suspend fun syncIubip(client: HttpClient, rootDir: File) {
+suspend fun syncIubip(client: HttpClient, rootDir: File, failOnError: Boolean = false) {
     println("\n--- Syncing IUBIP ---")
     val dir = File(rootDir, "iubip").apply { mkdirs() }
     val groupsDir = File(dir, "groups").apply { mkdirs() }
@@ -214,6 +235,9 @@ suspend fun syncIubip(client: HttpClient, rootDir: File) {
         val groups = iubipClient.getGroups()
         val teachers = iubipClient.getTeachers()
         println("  Found ${groups.size} groups and ${teachers.size} teachers")
+        if (groups.isEmpty()) {
+            error("IUBIP returned 0 groups")
+        }
 
         File(dir, "groups.json").writeText(json.encodeToString(groups))
         File(dir, "teachers.json").writeText(json.encodeToString(teachers))
@@ -261,10 +285,11 @@ suspend fun syncIubip(client: HttpClient, rootDir: File) {
     }.onFailure {
         println("  [IUBIP] Error syncing: ${it.message}")
         it.printStackTrace()
+        if (failOnError) throw it
     }
 }
 
-suspend fun syncRinh(client: HttpClient, rootDir: File) {
+suspend fun syncRinh(client: HttpClient, rootDir: File, failOnError: Boolean = false) {
     println("\n--- Syncing RINH ---")
     val dir = File(rootDir, "rinh").apply { mkdirs() }
     val groupsDir = File(dir, "groups").apply { mkdirs() }
@@ -277,6 +302,9 @@ suspend fun syncRinh(client: HttpClient, rootDir: File) {
         val groups = rinhClient.getGroups()
         val teachers = rinhClient.getTeachers()
         println("  Found ${groups.size} groups and ${teachers.size} teachers")
+        if (groups.isEmpty()) {
+            error("RINH returned 0 groups")
+        }
 
         File(dir, "groups.json").writeText(json.encodeToString(groups))
         File(dir, "teachers.json").writeText(json.encodeToString(teachers))
@@ -324,5 +352,6 @@ suspend fun syncRinh(client: HttpClient, rootDir: File) {
     }.onFailure {
         println("  [RINH] Error syncing: ${it.message}")
         it.printStackTrace()
+        if (failOnError) throw it
     }
 }
