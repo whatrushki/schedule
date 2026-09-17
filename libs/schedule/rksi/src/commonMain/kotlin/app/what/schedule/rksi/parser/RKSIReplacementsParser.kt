@@ -76,10 +76,33 @@ object RKSIReplacementsParser {
         return lessons
     }
 
+    private fun normalize(name: String): String = name
+        .replace(" ", "")
+        .replace("-", "")
+        .replace("—", "")
+        .replace("–", "")
+        .replace(".", "")
+        .replace("c", "с", ignoreCase = true)
+        .replace("a", "а", ignoreCase = true)
+        .replace("e", "е", ignoreCase = true)
+        .replace("o", "о", ignoreCase = true)
+        .replace("p", "р", ignoreCase = true)
+        .replace("x", "х", ignoreCase = true)
+        .trim()
+        .lowercase()
+
+    private fun isSameTeacher(baseTeacher: String?, repTeacher: String?): Boolean {
+        if (baseTeacher.isNullOrBlank() || repTeacher.isNullOrBlank()) return false
+        val cleanBase = normalize(baseTeacher)
+        val cleanRep = normalize(repTeacher)
+        return cleanBase == cleanRep || cleanBase.startsWith(cleanRep) || cleanRep.startsWith(cleanBase)
+    }
+
     fun applyReplacements(
         baseLessons: List<LessonDto>,
         replacements: List<LessonDto>,
-        timeSchedule: List<LessonTimeDto>
+        timeSchedule: List<LessonTimeDto>,
+        subjectResolver: ((teacher: String, group: String) -> String?)? = null
     ): List<LessonDto> {
         if (replacements.isEmpty()) return baseLessons
 
@@ -98,11 +121,22 @@ object RKSIReplacementsParser {
             } else if (replacement != null && lesson == null) {
                 // Добавленная пара
                 val lessonTime = timeSchedule.firstOrNull { it.number == replacement.number }
+                val repTeacher = replacement.otUnits.firstOrNull()?.teacher.orEmpty().trim()
+                val repGroup = replacement.otUnits.firstOrNull()?.group.orEmpty().trim()
+                val resolvedSubject = if (repTeacher.isNotEmpty()) subjectResolver?.invoke(repTeacher, repGroup) else null
+
+                val subject = when {
+                    replacement.number == 0 -> "Классный час"
+                    replacement.subject.isNotBlank() -> replacement.subject
+                    !resolvedSubject.isNullOrBlank() -> resolvedSubject
+                    else -> "Предмет не указан"
+                }
+
                 replacement.copy(
                     state = LessonStateDto.ADDED,
                     startTime = lessonTime?.start ?: minTime,
                     endTime = lessonTime?.end ?: minTime,
-                    subject = if (replacement.number == 0) "Классный час" else replacement.subject
+                    subject = subject
                 )
             } else if (replacement != null && lesson != null) {
                 if (lesson.equalsWithReplacement(replacement)) {
@@ -111,11 +145,26 @@ object RKSIReplacementsParser {
                 } else {
                     // Преподаватель или аудитория изменились -> пара изменена
                     val lessonTime = timeSchedule.firstOrNull { it.number == replacement.number }
+                    val repTeacher = replacement.otUnits.firstOrNull()?.teacher.orEmpty().trim()
+                    val repGroup = replacement.otUnits.firstOrNull()?.group.orEmpty().trim()
+                    val sameTeacher = lesson.otUnits.any { isSameTeacher(it.teacher, repTeacher) }
+
+                    val subject = when {
+                        replacement.number == 0 -> "Классный час"
+                        replacement.subject.isNotBlank() -> replacement.subject
+                        sameTeacher -> lesson.subject.ifEmpty { "Предмет не указан" }
+                        else -> {
+                            val resolved = if (repTeacher.isNotEmpty()) subjectResolver?.invoke(repTeacher, repGroup) else null
+                            if (!resolved.isNullOrBlank()) resolved else "Предмет не указан"
+                        }
+                    }
+
                     replacement.copy(
                         state = LessonStateDto.CHANGED,
                         startTime = lesson.startTime.takeIf { it != minTime } ?: (lessonTime?.start ?: minTime),
                         endTime = lesson.endTime.takeIf { it != minTime } ?: (lessonTime?.end ?: minTime),
-                        subject = lesson.subject.ifEmpty { replacement.subject }
+                        subject = subject,
+                        type = if (sameTeacher) lesson.type else LessonTypeDto.COMMON
                     )
                 }
             } else {

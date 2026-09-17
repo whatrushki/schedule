@@ -187,20 +187,87 @@ class RKSIScheduleClientTest {
         assertEquals(LessonStateDto.ADDED, p1.state)
         assertEquals("Бойнар И.Н.", p1.otUnits.first().teacher)
         assertEquals("326", p1.otUnits.first().room)
+        assertEquals("Предмет не указан", p1.subject)
 
         val p2 = result.first { it.number == 2 }
         assertEquals(LessonStateDto.CHANGED, p2.state)
         assertEquals("Гузов А.В.", p2.otUnits.first().teacher)
         assertEquals("с/з2", p2.otUnits.first().room)
+        assertEquals("Физкультура", p2.subject)
 
         val p3 = result.first { it.number == 3 }
         assertEquals(LessonStateDto.COMMON, p3.state)
         assertEquals("Малая М.А.", p3.otUnits.first().teacher)
         assertEquals("422", p3.otUnits.first().room)
+        assertEquals("МДК 01.01", p3.subject)
 
         val p4 = result.first { it.number == 4 }
         assertEquals(LessonStateDto.REMOVED, p4.state)
         assertEquals("Павлова В.А.", p4.otUnits.first().teacher)
+        assertEquals("Экономика", p4.subject)
+    }
+
+    @Test
+    fun testTeacherChangeSubjectResolution() {
+        val date = LocalDate(2026, 9, 15)
+        RKSITeacherSubjectCache.clear()
+
+        // Base lesson has "Веб-технологии" by "Колесниченко В.В."
+        val baseLessons = listOf(
+            LessonDto(
+                date = date,
+                number = 1,
+                startTime = LocalTime(8, 0),
+                endTime = LocalTime(9, 30),
+                subject = "Веб-технологии",
+                type = LessonTypeDto.COMMON,
+                state = LessonStateDto.COMMON,
+                otUnits = listOf(OneTimeUnitDto(group = "ИС-43", teacher = "Колесниченко В.В.", room = "201"))
+            )
+        )
+
+        // Replacement replaces teacher with "Малая М.А." but replacement has no subject in планшетка
+        val replacements = listOf(
+            LessonDto(
+                date = date,
+                number = 1,
+                startTime = LocalTime(0, 0),
+                endTime = LocalTime(0, 0),
+                subject = "",
+                type = LessonTypeDto.COMMON,
+                state = LessonStateDto.CHANGED,
+                otUnits = listOf(OneTimeUnitDto(group = "ИС-43", teacher = "Малая М.А.", room = "422"))
+            )
+        )
+
+        // Case 1: Without resolver / unknown teacher subject -> should NOT be "Веб-технологии"
+        val resUnknown = RKSIReplacementsParser.applyReplacements(
+            baseLessons,
+            replacements,
+            RKSILessonsSchedule.COMMON
+        )
+        assertEquals(1, resUnknown.size)
+        assertEquals(LessonStateDto.CHANGED, resUnknown.first().state)
+        assertEquals("Предмет не указан", resUnknown.first().subject)
+        assertFalse(resUnknown.first().subject == "Веб-технологии")
+
+        // Case 2: With cache knowing that Малая М.А. teaches МДК 01.01 to ИС-43
+        RKSITeacherSubjectCache.record(
+            group = "ИС-43",
+            teacher = "Малая М.А.",
+            subject = "МДК 01.01 Разработка программных модулей"
+        )
+
+        val resResolved = RKSIReplacementsParser.applyReplacements(
+            baseLessons,
+            replacements,
+            RKSILessonsSchedule.COMMON,
+            subjectResolver = { t, g -> RKSITeacherSubjectCache.resolve(t, g) }
+        )
+        assertEquals(1, resResolved.size)
+        assertEquals(LessonStateDto.CHANGED, resResolved.first().state)
+        assertEquals("МДК 01.01 Разработка программных модулей", resResolved.first().subject)
+        assertEquals("Малая М.А.", resResolved.first().otUnits.first().teacher)
     }
 
     @Test

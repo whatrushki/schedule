@@ -330,6 +330,9 @@ class RKSIScheduleClient(
         // Если замены подгрузились, накладываем их
         val replacements = replacementsDeferred?.await() ?: emptyList()
         if (replacements.isNotEmpty()) {
+            daySchedules.forEach { daySchedule ->
+                RKSITeacherSubjectCache.recordLessons(daySchedule.lessons)
+            }
             daySchedules.map { daySchedule ->
                 val dayReplacements = replacements.filter { it.date == daySchedule.date }
                 if (dayReplacements.isNotEmpty()) {
@@ -341,7 +344,10 @@ class RKSIScheduleClient(
                     val merged = RKSIReplacementsParser.applyReplacements(
                         daySchedule.lessons,
                         dayReplacements,
-                        timeSchedule
+                        timeSchedule,
+                        subjectResolver = { teacher, group ->
+                            RKSITeacherSubjectCache.resolve(teacher, group)
+                        }
                     )
                     daySchedule.copy(lessons = merged)
                 } else daySchedule
