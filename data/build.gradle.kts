@@ -27,6 +27,7 @@ kotlin {
             implementation(project(":libs:schedule:dgtu"))
             implementation(project(":libs:schedule:iubip"))
             implementation(project(":libs:schedule:rinh"))
+            implementation(project(":libs:schedule:sfedu"))
 
             implementation(compose.runtime)
             implementation(compose.foundation)

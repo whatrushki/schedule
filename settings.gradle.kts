@@ -47,6 +47,7 @@ include(":libs:schedule:rksi")
 include(":libs:schedule:dgtu")
 include(":libs:schedule:iubip")
 include(":libs:schedule:rinh")
+include(":libs:schedule:sfedu")
 
 include(":tools:schedule-sync")
 include(":desktopApp")

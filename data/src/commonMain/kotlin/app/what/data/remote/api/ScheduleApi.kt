@@ -8,6 +8,7 @@ import app.what.schedule.data.remote.providers.dgtu.DGTU
 import app.what.schedule.data.remote.providers.iubip.IUBIP
 import app.what.schedule.data.remote.providers.rinh.RINH
 import app.what.schedule.data.remote.providers.rksi.RKSI
+import app.what.schedule.data.remote.providers.sfedu.SFEDU
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -67,7 +68,8 @@ val insts: List<Institution.Factory> by lazy {
         RKSI.Factory,
         DGTU.Factory,
         RINH.Factory,
-        IUBIP.Factory
+        IUBIP.Factory,
+        SFEDU.Factory
     )
 }
 

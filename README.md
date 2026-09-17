@@ -3,13 +3,11 @@
 <br />
 
 <!-- 1. Закругленная иконка проекта -->
-<img src=".github/res/icon.png" width="80" height="80" alt="Project Icon" style="border-radius: 50%;" />
+<img src=".github/res/icon.png" width="80" height="80" alt="Project Icon" style="border-radius: 20%;" />
 
-# WHAT SCHEDULE
+# SCHEDULE
 
 Кроссплатформенный клиент и экосистема синхронизации академического расписания для студентов и преподавателей.
-
-<br />
 
 <!-- 2. Информационные чипсы (height="24") -->
 <img src="https://img.shields.io/badge/status-stable-09090b?style=for-the-badge&labelColor=000000" height="24" />
@@ -17,18 +15,6 @@
 <img src="https://img.shields.io/badge/platform-Android_%7C_Desktop_%7C_Web-09090b?style=for-the-badge&labelColor=000000" height="24" />
 <img src="https://img.shields.io/badge/license-MIT-09090b?style=for-the-badge&labelColor=000000" height="24" />
 
-<br />
-<br />
-
-<!-- 3. Кнопки дистрибуции и установки -->
-[![Releases](https://img.shields.io/badge/Releases-APK_%2F_Desktop-09090b?style=for-the-badge&logo=github&logoColor=white&labelColor=000000)](https://github.com/whatrushki/schedule/releases)
-&nbsp;
-[![Web](https://img.shields.io/badge/Launch-Web_WASM-09090b?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=000000)](https://whatrushki.github.io/schedule/)
-&nbsp;
-[![GitHub Packages](https://img.shields.io/badge/Packages-Maven_KMP-09090b?style=for-the-badge&logo=apachemaven&logoColor=white&labelColor=000000)](https://github.com/whatrushki/schedule/packages)
-
-<br />
-<br />
 <br />
 
 <!-- 4. Витрина (Showcase) -->
@@ -39,7 +25,13 @@
 <img src=".github/res/image3.png" width="31%" />
 
 <br />
-<br />
+
+<!-- 3. Кнопки дистрибуции и установки -->
+[![Releases](https://img.shields.io/badge/Releases-APK_%2F_Desktop-09090b?style=for-the-badge&logo=github&logoColor=white&labelColor=000000)](https://github.com/whatrushki/schedule/releases)
+&nbsp;
+[![Web](https://img.shields.io/badge/Launch-Web_WASM-09090b?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=000000)](https://whatrushki.github.io/schedule/)
+&nbsp;
+[![GitHub Packages](https://img.shields.io/badge/Packages-Maven_KMP-09090b?style=for-the-badge&logo=apachemaven&logoColor=white&labelColor=000000)](https://github.com/whatrushki/schedule/packages)
 
 </div>
 
@@ -76,6 +68,7 @@ WHAT Schedule — мультиплатформенная экосистема д
 | **ДГТУ** — Донской государственный технический университет | `:libs:schedule:dgtu` | Внутренний REST API | Поддерживается |
 | **РГЭУ (РИНХ)** — Ростовский государственный экономический университет | `:libs:schedule:rinh` | Официальный веб-сервис | Поддерживается |
 | **ИУБиП** — Институт управления, бизнеса и права | `:libs:schedule:iubip` | Информационный портал | Поддерживается |
+| **ЮФУ (Мехмат)** — Институт математики, механики и КН им. И.И. Воровича | `:libs:schedule:sfedu` | Официальный REST API / Веб | Поддерживается |
 
 ---
 
@@ -157,24 +150,6 @@ graph TD
     SYNC --> P_RINH
 ```
 
-```
-├── app/             Точка сборки Android-приложения (AAR/APK/AAB)
-├── desktopApp/      Точка сборки Desktop-клиента (JVM, Windows DWM)
-├── wasmApp/         Точка сборки Web-клиента (Kotlin/Wasm)
-├── composeApp/      Общий UI-каркас и навигационный граф
-├── features/        Модули пользовательских сценариев (schedule, news, account, settings, dev)
-├── domain/          Бизнес-правила, Use Cases, сущности предметной области
-├── data/            Реализация репозиториев, локальная база Room, сетевые адаптеры
-├── core/            Дизайн-система, навигационный движок, утилиты
-├── libs/schedule/   Независимые KMP-библиотеки парсеров учебных заведений
-│   ├── core/        Общие контракты, DTO и структуры расписания
-│   ├── rksi/        Парсер и клиент колледжа РКСИ
-│   ├── dgtu/        Парсер и API-клиент университета ДГТУ
-│   ├── iubip/       Парсер и клиент института ИУБиП
-│   └── rinh/        Парсер и клиент университета РГЭУ (РИНХ)
-└── tools/           CLI-инструменты синхронизации данных (schedule-sync)
-```
-
 #### Подключение библиотек парсеров (Maven Packages)
 
 ```kotlin
@@ -218,14 +193,6 @@ cd schedule
 ./gradlew :wasmApp:wasmJsBrowserDevelopmentRun
 ```
 
-#### Конфигурация
-
-Параметры окружения и секреты GitHub Actions:
-
-* `TELEGRAM_BOT_TOKEN` — токен Telegram-бота для отправки отчетов о сбоях парсеров.
-* `TELEGRAM_CHAT_ID` — ID чата или канала получателя сервисных оповещений.
-* `KEYSTORE_GIT_REPOSITORY` — защищенный репозиторий с релизным keystore для подписи APK/AAB.
-* `KEYSTORE_PASSWORD` / `RELEASE_SIGN_KEY_PASSWORD` — пароли доступа к ключам сборщика.
 
 ---
 
