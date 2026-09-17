@@ -24,6 +24,7 @@ kotlin {
             implementation(project(":libs:schedule:dgtu"))
             implementation(project(":libs:schedule:iubip"))
             implementation(project(":libs:schedule:rinh"))
+            implementation(project(":libs:schedule:sfedu"))
             implementation(compose.material3)
             implementation(compose.components.resources)
             implementation(libs.bundles.ktor)

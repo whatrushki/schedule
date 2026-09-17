@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version tag (e.g. 1.1.0)'
+        description: 'Version tag (e.g. 1.3.1)'
         required: false
-        default: '1.1.0'
+        default: '1.3.1'
 
 env:
   GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx6144m -XX:MaxMetaspaceSize=1024m -XX:+HeapDumpOnOutOfMemoryError"
@@ -18,7 +18,7 @@ env:
 
 jobs:
   build_release_publish:
-    name: Build All Targets, Publish Packages & Attach Assets
+    name: Build Android, Linux & Web, Publish Packages & Release Assets
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -57,8 +57,7 @@ jobs:
       - name: Determine Version
         id: get_version
         run: |
-          VERSION="${{ github.event.release.tag_name || github.event.inputs.version || '1.1.0' }}"
-          # Strip leading 'v' if present
+          VERSION="${{ github.event.release.tag_name || github.event.inputs.version || '1.3.1' }}"
           CLEAN_VERSION="${VERSION#v}"
           echo "version=$CLEAN_VERSION" >> $GITHUB_OUTPUT
           echo "tag=$VERSION" >> $GITHUB_OUTPUT
@@ -70,6 +69,7 @@ jobs:
                     :libs:schedule:dgtu:jvmTest \
                     :libs:schedule:iubip:jvmTest \
                     :libs:schedule:rinh:jvmTest \
+                    :libs:schedule:sfedu:jvmTest \
                     --stacktrace
 
       - name: Publish API Libraries to GitHub Packages
@@ -81,23 +81,27 @@ jobs:
 
       - name: Build Android Targets (APK & AAB)
         run: |
-          ./gradlew assembleRelease bundleRelease --stacktrace
+          ./gradlew assembleRelease bundleRelease --stacktrace || ./gradlew assembleDebug --stacktrace
           mkdir -p release_assets
-          cp app/build/outputs/apk/release/*.apk release_assets/schedule_android_${{ steps.get_version.outputs.version }}.apk || true
-          cp app/build/outputs/bundle/release/*.aab release_assets/schedule_android_${{ steps.get_version.outputs.version }}.aab || true
+          # Collect APKs (signed or unsigned)
+          find app/build/outputs/apk -name "*.apk" -exec cp {} release_assets/schedule_android_${{ steps.get_version.outputs.version }}.apk \; || true
+          find app/build/outputs/bundle -name "*.aab" -exec cp {} release_assets/schedule_android_${{ steps.get_version.outputs.version }}.aab \; || true
 
-      - name: Build Desktop Target
+      - name: Build Linux Desktop Targets (DEB, RPM & JAR)
         run: |
-          ./gradlew :desktopApp:packageReleaseDistributionForCurrentOS || ./gradlew :desktopApp:jar || true
+          ./gradlew :desktopApp:packageReleaseDeb :desktopApp:packageReleaseRpm || ./gradlew :desktopApp:packageReleaseDistributionForCurrentOS || ./gradlew :desktopApp:jar || true
           mkdir -p release_assets
-          # Collect desktop jar or installer
+          find desktopApp/build -name "*.deb" -exec cp {} release_assets/schedule_linux_${{ steps.get_version.outputs.version }}.deb \; || true
+          find desktopApp/build -name "*.rpm" -exec cp {} release_assets/schedule_linux_${{ steps.get_version.outputs.version }}.rpm \; || true
           find desktopApp/build -name "*.jar" -exec cp {} release_assets/schedule_desktop_${{ steps.get_version.outputs.version }}.jar \; || true
 
       - name: Build Web Target (Wasm)
         run: |
           ./gradlew :wasmApp:wasmJsBrowserDistribution || true
-          if [ -d "wasmApp/build/dist/wasmJs/productionExecutable" ]; then
-            cd wasmApp/build/dist/wasmJs/productionExecutable
+          DIST_DIR="wasmApp/build/dist/wasmJs/productionExecutable"
+          if [ -d "$DIST_DIR" ]; then
+            cp "$DIST_DIR/index.html" "$DIST_DIR/404.html"
+            cd "$DIST_DIR"
             zip -r ../../../../../release_assets/schedule_web_${{ steps.get_version.outputs.version }}.zip .
             cd -
           fi
@@ -121,18 +125,27 @@ jobs:
         with:
           path: 'wasmApp/build/dist/wasmJs/productionExecutable'
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages (Actions)
         if: success() && hashFiles('wasmApp/build/dist/wasmJs/productionExecutable/**') != ''
         id: deployment
         uses: actions/deploy-pages@v4
 
-  build_ios:
-    name: Build iOS Target (Framework)
-    runs-on: macos-latest
+      - name: Deploy to gh-pages Branch (Fallback)
+        if: success() && hashFiles('wasmApp/build/dist/wasmJs/productionExecutable/**') != ''
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./wasmApp/build/dist/wasmJs/productionExecutable
+          publish_branch: gh-pages
+
+  build_windows:
+    name: Build Windows Desktop Target (MSI & EXE)
+    runs-on: windows-latest
     needs: build_release_publish
-    if: github.event_name == 'release'
+    if: github.event_name == 'release' || github.event_name == 'workflow_dispatch'
     permissions:
       contents: write
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -150,29 +163,90 @@ jobs:
         with:
           cache-read-only: false
 
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
+      - name: Determine Version
+        id: get_version
+        shell: bash
+        run: |
+          VERSION="${{ github.event.release.tag_name || github.event.inputs.version || '1.3.1' }}"
+          CLEAN_VERSION="${VERSION#v}"
+          echo "version=$CLEAN_VERSION" >> $GITHUB_OUTPUT
+          echo "tag=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Build Windows Desktop Installers (MSI & EXE)
+        shell: bash
+        run: |
+          ./gradlew :desktopApp:packageReleaseMsi :desktopApp:packageReleaseExe || ./gradlew :desktopApp:packageReleaseDistributionForCurrentOS || true
+          mkdir -p release_assets
+          # Collect MSI installer
+          find desktopApp/build -name "*.msi" -exec cp {} release_assets/schedule_windows_${{ steps.get_version.outputs.version }}.msi \; || true
+          # Collect EXE installer if generated
+          find desktopApp/build -name "*.exe" -exec cp {} release_assets/schedule_windows_${{ steps.get_version.outputs.version }}.exe \; || true
+
+      - name: Upload Windows Installers to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.get_version.outputs.tag }}
+          files: release_assets/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  build_macos_and_ios:
+    name: Build macOS (DMG) & iOS Targets
+    runs-on: macos-latest
+    needs: build_release_publish
+    if: github.event_name == 'release' || github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.release.tag_name || github.ref }}
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
+
+      - name: Determine Version
+        id: get_version
+        run: |
+          VERSION="${{ github.event.release.tag_name || github.event.inputs.version || '1.3.1' }}"
+          CLEAN_VERSION="${VERSION#v}"
+          echo "version=$CLEAN_VERSION" >> $GITHUB_OUTPUT
+          echo "tag=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Build macOS Target (DMG)
+        run: |
+          ./gradlew :desktopApp:packageReleaseDmg || ./gradlew :desktopApp:packageReleaseDistributionForCurrentOS || true
+          mkdir -p release_assets
+          find desktopApp/build -name "*.dmg" -exec cp {} release_assets/schedule_macos_${{ steps.get_version.outputs.version }}.dmg \; || true
 
       - name: Build iOS Framework
         run: |
-          VERSION="${{ github.event.release.tag_name || github.event.inputs.version || '1.1.0' }}"
-          CLEAN_VERSION="${VERSION#v}"
           ./gradlew :iosApp:linkReleaseFrameworkIosFat || ./gradlew :iosApp:assemble || true
           mkdir -p release_assets
           if [ -d "iosApp/build/fat-framework/release" ]; then
             cd iosApp/build/fat-framework/release
-            zip -r ../../../release_assets/schedule_ios_${CLEAN_VERSION}.zip .
+            zip -r ../../../release_assets/schedule_ios_${{ steps.get_version.outputs.version }}.zip .
             cd -
           elif [ -d "iosApp/build/bin" ]; then
             cd iosApp/build/bin
-            zip -r ../../release_assets/schedule_ios_${CLEAN_VERSION}.zip .
+            zip -r ../../release_assets/schedule_ios_${{ steps.get_version.outputs.version }}.zip .
             cd -
           fi
 
-      - name: Upload iOS Artifact to Release
+      - name: Upload macOS & iOS Artifacts to Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.event.release.tag_name || github.event.inputs.version }}
+          tag_name: ${{ steps.get_version.outputs.tag }}
           files: release_assets/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

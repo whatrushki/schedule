@@ -17,6 +17,7 @@ dependencies {
     implementation(project(":libs:schedule:dgtu"))
     implementation(project(":libs:schedule:iubip"))
     implementation(project(":libs:schedule:rinh"))
+    implementation(project(":libs:schedule:sfedu"))
     implementation(project(":composeApp"))
 
     implementation(compose.desktop.currentOs)
@@ -40,7 +41,9 @@ compose.desktop {
             targetFormats(
                 org.jetbrains.compose.desktop.application.dsl.TargetFormat.Dmg,
                 org.jetbrains.compose.desktop.application.dsl.TargetFormat.Msi,
-                org.jetbrains.compose.desktop.application.dsl.TargetFormat.Deb
+                org.jetbrains.compose.desktop.application.dsl.TargetFormat.Exe,
+                org.jetbrains.compose.desktop.application.dsl.TargetFormat.Deb,
+                org.jetbrains.compose.desktop.application.dsl.TargetFormat.Rpm
             )
             packageName = "WHAT-Schedule"
             packageVersion = "1.3.1"
