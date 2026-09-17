@@ -101,7 +101,7 @@ fun NewsDetailView(
         ?: state.newListInfo.description?.let { buildAnnotatedString { append(it) } }
     var descriptionIsExpandable by useState(false)
     
-    if (onBack != null && !isDesktop) {
+    if (onBack != null) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier

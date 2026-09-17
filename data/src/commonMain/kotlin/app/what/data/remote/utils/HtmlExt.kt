@@ -1,14 +1,25 @@
 package app.what.data.remote.utils
 
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextLinkStyles
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import com.fleeksoft.ksoup.Ksoup
 import com.fleeksoft.ksoup.nodes.Element
 import com.fleeksoft.ksoup.nodes.Node
 import com.fleeksoft.ksoup.nodes.TextNode
+
+private val linkColor = Color(0xFF1976D2)
+private val linkStyles = TextLinkStyles(
+    style = SpanStyle(color = linkColor, textDecoration = TextDecoration.Underline)
+)
+
+private val urlRegex = Regex("""https?://[^\s<>"'()]+""")
 
 fun AnnotatedString.Companion.fromHtml(html: String): AnnotatedString {
     return try {
@@ -18,7 +29,33 @@ fun AnnotatedString.Companion.fromHtml(html: String): AnnotatedString {
             appendNode(body)
         }
     } catch (_: Exception) {
-        AnnotatedString(html)
+        buildAnnotatedString {
+            appendWithAutoLinks(html)
+        }
+    }
+}
+
+private fun AnnotatedString.Builder.appendWithAutoLinks(text: String) {
+    val matches = urlRegex.findAll(text).toList()
+    if (matches.isEmpty()) {
+        append(text)
+        return
+    }
+
+    var lastIndex = 0
+    for (match in matches) {
+        if (match.range.first > lastIndex) {
+            append(text.substring(lastIndex, match.range.first))
+        }
+        val url = match.value
+        val start = length
+        append(url)
+        val end = length
+        addLink(LinkAnnotation.Url(url = url, styles = linkStyles), start, end)
+        lastIndex = match.range.last + 1
+    }
+    if (lastIndex < text.length) {
+        append(text.substring(lastIndex))
     }
 }
 
@@ -26,12 +63,19 @@ private fun AnnotatedString.Builder.appendNode(node: Node) {
     for (child in node.childNodes()) {
         when (child) {
             is TextNode -> {
-                append(child.text())
+                val parentTag = (child.parent() as? Element)?.tagName()?.lowercase()
+                if (parentTag == "a") {
+                    append(child.text())
+                } else {
+                    appendWithAutoLinks(child.text())
+                }
             }
             is Element -> {
-                val isBold = child.tagName() in setOf("b", "strong")
-                val isItalic = child.tagName() in setOf("i", "em")
-                val isParagraph = child.tagName() == "p" || child.tagName() == "br"
+                val tag = child.tagName().lowercase()
+                val isBold = tag in setOf("b", "strong")
+                val isItalic = tag in setOf("i", "em")
+                val isLink = tag == "a"
+                val href = child.attr("href").trim()
 
                 val style = when {
                     isBold && isItalic -> SpanStyle(fontWeight = FontWeight.Bold, fontStyle = FontStyle.Italic)
@@ -40,17 +84,27 @@ private fun AnnotatedString.Builder.appendNode(node: Node) {
                     else -> null
                 }
 
-                if (style != null) {
-                    val start = length
-                    appendNode(child)
-                    val end = length
+                val start = length
+                appendNode(child)
+                val end = length
+
+                if (style != null && end > start) {
                     addStyle(style, start, end)
-                } else {
-                    appendNode(child)
                 }
-                if (child.tagName() == "br") {
+
+                if (isLink && href.isNotBlank() && end > start) {
+                    val fullUrl = if (href.startsWith("http://") || href.startsWith("https://")) {
+                        href
+                    } else if (href.startsWith("//")) {
+                        "https:$href"
+                    } else href
+
+                    addLink(LinkAnnotation.Url(url = fullUrl, styles = linkStyles), start, end)
+                }
+
+                if (tag == "br") {
                     append("\n")
-                } else if (child.tagName() == "p") {
+                } else if (tag == "p" || tag == "div") {
                     append("\n")
                 }
             }
