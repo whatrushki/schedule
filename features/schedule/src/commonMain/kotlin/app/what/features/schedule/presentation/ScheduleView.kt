@@ -173,14 +173,34 @@ fun ScheduleView(
             setScheduleType(currentDaySchedule.scheduleType)
         }
 
-        LaunchedEffect(state.value.schedules) {
-            if (state.value.schedules.isEmpty()) return@LaunchedEffect
-            val today = app.what.foundation.utils.currentLocalDate()
-            val targetIndex = state.value.schedules.indexOfFirst { it.date == today }
-                .takeIf { it != -1 }
-                ?: state.value.schedules.indexOfFirst { it.date >= today }.takeIf { it != -1 }
-                ?: 0
-            daysPagerState.scrollToPage(targetIndex)
+        var hasNavigatedToTodayInitially by useSave(false)
+        var lastNavigatedSearchId by useSave<String?>(null)
+
+        LaunchedEffect(state.value.schedules, state.value.selectedSearch?.id) {
+            val schedules = state.value.schedules
+            if (schedules.isEmpty()) return@LaunchedEffect
+
+            val currentSearchId = state.value.selectedSearch?.id
+            val isInitialForSearch = !hasNavigatedToTodayInitially || lastNavigatedSearchId != currentSearchId
+
+            if (isInitialForSearch) {
+                hasNavigatedToTodayInitially = true
+                lastNavigatedSearchId = currentSearchId
+                val today = app.what.foundation.utils.currentLocalDate()
+                val targetIndex = schedules.indexOfFirst { it.date == today }
+                    .takeIf { it != -1 }
+                    ?: schedules.indexOfFirst { it.date >= today }.takeIf { it != -1 }
+                    ?: 0
+                daysPagerState.scrollToPage(targetIndex)
+            } else {
+                val previousDate = schedules.getOrNull(daysPagerState.currentPage)?.date
+                if (previousDate != null) {
+                    val matchingIndex = schedules.indexOfFirst { it.date == previousDate }
+                    if (matchingIndex != -1 && matchingIndex != daysPagerState.currentPage) {
+                        daysPagerState.scrollToPage(matchingIndex)
+                    }
+                }
+            }
         }
         
         Gap(16)

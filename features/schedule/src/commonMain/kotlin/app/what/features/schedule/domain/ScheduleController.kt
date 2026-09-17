@@ -103,16 +103,49 @@ class ScheduleController(
         val scheduleTag = buildTag(LogScope.SCHEDULE, LogCat.STATE)
         val groupChanged = settings.lastSearch.get() != search
         
-        updateState {
-            copy(selectedSearch = search, schedules = if (groupChanged) emptyList() else viewState.schedules, scheduleState = RemoteState.Loading)
+        settings.lastSearch.set(search)
+        
+        // 1. If cache is enabled and group didn't change, immediately display cached schedule with Loading state
+        if (useCache && !groupChanged) {
+            val cached = apiRepository.getSchedule(
+                search,
+                useCache = true,
+                requiresData = false,
+                cloudSync = false
+            )
+            if (cached is ScheduleResponse.Available && cached.schedules.isNotEmpty()) {
+                updateState {
+                    copy(
+                        selectedSearch = search,
+                        schedules = cached.schedules,
+                        scheduleState = RemoteState.Loading
+                    )
+                }
+            } else {
+                updateState {
+                    copy(
+                        selectedSearch = search,
+                        schedules = emptyList(),
+                        scheduleState = RemoteState.Loading
+                    )
+                }
+            }
+        } else {
+            updateState {
+                copy(
+                    selectedSearch = search,
+                    schedules = if (groupChanged) emptyList() else viewState.schedules,
+                    scheduleState = RemoteState.Loading
+                )
+            }
         }
         
-        settings.lastSearch.set(search)
+        // 2. Fetch latest schedule with replacements from network
         val data = apiRepository.getSchedule(
             search,
-            useCache && !groupChanged,
-            viewState.schedules.isEmpty() || groupChanged,
-            cloudSync
+            useCache = false,
+            requiresData = viewState.schedules.isEmpty() || groupChanged,
+            cloudSync = cloudSync
         )
         
         when (data) {
@@ -122,18 +155,9 @@ class ScheduleController(
                     "Расписание успешно получено, дней: ${data.schedules.size}"
                 )
             }
-            
-            ScheduleResponse.Empty -> {
-                Auditor.debug(scheduleTag, "Расписание пустое")
-            }
-            
-            ScheduleResponse.UpToDate -> {
-                Auditor.debug(scheduleTag, "Расписание актуально")
-            }
-            
-            else -> {
-                Auditor.debug(scheduleTag, "Не удалось получить расписание")
-            }
+            ScheduleResponse.Empty -> Auditor.debug(scheduleTag, "Расписание пустое")
+            ScheduleResponse.UpToDate -> Auditor.debug(scheduleTag, "Расписание актуально")
+            else -> Auditor.debug(scheduleTag, "Не удалось получить расписание")
         }
         
         updateState {
@@ -143,15 +167,13 @@ class ScheduleController(
                     scheduleState = RemoteState.Success,
                     schedules = data.schedules
                 )
-                
                 is ScheduleResponse.Error -> copy(
-                    scheduleState = RemoteState.Error(data.exception),
-                    schedules = data.cachedSchedules ?: emptyList()
+                    scheduleState = if (viewState.schedules.isNotEmpty()) RemoteState.Success else RemoteState.Error(data.exception),
+                    schedules = data.cachedSchedules?.takeIf { it.isNotEmpty() } ?: viewState.schedules
                 )
-                
                 ScheduleResponse.Empty -> copy(
-                    scheduleState = RemoteState.Empty,
-                    schedules = emptyList()
+                    scheduleState = if (viewState.schedules.isNotEmpty()) RemoteState.Success else RemoteState.Empty,
+                    schedules = viewState.schedules
                 )
             }
         }
