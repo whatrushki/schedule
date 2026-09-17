@@ -24,5 +24,6 @@ enum class WebUniversity(val code: String, val title: String) {
     RKSI("rksi", "РКСИ"),
     DGTU("dgtu", "ДГТУ"),
     IUBIP("iubip", "ИУБиП"),
-    RINH("rinh", "РИНХ")
+    RINH("rinh", "РИНХ"),
+    SFEDU("sfedu", "Мехмат ЮФУ")
 }

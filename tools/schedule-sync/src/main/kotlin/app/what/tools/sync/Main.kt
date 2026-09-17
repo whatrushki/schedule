@@ -8,6 +8,7 @@ import app.what.schedule.iubip.IUBIPScheduleClient
 import app.what.schedule.rinh.RINHScheduleClient
 import app.what.schedule.rksi.RKSIScheduleClient
 import app.what.schedule.rksi.parser.JvmXlsxReader
+import app.what.schedule.sfedu.SFEDUScheduleClient
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.HttpTimeout
@@ -87,13 +88,14 @@ fun main(args: Array<String>) = runBlocking(Dispatchers.IO) {
             "dgtu" -> syncDgtu(client, outDir, failOnError)
             "iubip" -> syncIubip(client, outDir, failOnError)
             "rinh" -> syncRinh(client, outDir, failOnError)
+            "sfedu" -> syncSfedu(client, outDir, failOnError)
             "others" -> syncOthers(client, outDir, failOnError)
             "all" -> {
                 syncRksi(client, outDir, failOnError)
                 syncOthers(client, outDir, failOnError)
             }
             else -> {
-                println("Unknown target: $target. Use 'rksi', 'dgtu', 'iubip', 'rinh', 'others', or 'all'.")
+                println("Unknown target: $target. Use 'rksi', 'dgtu', 'iubip', 'rinh', 'sfedu', 'others', or 'all'.")
             }
         }
     } finally {
@@ -178,6 +180,7 @@ suspend fun syncOthers(client: HttpClient, rootDir: File, failOnError: Boolean =
     syncDgtu(client, rootDir, failOnError)
     syncIubip(client, rootDir, failOnError)
     syncRinh(client, rootDir, failOnError)
+    syncSfedu(client, rootDir, failOnError)
 }
 
 suspend fun syncDgtu(client: HttpClient, rootDir: File, failOnError: Boolean = false) {
@@ -355,3 +358,71 @@ suspend fun syncRinh(client: HttpClient, rootDir: File, failOnError: Boolean = f
         if (failOnError) throw it
     }
 }
+
+suspend fun syncSfedu(client: HttpClient, rootDir: File, failOnError: Boolean = false) {
+    println("\n--- Syncing SFEDU ---")
+    val dir = File(rootDir, "sfedu").apply { mkdirs() }
+    val groupsDir = File(dir, "groups").apply { mkdirs() }
+
+    runCatching {
+        val sfeduClient = SFEDUScheduleClient(client, log = { println("  [SFEDU] $it") })
+        val nowStr = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString()
+
+        println("  Fetching SFEDU groups & teachers...")
+        val groups = sfeduClient.getGroups()
+        val teachers = sfeduClient.getTeachers()
+        println("  Found ${groups.size} groups and ${teachers.size} teachers")
+        if (groups.isEmpty()) {
+            error("SFEDU returned 0 groups")
+        }
+
+        File(dir, "groups.json").writeText(json.encodeToString(groups))
+        File(dir, "teachers.json").writeText(json.encodeToString(teachers))
+
+        val schedules = mutableMapOf<String, List<DayScheduleDto>>()
+        val semaphore = Semaphore(4)
+
+        coroutineScope {
+            groups.take(30).map { group ->
+                async {
+                    semaphore.withPermit {
+                        runCatching {
+                            delay(50)
+                            val schedule = sfeduClient.getGroupSchedule(group.id)
+                            if (schedule.isNotEmpty()) {
+                                synchronized(schedules) {
+                                    schedules[group.name] = schedule
+                                }
+                                val safeName = group.name.replace("/", "_").replace("\\", "_")
+                                File(groupsDir, "$safeName.json").writeText(json.encodeToString(schedule))
+                            }
+                        }
+                    }
+                }
+            }.awaitAll()
+        }
+
+        val meta = InstitutionMeta(
+            lastSync = nowStr,
+            institution = "sfedu",
+            groupCount = groups.size,
+            teacherCount = teachers.size
+        )
+        File(dir, "meta.json").writeText(json.encodeToString(meta))
+
+        val data = InstitutionData(
+            lastSync = nowStr,
+            institution = "sfedu",
+            groups = groups,
+            teachers = teachers,
+            schedules = schedules
+        )
+        File(dir, "data.json").writeText(json.encodeToString(data))
+        println("  [SFEDU] Sync complete! Cached ${schedules.size} group schedules.")
+    }.onFailure {
+        println("  [SFEDU] Error syncing: ${it.message}")
+        it.printStackTrace()
+        if (failOnError) throw it
+    }
+}
+

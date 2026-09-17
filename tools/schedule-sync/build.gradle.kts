@@ -12,12 +12,17 @@ application {
     mainClass.set("app.what.tools.sync.MainKt")
 }
 
+tasks.named<JavaExec>("run") {
+    workingDir = rootProject.projectDir
+}
+
 dependencies {
     implementation(project(":libs:schedule:core"))
     implementation(project(":libs:schedule:rksi"))
     implementation(project(":libs:schedule:dgtu"))
     implementation(project(":libs:schedule:iubip"))
     implementation(project(":libs:schedule:rinh"))
+    implementation(project(":libs:schedule:sfedu"))
 
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.kotlinx.datetime)
