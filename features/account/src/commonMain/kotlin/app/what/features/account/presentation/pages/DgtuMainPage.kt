@@ -304,7 +304,9 @@ internal fun DGTUMainScreen(
                     title = "Зачетка",
                     description = "Оценки и сессии",
                     modifier = Modifier.weight(1f)
-                ) { }
+                ) {
+                    listener(DgtuEvent.ZachBookOpened)
+                }
                 
                 InfoBlock(
                     accentColor = colorScheme.primary,
@@ -313,7 +315,7 @@ internal fun DGTUMainScreen(
                     description = "stud.edu.ru",
                     modifier = Modifier.weight(1f)
                 ) {
-                    dialog.open(full = true) { DgtuMailsPage(state, listener) }
+                    listener(DgtuEvent.MailsOpened)
                 }
                 
                 InfoBlock(

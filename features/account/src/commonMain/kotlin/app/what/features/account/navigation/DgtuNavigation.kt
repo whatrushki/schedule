@@ -18,3 +18,9 @@ internal object DGTUCertificateProvider : NavProvider()
 @Serializable
 internal object DGTUEventProvider : NavProvider()
 
+@Serializable
+internal object DGTUZachBookProvider : NavProvider()
+
+@Serializable
+internal data class DGTUMailDetailProvider(val threadId: Int, val messageId: Int) : NavProvider()
+

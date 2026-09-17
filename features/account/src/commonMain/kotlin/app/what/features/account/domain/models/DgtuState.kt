@@ -4,6 +4,7 @@ import androidx.compose.ui.text.AnnotatedString
 import app.what.foundation.data.RemoteState
 import app.what.domain.models.NewListItem
 import app.what.domain.models.ScheduleSearch
+import app.what.schedule.dgtu.models.DGTUApi
 import app.what.schedule.dgtu.models.DGTUApi.Events.Initiator
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalDateTime
@@ -14,6 +15,10 @@ data class DgtuState(
     val mailsFetchState: RemoteState = RemoteState.Idle,
     val mails: List<Mail> = emptyList(),
     val mailsPage: Int = 1,
+    val mailDetailFetchState: RemoteState = RemoteState.Idle,
+    val mailDetail: DGTUApi.Models.MessageThread? = null,
+    val zachBookFetchState: RemoteState = RemoteState.Idle,
+    val zachBook: DGTUApi.ZachBook.GetResponse? = null,
     val newsFetchState: RemoteState = RemoteState.Idle,
     val news: List<NewListItem> = emptyList(),
     val studentInfoFetchState: RemoteState = RemoteState.Idle,
@@ -70,6 +75,7 @@ data class Notification(
 
 data class Mail(
     val id: Int,
+    val messageId: Int = 0,
     val title: String,
     val description: AnnotatedString,
     val sender: String,

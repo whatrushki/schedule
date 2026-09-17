@@ -24,6 +24,13 @@ import app.what.schedule.features.schedule.navigation.ScheduleProvider
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
+import androidx.navigation.toRoute
+import app.what.schedule.features.insts.dgtu.navigation.DGTUZachBookProvider
+import app.what.schedule.features.insts.dgtu.navigation.DGTUMailDetailProvider
+import app.what.schedule.features.insts.dgtu.presentation.pages.DgtuMailsPage
+import app.what.schedule.features.insts.dgtu.presentation.pages.DgtuMailDetailPage
+import app.what.schedule.features.insts.dgtu.presentation.pages.DgtuZachBookPage
+
 class DgtuFeature : Feature<DgtuController, DgtuEvent>(), KoinComponent {
     override val controller: DgtuController by inject()
     
@@ -47,6 +54,25 @@ class DgtuFeature : Feature<DgtuController, DgtuEvent>(), KoinComponent {
             
             composable<DGTUMainProvider> {
                 DGTUMainScreen(state, listener)
+            }
+
+            composable<DGTUMailProvider> {
+                DgtuMailsPage(state, listener, onBack = { nav.c.popBackStack() })
+            }
+
+            composable<DGTUZachBookProvider> {
+                DgtuZachBookPage(state, listener, onBack = { nav.c.popBackStack() })
+            }
+
+            composable<DGTUMailDetailProvider> { backStackEntry ->
+                val route = backStackEntry.toRoute<DGTUMailDetailProvider>()
+                DgtuMailDetailPage(
+                    threadId = route.threadId,
+                    messageId = route.messageId,
+                    state = state,
+                    listener = listener,
+                    onBack = { nav.c.popBackStack() }
+                )
             }
         }
         
@@ -77,11 +103,11 @@ class DgtuFeature : Feature<DgtuController, DgtuEvent>(), KoinComponent {
                 DgtuAction.OpenCertificate -> nav.c.navigate(DGTUCertificateProvider)
                 DgtuAction.OpenEvent -> nav.c.navigate(DGTUEventProvider)
                 DgtuAction.OpenMail -> nav.c.navigate(DGTUMailProvider)
-                else -> Unit
+                DgtuAction.OpenZachBook -> nav.c.navigate(DGTUZachBookProvider)
+                is DgtuAction.OpenMailDetail -> nav.c.navigate(DGTUMailDetailProvider(ac.threadId, ac.messageId))
             }
             
             controller.clearAction()
         }
     }
-    
 }

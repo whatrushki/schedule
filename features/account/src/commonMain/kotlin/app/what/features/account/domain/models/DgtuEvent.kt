@@ -5,6 +5,9 @@ sealed interface DgtuEvent {
     object MainOpened : DgtuEvent
     
     object MailsOpened : DgtuEvent
+    object ZachBookOpened : DgtuEvent
+    data class MailOpened(val threadId: Int, val messageId: Int) : DgtuEvent
+    object CloseMailDetail : DgtuEvent
     object OnMailsListEndingScrolled : DgtuEvent
     object GenerateAccessQrCodeClicked : DgtuEvent
     object OnShowAllNewsClicked : DgtuEvent

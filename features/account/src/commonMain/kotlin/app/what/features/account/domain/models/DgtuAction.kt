@@ -10,6 +10,8 @@ sealed interface DgtuAction {
     object OpenMail : DgtuAction
     object OpenCertificate : DgtuAction
     object OpenEvent : DgtuAction
+    object OpenZachBook : DgtuAction
+    data class OpenMailDetail(val threadId: Int, val messageId: Int) : DgtuAction
     data class OpenNewDetail(
         val id: String,
         val url: String,

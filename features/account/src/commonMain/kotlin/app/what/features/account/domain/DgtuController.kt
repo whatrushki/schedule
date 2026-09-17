@@ -78,7 +78,21 @@ class DgtuController(
             }
             DgtuEvent.OnGroupClicked -> setAction(DgtuAction.OpenSchedule(viewState.studentInfo!!.group))
             DgtuEvent.OnShowAllNewsClicked -> setAction(DgtuAction.OpenNews)
-            DgtuEvent.MailsOpened -> loadMails(true)
+            DgtuEvent.MailsOpened -> {
+                setAction(DgtuAction.OpenMail)
+                loadMails(true)
+            }
+            DgtuEvent.ZachBookOpened -> {
+                setAction(DgtuAction.OpenZachBook)
+                loadZachBook()
+            }
+            is DgtuEvent.MailOpened -> {
+                setAction(DgtuAction.OpenMailDetail(viewEvent.threadId, viewEvent.messageId))
+                loadDetailMail(viewEvent.threadId, viewEvent.messageId)
+            }
+            DgtuEvent.CloseMailDetail -> {
+                updateState { copy(mailDetail = null, mailDetailFetchState = RemoteState.Idle) }
+            }
             DgtuEvent.OnMailsListEndingScrolled -> loadMails()
             DgtuEvent.GenerateAccessQrCodeClicked -> generateQr()
             is DgtuEvent.OnEventClicked -> loadEventDetail(viewEvent.id)
@@ -231,6 +245,7 @@ class DgtuController(
             val data = response.data.messageThreads.map {
                 Mail(
                     it.id,
+                    messageId = it.messageID,
                     title = it.theme,
                     description = AnnotatedString(
                         AnnotatedString.fromHtml(
@@ -249,6 +264,45 @@ class DgtuController(
                     mailsFetchState = RemoteState.Success,
                     mails = if (rollback) data else viewState.mails + data,
                     mailsPage = page + 1
+                )
+            }
+        }
+    }
+
+    fun loadZachBook() {
+        val token = appValues.dgtuToken.get() ?: return
+        updateState { copy(zachBookFetchState = RemoteState.Loading) }
+        viewModelScope.launchSafe(
+            debug = debug,
+            onFailure = {
+                updateState { copy(zachBookFetchState = RemoteState.Error(it)) }
+            }
+        ) {
+            val response = accountService.getZachBook(token)
+            updateState {
+                copy(
+                    zachBookFetchState = RemoteState.Success,
+                    zachBook = response.data
+                )
+            }
+        }
+    }
+
+    fun loadDetailMail(threadId: Int, messageId: Int) {
+        val token = appValues.dgtuToken.get() ?: return
+        updateState { copy(mailDetailFetchState = RemoteState.Loading) }
+        viewModelScope.launchSafe(
+            debug = debug,
+            onFailure = {
+                updateState { copy(mailDetailFetchState = RemoteState.Error(it)) }
+            }
+        ) {
+            val response = accountService.getDetailMail(token, threadId, messageId)
+            val thread = response.data.messageThreads.firstOrNull()
+            updateState {
+                copy(
+                    mailDetailFetchState = RemoteState.Success,
+                    mailDetail = thread
                 )
             }
         }

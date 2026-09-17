@@ -10,7 +10,7 @@ import io.ktor.client.HttpClient
 class DGTUProvider(
     client: HttpClient,
     scheduleBaseUrl: String = "https://edu.donstu.ru/api",
-    newsBaseUrl: String = "https://donstu.ru",
+    newsBaseUrl: String = "https://news.donstu.ru",
     accountBaseUrl: String = "https://lk.donstu.ru/api",
     log: ((String) -> Unit)? = null
 ) : InstitutionProvider {

@@ -74,144 +74,102 @@ object DGTUApi {
         @Serializable
         data class GetDetailEventInfo(
             val eventInfo: EventInfo,
-//            val organizersList: List<Any?>,
-            val accessArray: List<AccessItem>,
-            val isRegistered: Boolean,
-            val allowRegister: Boolean,
-            val isOrg: Boolean,
-//            val request: Any?,
-            val isAuthor: Boolean,
+            val accessArray: List<AccessItem> = emptyList(),
+            val isRegistered: Boolean = false,
+            val allowRegister: Boolean = true,
+            val isOrg: Boolean = false,
+            val isAuthor: Boolean = false,
         )
         
         @Serializable
         data class EventInfo(
-            val entryEnd: Boolean,
+            val entryEnd: Boolean = false,
             @SerialName("eventID")
             val eventId: Long,
-            val name: String,
+            val name: String = "",
             @SerialName("levelID")
-            val levelId: Long,
+            val levelId: Long = 0,
             @SerialName("typeEventID")
-            val typeEventId: Long,
+            val typeEventId: Long = 0,
             @SerialName("categoryID")
-            val categoryId: Long?,
-//            @SerialName("typeID")
-//            val typeId: Any?,
-            val description: String,
-            val target: String,
-//            val link: Any?,
+            val categoryId: Long? = null,
+            val description: String = "",
+            val target: String = "",
             @Serializable(LocalDateTimeSerializer::class) val dateStart: LocalDateTime,
             @Serializable(LocalDateTimeSerializer::class) val dateEnd: LocalDateTime,
-//            val organizer: String?,
-            val place: String,
-//            val contactDetails: Any?,
-            val registration: Boolean,
-//            val limitParticipants: Any?,
-            val press: Boolean,
-//            val photo: Any?,
-//            val fileRegulations: Any?,
-//            val fileOrder: Any?,
-//            val verificationMessage: Any?,
-            val verified: Boolean,
-            val refinement: Boolean,
+            val place: String = "",
+            val registration: Boolean = false,
+            val press: Boolean = false,
+            val verified: Boolean = false,
+            val refinement: Boolean = false,
             @SerialName("userID")
-            val userId: Long,
-            val dateCreate: String,
-            val dateEdit: String,
-            val isDelete: Boolean,
-//            val dateDelete: Any?,
-            val dateVerification: String,
+            val userId: Long = 0,
+            val dateCreate: String = "",
+            val dateEdit: String = "",
+            val isDelete: Boolean = false,
+            val dateVerification: String? = null,
             @SerialName("verificatorID")
-            val verificatorId: Long,
-            val color: String?,
-//            val confirmationCode: Any?,
-//            val entryBefore: Any?,
-//            val minParticipants: Any?,
-//            val countParticipants: Any?,
-//            val countViewers: Any?,
-//            val verifierAdditions: Any?,
+            val verificatorId: Long = 0,
+            val color: String? = null,
             @SerialName("contactDetailsFIO")
-            val contactDetailsFio: String?,
-            val contactDetailsPhone: String?,
-//            val helpBooking: Any?,
-            val linkOrganizer: String?,
-//            val skipByReason: Any?,
-//            val noCancelRecord: Any?,
-            val photoPach: String,
-            val allowEdit: Boolean,
-            val isArchive: Boolean,
-            val initiator: Initiator?,
-//            val organizersList: List<Any?>,
-//            val participantsList: List<Any?>,
-            val levelName: String,
-            val typeEventName: String,
-            val typeName: String,
-            val categoryName: String,
+            val contactDetailsFio: String? = null,
+            val contactDetailsPhone: String? = null,
+            val linkOrganizer: String? = null,
+            val photoPach: String = "",
+            val allowEdit: Boolean = false,
+            val isArchive: Boolean = false,
+            val initiator: Initiator? = null,
+            val levelName: String = "",
+            val typeEventName: String = "",
+            val typeName: String = "",
+            val categoryName: String = "",
         )
         
         @Serializable
         data class Initiator(
-            val name: String,
+            val name: String = "",
             @SerialName("userID")
-            val userId: Long,
-//            val course: Any?,
-//            @SerialName("groupID")
-//            val groupId: Any?,
-            val photo: String,
-//            val category: Any?,
-            val visible: Boolean,
-//            val date: Any?,
-//            val confirmed: Any?,
+            val userId: Long = 0,
+            val photo: String = "",
+            val visible: Boolean = true,
         )
         
         @Serializable
         data class AccessItem(
             @SerialName("accessID")
-            val accessId: Long,
+            val accessId: Long = 0,
             @SerialName("siteEventID")
-            val siteEventId: Long,
-            val students: Boolean,
-            val teachers: Boolean,
-            val users: Boolean,
-//            @SerialName("facultyID")
-//            val facultyId: Any?,
-//            @SerialName("kafedraID")
-//            val kafedraId: Any?,
-//            @SerialName("groupID")
-//            val groupId: Any?,
-//            val cours: Any?,
-            val forGraduates: Boolean,
-            val forDorms: Boolean,
-//            @SerialName("levelID")
-//            val levelId: Any?,
-//            @SerialName("dormID")
-//            val dormId: Any?,
-//            val siteEvent: Any?,
+            val siteEventId: Long = 0,
+            val students: Boolean = true,
+            val teachers: Boolean = true,
+            val users: Boolean = false,
+            val forGraduates: Boolean = false,
+            val forDorms: Boolean = false,
         )
     }
     
     object ZachBook {
         @Serializable
         data class GetResponse(
-            val showVedButton: Boolean,
-            val showPrintForm: Boolean,
-            val hideZET: Boolean,
-            val showPersonalCard: Boolean,
-            val groupID: Int,
-            val markCountStatistic: List<Models.MarkCount>,
-            val avgCourseStatistic: List<Models.AvgCourse>,
-            val avg: Float?,
-            val zachBook: List<Models.ZachItem>,
-            val groupedZachBook: List<Models.ZachGroupedItem>,
-            val studentName: String,
-            val recordbook: String,
-            val studentInfo: Models.StudentInfo,
-            val avgPoint: Float,
-            val currentSem: Int,
-            val photo: String?,
-            val isZaoch: Boolean,
-            val studentZachBooks: List<Models.ZachBook>,
-            val showDebts: Boolean
+            val showVedButton: Boolean = false,
+            val showPrintForm: Boolean = false,
+            val hideZET: Boolean = false,
+            val showPersonalCard: Boolean = false,
+            val groupID: Int = 0,
+            val markCountStatistic: List<Models.MarkCount> = emptyList(),
+            val avgCourseStatistic: List<Models.AvgCourse> = emptyList(),
+            val avg: Float? = null,
+            val zachBook: List<Models.ZachItem> = emptyList(),
+            val groupedZachBook: List<Models.ZachGroupedItem> = emptyList(),
+            val studentName: String = "",
+            val recordbook: String = "",
+            val studentInfo: Models.StudentInfo? = null,
+            val avgPoint: Float = 0f,
+            val currentSem: Int = 1,
+            val photo: String? = null,
+            val isZaoch: Boolean = false,
+            val studentZachBooks: List<Models.ZachBook> = emptyList(),
+            val showDebts: Boolean = false
         )
     }
     
@@ -580,43 +538,39 @@ object DGTUApi {
 //            val recipient: Any?,
             val message: Message,
 //            val type: Any?,
-            val files: List<File>
+            val files: List<File> = emptyList()
         )
         
         @Serializable
         data class Message(
             val messageID: Int,
-            val userID: Int,
-            val typeID: Int,
-            val parentID: Int?,
-            val parentFamilyID: Int?,
-            val theme: String,
-            val htmlMessage: String?,
-            val markdownMessage: String?,
-            val message: String,
+            val userID: Int = 0,
+            val typeID: Int = 0,
+            val parentID: Int? = null,
+            val parentFamilyID: Int? = null,
+            val theme: String = "",
+            val htmlMessage: String? = null,
+            val markdownMessage: String? = null,
+            val message: String = "",
             @Serializable(LocalDateTimeSerializer::class)
             val dispatchDate: LocalDateTime,
-//            val attachment: Any?,
-            val messageImportant: Boolean?,
-            val isDelete: Int?,
-            val disciplineID: Int?,
-//                val files: Any?,
-//                val type: Any?,
-//                val user: Any?
+            val messageImportant: Boolean? = null,
+            val isDelete: Int? = null,
+            val disciplineID: Int? = null,
         )
         
         @Serializable
         data class File(
-            val attachmentID: Int,
-            val messageID: Int,
-            val fileName: String,
-            val path: String,
-            val size: Int,
-            val typeFile: String,
-            val userID: Int,
-            val sessionID: Int?,
-            val isDelete: Int?,
-            val deletedUserID: Int?
+            val attachmentID: Int = 0,
+            val messageID: Int = 0,
+            val fileName: String = "",
+            val path: String = "",
+            val size: Long = 0,
+            val typeFile: String = "",
+            val userID: Int = 0,
+            val sessionID: Int? = null,
+            val isDelete: Int? = null,
+            val deletedUserID: Int? = null
         )
         
         @Serializable

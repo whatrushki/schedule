@@ -8,16 +8,24 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.Text
 import app.what.foundation.ui.AppPullToRefresh
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.State
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
@@ -34,53 +42,88 @@ import app.what.schedule.features.insts.dgtu.domain.models.Mail
 import app.what.schedule.ui.components.AsyncImageWithFallback
 import app.what.schedule.ui.components.Fallback
 import app.what.foundation.utils.DateTimeUtils
-import kotlinx.datetime.Clock
 import kotlinx.datetime.LocalDateTime
-import kotlinx.datetime.TimeZone
-import kotlinx.datetime.toLocalDateTime
 
 @Composable
 fun DgtuMailsPage(
     state: State<DgtuState>,
-    listener: Listener<DgtuEvent>
-) = AppPullToRefresh(
-    isRefreshing = state.value.mailsFetchState == RemoteState.Loading,
-    onRefresh = { listener(DgtuEvent.MailsOpened) },
-) {
-    val lazyListState = rememberLazyListState()
-    
-    LaunchedEffect(lazyListState.canScrollForward) {
-        if (!lazyListState.canScrollForward && state.value.mailsFetchState != RemoteState.Loading)
-            listener(DgtuEvent.OnMailsListEndingScrolled)
-    }
-    
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        state = lazyListState
-    ) {
-        when (state.value.mailsFetchState) {
-            is RemoteState.Error -> item {
-                Fallback(
-                    "Произошла непредвиденная ошибка",
-                    Modifier.fillMaxSize(),
-                    "Попробовать снова" to { listener(DgtuEvent.MailsOpened) }
+    listener: Listener<DgtuEvent>,
+    onBack: (() -> Unit)? = null
+) = Column(modifier = Modifier.fillMaxSize()) {
+    if (onBack != null) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .statusBarsPadding()
+                .padding(horizontal = 4.dp, vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            IconButton(onClick = onBack) {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                    contentDescription = "Назад",
+                    tint = colorScheme.onSurface
                 )
             }
-            
-            RemoteState.Success, RemoteState.Loading -> items(state.value.mails, key = { it.id }) {
-                MailListItem(it, Modifier.animateItem())
+            Gap(8)
+            Text(
+                "Почта",
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold,
+                color = colorScheme.onSurface
+            )
+        }
+        HorizontalDivider(color = colorScheme.outlineVariant.copy(alpha = 0.5f))
+    }
+
+    AppPullToRefresh(
+        isRefreshing = state.value.mailsFetchState == RemoteState.Loading,
+        onRefresh = { listener(DgtuEvent.MailsOpened) },
+        modifier = Modifier.fillMaxSize()
+    ) {
+        val lazyListState = rememberLazyListState()
+
+        LaunchedEffect(lazyListState.canScrollForward) {
+            if (!lazyListState.canScrollForward && state.value.mailsFetchState != RemoteState.Loading)
+                listener(DgtuEvent.OnMailsListEndingScrolled)
+        }
+
+        LazyColumn(
+            modifier = Modifier.fillMaxSize(),
+            state = lazyListState
+        ) {
+            when (state.value.mailsFetchState) {
+                is RemoteState.Error -> item {
+                    Fallback(
+                        "Произошла непредвиденная ошибка",
+                        Modifier.fillMaxSize(),
+                        "Попробовать снова" to { listener(DgtuEvent.MailsOpened) }
+                    )
+                }
+
+                RemoteState.Success, RemoteState.Loading -> items(state.value.mails, key = { it.id }) { mail ->
+                    MailListItem(
+                        data = mail,
+                        modifier = Modifier.animateItem(),
+                        onClick = { listener(DgtuEvent.MailOpened(mail.id, mail.messageId)) }
+                    )
+                }
+
+                else -> Unit
             }
-            
-            else -> Unit
         }
     }
 }
 
 @Composable
-fun MailListItem(data: Mail, modifier: Modifier) = Box(
-    modifier.bclick {
-    
-    }
+fun MailListItem(
+    data: Mail,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit = {}
+) = Box(
+    modifier
+        .fillMaxWidth()
+        .bclick { onClick() }
 ) {
     Row(
         Modifier
@@ -93,10 +136,10 @@ fun MailListItem(data: Mail, modifier: Modifier) = Box(
                 .size(54.dp)
                 .clip(CircleShape)
         )
-        
+
         Gap(12)
-        
-        Column {
+
+        Column(modifier = Modifier.weight(1f)) {
             Row(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 modifier = Modifier.fillMaxWidth()
@@ -106,8 +149,13 @@ fun MailListItem(data: Mail, modifier: Modifier) = Box(
                     fontWeight = FontWeight.Bold,
                     color = colorScheme.onSurface,
                     fontSize = 16.sp,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f, fill = false)
                 )
-                
+
+                Gap(8)
+
                 Text(
                     formatDateTime(data.sendDateTime),
                     fontWeight = FontWeight.Medium,
@@ -115,7 +163,7 @@ fun MailListItem(data: Mail, modifier: Modifier) = Box(
                     color = colorScheme.onSurfaceVariant
                 )
             }
-            
+
             Text(
                 data.title,
                 fontWeight = FontWeight.Medium,
@@ -125,7 +173,7 @@ fun MailListItem(data: Mail, modifier: Modifier) = Box(
                 overflow = TextOverflow.Ellipsis,
                 color = colorScheme.secondary
             )
-            
+
             Text(
                 data.description,
                 fontWeight = FontWeight.Medium,
@@ -138,18 +186,24 @@ fun MailListItem(data: Mail, modifier: Modifier) = Box(
     }
 }
 
-fun formatName(value: String) = value.split(" ").let {
-    if (it.size == 3) "${it[0]} ${it[0][0]}. ${it[0][0]}."
-    else value
+fun formatName(value: String): String {
+    val parts = value.trim().split("\\s+".toRegex())
+    return if (parts.size >= 3) {
+        val initials = listOfNotNull(
+            parts.getOrNull(1)?.firstOrNull()?.let { "$it." },
+            parts.getOrNull(2)?.firstOrNull()?.let { "$it." }
+        ).joinToString(" ")
+        "${parts[0]} $initials".trim()
+    } else value
 }
 
 fun formatDateTime(value: LocalDateTime): String {
     val today = app.what.foundation.utils.currentLocalDate()
     val date = value.date
-    
+
     val timeStr = DateTimeUtils.formatTime(value.time)
     val shortMonthStr = "${date.dayOfMonth} ${DateTimeUtils.RUSSIAN_MONTHS.getOrElse(date.monthNumber - 1) { "" }.take(3)}"
-    
+
     return when {
         date == today -> timeStr
         date.toEpochDays() == today.toEpochDays() - 1 -> "вчера"
