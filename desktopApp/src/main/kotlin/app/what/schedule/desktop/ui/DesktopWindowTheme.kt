@@ -33,6 +33,21 @@ interface Dwmapi : StdCallLibrary {
     }
 }
 
+interface User32Lib : StdCallLibrary {
+    fun SendMessageA(
+        hwnd: WinDef.HWND,
+        msg: Int,
+        wparam: WinDef.WPARAM,
+        lparam: WinDef.LPARAM
+    ): WinDef.LRESULT
+
+    companion object {
+        val INSTANCE: User32Lib? = runCatching {
+            Native.load("user32", User32Lib::class.java)
+        }.getOrNull()
+    }
+}
+
 @Composable
 fun DesktopWindowThemeEffect(
     window: ComposeWindow,
@@ -54,13 +69,24 @@ fun DesktopWindowThemeEffect(
     LaunchedEffect(Unit) {
         runCatching {
             val iconList = mutableListOf<Image>()
-            listOf("icons/icon.png", "icons/icon_256.png").forEach { resPath ->
+            // 16x16 fully transparent icon for titlebar to hide the header logo
+            val transparentIcon = java.awt.image.BufferedImage(16, 16, java.awt.image.BufferedImage.TYPE_INT_ARGB)
+            iconList.add(transparentIcon)
+
+            listOf("icons/icon_256.png", "icons/icon.png").forEach { resPath ->
                 Dwmapi::class.java.classLoader.getResourceAsStream(resPath)?.use { stream ->
                     ImageIO.read(stream)?.let { iconList.add(it) }
                 }
             }
             if (iconList.isNotEmpty()) {
                 window.iconImages = iconList
+            }
+
+            val os = System.getProperty("os.name", "")
+            if (os.contains("Windows", ignoreCase = true)) {
+                val hwnd = WinDef.HWND(Native.getWindowPointer(window))
+                // WM_SETICON = 0x0080, ICON_SMALL = 0
+                User32Lib.INSTANCE?.SendMessageA(hwnd, 0x0080, WinDef.WPARAM(0), WinDef.LPARAM(0))
             }
         }
     }
