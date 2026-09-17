@@ -11,7 +11,7 @@
 
 <!-- 2. Информационные чипсы (height="24") -->
 <img src="https://img.shields.io/badge/status-stable-09090b?style=for-the-badge&labelColor=000000" height="24" />
-<img src="https://img.shields.io/badge/version-1.3.1-09090b?style=for-the-badge&labelColor=000000" height="24" />
+<img src="https://img.shields.io/badge/version-1.3.2-09090b?style=for-the-badge&labelColor=000000" height="24" />
 <img src="https://img.shields.io/badge/platform-Android_%7C_Desktop_%7C_Web-09090b?style=for-the-badge&labelColor=000000" height="24" />
 <img src="https://img.shields.io/badge/license-MIT-09090b?style=for-the-badge&labelColor=000000" height="24" />
 
@@ -168,11 +168,12 @@ dependencyResolutionManagement {
 
 // build.gradle.kts
 dependencies {
-    implementation("app.what.schedule:core:1.3.1")
-    implementation("app.what.schedule:rksi:1.3.1")
-    implementation("app.what.schedule:dgtu:1.3.1")
-    implementation("app.what.schedule:iubip:1.3.1")
-    implementation("app.what.schedule:rinh:1.3.1")
+    implementation("app.what.schedule:core:1.3.2")
+    implementation("app.what.schedule:rksi:1.3.2")
+    implementation("app.what.schedule:dgtu:1.3.2")
+    implementation("app.what.schedule:iubip:1.3.2")
+    implementation("app.what.schedule:rinh:1.3.2")
+    implementation("app.what.schedule:sfedu:1.3.2")
 }
 ```
 
