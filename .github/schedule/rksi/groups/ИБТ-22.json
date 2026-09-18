@@ -45,6 +45,23 @@
         "lessons": [
             {
                 "date": "2026-09-19",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Скороходов Г.Ю.",
+                        "group": "ИБТ-22",
+                        "room": "20",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-19",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -109,7 +126,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

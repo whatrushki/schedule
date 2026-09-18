@@ -62,20 +62,37 @@
         "lessons": [
             {
                 "date": "2026-09-19",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Дущенков Д.А.",
+                        "group": "ИБТ-21",
+                        "room": "45",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-19",
                 "number": 6,
                 "startTime": "16:40",
                 "endTime": "18:10",
-                "subject": "История",
+                "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Иванов Д.Н.",
+                        "teacher": "Растороцкий В.В.",
                         "group": "ИБТ-21",
-                        "room": "28",
+                        "room": "с/з1",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-19",
@@ -92,7 +109,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

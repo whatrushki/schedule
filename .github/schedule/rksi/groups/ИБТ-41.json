@@ -45,6 +45,23 @@
         "lessons": [
             {
                 "date": "2026-09-19",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Шабалта А.В.",
+                        "group": "ИБТ-41",
+                        "room": "17",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-19",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
@@ -58,7 +75,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-19",
@@ -75,7 +92,24 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
+            },
+            {
+                "date": "2026-09-19",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Беспалова Н.В.",
+                        "group": "ИБТ-41",
+                        "room": "с/з2",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

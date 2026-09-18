@@ -113,6 +113,23 @@
         "lessons": [
             {
                 "date": "2026-09-19",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Беспалова Н.В.",
+                        "group": "ИБА-34",
+                        "room": "с/з2",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-19",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -121,12 +138,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБА-34",
-                        "room": "44",
+                        "room": "17",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-19",
@@ -143,7 +160,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
@@ -330,9 +347,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крылова О.В.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ИБА-34",
-                        "room": "13",
+                        "room": "21",
                         "additional": "Корпус 2"
                     }
                 ],
@@ -347,9 +364,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Крылова О.В.",
                         "group": "ИБА-34",
-                        "room": "21",
+                        "room": "13",
                         "additional": "Корпус 2"
                     }
                 ],

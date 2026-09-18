@@ -75,7 +75,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-19",
@@ -87,12 +87,12 @@
                     {
                         "teacher": "Швец Н.А.",
                         "group": "ИБТ-11",
-                        "room": "21",
+                        "room": "40",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-19",
@@ -110,6 +110,23 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-09-19",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Биология",
+                "otUnits": [
+                    {
+                        "teacher": "Хайлова Л.В.",
+                        "group": "ИБТ-11",
+                        "room": "28",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
