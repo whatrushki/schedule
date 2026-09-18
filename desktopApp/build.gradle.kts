@@ -49,7 +49,7 @@ compose.desktop {
                 org.jetbrains.compose.desktop.application.dsl.TargetFormat.Rpm
             )
             packageName = "WHAT-Schedule"
-            packageVersion = "1.3.3"
+            packageVersion = "1.3.4"
             windows {
                 menu = true
                 shortcut = true
