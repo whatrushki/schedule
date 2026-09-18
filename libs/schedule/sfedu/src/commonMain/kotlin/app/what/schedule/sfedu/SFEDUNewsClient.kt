@@ -118,7 +118,7 @@ class SFEDUNewsClient(
                     NewListItemDto(
                         id = id,
                         title = title,
-                        description = descText,
+                        description = "",
                         date = date,
                         imageUrl = bannerUrl,
                         sourceUrl = detailUrl ?: baseUrl
