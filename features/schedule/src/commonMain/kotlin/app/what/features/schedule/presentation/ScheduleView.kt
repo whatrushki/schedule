@@ -253,24 +253,31 @@ fun ScheduleView(
             }
             
             
-            AnimatedEnter(state.value.scheduleState == RemoteState.Loading) {
-                LinearProgressIndicator(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 12.dp, vertical = 4.dp)
-                        .height(3.dp)
-                        .clip(CircleShape),
-                    color = colorScheme.primary,
-                    trackColor = colorScheme.surfaceVariant
-                )
-            }
-            
             AnimatedEnter(state.value.schedules.isNotEmpty()) {
                 Column {
                     Gap(8)
                     ScheduleCalendar(weeks, weeksPagerState, daysPagerState) {
                         scope.launch { daysPagerState.animateScrollToPage(it) }
                     }
+                }
+            }
+
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(8.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                if (state.value.scheduleState == RemoteState.Loading) {
+                    LinearProgressIndicator(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 12.dp)
+                            .height(2.dp)
+                            .clip(CircleShape),
+                        color = colorScheme.primary,
+                        trackColor = colorScheme.surfaceVariant
+                    )
                 }
             }
             
@@ -306,7 +313,6 @@ fun ScheduleView(
                         key = { state.value.schedules[it].date.toString() },
                         modifier = Modifier
                             .fillMaxHeight()
-                            .padding(top = 8.dp)
                     ) {
                         val date = state.value.schedules[it].date
                         val lessons = state.value.schedules[it].lessons
