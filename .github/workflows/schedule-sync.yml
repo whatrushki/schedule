@@ -38,6 +38,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          ref: master
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -81,5 +83,6 @@ jobs:
             echo "No schedule changes to commit."
           else
             git commit -m "[CI] Update schedule data ($(date -u '+%Y-%m-%d %H:%M UTC'))"
-            git push
+            git pull origin master --rebase
+            git push origin HEAD:master
           fi
