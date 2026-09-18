@@ -63,11 +63,18 @@ private fun AnnotatedString.Builder.appendNode(node: Node) {
     for (child in node.childNodes()) {
         when (child) {
             is TextNode -> {
+                var text = child.text()
+                // Strip leading spaces/nbsp if at start of block or right after a newline
+                if (length == 0 || toAnnotatedString().text.endsWith("\n")) {
+                    text = text.trimStart { it.isWhitespace() || it == '\u00A0' }
+                }
+                if (text.isEmpty()) continue
+
                 val parentTag = (child.parent() as? Element)?.tagName()?.lowercase()
                 if (parentTag == "a") {
-                    append(child.text())
+                    append(text)
                 } else {
-                    appendWithAutoLinks(child.text())
+                    appendWithAutoLinks(text)
                 }
             }
             is Element -> {

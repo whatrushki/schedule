@@ -187,6 +187,8 @@ class RKSINewsClient(
                     val textOnly = element.clone()
                     textOnly.getElementsByTag("img").remove()
                     val html = textOnly.html().trim()
+                        .replace(Regex("""^(&nbsp;|\s|\u00A0)+"""), "")
+                        .replace(Regex("""^<p>(&nbsp;|\s|\u00A0)+"""), "<p>")
                     if (html.isNotBlank() && textOnly.text().trim().isNotBlank()) {
                         blocks.add(NewContentBlockDto.Text(html))
                     }
@@ -194,6 +196,8 @@ class RKSINewsClient(
 
                 element.tagName() == "p" -> {
                     val html = element.html().trim()
+                        .replace(Regex("""^(&nbsp;|\s|\u00A0)+"""), "")
+                        .replace(Regex("""^<p>(&nbsp;|\s|\u00A0)+"""), "<p>")
                     if (html.isNotBlank() && element.text().trim().isNotBlank()) {
                         blocks.add(NewContentBlockDto.Text(html))
                     }
