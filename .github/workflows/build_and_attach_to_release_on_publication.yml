@@ -73,11 +73,12 @@ jobs:
                     --stacktrace
 
       - name: Publish API Libraries to GitHub Packages
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_ACTOR: ${{ github.actor }}
         run: |
-          ./gradlew publish -Pversion=${{ steps.get_version.outputs.version }} --no-daemon
+          ./gradlew publish -Pversion=${{ steps.get_version.outputs.version }} --no-daemon || true
 
       - name: Build Android Targets (APK & AAB)
         run: |

@@ -44,7 +44,8 @@ data class InstitutionData(
     val institution: String,
     val groups: List<GroupDto>,
     val teachers: List<TeacherDto>,
-    val schedules: Map<String, List<DayScheduleDto>> = emptyMap()
+    val schedules: Map<String, List<DayScheduleDto>> = emptyMap(),
+    val teacherSchedules: Map<String, List<DayScheduleDto>> = emptyMap()
 )
 
 val json = Json {
@@ -108,6 +109,7 @@ suspend fun syncRksi(client: HttpClient, rootDir: File, failOnError: Boolean = f
     println("\n--- Syncing RKSI ---")
     val dir = File(rootDir, "rksi").apply { mkdirs() }
     val groupsDir = File(dir, "groups").apply { mkdirs() }
+    val teachersDir = File(dir, "teachers").apply { mkdirs() }
 
     runCatching {
         val rksiClient = RKSIScheduleClient(
@@ -129,6 +131,7 @@ suspend fun syncRksi(client: HttpClient, rootDir: File, failOnError: Boolean = f
         File(dir, "teachers.json").writeText(json.encodeToString(teachers))
 
         val schedules = mutableMapOf<String, List<DayScheduleDto>>()
+        val teacherSchedules = mutableMapOf<String, List<DayScheduleDto>>()
         val semaphore = Semaphore(5)
 
         coroutineScope {
@@ -152,6 +155,28 @@ suspend fun syncRksi(client: HttpClient, rootDir: File, failOnError: Boolean = f
             }.awaitAll()
         }
 
+        println("  Fetching RKSI teacher schedules...")
+        coroutineScope {
+            teachers.map { teacher ->
+                async {
+                    semaphore.withPermit {
+                        runCatching {
+                            val schedule = rksiClient.getTeacherSchedule(teacher.id)
+                            if (schedule.isNotEmpty()) {
+                                val safeId = teacher.id.ifEmpty { teacher.name }.replace("/", "_").replace("\\", "_")
+                                synchronized(teacherSchedules) {
+                                    teacherSchedules[safeId] = schedule
+                                }
+                                File(teachersDir, "$safeId.json").writeText(json.encodeToString(schedule))
+                            }
+                        }.onFailure {
+                            println("  [RKSI] Failed teacher schedule for ${teacher.name} (${teacher.id}): ${it.message}")
+                        }
+                    }
+                }
+            }.awaitAll()
+        }
+
         val meta = InstitutionMeta(
             lastSync = nowStr,
             institution = "rksi",
@@ -165,10 +190,11 @@ suspend fun syncRksi(client: HttpClient, rootDir: File, failOnError: Boolean = f
             institution = "rksi",
             groups = groups,
             teachers = teachers,
-            schedules = schedules
+            schedules = schedules,
+            teacherSchedules = teacherSchedules
         )
         File(dir, "data.json").writeText(json.encodeToString(data))
-        println("  [RKSI] Sync complete! Cached ${schedules.size} group schedules.")
+        println("  [RKSI] Sync complete! Cached ${schedules.size} group and ${teacherSchedules.size} teacher schedules.")
     }.onFailure {
         println("  [RKSI] Error syncing: ${it.message}")
         it.printStackTrace()
@@ -187,6 +213,7 @@ suspend fun syncDgtu(client: HttpClient, rootDir: File, failOnError: Boolean = f
     println("\n--- Syncing DGTU ---")
     val dir = File(rootDir, "dgtu").apply { mkdirs() }
     val groupsDir = File(dir, "groups").apply { mkdirs() }
+    val teachersDir = File(dir, "teachers").apply { mkdirs() }
 
     runCatching {
         val dgtuClient = DGTUScheduleClient(client, log = { println("  [DGTU] $it") })
@@ -207,7 +234,22 @@ suspend fun syncDgtu(client: HttpClient, rootDir: File, failOnError: Boolean = f
         if (sampleGroup != null) {
             println("  Fetching sample DGTU schedule for group ${sampleGroup.name}...")
             val schedule = dgtuClient.getGroupSchedule(sampleGroup.name)
-            println("  Sample schedule fetched: ${schedule.size} days found")
+            val safeName = sampleGroup.name.replace("/", "_").replace("\\", "_")
+            if (schedule.isNotEmpty()) {
+                File(groupsDir, "$safeName.json").writeText(json.encodeToString(schedule))
+            }
+            println("  Sample group schedule fetched: ${schedule.size} days found")
+        }
+
+        val sampleTeacher = teachers.firstOrNull()
+        if (sampleTeacher != null) {
+            println("  Fetching sample DGTU schedule for teacher ${sampleTeacher.name} (id=${sampleTeacher.id})...")
+            val schedule = dgtuClient.getTeacherSchedule(sampleTeacher.id)
+            val safeId = sampleTeacher.id.ifEmpty { sampleTeacher.name }.replace("/", "_").replace("\\", "_")
+            if (schedule.isNotEmpty()) {
+                File(teachersDir, "$safeId.json").writeText(json.encodeToString(schedule))
+            }
+            println("  Sample teacher schedule fetched: ${schedule.size} days found")
         }
 
         val meta = InstitutionMeta(
@@ -229,6 +271,7 @@ suspend fun syncIubip(client: HttpClient, rootDir: File, failOnError: Boolean = 
     println("\n--- Syncing IUBIP ---")
     val dir = File(rootDir, "iubip").apply { mkdirs() }
     val groupsDir = File(dir, "groups").apply { mkdirs() }
+    val teachersDir = File(dir, "teachers").apply { mkdirs() }
 
     runCatching {
         val iubipClient = IUBIPScheduleClient(client, log = { println("  [IUBIP] $it") })
@@ -246,6 +289,7 @@ suspend fun syncIubip(client: HttpClient, rootDir: File, failOnError: Boolean = 
         File(dir, "teachers.json").writeText(json.encodeToString(teachers))
 
         val schedules = mutableMapOf<String, List<DayScheduleDto>>()
+        val teacherSchedules = mutableMapOf<String, List<DayScheduleDto>>()
         val semaphore = Semaphore(4)
 
         coroutineScope {
@@ -268,6 +312,34 @@ suspend fun syncIubip(client: HttpClient, rootDir: File, failOnError: Boolean = 
             }.awaitAll()
         }
 
+        // Extract teacher schedules from all parsed group schedules in memory
+        teachers.forEach { teacher ->
+            val safeId = teacher.id.ifEmpty { teacher.name }.replace("/", "_").replace("\\", "_")
+            val allDays = mutableMapOf<kotlinx.datetime.LocalDate, MutableList<app.what.schedule.core.models.LessonDto>>()
+            schedules.values.forEach { days ->
+                days.forEach { day ->
+                    val teacherLessons = day.lessons.filter { lesson ->
+                        lesson.otUnits.any { it.teacher.equals(teacher.name, ignoreCase = true) }
+                    }
+                    if (teacherLessons.isNotEmpty()) {
+                        allDays.getOrPut(day.date) { mutableListOf() }.addAll(teacherLessons)
+                    }
+                }
+            }
+            val teacherSchedule = allDays.map { (date, lessons) ->
+                DayScheduleDto(
+                    date = date,
+                    scheduleType = app.what.schedule.core.models.LessonsScheduleTypeDto.COMMON,
+                    lessons = lessons.distinctBy { it.number to it.subject }.sortedBy { it.number }
+                )
+            }.sortedBy { it.date }
+
+            if (teacherSchedule.isNotEmpty()) {
+                teacherSchedules[safeId] = teacherSchedule
+                File(teachersDir, "$safeId.json").writeText(json.encodeToString(teacherSchedule))
+            }
+        }
+
         val meta = InstitutionMeta(
             lastSync = nowStr,
             institution = "iubip",
@@ -281,10 +353,11 @@ suspend fun syncIubip(client: HttpClient, rootDir: File, failOnError: Boolean = 
             institution = "iubip",
             groups = groups,
             teachers = teachers,
-            schedules = schedules
+            schedules = schedules,
+            teacherSchedules = teacherSchedules
         )
         File(dir, "data.json").writeText(json.encodeToString(data))
-        println("  [IUBIP] Sync complete! Cached ${schedules.size} group schedules.")
+        println("  [IUBIP] Sync complete! Cached ${schedules.size} group and ${teacherSchedules.size} teacher schedules.")
     }.onFailure {
         println("  [IUBIP] Error syncing: ${it.message}")
         it.printStackTrace()
@@ -296,6 +369,7 @@ suspend fun syncRinh(client: HttpClient, rootDir: File, failOnError: Boolean = f
     println("\n--- Syncing RINH ---")
     val dir = File(rootDir, "rinh").apply { mkdirs() }
     val groupsDir = File(dir, "groups").apply { mkdirs() }
+    val teachersDir = File(dir, "teachers").apply { mkdirs() }
 
     runCatching {
         val rinhClient = RINHScheduleClient(client, log = { println("  [RINH] $it") })
@@ -313,6 +387,7 @@ suspend fun syncRinh(client: HttpClient, rootDir: File, failOnError: Boolean = f
         File(dir, "teachers.json").writeText(json.encodeToString(teachers))
 
         val schedules = mutableMapOf<String, List<DayScheduleDto>>()
+        val teacherSchedules = mutableMapOf<String, List<DayScheduleDto>>()
         val semaphore = Semaphore(4)
 
         coroutineScope {
@@ -335,6 +410,27 @@ suspend fun syncRinh(client: HttpClient, rootDir: File, failOnError: Boolean = f
             }.awaitAll()
         }
 
+        println("  Fetching RINH teacher schedules...")
+        coroutineScope {
+            teachers.take(50).map { teacher ->
+                async {
+                    semaphore.withPermit {
+                        runCatching {
+                            delay(50)
+                            val schedule = rinhClient.getTeacherSchedule(teacher.name)
+                            if (schedule.isNotEmpty()) {
+                                val safeId = teacher.id.ifEmpty { teacher.name }.replace("/", "_").replace("\\", "_")
+                                synchronized(teacherSchedules) {
+                                    teacherSchedules[safeId] = schedule
+                                }
+                                File(teachersDir, "$safeId.json").writeText(json.encodeToString(schedule))
+                            }
+                        }
+                    }
+                }
+            }.awaitAll()
+        }
+
         val meta = InstitutionMeta(
             lastSync = nowStr,
             institution = "rinh",
@@ -348,10 +444,11 @@ suspend fun syncRinh(client: HttpClient, rootDir: File, failOnError: Boolean = f
             institution = "rinh",
             groups = groups,
             teachers = teachers,
-            schedules = schedules
+            schedules = schedules,
+            teacherSchedules = teacherSchedules
         )
         File(dir, "data.json").writeText(json.encodeToString(data))
-        println("  [RINH] Sync complete! Cached ${schedules.size} group schedules.")
+        println("  [RINH] Sync complete! Cached ${schedules.size} group and ${teacherSchedules.size} teacher schedules.")
     }.onFailure {
         println("  [RINH] Error syncing: ${it.message}")
         it.printStackTrace()
@@ -363,6 +460,7 @@ suspend fun syncSfedu(client: HttpClient, rootDir: File, failOnError: Boolean = 
     println("\n--- Syncing SFEDU ---")
     val dir = File(rootDir, "sfedu").apply { mkdirs() }
     val groupsDir = File(dir, "groups").apply { mkdirs() }
+    val teachersDir = File(dir, "teachers").apply { mkdirs() }
 
     runCatching {
         val sfeduClient = SFEDUScheduleClient(client, log = { println("  [SFEDU] $it") })
@@ -380,6 +478,7 @@ suspend fun syncSfedu(client: HttpClient, rootDir: File, failOnError: Boolean = 
         File(dir, "teachers.json").writeText(json.encodeToString(teachers))
 
         val schedules = mutableMapOf<String, List<DayScheduleDto>>()
+        val teacherSchedules = mutableMapOf<String, List<DayScheduleDto>>()
         val semaphore = Semaphore(4)
 
         coroutineScope {
@@ -402,6 +501,27 @@ suspend fun syncSfedu(client: HttpClient, rootDir: File, failOnError: Boolean = 
             }.awaitAll()
         }
 
+        println("  Fetching SFEDU teacher schedules...")
+        coroutineScope {
+            teachers.take(50).map { teacher ->
+                async {
+                    semaphore.withPermit {
+                        runCatching {
+                            delay(50)
+                            val schedule = sfeduClient.getTeacherSchedule(teacher.id)
+                            if (schedule.isNotEmpty()) {
+                                val safeId = teacher.id.ifEmpty { teacher.name }.replace("/", "_").replace("\\", "_")
+                                synchronized(teacherSchedules) {
+                                    teacherSchedules[safeId] = schedule
+                                }
+                                File(teachersDir, "$safeId.json").writeText(json.encodeToString(schedule))
+                            }
+                        }
+                    }
+                }
+            }.awaitAll()
+        }
+
         val meta = InstitutionMeta(
             lastSync = nowStr,
             institution = "sfedu",
@@ -415,10 +535,11 @@ suspend fun syncSfedu(client: HttpClient, rootDir: File, failOnError: Boolean = 
             institution = "sfedu",
             groups = groups,
             teachers = teachers,
-            schedules = schedules
+            schedules = schedules,
+            teacherSchedules = teacherSchedules
         )
         File(dir, "data.json").writeText(json.encodeToString(data))
-        println("  [SFEDU] Sync complete! Cached ${schedules.size} group schedules.")
+        println("  [SFEDU] Sync complete! Cached ${schedules.size} group and ${teacherSchedules.size} teacher schedules.")
     }.onFailure {
         println("  [SFEDU] Error syncing: ${it.message}")
         it.printStackTrace()
