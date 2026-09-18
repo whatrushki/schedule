@@ -24,3 +24,15 @@ inline fun <reified P : NavProvider, S : NavComponent<P>> NavGraphBuilder.regist
         s.content(Modifier)
     }
 }
+
+inline fun <reified P : NavProvider, S : NavComponent<P>> NavGraphBuilder.register(
+    screen: KClass<S>,
+    noinline factory: (P) -> S
+) {
+    registerScreenFactory(screen, factory)
+    composable<P> {
+        val provider = it.toRoute<P>()
+        val s = remember(provider) { factory(provider) }
+        s.content(Modifier)
+    }
+}

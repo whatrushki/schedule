@@ -17,7 +17,6 @@ data class NewsDetailProvider(
 ) : NavProvider()
 
 val newsDetailRegistry: Registry = {
-    registerScreenFactory(NewsDetailFeature::class) { provider -> NewsDetailFeature(provider) }
-    register(NewsDetailFeature::class)
+    register(NewsDetailFeature::class) { NewsDetailFeature(it) }
 }
 
