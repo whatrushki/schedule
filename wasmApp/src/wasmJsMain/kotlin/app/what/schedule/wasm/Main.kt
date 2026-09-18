@@ -2,26 +2,18 @@ package app.what.schedule.wasm
 
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.window.CanvasBasedWindow
-import app.what.schedule.wasm.ui.WebApp
-import app.what.schedule.wasm.updater.WasmUpdateManager
-import io.ktor.client.HttpClient
-import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
-import io.ktor.serialization.kotlinx.json.json
-import kotlinx.serialization.json.Json
+import app.what.compose.App
+import app.what.data.di.dataModule
+import app.what.features.main.di.mainFeatureModule
+import org.koin.core.context.startKoin
 
 @OptIn(ExperimentalComposeUiApi::class)
 fun main() {
-    val httpClient = HttpClient {
-        install(ContentNegotiation) {
-            json(Json {
-                ignoreUnknownKeys = true
-                isLenient = true
-            })
-        }
+    startKoin {
+        modules(dataModule, mainFeatureModule)
     }
-    val updateManager = WasmUpdateManager(httpClient)
 
-    CanvasBasedWindow(title = "WHAT Schedule Web", canvasElementId = "ComposeTarget") {
-        WebApp(httpClient, updateManager)
+    CanvasBasedWindow(title = "WHAT Schedule", canvasElementId = "ComposeTarget") {
+        App()
     }
 }

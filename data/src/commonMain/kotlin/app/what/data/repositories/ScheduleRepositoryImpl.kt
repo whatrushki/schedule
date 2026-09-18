@@ -14,7 +14,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.datetime.LocalDateTime
 
 class ScheduleRepositoryImpl(
-    private val db: AppDatabase,
+    private val db: AppDatabaseSource,
     private val institutionManager: InstitutionManager,
     private val scope: CoroutineScope
 ) : app.what.domain.repositories.ScheduleRepository {

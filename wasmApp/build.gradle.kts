@@ -19,6 +19,9 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
+            implementation(project(":composeApp"))
+            implementation(project(":data"))
+            implementation(project(":features:main"))
             implementation(project(":domain"))
             implementation(project(":libs:schedule:core"))
             implementation(project(":libs:schedule:rksi"))

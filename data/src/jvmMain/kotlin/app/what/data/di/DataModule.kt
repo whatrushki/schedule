@@ -97,7 +97,7 @@ val dataModule = module {
             .setDriver(BundledSQLiteDriver())
             .fallbackToDestructiveMigration(true)
             .build()
-    }
+    } bind app.what.schedule.data.local.database.AppDatabaseSource::class
     
     single {
         HttpClient(CIO) {

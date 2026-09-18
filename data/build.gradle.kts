@@ -17,6 +17,10 @@ kotlin {
     iosX64()
     iosArm64()
     iosSimulatorArm64()
+    @OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)
+    wasmJs {
+        browser()
+    }
 
     sourceSets {
         commonMain.dependencies {
@@ -34,7 +38,6 @@ kotlin {
             implementation(compose.material3)
             implementation(compose.ui)
 
-            implementation(libs.room.runtime)
             implementation(libs.room.common)
             implementation(libs.ktor.core)
             implementation(libs.ktor.client.content.negotiation)
@@ -48,6 +51,16 @@ kotlin {
             implementation(libs.kotlinx.datetime)
             implementation(libs.kotlinx.serialization.json)
         }
+        val nonWasmMain by creating {
+            dependsOn(commonMain.get())
+            dependencies {
+                implementation(libs.room.runtime)
+            }
+        }
+        androidMain.get().dependsOn(nonWasmMain)
+        jvmMain.get().dependsOn(nonWasmMain)
+        iosMain.get().dependsOn(nonWasmMain)
+
         androidMain.dependencies {
             implementation(libs.ktor.client.cio)
             implementation(libs.koin.android)

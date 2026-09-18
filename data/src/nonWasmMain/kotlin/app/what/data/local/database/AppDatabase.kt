@@ -20,13 +20,13 @@ import androidx.room.TypeConverters
 )
 @TypeConverters(Converters::class)
 @ConstructedBy(AppDatabaseConstructor::class)
-abstract class AppDatabase : RoomDatabase() {
-    abstract val lessonsDao: LessonDAO
-    abstract val otUnitsDao: OtUnitDAO
-    abstract val groupsDao: GroupsDAO
-    abstract val teachersDao: TeachersDAO
-    abstract val requestsDao: RequestsDAO
-    abstract val daySchedulesDao: DayScheduleDAO
+abstract class AppDatabase : RoomDatabase(), AppDatabaseSource {
+    abstract override val lessonsDao: LessonDAO
+    abstract override val otUnitsDao: OtUnitDAO
+    abstract override val groupsDao: GroupsDAO
+    abstract override val teachersDao: TeachersDAO
+    abstract override val requestsDao: RequestsDAO
+    abstract override val daySchedulesDao: DayScheduleDAO
 }
 
 @Suppress("NO_ACTUAL_FOR_EXPECT")

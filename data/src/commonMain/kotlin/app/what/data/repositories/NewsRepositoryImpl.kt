@@ -8,13 +8,12 @@ import app.what.foundation.utils.LogCat
 import app.what.foundation.utils.LogScope
 import app.what.foundation.utils.buildTag
 import app.what.foundation.utils.orThrow
-import app.what.schedule.data.local.database.AppDatabase
 import app.what.schedule.data.remote.api.InstitutionManager
 
 class NewsRepositoryImpl(
-    private val db: AppDatabase,
     private val institutionManager: InstitutionManager
 ) : NewsRepository {
+    constructor(db: Any?, institutionManager: InstitutionManager) : this(institutionManager)
     private val api
         get() = institutionManager.getSavedInstitution().orThrow { "No provider selected" }
 
