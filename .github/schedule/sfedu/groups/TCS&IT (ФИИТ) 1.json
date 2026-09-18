@@ -5,15 +5,66 @@
         "lessons": [
             {
                 "date": "2026-09-14",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Academic writing: basic skills (Основы академического письма)",
+                "otUnits": [
+                    {
+                        "teacher": "Гудкова Яна Алексеевна",
+                        "group": "",
+                        "room": "307",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-14",
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
-                "subject": "Иностранный язык",
+                "subject": "Academic writing: basic skills (Основы академического письма)",
                 "otUnits": [
                     {
-                        "teacher": "Шваб Ольга Михайловна",
+                        "teacher": "Гудкова Яна Алексеевна",
                         "group": "",
-                        "room": "Стачки 200/1, 318",
+                        "room": "307",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-14",
+                "number": 5,
+                "startTime": "15:50",
+                "endTime": "17:25",
+                "subject": "Modern Web Technologies and User Interface Development (Современные веб-технологии и разработка пользовательского интерфейса)",
+                "otUnits": [
+                    {
+                        "teacher": "Оганесян Павел Артурович",
+                        "group": "",
+                        "room": "Онлайн",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-14",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:15",
+                "subject": "Modern Web Technologies and User Interface Development (Современные веб-технологии и разработка пользовательского интерфейса)",
+                "otUnits": [
+                    {
+                        "teacher": "Оганесян Павел Артурович",
+                        "group": "",
+                        "room": "Онлайн",
                         "additional": ""
                     }
                 ],
@@ -28,32 +79,15 @@
         "lessons": [
             {
                 "date": "2026-09-15",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Physical Culture and Sport (Физическая культура и спорт)",
-                "otUnits": [
-                    {
-                        "teacher": "Седлов Семен Иванович",
-                        "group": "",
-                        "room": "Онлайн",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-15",
                 "number": 3,
                 "startTime": "11:55",
                 "endTime": "13:30",
-                "subject": "History of Russia (История России)",
+                "subject": "Russian as a Foreign Language (Русский язык как иностранный)",
                 "otUnits": [
                     {
-                        "teacher": "Пономарева Ю. В.",
+                        "teacher": "Шваб Ольга Михайловна",
                         "group": "",
-                        "room": "Онлайн",
+                        "room": "Стачки 200/1, 318",
                         "additional": ""
                     }
                 ],
@@ -65,12 +99,12 @@
                 "number": 4,
                 "startTime": "13:45",
                 "endTime": "15:20",
-                "subject": "History of Russia (История России)",
+                "subject": "CS202. Automata Theory and Formal Languages (Теория автоматов и формальных языков)",
                 "otUnits": [
                     {
-                        "teacher": "Пономарева Ю. В.",
+                        "teacher": "Могилевская Надежда Сергеевна",
                         "group": "",
-                        "room": "Онлайн",
+                        "room": "205",
                         "additional": ""
                     }
                 ],
@@ -85,53 +119,19 @@
         "lessons": [
             {
                 "date": "2026-09-16",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Introduction to Higher Mathematics (Введение в высшую математику)",
-                "otUnits": [
-                    {
-                        "teacher": "Епифанов А В",
-                        "group": "",
-                        "room": "306",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-16",
                 "number": 4,
                 "startTime": "13:45",
                 "endTime": "15:20",
-                "subject": "Introduction to Higher Mathematics (Введение в высшую математику)",
+                "subject": "Computer Architecture and Operating Systems (архитектура компьютера и операционные системы)",
                 "otUnits": [
                     {
-                        "teacher": "Епифанов А В",
+                        "teacher": "Баглий Антон Павлович",
                         "group": "",
-                        "room": "306",
+                        "room": "317",
                         "additional": ""
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-16",
-                "number": 5,
-                "startTime": "15:50",
-                "endTime": "17:25",
-                "subject": "Introduction to Higher Mathematics (Введение в высшую математику)",
-                "otUnits": [
-                    {
-                        "teacher": "Епифанов А В",
-                        "group": "",
-                        "room": "306",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
+                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]
@@ -145,12 +145,12 @@
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
-                "subject": "Programming Fundamentals (Программирование)",
+                "subject": "CS291. Probability Theory and Mathematical Statistics",
                 "otUnits": [
                     {
-                        "teacher": "Майер Светлана Федоровна",
+                        "teacher": "Землякова Ирина Александровна",
                         "group": "",
-                        "room": "ЮГИНФО 111",
+                        "room": "205",
                         "additional": ""
                     }
                 ],
@@ -162,12 +162,12 @@
                 "number": 3,
                 "startTime": "11:55",
                 "endTime": "13:30",
-                "subject": "Programming Fundamentals (Программирование)",
+                "subject": "CS291. Probability Theory and Mathematical Statistics",
                 "otUnits": [
                     {
-                        "teacher": "Майер Светлана Федоровна",
+                        "teacher": "Землякова Ирина Александровна",
                         "group": "",
-                        "room": "ЮГИНФО 111",
+                        "room": "205",
                         "additional": ""
                     }
                 ],
@@ -179,35 +179,12 @@
                 "number": 4,
                 "startTime": "13:45",
                 "endTime": "15:20",
-                "subject": "Programming Fundamentals (Программирование)",
+                "subject": "CS202. Automata Theory and Formal Languages (Теория автоматов и формальных языков)",
                 "otUnits": [
                     {
-                        "teacher": "Майер Светлана Федоровна",
+                        "teacher": "Могилевская Надежда Сергеевна",
                         "group": "",
-                        "room": "ЮГИНФО 111",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "Майер Светлана Федоровна",
-                        "group": "",
-                        "room": "ЮГИНФО 112",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-17",
-                "number": 5,
-                "startTime": "15:50",
-                "endTime": "17:25",
-                "subject": "Programming Fundamentals (Программирование)",
-                "otUnits": [
-                    {
-                        "teacher": "Майер Светлана Федоровна",
-                        "group": "",
-                        "room": "ЮГИНФО 111",
+                        "room": "205",
                         "additional": ""
                     }
                 ],
@@ -225,12 +202,46 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:35",
-                "subject": "Русский язык и культура речи",
+                "subject": "Modern Web Technologies and User Interface Development",
                 "otUnits": [
                     {
-                        "teacher": "Юхнова Валерия Борисовна",
+                        "teacher": "Баглий Антон Павлович",
                         "group": "",
-                        "room": "Онлайн",
+                        "room": "316",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-18",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Computer Architecture and Operating Systems (архитектура компьютера и операционные системы)",
+                "otUnits": [
+                    {
+                        "teacher": "Баглий Антон Павлович",
+                        "group": "",
+                        "room": "316",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-18",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "CS251. Database Technology (Технологии баз данных)",
+                "otUnits": [
+                    {
+                        "teacher": "Кравченко Олег Юрьевич",
+                        "group": "",
+                        "room": "ЮГИНФО 319",
                         "additional": ""
                     }
                 ],
@@ -239,19 +250,19 @@
             },
             {
                 "date": "2026-09-18",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Writing and Thinking (Письмо и мышление)",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "CS251. Database Technology (Технологии баз данных)",
                 "otUnits": [
                     {
-                        "teacher": "Булавинцев Никита Валерьевич",
+                        "teacher": "Кравченко Олег Юрьевич",
                         "group": "",
-                        "room": "Онлайн",
+                        "room": "319",
                         "additional": ""
                     }
                 ],
-                "type": "LECTURE",
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
@@ -265,33 +276,16 @@
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
-                "subject": "Introduction to Higher Mathematics (Введение в высшую математику)",
+                "subject": "МУАМ",
                 "otUnits": [
                     {
-                        "teacher": "Прозоров Олег Александрович",
+                        "teacher": "",
                         "group": "",
-                        "room": "108",
+                        "room": " ?",
                         "additional": ""
                     }
                 ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Introduction to Higher Mathematics (Введение в высшую математику)",
-                "otUnits": [
-                    {
-                        "teacher": "Прозоров Олег Александрович",
-                        "group": "",
-                        "room": "108",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
@@ -305,12 +299,12 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:35",
-                "subject": "Иностранный язык",
+                "subject": "Academic writing: basic skills (Основы академического письма)",
                 "otUnits": [
                     {
-                        "teacher": "Шваб Ольга Михайловна",
+                        "teacher": "Гудкова Яна Алексеевна",
                         "group": "",
-                        "room": "Стачки 200/1, 318",
+                        "room": "307",
                         "additional": ""
                     }
                 ],
@@ -322,16 +316,33 @@
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
-                "subject": "Иностранный язык",
+                "subject": "Academic writing: basic skills (Основы академического письма)",
                 "otUnits": [
                     {
-                        "teacher": "Шваб Ольга Михайловна",
+                        "teacher": "Гудкова Яна Алексеевна",
                         "group": "",
-                        "room": "Стачки 200/1, 318",
+                        "room": "307",
                         "additional": ""
                     }
                 ],
                 "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-21",
+                "number": 5,
+                "startTime": "15:50",
+                "endTime": "17:25",
+                "subject": "Modern Web Technologies and User Interface Development (Современные веб-технологии и разработка пользовательского интерфейса)",
+                "otUnits": [
+                    {
+                        "teacher": "Оганесян Павел Артурович",
+                        "group": "",
+                        "room": "Онлайн",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]
@@ -345,12 +356,12 @@
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
-                "subject": "Physical Culture and Sport (Физическая культура и спорт)",
+                "subject": "Russian as a Foreign Language (Русский язык как иностранный)",
                 "otUnits": [
                     {
-                        "teacher": "Седлов Семен Иванович",
+                        "teacher": "Шваб Ольга Михайловна",
                         "group": "",
-                        "room": "Онлайн",
+                        "room": "Стачки 200/1, 318",
                         "additional": ""
                     }
                 ],
@@ -362,12 +373,29 @@
                 "number": 3,
                 "startTime": "11:55",
                 "endTime": "13:30",
-                "subject": "History of Russia (История России)",
+                "subject": "Russian as a Foreign Language (Русский язык как иностранный)",
                 "otUnits": [
                     {
-                        "teacher": "Пономарева Ю. В.",
+                        "teacher": "Шваб Ольга Михайловна",
                         "group": "",
-                        "room": "Онлайн",
+                        "room": "Стачки 200/1, 318",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-22",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "CS202. Automata Theory and Formal Languages (Теория автоматов и формальных языков)",
+                "otUnits": [
+                    {
+                        "teacher": "Могилевская Надежда Сергеевна",
+                        "group": "",
+                        "room": "205",
                         "additional": ""
                     }
                 ],
@@ -382,53 +410,19 @@
         "lessons": [
             {
                 "date": "2026-09-23",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Introduction to Higher Mathematics (Введение в высшую математику)",
-                "otUnits": [
-                    {
-                        "teacher": "Епифанов А В",
-                        "group": "",
-                        "room": "306",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
                 "number": 4,
                 "startTime": "13:45",
                 "endTime": "15:20",
-                "subject": "Introduction to Higher Mathematics (Введение в высшую математику)",
+                "subject": "Computer Architecture and Operating Systems (архитектура компьютера и операционные системы)",
                 "otUnits": [
                     {
-                        "teacher": "Епифанов А В",
+                        "teacher": "Баглий Антон Павлович",
                         "group": "",
-                        "room": "306",
+                        "room": "317",
                         "additional": ""
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 5,
-                "startTime": "15:50",
-                "endTime": "17:25",
-                "subject": "Introduction to Higher Mathematics (Введение в высшую математику)",
-                "otUnits": [
-                    {
-                        "teacher": "Епифанов А В",
-                        "group": "",
-                        "room": "306",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
+                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]
@@ -442,12 +436,12 @@
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
-                "subject": "Programming Fundamentals (Программирование)",
+                "subject": "CS291. Probability Theory and Mathematical Statistics",
                 "otUnits": [
                     {
-                        "teacher": "Майер Светлана Федоровна",
+                        "teacher": "Землякова Ирина Александровна",
                         "group": "",
-                        "room": "ЮГИНФО 111",
+                        "room": "205",
                         "additional": ""
                     }
                 ],
@@ -459,12 +453,12 @@
                 "number": 3,
                 "startTime": "11:55",
                 "endTime": "13:30",
-                "subject": "Programming Fundamentals (Программирование)",
+                "subject": "CS291. Probability Theory and Mathematical Statistics",
                 "otUnits": [
                     {
-                        "teacher": "Майер Светлана Федоровна",
+                        "teacher": "Землякова Ирина Александровна",
                         "group": "",
-                        "room": "ЮГИНФО 111",
+                        "room": "205",
                         "additional": ""
                     }
                 ],
@@ -476,39 +470,16 @@
                 "number": 4,
                 "startTime": "13:45",
                 "endTime": "15:20",
-                "subject": "Programming Fundamentals (Программирование)",
+                "subject": "CS202. Automata Theory and Formal Languages (Теория автоматов и формальных языков)",
                 "otUnits": [
                     {
-                        "teacher": "Майер Светлана Федоровна",
+                        "teacher": "Могилевская Надежда Сергеевна",
                         "group": "",
-                        "room": "ЮГИНФО 111",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "Майер Светлана Федоровна",
-                        "group": "",
-                        "room": "ЮГИНФО 112",
+                        "room": "205",
                         "additional": ""
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 5,
-                "startTime": "15:50",
-                "endTime": "17:25",
-                "subject": "Introduction to the Project Activity (Введение в проектную  деятельность)",
-                "otUnits": [
-                    {
-                        "teacher": "Майер Светлана Федоровна",
-                        "group": "",
-                        "room": "ЮГИНФО 111",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
+                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]
@@ -522,12 +493,29 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:35",
-                "subject": "Русский язык и культура речи",
+                "subject": "Computer Architecture and Operating Systems (архитектура компьютера и операционные системы)",
                 "otUnits": [
                     {
-                        "teacher": "Юхнова Валерия Борисовна",
+                        "teacher": "Баглий Антон Павлович",
                         "group": "",
-                        "room": "Онлайн",
+                        "room": "316",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Computer Architecture and Operating Systems (архитектура компьютера и операционные системы)",
+                "otUnits": [
+                    {
+                        "teacher": "Баглий Антон Павлович",
+                        "group": "",
+                        "room": "316",
                         "additional": ""
                     }
                 ],
@@ -536,15 +524,32 @@
             },
             {
                 "date": "2026-09-25",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Writing and Thinking (Письмо и мышление)",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "CS251. Database Technology (Технологии баз данных)",
                 "otUnits": [
                     {
-                        "teacher": "",
+                        "teacher": "Кравченко Олег Юрьевич",
                         "group": "",
-                        "room": "215",
+                        "room": "ЮГИНФО 319",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "CS251. Database Technology (Технологии баз данных)",
+                "otUnits": [
+                    {
+                        "teacher": "Кравченко Олег Юрьевич",
+                        "group": "",
+                        "room": "319",
                         "additional": ""
                     }
                 ],
@@ -562,29 +567,12 @@
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
-                "subject": "Introduction to Higher Mathematics (Введение в высшую математику)",
+                "subject": "МУАМ",
                 "otUnits": [
                     {
-                        "teacher": "Прозоров Олег Александрович",
+                        "teacher": "",
                         "group": "",
-                        "room": "108",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Introduction to Higher Mathematics (Введение в высшую математику)",
-                "otUnits": [
-                    {
-                        "teacher": "Епифанов А В",
-                        "group": "",
-                        "room": "108",
+                        "room": " ?",
                         "additional": ""
                     }
                 ],
