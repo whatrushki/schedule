@@ -90,7 +90,7 @@ jobs:
       - name: Build Linux Desktop Targets (DEB, RPM & JAR)
         run: |
           sudo apt-get update && sudo apt-get install -y rpm || true
-          ./gradlew :desktopApp:packageReleaseDeb :desktopApp:packageReleaseRpm :desktopApp:packageReleaseUberJarForCurrentOS || ./gradlew :desktopApp:packageReleaseDistributionForCurrentOS || true
+          ./gradlew :desktopApp:packageReleaseDeb :desktopApp:packageReleaseRpm :desktopApp:packageUberJarForCurrentOS || ./gradlew :desktopApp:packageReleaseDistributionForCurrentOS || true
           mkdir -p release_assets
           find desktopApp/build -name "*.deb" -exec cp {} release_assets/schedule_linux_${{ steps.get_version.outputs.version }}.deb \; || true
           find desktopApp/build -name "*.rpm" -exec cp {} release_assets/schedule_linux_${{ steps.get_version.outputs.version }}.rpm \; || true
@@ -191,11 +191,12 @@ jobs:
           }
 
       - name: Upload Windows Installers to Release
-        if: hashFiles('release_assets/*') != ''
+        if: success()
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.get_version.outputs.tag }}
           files: release_assets/*
+          fail_on_unmatched_files: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -252,10 +253,11 @@ jobs:
           fi
 
       - name: Upload macOS & iOS Artifacts to Release
-        if: hashFiles('release_assets/*') != ''
+        if: success()
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.get_version.outputs.tag }}
           files: release_assets/*
+          fail_on_unmatched_files: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

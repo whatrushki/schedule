@@ -37,6 +37,9 @@ dependencies {
 compose.desktop {
     application {
         mainClass = "app.what.schedule.desktop.MainKt"
+        buildTypes.release.proguard {
+            isEnabled.set(false)
+        }
         nativeDistributions {
             targetFormats(
                 org.jetbrains.compose.desktop.application.dsl.TargetFormat.Dmg,
