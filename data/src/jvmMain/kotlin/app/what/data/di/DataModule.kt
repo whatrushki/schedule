@@ -67,7 +67,7 @@ val dataModule = module {
             config = UpdateConfig(
                 githubOwner = "whatrushki",
                 githubRepo = "schedule",
-                currentVersion = "1.3.4"
+                currentVersion = "1.3.5"
             ),
             openUrl = { url ->
                 try {
