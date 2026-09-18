@@ -198,23 +198,26 @@ fun NewListItemView(
                 fontSize = 15.sp,
                 lineHeight = 19.sp,
                 fontWeight = FontWeight.SemiBold,
-                minLines = 2,
-                maxLines = 2,
+                minLines = if (isWide) 2 else 1,
+                maxLines = if (isWide) 2 else 3,
                 overflow = TextOverflow.Ellipsis
             )
 
-            Gap(4)
+            val desc = item.description?.trim().orEmpty()
+            if (isWide || desc.isNotBlank()) {
+                Gap(4)
 
-            Text(
-                text = item.description?.trim().orEmpty(),
-                color = colorScheme.onSurfaceVariant,
-                fontSize = 13.sp,
-                lineHeight = 17.sp,
-                fontWeight = FontWeight.Normal,
-                minLines = 2,
-                maxLines = 2,
-                overflow = TextOverflow.Ellipsis
-            )
+                Text(
+                    text = desc,
+                    color = colorScheme.onSurfaceVariant,
+                    fontSize = 13.sp,
+                    lineHeight = 17.sp,
+                    fontWeight = FontWeight.Normal,
+                    minLines = if (isWide) 2 else 1,
+                    maxLines = if (isWide) 2 else 4,
+                    overflow = TextOverflow.Ellipsis
+                )
+            }
         }
     }
 }
