@@ -7,16 +7,19 @@ import app.what.data.di.dataModule
 import app.what.features.main.di.mainFeatureModule
 import org.koin.core.context.startKoin
 
-import androidx.compose.ui.window.ComposeViewport
-import kotlinx.browser.document
-
 @OptIn(ExperimentalComposeUiApi::class)
 fun main() {
     startKoin {
         modules(dataModule, mainFeatureModule)
     }
 
-    ComposeViewport(document.body!!) {
-        App()
-    }
+    CanvasBasedWindow(
+        title = "WHAT Schedule",
+        canvasElementId = "ComposeTarget",
+        requestResize = null,
+        applyDefaultStyles = true,
+        content = {
+            App()
+        }
+    )
 }
