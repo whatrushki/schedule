@@ -1,6 +1,8 @@
 name: Sync Schedule Data for Web
 
 on:
+  release:
+    types: [ published ]
   schedule:
     # РКСИ (частые изменения и планшетки замен):
     # 07:00, 10:00, 13:00, 16:00, 19:00 МСК (UTC+3) -> 04:00, 07:00, 10:00, 13:00, 16:00 UTC
@@ -51,6 +53,8 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "target=${{ github.event.inputs.target }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" = "release" ]; then
+            echo "target=all" >> $GITHUB_OUTPUT
           else
             HOUR=$(date -u +%H)
             if [ "$HOUR" -eq "04" ]; then

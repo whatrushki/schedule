@@ -89,7 +89,8 @@ jobs:
 
       - name: Build Linux Desktop Targets (DEB, RPM & JAR)
         run: |
-          ./gradlew :desktopApp:packageReleaseDeb :desktopApp:packageReleaseRpm || ./gradlew :desktopApp:packageReleaseDistributionForCurrentOS || ./gradlew :desktopApp:jar || true
+          sudo apt-get update && sudo apt-get install -y rpm || true
+          ./gradlew :desktopApp:packageReleaseDeb :desktopApp:packageReleaseRpm :desktopApp:packageReleaseUberJarForCurrentOS || ./gradlew :desktopApp:packageReleaseDistributionForCurrentOS || true
           mkdir -p release_assets
           find desktopApp/build -name "*.deb" -exec cp {} release_assets/schedule_linux_${{ steps.get_version.outputs.version }}.deb \; || true
           find desktopApp/build -name "*.rpm" -exec cp {} release_assets/schedule_linux_${{ steps.get_version.outputs.version }}.rpm \; || true
@@ -141,7 +142,6 @@ jobs:
   build_windows:
     name: Build Windows Desktop Target (MSI & EXE)
     runs-on: windows-latest
-    needs: build_release_publish
     if: github.event_name == 'release' || github.event_name == 'workflow_dispatch'
     permissions:
       contents: write
@@ -165,24 +165,33 @@ jobs:
 
       - name: Determine Version
         id: get_version
-        shell: bash
+        shell: pwsh
         run: |
-          VERSION="${{ github.event.release.tag_name || github.event.inputs.version || '1.3.1' }}"
-          CLEAN_VERSION="${VERSION#v}"
-          echo "version=$CLEAN_VERSION" >> $GITHUB_OUTPUT
-          echo "tag=$VERSION" >> $GITHUB_OUTPUT
+          $version = "${{ github.event.release.tag_name || github.event.inputs.version || '1.3.2' }}"
+          $cleanVersion = $version.TrimStart('v')
+          echo "version=$cleanVersion" >> $env:GITHUB_OUTPUT
+          echo "tag=$version" >> $env:GITHUB_OUTPUT
 
       - name: Build Windows Desktop Installers (MSI & EXE)
-        shell: bash
+        shell: pwsh
         run: |
-          ./gradlew :desktopApp:packageReleaseMsi :desktopApp:packageReleaseExe || ./gradlew :desktopApp:packageReleaseDistributionForCurrentOS || true
-          mkdir -p release_assets
-          # Collect MSI installer
-          find desktopApp/build -name "*.msi" -exec cp {} release_assets/schedule_windows_${{ steps.get_version.outputs.version }}.msi \; || true
-          # Collect EXE installer if generated
-          find desktopApp/build -name "*.exe" -exec cp {} release_assets/schedule_windows_${{ steps.get_version.outputs.version }}.exe \; || true
+          ./gradlew :desktopApp:packageReleaseMsi :desktopApp:packageReleaseExe
+          if ($LASTEXITCODE -ne 0) {
+            ./gradlew :desktopApp:packageReleaseDistributionForCurrentOS
+          }
+          New-Item -ItemType Directory -Force -Path release_assets
+          $version = "${{ steps.get_version.outputs.version }}"
+          $msi = Get-ChildItem -Path desktopApp/build -Filter "*.msi" -Recurse | Select-Object -First 1
+          if ($msi) {
+            Copy-Item $msi.FullName -Destination "release_assets/schedule_windows_${version}.msi"
+          }
+          $exe = Get-ChildItem -Path desktopApp/build -Filter "*.exe" -Recurse | Select-Object -First 1
+          if ($exe) {
+            Copy-Item $exe.FullName -Destination "release_assets/schedule_windows_${version}.exe"
+          }
 
       - name: Upload Windows Installers to Release
+        if: hashFiles('release_assets/*') != ''
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.get_version.outputs.tag }}
@@ -193,7 +202,6 @@ jobs:
   build_macos_and_ios:
     name: Build macOS (DMG) & iOS Targets
     runs-on: macos-latest
-    needs: build_release_publish
     if: github.event_name == 'release' || github.event_name == 'workflow_dispatch'
     permissions:
       contents: write
@@ -218,7 +226,7 @@ jobs:
       - name: Determine Version
         id: get_version
         run: |
-          VERSION="${{ github.event.release.tag_name || github.event.inputs.version || '1.3.1' }}"
+          VERSION="${{ github.event.release.tag_name || github.event.inputs.version || '1.3.2' }}"
           CLEAN_VERSION="${VERSION#v}"
           echo "version=$CLEAN_VERSION" >> $GITHUB_OUTPUT
           echo "tag=$VERSION" >> $GITHUB_OUTPUT
@@ -244,6 +252,7 @@ jobs:
           fi
 
       - name: Upload macOS & iOS Artifacts to Release
+        if: hashFiles('release_assets/*') != ''
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.get_version.outputs.tag }}

@@ -9,6 +9,8 @@
 
 Кроссплатформенный клиент и экосистема синхронизации академического расписания для студентов и преподавателей.
 
+<br />
+
 <!-- 2. Информационные чипсы (height="24") -->
 <img src="https://img.shields.io/badge/status-stable-09090b?style=for-the-badge&labelColor=000000" height="24" />
 <img src="https://img.shields.io/badge/version-1.3.2-09090b?style=for-the-badge&labelColor=000000" height="24" />
@@ -17,12 +19,14 @@
 
 <br />
 
+<div>
 <!-- 4. Витрина (Showcase) -->
 <img src=".github/res/image1.png" width="31%" />
 &nbsp;
 <img src=".github/res/image2.png" width="31%" />
 &nbsp;
 <img src=".github/res/image3.png" width="31%" />
+</div>
 
 <br />
 
@@ -33,13 +37,14 @@
 &nbsp;
 [![GitHub Packages](https://img.shields.io/badge/Packages-Maven_KMP-09090b?style=for-the-badge&logo=apachemaven&logoColor=white&labelColor=000000)](https://github.com/whatrushki/schedule/packages)
 
+<br />
 </div>
 
 ---
 
 ### О проекте
 
-WHAT Schedule — мультиплатформенная экосистема для получения, парсинга и отображения расписания учебных заведений (РКСИ, ДГТУ, ИУБиП, РГЭУ РИНХ). Проект объединяет гетерогенные источники данных (от закрытых веб-API и XLSX-файлов до облачных таблиц) в единую нормализованную модель данных с поддержкой оперативного отслеживания замен, звонков и академических новостей.
+WHAT Schedule — мультиплатформенная экосистема для получения, парсинга и отображения расписания учебных заведений. Проект объединяет гетерогенные источники данных (от закрытых веб-API и XLSX-файлов до облачных таблиц) в единую нормализованную модель данных с поддержкой оперативного отслеживания замен, звонков и академических новостей.
 
 Архитектура построена на базе Kotlin Multiplatform и Compose Multiplatform, обеспечивая консистентный пользовательский опыт и единый стек бизнес-логики на Android, десктопных операционных системах (Windows, macOS, Linux) и в браузере через WebAssembly.
 
