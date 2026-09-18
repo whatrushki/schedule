@@ -75,7 +75,8 @@ val insts: List<Institution.Factory> by lazy {
 
 class InstitutionManager(
     private val settings: AppValues,
-    private val scope: CoroutineScope
+    private val scope: CoroutineScope,
+    private val institutions: List<Institution.Factory> = insts
 ) {
     init {
         actualize()
@@ -86,7 +87,7 @@ class InstitutionManager(
         }
     }
     
-    fun getInstitutions(): List<Institution.Factory> = insts
+    fun getInstitutions(): List<Institution.Factory> = institutions
     
     fun save(institutionId: String) {
         settings.institution.set(institutionId)
@@ -95,7 +96,7 @@ class InstitutionManager(
     
     private fun actualize() {
         val savedData = settings.institution.get()
-        savedInstitution = insts.firstOrNull { it.metadata.id == savedData }?.create()
+        savedInstitution = institutions.firstOrNull { it.metadata.id == savedData }?.create()
     }
     
     private var savedInstitution: Institution? = null

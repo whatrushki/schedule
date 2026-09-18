@@ -75,11 +75,12 @@ class MainFeature(
     override val controller: MainController by inject()
     
     val children: List<NavItem>
-        get() = mutableListOf(
-            navItem("Новости", WHATIcons.News, NewsProvider),
-            navItem("Расписание", Icons.Default.DateRange, ScheduleProvider()),
-            navItem("Настройки", Icons.Default.Settings, SettingsProvider)
-        ).apply {
+        get() = buildList {
+            if (app.what.foundation.utils.currentPlatform != app.what.foundation.utils.PlatformType.Wasm) {
+                add(navItem("Новости", WHATIcons.News, NewsProvider))
+            }
+            add(navItem("Расписание", Icons.Default.DateRange, ScheduleProvider()))
+            add(navItem("Настройки", Icons.Default.Settings, SettingsProvider))
             if (controller.getState().hasProfilePage) {
                 add(0, navItem("Профиль", WHATIcons.Person, AccountProvider))
             }

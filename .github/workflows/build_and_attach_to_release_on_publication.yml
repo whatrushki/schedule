@@ -102,6 +102,9 @@ jobs:
           ./gradlew :wasmApp:wasmJsBrowserDistribution || true
           DIST_DIR="wasmApp/build/dist/wasmJs/productionExecutable"
           if [ -d "$DIST_DIR" ]; then
+            if [ -d ".github/schedule" ]; then
+              cp -r .github/schedule "$DIST_DIR/schedule"
+            fi
             cp "$DIST_DIR/index.html" "$DIST_DIR/404.html"
             cd "$DIST_DIR"
             zip -r ../../../../../release_assets/schedule_web_${{ steps.get_version.outputs.version }}.zip .

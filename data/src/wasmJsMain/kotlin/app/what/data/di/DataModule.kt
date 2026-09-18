@@ -35,6 +35,37 @@ import app.what.schedule.data.local.database.AppDatabaseSource
 import app.what.schedule.data.local.database.InMemoryAppDatabaseSource
 import app.what.data.repositories.ScheduleRepositoryImpl
 
+import app.what.data.adapters.AdaptedScheduleService
+import app.what.data.remote.WebScheduleClient
+import app.what.domain.models.MetaInfo
+import app.what.foundation.services.auto_update.AppUpdateManager
+import app.what.foundation.services.auto_update.UpdateConfig
+import app.what.foundation.services.auto_update.GitHubUpdateService
+import app.what.foundation.services.auto_update.WebUpdateManager
+import app.what.schedule.data.remote.api.Institution
+import app.what.schedule.data.remote.api.NewsService
+import app.what.schedule.data.remote.api.ScheduleService
+import app.what.schedule.data.remote.api.insts
+
+class WebInstitutionFactory(
+    private val base: Institution.Factory,
+    private val httpClient: HttpClient
+) : Institution.Factory {
+    override val metadata: MetaInfo get() = base.metadata
+
+    override fun create(): Institution {
+        val baseInst = base.create()
+        val webClient = WebScheduleClient(
+            institutionId = metadata.id,
+            httpClient = httpClient
+        )
+        return object : Institution by baseInst {
+            override val scheduleService: ScheduleService = AdaptedScheduleService(webClient)
+            override val newsService: NewsService = object : NewsService {}
+        }
+    }
+}
+
 val dataModule = module {
     single<CoroutineScope> { CoroutineScope(SupervisorJob() + Dispatchers.Default) }
 
@@ -44,8 +75,29 @@ val dataModule = module {
     singleOf(::GoogleDriveParser)
     single<FileCache> { InMemoryFileCache() }
     single { DGTUAccountClient(get()) }
-    singleOf(::InstitutionManager)
+    
+    single {
+        val httpClient: HttpClient = get()
+        val webFactories = insts.map { WebInstitutionFactory(it, httpClient) }
+        InstitutionManager(get(), get(), webFactories)
+    }
+    
     singleOf(::AppUtils)
+
+    single<AppUpdateManager> {
+        WebUpdateManager(
+            gitHubService = GitHubUpdateService(get()),
+            config = UpdateConfig(
+                githubOwner = "whatrushki",
+                githubRepo = "schedule",
+                currentVersion = "1.3.4"
+            ),
+            onReload = {
+                kotlinx.browser.window.location.reload()
+            },
+            scope = get()
+        )
+    }
 
     single<AppDatabaseSource> { InMemoryAppDatabaseSource() }
 
