@@ -6,6 +6,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.runtime.rememberCoroutineScope
+import kotlinx.coroutines.launch
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -55,10 +59,11 @@ fun DevFeature(
 ) = Column(
     modifier = modifier.fillMaxSize().statusBarsPadding()
 ) {
-    var selectedTabIndex by useState(0)
     val devToolsTabs = DevToolsTab.all()
         .dropLast(1)
         .freeze()
+    val pagerState = rememberPagerState { devToolsTabs.size }
+    val scope = rememberCoroutineScope()
     
     val navigator = LocalNavController.current
 
@@ -99,7 +104,7 @@ fun DevFeature(
             .padding(horizontal = 12.dp)
     ) {
         devToolsTabs.forEachIndexed { index, it ->
-            val selected = selectedTabIndex == index
+            val selected = pagerState.currentPage == index
             
             SegmentTab(
                 selected = selected,
@@ -107,16 +112,21 @@ fun DevFeature(
                 count = devToolsTabs.size,
                 icon = it.icon,
                 label = null
-            ) { selectedTabIndex = index }
+            ) {
+                scope.launch {
+                    pagerState.animateScrollToPage(index)
+                }
+            }
         }
     }
     
-    Box(
+    HorizontalPager(
+        state = pagerState,
         modifier = Modifier
             .weight(1f)
             .fillMaxWidth()
-    ) {
-        when (devToolsTabs.getOrNull(selectedTabIndex) ?: DevToolsTab.LOGS) {
+    ) { page ->
+        when (devToolsTabs.getOrNull(page) ?: DevToolsTab.LOGS) {
             DevToolsTab.LOGS -> LogsPane(Modifier.fillMaxSize())
             DevToolsTab.NETWORK -> NetworksPane(Modifier.fillMaxSize())
             DevToolsTab.FEATURES -> FeaturePane(Modifier.fillMaxSize())
