@@ -83,6 +83,8 @@ jobs:
             echo "No schedule changes to commit."
           else
             git commit -m "[CI] Update schedule data ($(date -u '+%Y-%m-%d %H:%M UTC'))"
-            git pull origin master --rebase
+            git checkout -- .
+            git clean -fd
+            git pull --rebase --autostash origin master
             git push origin HEAD:master
           fi
