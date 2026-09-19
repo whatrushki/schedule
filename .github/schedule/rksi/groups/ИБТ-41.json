@@ -85,7 +85,7 @@
                 "subject": "Классный час",
                 "otUnits": [],
                 "type": "OTHER",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-21",
@@ -97,12 +97,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБТ-41",
-                        "room": "41",
+                        "room": "21",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -114,12 +114,29 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБТ-41",
-                        "room": "41",
+                        "room": "21",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-21",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Криптографическая защита информации",
+                "otUnits": [
+                    {
+                        "teacher": "Шабалта А.В.",
+                        "group": "ИБТ-41",
+                        "room": "43",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
@@ -340,9 +357,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крылова О.В.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ИБТ-41",
-                        "room": "34",
+                        "room": "44",
                         "additional": "Корпус 2"
                     }
                 ],
@@ -357,9 +374,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Крылова О.В.",
                         "group": "ИБТ-41",
-                        "room": "44",
+                        "room": "34",
                         "additional": "Корпус 2"
                     }
                 ],

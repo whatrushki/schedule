@@ -96,20 +96,37 @@
         "lessons": [
             {
                 "date": "2026-09-21",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Гузов А.В.",
+                        "group": "ИБА-13",
+                        "room": "21",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-21",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Гузов Алексей Валентинович",
+                        "teacher": "Гузов А.В.",
                         "group": "ИБТ-13",
-                        "room": "с/з2",
+                        "room": "с/з1",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -119,14 +136,14 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Гузов Алексей Валентинович",
+                        "teacher": "Гузов А.В.",
                         "group": "ТД-13",
                         "room": "с/з2",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -136,14 +153,14 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Гузов Алексей Валентинович",
+                        "teacher": "Гузов А.В.",
                         "group": "ИБА-24",
-                        "room": "с/з2",
+                        "room": "с/з1",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

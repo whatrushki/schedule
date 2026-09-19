@@ -66,9 +66,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "СА-13",
+                        "room": "Акт.зал",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -92,17 +99,17 @@
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Физика",
+                "subject": "Химия",
                 "otUnits": [
                     {
-                        "teacher": "Барна Н.В.",
+                        "teacher": "Кравченко И.Ю.",
                         "group": "СА-13",
-                        "room": "326",
+                        "room": "410",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -119,7 +126,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

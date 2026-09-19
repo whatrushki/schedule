@@ -79,20 +79,43 @@
         "lessons": [
             {
                 "date": "2026-09-21",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Наливайко Е.П.",
+                        "group": "РУП-14",
+                        "room": "322",
+                        "additional": "Корпус 1"
+                    },
+                    {
+                        "teacher": "Наливайко Е.П.",
+                        "group": "ИС-32",
+                        "room": "322",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-21",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Математика",
+                "subject": "Индивидуальный проект",
                 "otUnits": [
                     {
-                        "teacher": "Наливайко Елена Павловна",
+                        "teacher": "Наливайко Е.П.",
                         "group": "РУП-14",
                         "room": "322",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -102,31 +125,31 @@
                 "subject": "Математика",
                 "otUnits": [
                     {
-                        "teacher": "Наливайко Елена Павловна",
+                        "teacher": "Наливайко Е.П.",
                         "group": "РУП-13",
                         "room": "322",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Информатика",
+                "subject": "Математика",
                 "otUnits": [
                     {
-                        "teacher": "Наливайко Елена Павловна",
+                        "teacher": "Наливайко Е.П.",
                         "group": "РУП-13",
                         "room": "322",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

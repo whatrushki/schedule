@@ -100,9 +100,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Рыбак Е.Ю.",
+                        "group": "ИБТ-23",
+                        "room": "28",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -114,12 +121,12 @@
                     {
                         "teacher": "Пустоветова С.Ю.",
                         "group": "ИБТ-23",
-                        "room": "43",
+                        "room": "20",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -131,12 +138,12 @@
                     {
                         "teacher": "Рыбак Е.Ю.",
                         "group": "ИБТ-23",
-                        "room": "38",
+                        "room": "28",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

@@ -100,9 +100,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Марышева О.В.",
+                        "group": "ИС-46",
+                        "room": "316",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -165,12 +172,12 @@
                     {
                         "teacher": "Бойнар И.Н.",
                         "group": "ИС-46",
-                        "room": "310",
+                        "room": "326",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -283,9 +290,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "ИС-46",
-                        "room": "111",
+                        "room": "104",
                         "additional": "Корпус 1"
                     }
                 ],
@@ -300,9 +307,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "ИС-46",
-                        "room": "104",
+                        "room": "111",
                         "additional": "Корпус 1"
                     }
                 ],

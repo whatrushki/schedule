@@ -66,26 +66,33 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Касьянова Е.Ю.",
+                        "group": "ИБТ-12",
+                        "room": "30",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Основы безопасности и защиты Родины",
+                "subject": "Индивидуальный проект",
                 "otUnits": [
                     {
-                        "teacher": "Смирнов В.П.",
+                        "teacher": "Бережная А.В.",
                         "group": "ИБТ-12",
-                        "room": "17",
+                        "room": "20",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -97,12 +104,12 @@
                     {
                         "teacher": "Мугутдинова Н.Ш.",
                         "group": "ИБТ-12",
-                        "room": "13",
+                        "room": "34",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -114,12 +121,12 @@
                     {
                         "teacher": "Растороцкий В.В.",
                         "group": "ИБТ-12",
-                        "room": "с/з1",
+                        "room": "с/з2",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

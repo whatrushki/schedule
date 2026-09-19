@@ -66,9 +66,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Карачевцева Д.Г.",
+                        "group": "СА-43",
+                        "room": "326",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -85,7 +92,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-21",
@@ -102,7 +109,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-21",
@@ -119,7 +126,58 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
+            },
+            {
+                "date": "2026-09-21",
+                "number": 4,
+                "startTime": "14:10",
+                "endTime": "15:40",
+                "subject": "Безопасность компьютерных сетей",
+                "otUnits": [
+                    {
+                        "teacher": "Бороненкова С.Е.",
+                        "group": "СА-43",
+                        "room": "322",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-21",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:30",
+                "subject": "Безопасность компьютерных сетей",
+                "otUnits": [
+                    {
+                        "teacher": "Бороненкова С.Е.",
+                        "group": "СА-43",
+                        "room": "322",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-21",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:10",
+                "subject": "Безопасность компьютерных сетей",
+                "otUnits": [
+                    {
+                        "teacher": "Бороненкова С.Е.",
+                        "group": "СА-43",
+                        "room": "322",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
@@ -135,9 +193,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Черноштан О.Н.",
                         "group": "СА-43",
-                        "room": "104",
+                        "room": "320",
                         "additional": "Корпус 1"
                     }
                 ],
@@ -152,9 +210,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "СА-43",
-                        "room": "320",
+                        "room": "104",
                         "additional": "Корпус 1"
                     }
                 ],

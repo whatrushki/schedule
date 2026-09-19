@@ -66,9 +66,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Смолянинов К.А.",
+                        "group": "СА-16",
+                        "room": "Акт.зал",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -80,12 +87,12 @@
                     {
                         "teacher": "Арутюнян М.А.",
                         "group": "СА-16",
-                        "room": "312",
+                        "room": "418",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -97,29 +104,29 @@
                     {
                         "teacher": "Арутюнян М.А.",
                         "group": "СА-16",
-                        "room": "312",
+                        "room": "418",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Основы безопасности и защиты Родины",
+                "subject": "География",
                 "otUnits": [
                     {
-                        "teacher": "Коханова Л.Н.",
+                        "teacher": "Видинеева Е.А.",
                         "group": "СА-16",
-                        "room": "418",
+                        "room": "Акт.зал",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

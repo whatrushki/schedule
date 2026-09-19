@@ -5,20 +5,43 @@
         "lessons": [
             {
                 "date": "2026-09-21",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Нефедова Е.Ф.",
+                        "group": "СА-44",
+                        "room": "414",
+                        "additional": "Корпус 1"
+                    },
+                    {
+                        "teacher": "Нефедова Е.Ф.",
+                        "group": "СА-47",
+                        "room": "414",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-21",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Русский язык",
+                "subject": "Литература",
                 "otUnits": [
                     {
-                        "teacher": "Нефедова Евгения Михайловна",
+                        "teacher": "Нефедова Е.М.",
                         "group": "СА-17",
-                        "room": "401",
+                        "room": "210",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -28,14 +51,14 @@
                 "subject": "Литература",
                 "otUnits": [
                     {
-                        "teacher": "Нефедова Евгения Михайловна",
+                        "teacher": "Нефедова Е.М.",
                         "group": "СА-17",
-                        "room": "401",
+                        "room": "210",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

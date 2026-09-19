@@ -66,9 +66,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Упорова Л.В.",
+                        "group": "СА-14",
+                        "room": "410",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -80,29 +87,12 @@
                     {
                         "teacher": "Черноштан О.Н.",
                         "group": "СА-14",
-                        "room": "315а",
+                        "room": "209а",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "Крупицкая Н.А.",
-                        "group": "СА-14",
-                        "room": "111",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -114,12 +104,12 @@
                     {
                         "teacher": "Гвоздецкая Г.И.",
                         "group": "СА-14",
-                        "room": "216",
+                        "room": "307",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",

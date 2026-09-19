@@ -42,7 +42,7 @@
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Бизнес-аналитика",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
                         "teacher": "Чумаченко С.Г.",
@@ -59,7 +59,7 @@
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Бизнес-аналитика",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
                         "teacher": "Чумаченко С.Г.",
@@ -83,9 +83,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Золотовская М.Ю.",
+                        "group": "ИС-45",
+                        "room": "319",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -243,9 +250,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Чубарова А.Б.",
+                        "teacher": "Новосельцева Е.Ф.",
                         "group": "ИС-45",
-                        "room": "106",
+                        "room": "209а",
                         "additional": "Корпус 1"
                     }
                 ],
@@ -260,9 +267,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Новосельцева Е.Ф.",
+                        "teacher": "Чубарова А.Б.",
                         "group": "ИС-45",
-                        "room": "209а",
+                        "room": "106",
                         "additional": "Корпус 1"
                     }
                 ],

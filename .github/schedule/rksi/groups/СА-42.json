@@ -47,7 +47,7 @@
                     {
                         "teacher": "Савчук И.С.",
                         "group": "СА-42",
-                        "room": "416",
+                        "room": "122",
                         "additional": "Корпус 1"
                     }
                 ],
@@ -83,9 +83,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Тодорова А.В,",
+                        "group": "СА-42",
+                        "room": "110а",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -97,12 +104,12 @@
                     {
                         "teacher": "Зурова А.Е.",
                         "group": "СА-42",
-                        "room": "420",
+                        "room": "325",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -114,12 +121,12 @@
                     {
                         "teacher": "Зурова А.Е.",
                         "group": "СА-42",
-                        "room": "420",
+                        "room": "325",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -136,24 +143,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Новосельцева Е.Ф.",
-                        "group": "СА-42",
-                        "room": "209а",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

@@ -83,9 +83,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Григорьева Л.Ф.",
+                        "group": "СА-23",
+                        "room": "408",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -114,12 +121,12 @@
                     {
                         "teacher": "Небратенко Л.В.",
                         "group": "СА-23",
-                        "room": "103",
+                        "room": "305",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -131,12 +138,12 @@
                     {
                         "teacher": "Ляшенко П.А.",
                         "group": "СА-23",
-                        "room": "420",
+                        "room": "121",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

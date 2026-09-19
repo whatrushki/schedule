@@ -5,71 +5,100 @@
         "lessons": [
             {
                 "date": "2026-09-21",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-11",
+                        "room": "13",
+                        "additional": "Корпус 2"
+                    },
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-12",
+                        "room": "13",
+                        "additional": "Корпус 2"
+                    },
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-13",
+                        "room": "13",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-21",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
                 "subject": "Автоматизация торгово-технологических процессов",
                 "otUnits": [
                     {
-                        "teacher": "Доценко Лиана Александровна",
+                        "teacher": "Доценко Л.А.",
                         "group": "ТД-32",
-                        "room": "36",
+                        "room": "41",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Логистика",
+                "subject": "Автоматизация торгово-технологических процессов",
                 "otUnits": [
                     {
-                        "teacher": "Доценко Лиана Александровна",
+                        "teacher": "Доценко Л.А.",
                         "group": "ТД-31",
-                        "room": "36",
+                        "room": "41",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
                 "number": 4,
                 "startTime": "14:10",
                 "endTime": "15:40",
-                "subject": "Маркетинговые исследования",
+                "subject": "Организация торговли",
                 "otUnits": [
                     {
-                        "teacher": "Доценко Лиана Александровна",
-                        "group": "ТД-32",
-                        "room": "36",
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-33",
+                        "room": "41",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
                 "number": 6,
                 "startTime": "17:40",
                 "endTime": "19:10",
-                "subject": "Интернет-маркетинг",
+                "subject": "Организация торговли",
                 "otUnits": [
                     {
-                        "teacher": "Доценко Лиана Александровна",
+                        "teacher": "Доценко Л.А.",
                         "group": "ТД-33",
-                        "room": "36",
+                        "room": "41",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

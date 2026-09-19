@@ -5,20 +5,60 @@
         "lessons": [
             {
                 "date": "2026-09-21",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Заводнов Н.А.",
+                        "group": "СА-15",
+                        "room": "314",
+                        "additional": "Корпус 1"
+                    },
+                    {
+                        "teacher": "Заводнов Н.А.",
+                        "group": "СА-45",
+                        "room": "314",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-21",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Организация администрирования компьютерных систем",
+                "otUnits": [
+                    {
+                        "teacher": "Заводнов Н.А.",
+                        "group": "СА-45",
+                        "room": "306",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-21",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
                 "subject": "Организация администрирования компьютерных систем",
                 "otUnits": [
                     {
-                        "teacher": "Заводнов Никита Андреевич",
+                        "teacher": "Заводнов Н.А.",
                         "group": "СА-45",
-                        "room": "213",
+                        "room": "306",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

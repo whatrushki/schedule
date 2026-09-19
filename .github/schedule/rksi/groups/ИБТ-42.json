@@ -66,9 +66,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Мугутдинова Н.Ш",
+                        "group": "ИБТ-42",
+                        "room": "34",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -85,7 +92,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-21",
@@ -97,12 +104,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБТ-42",
-                        "room": "41",
+                        "room": "43",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -114,12 +121,29 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБТ-42",
-                        "room": "41",
+                        "room": "44",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-21",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:10",
+                "subject": "Криптографическая защита информации",
+                "otUnits": [
+                    {
+                        "teacher": "Шабалта А.В.",
+                        "group": "ИБТ-42",
+                        "room": "44",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
@@ -209,9 +233,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Савченко А.А.",
+                        "teacher": "Марченко С.П.",
                         "group": "ИБТ-42",
-                        "room": "38",
+                        "room": "13",
                         "additional": "Корпус 2"
                     }
                 ],
@@ -226,9 +250,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.П.",
+                        "teacher": "Савченко А.А.",
                         "group": "ИБТ-42",
-                        "room": "13",
+                        "room": "38",
                         "additional": "Корпус 2"
                     }
                 ],

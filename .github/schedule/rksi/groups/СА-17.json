@@ -66,9 +66,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "СА-17",
+                        "room": "Акт.зал",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -97,12 +104,12 @@
                     {
                         "teacher": "Нефедова Е.М.",
                         "group": "СА-17",
-                        "room": "401",
+                        "room": "210",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -114,12 +121,12 @@
                     {
                         "teacher": "Нефедова Е.М.",
                         "group": "СА-17",
-                        "room": "401",
+                        "room": "210",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -340,9 +347,9 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Ефремова О.П.",
                         "group": "СА-17",
-                        "room": "111",
+                        "room": "315а",
                         "additional": "Корпус 1"
                     }
                 ],
@@ -357,9 +364,9 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Ефремова О.П.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "СА-17",
-                        "room": "315а",
+                        "room": "111",
                         "additional": "Корпус 1"
                     }
                 ],

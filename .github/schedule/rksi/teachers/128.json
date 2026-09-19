@@ -5,20 +5,37 @@
         "lessons": [
             {
                 "date": "2026-09-21",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Шумина Е.Н.",
+                        "group": "БД-31",
+                        "room": "40",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-21",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Рынок ценных бумаг",
+                "subject": "Организация безналичных расчетов",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Елена Николаевна",
+                        "teacher": "Шумина Е.Н.",
                         "group": "БД-31",
                         "room": "40",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -28,14 +45,14 @@
                 "subject": "Организация безналичных расчетов",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Елена Николаевна",
+                        "teacher": "Шумина Е.Н.",
                         "group": "БД-31",
                         "room": "40",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -45,14 +62,14 @@
                 "subject": "Экономика и управление",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Елена Николаевна",
+                        "teacher": "Шумина Е.Н.",
                         "group": "ИБТ-21",
                         "room": "40",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -62,31 +79,48 @@
                 "subject": "Экономика и управление",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Елена Николаевна",
+                        "teacher": "Шумина Е.Н.",
                         "group": "ИБТ-21",
                         "room": "40",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:30",
-                "subject": "Финансовая грамотность",
+                "subject": "Бухгалтерский учет",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Елена Николаевна",
+                        "teacher": "Шумина Е.Н.",
                         "group": "БД-21",
                         "room": "40",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-21",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Статистика",
+                "otUnits": [
+                    {
+                        "teacher": "Шумина О.О.",
+                        "group": "БУ-22",
+                        "room": "17",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

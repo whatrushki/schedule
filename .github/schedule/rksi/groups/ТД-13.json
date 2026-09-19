@@ -66,9 +66,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-13",
+                        "room": "13",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -114,12 +121,12 @@
                     {
                         "teacher": "Нохрина Ю.В.",
                         "group": "ТД-13",
-                        "room": "34",
+                        "room": "33",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -226,9 +233,9 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Крылова О.В.",
+                        "teacher": "Марченко С.П.",
                         "group": "ТД-13",
-                        "room": "34",
+                        "room": "13",
                         "additional": "Корпус 2"
                     }
                 ],
@@ -243,9 +250,9 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.П.",
+                        "teacher": "Крылова О.В.",
                         "group": "ТД-13",
-                        "room": "13",
+                        "room": "34",
                         "additional": "Корпус 2"
                     }
                 ],

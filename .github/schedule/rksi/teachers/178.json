@@ -130,54 +130,100 @@
         "lessons": [
             {
                 "date": "2026-09-21",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ТЭС-12",
+                        "room": "217",
+                        "additional": "Корпус 1"
+                    },
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-26",
+                        "room": "217",
+                        "additional": "Корпус 1"
+                    },
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-37",
+                        "room": "217",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-21",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Информатика",
+                "subject": "Математическое моделирование",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян М.А.",
-                        "group": "СА-16",
-                        "room": "312",
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-43",
+                        "room": "217",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Информатика",
+                "subject": "Математическое моделирование",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян М.А.",
-                        "group": "СА-16",
-                        "room": "312",
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-45",
+                        "room": "217",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Математика",
+                "subject": "Математическое моделирование",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян М.А.",
-                        "group": "ИКС-14",
-                        "room": "312",
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-44",
+                        "room": "217",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-21",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Математическое моделирование",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-46",
+                        "room": "217",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

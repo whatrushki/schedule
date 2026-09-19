@@ -5,20 +5,37 @@
         "lessons": [
             {
                 "date": "2026-09-21",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова С.Ю.",
+                        "group": "ИКС-32",
+                        "room": "325",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-21",
                 "number": 4,
                 "startTime": "14:10",
                 "endTime": "15:40",
                 "subject": "Инженерная и компьютерная графика",
                 "otUnits": [
                     {
-                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "teacher": "Пустоветова С.Ю.",
                         "group": "ИБТ-23",
-                        "room": "43",
+                        "room": "20",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -28,14 +45,14 @@
                 "subject": "Инженерная и компьютерная графика",
                 "otUnits": [
                     {
-                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "teacher": "Пустоветова С.Ю.",
                         "group": "ИБТ-21",
-                        "room": "43",
+                        "room": "20",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -45,14 +62,14 @@
                 "subject": "Инженерная и компьютерная графика",
                 "otUnits": [
                     {
-                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "teacher": "Пустоветова С.Ю.",
                         "group": "ИБТ-22",
-                        "room": "43",
+                        "room": "20",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

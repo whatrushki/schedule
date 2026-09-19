@@ -66,9 +66,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Сулавко С.Н.",
+                        "group": "ИС-28",
+                        "room": "415",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -95,14 +102,14 @@
                 "subject": "Элементы высшей математики",
                 "otUnits": [
                     {
-                        "teacher": "Небратенко Л.В.",
+                        "teacher": "Небратенко Л.В.,",
                         "group": "ИС-28",
-                        "room": "103",
+                        "room": "305",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -114,12 +121,12 @@
                     {
                         "teacher": "Ревнивцева О.А.",
                         "group": "ИС-28",
-                        "room": "415",
+                        "room": "310",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -340,9 +347,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Ефремова О.П.",
                         "group": "ИС-28",
-                        "room": "111",
+                        "room": "315а",
                         "additional": "Корпус 1"
                     }
                 ],
@@ -357,9 +364,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ефремова О.П.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "ИС-28",
-                        "room": "315а",
+                        "room": "111",
                         "additional": "Корпус 1"
                     }
                 ],

@@ -83,9 +83,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Джалагония М.Ш.",
+                        "group": "ИС-27",
+                        "room": "323",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -97,12 +104,12 @@
                     {
                         "teacher": "Марышева О.В.",
                         "group": "ИС-27",
-                        "room": "320",
+                        "room": "411",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -357,9 +364,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Черноштан О.Н.",
                         "group": "ИС-27",
-                        "room": "104",
+                        "room": "307",
                         "additional": "Корпус 1"
                     }
                 ],
@@ -374,9 +381,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "ИС-27",
-                        "room": "307",
+                        "room": "104",
                         "additional": "Корпус 1"
                     }
                 ],

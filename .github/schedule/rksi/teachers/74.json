@@ -5,20 +5,37 @@
         "lessons": [
             {
                 "date": "2026-09-21",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Мугутдинова Н.Ш",
+                        "group": "ИБТ-42",
+                        "room": "34",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-21",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
                 "subject": "Химия",
                 "otUnits": [
                     {
-                        "teacher": "Мугутдинова Нигар Шамсутдиновна",
+                        "teacher": "Мугутдинова Н.Ш.",
                         "group": "БУ-11",
-                        "room": "13",
+                        "room": "34",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -28,14 +45,14 @@
                 "subject": "Химия",
                 "otUnits": [
                     {
-                        "teacher": "Мугутдинова Нигар Шамсутдиновна",
+                        "teacher": "Мугутдинова Н.Ш.",
                         "group": "ИБТ-12",
-                        "room": "13",
+                        "room": "34",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -45,14 +62,14 @@
                 "subject": "Химия",
                 "otUnits": [
                     {
-                        "teacher": "Мугутдинова Нигар Шамсутдиновна",
+                        "teacher": "Мугутдинова Н.Ш.",
                         "group": "ИБТ-13",
-                        "room": "13",
+                        "room": "34",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

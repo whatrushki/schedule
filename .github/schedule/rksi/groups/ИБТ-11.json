@@ -83,9 +83,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.В.",
+                        "group": "ИБТ-11",
+                        "room": "42",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -97,12 +104,12 @@
                     {
                         "teacher": "Хайлова Л.В.",
                         "group": "ИБТ-11",
-                        "room": "20",
+                        "room": "32",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -126,17 +133,17 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Основы безопасности и защиты Родины",
+                "subject": "Индивидуальный проект",
                 "otUnits": [
                     {
-                        "teacher": "Смирнов В.П.",
+                        "teacher": "Бережная А.В.",
                         "group": "ИБТ-11",
-                        "room": "17",
+                        "room": "20",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

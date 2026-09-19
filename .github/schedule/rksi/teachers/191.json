@@ -5,6 +5,29 @@
         "lessons": [
             {
                 "date": "2026-09-21",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Самохвалова Д.Ю.",
+                        "group": "ИКС-24",
+                        "room": "416",
+                        "additional": "Корпус 1"
+                    },
+                    {
+                        "teacher": "Самохвалова Д.Ю.",
+                        "group": "СА-36",
+                        "room": "416",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-21",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
@@ -13,12 +36,12 @@
                     {
                         "teacher": "Самохвалова Д.Ю.",
                         "group": "РУП-16",
-                        "room": "416",
+                        "room": "216",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -30,12 +53,12 @@
                     {
                         "teacher": "Самохвалова Д.Ю.",
                         "group": "ТЭС-13",
-                        "room": "418",
+                        "room": "216",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     }

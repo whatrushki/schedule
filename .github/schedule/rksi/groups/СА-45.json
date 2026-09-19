@@ -13,29 +13,29 @@
                     {
                         "teacher": "Гузов А.В.",
                         "group": "СА-45",
-                        "room": "с/з3",
+                        "room": "с/з4",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-19",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Эксплуатация объектов сетевой инфраструктуры",
+                "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "____",
+                        "teacher": "Гузов А.В.",
                         "group": "СА-45",
-                        "room": "Вак3",
-                        "additional": "Корпус Вак3"
+                        "room": "с/з3",
+                        "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -49,9 +49,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Заводнов Н.А.",
+                        "group": "СА-45",
+                        "room": "314",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -75,17 +82,17 @@
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Эксплуатация объектов сетевой инфраструктуры",
+                "subject": "Организация администрирования компьютерных систем",
                 "otUnits": [
                     {
-                        "teacher": "____",
+                        "teacher": "Заводнов Н.А.",
                         "group": "СА-45",
-                        "room": "Вак1",
-                        "additional": "Корпус Вак1"
+                        "room": "306",
+                        "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-21",
@@ -97,12 +104,12 @@
                     {
                         "teacher": "Заводнов Н.А.",
                         "group": "СА-45",
-                        "room": "213",
+                        "room": "306",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -118,9 +125,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Новосельцева Е.Ф.",
                         "group": "СА-45",
-                        "room": "104",
+                        "room": "209а",
                         "additional": "Корпус 1"
                     }
                 ],
@@ -135,9 +142,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Новосельцева Е.Ф.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "СА-45",
-                        "room": "209а",
+                        "room": "104",
                         "additional": "Корпус 1"
                     }
                 ],
