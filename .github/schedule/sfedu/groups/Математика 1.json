@@ -5,32 +5,32 @@
         "lessons": [
             {
                 "date": "2026-09-14",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:35",
-                "subject": "Дифференциально-геометрические и топологические методы",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Введение в исследовательские методы в ИИ",
                 "otUnits": [
                     {
-                        "teacher": "Климентов Дмитрий Сергеевич",
+                        "teacher": "Недин Ростислав Дмитриевич",
                         "group": "",
-                        "room": "206",
+                        "room": "302",
                         "additional": ""
                     }
                 ],
-                "type": "LECTURE",
+                "type": "PRACTICE",
                 "state": "COMMON"
             },
             {
                 "date": "2026-09-14",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Дифференциально-геометрические и топологические методы",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Математический анализ 2",
                 "otUnits": [
                     {
-                        "teacher": "Климентов Дмитрий Сергеевич",
+                        "teacher": "Полякова Дарья Александровна",
                         "group": "",
-                        "room": "206",
+                        "room": "304",
                         "additional": ""
                     }
                 ],
@@ -48,77 +48,8 @@
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
-                "subject": "Комплексный анализ",
-                "otUnits": [
-                    {
-                        "teacher": "Полякова Дарья Александровна",
-                        "group": "",
-                        "room": "108",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-15",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Комплексный анализ",
-                "otUnits": [
-                    {
-                        "teacher": "Полякова Татьяна Сергеевна",
-                        "group": "",
-                        "room": "108",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-17",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-17",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Уравнения математической физики",
-                "otUnits": [
-                    {
-                        "teacher": "Карапетянц Алексей Николаевич",
-                        "group": "",
-                        "room": "215",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-17",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
                 "subject": "Иностранный язык",
                 "otUnits": [
-                    {
-                        "teacher": "",
-                        "group": "",
-                        "room": "207",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "",
-                        "group": "",
-                        "room": "208",
-                        "additional": ""
-                    },
                     {
                         "teacher": "",
                         "group": "",
@@ -148,16 +79,232 @@
                 "state": "COMMON"
             },
             {
+                "date": "2026-09-15",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Математический анализ 2",
+                "otUnits": [
+                    {
+                        "teacher": "Абанин Александр Васильевич",
+                        "group": "",
+                        "room": "211",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-15",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Программирование на С++",
+                "otUnits": [
+                    {
+                        "teacher": "Углич Павел Сергеевич",
+                        "group": "",
+                        "room": "318",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-15",
+                "number": 5,
+                "startTime": "15:50",
+                "endTime": "17:25",
+                "subject": "Программирование на С++",
+                "otUnits": [
+                    {
+                        "teacher": "Углич Павел Сергеевич",
+                        "group": "",
+                        "room": "318",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-15",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:15",
+                "subject": "Введение в исследовательские методы в ИИ",
+                "otUnits": [
+                    {
+                        "teacher": "",
+                        "group": "",
+                        "room": "Онлайн",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-16",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Приложения ИИ к задачам прикладной механики",
+                "otUnits": [
+                    {
+                        "teacher": "Явруян Оксана Вячеславовна",
+                        "group": "",
+                        "room": "316",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-16",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "CS261. Программная инженерия",
+                "otUnits": [
+                    {
+                        "teacher": "Мкртичян Вячеслав Виталиевич",
+                        "group": "",
+                        "room": "120",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-16",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "CS291. Теория вероятностей и математическая статистика",
+                "otUnits": [
+                    {
+                        "teacher": "Авсянкин Олег Геннадиевич",
+                        "group": "",
+                        "room": "212",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-16",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Программирование на С++",
+                "otUnits": [
+                    {
+                        "teacher": "Дударев Владимир Владимирович",
+                        "group": "",
+                        "room": "101",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-16",
+                "number": 5,
+                "startTime": "15:50",
+                "endTime": "17:25",
+                "subject": "Программирование на С++",
+                "otUnits": [
+                    {
+                        "teacher": "Дударев Владимир Владимирович",
+                        "group": "",
+                        "room": "101",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-16",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:15",
+                "subject": "Этика и юридические аспекты искуственного интеллекта",
+                "otUnits": [
+                    {
+                        "teacher": "",
+                        "group": "",
+                        "room": "Онлайн",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-17",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-17",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Программирование на С++",
+                "otUnits": [
+                    {
+                        "teacher": "Мнухин Роман Михайлович",
+                        "group": "",
+                        "room": "301",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
                 "date": "2026-09-17",
                 "number": 4,
                 "startTime": "13:45",
                 "endTime": "15:20",
-                "subject": "Проект 3",
+                "subject": "Теория вероятностей",
                 "otUnits": [
                     {
-                        "teacher": "Карапетянц Алексей Николаевич",
+                        "teacher": "Авсянкин Олег Геннадиевич",
                         "group": "",
-                        "room": "103(чит.зал)",
+                        "room": "211",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-17",
+                "number": 5,
+                "startTime": "15:50",
+                "endTime": "17:25",
+                "subject": "Экономика и право",
+                "otUnits": [
+                    {
+                        "teacher": "Ковалева А.В.",
+                        "group": "",
+                        "room": "319",
                         "additional": ""
                     }
                 ],
@@ -172,36 +319,19 @@
         "lessons": [
             {
                 "date": "2026-09-18",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Введение в теорию функций вещественной переменной",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Дифференциальные уравнения",
                 "otUnits": [
                     {
-                        "teacher": "Андреева Татьяна Михайловна",
+                        "teacher": "Авсянкин Олег Геннадиевич",
                         "group": "",
-                        "room": "206",
+                        "room": "211",
                         "additional": ""
                     }
                 ],
                 "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Введение в теорию функций вещественной переменной",
-                "otUnits": [
-                    {
-                        "teacher": "Андреева Татьяна Михайловна",
-                        "group": "",
-                        "room": "206",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
                 "state": "COMMON"
             },
             {
@@ -209,33 +339,33 @@
                 "number": 4,
                 "startTime": "13:45",
                 "endTime": "15:20",
-                "subject": "Функциональный анализ",
+                "subject": "Дифференциальные уравнения",
                 "otUnits": [
                     {
-                        "teacher": "Мелихов Сергей Николаевич",
+                        "teacher": "Авсянкин Олег Геннадиевич",
                         "group": "",
-                        "room": "206",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 5,
-                "startTime": "15:50",
-                "endTime": "17:25",
-                "subject": "Функциональный анализ",
-                "otUnits": [
-                    {
-                        "teacher": "Мелихов Сергей Николаевич",
-                        "group": "",
-                        "room": "206",
+                        "room": "211",
                         "additional": ""
                     }
                 ],
                 "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-18",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:15",
+                "subject": "Экономика и право",
+                "otUnits": [
+                    {
+                        "teacher": "Хомякова Алевтина Владимирован",
+                        "group": "",
+                        "room": "Онлайн",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]
@@ -246,15 +376,49 @@
         "lessons": [
             {
                 "date": "2026-09-19",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "CS261. Программная инженерия",
+                "otUnits": [
+                    {
+                        "teacher": "Мкртичян Вячеслав Виталиевич",
+                        "group": "",
+                        "room": "215",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-19",
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
-                "subject": "МУАМ",
+                "subject": "Этика и юридические аспекты искуственного интеллекта",
                 "otUnits": [
                     {
                         "teacher": "",
                         "group": "",
-                        "room": " ?",
+                        "room": "305",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-19",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Экономика и право",
+                "otUnits": [
+                    {
+                        "teacher": "Прокопенко Золина Владимировна",
+                        "group": "",
+                        "room": "217",
                         "additional": ""
                     }
                 ],
@@ -269,49 +433,15 @@
         "lessons": [
             {
                 "date": "2026-09-21",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:35",
-                "subject": "Дифференциально-геометрические и топологические методы",
-                "otUnits": [
-                    {
-                        "teacher": "Климентов Дмитрий Сергеевич",
-                        "group": "",
-                        "room": "206",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Дифференциально-геометрические и топологические методы",
-                "otUnits": [
-                    {
-                        "teacher": "Климентов Дмитрий Сергеевич",
-                        "group": "",
-                        "room": "206",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
                 "number": 4,
                 "startTime": "13:45",
                 "endTime": "15:20",
-                "subject": "Дифференциально-геометрические и топологические методы",
+                "subject": "Математический анализ 2",
                 "otUnits": [
                     {
-                        "teacher": "Климентов Дмитрий Сергеевич",
+                        "teacher": "Полякова Дарья Александровна",
                         "group": "",
-                        "room": "206",
+                        "room": "304",
                         "additional": ""
                     }
                 ],
@@ -326,97 +456,11 @@
         "lessons": [
             {
                 "date": "2026-09-22",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Комплексный анализ",
-                "otUnits": [
-                    {
-                        "teacher": "Полякова Дарья Александровна",
-                        "group": "",
-                        "room": "108",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Комплексный анализ",
-                "otUnits": [
-                    {
-                        "teacher": "Полякова Татьяна Сергеевна",
-                        "group": "",
-                        "room": "108",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:35",
-                "subject": "Уравнения математической физики",
-                "otUnits": [
-                    {
-                        "teacher": "Карапетянц Алексей Николаевич",
-                        "group": "",
-                        "room": "215",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Уравнения математической физики",
-                "otUnits": [
-                    {
-                        "teacher": "Карапетянц Алексей Николаевич",
-                        "group": "",
-                        "room": "215",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
                 "subject": "Иностранный язык",
                 "otUnits": [
-                    {
-                        "teacher": "",
-                        "group": "",
-                        "room": "207",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "",
-                        "group": "",
-                        "room": "208",
-                        "additional": ""
-                    },
                     {
                         "teacher": "",
                         "group": "",
@@ -444,6 +488,274 @@
                 ],
                 "type": "PRACTICE",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-09-22",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Иностранный язык",
+                "otUnits": [
+                    {
+                        "teacher": "",
+                        "group": "",
+                        "room": "305",
+                        "additional": ""
+                    },
+                    {
+                        "teacher": "",
+                        "group": "",
+                        "room": "306",
+                        "additional": ""
+                    },
+                    {
+                        "teacher": "",
+                        "group": "",
+                        "room": "307",
+                        "additional": ""
+                    },
+                    {
+                        "teacher": "",
+                        "group": "",
+                        "room": "308",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-22",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Математический анализ 2",
+                "otUnits": [
+                    {
+                        "teacher": "Абанин Александр Васильевич",
+                        "group": "",
+                        "room": "211",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-22",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Программирование на С++",
+                "otUnits": [
+                    {
+                        "teacher": "Углич Павел Сергеевич",
+                        "group": "",
+                        "room": "318",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-22",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:15",
+                "subject": "Введение в исследовательские методы в ИИ",
+                "otUnits": [
+                    {
+                        "teacher": "",
+                        "group": "",
+                        "room": "Онлайн",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-23",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Приложения ИИ к задачам прикладной механики",
+                "otUnits": [
+                    {
+                        "teacher": "Явруян Оксана Вячеславовна",
+                        "group": "",
+                        "room": "316",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-23",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "CS261. Программная инженерия",
+                "otUnits": [
+                    {
+                        "teacher": "Мкртичян Вячеслав Виталиевич",
+                        "group": "",
+                        "room": "120",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-23",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Приложения ИИ к задачам прикладной механики",
+                "otUnits": [
+                    {
+                        "teacher": "Явруян Оксана Вячеславовна",
+                        "group": "",
+                        "room": "316",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-23",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "CS261. Программная инженерия",
+                "otUnits": [
+                    {
+                        "teacher": "Мкртичян Вячеслав Виталиевич",
+                        "group": "",
+                        "room": "120",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-23",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "CS291. Теория вероятностей и математическая статистика",
+                "otUnits": [
+                    {
+                        "teacher": "Авсянкин Олег Геннадиевич",
+                        "group": "",
+                        "room": "212",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-23",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Программирование на С++",
+                "otUnits": [
+                    {
+                        "teacher": "Дударев Владимир Владимирович",
+                        "group": "",
+                        "room": "101",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-23",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:15",
+                "subject": "Этика и юридические аспекты искуственного интеллекта",
+                "otUnits": [
+                    {
+                        "teacher": "",
+                        "group": "",
+                        "room": "Онлайн",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-24",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-24",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Программирование на С++",
+                "otUnits": [
+                    {
+                        "teacher": "Мнухин Роман Михайлович",
+                        "group": "",
+                        "room": "301",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-24",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Теория вероятностей",
+                "otUnits": [
+                    {
+                        "teacher": "Авсянкин Олег Геннадиевич",
+                        "group": "",
+                        "room": "211",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-24",
+                "number": 5,
+                "startTime": "15:50",
+                "endTime": "17:25",
+                "subject": "Экономика и право",
+                "otUnits": [
+                    {
+                        "teacher": "Ковалева А.В.",
+                        "group": "",
+                        "room": "319",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
             }
         ]
     },
@@ -453,36 +765,19 @@
         "lessons": [
             {
                 "date": "2026-09-25",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Введение в теорию функций вещественной переменной",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Дифференциальные уравнения",
                 "otUnits": [
                     {
-                        "teacher": "Андреева Татьяна Михайловна",
+                        "teacher": "Авсянкин Олег Геннадиевич",
                         "group": "",
-                        "room": "206",
+                        "room": "211",
                         "additional": ""
                     }
                 ],
                 "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Введение в теорию функций вещественной переменной",
-                "otUnits": [
-                    {
-                        "teacher": "Андреева Татьяна Михайловна",
-                        "group": "",
-                        "room": "206",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
                 "state": "COMMON"
             },
             {
@@ -490,33 +785,33 @@
                 "number": 4,
                 "startTime": "13:45",
                 "endTime": "15:20",
-                "subject": "Функциональный анализ",
+                "subject": "Дифференциальные уравнения",
                 "otUnits": [
                     {
-                        "teacher": "Мелихов Сергей Николаевич",
+                        "teacher": "Авсянкин Олег Геннадиевич",
                         "group": "",
-                        "room": "206",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 5,
-                "startTime": "15:50",
-                "endTime": "17:25",
-                "subject": "Функциональный анализ",
-                "otUnits": [
-                    {
-                        "teacher": "Мелихов Сергей Николаевич",
-                        "group": "",
-                        "room": "206",
+                        "room": "211",
                         "additional": ""
                     }
                 ],
                 "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:15",
+                "subject": "Экономика и право",
+                "otUnits": [
+                    {
+                        "teacher": "Хомякова Алевтина Владимирован",
+                        "group": "",
+                        "room": "Онлайн",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]
@@ -530,12 +825,29 @@
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
-                "subject": "МУАМ",
+                "subject": "Этика и юридические аспекты искуственного интеллекта",
                 "otUnits": [
                     {
                         "teacher": "",
                         "group": "",
-                        "room": " ?",
+                        "room": "305",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-26",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Экономика и право",
+                "otUnits": [
+                    {
+                        "teacher": "Прокопенко Золина Владимировна",
+                        "group": "",
+                        "room": "217",
                         "additional": ""
                     }
                 ],
