@@ -79,6 +79,23 @@
         "lessons": [
             {
                 "date": "2026-09-22",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Стандартизация, сертификация и техническое документоведение",
+                "otUnits": [
+                    {
+                        "teacher": "Романенко Е.Л.",
+                        "group": "СА-24",
+                        "room": "418",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-22",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
@@ -87,12 +104,12 @@
                     {
                         "teacher": "Шульга К.А.",
                         "group": "СА-24",
-                        "room": "216а",
+                        "room": "118",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -104,12 +121,12 @@
                     {
                         "teacher": "Ляшенко П.А.",
                         "group": "СА-24",
-                        "room": "110",
+                        "room": "312",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -126,7 +143,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

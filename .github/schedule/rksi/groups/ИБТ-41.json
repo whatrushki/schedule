@@ -72,6 +72,23 @@
         "lessons": [
             {
                 "date": "2026-09-22",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Криптографическая защита информации",
+                "otUnits": [
+                    {
+                        "teacher": "Шабалта А.В.",
+                        "group": "ИБТ-41",
+                        "room": "44",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-22",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
@@ -80,12 +97,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБТ-41",
-                        "room": "41",
+                        "room": "44",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -119,7 +136,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
@@ -283,9 +300,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Крылова О.В.",
                         "group": "ИБТ-41",
-                        "room": "44",
+                        "room": "34",
                         "additional": "Корпус 2"
                     }
                 ],
@@ -300,9 +317,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крылова О.В.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ИБТ-41",
-                        "room": "34",
+                        "room": "44",
                         "additional": "Корпус 2"
                     }
                 ],

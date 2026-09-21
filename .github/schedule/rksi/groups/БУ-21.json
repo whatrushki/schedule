@@ -62,6 +62,40 @@
         "lessons": [
             {
                 "date": "2026-09-22",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Основы бухгалтерского учета",
+                "otUnits": [
+                    {
+                        "teacher": "Хачадурова Е.В.",
+                        "group": "БУ-21",
+                        "room": "45",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-22",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Основы бухгалтерского учета",
+                "otUnits": [
+                    {
+                        "teacher": "Хачадурова Е.В.",
+                        "group": "БУ-21",
+                        "room": "45",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-22",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -70,12 +104,12 @@
                     {
                         "teacher": "Ерёменко О.А.",
                         "group": "БУ-21",
-                        "room": "32",
+                        "room": "13",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -109,7 +143,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-22",
@@ -126,7 +160,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

@@ -79,6 +79,23 @@
         "lessons": [
             {
                 "date": "2026-09-22",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Растороцкий В.В.",
+                        "group": "ИБТ-21",
+                        "room": "с/з2",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-22",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
@@ -99,17 +116,17 @@
                 "number": 6,
                 "startTime": "16:40",
                 "endTime": "18:10",
-                "subject": "История",
+                "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Иванов Д.Н.",
+                        "teacher": "Савченко А.А.",
                         "group": "ИБТ-21",
-                        "room": "28",
+                        "room": "38",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -126,7 +143,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

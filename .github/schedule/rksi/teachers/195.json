@@ -130,6 +130,23 @@
         "lessons": [
             {
                 "date": "2026-09-22",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Криптографическая защита информации",
+                "otUnits": [
+                    {
+                        "teacher": "Шабалта А.В.",
+                        "group": "ИБТ-41",
+                        "room": "44",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-22",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
@@ -138,12 +155,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБТ-41",
-                        "room": "41",
+                        "room": "44",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -155,12 +172,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБТ-42",
-                        "room": "41",
+                        "room": "44",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -172,12 +189,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБА-31",
-                        "room": "20",
+                        "room": "29",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -189,12 +206,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБА-21",
-                        "room": "20",
+                        "room": "29",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -206,12 +223,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБА-21",
-                        "room": "41",
+                        "room": "29",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -444,7 +461,7 @@
                 "otUnits": [
                     {
                         "teacher": "Шабалта А.В.",
-                        "group": "ИБА-34",
+                        "group": "ИБА-33",
                         "room": "35",
                         "additional": "Корпус 2"
                     }
@@ -461,7 +478,7 @@
                 "otUnits": [
                     {
                         "teacher": "Шабалта А.В.",
-                        "group": "ИБА-33",
+                        "group": "ИБА-34",
                         "room": "35",
                         "additional": "Корпус 2"
                     }
