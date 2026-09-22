@@ -27,16 +27,12 @@ import app.what.foundation.data.settings.PreferenceStorage
 import app.what.foundation.ui.Gap
 import app.what.foundation.ui.bclick
 import app.what.foundation.ui.capplyIf
+import app.what.foundation.ui.theme.BRAND_COLORS
 import app.what.foundation.ui.theme.LocalThemeIsDark
-import com.materialkolor.ktx.DynamicScheme
-import com.materialkolor.toColorScheme
+import app.what.foundation.ui.theme.getBrandColorScheme
 
 fun PreferenceStorage.Value<ULong>.asColorPalette(
-    colors: List<Color> = listOf(
-        Color(0xFFA1FF00), Color(0xFFFF0600), Color(0xFF586BFF),
-        Color(0xFFFF68A0), Color(0xFFDAEDFF), Color(0xFFFFFCF0),
-        Color(0xFFFFECBE), Color(0xFFFFEEE0), Color(0xFF24FFEA)
-    ),
+    colors: List<Color> = BRAND_COLORS,
     sideEffect: (Color) -> Unit
 ) = customSetting { modifier ->
     val selectedColorValue by collect()
@@ -67,8 +63,9 @@ fun PaletteItem(
     selected: Boolean,
     onClick: () -> Unit
 ) {
+    val isDark = LocalThemeIsDark.current
     MaterialTheme(
-        colorScheme = DynamicScheme(color, LocalThemeIsDark.current).toColorScheme(isAmoled = false)
+        colorScheme = getBrandColorScheme(color, isDark)
     ) {
         Box(
             Modifier
@@ -83,7 +80,7 @@ fun PaletteItem(
                     modifier = Modifier
                         .size(52.dp, 24.dp)
                         .clip(RoundedCornerShape(100.dp, 100.dp, 12.dp, 12.dp))
-                        .background(colorScheme.primary)
+                        .background(color)
                 )
 
                 Gap(4)
@@ -93,7 +90,7 @@ fun PaletteItem(
                         modifier = Modifier
                             .size(24.dp)
                             .clip(RoundedCornerShape(12.dp, 4.dp, 4.dp, 100.dp))
-                            .background(colorScheme.secondary)
+                            .background(colorScheme.primary)
                     )
 
                     Gap(4)
@@ -102,7 +99,7 @@ fun PaletteItem(
                         modifier = Modifier
                             .size(24.dp)
                             .clip(RoundedCornerShape(4.dp, 12.dp, 100.dp, 4.dp))
-                            .background(colorScheme.tertiary)
+                            .background(colorScheme.secondary)
                     )
                 }
             }

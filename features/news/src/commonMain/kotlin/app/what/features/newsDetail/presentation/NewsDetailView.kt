@@ -25,6 +25,11 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.LocalIndication
+import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.foundation.indication
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.PressInteraction
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
@@ -40,14 +45,21 @@ import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.LinkAnnotation
+import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
+import app.what.data.remote.utils.fromHtml
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -100,15 +112,14 @@ fun NewsDetailView(
     val sheet = rememberSheetController()
     val shimmer = rememberShimmer(state.newState == RemoteState.Loading)
     val description = state.newDetailInfo?.description?.takeIf { !it.isEmpty() }
-        ?: state.newListInfo.description?.let { buildAnnotatedString { append(it) } }
-    var descriptionIsExpandable by useState(false)
+        ?: state.newListInfo.description?.let { AnnotatedString.Companion.fromHtml(it) }
     
     if (onBack != null) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 12.dp, vertical = 8.dp)
+                .padding(start = 0.dp, end = 12.dp, top = 8.dp, bottom = 8.dp)
         ) {
             IconButton(onClick = onBack) {
                 Icon(
@@ -151,34 +162,44 @@ fun NewsDetailView(
             } else Column(
                 modifier = Modifier.padding(12.dp)
             ) {
+                val tagsList = (state.newDetailInfo?.tags?.takeIf { it.isNotEmpty() } ?: state.newListInfo.tags)
+                    .filter { it.name.isNotBlank() }
+                    .distinctBy { it.name }
+                val timestamp = state.newDetailInfo?.timestamp ?: state.newListInfo.timestamp
+
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    state.newDetailInfo?.tags?.takeIf { it.isNotEmpty() }?.let { tagsList ->
-                        for (tag in tagsList) {
-                            FilterChip(
-                                true,
-                                {},
-                                { Text(tag.name, overflow = TextOverflow.Ellipsis) },
-                                modifier = Modifier.widthIn(max = 180.dp)
-                            )
+                    if (tagsList.isNotEmpty()) {
+                        Row(
+                            modifier = Modifier.weight(1f, fill = false),
+                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            for (tag in tagsList.take(2)) {
+                                FilterChip(
+                                    selected = true,
+                                    onClick = {},
+                                    label = { Text(tag.name, maxLines = 1, overflow = TextOverflow.Ellipsis) },
+                                    modifier = Modifier.widthIn(max = 140.dp)
+                                )
+                            }
                         }
-                        
                         Gap(8)
                     }
-                    
-                    state.newDetailInfo?.timestamp?.let {
-                        Text(
-                            DateTimeUtils.formatDate(it),
-                            color = colorScheme.secondary,
-                            fontSize = 16.sp,
-                            fontWeight = FontWeight.Medium,
-                        )
-                    }
+
+                    Text(
+                        DateTimeUtils.formatDate(timestamp),
+                        color = colorScheme.secondary,
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.Medium,
+                    )
                 }
-                
+
+                Gap(8)
+
                 Text(
                     state.newDetailInfo?.title ?: state.newListInfo.title,
                     color = colorScheme.onSurface,
@@ -188,28 +209,6 @@ fun NewsDetailView(
                 )
                 
                 Gap(4)
-                
-                if (description != null && state.newDetailInfo?.content?.isNotEmpty() == true) {
-                    var descriptionIsExpanded by useState(false)
-                    val style = TextStyle(
-                        color = colorScheme.onSurfaceVariant,
-                        fontSize = 16.sp,
-                        lineHeight = 18.sp,
-                    )
-                    
-                    Text(
-                        description,
-                        style = style,
-                        overflow = TextOverflow.Ellipsis,
-                        maxLines = if (descriptionIsExpanded) Int.MAX_VALUE else 5,
-                        onTextLayout = {
-                            if (it.hasVisualOverflow) descriptionIsExpandable = true
-                        },
-                        modifier = Modifier.bclick(descriptionIsExpandable) {
-                            descriptionIsExpanded = !descriptionIsExpanded
-                        }
-                    )
-                }
                 
                 Row(
                     Modifier
@@ -222,7 +221,7 @@ fun NewsDetailView(
                     Box(
                         contentAlignment = Alignment.Center,
                         modifier = Modifier
-                            .clip(shapes.small)
+                            .clip(shapes.medium)
                             .background(colorScheme.primary)
                             .weight(1f)
                             .bclick { uriHandler.openUri(state.newListInfo.url) }
@@ -243,7 +242,7 @@ fun NewsDetailView(
                         modifier = Modifier
                             .width(48.dp)
                             .fillMaxHeight()
-                            .clip(shapes.small)
+                            .clip(shapes.medium)
                             .background(colorScheme.primary)
                             .bclick {
                                 Analytics.logShare("news", state.newListInfo.url)
@@ -284,6 +283,7 @@ fun NewsDetailView(
 @Composable
 fun NewContentPainter(content: List<NewContent>) {
     val scope = rememberCoroutineScope()
+    val uriHandler = LocalUriHandler.current
     content.forEachIndexed { i, it ->
         when (it) {
             is NewContent.Container -> when (it) {
@@ -405,13 +405,40 @@ fun NewContentPainter(content: List<NewContent>) {
                         modifier = Modifier.padding(horizontal = 24.dp)
                     )
                     
-                    is NewContent.Item.Text -> Text(
-                        it.data,
-                        color = colorScheme.onSurfaceVariant,
-                        fontSize = 16.sp,
-                        lineHeight = 18.sp,
-                        modifier = Modifier.padding(horizontal = 24.dp)
-                    )
+                    is NewContent.Item.Text -> {
+                        var layoutResult by remember { mutableStateOf<TextLayoutResult?>(null) }
+                        Text(
+                            it.data,
+                            color = colorScheme.onSurfaceVariant,
+                            fontSize = 16.sp,
+                            lineHeight = 18.sp,
+                            onTextLayout = { layoutResult = it },
+                            modifier = Modifier
+                                .padding(horizontal = 24.dp)
+                                .pointerInput(it.data) {
+                                    detectTapGestures { offset ->
+                                        val layout = layoutResult ?: return@detectTapGestures
+                                        val position = layout.getOffsetForPosition(offset)
+                                        val link = it.data.getLinkAnnotations(0, it.data.length)
+                                            .firstOrNull { range -> range.start <= position && position < range.end }
+                                            ?.item
+                                        if (link is LinkAnnotation.Url) {
+                                            val rawUrl = link.url.trim()
+                                            val targetUrl = when {
+                                                rawUrl.startsWith("http://") || rawUrl.startsWith("https://") || rawUrl.startsWith("mailto:") || rawUrl.startsWith("tel:") -> rawUrl
+                                                rawUrl.startsWith("//") -> "https:$rawUrl"
+                                                rawUrl.startsWith("www.") || rawUrl.startsWith("vk.com") || rawUrl.startsWith("t.me") -> "https://$rawUrl"
+                                                rawUrl.startsWith("/") -> "https://mmcs.sfedu.ru$rawUrl"
+                                                else -> "https://mmcs.sfedu.ru/$rawUrl"
+                                            }
+                                            try {
+                                                uriHandler.openUri(targetUrl)
+                                            } catch (_: Exception) {}
+                                        }
+                                    }
+                                }
+                        )
+                    }
                     
                     is NewContent.Item.SimpleText -> Text(
                         it.data,

@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.graphics.Color
 import app.what.foundation.ui.theme.WHATTheme
+import app.what.foundation.ui.theme.getBrandColorScheme
 import app.what.schedule.data.local.settings.AppValues
 import app.what.schedule.data.local.settings.ThemeStyle
 import app.what.schedule.data.local.settings.ThemeType
@@ -94,7 +95,7 @@ fun getAppColorScheme(
     }
     return when (themeStyle) {
         ThemeStyle.Monochrome -> if (isDarkTheme) DarkMonochromeScheme else LightMonochromeScheme
-        ThemeStyle.CustomColor -> DynamicScheme(Color(themeColor ?: 0xFF94FF28u), isDarkTheme).toColorScheme(isAmoled = false)
+        ThemeStyle.CustomColor -> getBrandColorScheme(themeColor?.let { Color(it) } ?: Color(0xFF1F2137), isDarkTheme)
         else -> DynamicScheme(Color(0xFF94FF28), isDarkTheme).toColorScheme(isAmoled = false)
     }
 }

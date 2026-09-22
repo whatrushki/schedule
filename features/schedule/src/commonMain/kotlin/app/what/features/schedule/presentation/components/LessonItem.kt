@@ -406,7 +406,7 @@ private fun OtUnitsView(
             AdditionalInfo(
                 color = color,
                 icon = WHATIcons.Building,
-                texts = listOf(it.building.ifEmpty { "_" })
+                texts = listOf(it.building.replace("(?i)корпус\\s*|(?i)корп\\.?\\s*".toRegex(), "").trim().ifEmpty { "_" })
             )
         }
     }
@@ -464,7 +464,7 @@ private fun CommonViewLeftSegment(
 ) = Column(
     modifier = Modifier
         .fillMaxHeight()
-        .width(72.dp),
+        .width(76.dp),
     verticalArrangement = Arrangement.SpaceBetween
 ) {
     Column {
@@ -472,18 +472,18 @@ private fun CommonViewLeftSegment(
         
         Text(
             text = formatTime(startTime),
-            fontSize = 20.sp,
+            fontSize = 24.sp,
             maxLines = 1,
             softWrap = false,
             color = accentColor,
             style = typography.headlineSmall.copy(
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.ExtraBold
             )
         )
         
         Text(
             text = formatTime(endTime),
-            fontSize = 17.sp,
+            fontSize = 20.sp,
             maxLines = 1,
             softWrap = false,
             color = if (state == LessonState.REMOVED) colorScheme.secondary
