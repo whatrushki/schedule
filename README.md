@@ -21,11 +21,11 @@
 
 <div>
 <!-- 4. Витрина (Showcase) -->
-<img src=".github/res/image1.png" width="31%" />
+<img src=".github/res/image1.jpg" width="31%" />
 &nbsp;
-<img src=".github/res/image2.png" width="31%" />
+<img src=".github/res/image2.jpg" width="31%" />
 &nbsp;
-<img src=".github/res/image3.png" width="31%" />
+<img src=".github/res/image3.jpg" width="31%" />
 </div>
 
 <br />
