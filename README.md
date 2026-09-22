@@ -13,7 +13,7 @@
 
 <!-- 2. Информационные чипсы (height="24") -->
 <img src="https://img.shields.io/badge/status-stable-09090b?style=for-the-badge&labelColor=000000" height="24" />
-<img src="https://img.shields.io/badge/version-1.3.9-09090b?style=for-the-badge&labelColor=000000" height="24" />
+<img src="https://img.shields.io/badge/version-1.3.10-09090b?style=for-the-badge&labelColor=000000" height="24" />
 <img src="https://img.shields.io/badge/platform-Android_%7C_Desktop_%7C_Web-09090b?style=for-the-badge&labelColor=000000" height="24" />
 <img src="https://img.shields.io/badge/license-MIT-09090b?style=for-the-badge&labelColor=000000" height="24" />
 
