@@ -302,4 +302,106 @@ class RKSIScheduleClientTest {
         // Verify class can be instantiated and formatImageUrl works
         assertEquals("Собрание амбассадоров", title)
     }
+
+    @Test
+    fun testClassHourChronologicalSorting() {
+        val date = LocalDate(2026, 9, 21)
+        val baseLessons = listOf(
+            LessonDto(
+                date = date,
+                number = 1,
+                startTime = LocalTime(8, 0),
+                endTime = LocalTime(9, 30),
+                subject = "Математика",
+                type = LessonTypeDto.COMMON,
+                otUnits = listOf(OneTimeUnitDto(group = "ИС-21", teacher = "Иванов И.И.", room = "101"))
+            ),
+            LessonDto(
+                date = date,
+                number = 0,
+                startTime = LocalTime(13, 5),
+                endTime = LocalTime(14, 5),
+                subject = "Классный час",
+                type = LessonTypeDto.OTHER,
+                otUnits = emptyList()
+            ),
+            LessonDto(
+                date = date,
+                number = 4,
+                startTime = LocalTime(14, 10),
+                endTime = LocalTime(15, 40),
+                subject = "Физика",
+                type = LessonTypeDto.COMMON,
+                otUnits = listOf(OneTimeUnitDto(group = "ИС-21", teacher = "Петров П.П.", room = "202"))
+            ),
+            LessonDto(
+                date = date,
+                number = 3,
+                startTime = LocalTime(11, 30),
+                endTime = LocalTime(13, 0),
+                subject = "Информатика",
+                type = LessonTypeDto.COMMON,
+                otUnits = listOf(OneTimeUnitDto(group = "ИС-21", teacher = "Сидоров С.С.", room = "303"))
+            )
+        )
+
+        val result = RKSIReplacementsParser.applyReplacements(
+            baseLessons,
+            emptyList(),
+            RKSILessonsSchedule.WITH_CLASS_HOUR
+        )
+
+        assertEquals(4, result.size)
+        // Must be in chronological order by startTime: 08:00 -> 11:30 -> 13:05 (Классный час) -> 14:10
+        assertEquals(1, result[0].number)
+        assertEquals("08:00", result[0].startTime.toString())
+
+        assertEquals(3, result[1].number)
+        assertEquals("11:30", result[1].startTime.toString())
+
+        assertEquals(0, result[2].number)
+        assertEquals("Классный час", result[2].subject)
+        assertEquals("13:05", result[2].startTime.toString())
+
+        assertEquals(4, result[3].number)
+        assertEquals("14:10", result[3].startTime.toString())
+    }
+
+    @Test
+    fun testSubgroupsMerging() {
+        val date = LocalDate(2026, 9, 21)
+        val baseLessons = listOf(
+            LessonDto(
+                date = date,
+                number = 1,
+                startTime = LocalTime(8, 0),
+                endTime = LocalTime(9, 30),
+                subject = "Иностранный язык",
+                type = LessonTypeDto.COMMON,
+                otUnits = listOf(OneTimeUnitDto(group = "ИС-21", teacher = "Иванова И.И.", room = "101"))
+            ),
+            LessonDto(
+                date = date,
+                number = 1,
+                startTime = LocalTime(8, 0),
+                endTime = LocalTime(9, 30),
+                subject = "Иностранный язык",
+                type = LessonTypeDto.COMMON,
+                otUnits = listOf(OneTimeUnitDto(group = "ИС-21", teacher = "Петрова П.П.", room = "102"))
+            )
+        )
+
+        val result = RKSIReplacementsParser.applyReplacements(
+            baseLessons,
+            emptyList(),
+            RKSILessonsSchedule.COMMON
+        )
+
+        assertEquals(1, result.size)
+        val merged = result.first()
+        assertEquals("Иностранный язык", merged.subject)
+        assertEquals(2, merged.otUnits.size)
+        assertEquals("Иванова И.И.", merged.otUnits[0].teacher)
+        assertEquals("Петрова П.П.", merged.otUnits[1].teacher)
+    }
 }

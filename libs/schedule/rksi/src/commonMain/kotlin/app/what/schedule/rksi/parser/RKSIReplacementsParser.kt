@@ -73,7 +73,14 @@ object RKSIReplacementsParser {
             }
         }
 
-        return lessons
+        val mergedLessons = lessons.groupBy { it.date to it.number }
+            .map { (_, groupLessons) ->
+                groupLessons.first().copy(
+                    otUnits = groupLessons.flatMap { it.otUnits }.distinct()
+                )
+            }
+
+        return mergedLessons
     }
 
     private fun normalize(name: String): String = name
@@ -104,12 +111,28 @@ object RKSIReplacementsParser {
         timeSchedule: List<LessonTimeDto>,
         subjectResolver: ((teacher: String, group: String) -> String?)? = null
     ): List<LessonDto> {
-        if (replacements.isEmpty()) return baseLessons
+        val cleanBaseLessons = baseLessons.groupBy { Triple(it.date, it.startTime, it.subject) }
+            .map { (_, groupLessons) ->
+                groupLessons.first().copy(
+                    otUnits = groupLessons.flatMap { it.otUnits }.distinct()
+                )
+            }
+
+        if (replacements.isEmpty()) {
+            return cleanBaseLessons.sortedWith(compareBy({ it.startTime }, { it.number }))
+        }
+
+        val cleanReplacements = replacements.groupBy { it.date to it.number }
+            .map { (_, groupLessons) ->
+                groupLessons.first().copy(
+                    otUnits = groupLessons.flatMap { it.otUnits }.distinct()
+                )
+            }
 
         val minTime = LocalTime(0, 0)
         val unionSchedule = mutableMapOf<Int, Pair<LessonDto?, LessonDto?>>()
-        replacements.forEach { unionSchedule[it.number] = it to null }
-        baseLessons.forEach { unionSchedule[it.number] = unionSchedule[it.number]?.first to it }
+        cleanReplacements.forEach { unionSchedule[it.number] = it to null }
+        cleanBaseLessons.forEach { unionSchedule[it.number] = unionSchedule[it.number]?.first to it }
 
         return unionSchedule.mapNotNull { (_, pair) ->
             val replacement = pair.first
@@ -170,6 +193,6 @@ object RKSIReplacementsParser {
             } else {
                 null
             }
-        }.sortedBy { it.number }
+        }.sortedWith(compareBy({ it.startTime }, { it.number }))
     }
 }

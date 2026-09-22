@@ -121,7 +121,8 @@ class IUBIPScheduleClient(
             DayScheduleDto(
                 date = date,
                 scheduleType = LessonsScheduleTypeDto.COMMON,
-                lessons = lessons.distinctBy { it.number to it.subject }.sortedBy { it.number }
+                lessons = lessons.distinctBy { it.startTime to it.subject }
+                    .sortedWith(compareBy({ it.startTime }, { it.number }))
             )
         }.sortedBy { it.date }
     }

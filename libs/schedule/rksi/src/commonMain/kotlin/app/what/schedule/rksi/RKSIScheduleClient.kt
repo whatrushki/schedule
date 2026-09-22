@@ -18,6 +18,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withTimeoutOrNull
 import kotlinx.datetime.Clock
 import kotlinx.datetime.DateTimeUnit
@@ -329,7 +331,7 @@ class RKSIScheduleClient(
 
         // Если замены подгрузились, накладываем их
         val replacements = replacementsDeferred?.await() ?: emptyList()
-        if (replacements.isNotEmpty()) {
+        val processedDaySchedules = if (replacements.isNotEmpty()) {
             daySchedules.forEach { daySchedule ->
                 RKSITeacherSubjectCache.recordLessons(daySchedule.lessons)
             }
@@ -350,21 +352,113 @@ class RKSIScheduleClient(
                         }
                     )
                     daySchedule.copy(lessons = merged)
-                } else daySchedule
+                } else {
+                    daySchedule.copy(
+                        lessons = daySchedule.lessons.groupBy { Triple(it.date, it.startTime, it.subject) }
+                            .map { (_, groupLessons) ->
+                                groupLessons.first().copy(
+                                    otUnits = groupLessons.flatMap { it.otUnits }.distinct()
+                                )
+                            }
+                            .sortedWith(compareBy({ it.startTime }, { it.number }))
+                    )
+                }
             }
         } else {
-            daySchedules
+            daySchedules.map { daySchedule ->
+                daySchedule.copy(
+                    lessons = daySchedule.lessons.groupBy { Triple(it.date, it.startTime, it.subject) }
+                        .map { (_, groupLessons) ->
+                            groupLessons.first().copy(
+                                otUnits = groupLessons.flatMap { it.otUnits }.distinct()
+                            )
+                        }
+                        .sortedWith(compareBy({ it.startTime }, { it.number }))
+                )
+            }
+        }
+
+        return@coroutineScope processedDaySchedules
+    }
+
+    private data class CachedReplacementSheet(
+        val date: LocalDate,
+        val columns: Int,
+        val sheets: Map<String, List<List<String>>>
+    )
+
+    private var cachedReplacementSheets: List<CachedReplacementSheet>? = null
+    private val replacementSheetsMutex = Mutex()
+
+    private suspend fun getReplacementSheets(): List<CachedReplacementSheet> {
+        cachedReplacementSheets?.let { return it }
+        return replacementSheetsMutex.withLock {
+            cachedReplacementSheets?.let { return it }
+
+            val folderId = resolveDriveFolderId()
+            val rootItems = googleDriveParser.getFolderContent(folderId)
+            val rootFiles = rootItems.files().onEach { it.additionalData["building"] = 1 }
+            val subFolderId = rootItems.folders().firstOrNull()?.id ?: "1bdHCozxsjzy7BVd76sBTTK_ckhZ78wbo"
+            val subItems = googleDriveParser.getFolderContent(subFolderId)
+            val subFiles = subItems.files().onEach { it.additionalData["building"] = 2 }
+            val allFiles = rootFiles + subFiles
+
+            val today = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).date
+            val relevantFiles = allFiles.filter { file ->
+                val parts = file.name.split(".").take(2).mapNotNull { it.toIntOrNull() }
+                if (parts.size == 2) {
+                    val fileDate = LocalDate(today.year, parts[1], parts[0])
+                    file.additionalData["date"] = fileDate
+                    fileDate >= today.minus(1, DateTimeUnit.DAY)
+                } else false
+            }
+
+            val reader = xlsxReader
+            if (reader == null) {
+                emptyList()
+            } else {
+                val loadedSheets = coroutineScope {
+                    relevantFiles.map { file ->
+                        async(Dispatchers.Default) {
+                            val date = file.additionalData["date"] as? LocalDate ?: return@async null
+                            val building = file.additionalData["building"] as? Int ?: 1
+                            val columns = if (building == 1) 2 else 1
+
+                            val cacheKey = "rksi_rep_b${building}_${date}.xlsx"
+                            val cachedBytes = fileCache.get(cacheKey)
+
+                            val bytes = if (cachedBytes != null) {
+                                cachedBytes
+                            } else {
+                                try {
+                                    val downloaded = client.get(file.getDownloadLink()).readRawBytes()
+                                    fileCache.put(cacheKey, downloaded, ttlMillis = 12 * 60 * 60 * 1000L)
+                                    downloaded
+                                } catch (e: Exception) {
+                                    log?.invoke("Ошибка скачивания планшетки $cacheKey: ${e.message}")
+                                    null
+                                }
+                            } ?: return@async null
+
+                            try {
+                                val sheets = reader.readSheets(bytes)
+                                CachedReplacementSheet(date, columns, sheets)
+                            } catch (e: Exception) {
+                                log?.invoke("Ошибка парсинга планшетки $cacheKey: ${e.message}")
+                                null
+                            }
+                        }
+                    }.awaitAll().filterNotNull()
+                }
+                cachedReplacementSheets = loadedSheets
+                loadedSheets
+            }
         }
     }
 
     private suspend fun fetchReplacements(target: String, isGroup: Boolean): List<LessonDto> {
-        val folderId = resolveDriveFolderId()
-        val rootItems = googleDriveParser.getFolderContent(folderId)
-        val rootFiles = rootItems.files().onEach { it.additionalData["building"] = 1 }
-        val subFolderId = rootItems.folders().firstOrNull()?.id ?: "1bdHCozxsjzy7BVd76sBTTK_ckhZ78wbo"
-        val subItems = googleDriveParser.getFolderContent(subFolderId)
-        val subFiles = subItems.files().onEach { it.additionalData["building"] = 2 }
-        val allFiles = rootFiles + subFiles
+        val sheets = getReplacementSheets()
+        if (sheets.isEmpty()) return emptyList()
 
         val cleanTarget = normalizeName(target)
         val predicate = { teacher: String, group: String ->
@@ -378,52 +472,9 @@ class RKSIScheduleClient(
             }
         }
 
-        val today = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).date
-        val relevantFiles = allFiles.filter { file ->
-            val parts = file.name.split(".").take(2).mapNotNull { it.toIntOrNull() }
-            if (parts.size == 2) {
-                val fileDate = LocalDate(today.year, parts[1], parts[0])
-                file.additionalData["date"] = fileDate
-                fileDate >= today.minus(1, DateTimeUnit.DAY)
-            } else false
+        return sheets.flatMap { sheet ->
+            RKSIReplacementsParser.parse(sheet.sheets, sheet.columns, sheet.date, predicate)
         }
-
-        val parsedLists = coroutineScope {
-            relevantFiles.map { file ->
-                async(Dispatchers.Default) {
-                    val date = file.additionalData["date"] as? LocalDate ?: return@async null
-                    val building = file.additionalData["building"] as? Int ?: 1
-                    val columns = if (building == 1) 2 else 1
-
-                    val cacheKey = "rksi_rep_b${building}_${date}.xlsx"
-                    val cachedBytes = fileCache.get(cacheKey)
-
-                    val bytes = if (cachedBytes != null) {
-                        cachedBytes
-                    } else {
-                        try {
-                            val downloaded = client.get(file.getDownloadLink()).readRawBytes()
-                            fileCache.put(cacheKey, downloaded, ttlMillis = 12 * 60 * 60 * 1000L)
-                            downloaded
-                        } catch (e: Exception) {
-                            log?.invoke("Ошибка скачивания планшетки $cacheKey: ${e.message}")
-                            null
-                        }
-                    } ?: return@async null
-
-                    try {
-                        val reader = xlsxReader ?: return@async null
-                        val sheets = reader.readSheets(bytes)
-                        RKSIReplacementsParser.parse(sheets, columns, date, predicate)
-                    } catch (e: Exception) {
-                        log?.invoke("Ошибка парсинга планшетки $cacheKey: ${e.message}")
-                        null
-                    }
-                }
-            }.awaitAll()
-        }
-
-        return parsedLists.filterNotNull().flatten()
     }
 
     private var cachedDriveFolderId: String? = null

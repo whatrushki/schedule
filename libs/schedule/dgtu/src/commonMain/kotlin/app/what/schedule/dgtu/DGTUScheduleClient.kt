@@ -149,7 +149,7 @@ class DGTUScheduleClient(
                 DayScheduleDto(
                     date = day,
                     scheduleType = LessonsScheduleTypeDto.COMMON,
-                    lessons = mergedLessons.sortedBy { it.number }
+                    lessons = mergedLessons.sortedWith(compareBy({ it.startTime }, { it.number }))
                 )
             }.sortedBy { it.date }
 

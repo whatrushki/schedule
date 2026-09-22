@@ -251,7 +251,7 @@ class SFEDUScheduleClient(
                         .map { (_, list) ->
                             list.first().copy(otUnits = list.flatMap { it.otUnits }.distinct())
                         }
-                        .sortedBy { it.number }
+                        .sortedWith(compareBy({ it.startTime }, { it.number }))
 
                     days.add(
                         DayScheduleDto(
