@@ -90,7 +90,7 @@ val dataModule = module {
             config = UpdateConfig(
                 githubOwner = "whatrushki",
                 githubRepo = "schedule",
-                currentVersion = "1.3.9"
+                currentVersion = app.what.foundation.constants.AppConstants.VERSION_NAME
             ),
             onReload = {
                 kotlinx.browser.window.location.reload()

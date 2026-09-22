@@ -153,7 +153,7 @@ fun AboutAppContent(
             
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Text(
-                    text = "WHAT Schedule v${AppConstants.VERSION_NAME}",
+                    text = "schedule v${AppConstants.VERSION_NAME}",
                     style = typography.labelMedium,
                     color = colorScheme.secondary,
                     modifier = Modifier

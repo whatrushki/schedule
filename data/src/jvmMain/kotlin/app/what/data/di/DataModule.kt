@@ -67,7 +67,7 @@ val dataModule = module {
             config = UpdateConfig(
                 githubOwner = "whatrushki",
                 githubRepo = "schedule",
-                currentVersion = "1.3.9"
+                currentVersion = app.what.foundation.constants.AppConstants.VERSION_NAME
             ),
             openUrl = { url ->
                 try {
@@ -85,7 +85,7 @@ val dataModule = module {
     }
     
     single<NewsRepository> {
-        NewsRepositoryImpl(get(), get())
+        NewsRepositoryImpl(get())
     }
     
     single {
