@@ -57,7 +57,7 @@ val dataModule = module {
     singleOf(::FileManager)
     single<FileCache> { AndroidFileCache(androidContext()) }
     single { DGTUAccountClient(get()) }
-    singleOf(::InstitutionManager)
+    single { InstitutionManager(get(), get()) }
     single<app.what.schedule.rksi.parser.XlsxReader> { app.what.schedule.rksi.parser.JvmXlsxReader() }
     
     single<ScheduleRepository> {

@@ -70,21 +70,15 @@ jobs:
 
       - name: Run Schedule Sync CLI
         run: |
-          mkdir -p .github/schedule
-          ./gradlew :tools:schedule-sync:run --args="--target ${{ steps.determine_target.outputs.target }} --out ${GITHUB_WORKSPACE}/.github/schedule"
+          mkdir -p build/schedule_out/schedule
+          ./gradlew :tools:schedule-sync:run --args="--target ${{ steps.determine_target.outputs.target }} --out ${GITHUB_WORKSPACE}/build/schedule_out/schedule"
 
-      - name: Commit & Push changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          mkdir -p .github/schedule
-          git add -A .github/schedule/
-          if git diff --staged --quiet; then
-            echo "No schedule changes to commit."
-          else
-            git commit -m "[CI] Update schedule data ($(date -u '+%Y-%m-%d %H:%M UTC'))"
-            git checkout -- .
-            git clean -fd
-            git pull --rebase --autostash origin master
-            git push origin HEAD:master
-          fi
+      - name: Deploy Schedule to gh-pages Branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/schedule_out
+          publish_branch: gh-pages
+          keep_files: true
+          commit_message: "[CI] Update schedule data ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+

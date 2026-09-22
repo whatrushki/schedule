@@ -38,6 +38,7 @@ class WebScheduleClient(
             val path = window.location.pathname.trimEnd('/')
             list.add("$origin$path/schedule/$institutionId")
         } catch (_: Exception) {}
+        list.add("https://raw.githubusercontent.com/whatrushki/schedule/gh-pages/schedule/$institutionId")
         list.add("https://raw.githubusercontent.com/whatrushki/schedule/master/.github/schedule/$institutionId")
         return list
     }

@@ -57,7 +57,7 @@ val dataModule = module {
     singleOf(::GoogleDriveParser)
     single<FileCache> { app.what.data.cache.JvmFileCache() }
     single { DGTUAccountClient(get()) }
-    singleOf(::InstitutionManager)
+    single { InstitutionManager(get(), get()) }
     singleOf(::AppUtils)
     single<app.what.schedule.rksi.parser.XlsxReader> { app.what.schedule.rksi.parser.JvmXlsxReader() }
     

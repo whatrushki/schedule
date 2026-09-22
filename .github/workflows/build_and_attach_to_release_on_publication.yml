@@ -145,6 +145,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./wasmApp/build/dist/wasmJs/productionExecutable
           publish_branch: gh-pages
+          keep_files: true
 
   build_windows:
     name: Build Windows Desktop Target (MSI & EXE)
