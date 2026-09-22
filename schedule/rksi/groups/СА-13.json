@@ -32,12 +32,6 @@
                         "group": "СА-13",
                         "room": "210",
                         "additional": "Корпус 1"
-                    },
-                    {
-                        "teacher": "ремонт",
-                        "group": "ремонт",
-                        "room": "412",
-                        "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
@@ -48,18 +42,18 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Предмет не указан",
+                "subject": "Иностранный язык",
                 "otUnits": [
+                    {
+                        "teacher": "Новосельцева Е.Ф.",
+                        "group": "СА-13",
+                        "room": "209а",
+                        "additional": "Корпус 1"
+                    },
                     {
                         "teacher": "Лебедева М.В.",
                         "group": "СА-13",
                         "room": "213",
-                        "additional": "Корпус 1"
-                    },
-                    {
-                        "teacher": "Сулавко С.Н.",
-                        "group": "ИС-26",
-                        "room": "415",
                         "additional": "Корпус 1"
                     }
                 ],
@@ -77,17 +71,17 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "История",
+                "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Пильгун И.С.",
+                        "teacher": "Коникова Е.А.",
                         "group": "СА-13",
-                        "room": "410",
+                        "room": "110",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-23",
@@ -99,29 +93,29 @@
                     {
                         "teacher": "Пильгун И.С.",
                         "group": "СА-13",
-                        "room": "410",
+                        "room": "210",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-23",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Основы безопасности и защиты Родины",
+                "subject": "История",
                 "otUnits": [
                     {
-                        "teacher": "Коханова Л.Н.",
+                        "teacher": "Пильгун И.С.",
                         "group": "СА-13",
-                        "room": "318",
+                        "room": "210а",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

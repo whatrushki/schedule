@@ -8,7 +8,7 @@
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Предмет не указан",
+                "subject": "Электротехника",
                 "otUnits": [
                     {
                         "teacher": "Скороходов Г.Ю.",
@@ -25,7 +25,7 @@
                 "number": 6,
                 "startTime": "16:40",
                 "endTime": "18:10",
-                "subject": "Предмет не указан",
+                "subject": "Электротехника",
                 "otUnits": [
                     {
                         "teacher": "Скороходов Г.Ю.",
@@ -42,7 +42,7 @@
                 "number": 7,
                 "startTime": "18:20",
                 "endTime": "19:50",
-                "subject": "Предмет не указан",
+                "subject": "Электротехника",
                 "otUnits": [
                     {
                         "teacher": "Скороходов Г.Ю.",
@@ -62,20 +62,60 @@
         "lessons": [
             {
                 "date": "2026-09-23",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
                 "subject": "Электротехника",
                 "otUnits": [
                     {
-                        "teacher": "Скороходов Геннадий Юрьевич",
-                        "group": "ИБТ-23",
+                        "teacher": "Скороходов Г.Ю.",
+                        "group": "ИБТ-21",
+                        "room": "17",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-23",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Электротехника",
+                "otUnits": [
+                    {
+                        "teacher": "Скороходов Г.Ю.",
+                        "group": "ИБТ-21",
+                        "room": "17",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-23",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Основы электротехники",
+                "otUnits": [
+                    {
+                        "teacher": "Скороходов Г.Ю.",
+                        "group": "ИБА-5",
+                        "room": "36",
+                        "additional": "Корпус 2"
+                    },
+                    {
+                        "teacher": "Скороходов Г.Ю.",
+                        "group": "ИБТ-3",
                         "room": "36",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-23",
@@ -85,14 +125,14 @@
                 "subject": "Электротехника",
                 "otUnits": [
                     {
-                        "teacher": "Скороходов Геннадий Юрьевич",
+                        "teacher": "Скороходов Г.Ю.",
                         "group": "ИБТ-22",
-                        "room": "36",
+                        "room": "29",
                         "additional": "Корпус 2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-23",
@@ -109,7 +149,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-23",
@@ -126,7 +166,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

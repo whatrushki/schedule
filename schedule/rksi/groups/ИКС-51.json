@@ -8,14 +8,8 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Предмет не указан",
+                "subject": "Планирование и организация работы структурного подразделения",
                 "otUnits": [
-                    {
-                        "teacher": "Чепурная Е.Г.",
-                        "group": "СА-16",
-                        "room": "216",
-                        "additional": "Корпус 1"
-                    },
                     {
                         "teacher": "Згонникова Т.Ф.",
                         "group": "ИКС-51",
@@ -64,7 +58,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-23",
@@ -81,7 +75,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-23",
@@ -99,6 +93,40 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-09-23",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Технология монтажа и настройки абонентского оборудования",
+                "otUnits": [
+                    {
+                        "teacher": "Ермолина Л.В.",
+                        "group": "ИКС-51",
+                        "room": "114а",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-23",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Технология монтажа и настройки абонентского оборудования",
+                "otUnits": [
+                    {
+                        "teacher": "Ермолина Л.В.",
+                        "group": "ИКС-51",
+                        "room": "114а",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

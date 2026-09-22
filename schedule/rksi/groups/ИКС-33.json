@@ -45,6 +45,40 @@
         "lessons": [
             {
                 "date": "2026-09-23",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Монтаж и эксплуатация направляющих систем",
+                "otUnits": [
+                    {
+                        "teacher": "Голиченко П.С.",
+                        "group": "ИКС-33",
+                        "room": "118",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-23",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Монтаж и эксплуатация направляющих систем",
+                "otUnits": [
+                    {
+                        "teacher": "Голиченко П.С.",
+                        "group": "ИКС-33",
+                        "room": "118",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-23",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -70,12 +104,12 @@
                     {
                         "teacher": "Гузов А.В.",
                         "group": "ИКС-33",
-                        "room": "с/з2",
+                        "room": "с/з4",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-23",
@@ -92,7 +126,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-23",
@@ -109,7 +143,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

@@ -49,12 +49,6 @@
                         "group": "ИКС-41",
                         "room": "216а",
                         "additional": "Корпус 1"
-                    },
-                    {
-                        "teacher": "Костромина В.А.",
-                        "group": "ИС-28",
-                        "room": "420",
-                        "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
@@ -81,7 +75,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-23",
@@ -93,12 +87,12 @@
                     {
                         "teacher": "Бойнар И.Н.",
                         "group": "ИКС-41",
-                        "room": "303",
+                        "room": "326",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-23",
@@ -110,12 +104,29 @@
                     {
                         "teacher": "Махаева П.А.",
                         "group": "ИКС-41",
-                        "room": "с/з4",
+                        "room": "с/з6",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-23",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Применение программно- аппаратных средств защиты информации в инфокоммуникационных системах и сетях связи",
+                "otUnits": [
+                    {
+                        "teacher": "Бойнар И.Н.",
+                        "group": "ИКС-41",
+                        "room": "401",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

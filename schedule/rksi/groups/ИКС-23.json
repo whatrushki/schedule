@@ -8,14 +8,8 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Предмет не указан",
+                "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
-                    {
-                        "teacher": "Синяговская М.Д.",
-                        "group": "СА-44",
-                        "room": "305",
-                        "additional": "Корпус 1"
-                    },
                     {
                         "teacher": "Щербакова Э.Н.",
                         "group": "ИКС-23",
@@ -31,14 +25,8 @@
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Предмет не указан",
+                "subject": "Инженерная компьютерная графика",
                 "otUnits": [
-                    {
-                        "teacher": "Черевко А.Д.",
-                        "group": "ИС-32",
-                        "room": "122",
-                        "additional": "Корпус 1"
-                    },
                     {
                         "teacher": "Шульга К.А.",
                         "group": "ИКС-23",
@@ -54,14 +42,8 @@
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Предмет не указан",
+                "subject": "Компьютерное моделирование",
                 "otUnits": [
-                    {
-                        "teacher": "ремонт",
-                        "group": "ремонт",
-                        "room": "111",
-                        "additional": "Корпус 1"
-                    },
                     {
                         "teacher": "Шабранская П.Е.",
                         "group": "ИКС-23",
@@ -110,7 +92,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-23",
@@ -122,12 +104,12 @@
                     {
                         "teacher": "Марышева О.В.",
                         "group": "ИКС-23",
-                        "room": "307",
+                        "room": "217",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-23",
@@ -234,26 +216,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Н.А.",
-                        "group": "ИКС-23",
-                        "room": "111",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
                         "teacher": "Черноштан О.Н.",
                         "group": "ИКС-23",
                         "room": "307",
+                        "additional": "Корпус 1"
+                    },
+                    {
+                        "teacher": "Крупицкая Н.А.",
+                        "group": "ИКС-23",
+                        "room": "111",
                         "additional": "Корпус 1"
                     }
                 ],
