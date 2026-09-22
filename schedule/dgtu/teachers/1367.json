@@ -217,7 +217,7 @@
                 "otUnits": [
                     {
                         "teacher": "Швыденко Н. В.",
-                        "group": "ГПО21, ГП21, ГП22",
+                        "group": "ГП21, ГП22, ГПО21, ГП21, ГП22, ГПО21",
                         "room": "419",
                         "additional": "Корпус 1"
                     }
@@ -234,7 +234,7 @@
                 "otUnits": [
                     {
                         "teacher": "Швыденко Н. В.",
-                        "group": "ДСО22, ДСО21",
+                        "group": "ДСО21, ДСО22, ДСО21, ДСО22",
                         "room": "319",
                         "additional": "Корпус 1"
                     }
@@ -274,7 +274,7 @@
                 "otUnits": [
                     {
                         "teacher": "Швыденко Н. В.",
-                        "group": "ДПК23, ДПК22",
+                        "group": "ДПК22, ДПК23, ДПК22, ДПК23",
                         "room": "810",
                         "additional": "Корпус 2"
                     }
@@ -291,7 +291,7 @@
                 "otUnits": [
                     {
                         "teacher": "Швыденко Н. В.",
-                        "group": "ЛПП23, ЛПП24",
+                        "group": "ЛПП23, ЛПП24, ЛПП23, ЛПП24",
                         "room": "801",
                         "additional": "Корпус 2"
                     }
@@ -314,7 +314,7 @@
                 "otUnits": [
                     {
                         "teacher": "Швыденко Н. В.",
-                        "group": "ДПС21, ДПК21",
+                        "group": "ДПК21, ДПС21, ДПК21, ДПС21",
                         "room": "402",
                         "additional": "Корпус 6"
                     }
@@ -428,7 +428,7 @@
                 "otUnits": [
                     {
                         "teacher": "Швыденко Н. В.",
-                        "group": "ИМ25, ИМ23",
+                        "group": "ИМ23, ИМ25",
                         "room": "123",
                         "additional": "Корпус 25"
                     }
@@ -525,7 +525,7 @@
                 "otUnits": [
                     {
                         "teacher": "Швыденко Н. В.",
-                        "group": "ДСО22, ДСО21",
+                        "group": "ДСО21, ДСО22, ДСО21, ДСО22",
                         "room": "319",
                         "additional": "Корпус 1"
                     }
@@ -901,7 +901,7 @@
                 "otUnits": [
                     {
                         "teacher": "Швыденко Н. В.",
-                        "group": "ДСО22, ДСО21",
+                        "group": "ДСО21, ДСО22, ДСО21, ДСО22",
                         "room": "606",
                         "additional": "Корпус 8"
                     }
@@ -1129,13 +1129,47 @@
                 "otUnits": [
                     {
                         "teacher": "Швыденко Н. В.",
-                        "group": "ДСО22, ДСО21",
+                        "group": "ДСО21, ДСО22",
                         "room": "020",
                         "additional": "Корпус 8"
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-09-21",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Менеджмент",
+                "otUnits": [
+                    {
+                        "teacher": "Швыденко Н. В.",
+                        "group": "ИЭ29",
+                        "room": "710",
+                        "additional": "Корпус 25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-21",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Менеджмент",
+                "otUnits": [
+                    {
+                        "teacher": "Швыденко Н. В.",
+                        "group": "ПСОЗЭ21",
+                        "room": "211",
+                        "additional": "Корпус 25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },
@@ -1198,7 +1232,7 @@
                     },
                     {
                         "teacher": "Швыденко Н. В.",
-                        "group": "ДПК23, ДПК22",
+                        "group": "ДПК22, ДПК23",
                         "room": "362",
                         "additional": "Корпус 1"
                     }
@@ -1221,7 +1255,7 @@
                 "otUnits": [
                     {
                         "teacher": "Швыденко Н. В.",
-                        "group": "ИМ25, ИМ23",
+                        "group": "ИМ23, ИМ25",
                         "room": "813",
                         "additional": "Корпус 26"
                     }
@@ -1514,6 +1548,115 @@
                         "teacher": "Швыденко Н. В.",
                         "group": "ИОЗМ41",
                         "room": "309",
+                        "additional": "Корпус 25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-06",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Проектирование систем управления",
+                "otUnits": [
+                    {
+                        "teacher": "Швыденко Н. В.",
+                        "group": "ИМ45",
+                        "room": "502",
+                        "additional": "Корпус 22"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-07",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Проектирование систем управления",
+                "otUnits": [
+                    {
+                        "teacher": "Швыденко Н. В.",
+                        "group": "ИОЗМ41",
+                        "room": "216",
+                        "additional": "Корпус 25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Маркетинг",
+                "otUnits": [
+                    {
+                        "teacher": "Швыденко Н. В.",
+                        "group": "ИМ23, ИМ25",
+                        "room": "813",
+                        "additional": "Корпус 26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-10",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Международный маркетинг",
+                "otUnits": [
+                    {
+                        "teacher": "Швыденко Н. В.",
+                        "group": "ИОЗМ52",
+                        "room": "211",
+                        "additional": "Корпус 25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Международный маркетинг",
+                "otUnits": [
+                    {
+                        "teacher": "Швыденко Н. В.",
+                        "group": "ИОЗМ52",
+                        "room": "211",
                         "additional": "Корпус 25"
                     }
                 ],
