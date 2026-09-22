@@ -14,4 +14,5 @@ sealed interface DgtuEvent {
     object OnGroupClicked : DgtuEvent
     data class OnNewClicked(val id: String) : DgtuEvent
     data class OnEventClicked(val id: String) : DgtuEvent
+    object LogoutClicked : DgtuEvent
 }

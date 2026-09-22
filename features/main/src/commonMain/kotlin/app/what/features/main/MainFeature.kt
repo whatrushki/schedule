@@ -16,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -99,6 +100,21 @@ class MainFeature(
         val navigator = rememberHostNavigator()
         val appValues = rememberAppValues()
         val devFeaturesEnabled by appValues.devPanelEnabled.collect()
+        val dgtuToken by appValues.dgtuToken.collect()
+        val isDgtuAuthorized = controller.getState().hasProfilePage && dgtuToken != null
+
+        val screens = remember(isDgtuAuthorized, controller.getState().hasProfilePage) {
+            buildList {
+                if (!isDgtuAuthorized && app.what.foundation.utils.currentPlatform != app.what.foundation.utils.PlatformType.Wasm) {
+                    add(navItem("Новости", WHATIcons.News, NewsProvider))
+                }
+                add(navItem("Расписание", Icons.Default.DateRange, ScheduleProvider()))
+                add(navItem("Настройки", Icons.Default.Settings, SettingsProvider))
+                if (controller.getState().hasProfilePage) {
+                    add(0, navItem("Профиль", WHATIcons.Person, AccountProvider))
+                }
+            }
+        }
 //        var showBottomNavBar by useState(true)
         
         LaunchedEffect(Unit) {
@@ -124,7 +140,7 @@ class MainFeature(
                     Row(Modifier.fillMaxSize()) {
                         SideNavBar(
                             navigator = navigator,
-                            screens = children,
+                            screens = screens,
                             modifier = Modifier.padding(start = 16.dp, end = 8.dp)
                         ) {
                             if (!devFeaturesEnabled!!) null
@@ -155,7 +171,7 @@ class MainFeature(
                         ) {
                             BottomNavBar(
                                 navigator = navigator,
-                                screens = children,
+                                screens = screens,
                             ) {
                                 if (!devFeaturesEnabled!!) null
                                 else NavAction("Для разработчиков", WHATIcons.FrameBug) {

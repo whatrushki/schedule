@@ -78,7 +78,7 @@ class AppValues(
     )
     
     val themeColor = createValue(
-        "theme_color", Color(0xFF94FF28).value, ULong.serializer(),
+        "theme_color", Color(0xFF1F2137).value, ULong.serializer(),
         "Цвет темы", "Основной цвет оформления приложения"
     )
     

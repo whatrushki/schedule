@@ -63,6 +63,7 @@ class EventDetailItem(
     val categoryName: String,
     val isRegistered: Boolean,
     val allowRegistration: Boolean,
+    val linkOrganizer: String? = null,
 )
 
 data class Notification(

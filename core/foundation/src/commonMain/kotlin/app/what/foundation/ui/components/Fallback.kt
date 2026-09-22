@@ -77,7 +77,7 @@ fun Fallback(
             .height(IntrinsicSize.Min)
             .fillMaxWidth(.9f)
             .clip(fallbackShape)
-            .background(colorScheme.primaryContainer.copy(alpha = .4f))
+            .background(colorScheme.primaryContainer.copy(alpha = .05f))
             .border(
                 1.dp,
                 colorScheme.secondary.copy(alpha = .5f),

@@ -79,15 +79,12 @@ class DgtuController(
             DgtuEvent.OnGroupClicked -> setAction(DgtuAction.OpenSchedule(viewState.studentInfo!!.group))
             DgtuEvent.OnShowAllNewsClicked -> setAction(DgtuAction.OpenNews)
             DgtuEvent.MailsOpened -> {
-                setAction(DgtuAction.OpenMail)
                 loadMails(true)
             }
             DgtuEvent.ZachBookOpened -> {
-                setAction(DgtuAction.OpenZachBook)
                 loadZachBook()
             }
             is DgtuEvent.MailOpened -> {
-                setAction(DgtuAction.OpenMailDetail(viewEvent.threadId, viewEvent.messageId))
                 loadDetailMail(viewEvent.threadId, viewEvent.messageId)
             }
             DgtuEvent.CloseMailDetail -> {
@@ -100,6 +97,7 @@ class DgtuController(
                 val new = viewState.news.firstOrNull { it.id == viewEvent.id } ?: return
                 setAction(OpenNewDetail(new.id, new.url, new.bannerUrl, new.title, new.description))
             }
+            DgtuEvent.LogoutClicked -> logout()
         }
     }
     
@@ -126,7 +124,7 @@ class DgtuController(
     
     private fun loadEventDetail(id: String) {
         val token = appValues.dgtuToken.get() ?: return
-        updateState { copy(eventDetailFetchState = RemoteState.Loading) }
+        updateState { copy(eventDetail = null, eventDetailFetchState = RemoteState.Loading) }
         viewModelScope.launchSafe(
             debug = debug,
             onFailure = {
@@ -159,7 +157,8 @@ class DgtuController(
                     eventInfo.typeName,
                     eventInfo.categoryName,
                     isRegistered,
-                    allowRegister
+                    allowRegister,
+                    eventInfo.linkOrganizer
                 )
             }
             
@@ -167,6 +166,13 @@ class DgtuController(
                 copy(eventDetailFetchState = RemoteState.Success, eventDetail = evetDetail)
             }
         }
+    }
+    
+    private fun logout() {
+        appValues.dgtuToken.set(null)
+        appValues.dgtuStudentId.set(null)
+        updateState { DgtuState() }
+        setAction(DgtuAction.OpenAuth)
     }
     
     private fun loadNews() {

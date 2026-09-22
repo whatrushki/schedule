@@ -30,6 +30,9 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Logout
+import androidx.compose.material.icons.automirrored.filled.OpenInNew
+import androidx.compose.material.icons.filled.Mail
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.outlined.DateRange
@@ -80,6 +83,9 @@ import app.what.schedule.features.insts.dgtu.domain.models.Notification
 import app.what.schedule.features.insts.dgtu.presentation.components.InfoBlock
 import app.what.schedule.ui.components.AsyncImageWithFallback
 import app.what.schedule.ui.theme.icons.WHATIcons
+import app.what.schedule.ui.theme.icons.filled.Features
+import app.what.schedule.ui.theme.icons.filled.Logs
+import app.what.schedule.ui.theme.icons.filled.Room
 import app.what.schedule.ui.theme.icons.filled.Run
 import io.github.alexzhirkevich.qrose.rememberQrCodePainter
 import app.what.foundation.utils.DateTimeUtils
@@ -282,7 +288,23 @@ internal fun DGTUMainScreen(
                                     dialog.open { AccessQrPane(state) }
                                 }
                         ) {
-                            Icons.Default.Share.Show(colorScheme.onPrimary)
+                            WHATIcons.Room.Show(colorScheme.onPrimary, 22)
+                        }
+
+                        Gap(8)
+
+                        Box(
+                            contentAlignment = Alignment.Center,
+                            modifier = Modifier
+                                .width(48.dp)
+                                .fillMaxHeight()
+                                .clip(shapes.small)
+                                .background(colorScheme.error)
+                                .bclick {
+                                    listener(DgtuEvent.LogoutClicked)
+                                }
+                        ) {
+                            Icons.AutoMirrored.Filled.Logout.Show(colorScheme.onError, 22)
                         }
                     }
                     
@@ -292,39 +314,37 @@ internal fun DGTUMainScreen(
             
             Gap(16)
             
-            FlowRow(
+            Row(
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
-                verticalArrangement = Arrangement.spacedBy(12.dp),
-                maxItemsInEachRow = 2,
-                modifier = Modifier.padding(horizontal = 12.dp)
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 12.dp)
             ) {
                 InfoBlock(
                     accentColor = colorScheme.primary,
-                    icon = WHATIcons.Run,
+                    icon = WHATIcons.Features,
                     title = "Зачетка",
                     description = "Оценки и сессии",
                     modifier = Modifier.weight(1f)
                 ) {
                     listener(DgtuEvent.ZachBookOpened)
+                    dialog.open(true) {
+                        DgtuZachBookPage(state, listener, onBack = { dialog.close() })
+                    }
                 }
                 
                 InfoBlock(
                     accentColor = colorScheme.primary,
-                    icon = WHATIcons.Run,
+                    icon = Icons.Default.Mail,
                     title = "Почта",
                     description = "stud.edu.ru",
                     modifier = Modifier.weight(1f)
                 ) {
                     listener(DgtuEvent.MailsOpened)
+                    dialog.open(true) {
+                        DgtuMailsPage(state, listener, onBack = { dialog.close() })
+                    }
                 }
-                
-                InfoBlock(
-                    accentColor = colorScheme.primary,
-                    icon = WHATIcons.Run,
-                    title = "Справки",
-                    description = "Заказ документов",
-                    modifier = Modifier.weight(1f)
-                ) { }
             }
             
             Column {
@@ -671,70 +691,63 @@ fun EventListItemView(data: EventListItem, index: Int, onClick: () -> Unit) =
         val accentColor = EventColors.getOrElse(index % EventColors.size) { EventColors.first() }
         
         Row(
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(12.dp, 8.dp)
+                .padding(12.dp, 8.dp),
+            verticalAlignment = Alignment.CenterVertically
         ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
+            Box(
+                contentAlignment = Alignment.Center,
                 modifier = Modifier
-                    .weight(1f)
+                    .clip(shapes.medium)
+                    .background(accentColor.copy(alpha = .2f))
             ) {
-                Box(
-                    contentAlignment = Alignment.Center,
-                    modifier = Modifier
-                        .clip(shapes.medium)
-                        .background(accentColor.copy(alpha = .2f))
+                Column(
+                    modifier = Modifier.padding(12.dp, 8.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Column(
-                        modifier = Modifier.padding(12.dp, 8.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally
-                    ) {
-                        Text(
-                            DateTimeUtils.RUSSIAN_MONTHS_NOMINATIVE.getOrElse(data.date.monthNumber - 1) { "" }.take(3).uppercase(),
-                            color = accentColor,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 14.sp,
-                            lineHeight = 16.sp
-                        )
-                        
-                        Text(
-                            data.date.dayOfMonth.toString().padStart(2, '0'),
-                            color = accentColor,
-                            fontWeight = FontWeight.ExtraBold,
-                            fontSize = 24.sp,
-                            lineHeight = 24.sp
-                        )
-                    }
-                }
-                
-                Gap(16)
-                
-                Column {
                     Text(
-                        data.title,
-                        fontSize = 16.sp,
-                        color = colorScheme.onSurface,
-                        fontWeight = FontWeight.Medium,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
+                        DateTimeUtils.RUSSIAN_MONTHS_NOMINATIVE.getOrElse(data.date.monthNumber - 1) { "" }.take(3).uppercase(),
+                        color = accentColor,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp,
+                        lineHeight = 16.sp
                     )
                     
                     Text(
-                        "${data.date.hour.toString().padStart(2, '0')}:${data.date.minute.toString().padStart(2, '0')} • ${data.place}",
-                        fontSize = 14.sp,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                        color = colorScheme.onSurfaceVariant
+                        data.date.dayOfMonth.toString().padStart(2, '0'),
+                        color = accentColor,
+                        fontWeight = FontWeight.ExtraBold,
+                        fontSize = 24.sp,
+                        lineHeight = 24.sp
                     )
                 }
-                
-                Gap(12)
             }
             
-            WHATIcons.Run.Show(colorScheme.onSurfaceVariant, 14)
+            Gap(16)
+            
+            Column(Modifier.weight(1f)) {
+                Text(
+                    data.title,
+                    fontSize = 16.sp,
+                    color = colorScheme.onSurface,
+                    fontWeight = FontWeight.Medium,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+                
+                val timeText = "${data.date.hour.toString().padStart(2, '0')}:${data.date.minute.toString().padStart(2, '0')}"
+                val placeText = data.place?.trim()?.takeIf { it.isNotBlank() && !it.equals("null", ignoreCase = true) }
+                val subtitleText = if (placeText != null) "$timeText • $placeText" else timeText
+
+                Text(
+                    subtitleText,
+                    fontSize = 14.sp,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    color = colorScheme.onSurfaceVariant
+                )
+            }
         }
     }
 
@@ -802,24 +815,54 @@ fun EventDetailContent(
     state: State<DgtuState>,
     modifier: Modifier = Modifier,
     onOpenClicked: () -> Unit = {},
-) = Column(
-    verticalArrangement = Arrangement.SpaceBetween,
-    modifier = modifier
-        .fillMaxSize()
-        .padding(horizontal = 24.dp)
-        .verticalScroll(rememberScrollState())
 ) {
+    val uriHandler = LocalUriHandler.current
     val event = state.value.eventDetail
-    if (event == null) Unit else {
-        Column {
+
+    if (event == null) {
+        Box(
+            modifier = modifier.fillMaxSize().padding(40.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            CircularProgressIndicator(color = colorScheme.primary)
+        }
+        return
+    }
+
+    val rawUrl = event.linkOrganizer?.takeIf { it.isNotBlank() } ?: "https://lk.donstu.ru"
+    val targetUrl = if (rawUrl.startsWith("http://") || rawUrl.startsWith("https://")) rawUrl else "https://$rawUrl"
+
+    val handleOpen = {
+        if (onOpenClicked != {}) {
+            onOpenClicked()
+        } else {
+            try {
+                uriHandler.openUri(targetUrl)
+            } catch (_: Exception) {}
+        }
+    }
+
+    Box(
+        modifier = modifier.fillMaxSize()
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 24.dp)
+                .verticalScroll(rememberScrollState())
+                .padding(bottom = 76.dp)
+        ) {
             Gap(24)
             
-            FilterChip(
-                true, {},
-                label = { Text(event.categoryName) }
-            )
-            
-            Gap(20)
+            if (event.categoryName.isNotBlank()) {
+                FilterChip(
+                    selected = true,
+                    onClick = {},
+                    label = { Text(event.categoryName) }
+                )
+                
+                Gap(16)
+            }
             
             Text(
                 text = event.name,
@@ -859,7 +902,6 @@ fun EventDetailContent(
                 Gap(20)
             }
             
-            
             Column {
                 Text(
                     text = "Описание мероприятия",
@@ -895,25 +937,29 @@ fun EventDetailContent(
             }
         }
         
-        Gap(12)
-        
-        Button(
-            onClick = onOpenClicked,
+        Box(
             modifier = Modifier
+                .align(Alignment.BottomCenter)
                 .fillMaxWidth()
-                .height(56.dp),
-            shape = shapes.extraLarge
+                .background(colorScheme.surface)
+                .padding(horizontal = 24.dp, vertical = 12.dp)
         ) {
-            Icon(
-                Icons.Outlined.DateRange,
-                contentDescription = null,
-                modifier = Modifier.size(20.dp)
-            )
-            Spacer(modifier = Modifier.width(12.dp))
-            Text("Открыть")
+            Button(
+                onClick = handleOpen,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(50.dp),
+                shape = shapes.medium
+            ) {
+                Icon(
+                    Icons.AutoMirrored.Filled.OpenInNew,
+                    contentDescription = null,
+                    modifier = Modifier.size(20.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text("Открыть", fontWeight = FontWeight.SemiBold)
+            }
         }
-        
-        Gap(12)
     }
 }
 

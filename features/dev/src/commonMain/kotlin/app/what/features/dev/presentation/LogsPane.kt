@@ -4,14 +4,20 @@ import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.shapes
+import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -202,128 +208,146 @@ fun LogsPane(
 @Composable
 fun LogItem(logEntry: LogEntry) {
     val (expanded, setExpanded) = useState(false)
-    val isDarkTheme = isSystemInDarkTheme()
+    val levelColor = logEntry.level.color
+    val isError = logEntry.level == LogLevel.ERROR || logEntry.level == LogLevel.CRITICAL
+    val hasThrowable = logEntry.throwable != null
     
-    val (backgroundColor, textColor, borderColor) = remember(logEntry.level, isDarkTheme) {
-        when (logEntry.level) {
-            LogLevel.DEBUG -> if (isDarkTheme) Triple(
-                Color(0xFF1B3B1B).copy(alpha = 0.6f),  // Темный зеленый
-                Color(0xFF81C784),                     // Светло-зеленый
-                Color(0xFF2E7D32).copy(alpha = 0.4f)   // Темно-зеленый
-            ) else Triple(
-                Color(0xFFE8F5E8).copy(alpha = 0.8f),  // Светлый зеленый
-                Color(0xFF2E7D32),                     // Темно-зеленый
-                Color(0xFFA5D6A7).copy(alpha = 0.5f)   // Пастельно-зеленый
-            )
-            
-            LogLevel.INFO -> if (isDarkTheme) Triple(
-                Color(0xFF1A237E).copy(alpha = 0.4f),  // Темный синий
-                Color(0xFF90CAF9),                     // Светло-синий
-                Color(0xFF1976D2).copy(alpha = 0.4f)   // Темно-синий
-            ) else Triple(
-                Color(0xFFE3F2FD).copy(alpha = 0.8f),  // Светлый голубой
-                Color(0xFF1976D2),                     // Темно-синий
-                Color(0xFF90CAF9).copy(alpha = 0.5f)   // Пастельно-голубой
-            )
-            
-            LogLevel.WARNING -> if (isDarkTheme) Triple(
-                Color(0xFF4E342E).copy(alpha = 0.4f),  // Темный оранжевый
-                Color(0xFFFFB74D),                     // Светло-оранжевый
-                Color(0xFFF57C00).copy(alpha = 0.4f)   // Темно-оранжевый
-            ) else Triple(
-                Color(0xFFFFF3E0).copy(alpha = 0.8f),  // Светлый оранжевый
-                Color(0xFFF57C00),                     // Темно-оранжевый
-                Color(0xFFFFCC80).copy(alpha = 0.5f)   // Пастельно-оранжевый
-            )
-            
-            LogLevel.ERROR -> if (isDarkTheme) Triple(
-                Color(0xFF4A1F1F).copy(alpha = 0.4f),  // Темный красный
-                Color(0xFFEF9A9A),                     // Светло-красный
-                Color(0xFFD32F2F).copy(alpha = 0.4f)   // Темно-красный
-            ) else Triple(
-                Color(0xFFFFEBEE).copy(alpha = 0.8f),  // Светлый розовый
-                Color(0xFFD32F2F),                     // Темно-красный
-                Color(0xFFFFCDD2).copy(alpha = 0.5f)   // Пастельно-розовый
-            )
-            
-            LogLevel.CRITICAL -> if (isDarkTheme) Triple(
-                Color(0xFF4A235A).copy(alpha = 0.4f),  // Темный фиолетовый
-                Color(0xFFCE93D8),                     // Светло-фиолетовый
-                Color(0xFF7B1FA2).copy(alpha = 0.4f)   // Темно-фиолетовый
-            ) else Triple(
-                Color(0xFFF3E5F5).copy(alpha = 0.8f),  // Светлый фиолетовый
-                Color(0xFF7B1FA2),                     // Темно-фиолетовый
-                Color(0xFFE1BEE7).copy(alpha = 0.5f)   // Пастельно-фиолетовый
-            )
-        }
+    val timeFormatted = remember(logEntry.timestamp) {
+        val dt = Instant.fromEpochMilliseconds(logEntry.timestamp).toLocalDateTime(TimeZone.currentSystemDefault())
+        val ms = (logEntry.timestamp % 1000).toString().padStart(3, '0')
+        "${dt.hour.toString().padStart(2, '0')}:${dt.minute.toString().padStart(2, '0')}:${dt.second.toString().padStart(2, '0')}.$ms"
     }
-    
     
     Column(
         modifier = Modifier
             .animateContentSize()
             .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 6.dp)
+            .padding(horizontal = 12.dp, vertical = 2.dp)
             .clip(shapes.small)
             .bclick { setExpanded(!expanded) }
-            .background(backgroundColor.copy(alpha = .8f), shapes.small)
-            .border(1.dp, borderColor.copy(alpha = .6f), shapes.small)
-            .padding(12.dp)
+            .background(
+                if (isError) colorScheme.errorContainer.copy(alpha = 0.22f)
+                else colorScheme.surfaceContainerLow,
+                shapes.small
+            )
+            .border(
+                1.dp,
+                if (isError) colorScheme.error.copy(alpha = 0.35f)
+                else colorScheme.outlineVariant.copy(alpha = 0.35f),
+                shapes.small
+            )
+            .padding(horizontal = 10.dp, vertical = 6.dp)
     ) {
         Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Эмодзи уровня лога
-            Text(
-                text = "[ ${logEntry.level.emoji} ]",
-                color = textColor,
-                fontSize = 14.sp
-            )
+            Row(
+                modifier = Modifier.weight(1f, fill = false),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Box(
+                    modifier = Modifier
+                        .width(68.dp)
+                        .clip(RoundedCornerShape(4.dp))
+                        .background(levelColor.copy(alpha = 0.15f))
+                        .padding(horizontal = 6.dp, vertical = 2.dp),
+                    contentAlignment = Alignment.CenterStart
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Start
+                    ) {
+                        Text(
+                            text = logEntry.level.emoji,
+                            fontSize = 10.sp
+                        )
+                        Gap(3)
+                        Text(
+                            text = logEntry.level.name,
+                            color = levelColor,
+                            style = typography.labelSmall,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 9.sp
+                        )
+                    }
+                }
+                
+                Gap(8)
+                
+                Text(
+                    text = logEntry.tag,
+                    style = typography.labelSmall,
+                    fontWeight = FontWeight.SemiBold,
+                    color = colorScheme.onSurface,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+                
+                if (hasThrowable) {
+                    Gap(4)
+                    Icon(
+                        imageVector = WHATIcons.Warn,
+                        contentDescription = "Contains error",
+                        tint = colorScheme.error,
+                        modifier = Modifier.size(12.dp)
+                    )
+                }
+            }
             
-            Gap(8)
-            
-            // Время
-            val dt = Instant.fromEpochMilliseconds(logEntry.timestamp).toLocalDateTime(TimeZone.currentSystemDefault())
-            val ms = (logEntry.timestamp % 1000).toString().padStart(3, '0')
             Text(
-                text = "[${dt.hour.toString().padStart(2, '0')}:${dt.minute.toString().padStart(2, '0')}:${dt.second.toString().padStart(2, '0')}.$ms]",
-                color = textColor.copy(alpha = 0.7f),
+                text = timeFormatted,
+                color = colorScheme.onSurfaceVariant.copy(alpha = 0.75f),
+                style = typography.labelSmall,
                 fontSize = 10.sp,
                 fontFamily = FontFamily.Monospace,
-            )
-            
-            Gap(8)
-            
-            // Тег
-            Text(
-                text = logEntry.tag,
-                color = textColor,
-                fontSize = 11.sp,
-                fontWeight = FontWeight.Medium,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis
+                modifier = Modifier.padding(start = 8.dp)
             )
         }
         
-        // Сообщение
+        Gap(4)
+        
         Text(
-            text = logEntry.message + when (logEntry.level) {
-                LogLevel.ERROR, LogLevel.CRITICAL -> "\n" + (logEntry.throwable?.message ?: "") + "\n" + (logEntry.throwable?.stackTraceToString() ?: "")
-                else -> ""
-            },
-            color = textColor,
+            text = logEntry.message,
+            style = typography.bodySmall,
+            color = colorScheme.onSurface,
             fontSize = 12.sp,
+            lineHeight = 16.sp,
             maxLines = if (expanded) Int.MAX_VALUE else 2,
             overflow = TextOverflow.Ellipsis
         )
         
-        if (logEntry.throwable != null) {
-            Icon(
-                imageVector = WHATIcons.Warn,
-                contentDescription = "Contains error",
-                tint = colorScheme.error,
-                modifier = Modifier.size(14.dp)
-            )
+        if (expanded && hasThrowable) {
+            Gap(6)
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(shapes.extraSmall)
+                    .background(colorScheme.surfaceContainerHighest.copy(alpha = 0.6f))
+                    .border(0.5.dp, colorScheme.outlineVariant.copy(alpha = 0.4f), shapes.extraSmall)
+                    .padding(8.dp)
+            ) {
+                logEntry.throwable?.message?.let { exMsg ->
+                    if (exMsg.isNotBlank()) {
+                        Text(
+                            text = exMsg,
+                            color = colorScheme.error,
+                            style = typography.labelSmall,
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 11.sp
+                        )
+                        Gap(4)
+                    }
+                }
+                Text(
+                    text = logEntry.throwable?.stackTraceToString() ?: "",
+                    color = colorScheme.onSurfaceVariant,
+                    fontFamily = FontFamily.Monospace,
+                    fontSize = 10.sp,
+                    lineHeight = 13.sp
+                )
+            }
         }
     }
 }

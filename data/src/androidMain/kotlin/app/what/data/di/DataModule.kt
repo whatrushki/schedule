@@ -65,7 +65,7 @@ val dataModule = module {
     }
     
     single<NewsRepository> {
-        NewsRepositoryImpl(get(), get())
+        NewsRepositoryImpl(get())
     }
     
     single {

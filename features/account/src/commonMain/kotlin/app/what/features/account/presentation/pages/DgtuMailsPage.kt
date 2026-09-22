@@ -25,6 +25,10 @@ import app.what.foundation.ui.AppPullToRefresh
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.State
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -44,72 +48,106 @@ import app.what.schedule.ui.components.Fallback
 import app.what.foundation.utils.DateTimeUtils
 import kotlinx.datetime.LocalDateTime
 
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.runtime.rememberCoroutineScope
+import kotlinx.coroutines.launch
+import app.what.foundation.ui.PlatformBackHandler
+
 @Composable
 fun DgtuMailsPage(
     state: State<DgtuState>,
     listener: Listener<DgtuEvent>,
     onBack: (() -> Unit)? = null
-) = Column(modifier = Modifier.fillMaxSize()) {
-    if (onBack != null) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .statusBarsPadding()
-                .padding(horizontal = 4.dp, vertical = 8.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            IconButton(onClick = onBack) {
-                Icon(
-                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = "Назад",
-                    tint = colorScheme.onSurface
-                )
-            }
-            Gap(8)
-            Text(
-                "Почта",
-                style = MaterialTheme.typography.titleLarge,
-                fontWeight = FontWeight.Bold,
-                color = colorScheme.onSurface
-            )
+) {
+    val pagerState = rememberPagerState(pageCount = { 2 })
+    val coroutineScope = rememberCoroutineScope()
+    var selectedMail by remember { mutableStateOf<Pair<Int, Int>?>(null) }
+
+    PlatformBackHandler(enabled = pagerState.currentPage == 1) {
+        coroutineScope.launch {
+            pagerState.animateScrollToPage(0)
         }
-        HorizontalDivider(color = colorScheme.outlineVariant.copy(alpha = 0.5f))
     }
 
-    AppPullToRefresh(
-        isRefreshing = state.value.mailsFetchState == RemoteState.Loading,
-        onRefresh = { listener(DgtuEvent.MailsOpened) },
-        modifier = Modifier.fillMaxSize()
-    ) {
-        val lazyListState = rememberLazyListState()
-
-        LaunchedEffect(lazyListState.canScrollForward) {
-            if (!lazyListState.canScrollForward && state.value.mailsFetchState != RemoteState.Loading)
-                listener(DgtuEvent.OnMailsListEndingScrolled)
+    LaunchedEffect(pagerState.currentPage) {
+        if (pagerState.currentPage == 0 && selectedMail != null) {
+            selectedMail = null
+            listener(DgtuEvent.CloseMailDetail)
         }
+    }
 
-        LazyColumn(
-            modifier = Modifier.fillMaxSize(),
-            state = lazyListState
-        ) {
-            when (state.value.mailsFetchState) {
-                is RemoteState.Error -> item {
-                    Fallback(
-                        "Произошла непредвиденная ошибка",
-                        Modifier.fillMaxSize(),
-                        "Попробовать снова" to { listener(DgtuEvent.MailsOpened) }
-                    )
+    HorizontalPager(
+        state = pagerState,
+        userScrollEnabled = pagerState.currentPage == 1,
+        modifier = Modifier.fillMaxSize()
+    ) { page ->
+        when (page) {
+            0 -> {
+                Column(modifier = Modifier.fillMaxSize()) {
+                    AppPullToRefresh(
+                        isRefreshing = state.value.mailsFetchState == RemoteState.Loading,
+                        onRefresh = { listener(DgtuEvent.MailsOpened) },
+                        modifier = Modifier.fillMaxSize()
+                    ) {
+                        val lazyListState = rememberLazyListState()
+
+                        LaunchedEffect(lazyListState.canScrollForward) {
+                            if (!lazyListState.canScrollForward && state.value.mailsFetchState != RemoteState.Loading)
+                                listener(DgtuEvent.OnMailsListEndingScrolled)
+                        }
+
+                        LazyColumn(
+                            modifier = Modifier.fillMaxSize(),
+                            state = lazyListState
+                        ) {
+                            when (state.value.mailsFetchState) {
+                                is RemoteState.Error -> item {
+                                    Fallback(
+                                        "Произошла непредвиденная ошибка",
+                                        Modifier.fillMaxSize(),
+                                        "Попробовать снова" to { listener(DgtuEvent.MailsOpened) }
+                                    )
+                                }
+
+                                RemoteState.Success, RemoteState.Loading -> items(state.value.mails, key = { it.id }) { mail ->
+                                    MailListItem(
+                                        data = mail,
+                                        modifier = Modifier.animateItem(),
+                                        onClick = {
+                                            selectedMail = mail.id to mail.messageId
+                                            listener(DgtuEvent.MailOpened(mail.id, mail.messageId))
+                                            coroutineScope.launch {
+                                                pagerState.animateScrollToPage(1)
+                                            }
+                                        }
+                                    )
+                                }
+
+                                else -> Unit
+                            }
+                        }
+                    }
                 }
+            }
 
-                RemoteState.Success, RemoteState.Loading -> items(state.value.mails, key = { it.id }) { mail ->
-                    MailListItem(
-                        data = mail,
-                        modifier = Modifier.animateItem(),
-                        onClick = { listener(DgtuEvent.MailOpened(mail.id, mail.messageId)) }
+            1 -> {
+                val currentSelected = selectedMail
+                if (currentSelected != null) {
+                    DgtuMailDetailPage(
+                        threadId = currentSelected.first,
+                        messageId = currentSelected.second,
+                        state = state,
+                        listener = listener,
+                        onBack = {
+                            coroutineScope.launch {
+                                pagerState.animateScrollToPage(0)
+                            }
+                        }
                     )
+                } else {
+                    Box(modifier = Modifier.fillMaxSize())
                 }
-
-                else -> Unit
             }
         }
     }
