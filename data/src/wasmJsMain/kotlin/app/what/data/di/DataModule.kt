@@ -90,7 +90,7 @@ val dataModule = module {
             config = UpdateConfig(
                 githubOwner = "whatrushki",
                 githubRepo = "schedule",
-                currentVersion = "1.3.8"
+                currentVersion = "1.3.9"
             ),
             onReload = {
                 kotlinx.browser.window.location.reload()
