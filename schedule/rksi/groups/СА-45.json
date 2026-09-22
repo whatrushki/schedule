@@ -1,189 +1,8 @@
 [
     {
-        "date": "2026-09-18",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-18",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Эксплуатация объектов сетевой инфраструктуры",
-                "otUnits": [
-                    {
-                        "teacher": "____",
-                        "group": "СА-45",
-                        "room": "Вак1",
-                        "additional": "Корпус Вак1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "REMOVED"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Организация администрирования компьютерных систем",
-                "otUnits": [
-                    {
-                        "teacher": "Заводнов Н.А.",
-                        "group": "СА-45",
-                        "room": "314",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Организация администрирования компьютерных систем",
-                "otUnits": [
-                    {
-                        "teacher": "Заводнов Н.А.",
-                        "group": "СА-45",
-                        "room": "314",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-19",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Гузов А.В.",
-                        "group": "СА-45",
-                        "room": "с/з4",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Гузов А.В.",
-                        "group": "СА-45",
-                        "room": "с/з3",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-21",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Экономика отрасли",
-                "otUnits": [
-                    {
-                        "teacher": "Григорьева Л.Ф.",
-                        "group": "СА-45",
-                        "room": "408",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Эксплуатация объектов сетевой инфраструктуры",
-                "otUnits": [
-                    {
-                        "teacher": "____",
-                        "group": "СА-45",
-                        "room": "Вак1",
-                        "additional": "Корпус Вак1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Организация администрирования компьютерных систем",
-                "otUnits": [
-                    {
-                        "teacher": "Заводнов Н.А.",
-                        "group": "СА-45",
-                        "room": "213",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-22",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Прыгунова Т.А.",
-                        "group": "СА-45",
-                        "room": "104",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-09-22",
                 "number": 1,
@@ -228,12 +47,18 @@
                     {
                         "teacher": "Бороненкова С.Е.",
                         "group": "СА-45",
-                        "room": "420",
+                        "room": "314",
+                        "additional": "Корпус 1"
+                    },
+                    {
+                        "teacher": "Трифанкова А.А.",
+                        "group": "ИС-44",
+                        "room": "Общ1-1",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -245,12 +70,12 @@
                     {
                         "teacher": "Бороненкова С.Е.",
                         "group": "СА-45",
-                        "room": "420",
+                        "room": "314",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

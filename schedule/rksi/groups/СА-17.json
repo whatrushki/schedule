@@ -1,186 +1,5 @@
 [
     {
-        "date": "2026-09-18",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-18",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Биология",
-                "otUnits": [
-                    {
-                        "teacher": "Хайлова Л.В.",
-                        "group": "СА-17",
-                        "room": "305",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Химия",
-                "otUnits": [
-                    {
-                        "teacher": "Кравченко И.Ю.",
-                        "group": "СА-17",
-                        "room": "411",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "REMOVED"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "Ефремова О.П.",
-                        "group": "СА-17",
-                        "room": "Библиотека",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-19",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Математика",
-                "otUnits": [
-                    {
-                        "teacher": "Джалагония М.Ш.",
-                        "group": "СА-17",
-                        "room": "323",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Основы безопасности и защиты Родины",
-                "otUnits": [
-                    {
-                        "teacher": "Фищук А.И.",
-                        "group": "СА-17",
-                        "room": "318",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Основы безопасности и защиты Родины",
-                "otUnits": [
-                    {
-                        "teacher": "Фищук А.И.",
-                        "group": "СА-17",
-                        "room": "318",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-21",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Математика",
-                "otUnits": [
-                    {
-                        "teacher": "Джалагония М.Ш.",
-                        "group": "СА-17",
-                        "room": "323",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Русский язык",
-                "otUnits": [
-                    {
-                        "teacher": "Нефедова Е.М.",
-                        "group": "СА-17",
-                        "room": "401",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Литература",
-                "otUnits": [
-                    {
-                        "teacher": "Нефедова Е.М.",
-                        "group": "СА-17",
-                        "room": "401",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-22",
         "scheduleType": "COMMON",
         "lessons": [
@@ -206,17 +25,23 @@
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Литература",
+                "subject": "Предмет не указан",
                 "otUnits": [
+                    {
+                        "teacher": "ремонт",
+                        "group": "ремонт",
+                        "room": "104",
+                        "additional": "Корпус 1"
+                    },
                     {
                         "teacher": "Нефедова Е.М.",
                         "group": "СА-17",
-                        "room": "326",
+                        "room": "322",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -228,12 +53,18 @@
                     {
                         "teacher": "Нохрина Ю.В.",
                         "group": "СА-17",
-                        "room": "324",
+                        "room": "312",
+                        "additional": "Корпус 1"
+                    },
+                    {
+                        "teacher": "Згонников Е.Ф.",
+                        "group": "СА-33",
+                        "room": "Общ1-4",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

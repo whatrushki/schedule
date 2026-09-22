@@ -1,169 +1,5 @@
 [
     {
-        "date": "2026-09-18",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-18",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Стандартизация, сертификация и техническое документоведение",
-                "otUnits": [
-                    {
-                        "teacher": "Романенко Е.Л.",
-                        "group": "СА-22",
-                        "room": "418",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Основы финансовой грамотности",
-                "otUnits": [
-                    {
-                        "teacher": "Каверзнева Е.Ю.",
-                        "group": "СА-22",
-                        "room": "310",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 7,
-                "startTime": "18:20",
-                "endTime": "19:50",
-                "subject": "Основы электротехники",
-                "otUnits": [
-                    {
-                        "teacher": "Пустоветова С.Ю.",
-                        "group": "СА-22",
-                        "room": "325",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-19",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "История России",
-                "otUnits": [
-                    {
-                        "teacher": "Иваненков П.П.",
-                        "group": "СА-22",
-                        "room": "216",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Корбан С.Н.",
-                        "group": "СА-22",
-                        "room": "с/з2",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-21",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Элементы высшей математики",
-                "otUnits": [
-                    {
-                        "teacher": "Путинцева Ю.М.",
-                        "group": "СА-22",
-                        "room": "305",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
-                "subject": "Информационные технологии",
-                "otUnits": [
-                    {
-                        "teacher": "Трищук С.А.",
-                        "group": "СА-22",
-                        "room": "213",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 6,
-                "startTime": "17:40",
-                "endTime": "19:10",
-                "subject": "Дискретная математика с элементами математической логики",
-                "otUnits": [
-                    {
-                        "teacher": "Небратенко Л.В.",
-                        "group": "СА-22",
-                        "room": "103",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-22",
         "scheduleType": "COMMON",
         "lessons": [
@@ -189,51 +25,46 @@
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Элементы высшей математики",
+                "subject": "Предмет не указан",
                 "otUnits": [
+                    {
+                        "teacher": "Зинько Е.С.",
+                        "group": "ИС-37",
+                        "room": "121",
+                        "additional": "Корпус 1"
+                    },
                     {
                         "teacher": "Путинцева Ю.М.",
                         "group": "СА-22",
-                        "room": "114",
+                        "room": "410",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Чубарова А.Б.",
-                        "group": "СА-22",
-                        "room": "106",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Иностранный язык в профессиональной деятельности",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
                         "teacher": "Лебедева М.В.",
                         "group": "СА-22",
-                        "room": "320",
+                        "room": "213",
+                        "additional": "Корпус 1"
+                    },
+                    {
+                        "teacher": "Болховитина О.И.",
+                        "group": "СА-26",
+                        "room": "416",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",

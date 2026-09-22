@@ -1,169 +1,5 @@
 [
     {
-        "date": "2026-09-18",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-18",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Корбан С.Н.",
-                        "group": "ИС-29",
-                        "room": "с/з2",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ефремова О.П.",
-                        "group": "ИС-29",
-                        "room": "Библиотека",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-19",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Операционные системы и среды",
-                "otUnits": [
-                    {
-                        "teacher": "Ляшенко П.А.",
-                        "group": "ИС-29",
-                        "room": "110",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Элементы высшей математики",
-                "otUnits": [
-                    {
-                        "teacher": "Муравьева М.П.",
-                        "group": "ИС-29",
-                        "room": "324",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Элементы высшей математики",
-                "otUnits": [
-                    {
-                        "teacher": "Муравьева М.П.",
-                        "group": "ИС-29",
-                        "room": "324",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-21",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Экономика отрасли",
-                "otUnits": [
-                    {
-                        "teacher": "Григорьева Л.Ф.",
-                        "group": "ИС-29",
-                        "room": "408",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
-                "subject": "Психология общения",
-                "otUnits": [
-                    {
-                        "teacher": "Золотовская М.Ю.",
-                        "group": "ИС-29",
-                        "room": "319",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 6,
-                "startTime": "17:40",
-                "endTime": "19:10",
-                "subject": "Операционные системы и среды",
-                "otUnits": [
-                    {
-                        "teacher": "Ляшенко П.А.",
-                        "group": "ИС-29",
-                        "room": "420",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-22",
         "scheduleType": "COMMON",
         "lessons": [
@@ -194,12 +30,18 @@
                     {
                         "teacher": "Муравьева М.П.",
                         "group": "ИС-29",
-                        "room": "213",
+                        "room": "121",
+                        "additional": "Корпус 1"
+                    },
+                    {
+                        "teacher": "Григорьева Л.Ф.",
+                        "group": "СА-42",
+                        "room": "408",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

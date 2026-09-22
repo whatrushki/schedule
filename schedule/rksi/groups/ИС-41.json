@@ -1,169 +1,5 @@
 [
     {
-        "date": "2026-09-18",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-18",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Информационная безопасность",
-                "otUnits": [
-                    {
-                        "teacher": "Бойнар И.Н.",
-                        "group": "ИС-41",
-                        "room": "326",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Web-программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Трифанкова А.А.",
-                        "group": "ИС-41",
-                        "room": "Общ1-1",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Математическое моделирование",
-                "otUnits": [
-                    {
-                        "teacher": "Арутюнян А.Э.",
-                        "group": "ИС-41",
-                        "room": "110",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Web-программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Трифанкова А.А.",
-                        "group": "ИС-41",
-                        "room": "Общ1-1",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-19",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Инструментальные средства разработки программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "Ухов П.Э.",
-                        "group": "ИС-41",
-                        "room": "420",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Инструментальные средства разработки программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "Ухов П.Э.",
-                        "group": "ИС-41",
-                        "room": "420",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-21",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Бизнес-аналитика",
-                "otUnits": [
-                    {
-                        "teacher": "Сулавко С.Н.",
-                        "group": "ИС-41",
-                        "room": "415",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Технология разработки и защиты баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "Кротенко Е.М.",
-                        "group": "ИС-41",
-                        "room": "220",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-22",
         "scheduleType": "COMMON",
         "lessons": [
@@ -206,17 +42,23 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "ФИЗКУЛЬТУРА",
+                "subject": "Предмет не указан",
                 "otUnits": [
+                    {
+                        "teacher": "Савчук И.С.",
+                        "group": "СА-42",
+                        "room": "303",
+                        "additional": "Корпус 1"
+                    },
                     {
                         "teacher": "Махаева П.А.",
                         "group": "ИС-41",
-                        "room": "с/з3",
+                        "room": "с/з2",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -228,29 +70,18 @@
                     {
                         "teacher": "Чубарова А.Б.",
                         "group": "ИС-41",
-                        "room": "106",
+                        "room": "209а",
                         "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
+                    },
                     {
-                        "teacher": "Прыгунова Т.А.",
-                        "group": "ИС-41",
-                        "room": "104",
+                        "teacher": "ремонт",
+                        "group": "ремонт",
+                        "room": "412",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

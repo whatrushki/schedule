@@ -1,208 +1,33 @@
 [
     {
-        "date": "2026-09-18",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-18",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Операционные системы и среды",
-                "otUnits": [
-                    {
-                        "teacher": "Ляшенко П.А.",
-                        "group": "ИС-28",
-                        "room": "406",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Психология общения",
-                "otUnits": [
-                    {
-                        "teacher": "Золотовская М.Ю.",
-                        "group": "ИС-28",
-                        "room": "319",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Крупицкая Н.А.",
-                        "group": "ИС-28",
-                        "room": "307",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 7,
-                "startTime": "18:20",
-                "endTime": "19:50",
-                "subject": "Численные методы",
-                "otUnits": [
-                    {
-                        "teacher": "Арутюнян А.Э.",
-                        "group": "ИС-28",
-                        "room": "114",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-19",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Элементы высшей математики",
-                "otUnits": [
-                    {
-                        "teacher": "Небратенко Л.В.",
-                        "group": "ИС-28",
-                        "room": "307",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Численные методы",
-                "otUnits": [
-                    {
-                        "teacher": "Арутюнян А.Э.",
-                        "group": "ИС-28",
-                        "room": "114",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Корбан С.Н.",
-                        "group": "ИС-28",
-                        "room": "с/з2",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-21",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Основы кибернетики и робототехники",
-                "otUnits": [
-                    {
-                        "teacher": "Сулавко С.Н.",
-                        "group": "ИС-28",
-                        "room": "122",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
-                "subject": "Элементы высшей математики",
-                "otUnits": [
-                    {
-                        "teacher": "Небратенко Л.В.",
-                        "group": "ИС-28",
-                        "room": "103",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 6,
-                "startTime": "17:40",
-                "endTime": "19:10",
-                "subject": "Экономика отрасли",
-                "otUnits": [
-                    {
-                        "teacher": "Ревнивцева О.А.",
-                        "group": "ИС-28",
-                        "room": "415",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-22",
         "scheduleType": "COMMON",
         "lessons": [
             {
                 "date": "2026-09-22",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Згонникова Т.Ф.",
+                        "group": "ИКС-41",
+                        "room": "216а",
+                        "additional": "Корпус 1"
+                    },
+                    {
+                        "teacher": "Костромина В.А.",
+                        "group": "ИС-28",
+                        "room": "420",
+                        "additional": "Корпус 1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-22",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -211,29 +36,35 @@
                     {
                         "teacher": "Небратенко Л.В.",
                         "group": "ИС-28",
-                        "room": "216",
+                        "room": "316",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Операционные системы и среды",
+                "subject": "Предмет не указан",
                 "otUnits": [
+                    {
+                        "teacher": "Файзуллин А.О.",
+                        "group": "СА-37",
+                        "room": "210а",
+                        "additional": "Корпус 1"
+                    },
                     {
                         "teacher": "Ляшенко П.А.",
                         "group": "ИС-28",
-                        "room": "110",
+                        "room": "414",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -250,7 +81,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
@@ -414,9 +245,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ефремова О.П.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "ИС-28",
-                        "room": "315а",
+                        "room": "111",
                         "additional": "Корпус 1"
                     }
                 ],
@@ -431,9 +262,9 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Ефремова О.П.",
                         "group": "ИС-28",
-                        "room": "111",
+                        "room": "315а",
                         "additional": "Корпус 1"
                     }
                 ],

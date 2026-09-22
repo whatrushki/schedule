@@ -1,186 +1,5 @@
 [
     {
-        "date": "2026-09-18",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-18",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Основы безопасности и защиты Родины",
-                "otUnits": [
-                    {
-                        "teacher": "Коханова Л.Н.",
-                        "group": "СА-11",
-                        "room": "316",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "REMOVED"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "География",
-                "otUnits": [
-                    {
-                        "teacher": "Иваненков П.П.",
-                        "group": "СА-11",
-                        "room": "318",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Биология",
-                "otUnits": [
-                    {
-                        "teacher": "Хайлова Л.В.",
-                        "group": "СА-11",
-                        "room": "305",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-19",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Информатика",
-                "otUnits": [
-                    {
-                        "teacher": "Пундикова Л.С.",
-                        "group": "СА-11",
-                        "room": "314",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Информатика",
-                "otUnits": [
-                    {
-                        "teacher": "Пундикова Л.С.",
-                        "group": "СА-11",
-                        "room": "314",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "История",
-                "otUnits": [
-                    {
-                        "teacher": "Иваненков П.П.",
-                        "group": "СА-11",
-                        "room": "216",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-21",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Химия",
-                "otUnits": [
-                    {
-                        "teacher": "Троилина В.С.",
-                        "group": "СА-11",
-                        "room": "103",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Махаева П.А.",
-                        "group": "СА-11",
-                        "room": "с/з1",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Математика",
-                "otUnits": [
-                    {
-                        "teacher": "Путинцева Ю.М.",
-                        "group": "СА-11",
-                        "room": "305",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-22",
         "scheduleType": "COMMON",
         "lessons": [
@@ -194,12 +13,18 @@
                     {
                         "teacher": "Рожченко Т.В.",
                         "group": "СА-11",
-                        "room": "412",
+                        "room": "114",
+                        "additional": "Корпус 1"
+                    },
+                    {
+                        "teacher": "Грицай О.П.",
+                        "group": "РУП-12",
+                        "room": "404",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -211,12 +36,12 @@
                     {
                         "teacher": "Нохрина Ю.В.",
                         "group": "СА-11",
-                        "room": "324",
+                        "room": "312",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -228,12 +53,18 @@
                     {
                         "teacher": "Рожченко Т.В.",
                         "group": "СА-11",
-                        "room": "412",
+                        "room": "114",
+                        "additional": "Корпус 1"
+                    },
+                    {
+                        "teacher": "Бойнар И.Н.",
+                        "group": "ИКС-42",
+                        "room": "326",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -323,9 +154,9 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Ужегова Е.А.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "СА-11",
-                        "room": "307",
+                        "room": "104",
                         "additional": "Корпус 1"
                     }
                 ],
@@ -340,9 +171,9 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Ужегова Е.А.",
                         "group": "СА-11",
-                        "room": "104",
+                        "room": "307",
                         "additional": "Корпус 1"
                     }
                 ],

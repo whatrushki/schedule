@@ -1,203 +1,5 @@
 [
     {
-        "date": "2026-09-18",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-18",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Инженерная компьютерная графика",
-                "otUnits": [
-                    {
-                        "teacher": "Шульга К.А.",
-                        "group": "ИКС-24",
-                        "room": "210а",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Компьютерное моделирование",
-                "otUnits": [
-                    {
-                        "teacher": "Тодорова А.В.",
-                        "group": "ИКС-24",
-                        "room": "118",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Математические методы решения типовых прикладных задач",
-                "otUnits": [
-                    {
-                        "teacher": "Арутюнян М.А.",
-                        "group": "ИКС-24",
-                        "room": "306",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Теория электрических цепей",
-                "otUnits": [
-                    {
-                        "teacher": "Иванов В.С.",
-                        "group": "ИКС-24",
-                        "room": "324",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-19",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Пятибратов Д.В.",
-                        "group": "ИКС-24",
-                        "room": "210",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Пятибратов Д.В.",
-                        "group": "ИКС-24",
-                        "room": "210",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-21",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Компьютерное моделирование",
-                "otUnits": [
-                    {
-                        "teacher": "Тодорова А.В.",
-                        "group": "ИКС-24",
-                        "room": "110",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Компьютерное моделирование",
-                "otUnits": [
-                    {
-                        "teacher": "Тодорова А.В.",
-                        "group": "ИКС-24",
-                        "room": "110",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Теория электрических цепей",
-                "otUnits": [
-                    {
-                        "teacher": "Иванов В.С.",
-                        "group": "ИКС-24",
-                        "room": "324",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
-                "subject": "Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Пятибратов Д.В.",
-                        "group": "ИКС-24",
-                        "room": "114",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-22",
         "scheduleType": "COMMON",
         "lessons": [
@@ -206,17 +8,23 @@
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Инженерная компьютерная графика",
+                "subject": "Предмет не указан",
                 "otUnits": [
+                    {
+                        "teacher": "Чубарова А.Б.",
+                        "group": "СА-22",
+                        "room": "209а",
+                        "additional": "Корпус 1"
+                    },
                     {
                         "teacher": "Шульга К.А.",
                         "group": "ИКС-24",
-                        "room": "212",
+                        "room": "411",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -228,12 +36,12 @@
                     {
                         "teacher": "Пятибратов Д.В.",
                         "group": "ИКС-24",
-                        "room": "103",
+                        "room": "318",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

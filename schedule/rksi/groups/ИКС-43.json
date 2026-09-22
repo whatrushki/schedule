@@ -1,32 +1,21 @@
 [
     {
-        "date": "2026-09-18",
+        "date": "2026-09-22",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-18",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Планирование и организация работы структурного подразделения",
-                "otUnits": [
-                    {
-                        "teacher": "Згонникова Т.Ф.",
-                        "group": "ИКС-43",
-                        "room": "122",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-18",
+                "date": "2026-09-22",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Применение программно- аппаратных средств защиты информации в инфокоммуникационных системах и сетях связи",
+                "subject": "Предмет не указан",
                 "otUnits": [
+                    {
+                        "teacher": "ремонт",
+                        "group": "ремонт",
+                        "room": "111",
+                        "additional": "Корпус 1"
+                    },
                     {
                         "teacher": "Бойнар И.Н.",
                         "group": "ИКС-43",
@@ -36,130 +25,6 @@
                 ],
                 "type": "COMMON",
                 "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Технология монтажа и настройки абонентского оборудования",
-                "otUnits": [
-                    {
-                        "teacher": "Шульга К.А.",
-                        "group": "ИКС-43",
-                        "room": "210а",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-21",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Монтаж и обслуживание оптических систем передачи транспортных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Ермолина Л.В.",
-                        "group": "ИКС-43",
-                        "room": "114а",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Технология монтажа и настройки абонентского оборудования",
-                "otUnits": [
-                    {
-                        "teacher": "Шульга К.А.",
-                        "group": "ИКС-43",
-                        "room": "216а",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Технология монтажа и настройки абонентского оборудования",
-                "otUnits": [
-                    {
-                        "teacher": "Шульга К.А.",
-                        "group": "ИКС-43",
-                        "room": "216а",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
-                "subject": "Технология монтажа и настройки абонентского оборудования",
-                "otUnits": [
-                    {
-                        "teacher": "Шульга К.А.",
-                        "group": "ИКС-43",
-                        "room": "216а",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Применение программно- аппаратных средств защиты информации в инфокоммуникационных системах и сетях связи",
-                "otUnits": [
-                    {
-                        "teacher": "Бойнар И.Н.",
-                        "group": "ИКС-43",
-                        "room": "303",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             },
             {
                 "date": "2026-09-22",
@@ -183,17 +48,23 @@
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Применение программно- аппаратных средств защиты информации в инфокоммуникационных системах и сетях связи",
+                "subject": "Предмет не указан",
                 "otUnits": [
+                    {
+                        "teacher": "Шабранская П.Е.",
+                        "group": "ИКС-22",
+                        "room": "210",
+                        "additional": "Корпус 1"
+                    },
                     {
                         "teacher": "Бойнар И.Н.",
                         "group": "ИКС-43",
-                        "room": "303",
+                        "room": "414",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-22",
@@ -205,12 +76,18 @@
                     {
                         "teacher": "Згонникова Т.Ф.",
                         "group": "ИКС-43",
-                        "room": "404",
+                        "room": "216а",
+                        "additional": "Корпус 1"
+                    },
+                    {
+                        "teacher": "Малая М.А.",
+                        "group": "ИС-25",
+                        "room": "422",
                         "additional": "Корпус 1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

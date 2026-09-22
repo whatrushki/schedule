@@ -1,32 +1,55 @@
 [
     {
-        "date": "2026-09-18",
+        "date": "2026-09-22",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-18",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Бухгалтерские программы",
+                "date": "2026-09-22",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
-                        "teacher": "Шумина О.О.",
+                        "teacher": "Леонова И.Ю.",
                         "group": "БУ-31",
-                        "room": "17",
+                        "room": "41",
                         "additional": "Корпус 2"
                     }
                 ],
-                "type": "COMMON",
-                "state": "COMMON"
+                "type": "OTHER",
+                "state": "ADDED"
             },
             {
-                "date": "2026-09-18",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "ФИЗКУЛЬТУРА",
+                "date": "2026-09-22",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Предмет не указан",
                 "otUnits": [
+                    {
+                        "teacher": "Леонова И.Ю.",
+                        "group": "БУ-31",
+                        "room": "41",
+                        "additional": "Корпус 2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-22",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Беспалова Н.В.",
+                        "group": "ИБА-42",
+                        "room": "с/з1",
+                        "additional": "Корпус 2"
+                    },
                     {
                         "teacher": "Беспалова Н.В.",
                         "group": "БУ-31",
@@ -34,173 +57,9 @@
                         "additional": "Корпус 2"
                     }
                 ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-19",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Бизнес планирование",
-                "otUnits": [
-                    {
-                        "teacher": "Леонова И.Ю.",
-                        "group": "БУ-31",
-                        "room": "41",
-                        "additional": "Корпус 2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Бизнес планирование",
-                "otUnits": [
-                    {
-                        "teacher": "Леонова И.Ю.",
-                        "group": "БУ-31",
-                        "room": "41",
-                        "additional": "Корпус 2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Бизнес планирование",
-                "otUnits": [
-                    {
-                        "teacher": "Леонова И.Ю.",
-                        "group": "БУ-31",
-                        "room": "41",
-                        "additional": "Корпус 2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Бизнес планирование",
-                "otUnits": [
-                    {
-                        "teacher": "Леонова И.Ю.",
-                        "group": "БУ-31",
-                        "room": "41",
-                        "additional": "Корпус 2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-21",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
                 "type": "OTHER",
-                "state": "COMMON"
+                "state": "ADDED"
             },
-            {
-                "date": "2026-09-21",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Практические основы бухгалтерского учета источников формирования активов, выполнение работ по инвентаризации активов организации",
-                "otUnits": [
-                    {
-                        "teacher": "Хачадурова Е.В.",
-                        "group": "БУ-31",
-                        "room": "45",
-                        "additional": "Корпус 2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Бухгалтерская технология проведения и оформления инвентаризации",
-                "otUnits": [
-                    {
-                        "teacher": "Хачадурова Е.В.",
-                        "group": "БУ-31",
-                        "room": "45",
-                        "additional": "Корпус 2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Практические основы бухгалтерского учета источников формирования активов, выполнение работ по инвентаризации активов организации",
-                "otUnits": [
-                    {
-                        "teacher": "Хачадурова Е.В.",
-                        "group": "БУ-31",
-                        "room": "45",
-                        "additional": "Корпус 2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Технология составления бухгалтерской отчетности",
-                "otUnits": [
-                    {
-                        "teacher": "Хачадурова Е.В.",
-                        "group": "БУ-31",
-                        "room": "45",
-                        "additional": "Корпус 2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
             {
                 "date": "2026-09-22",
                 "number": 4,
@@ -216,7 +75,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-22",
@@ -233,7 +92,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-22",
@@ -250,7 +109,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
