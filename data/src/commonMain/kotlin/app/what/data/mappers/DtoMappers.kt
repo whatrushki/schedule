@@ -17,7 +17,7 @@ fun OneTimeUnitDto.toDomain(): OneTimeUnit = OneTimeUnit(
     group = Group(name = group, id = group),
     teacher = Teacher(name = teacher, id = teacher),
     auditory = room,
-    building = additional
+    building = additional.replace("(?i)корпус\\s*|(?i)корп\\.?\\s*".toRegex(), "").trim()
 )
 
 fun LessonTypeDto.toDomain(): LessonType = when (this) {
@@ -73,7 +73,7 @@ fun NewListItemDto.toDomain(): NewListItem = NewListItem(
     title = title,
     description = description,
     timestamp = date,
-    tags = emptyList()
+    tags = tags.map { NewTag(it, it) }
 )
 
 fun NewDetailDto.toDomain(): NewItem {
@@ -110,7 +110,7 @@ fun NewDetailDto.toDomain(): NewItem {
         bannerUrl = bannerUrl ?: images.firstOrNull(),
         title = title,
         description = domainDescription,
-        tags = emptyList(),
+        tags = tags.map { NewTag(it, it) },
         timestamp = date,
         content = domainContent
     )

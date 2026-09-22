@@ -8,7 +8,8 @@ data class NewListItemDto(
     val description: String,
     val date: LocalDate,
     val imageUrl: String? = null,
-    val sourceUrl: String? = null
+    val sourceUrl: String? = null,
+    val tags: List<String> = emptyList()
 )
 
 data class AuthorInfoDto(
@@ -41,5 +42,6 @@ data class NewDetailDto(
     val bannerUrl: String? = null,
     val images: List<String> = emptyList(),
     val sourceUrl: String? = null,
-    val contentBlocks: List<NewContentBlockDto> = emptyList()
+    val contentBlocks: List<NewContentBlockDto> = emptyList(),
+    val tags: List<String> = emptyList()
 )

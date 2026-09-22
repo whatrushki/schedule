@@ -5,7 +5,9 @@ import app.what.schedule.core.models.*
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.forms.submitForm
+import io.ktor.client.request.header
 import io.ktor.client.statement.bodyAsText
+import io.ktor.http.HttpHeaders
 import io.ktor.http.parameters
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
@@ -48,7 +50,11 @@ class IUBIPScheduleClient(
                 formParameters = parameters {
                     append("do", "groups")
                 }
-            )
+            ) {
+                header(HttpHeaders.Cookie, "beget=begetok")
+                header(HttpHeaders.UserAgent, "Mozilla/5.0 (Linux; Android 14; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36")
+                header("X-Requested-With", "XMLHttpRequest")
+            }
 
             val text = response.bodyAsText()
             if (text.trim().startsWith("<") || !text.trim().startsWith("{")) {
@@ -138,7 +144,11 @@ class IUBIPScheduleClient(
                     append("do", "schedule")
                     append("group", group.trim())
                 }
-            )
+            ) {
+                header(HttpHeaders.Cookie, "beget=begetok")
+                header(HttpHeaders.UserAgent, "Mozilla/5.0 (Linux; Android 14; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36")
+                header("X-Requested-With", "XMLHttpRequest")
+            }
 
             val text = response.bodyAsText()
             if (text.trim().startsWith("<") || !text.trim().startsWith("{")) {

@@ -13,7 +13,6 @@ import app.what.schedule.data.remote.api.InstitutionManager
 class NewsRepositoryImpl(
     private val institutionManager: InstitutionManager
 ) : NewsRepository {
-    constructor(db: Any?, institutionManager: InstitutionManager) : this(institutionManager)
     private val api
         get() = institutionManager.getSavedInstitution().orThrow { "No provider selected" }
 

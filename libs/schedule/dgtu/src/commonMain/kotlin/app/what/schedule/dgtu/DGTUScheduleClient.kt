@@ -155,7 +155,7 @@ class DGTUScheduleClient(
 
     private fun DGTUApi.Models.DGTULesson.toLessonDto(): LessonDto {
         val rawData = auditory?.split("-") ?: emptyList()
-        val building = if (rawData.size > 1) "Корпус ${rawData[0]}" else "Главный"
+        val building = if (rawData.size > 1) rawData[0] else "Главный"
         val aud = if (rawData.size > 1) rawData[1] else (auditory ?: "")
 
         val otUnit = OneTimeUnitDto(

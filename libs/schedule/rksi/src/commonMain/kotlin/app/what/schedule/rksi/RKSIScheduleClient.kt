@@ -276,7 +276,7 @@ class RKSIScheduleClient(
                     teacher = if (isGroup) teacherOrGroup else targetName,
                     group = if (isGroup) targetName else teacherOrGroup,
                     room = aud,
-                    additional = "Корпус $bld"
+                    additional = bld
                 )
 
                 LessonDto(

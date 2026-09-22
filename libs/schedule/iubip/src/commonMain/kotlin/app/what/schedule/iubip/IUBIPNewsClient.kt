@@ -9,7 +9,9 @@ import com.fleeksoft.ksoup.Ksoup
 import com.fleeksoft.ksoup.nodes.Element
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
+import io.ktor.client.request.header
 import io.ktor.client.statement.bodyAsText
+import io.ktor.http.HttpHeaders
 import kotlinx.datetime.Clock
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.TimeZone
@@ -31,7 +33,10 @@ class IUBIPNewsClient(
 
     override suspend fun getNews(page: Int): List<NewListItemDto> {
         return try {
-            val response = client.get("$baseUrl/news/?PAGEN_1=$page").bodyAsText()
+            val response = client.get("$baseUrl/news/?PAGEN_1=$page") {
+                header(HttpHeaders.Cookie, "beget=begetok")
+                header(HttpHeaders.UserAgent, "Mozilla/5.0 (Linux; Android 14; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36")
+            }.bodyAsText()
             val document = Ksoup.parse(response)
             val rawData = document.getElementsByClass("news__item")
 
@@ -76,7 +81,10 @@ class IUBIPNewsClient(
     override suspend fun getNewDetail(id: String): NewDetailDto {
         val url = "$baseUrl/news/$id/"
         return try {
-            val response = client.get(url).bodyAsText()
+            val response = client.get(url) {
+                header(HttpHeaders.Cookie, "beget=begetok")
+                header(HttpHeaders.UserAgent, "Mozilla/5.0 (Linux; Android 14; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36")
+            }.bodyAsText()
             val document = Ksoup.parse(response)
 
             val title = document.getElementsByTag("h1").firstOrNull()?.text()?.trim().orEmpty()

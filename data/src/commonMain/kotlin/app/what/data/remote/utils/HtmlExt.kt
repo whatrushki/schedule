@@ -21,17 +21,32 @@ private val linkStyles = TextLinkStyles(
 
 private val urlRegex = Regex("""https?://[^\s<>"'()]+""")
 
+fun AnnotatedString.trim(): AnnotatedString {
+    val raw = this.text
+    var start = 0
+    while (start < raw.length && (raw[start].isWhitespace() || raw[start] == '\u00A0')) {
+        start++
+    }
+    var end = raw.length
+    while (end > start && (raw[end - 1].isWhitespace() || raw[end - 1] == '\u00A0')) {
+        end--
+    }
+    return if (start == 0 && end == raw.length) this
+    else if (start >= end) AnnotatedString("")
+    else this.subSequence(start, end)
+}
+
 fun AnnotatedString.Companion.fromHtml(html: String): AnnotatedString {
     return try {
         val document = Ksoup.parseBodyFragment(html)
         val body = document.body()
         buildAnnotatedString {
             appendNode(body)
-        }
+        }.trim()
     } catch (_: Exception) {
         buildAnnotatedString {
             appendWithAutoLinks(html)
-        }
+        }.trim()
     }
 }
 
@@ -100,19 +115,25 @@ private fun AnnotatedString.Builder.appendNode(node: Node) {
                 }
 
                 if (isLink && href.isNotBlank() && end > start) {
-                    val fullUrl = if (href.startsWith("http://") || href.startsWith("https://")) {
-                        href
-                    } else if (href.startsWith("//")) {
-                        "https:$href"
-                    } else href
+                    val fullUrl = when {
+                        href.startsWith("http://") || href.startsWith("https://") || href.startsWith("mailto:") || href.startsWith("tel:") -> href
+                        href.startsWith("//") -> "https:$href"
+                        href.startsWith("www.") || href.startsWith("vk.com") || href.startsWith("t.me") -> "https://$href"
+                        href.startsWith("/") -> "https://mmcs.sfedu.ru$href"
+                        else -> "https://mmcs.sfedu.ru/$href"
+                    }
 
                     addLink(LinkAnnotation.Url(url = fullUrl, styles = linkStyles), start, end)
                 }
 
                 if (tag == "br") {
-                    append("\n")
-                } else if (tag == "p" || tag == "div") {
-                    append("\n")
+                    if (length > 0 && !toAnnotatedString().text.endsWith("\n")) {
+                        append("\n")
+                    }
+                } else if (tag in setOf("p", "div", "li")) {
+                    if (length > 0 && !toAnnotatedString().text.endsWith("\n")) {
+                        append("\n")
+                    }
                 }
             }
         }

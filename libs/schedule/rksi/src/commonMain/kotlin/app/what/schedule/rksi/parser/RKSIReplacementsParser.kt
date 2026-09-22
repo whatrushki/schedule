@@ -50,7 +50,7 @@ object RKSIReplacementsParser {
                                 teacher = teacher.replace("__", "_"),
                                 group = groupName,
                                 room = try { auditory.toFloat().toInt().toString() } catch (_: Exception) { auditory },
-                                additional = if (columns == 1) "Корпус 2" else "Корпус 1"
+                                additional = if (columns == 1) "2" else "1"
                             )
                         }
                     }.let { otUnits.addAll(it.flatten()) }

@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "app.what.schedule"
-version = "1.3.9"
+version = libs.versions.appVersion.get()
 
 kotlin {
     jvmToolchain(21)

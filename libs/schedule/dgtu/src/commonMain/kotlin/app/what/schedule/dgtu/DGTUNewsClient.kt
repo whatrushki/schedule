@@ -54,14 +54,21 @@ class DGTUNewsClient(
             }
 
             val tag = element.getElementsByClass("tag").firstOrNull()?.text()?.trim() ?: ""
+            val tags = if (tag.isNotBlank()) listOf(tag) else emptyList()
+            val descText = element.getElementsByClass("news-card__text").firstOrNull()?.text()?.trim()
+                ?: element.getElementsByClass("news-card__description").firstOrNull()?.text()?.trim()
+                ?: element.getElementsByClass("news-card__lead").firstOrNull()?.text()?.trim()
+                ?: element.getElementsByTag("p").firstOrNull { !it.hasClass("tag") }?.text()?.trim()
+                ?: ""
 
             NewListItemDto(
                 id = id,
                 title = title,
-                description = tag,
+                description = descText,
                 date = date,
                 imageUrl = bannerUrl.takeIf { it.isNotBlank() },
-                sourceUrl = if (urlPath.startsWith("http")) urlPath else "$baseUrl$urlPath"
+                sourceUrl = if (urlPath.startsWith("http")) urlPath else "$baseUrl$urlPath",
+                tags = tags
             )
         }
     } catch (_: Exception) {
@@ -105,6 +112,11 @@ class DGTUNewsClient(
             if (!allImages.contains(img)) allImages.add(img)
         }
 
+        val heroTag = document.getElementsByClass("detail-hero__tag").firstOrNull()?.text()?.trim()
+            ?: document.getElementsByClass("detail-hero").firstOrNull()?.getElementsByClass("tag")?.firstOrNull()?.text()?.trim()
+            ?: document.getElementsByClass("news-detail__tag").firstOrNull()?.text()?.trim()
+        val detailTags = if (!heroTag.isNullOrBlank()) listOf(heroTag) else emptyList()
+
         NewDetailDto(
             id = id,
             title = title,
@@ -114,7 +126,8 @@ class DGTUNewsClient(
             bannerUrl = bannerUrl,
             images = allImages,
             sourceUrl = url,
-            contentBlocks = contentBlocks
+            contentBlocks = contentBlocks,
+            tags = detailTags
         )
     } catch (_: Exception) {
         NewDetailDto(
