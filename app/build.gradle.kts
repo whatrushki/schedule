@@ -38,7 +38,7 @@ android {
 
         buildConfigField("String", "PRIVACY_POLICY_URL", "\"https://raw.githubusercontent.com/whatrushki/schedule/refs/heads/master/PRIVACY_POLICY.md\"")
         buildConfigField("String", "APP_OWNER_ROLE", "\"Android Developer\"")
-        buildConfigField("String", "APP_OWNER_GITHUB_AVATAR_URL", "\"https://github.com/topanim.png\"")
+        buildConfigField("String", "APP_OWNER_GITHUB_AVATAR_URL", "\"https://avatars.githubusercontent.com/u/82358369?v=4\"")
         buildConfigField("String", "APP_OWNER_GITHUB_NICKNAME", "\"topanim\"")
         buildConfigField("String", "APP_OWNER_GITHUB_URL", "\"https://github.com/topanim\"")
         buildConfigField("String", "APP_OWNER_TELEGRAM_URL", "\"https://t.me/whatrushik\"")
