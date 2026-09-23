@@ -61,6 +61,21 @@ class ScheduleController(
     }
     
     private fun toggleFavorites(value: ScheduleSearch) {
+        val toggledValue = when (value) {
+            is ScheduleSearch.Group -> value.copy(favorite = !value.favorite)
+            is ScheduleSearch.Teacher -> value.copy(favorite = !value.favorite)
+        }
+        updateState {
+            copy(
+                scheduleSearches = scheduleSearches.map { item ->
+                    if (item.id == value.id && item::class == value::class) {
+                        toggledValue
+                    } else {
+                        item
+                    }
+                }
+            )
+        }
         viewModelScope.launchIO {
             when (value) {
                 is ScheduleSearch.Group -> apiRepository.toggleFavorites(value)

@@ -65,8 +65,8 @@ fun ScheduleSearchPane(
 ) {
     val (query, setQuery) = useState("")
     val (selectedTab, setSelectedTab) = useState(0)
-    val favoriteList = remember(state.value) { state.value.scheduleSearches.filter { it.favorite } }
-    val list = remember(selectedTab, state.value, query) {
+    val favoriteList = remember(state.value.scheduleSearches) { state.value.scheduleSearches.filter { it.favorite } }
+    val list = remember(selectedTab, state.value.scheduleSearches, query) {
         (if (selectedTab == 0) state.value.scheduleSearches.filterIsInstance<ScheduleSearch.Group>() else state.value.scheduleSearches.filterIsInstance<ScheduleSearch.Teacher>())
             .filter { !it.favorite && it.name.lowercase().contains(query.lowercase()) }
             .sortedBy { it.name }

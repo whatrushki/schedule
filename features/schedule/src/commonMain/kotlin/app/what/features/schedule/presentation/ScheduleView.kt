@@ -117,18 +117,16 @@ fun ScheduleView(
             @Composable { ScheduleExportPane(state.value.selectedSearch, state.value.schedules) }
         }
         
-        val scheduleSearchSheet = remember {
-            @Composable {
-                ScheduleSearchPane(
-                    state,
-                    {
-                        listener(ScheduleEvent.OnSearchClicked(it))
-                        sheet.animateClose()
-                    },
-                    { listener(ScheduleEvent.OnSearchLongPressed(it)) },
-                    { listener(ScheduleEvent.OnRefreshSearches) }
-                )
-            }
+        val scheduleSearchSheet: @Composable () -> Unit = {
+            ScheduleSearchPane(
+                state,
+                {
+                    listener(ScheduleEvent.OnSearchClicked(it))
+                    sheet.animateClose()
+                },
+                { listener(ScheduleEvent.OnSearchLongPressed(it)) },
+                { listener(ScheduleEvent.OnRefreshSearches) }
+            )
         }
         
         val (scheduleType, setScheduleType) = useState<LessonsScheduleType?>(null)
