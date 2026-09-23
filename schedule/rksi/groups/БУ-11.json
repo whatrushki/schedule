@@ -75,7 +75,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-24",
@@ -87,12 +87,12 @@
                     {
                         "teacher": "Селезень И.В.",
                         "group": "БУ-11",
-                        "room": "33",
+                        "room": "29",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-24",
@@ -104,12 +104,29 @@
                     {
                         "teacher": "Селезень И.В.",
                         "group": "БУ-11",
-                        "room": "33",
+                        "room": "29",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-24",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.В.",
+                        "group": "БУ-11",
+                        "room": "42",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
@@ -182,15 +199,15 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "БУ-11",
-                        "room": "20",
-                        "additional": "2"
-                    },
-                    {
                         "teacher": "Марченко С.П.",
                         "group": "БУ-11",
                         "room": "13",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "БУ-11",
+                        "room": "20",
                         "additional": "2"
                     }
                 ],

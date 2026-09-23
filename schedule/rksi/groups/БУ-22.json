@@ -62,6 +62,23 @@
         "lessons": [
             {
                 "date": "2026-09-24",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Степанец В.В.",
+                        "group": "БУ-22",
+                        "room": "35",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-24",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -70,12 +87,12 @@
                     {
                         "teacher": "Селезень И.В.",
                         "group": "БУ-22",
-                        "room": "33",
+                        "room": "29",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-24",
@@ -92,7 +109,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

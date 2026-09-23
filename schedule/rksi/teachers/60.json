@@ -5,20 +5,37 @@
         "lessons": [
             {
                 "date": "2026-09-24",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Экономика организации",
+                "otUnits": [
+                    {
+                        "teacher": "Леонова И.Ю.",
+                        "group": "БУ-21",
+                        "room": "40",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-24",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
                 "subject": "Экономика организации",
                 "otUnits": [
                     {
-                        "teacher": "Леонова Ирина Юрьевна",
+                        "teacher": "Леонова И.Ю.",
                         "group": "БУ-21",
-                        "room": "41",
+                        "room": "40",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-24",
@@ -28,14 +45,14 @@
                 "subject": "Экономика и управление",
                 "otUnits": [
                     {
-                        "teacher": "Леонова Ирина Юрьевна",
+                        "teacher": "Леонова И.Ю.",
                         "group": "ИБТ-23",
-                        "room": "41",
+                        "room": "40",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-24",
@@ -45,14 +62,14 @@
                 "subject": "Экономика и управление",
                 "otUnits": [
                     {
-                        "teacher": "Леонова Ирина Юрьевна",
+                        "teacher": "Леонова И.Ю.",
                         "group": "ИБТ-23",
-                        "room": "41",
+                        "room": "40",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

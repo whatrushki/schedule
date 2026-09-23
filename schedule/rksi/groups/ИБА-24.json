@@ -79,6 +79,23 @@
         "lessons": [
             {
                 "date": "2026-09-24",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Гузов А.В.",
+                        "group": "ИБА-24",
+                        "room": "с/з7",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-24",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -121,12 +138,12 @@
                     {
                         "teacher": "Дьяченко Е.О.",
                         "group": "ИБА-24",
-                        "room": "406",
+                        "room": "216а",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
+                "state": "REMOVED"
             }
         ]
     },

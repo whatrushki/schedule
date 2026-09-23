@@ -113,6 +113,23 @@
         "lessons": [
             {
                 "date": "2026-09-24",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Криптографическая защита информации",
+                "otUnits": [
+                    {
+                        "teacher": "Шабалта А.В.",
+                        "group": "ИБТ-41",
+                        "room": "45",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-24",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -121,12 +138,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБТ-41",
-                        "room": "44",
+                        "room": "45",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-24",
@@ -138,12 +155,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБТ-42",
-                        "room": "44",
+                        "room": "45",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-24",
@@ -155,12 +172,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБА-34",
-                        "room": "44",
+                        "room": "45",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-24",
@@ -172,12 +189,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБА-31",
-                        "room": "44",
+                        "room": "45",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-24",
@@ -189,12 +206,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБА-32",
-                        "room": "44",
+                        "room": "45",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-24",
@@ -206,12 +223,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБА-33",
-                        "room": "44",
+                        "room": "45",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -285,13 +302,13 @@
                 "otUnits": [
                     {
                         "teacher": "Шабалта А.В.",
-                        "group": "ИБА-34",
+                        "group": "ИБА-33",
                         "room": "35",
                         "additional": "2"
                     },
                     {
                         "teacher": "Шабалта А.В.",
-                        "group": "ИБА-33",
+                        "group": "ИБА-34",
                         "room": "35",
                         "additional": "2"
                     }
