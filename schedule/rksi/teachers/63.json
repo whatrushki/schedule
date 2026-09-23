@@ -1,125 +1,5 @@
 [
     {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "ТД-11",
-                        "room": "17",
-                        "additional": "Корпус 2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "ИБТ-11",
-                        "room": "17",
-                        "additional": "Корпус 2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "ИБА-13",
-                        "room": "27",
-                        "additional": "Корпус 2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Операционные системы и среды",
-                "otUnits": [
-                    {
-                        "teacher": "Ляшенко П.А.",
-                        "group": "СА-24",
-                        "room": "312",
-                        "additional": "Корпус 1"
-                    },
-                    {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "ИБА-33",
-                        "room": "28",
-                        "additional": "Корпус 2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Операционные системы и среды",
-                "otUnits": [
-                    {
-                        "teacher": "Ляшенко П.А.",
-                        "group": "ИС-28",
-                        "room": "414",
-                        "additional": "Корпус 1"
-                    },
-                    {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "ИБТ-32",
-                        "room": "28",
-                        "additional": "Корпус 2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Операционные системы и среды",
-                "otUnits": [
-                    {
-                        "teacher": "Ляшенко П.А.",
-                        "group": "СА-26",
-                        "room": "325",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            }
-        ]
-    },
-    {
         "date": "2026-09-24",
         "scheduleType": "COMMON",
         "lessons": [
@@ -134,11 +14,11 @@
                         "teacher": "Ляшенко Дарья Игоревна",
                         "group": "ТД-33",
                         "room": "21",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-24",
@@ -151,11 +31,11 @@
                         "teacher": "Ляшенко Дарья Игоревна",
                         "group": "ИБТ-31",
                         "room": "21",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-24",
@@ -168,11 +48,45 @@
                         "teacher": "Ляшенко Дарья Игоревна",
                         "group": "ИБА-34",
                         "room": "21",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
+            },
+            {
+                "date": "2026-09-24",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-24",
+                        "room": "122",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-24",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-24",
+                        "room": "122",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
@@ -191,7 +105,7 @@
                         "teacher": "Ляшенко Дарья Игоревна",
                         "group": "ИБТ-41",
                         "room": "44",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
@@ -208,7 +122,7 @@
                         "teacher": "Ляшенко Дарья Игоревна",
                         "group": "ИБА-43",
                         "room": "44",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
@@ -225,7 +139,7 @@
                         "teacher": "Ляшенко Дарья Игоревна",
                         "group": "ИБА-23",
                         "room": "44",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
@@ -242,7 +156,7 @@
                         "teacher": "Ляшенко Дарья Игоревна",
                         "group": "ИБА-24",
                         "room": "44",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
@@ -265,7 +179,7 @@
                         "teacher": "Ляшенко Дарья Игоревна",
                         "group": "БУ-11",
                         "room": "20",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
@@ -282,7 +196,7 @@
                         "teacher": "Ляшенко Дарья Игоревна",
                         "group": "ИБТ-13",
                         "room": "20",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
@@ -299,7 +213,7 @@
                         "teacher": "Ляшенко Дарья Игоревна",
                         "group": "ТД-12",
                         "room": "20",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
@@ -316,7 +230,7 @@
                         "teacher": "Ляшенко Дарья Игоревна",
                         "group": "ТД-22",
                         "room": "20",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
