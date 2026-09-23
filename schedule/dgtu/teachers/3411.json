@@ -14,7 +14,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС34",
                         "room": "405а",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -31,7 +31,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС32",
                         "room": "410",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -48,7 +48,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГУ31",
                         "room": "412",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -63,9 +63,9 @@
                 "otUnits": [
                     {
                         "teacher": "Трушкова Е. А.",
-                        "group": "ПГС36, ПГС32, ПГС33",
+                        "group": "ПГС32, ПГС36, ПГС33",
                         "room": "208",
-                        "additional": "Корпус 21"
+                        "additional": "21"
                     }
                 ],
                 "type": "COMMON",
@@ -79,23 +79,6 @@
         "lessons": [
             {
                 "date": "2026-09-02",
-                "number": 0,
-                "startTime": "13:35",
-                "endTime": "14:15",
-                "subject": "Ликвидация академических задолженностей",
-                "otUnits": [
-                    {
-                        "teacher": "Трушкова Е. А.",
-                        "group": "",
-                        "room": "26402",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "UNKNOWN",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-02",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -105,7 +88,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "БТТ32",
                         "room": "414",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -122,10 +105,27 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "БТТ32",
                         "room": "412",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-02",
+                "number": 0,
+                "startTime": "13:35",
+                "endTime": "14:15",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "",
+                        "room": "26402",
+                        "additional": "Главный"
+                    }
+                ],
+                "type": "UNKNOWN",
                 "state": "COMMON"
             }
         ]
@@ -134,6 +134,57 @@
         "date": "2026-09-03",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-09-03",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ЮЮ23",
+                        "room": "413",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-03",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ЮЮ23",
+                        "room": "413",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-03",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГС34, ПГС31, ПГС35",
+                        "room": "211",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-09-03",
                 "number": 0,
@@ -153,57 +204,6 @@
             },
             {
                 "date": "2026-09-03",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Безопасность жизнедеятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Трушкова Е. А.",
-                        "group": "ЮЮ23",
-                        "room": "413",
-                        "additional": "Корпус 26"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-03",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Безопасность жизнедеятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Трушкова Е. А.",
-                        "group": "ЮЮ23",
-                        "room": "413",
-                        "additional": "Корпус 26"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-03",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Безопасность жизнедеятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Трушкова Е. А.",
-                        "group": "ПГС31, ПГС34, ПГС35",
-                        "room": "211",
-                        "additional": "Корпус 26"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-03",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -213,7 +213,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС31",
                         "room": "410",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -230,7 +230,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС33",
                         "room": "410",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -253,7 +253,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ЮЮ21",
                         "room": "412",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -270,7 +270,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ЮЮ23, ЮЮ22, ЮЮ21",
                         "room": "805",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -287,7 +287,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ЮЮ21",
                         "room": "705",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -310,7 +310,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС33",
                         "room": "413",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -327,7 +327,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС32",
                         "room": "412",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -344,7 +344,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС34",
                         "room": "413",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -367,7 +367,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС34",
                         "room": "405а",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -384,7 +384,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС32",
                         "room": "410",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -401,7 +401,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГУ31",
                         "room": "412",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -416,9 +416,9 @@
                 "otUnits": [
                     {
                         "teacher": "Трушкова Е. А.",
-                        "group": "ПГС36, ПГС32, ПГС33",
+                        "group": "ПГС32, ПГС36, ПГС33",
                         "room": "208",
-                        "additional": "Корпус 21"
+                        "additional": "21"
                     }
                 ],
                 "type": "COMMON",
@@ -441,7 +441,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "БТТ32",
                         "room": "414",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -458,7 +458,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "БТТ32",
                         "room": "412",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -475,7 +475,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ЮЮ21",
                         "room": "613",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -489,23 +489,6 @@
         "lessons": [
             {
                 "date": "2026-09-17",
-                "number": 0,
-                "startTime": "13:35",
-                "endTime": "14:15",
-                "subject": "Ликвидация академических задолженностей",
-                "otUnits": [
-                    {
-                        "teacher": "Трушкова Е. А.",
-                        "group": "",
-                        "room": "402",
-                        "additional": "Корпус 26"
-                    }
-                ],
-                "type": "UNKNOWN",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-17",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
@@ -515,7 +498,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ЮЮ23",
                         "room": "413",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -532,7 +515,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ЮЮ23",
                         "room": "414",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -547,12 +530,29 @@
                 "otUnits": [
                     {
                         "teacher": "Трушкова Е. А.",
-                        "group": "ПГС31, ПГС34, ПГС35",
+                        "group": "ПГС34, ПГС31, ПГС35",
                         "room": "312",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-17",
+                "number": 0,
+                "startTime": "13:35",
+                "endTime": "14:15",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "",
+                        "room": "402",
+                        "additional": "26"
+                    }
+                ],
+                "type": "UNKNOWN",
                 "state": "COMMON"
             },
             {
@@ -566,7 +566,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС31",
                         "room": "410",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -583,7 +583,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС33",
                         "room": "410",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -597,23 +597,6 @@
         "lessons": [
             {
                 "date": "2026-09-18",
-                "number": 0,
-                "startTime": "12:00",
-                "endTime": "13:00",
-                "subject": "Ликвидация академических задолженностей",
-                "otUnits": [
-                    {
-                        "teacher": "Трушкова Е. А.",
-                        "group": "",
-                        "room": "402",
-                        "additional": "Корпус 26"
-                    }
-                ],
-                "type": "UNKNOWN",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-18",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
@@ -623,7 +606,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ЮЮ21",
                         "room": "412",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -640,10 +623,27 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ЮЮ23, ЮЮ22, ЮЮ21",
                         "room": "414",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-18",
+                "number": 0,
+                "startTime": "12:00",
+                "endTime": "13:00",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "",
+                        "room": "402",
+                        "additional": "26"
+                    }
+                ],
+                "type": "UNKNOWN",
                 "state": "COMMON"
             }
         ]
@@ -652,23 +652,6 @@
         "date": "2026-09-21",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 0,
-                "startTime": "13:35",
-                "endTime": "14:15",
-                "subject": "Ликвидация академических задолженностей",
-                "otUnits": [
-                    {
-                        "teacher": "Трушкова Е. А.",
-                        "group": "",
-                        "room": "402",
-                        "additional": "Корпус 26"
-                    }
-                ],
-                "type": "UNKNOWN",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-09-21",
                 "number": 1,
@@ -680,7 +663,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС33",
                         "room": "413",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -697,7 +680,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС32",
                         "room": "412",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -714,10 +697,27 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС34",
                         "room": "413",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-21",
+                "number": 0,
+                "startTime": "13:35",
+                "endTime": "14:15",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "",
+                        "room": "402",
+                        "additional": "26"
+                    }
+                ],
+                "type": "UNKNOWN",
                 "state": "COMMON"
             },
             {
@@ -731,7 +731,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС36",
                         "room": "412",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -754,7 +754,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГУ31",
                         "room": "413",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -771,7 +771,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "БТТ32",
                         "room": "414",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -785,23 +785,6 @@
         "lessons": [
             {
                 "date": "2026-09-24",
-                "number": 0,
-                "startTime": "13:35",
-                "endTime": "14:15",
-                "subject": "Ликвидация академических задолженностей",
-                "otUnits": [
-                    {
-                        "teacher": "Трушкова Е. А.",
-                        "group": "",
-                        "room": "402",
-                        "additional": "Корпус 26"
-                    }
-                ],
-                "type": "UNKNOWN",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -811,7 +794,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС36",
                         "room": "413",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -828,10 +811,27 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС35",
                         "room": "414",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-24",
+                "number": 0,
+                "startTime": "13:35",
+                "endTime": "14:15",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "",
+                        "room": "402",
+                        "additional": "26"
+                    }
+                ],
+                "type": "UNKNOWN",
                 "state": "COMMON"
             },
             {
@@ -845,7 +845,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС35",
                         "room": "405а",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -862,7 +862,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГУ31",
                         "room": "412",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -876,23 +876,6 @@
         "lessons": [
             {
                 "date": "2026-09-25",
-                "number": 0,
-                "startTime": "13:35",
-                "endTime": "14:15",
-                "subject": "Ликвидация академических задолженностей",
-                "otUnits": [
-                    {
-                        "teacher": "Трушкова Е. А.",
-                        "group": "",
-                        "room": "402",
-                        "additional": "Корпус 26"
-                    }
-                ],
-                "type": "UNKNOWN",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
@@ -902,7 +885,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС31",
                         "room": "412",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -919,13 +902,13 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "БТТ32",
                         "room": "402",
-                        "additional": "Корпус 8"
+                        "additional": "8"
                     },
                     {
                         "teacher": "Трушкова Е. А.",
                         "group": "ЮЮ22",
                         "room": "410",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -942,10 +925,27 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ЮЮ22",
                         "room": "410",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 0,
+                "startTime": "13:35",
+                "endTime": "14:15",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "",
+                        "room": "402",
+                        "additional": "26"
+                    }
+                ],
+                "type": "UNKNOWN",
                 "state": "COMMON"
             },
             {
@@ -959,7 +959,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "БТТ32",
                         "room": "414",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -982,7 +982,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "БТТ32",
                         "room": "319",
-                        "additional": "Корпус 8"
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
@@ -1005,7 +1005,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС34",
                         "room": "405а",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -1022,7 +1022,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС32",
                         "room": "410",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -1039,7 +1039,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГУ31",
                         "room": "412",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -1054,9 +1054,9 @@
                 "otUnits": [
                     {
                         "teacher": "Трушкова Е. А.",
-                        "group": "ПГС36, ПГС32, ПГС33",
+                        "group": "ПГС32, ПГС36, ПГС33",
                         "room": "208",
-                        "additional": "Корпус 21"
+                        "additional": "21"
                     }
                 ],
                 "type": "COMMON",
@@ -1079,7 +1079,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "БТТ32",
                         "room": "414",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -1096,7 +1096,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "БТТ32",
                         "room": "412",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -1113,7 +1113,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ЮЮ21",
                         "room": "613",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -1136,7 +1136,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ЮЮ23",
                         "room": "413",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -1153,7 +1153,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ЮЮ23",
                         "room": "414",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -1168,9 +1168,9 @@
                 "otUnits": [
                     {
                         "teacher": "Трушкова Е. А.",
-                        "group": "ПГС31, ПГС34, ПГС35",
+                        "group": "ПГС34, ПГС31, ПГС35",
                         "room": "312",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -1187,7 +1187,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС31",
                         "room": "410",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -1204,7 +1204,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ПГС33",
                         "room": "410",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -1227,7 +1227,7 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ЮЮ21",
                         "room": "412",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -1244,7 +1244,531 @@
                         "teacher": "Трушкова Е. А.",
                         "group": "ЮЮ23, ЮЮ22, ЮЮ21",
                         "room": "414",
-                        "additional": "Корпус 26"
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-05",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГС33",
+                        "room": "413",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГС32",
+                        "room": "412",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГС34",
+                        "room": "413",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГС36",
+                        "room": "412",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-07",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГУ31",
+                        "room": "413",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Надежность технических систем и техногенный риск",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "БТТ32",
+                        "room": "414",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГС36",
+                        "room": "413",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГС35",
+                        "room": "414",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГС35",
+                        "room": "405а",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГУ31",
+                        "room": "412",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-09",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГС31",
+                        "room": "412",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ЮЮ22",
+                        "room": "410",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ЮЮ22",
+                        "room": "701",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Надежность технических систем и техногенный риск",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "БТТ32",
+                        "room": "414",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-13",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГС34",
+                        "room": "405а",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГС32",
+                        "room": "410",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГУ31",
+                        "room": "412",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГС32, ПГС36, ПГС33",
+                        "room": "208",
+                        "additional": "21"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-14",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-14",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Надежность технических систем и техногенный риск",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "БТТ32",
+                        "room": "414",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Надежность технических систем и техногенный риск",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "БТТ32",
+                        "room": "412",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ЮЮ21",
+                        "room": "613",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-15",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-15",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ЮЮ23",
+                        "room": "413",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ЮЮ23",
+                        "room": "414",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГС34, ПГС31, ПГС35",
+                        "room": "312",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГС31",
+                        "room": "410",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ПГС33",
+                        "room": "410",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-16",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ЮЮ21",
+                        "room": "412",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Трушкова Е. А.",
+                        "group": "ЮЮ23, ЮЮ22, ЮЮ21",
+                        "room": "414",
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
