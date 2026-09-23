@@ -5,6 +5,8 @@ plugins {
 }
 
 kotlin {
+    val xcf = XCFramework("ScheduleKit")
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -13,6 +15,7 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "ScheduleKit"
             isStatic = true
+            xcf.add(this)
         }
     }
 

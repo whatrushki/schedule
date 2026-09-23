@@ -242,23 +242,36 @@ jobs:
 
       - name: Build macOS Target (DMG)
         run: |
-          ./gradlew :desktopApp:packageReleaseDmg || ./gradlew :desktopApp:packageReleaseDistributionForCurrentOS || true
           mkdir -p release_assets
-          find desktopApp/build -name "*.dmg" -exec cp {} release_assets/schedule_macos_${{ steps.get_version.outputs.version }}.dmg \; || true
-
-      - name: Build iOS Framework
-        run: |
-          ./gradlew :iosApp:linkReleaseFrameworkIosFat || ./gradlew :iosApp:assemble || true
-          mkdir -p release_assets
-          if [ -d "iosApp/build/fat-framework/release" ]; then
-            cd iosApp/build/fat-framework/release
-            zip -r ../../../release_assets/schedule_ios_${{ steps.get_version.outputs.version }}.zip .
-            cd -
-          elif [ -d "iosApp/build/bin" ]; then
-            cd iosApp/build/bin
-            zip -r ../../release_assets/schedule_ios_${{ steps.get_version.outputs.version }}.zip .
-            cd -
+          ./gradlew :desktopApp:packageReleaseDmg || ./gradlew :desktopApp:packageReleaseDistributionForCurrentOS
+          DMG=$(find desktopApp/build -name "*.dmg" -print -quit)
+          if [ -n "$DMG" ]; then
+            cp "$DMG" "release_assets/schedule_macos_${{ steps.get_version.outputs.version }}.dmg"
+            echo "✅ macOS DMG: $DMG"
+          else
+            echo "⚠️ No DMG found in desktopApp/build"
+            find desktopApp/build/compose/binaries -type f 2>/dev/null || echo "No binaries directory"
           fi
+
+      - name: Build iOS XCFramework
+        run: |
+          mkdir -p release_assets
+          ./gradlew :iosApp:assembleScheduleKitReleaseXCFramework
+          XCF_DIR="iosApp/build/XCFrameworks/release"
+          if [ -d "$XCF_DIR/ScheduleKit.xcframework" ]; then
+            cd "$XCF_DIR"
+            zip -r "$GITHUB_WORKSPACE/release_assets/schedule_ios_${{ steps.get_version.outputs.version }}.xcframework.zip" ScheduleKit.xcframework
+            echo "✅ iOS XCFramework zipped"
+          else
+            echo "⚠️ XCFramework not found at $XCF_DIR"
+            find iosApp/build -type d -name "*.xcframework" 2>/dev/null || echo "No xcframework directories found"
+          fi
+
+      - name: List release assets
+        if: always()
+        run: |
+          echo "=== Release Assets ==="
+          ls -la release_assets/ 2>/dev/null || echo "release_assets/ directory missing"
 
       - name: Upload macOS & iOS Artifacts to Release
         if: success()
