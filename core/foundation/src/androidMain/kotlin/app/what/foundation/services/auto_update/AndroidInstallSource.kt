@@ -21,7 +21,7 @@ fun getInstallSource(context: Context): InstallSource {
     }
 
     return when {
-        source?.contains("ru") == true || source?.contains("vk") == true -> InstallSource.RuStore
+        source == "ru.vk.store" -> InstallSource.RuStore
         else -> InstallSource.APK
     }
 }

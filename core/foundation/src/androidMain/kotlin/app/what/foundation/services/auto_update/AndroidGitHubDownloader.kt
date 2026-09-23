@@ -12,14 +12,35 @@ suspend fun GitHubUpdateService.downloadUpdate(
     onProgress: ((DownloadProgress) -> Unit)? = null
 ): Result<File> {
     return withContext(Dispatchers.IO) {
+        var currentUrl = downloadUrl
         var connection: HttpURLConnection? = null
         try {
-            val url = URL(downloadUrl)
-            connection = url.openConnection() as HttpURLConnection
-            connection.connect()
+            var redirects = 0
+            while (redirects < 5) {
+                val url = URL(currentUrl)
+                connection = (url.openConnection() as HttpURLConnection).apply {
+                    instanceFollowRedirects = true
+                    setRequestProperty("User-Agent", "schedule-app")
+                }
+                connection.connect()
 
-            if (connection.responseCode != HttpURLConnection.HTTP_OK) {
-                return@withContext Result.failure(Exception("HTTP error: ${connection.responseCode}"))
+                val code = connection.responseCode
+                if (code == HttpURLConnection.HTTP_MOVED_PERM ||
+                    code == HttpURLConnection.HTTP_MOVED_TEMP ||
+                    code == HttpURLConnection.HTTP_SEE_OTHER ||
+                    code == 307 || code == 308
+                ) {
+                    val location = connection.getHeaderField("Location") ?: break
+                    connection.disconnect()
+                    currentUrl = if (location.startsWith("http")) location else URL(url, location).toString()
+                    redirects++
+                } else {
+                    break
+                }
+            }
+
+            if (connection == null || connection.responseCode != HttpURLConnection.HTTP_OK) {
+                return@withContext Result.failure(Exception("HTTP error: ${connection?.responseCode}"))
             }
 
             val contentLength = connection.contentLength.toLong()

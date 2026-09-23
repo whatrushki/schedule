@@ -4,8 +4,10 @@ import app.what.foundation.services.AppLogger.Companion.Auditor
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
+import io.ktor.client.request.header
 import io.ktor.client.request.parameter
 import io.ktor.client.request.url
+import io.ktor.http.HttpHeaders
 
 
 class GitHubUpdateService(
@@ -22,6 +24,7 @@ class GitHubUpdateService(
             val releases = httpClient.get {
                 url("https://api.github.com/repos/$owner/$repo/releases")
                 parameter("per_page", 10)
+                header(HttpHeaders.UserAgent, "$owner/$repo")
             }.body<List<GitHubRelease>>()
 
             val latestRelease = releases
