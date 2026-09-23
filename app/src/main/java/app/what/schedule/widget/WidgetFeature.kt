@@ -110,7 +110,7 @@ class ScheduleWidget : GlanceAppWidget(), KoinComponent {
                 else -> false
             }
             
-            val defaultColor = Color(0xFF94FF28)
+            val defaultColor = Color(0xFF1F2137)
             val theme = ColorProviders(
                 when (themeStyle) {
                     ThemeStyle.CustomColor -> DynamicScheme(themeColor?.let { Color(it) } ?: defaultColor, isDarkTheme)

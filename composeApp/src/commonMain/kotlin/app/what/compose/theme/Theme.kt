@@ -96,7 +96,7 @@ fun getAppColorScheme(
     return when (themeStyle) {
         ThemeStyle.Monochrome -> if (isDarkTheme) DarkMonochromeScheme else LightMonochromeScheme
         ThemeStyle.CustomColor -> getBrandColorScheme(themeColor?.let { Color(it) } ?: Color(0xFF1F2137), isDarkTheme)
-        else -> DynamicScheme(Color(0xFF94FF28), isDarkTheme).toColorScheme(isAmoled = false)
+        else -> getBrandColorScheme(themeColor?.let { Color(it) } ?: Color(0xFF1F2137), isDarkTheme)
     }
 }
 
