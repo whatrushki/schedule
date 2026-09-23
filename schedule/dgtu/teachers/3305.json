@@ -14,7 +14,7 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКД32",
                         "room": "808",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
@@ -37,7 +37,7 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКОЗД32",
                         "room": "405",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
@@ -60,7 +60,7 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКОЗД32",
                         "room": "510",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
@@ -83,7 +83,7 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКОЗД32",
                         "room": "405",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
@@ -106,7 +106,7 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКД32",
                         "room": "112",
-                        "additional": "Корпус 8"
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
@@ -123,7 +123,7 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКД12",
                         "room": "020",
-                        "additional": "Корпус 8"
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
@@ -146,7 +146,7 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКД11, МКД12",
                         "room": "420",
-                        "additional": "Корпус 8"
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
@@ -160,23 +160,6 @@
         "lessons": [
             {
                 "date": "2026-09-14",
-                "number": 0,
-                "startTime": "16:00",
-                "endTime": "17:45",
-                "subject": "Ликвидация академических задолженностей",
-                "otUnits": [
-                    {
-                        "teacher": "Захарова Н. Ю.",
-                        "group": "",
-                        "room": "320",
-                        "additional": "Корпус 1"
-                    }
-                ],
-                "type": "UNKNOWN",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-14",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -184,9 +167,9 @@
                 "otUnits": [
                     {
                         "teacher": "Захарова Н. Ю.",
-                        "group": "МКД23, МКД21, МКД22",
+                        "group": "МКД22, МКД21, МКД23",
                         "room": "224",
-                        "additional": "Корпус 8"
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
@@ -203,10 +186,27 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКД12",
                         "room": "112",
-                        "additional": "Корпус 8"
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-14",
+                "number": 0,
+                "startTime": "16:00",
+                "endTime": "17:45",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Захарова Н. Ю.",
+                        "group": "",
+                        "room": "320",
+                        "additional": "1"
+                    }
+                ],
+                "type": "UNKNOWN",
                 "state": "COMMON"
             },
             {
@@ -220,7 +220,7 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКОЗД32",
                         "room": "320",
-                        "additional": "Корпус 1"
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
@@ -234,23 +234,6 @@
         "lessons": [
             {
                 "date": "2026-09-15",
-                "number": 0,
-                "startTime": "12:00",
-                "endTime": "14:15",
-                "subject": "Ликвидация академических задолженностей",
-                "otUnits": [
-                    {
-                        "teacher": "Захарова Н. Ю.",
-                        "group": "",
-                        "room": "112",
-                        "additional": "Корпус 8"
-                    }
-                ],
-                "type": "UNKNOWN",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-15",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
@@ -260,7 +243,7 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКД11",
                         "room": "112",
-                        "additional": "Корпус 8"
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
@@ -277,10 +260,27 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКД32",
                         "room": "024",
-                        "additional": "Корпус 8"
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-15",
+                "number": 0,
+                "startTime": "12:00",
+                "endTime": "14:15",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Захарова Н. Ю.",
+                        "group": "",
+                        "room": "112",
+                        "additional": "8"
+                    }
+                ],
+                "type": "UNKNOWN",
                 "state": "COMMON"
             },
             {
@@ -294,7 +294,7 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКД11, МКД12",
                         "room": "112",
-                        "additional": "Корпус 8"
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
@@ -317,7 +317,7 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКОЗД22",
                         "room": "024",
-                        "additional": "Корпус 8"
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
@@ -340,7 +340,7 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКОЗД22",
                         "room": "020",
-                        "additional": "Корпус 8"
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
@@ -355,9 +355,9 @@
                 "otUnits": [
                     {
                         "teacher": "Захарова Н. Ю.",
-                        "group": "МКД23, МКД21, МКД22",
+                        "group": "МКД22, МКД21, МКД23",
                         "room": "123",
-                        "additional": "Корпус 1"
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
@@ -380,7 +380,7 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКД32",
                         "room": "112",
-                        "additional": "Корпус 8"
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
@@ -397,7 +397,7 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКД11, МКД12",
                         "room": "704",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
@@ -414,7 +414,7 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКОЗД32",
                         "room": "112",
-                        "additional": "Корпус 8"
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
@@ -437,7 +437,7 @@
                         "teacher": "Захарова Н. Ю.",
                         "group": "МКД11, МКД12",
                         "room": "405",
-                        "additional": "Корпус 2"
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",

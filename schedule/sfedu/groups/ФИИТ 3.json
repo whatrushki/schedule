@@ -514,6 +514,27 @@
                         "teacher": "Могилевская Надежда Сергеевна",
                         "group": "",
                         "room": "325",
+                              {
+                        "teacher": "Могилевская Надежда Сергеевна",
+                        "group": "",
+                        "room": "319",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 5,
+                "startTime": "15:50",
+                "endTime": "17:25",
+                "subject": "CS311. Разработка компиляторов",
+                "otUnits": [
+                    {
+                        "teacher": "Михалкович Станислав Станиславович",
+                        "group": "",
+                        "room": "325",
                         "additional": ""
                     }
                 ],
@@ -523,58 +544,189 @@
         ]
     },
     {
-        "date": "2026-10-02",
+        "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-02",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:35",
-                "subject": "CS251. Технологии баз данных",
+                "date": "2026-09-29",
+                "number": 5,
+                "startTime": "15:50",
+                "endTime": "17:25",
+                "subject": "CS253. Интеллектуальные системы",
                 "otUnits": [
                     {
-                        "teacher": "Карякин Михаил Михайлович",
+                        "teacher": "Пучкин Максим Валентинович",
                         "group": "",
-                        "room": "202",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "CS251. Технологии баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "Карякин Михаил Михайлович",
-                        "group": "",
-                        "room": "202",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "CS251. Технологии баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "Чердынцева Марина Игорьевна",
-                        "group": "",
-                        "room": "120",
+                        "room": "325",
                         "additional": ""
                     }
                 ],
                 "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-29",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:15",
+                "subject": "CS253. Интеллектуальные системы",
+                "otUnits": [
+                    {
+                        "teacher": "Пучкин Максим Валентинович",
+                        "group": "",
+                        "room": "325",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-30",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "CS311. Разработка компиляторов",
+                "otUnits": [
+                    {
+                        "teacher": "Баглий Антон Павлович",
+                        "group": "",
+                        "room": "ЛОС 1,2(НИИ МиПМ)",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "CS332. Компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Демяненко Яна Михайловна",
+                        "group": "",
+                        "room": "211",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "CS332. Компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Демяненко Яна Михайловна",
+                        "group": "",
+                        "room": "211",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 5,
+                "startTime": "15:50",
+                "endTime": "17:25",
+                "subject": "CS332. Компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Демяненко Яна Михайловна",
+                        "group": "",
+                        "room": "218",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-01",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Распараллеливающие преобразования программ",
+                "otUnits": [
+                    {
+                        "teacher": "Штейнберг Борис Яковлевич",
+                        "group": "",
+                        "room": "318",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "CS341. Алгоритмы на графах",
+                "otUnits": [
+                    {
+                        "teacher": "Адигеев Михаил Георгиевич",
+                        "group": "",
+                        "room": "317",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Распараллеливающие преобразования программ",
+                "otUnits": [
+                    {
+                        "teacher": "Штейнберг Борис Яковлевич",
+                        "group": "",
+                        "room": "318",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "CS341. Алгоритмы на графах",
+                "otUnits": [
+                    {
+                        "teacher": "Адигеев Михаил Георгиевич",
+                        "group": "",
+                        "room": "317",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
@@ -588,12 +740,12 @@
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
-                "subject": "МУАМ",
+                "subject": "CS253. Интеллектуальные системы",
                 "otUnits": [
                     {
-                        "teacher": "",
+                        "teacher": "Штейн О О",
                         "group": "",
-                        "room": " ?",
+                        "room": "202",
                         "additional": ""
                     }
                 ],

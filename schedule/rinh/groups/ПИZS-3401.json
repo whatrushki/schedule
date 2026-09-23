@@ -1,45 +1,5 @@
 [
     {
-        "date": "2026-09-14",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-14",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "л. Производственная практика (научно-исследовательская работа)",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Данилова Т.В.",
-                        "group": "ПИZS-3401",
-                        "room": "302",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-14",
-                "number": 6,
-                "startTime": "17:10",
-                "endTime": "18:40",
-                "subject": "л. Производственная практика (научно-исследовательская работа)",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Данилова Т.В.",
-                        "group": "ПИZS-3401",
-                        "room": "302",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -810,6 +770,29 @@
         ]
     },
     {
+        "date": "2026-10-20",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-20",
+                "number": 3,
+                "startTime": "11:50",
+                "endTime": "13:20",
+                "subject": "зач. Разработка web-приложений",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Абрамова А.В.",
+                        "group": "ПИZS-3401",
+                        "room": "311",
+                        "additional": "1"
+                    }
+                ],
+                "type": "CREDIT",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-21",
         "scheduleType": "COMMON",
         "lessons": [
@@ -819,6 +802,23 @@
                 "startTime": "17:10",
                 "endTime": "18:40",
                 "subject": "зач. Глубокое обучение",
+                "otUnits": [
+                    {
+                        "teacher": "проф.Долженко А.И.",
+                        "group": "ПИZS-3401",
+                        "room": "213",
+                        "additional": "1"
+                    }
+                ],
+                "type": "CREDIT",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-21",
+                "number": 7,
+                "startTime": "18:45",
+                "endTime": "20:15",
+                "subject": "зач. Проектирование микросервисных архитектур программных систем",
                 "otUnits": [
                     {
                         "teacher": "проф.Долженко А.И.",
@@ -878,15 +878,15 @@
         "lessons": [
             {
                 "date": "2026-10-23",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "зач. Проектирование микросервисных архитектур программных систем",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "зач. Противодействие коррупции и отмыванию преступных доходов",
                 "otUnits": [
                     {
-                        "teacher": "проф.Долженко А.И.",
+                        "teacher": "доц.Демиденко Т.И.",
                         "group": "ПИZS-3401",
-                        "room": "255",
+                        "room": "428",
                         "additional": "1"
                     }
                 ],
@@ -931,6 +931,121 @@
                     }
                 ],
                 "type": "LABORATORY",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-27",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-27",
+                "number": 7,
+                "startTime": "18:45",
+                "endTime": "20:15",
+                "subject": "экз. Информационно-аналитические системы",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Аручиди Н.А.",
+                        "group": "ПИZS-3401",
+                        "room": "209",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-28",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "экз. Управление созданием и развитием программных продуктов",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Аручиди Н.А.",
+                        "group": "ПИZS-3401",
+                        "room": "209",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-29",
+                "number": 3,
+                "startTime": "11:50",
+                "endTime": "13:20",
+                "subject": "экз. Проектный практикум",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Лозина Е.Н.",
+                        "group": "ПИZS-3401",
+                        "room": "303",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-02",
+                "number": 7,
+                "startTime": "18:45",
+                "endTime": "20:15",
+                "subject": "экз. Управление корпоративными информационными системами",
+                "otUnits": [
+                    {
+                        "teacher": "проф.Полуянов В.П.",
+                        "group": "ПИZS-3401",
+                        "room": "209",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-03",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "экз. Инструментарий научных исследований",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Синявская Т.Г.",
+                        "group": "ПИZS-3401",
+                        "room": "214",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
                 "state": "COMMON"
             }
         ]
