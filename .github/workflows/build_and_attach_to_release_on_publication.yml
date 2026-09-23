@@ -232,6 +232,9 @@ jobs:
         with:
           cache-read-only: false
 
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
       - name: Determine Version
         id: get_version
         run: |
