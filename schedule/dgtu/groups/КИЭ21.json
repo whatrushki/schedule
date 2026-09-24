@@ -893,8 +893,14 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Физика",
+                "subject": "пр Менеджмент водного транспорта",
                 "otUnits": [
+                    {
+                        "teacher": "Шаронина Л. В.",
+                        "group": "КИЭ21",
+                        "room": "022",
+                        "additional": "8"
+                    },
                     {
                         "teacher": "Холодова О. М.",
                         "group": "КИЭ21",
@@ -910,8 +916,14 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лек Философия",
+                "subject": "лек Менеджмент водного транспорта",
                 "otUnits": [
+                    {
+                        "teacher": "Шаронина Л. В.",
+                        "group": "КИЭ21",
+                        "room": "340",
+                        "additional": "1"
+                    },
                     {
                         "teacher": "Перекрестова А. В.",
                         "group": "КИЭ21",
@@ -927,8 +939,14 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "пр Философия",
+                "subject": "лек Менеджмент водного транспорта",
                 "otUnits": [
+                    {
+                        "teacher": "Шаронина Л. В.",
+                        "group": "КИЭ21",
+                        "room": "441",
+                        "additional": "1"
+                    },
                     {
                         "teacher": "Перекрестова А. В.",
                         "group": "КИЭ21",
@@ -964,6 +982,23 @@
         "lessons": [
             {
                 "date": "2026-09-26",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Философия",
+                "otUnits": [
+                    {
+                        "teacher": "Перекрестова А. В.",
+                        "group": "КИЭ21",
+                        "room": "024",
+                        "additional": "8"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-26",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -974,6 +1009,12 @@
                         "group": "КИЭ21",
                         "room": "711",
                         "additional": "26"
+                    },
+                    {
+                        "teacher": "Шаронина Л. В.",
+                        "group": "КИЭ21",
+                        "room": "517",
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
@@ -991,6 +1032,12 @@
                         "group": "КИЭ21",
                         "room": "711",
                         "additional": "26"
+                    },
+                    {
+                        "teacher": "Перекрестова А. В.",
+                        "group": "КИЭ21",
+                        "room": "024",
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",

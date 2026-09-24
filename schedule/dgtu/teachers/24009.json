@@ -14,7 +14,7 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "ЭА21",
                         "room": "427а",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
@@ -31,7 +31,7 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "АВТ21",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
@@ -54,7 +54,7 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "ВИБТ32",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
@@ -69,9 +69,9 @@
                 "otUnits": [
                     {
                         "teacher": "Лобанова Е. Н.",
-                        "group": "ЭХ32, ЭХ31",
+                        "group": "ЭХ31, ЭХ32",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
@@ -94,7 +94,7 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "АВА12",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
@@ -111,7 +111,7 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "АВА21",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
@@ -125,23 +125,6 @@
         "lessons": [
             {
                 "date": "2026-09-09",
-                "number": 0,
-                "startTime": "12:00",
-                "endTime": "12:45",
-                "subject": "Ликвидация академических задолженностей",
-                "otUnits": [
-                    {
-                        "teacher": "Лобанова Е. Н.",
-                        "group": "",
-                        "room": "427",
-                        "additional": "Корпус 10"
-                    }
-                ],
-                "type": "UNKNOWN",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-09",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
@@ -151,7 +134,7 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "ЭА21",
                         "room": "427а",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
@@ -168,20 +151,14 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "АВТ21",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-11",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
             {
-                "date": "2026-09-11",
+                "date": "2026-09-09",
                 "number": 0,
                 "startTime": "12:00",
                 "endTime": "12:45",
@@ -191,12 +168,18 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "UNKNOWN",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-09-11",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
                 "date": "2026-09-11",
                 "number": 1,
@@ -208,7 +191,7 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "ВИБТ32",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
@@ -223,12 +206,29 @@
                 "otUnits": [
                     {
                         "teacher": "Лобанова Е. Н.",
-                        "group": "ЭХ32, ЭХ31",
+                        "group": "ЭХ31, ЭХ32",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-11",
+                "number": 0,
+                "startTime": "12:00",
+                "endTime": "12:45",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Лобанова Е. Н.",
+                        "group": "",
+                        "room": "427",
+                        "additional": "10"
+                    }
+                ],
+                "type": "UNKNOWN",
                 "state": "COMMON"
             }
         ]
@@ -248,7 +248,7 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "АВА12",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
@@ -265,7 +265,7 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "АВА21",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
@@ -279,23 +279,6 @@
         "lessons": [
             {
                 "date": "2026-09-16",
-                "number": 0,
-                "startTime": "12:00",
-                "endTime": "12:45",
-                "subject": "Ликвидация академических задолженностей",
-                "otUnits": [
-                    {
-                        "teacher": "Лобанова Е. Н.",
-                        "group": "",
-                        "room": "427",
-                        "additional": "Корпус 10"
-                    }
-                ],
-                "type": "UNKNOWN",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-16",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
@@ -305,7 +288,7 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "ЭА21",
                         "room": "427а",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
@@ -322,20 +305,14 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "АВТ21",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-18",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
             {
-                "date": "2026-09-18",
+                "date": "2026-09-16",
                 "number": 0,
                 "startTime": "12:00",
                 "endTime": "12:45",
@@ -345,12 +322,18 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "UNKNOWN",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-09-18",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
                 "date": "2026-09-18",
                 "number": 1,
@@ -362,7 +345,7 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "ВИБТ32",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
@@ -377,12 +360,29 @@
                 "otUnits": [
                     {
                         "teacher": "Лобанова Е. Н.",
-                        "group": "ЭХ32, ЭХ31",
+                        "group": "ЭХ31, ЭХ32",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-18",
+                "number": 0,
+                "startTime": "12:00",
+                "endTime": "12:45",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Лобанова Е. Н.",
+                        "group": "",
+                        "room": "427",
+                        "additional": "10"
+                    }
+                ],
+                "type": "UNKNOWN",
                 "state": "COMMON"
             }
         ]
@@ -402,7 +402,7 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "АВА12",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
@@ -419,7 +419,7 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "АВА21",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
@@ -433,23 +433,6 @@
         "lessons": [
             {
                 "date": "2026-09-23",
-                "number": 0,
-                "startTime": "12:00",
-                "endTime": "12:45",
-                "subject": "Ликвидация академических задолженностей",
-                "otUnits": [
-                    {
-                        "teacher": "Лобанова Е. Н.",
-                        "group": "",
-                        "room": "427",
-                        "additional": "Корпус 10"
-                    }
-                ],
-                "type": "UNKNOWN",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
@@ -459,7 +442,7 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "ЭА21",
                         "room": "427а",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
@@ -476,10 +459,27 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "АВТ21",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-23",
+                "number": 0,
+                "startTime": "12:00",
+                "endTime": "12:45",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Лобанова Е. Н.",
+                        "group": "",
+                        "room": "427",
+                        "additional": "10"
+                    }
+                ],
+                "type": "UNKNOWN",
                 "state": "COMMON"
             }
         ]
@@ -488,23 +488,6 @@
         "date": "2026-09-25",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 0,
-                "startTime": "12:00",
-                "endTime": "12:35",
-                "subject": "Ликвидация академических задолженностей",
-                "otUnits": [
-                    {
-                        "teacher": "Лобанова Е. Н.",
-                        "group": "",
-                        "room": "426",
-                        "additional": "Корпус 10"
-                    }
-                ],
-                "type": "UNKNOWN",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-09-25",
                 "number": 1,
@@ -516,7 +499,7 @@
                         "teacher": "Лобанова Е. Н.",
                         "group": "ВИБТ32",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
@@ -531,9 +514,146 @@
                 "otUnits": [
                     {
                         "teacher": "Лобанова Е. Н.",
-                        "group": "ЭХ32, ЭХ31",
+                        "group": "ЭХ31, ЭХ32",
                         "room": "427",
-                        "additional": "Корпус 10"
+                        "additional": "10"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 0,
+                "startTime": "12:00",
+                "endTime": "12:35",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Лобанова Е. Н.",
+                        "group": "",
+                        "room": "426",
+                        "additional": "10"
+                    }
+                ],
+                "type": "UNKNOWN",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-28",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Физическая культура и спорт",
+                "otUnits": [
+                    {
+                        "teacher": "Лобанова Е. Н.",
+                        "group": "АВА12",
+                        "room": "427",
+                        "additional": "10"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Общая физическая подготовка",
+                "otUnits": [
+                    {
+                        "teacher": "Лобанова Е. Н.",
+                        "group": "АВА21",
+                        "room": "427",
+                        "additional": "10"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-30",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Общая физическая подготовка",
+                "otUnits": [
+                    {
+                        "teacher": "Лобанова Е. Н.",
+                        "group": "ЭА21",
+                        "room": "427а",
+                        "additional": "10"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Общая физическая подготовка",
+                "otUnits": [
+                    {
+                        "teacher": "Лобанова Е. Н.",
+                        "group": "АВТ21",
+                        "room": "427",
+                        "additional": "10"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-02",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Общая физическая подготовка",
+                "otUnits": [
+                    {
+                        "teacher": "Лобанова Е. Н.",
+                        "group": "ВИБТ32",
+                        "room": "427",
+                        "additional": "10"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Общая физическая подготовка",
+                "otUnits": [
+                    {
+                        "teacher": "Лобанова Е. Н.",
+                        "group": "ЭХ31, ЭХ32",
+                        "room": "427",
+                        "additional": "10"
                     }
                 ],
                 "type": "COMMON",
