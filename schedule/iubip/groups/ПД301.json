@@ -1,142 +1,5 @@
 [
     {
-        "date": "2026-09-15",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-15",
-                "number": 5,
-                "startTime": "15:10",
-                "endTime": "16:40",
-                "subject": "ОПД",
-                "otUnits": [
-                    {
-                        "teacher": "Дынник Д.И.",
-                        "group": "ПД301",
-                        "room": ".Дистанц.",
-                        "additional": "*"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-15",
-                "number": 6,
-                "startTime": "17:00",
-                "endTime": "18:30",
-                "subject": "Психология здоровья",
-                "otUnits": [
-                    {
-                        "teacher": "Шолудченко И.Е.",
-                        "group": "ПД301",
-                        "room": ".Дис.",
-                        "additional": "*"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-15",
-                "number": 7,
-                "startTime": "18:40",
-                "endTime": "20:10",
-                "subject": "Психология социальной работы",
-                "otUnits": [
-                    {
-                        "teacher": "Духавнева А.В.",
-                        "group": "ПД301",
-                        "room": ".Дистанц.",
-                        "additional": "*"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-17",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-17",
-                "number": 6,
-                "startTime": "17:00",
-                "endTime": "18:30",
-                "subject": "Введ. в клинич. психол",
-                "otUnits": [
-                    {
-                        "teacher": "Ряднова Л.В.",
-                        "group": "ПД301",
-                        "room": ".Дистанц.",
-                        "additional": "*"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-17",
-                "number": 7,
-                "startTime": "18:40",
-                "endTime": "20:10",
-                "subject": "Осн. психол. вмешательств",
-                "otUnits": [
-                    {
-                        "teacher": "Аракелов О.В.",
-                        "group": "ПД301",
-                        "room": ".Дистанц.",
-                        "additional": "*"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-19",
-                "number": 2,
-                "startTime": "10:00",
-                "endTime": "11:30",
-                "subject": "Консультативная психология",
-                "otUnits": [
-                    {
-                        "teacher": "Богатырева Л.В.",
-                        "group": "ПД301",
-                        "room": ".Дистанц.",
-                        "additional": "*"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 3,
-                "startTime": "11:40",
-                "endTime": "13:10",
-                "subject": "Консультативная психология",
-                "otUnits": [
-                    {
-                        "teacher": "Богатырева Л.В.",
-                        "group": "ПД301",
-                        "room": ".Дистанц.",
-                        "additional": "*"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-22",
         "scheduleType": "COMMON",
         "lessons": [
@@ -256,6 +119,23 @@
         "lessons": [
             {
                 "date": "2026-09-24",
+                "number": 4,
+                "startTime": "13:30",
+                "endTime": "15:00",
+                "subject": "Осн. психол. вмешательств",
+                "otUnits": [
+                    {
+                        "teacher": "Аракелов О.В.",
+                        "group": "ПД301",
+                        "room": ".Дист",
+                        "additional": "*"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-24",
                 "number": 5,
                 "startTime": "15:10",
                 "endTime": "16:40",
@@ -270,9 +150,72 @@
                 ],
                 "type": "LECTURE",
                 "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-28",
+                "number": 5,
+                "startTime": "15:10",
+                "endTime": "16:40",
+                "subject": "ЭК по ФКиС",
+                "otUnits": [
+                    {
+                        "teacher": "Химич М.Н.",
+                        "group": "ПД301",
+                        "room": ".СЗ/",
+                        "additional": "1"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
             },
             {
-                "date": "2026-09-24",
+                "date": "2026-09-28",
+                "number": 6,
+                "startTime": "17:00",
+                "endTime": "18:30",
+                "subject": "Введ. в клинич. психол",
+                "otUnits": [
+                    {
+                        "teacher": "Ряднова Л.В.",
+                        "group": "ПД301",
+                        "room": "409а",
+                        "additional": "1"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-29",
+                "number": 5,
+                "startTime": "15:10",
+                "endTime": "16:40",
+                "subject": "Осн. психол. вмешательств",
+                "otUnits": [
+                    {
+                        "teacher": "Аракелов О.В.",
+                        "group": "ПД301",
+                        "room": "409а",
+                        "additional": "1"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-29",
                 "number": 6,
                 "startTime": "17:00",
                 "endTime": "18:30",
@@ -281,8 +224,128 @@
                     {
                         "teacher": "Аракелов О.В.",
                         "group": "ПД301",
-                        "room": ".Дистанц.",
-                        "additional": "*"
+                        "room": "409а",
+                        "additional": "1"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-01",
+                "number": 5,
+                "startTime": "15:10",
+                "endTime": "16:40",
+                "subject": "Психология социальной работы",
+                "otUnits": [
+                    {
+                        "teacher": "Духавнева А.В.",
+                        "group": "ПД301",
+                        "room": "409а",
+                        "additional": "1"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 6,
+                "startTime": "17:00",
+                "endTime": "18:30",
+                "subject": "Психология социальной работы",
+                "otUnits": [
+                    {
+                        "teacher": "Духавнева А.В.",
+                        "group": "ПД301",
+                        "room": "409а",
+                        "additional": "1"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-02",
+                "number": 5,
+                "startTime": "15:10",
+                "endTime": "16:40",
+                "subject": "Психология здоровья",
+                "otUnits": [
+                    {
+                        "teacher": "Шолудченко И.Е.",
+                        "group": "ПД301",
+                        "room": "409а",
+                        "additional": "1"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 6,
+                "startTime": "17:00",
+                "endTime": "18:30",
+                "subject": "Психология здоровья",
+                "otUnits": [
+                    {
+                        "teacher": "Шолудченко И.Е.",
+                        "group": "ПД301",
+                        "room": "409а",
+                        "additional": "1"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-03",
+                "number": 4,
+                "startTime": "13:30",
+                "endTime": "15:00",
+                "subject": "ОПД",
+                "otUnits": [
+                    {
+                        "teacher": "Дынник Д.И.",
+                        "group": "ПД301",
+                        "room": "409",
+                        "additional": "1"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 5,
+                "startTime": "15:10",
+                "endTime": "16:40",
+                "subject": "ОПД",
+                "otUnits": [
+                    {
+                        "teacher": "Дынник Д.И.",
+                        "group": "ПД301",
+                        "room": "409а",
+                        "additional": "1"
                     }
                 ],
                 "type": "LECTURE",
