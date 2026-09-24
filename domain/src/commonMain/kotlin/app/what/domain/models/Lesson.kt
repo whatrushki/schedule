@@ -152,12 +152,13 @@ sealed class ScheduleSearch {
     operator fun component3() = favorite
     
     override fun equals(other: Any?): Boolean =
-        other is ScheduleSearch && this::class == other::class && id == other.id
+        other is ScheduleSearch && this::class == other::class && id == other.id && favorite == other.favorite && name == other.name
     
     override fun hashCode(): Int {
         var result = favorite.hashCode()
         result = 31 * result + name.hashCode()
         result = 31 * result + id.hashCode()
+        result = 31 * result + this::class.hashCode()
         return result
     }
     

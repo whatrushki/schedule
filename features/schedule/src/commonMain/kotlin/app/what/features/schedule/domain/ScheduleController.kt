@@ -82,7 +82,7 @@ class ScheduleController(
                 is ScheduleSearch.Teacher -> apiRepository.toggleFavorites(value)
             }
         }.invokeOnCompletion {
-            updateSearches()
+            updateSearches(showLoading = false)
             val scheduleTag = buildTag(LogScope.SCHEDULE, LogCat.STATE)
             Auditor.debug(scheduleTag, "Избранное обновлено")
         }
@@ -194,7 +194,7 @@ class ScheduleController(
         }
     }
     
-    private fun updateSearches() {
+    private fun updateSearches(showLoading: Boolean = true) {
         viewModelScope.launchSafe(
             retryCount = 0,
             onFailure = {
@@ -205,7 +205,9 @@ class ScheduleController(
                 }
             }
         ) {
-            updateState { copy(scheduleSearchesState = RemoteState.Loading) }
+            if (showLoading) {
+                updateState { copy(scheduleSearchesState = RemoteState.Loading) }
+            }
             
             val (teachers, groups) = coroutineScope {
                 val ut = async { apiRepository.getTeachers().map { it.toScheduleSearch() } }

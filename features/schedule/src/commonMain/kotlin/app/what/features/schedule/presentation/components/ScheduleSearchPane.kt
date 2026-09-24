@@ -65,9 +65,10 @@ fun ScheduleSearchPane(
 ) {
     val (query, setQuery) = useState("")
     val (selectedTab, setSelectedTab) = useState(0)
-    val favoriteList = remember(state.value.scheduleSearches) { state.value.scheduleSearches.filter { it.favorite } }
-    val list = remember(selectedTab, state.value.scheduleSearches, query) {
-        (if (selectedTab == 0) state.value.scheduleSearches.filterIsInstance<ScheduleSearch.Group>() else state.value.scheduleSearches.filterIsInstance<ScheduleSearch.Teacher>())
+    val searches = state.value.scheduleSearches
+    val favoriteList = remember(searches) { searches.filter { it.favorite } }
+    val list = remember(selectedTab, searches, query) {
+        (if (selectedTab == 0) searches.filterIsInstance<ScheduleSearch.Group>() else searches.filterIsInstance<ScheduleSearch.Teacher>())
             .filter { !it.favorite && it.name.lowercase().contains(query.lowercase()) }
             .sortedBy { it.name }
     }
@@ -194,18 +195,17 @@ fun LazyGridScope.searchBlocks(
     onClick: (ScheduleSearch) -> Unit,
     onLongClick: (ScheduleSearch) -> Unit
 ) {
-    itemsIndexed(
-        list,
-        key = { index, it ->
+    items(
+        items = list,
+        key = { it ->
             val type = when (it) {
                 is ScheduleSearch.Group -> "group"
                 is ScheduleSearch.Teacher -> "teacher"
             }
             val idPart = it.id.ifBlank { it.name }
-            val base = "${type}_${idPart}_$index"
-            if (favorite) "fav_$base" else base
+            if (favorite) "fav_${type}_$idPart" else "${type}_$idPart"
         }
-    ) { _, it ->
+    ) { it ->
         SearchItemChip(
             name = it.name,
             selected = state == it.name,
