@@ -35,7 +35,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "WHAT-Schedule"
+rootProject.name = "Schedule"
 include(":app")
 include(":composeApp")
 include(":domain")

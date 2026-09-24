@@ -115,7 +115,7 @@ fun main() {
     val mobileInputService = if (isMobile) TextInputService(WasmMobileTextInputService()) else null
 
     CanvasBasedWindow(
-        title = "WHAT Schedule",
+        title = "Schedule",
         canvasElementId = "ComposeTarget",
         requestResize = null,
         applyDefaultStyles = true,

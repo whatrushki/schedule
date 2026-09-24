@@ -20,7 +20,7 @@ fun MainViewController() = ComposeUIViewController {
             ) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(
-                        "WHAT Schedule iOS",
+                        "Schedule iOS",
                         style = MaterialTheme.typography.headlineMedium,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.primary

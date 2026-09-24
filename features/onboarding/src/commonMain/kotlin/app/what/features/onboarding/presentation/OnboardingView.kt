@@ -159,7 +159,7 @@ fun IntroPage() {
         Gap(32)
         
         Text(
-            text = "WHAT Schedule",
+            text = "Schedule",
             style = typography.displaySmall,
             fontWeight = FontWeight.Bold,
             color = colorScheme.onSurface

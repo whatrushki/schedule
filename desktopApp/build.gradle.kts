@@ -48,12 +48,12 @@ compose.desktop {
                 org.jetbrains.compose.desktop.application.dsl.TargetFormat.Deb,
                 org.jetbrains.compose.desktop.application.dsl.TargetFormat.Rpm
             )
-            packageName = "WHAT-Schedule"
+            packageName = "Schedule"
             packageVersion = libs.versions.appVersion.get()
             windows {
                 menu = true
                 shortcut = true
-                menuGroup = "WHAT-Schedule"
+                menuGroup = "Schedule"
                 iconFile.set(project.file("src/main/resources/icons/icon.ico"))
             }
             linux {
