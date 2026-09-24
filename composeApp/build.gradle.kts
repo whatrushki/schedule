@@ -25,7 +25,7 @@ kotlin {
         commonMain.dependencies {
             api(project(":domain"))
             api(project(":data"))
-            api(project(":core:foundation"))
+            api(libs.compose.foundation)
             api(project(":core:navigation"))
             api(project(":features:main"))
             api(project(":features:onboarding"))

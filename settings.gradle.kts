@@ -19,17 +19,24 @@ plugins {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
+        mavenLocal()
         google()
         mavenCentral()
         maven {
             url = uri("https://artifactory-external.vkpartner.ru/artifactory/maven")
+        }
+        maven {
+            url = uri("https://maven.pkg.github.com/whatrushki/compose-foundation")
+            credentials {
+                username = providers.gradleProperty("gpr.user").orNull ?: System.getenv("GITHUB_ACTOR")
+                password = providers.gradleProperty("gpr.key").orNull ?: System.getenv("GITHUB_TOKEN")
+            }
         }
     }
 }
 
 rootProject.name = "WHAT-Schedule"
 include(":app")
-include(":core:foundation")
 include(":core:navigation")
 include(":composeApp")
 include(":domain")

@@ -105,7 +105,7 @@ android {
 dependencies {
     implementation(project(":domain"))
     implementation(project(":data"))
-    implementation(project(":core:foundation"))
+    implementation(libs.compose.foundation)
     implementation(project(":core:navigation"))
     implementation(project(":features:main"))
     implementation(project(":features:schedule"))

@@ -25,7 +25,7 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(project(":domain"))
-            api(project(":core:foundation"))
+            api(libs.compose.foundation)
             implementation(project(":libs:schedule:core"))
             implementation(project(":libs:schedule:rksi"))
             implementation(project(":libs:schedule:dgtu"))
