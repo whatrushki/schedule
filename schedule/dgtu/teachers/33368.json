@@ -354,7 +354,7 @@
                 "otUnits": [
                     {
                         "teacher": "Боровенская А. В.",
-                        "group": "МКНФ11, МКЭ11, МКЭ12, МКНХТ11, МКМ11, МКНХ11, МКИ11, МКМ12",
+                        "group": "МКИ11, МКМ11, МКМ12, МКНФ11, МКНХ11, МКНХТ11, МКЭ11, МКЭ12",
                         "room": "384",
                         "additional": "1"
                     }
@@ -417,7 +417,7 @@
                 "otUnits": [
                     {
                         "teacher": "Боровенская А. В.",
-                        "group": "МКР11, МКР13, МКР12",
+                        "group": "МКР11, МКР12, МКР13",
                         "room": "224",
                         "additional": "8"
                     }
@@ -485,7 +485,7 @@
                 "otUnits": [
                     {
                         "teacher": "Боровенская А. В.",
-                        "group": "МКЗИ11, МКЗР11, МКЗНФ11, МКЗНХ11, МКЗЭ11",
+                        "group": "МКЗИ11, МКЗНФ11, МКЗНХ11, МКЗР11, МКЗЭ11",
                         "room": "422",
                         "additional": "8"
                     }
@@ -502,7 +502,7 @@
                 "otUnits": [
                     {
                         "teacher": "Боровенская А. В.",
-                        "group": "МКЗИ11, МКЗР11, МКЗНФ11, МКЗНХ11, МКЗЭ11",
+                        "group": "МКЗИ11, МКЗНФ11, МКЗНХ11, МКЗР11, МКЗЭ11",
                         "room": "422",
                         "additional": "8"
                     }
@@ -656,9 +656,9 @@
                 "otUnits": [
                     {
                         "teacher": "Боровенская А. В.",
-                        "group": "МКР11, МКР13, МКР12",
-                        "room": "353",
-                        "additional": "1"
+                        "group": "МКР11, МКР12, МКР13",
+                        "room": "224",
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
@@ -806,6 +806,149 @@
                         "teacher": "Боровенская А. В.",
                         "group": "МКИ31",
                         "room": "404",
+                        "additional": "2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-28",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Боровенская А. В.",
+                        "group": "МКД11, МКД12",
+                        "room": "410",
+                        "additional": "8"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Боровенская А. В.",
+                        "group": "МКИ11, МКМ11, МКМ12, МКНФ11, МКНХ11, МКНХТ11, МКЭ11, МКЭ12",
+                        "room": "384",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-29",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Педагогические основы организации досуга",
+                "otUnits": [
+                    {
+                        "teacher": "Боровенская А. В.",
+                        "group": "МКИ31",
+                        "room": "404",
+                        "additional": "2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-29",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Проектирование в сфере креативных индустрий",
+                "otUnits": [
+                    {
+                        "teacher": "Боровенская А. В.",
+                        "group": "МКР13",
+                        "room": "810",
+                        "additional": "2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-30",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Боровенская А. В.",
+                        "group": "МКР11, МКР12, МКР13",
+                        "room": "224",
+                        "additional": "8"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Педагогика досуга",
+                "otUnits": [
+                    {
+                        "teacher": "Боровенская А. В.",
+                        "group": "МОЗКИ21",
+                        "room": "504",
+                        "additional": "2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-01",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Педагогические основы организации досуга",
+                "otUnits": [
+                    {
+                        "teacher": "Боровенская А. В.",
+                        "group": "МКИ31",
+                        "room": "805",
                         "additional": "2"
                     }
                 ],
