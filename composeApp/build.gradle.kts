@@ -26,7 +26,7 @@ kotlin {
             api(project(":domain"))
             api(project(":data"))
             api(libs.compose.foundation)
-            api(project(":core:navigation"))
+            api(libs.foundation.navigation)
             api(project(":features:main"))
             api(project(":features:onboarding"))
             api(project(":features:news"))

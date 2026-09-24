@@ -26,7 +26,7 @@ kotlin {
             implementation(project(":domain"))
             implementation(project(":data"))
             api(libs.compose.foundation)
-            api(project(":core:navigation"))
+            api(libs.foundation.navigation)
 
             implementation(compose.runtime)
             implementation(compose.foundation)

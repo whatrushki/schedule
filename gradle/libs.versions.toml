@@ -46,6 +46,7 @@ composeFoundation = "1.0.0"
 
 [libraries]
 compose-foundation = { module = "app.what.foundation:compose-foundation", version.ref = "composeFoundation" }
+foundation-navigation = { module = "app.what.foundation:foundation-navigation", version.ref = "composeFoundation" }
 androidx-glance = { module = "androidx.glance:glance", version.ref = "glanceAppwidget" }
 androidx-glance-appwidget = { module = "androidx.glance:glance-appwidget", version.ref = "glanceAppwidget" }
 androidx-glance-material3 = { module = "androidx.glance:glance-material3", version.ref = "glanceAppwidget" }

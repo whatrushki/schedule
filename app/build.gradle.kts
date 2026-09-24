@@ -106,7 +106,7 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":data"))
     implementation(libs.compose.foundation)
-    implementation(project(":core:navigation"))
+    implementation(libs.foundation.navigation)
     implementation(project(":features:main"))
     implementation(project(":features:schedule"))
     implementation(project(":features:news"))
