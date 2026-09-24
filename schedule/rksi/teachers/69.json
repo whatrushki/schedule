@@ -82,34 +82,46 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Математика",
+                "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Марченко Светлана Викторовна",
+                        "teacher": "Марченко С.П.",
+                        "group": "ТД-32",
+                        "room": "33",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Марченко С.В.",
                         "group": "ИБТ-11",
                         "room": "42",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-25",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Математика",
+                "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Марченко Светлана Викторовна",
+                        "teacher": "Марченко С.П.",
+                        "group": "ИБА-41",
+                        "room": "33",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Марченко С.В.",
                         "group": "ИБТ-11",
                         "room": "42",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-25",
@@ -119,14 +131,71 @@
                 "subject": "Математика",
                 "otUnits": [
                     {
-                        "teacher": "Марченко Светлана Викторовна",
+                        "teacher": "Марченко С.В.",
                         "group": "ИБТ-13",
                         "room": "42",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "ТД-31",
+                        "room": "акт.зал",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "ИБА-42",
+                        "room": "34",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Иностранный язык",
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "БД-21",
+                        "room": "33",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "БД-31",
+                        "room": "33",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

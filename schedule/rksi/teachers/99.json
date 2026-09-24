@@ -81,7 +81,7 @@
                     {
                         "teacher": "Селезень И.В.",
                         "group": "ИБТ-23",
-                        "room": "30",
+                        "room": "29",
                         "additional": "2"
                     }
                 ],
@@ -96,20 +96,77 @@
         "lessons": [
             {
                 "date": "2026-09-25",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Селезень И.В.",
+                        "group": "БУ-11",
+                        "room": "29",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Селезень В.В.",
+                        "group": "БД-11",
+                        "room": "29",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Селезень И.В.",
+                        "group": "ТД-11",
+                        "room": "29",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-25",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
                 "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Селезень Ирина Владимировна",
-                        "group": "ИБТ-23",
+                        "teacher": "Селезень И.В.",
+                        "group": "ИБТ-3",
+                        "room": "32",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Селезень И.В.",
+                        "group": "ИБА-5",
                         "room": "32",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-25",
@@ -119,14 +176,14 @@
                 "subject": "Документационное обеспечение управления",
                 "otUnits": [
                     {
-                        "teacher": "Селезень Ирина Владимировна",
+                        "teacher": "Селезень И.В.",
                         "group": "БУ-21",
-                        "room": "32",
+                        "room": "29",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-25",
@@ -136,14 +193,14 @@
                 "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Селезень Ирина Владимировна",
+                        "teacher": "Селезень И.В.",
                         "group": "ИБТ-21",
-                        "room": "32",
+                        "room": "29",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-25",
@@ -153,14 +210,14 @@
                 "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Селезень Ирина Владимировна",
+                        "teacher": "Селезень И.В.",
                         "group": "ИБТ-21",
-                        "room": "32",
+                        "room": "29",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     }

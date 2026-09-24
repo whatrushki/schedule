@@ -45,6 +45,23 @@
         "lessons": [
             {
                 "date": "2026-09-25",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Тодорова А.В.",
+                        "group": "СА-46",
+                        "room": "122",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-25",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -53,12 +70,12 @@
                     {
                         "teacher": "Тодорова А.В.",
                         "group": "СА-46",
-                        "room": "109",
+                        "room": "118",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-25",
@@ -70,12 +87,12 @@
                     {
                         "teacher": "Тодорова А.В.",
                         "group": "СА-46",
-                        "room": "109",
+                        "room": "122",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-25",
@@ -92,7 +109,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

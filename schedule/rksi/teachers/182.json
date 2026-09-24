@@ -96,6 +96,23 @@
         "lessons": [
             {
                 "date": "2026-09-25",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "СА-27",
+                        "room": "401",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-25",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -121,12 +138,12 @@
                     {
                         "teacher": "Долгополая А.С.",
                         "group": "СА-19",
-                        "room": "411",
+                        "room": "305",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-25",
@@ -138,12 +155,12 @@
                     {
                         "teacher": "Долгополая А.С.",
                         "group": "СА-18",
-                        "room": "411",
+                        "room": "401",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-25",
@@ -155,12 +172,12 @@
                     {
                         "teacher": "Долгополая А.С.",
                         "group": "СА-18",
-                        "room": "411",
+                        "room": "401",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

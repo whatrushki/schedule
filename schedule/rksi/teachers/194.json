@@ -113,6 +113,23 @@
         "lessons": [
             {
                 "date": "2026-09-25",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Черноштан О.Н.",
+                        "group": "СА-43",
+                        "room": "316",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-25",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
@@ -121,12 +138,18 @@
                     {
                         "teacher": "Черноштан О.Н.",
                         "group": "СА-44",
-                        "room": "307",
+                        "room": "316",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Черноштан О.Н.",
+                        "group": "СА-43",
+                        "room": "316",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-25",
@@ -138,12 +161,12 @@
                     {
                         "teacher": "Черноштан О.Н.",
                         "group": "ИКС-34",
-                        "room": "307",
+                        "room": "Библиотека",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-25",
@@ -155,12 +178,12 @@
                     {
                         "teacher": "Черноштан О.Н.",
                         "group": "ИКС-23",
-                        "room": "307",
+                        "room": "316",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-25",
@@ -172,12 +195,12 @@
                     {
                         "teacher": "Черноштан О.Н.",
                         "group": "ИС-27",
-                        "room": "307",
+                        "room": "316",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     }

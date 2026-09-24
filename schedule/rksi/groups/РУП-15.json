@@ -81,7 +81,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-25",
@@ -93,29 +93,46 @@
                     {
                         "teacher": "Токарева Ю.А.",
                         "group": "РУП-15",
-                        "room": "305",
+                        "room": "312",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-25",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Математика",
+                "subject": "Русский язык",
                 "otUnits": [
                     {
-                        "teacher": "Зимовейская В.А.",
+                        "teacher": "Рожченко Т.В.",
                         "group": "РУП-15",
-                        "room": "318",
+                        "room": "406",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Основы работы с информацией",
+                "otUnits": [
+                    {
+                        "teacher": "Токарева Ю.А.",
+                        "group": "РУП-15",
+                        "room": "418",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

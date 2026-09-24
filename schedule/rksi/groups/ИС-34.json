@@ -85,20 +85,37 @@
         "lessons": [
             {
                 "date": "2026-09-25",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Разработка программных модулей",
+                "otUnits": [
+                    {
+                        "teacher": "Черевко А.Д.",
+                        "group": "ИС-34",
+                        "room": "Общ1-1",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-25",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Системное программирование",
+                "subject": "Разработка программных модулей",
                 "otUnits": [
                     {
-                        "teacher": "Кошкина А.А.",
+                        "teacher": "Черевко А.Д.",
                         "group": "ИС-34",
-                        "room": "420",
+                        "room": "Общ1-2",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-25",
@@ -110,12 +127,12 @@
                     {
                         "teacher": "Корбан С.Н.",
                         "group": "ИС-34",
-                        "room": "с/з2",
+                        "room": "с/з5",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-25",
@@ -132,7 +149,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

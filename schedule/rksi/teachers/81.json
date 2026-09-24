@@ -62,20 +62,37 @@
         "lessons": [
             {
                 "date": "2026-09-25",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Нохрина Ю.В.",
+                        "group": "СА-11",
+                        "room": "110",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-25",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
                 "subject": "Электроника и схемотехника",
                 "otUnits": [
                     {
-                        "teacher": "Нохрина Юлия Валерьевна",
+                        "teacher": "Нохрина Ю.В.",
                         "group": "ИБТ-33",
-                        "room": "412",
+                        "room": "110",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-25",
@@ -85,14 +102,14 @@
                 "subject": "Электроника и схемотехника",
                 "otUnits": [
                     {
-                        "teacher": "Нохрина Юлия Валерьевна",
+                        "teacher": "Нохрина Ю.В.",
                         "group": "ИБТ-33",
-                        "room": "412",
+                        "room": "110",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
