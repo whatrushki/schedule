@@ -67,7 +67,7 @@ val dataModule = module {
             config = UpdateConfig(
                 githubOwner = "whatrushki",
                 githubRepo = "schedule",
-                currentVersion = app.what.foundation.constants.AppConstants.VERSION_NAME
+                currentVersion = app.what.domain.constants.AppConstants.VERSION_NAME
             ),
             openUrl = { url ->
                 try {

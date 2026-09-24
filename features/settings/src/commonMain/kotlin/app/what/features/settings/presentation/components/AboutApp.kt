@@ -54,7 +54,7 @@ import app.what.foundation.ui.animations.AnimatedEnter
 import app.what.foundation.ui.animations.wiggle
 import app.what.foundation.ui.bclick
 import app.what.foundation.ui.useState
-import app.what.foundation.constants.AppConstants
+import app.what.domain.constants.AppConstants
 import app.what.schedule.data.local.settings.AppValues
 import app.what.schedule.features.settings.presentation.utils.rememberGithubStars
 import app.what.schedule.ui.components.AsyncImageWithFallback
