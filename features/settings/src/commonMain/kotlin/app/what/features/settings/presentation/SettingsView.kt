@@ -15,7 +15,9 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.rounded.Info
+import app.what.schedule.data.local.settings.NotificationPeriod
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.shapes
@@ -227,6 +229,21 @@ fun getSettingsList(app: AppValues, utils: AppUtils): List<UIComponent> {
                 app.themeColor.asColorPalette {
                     Analytics.logSettingChanged(app.themeColor.key, it.toString())
                 }.dependsOn(app.themeStyle) { it == ThemeStyle.CustomColor }
+            )
+        ),
+        
+        category(
+            "Уведомления", "замены и изменения", Icons.Default.Notifications,
+            content = listOf(
+                app.enableReplacementNotifications.asSwitch {
+                    Analytics.logSettingChanged(app.enableReplacementNotifications.key, it.toString())
+                },
+                app.replacementNotificationsPeriod.asSingleChoice(
+                    enumValues<NotificationPeriod>(),
+                    { it.displayName }
+                ) {
+                    Analytics.logSettingChanged(app.replacementNotificationsPeriod.key, it.toString())
+                }.dependsOn(app.enableReplacementNotifications) { it == true }
             )
         ),
         

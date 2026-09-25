@@ -52,6 +52,16 @@ class MainActivity : ComponentActivity() {
                     crashlytics.setCustomKey("current_screen", destination.route ?: "unknown")
                 }
             }
+
+            LaunchedEffect(Unit) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                    settings.enableReplacementNotifications.observe().collect { enabled ->
+                        if (enabled == true && checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                            requestPermissions(arrayOf(android.Manifest.permission.POST_NOTIFICATIONS), 101)
+                        }
+                    }
+                }
+            }
             
             ProvideGLobalAppValues(settings) {
                 AppTheme {

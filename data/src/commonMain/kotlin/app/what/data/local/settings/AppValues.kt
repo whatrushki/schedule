@@ -27,6 +27,16 @@ enum class ThemeStyle(override val displayName: String) : Named {
     Monochrome("Чёрно-белая")
 }
 
+@Serializable
+enum class NotificationPeriod(val hours: Int, override val displayName: String) : Named {
+    H1(1, "1 час"),
+    H2(2, "2 часа"),
+    H3(3, "3 часа"),
+    H4(4, "4 часа"),
+    H6(6, "6 часов"),
+    H12(12, "12 часов")
+}
+
 
 @Composable
 fun ProvideGLobalAppValues(appValues: AppValues, content: @Composable () -> Unit) =
@@ -90,6 +100,20 @@ class AppValues(
     val isAnalyticsEnabled = createValue(
         "is_analytics_enabled", true, Boolean.serializer(),
         "Анализ пользования", "Разрешите собирать анонимную статистику пользования"
+    )
+
+    val enableReplacementNotifications = createValue(
+        "enable_replacement_notifications", false, Boolean.serializer(),
+        "Уведомления о заменах", "Проверять изменения в расписании в фоне"
+    )
+
+    val replacementNotificationsPeriod = createValue(
+        "replacement_notifications_period", NotificationPeriod.H3, NotificationPeriod.serializer(),
+        "Интервал проверки", "Периодичность проверки расписания"
+    )
+
+    val lastNotifiedReplacementsHash = createValue(
+        "last_notified_replacements_hash", "", String.serializer()
     )
     
     val thePolicy = createValue(

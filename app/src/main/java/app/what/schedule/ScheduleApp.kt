@@ -43,6 +43,8 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.launch
+import app.what.schedule.notifications.NotificationHelper
+import app.what.schedule.notifications.ScheduleWorkManager
 import org.koin.dsl.module
 import java.util.UUID
 
@@ -115,6 +117,25 @@ class ScheduleApp : Application() {
                         ScheduleWidget.instance.updateAll(this@ScheduleApp)
                     } catch (e: Exception) {
                         Auditor.debug(initTag, "Не удалось обновить виджеты при смене темы: ${e.message}")
+                    }
+                }
+        }
+
+        // Инициализация канала уведомлений
+        NotificationHelper.createNotificationChannel(this)
+
+        // Планирование / отмена периодической проверки замен в фоне
+        appScope.launch {
+            combine(
+                appValues.enableReplacementNotifications.observe(),
+                appValues.replacementNotificationsPeriod.observe()
+            ) { enabled, period -> enabled to period }
+                .collect { (enabled, period) ->
+                    if (enabled == true) {
+                        val hours = period?.hours ?: 3
+                        ScheduleWorkManager.schedulePeriodicCheck(this@ScheduleApp, hours)
+                    } else {
+                        ScheduleWorkManager.cancelPeriodicCheck(this@ScheduleApp)
                     }
                 }
         }
