@@ -1,58 +1,405 @@
 [
     {
-        "date": "2026-09-24",
+        "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-24",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Элементы высшей математики",
+                "date": "2026-09-28",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Математика",
                 "otUnits": [
                     {
-                        "teacher": "Путинцева Ю.М.",
-                        "group": "СА-22",
-                        "room": "410",
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-12",
+                        "room": "210",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
+                "state": "COMMON"
             },
             {
-                "date": "2026-09-24",
+                "date": "2026-09-28",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-11",
+                        "room": "210",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-12",
+                        "room": "210",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 4,
+                "startTime": "14:10",
+                "endTime": "15:40",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-12",
+                        "room": "210",
+                        "additional": "1"
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:30",
+                "subject": "Элементы высшей математики",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-22",
+                        "room": "210",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-29",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Элементы высшей математики",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-21",
+                        "room": "103",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-29",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-11",
+                        "room": "401",
+                        "additional": "1"
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-30",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-15",
+                        "room": "217",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-11",
+                        "room": "217",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-12",
+                        "room": "217",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-11",
+                        "room": "118",
+                        "additional": "1"
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
                 "subject": "Элементы высшей математики",
                 "otUnits": [
                     {
-                        "teacher": "Путинцева Ю.М.",
+                        "teacher": "Путинцева Юлия Михайловна",
                         "group": "СА-21",
-                        "room": "410",
+                        "room": "217",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
+                "state": "COMMON"
             },
             {
-                "date": "2026-09-24",
+                "date": "2026-09-30",
                 "number": 6,
                 "startTime": "16:40",
                 "endTime": "18:10",
                 "subject": "Элементы высшей математики",
                 "otUnits": [
                     {
-                        "teacher": "Путинцева Ю.М.",
-                        "group": "СА-22",
-                        "room": "410",
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-21",
+                        "room": "217",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-01",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-15",
+                        "room": "114",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-15",
+                        "room": "114",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-11",
+                        "room": "114",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-12",
+                        "room": "114",
+                        "additional": "1"
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Элементы высшей математики",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-21",
+                        "room": "114",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-02",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-15",
+                        "room": "118",
+                        "additional": "1"
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-15",
+                        "room": "118",
+                        "additional": "1"
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Элементы высшей математики",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-22",
+                        "room": "103",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Элементы высшей математики",
+                "otUnits": [
+                    {
+                        "teacher": "Путинцева Юлия Михайловна",
+                        "group": "СА-22",
+                        "room": "103",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     }

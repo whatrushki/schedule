@@ -95,5 +95,397 @@
                 "state": "CHANGED"
             }
         ]
+    },
+    {
+        "date": "2026-09-28",
+        "scheduleType": "WITH_CLASS_HOUR",
+        "lessons": [
+            {
+                "date": "2026-09-28",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "ИКС-21",
+                        "room": "210а",
+                        "additional": "1"
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "OTHER",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 4,
+                "startTime": "14:10",
+                "endTime": "15:40",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Пятибратов Д.В.",
+                        "group": "ИКС-21",
+                        "room": "318",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:30",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Чубарова А.Б.",
+                        "group": "ИКС-21",
+                        "room": "106",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Новосельцева Е.Ф.",
+                        "group": "ИКС-21",
+                        "room": "209а",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:10",
+                "subject": "Теория электрических цепей",
+                "otUnits": [
+                    {
+                        "teacher": "Иванов В.С.",
+                        "group": "ИКС-21",
+                        "room": "324",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-29",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "История России",
+                "otUnits": [
+                    {
+                        "teacher": "Грицай О.П.",
+                        "group": "ИКС-21",
+                        "room": "404",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-29",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Махаева П.А.",
+                        "group": "ИКС-21",
+                        "room": "с/з3",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-29",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Теория электрических цепей",
+                "otUnits": [
+                    {
+                        "teacher": "Иванов В.С.",
+                        "group": "ИКС-21",
+                        "room": "324",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-30",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Компьютерное моделирование",
+                "otUnits": [
+                    {
+                        "teacher": "Шабранская П.Е.",
+                        "group": "ИКС-21",
+                        "room": "110",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Компьютерное моделирование",
+                "otUnits": [
+                    {
+                        "teacher": "Шабранская П.Е.",
+                        "group": "ИКС-21",
+                        "room": "110",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Пятибратов Д.В.",
+                        "group": "ИКС-21",
+                        "room": "210",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "ИКС-21",
+                        "room": "103",
+                        "additional": "1"
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-01",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Инженерная компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова С.Ю.",
+                        "group": "ИКС-21",
+                        "room": "325",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "История России",
+                "otUnits": [
+                    {
+                        "teacher": "Грицай О.П.",
+                        "group": "ИКС-21",
+                        "room": "411",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Основы электронной и вычислительной техники",
+                "otUnits": [
+                    {
+                        "teacher": "Пузыревский И.А.",
+                        "group": "ИКС-21",
+                        "room": "314",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Социальная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Марышева О.В.",
+                        "group": "ИКС-21",
+                        "room": "404",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-02",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Инженерная компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова С.Ю.",
+                        "group": "ИКС-21",
+                        "room": "325",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Инженерная компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова С.Ю.",
+                        "group": "ИКС-21",
+                        "room": "325",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Основы электронной и вычислительной техники",
+                "otUnits": [
+                    {
+                        "teacher": "Пузыревский И.А.",
+                        "group": "ИКС-21",
+                        "room": "314",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-03",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Математические методы решения типовых прикладных задач",
+                "otUnits": [
+                    {
+                        "teacher": "Мальцева И.Е.",
+                        "group": "ИКС-21",
+                        "room": "412",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Математические методы решения типовых прикладных задач",
+                "otUnits": [
+                    {
+                        "teacher": "Мальцева И.Е.",
+                        "group": "ИКС-21",
+                        "room": "412",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
     }
 ]

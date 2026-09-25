@@ -129,5 +129,397 @@
                 "state": "CHANGED"
             }
         ]
+    },
+    {
+        "date": "2026-09-28",
+        "scheduleType": "WITH_CLASS_HOUR",
+        "lessons": [
+            {
+                "date": "2026-09-28",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "OTHER",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 4,
+                "startTime": "14:10",
+                "endTime": "15:40",
+                "subject": "Основы финансовой грамотности",
+                "otUnits": [
+                    {
+                        "teacher": "Котова Т.И.",
+                        "group": "СА-19",
+                        "room": "103",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:30",
+                "subject": "Основы электротехники",
+                "otUnits": [
+                    {
+                        "teacher": "Студенникова Д.А.",
+                        "group": "СА-19",
+                        "room": "216",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:10",
+                "subject": "Основы электротехники",
+                "otUnits": [
+                    {
+                        "teacher": "Студенникова Д.А.",
+                        "group": "СА-19",
+                        "room": "216",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-29",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Элементы высшей математики",
+                "otUnits": [
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "СА-19",
+                        "room": "326",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-29",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Стандартизация, сертификация и техническое документоведение",
+                "otUnits": [
+                    {
+                        "teacher": "Романенко Е.Л.",
+                        "group": "СА-19",
+                        "room": "418",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-29",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Попова А.Ю.",
+                        "group": "СА-19",
+                        "room": "121",
+                        "additional": "1"
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-29",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Попова А.Ю.",
+                        "group": "СА-19",
+                        "room": "121",
+                        "additional": "1"
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-30",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Турянский И.П.",
+                        "group": "СА-19",
+                        "room": "с/з1",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Лебедева М.В.",
+                        "group": "СА-19",
+                        "room": "320",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Прыгунова Т.А.",
+                        "group": "СА-19",
+                        "room": "104",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Инженерная компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Говорова О.А.",
+                        "group": "СА-19",
+                        "room": "212",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Освоение работ по профессии рабочего 14601 Монтажник оборудования связи",
+                "otUnits": [
+                    {
+                        "teacher": "Бойнар И.Н.",
+                        "group": "СА-19",
+                        "room": "306",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-01",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Основы теории информации",
+                "otUnits": [
+                    {
+                        "teacher": "Карачевцева Д.Г.",
+                        "group": "СА-19",
+                        "room": "326",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Дискретная математика с элементами математической логики",
+                "otUnits": [
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "СА-19",
+                        "room": "410",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Элементы высшей математики",
+                "otUnits": [
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "СА-19",
+                        "room": "420",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-02",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Освоение работ по профессии рабочего 14601 Монтажник оборудования связи",
+                "otUnits": [
+                    {
+                        "teacher": "Бойнар И.Н.",
+                        "group": "СА-19",
+                        "room": "210а",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Освоение работ по профессии рабочего 14601 Монтажник оборудования связи",
+                "otUnits": [
+                    {
+                        "teacher": "Бойнар И.Н.",
+                        "group": "СА-19",
+                        "room": "305",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Архитектура аппаратных средств",
+                "otUnits": [
+                    {
+                        "teacher": "Толкачев В.Н.",
+                        "group": "СА-19",
+                        "room": "316",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "История России",
+                "otUnits": [
+                    {
+                        "teacher": "Марышева О.В.",
+                        "group": "СА-19",
+                        "room": "310",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-03",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Архитектура аппаратных средств",
+                "otUnits": [
+                    {
+                        "teacher": "Толкачев В.Н.",
+                        "group": "СА-19",
+                        "room": "316",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Инженерная компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Говорова О.А.",
+                        "group": "СА-19",
+                        "room": "212",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
     }
 ]
