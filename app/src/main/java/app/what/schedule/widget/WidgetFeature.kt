@@ -61,12 +61,10 @@ import app.what.domain.models.ScheduleResponse
 import app.what.domain.models.ScheduleSearch
 import app.what.domain.repositories.ScheduleRepository
 import app.what.schedule.data.remote.utils.formatTime
-import app.what.schedule.features.widget.GlanceUtils.isSystemInDarkTheme
+import app.what.schedule.ui.theme.getAppColorScheme
 import app.what.foundation.utils.LogCat
 import app.what.foundation.utils.LogScope
 import app.what.foundation.utils.buildTag
-import com.materialkolor.ktx.DynamicScheme
-import com.materialkolor.toColorScheme
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
@@ -81,9 +79,6 @@ class ScheduleWidgetReceiver : GlanceAppWidgetReceiver() {
 private const val DAY_INDEX_KEY = "day_index"
 internal const val SEARCH_KEY = "search"
 private val MAX_PAGE_INDEX_KEY = ActionParameters.Key<Int>("max_index")
-
-/** Default brand color used as fallback for the dynamic color scheme. */
-private val DefaultBrandColor = Color(0xFF1F2137)
 
 class ScheduleWidget : GlanceAppWidget(), KoinComponent {
     private val settings: AppValues by inject()
@@ -126,18 +121,22 @@ class ScheduleWidget : GlanceAppWidget(), KoinComponent {
         }
 
         provideContent {
-            val isDarkTheme = when (themeType) {
-                ThemeType.Dark -> true
-                ThemeType.System -> LocalContext.current.isSystemInDarkTheme()
-                else -> false
+            val localContext = LocalContext.current
+            val theme = when (themeType) {
+                ThemeType.System -> {
+                    val lightScheme = getAppColorScheme(localContext, themeStyle, themeColor, isDarkTheme = false)
+                    val darkScheme = getAppColorScheme(localContext, themeStyle, themeColor, isDarkTheme = true)
+                    ColorProviders(light = lightScheme, dark = darkScheme)
+                }
+                ThemeType.Dark -> {
+                    val darkScheme = getAppColorScheme(localContext, themeStyle, themeColor, isDarkTheme = true)
+                    ColorProviders(darkScheme)
+                }
+                else -> {
+                    val lightScheme = getAppColorScheme(localContext, themeStyle, themeColor, isDarkTheme = false)
+                    ColorProviders(lightScheme)
+                }
             }
-
-            val theme = ColorProviders(
-                when (themeStyle) {
-                    ThemeStyle.CustomColor -> DynamicScheme(themeColor?.let { Color(it) } ?: DefaultBrandColor, isDarkTheme)
-                    else -> DynamicScheme(DefaultBrandColor, isDarkTheme)
-                }.toColorScheme(isAmoled = false)
-            )
 
             GlanceTheme(theme) {
                 val currentDayIndex = currentState(intPreferencesKey(DAY_INDEX_KEY)) ?: 0

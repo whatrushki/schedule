@@ -16,7 +16,14 @@ import com.materialkolor.toColorScheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 
-private val DarkMonochromeScheme = darkColorScheme(
+import android.content.Context
+import android.os.Build
+import androidx.compose.material3.ColorScheme
+import androidx.compose.material3.dynamicDarkColorScheme
+import androidx.compose.material3.dynamicLightColorScheme
+import androidx.compose.ui.platform.LocalContext
+
+val DarkMonochromeScheme = darkColorScheme(
     primary = Color(0xFFFFFFFF),
     onPrimary = Color(0xFF000000),
     primaryContainer = Color(0xFF262626),
@@ -47,7 +54,7 @@ private val DarkMonochromeScheme = darkColorScheme(
     onErrorContainer = Color(0xFFFFB4AB)
 )
 
-private val LightMonochromeScheme = lightColorScheme(
+val LightMonochromeScheme = lightColorScheme(
     primary = Color(0xFF000000),
     onPrimary = Color(0xFFFFFFFF),
     primaryContainer = Color(0xFFE5E5E5),
@@ -78,6 +85,23 @@ private val LightMonochromeScheme = lightColorScheme(
     onErrorContainer = Color(0xFF410002)
 )
 
+fun getAppColorScheme(
+    context: Context,
+    themeStyle: ThemeStyle?,
+    themeColor: ULong?,
+    isDarkTheme: Boolean
+): ColorScheme {
+    return when (themeStyle) {
+        ThemeStyle.Monochrome -> if (isDarkTheme) DarkMonochromeScheme else LightMonochromeScheme
+        ThemeStyle.Material -> if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            if (isDarkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
+        } else {
+            getBrandColorScheme(themeColor?.let { Color(it) } ?: Color(0xFF1F2137), isDarkTheme)
+        }
+        else -> getBrandColorScheme(themeColor?.let { Color(it) } ?: Color(0xFF1F2137), isDarkTheme)
+    }
+}
+
 @Composable
 fun AppTheme(
     settings: AppValues = rememberAppValues(),
@@ -86,6 +110,7 @@ fun AppTheme(
     val themeType by settings.themeType.collect()
     val themeStyle by settings.themeStyle.collect()
     val themeColor by settings.themeColor.collect()
+    val context = LocalContext.current
     
     val isDarkTheme = when (themeType) {
         ThemeType.Dark -> true
@@ -93,10 +118,7 @@ fun AppTheme(
         else -> false
     }
     
-    val theme = when (themeStyle) {
-        ThemeStyle.Monochrome -> if (isDarkTheme) DarkMonochromeScheme else LightMonochromeScheme
-        else -> getBrandColorScheme(themeColor?.let { Color(it) } ?: Color(0xFF1F2137), isDarkTheme)
-    }
+    val theme = getAppColorScheme(context, themeStyle, themeColor, isDarkTheme)
     
     WHATTheme(
         theme = theme,

@@ -35,6 +35,14 @@ import org.koin.android.ext.android.getKoin
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 import org.koin.core.module.dsl.singleOf
+import androidx.glance.appwidget.updateAll
+import app.what.schedule.features.widget.ScheduleWidget
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.drop
+import kotlinx.coroutines.launch
 import org.koin.dsl.module
 import java.util.UUID
 
@@ -91,6 +99,24 @@ class ScheduleApp : Application() {
         when (source) {
             InstallSource.APK -> Auditor.debug("d", "install source Apk")
             InstallSource.RuStore -> Auditor.debug("d", "install source RuStore")
+        }
+
+        // Автоматическое обновление виджетов при смене темы пользователем в приложении
+        val appScope = CoroutineScope(Dispatchers.Default + SupervisorJob())
+        appScope.launch {
+            combine(
+                appValues.themeType.observe(),
+                appValues.themeStyle.observe(),
+                appValues.themeColor.observe()
+            ) { _, _, _ -> }
+                .drop(1)
+                .collect {
+                    try {
+                        ScheduleWidget.instance.updateAll(this@ScheduleApp)
+                    } catch (e: Exception) {
+                        Auditor.debug(initTag, "Не удалось обновить виджеты при смене темы: ${e.message}")
+                    }
+                }
         }
     }
 }
