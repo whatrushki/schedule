@@ -126,12 +126,6 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "СТ-441",
-                        "room": "602",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
                         "group": "ЭК-444",
                         "room": "602",
                         "additional": "1"
@@ -139,6 +133,12 @@
                     {
                         "teacher": "доц.Волочай А.В.",
                         "group": "ЭК-449",
+                        "room": "602",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "СТ-441",
                         "room": "602",
                         "additional": "1"
                     },
@@ -230,13 +230,13 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-4112",
+                        "group": "ЭК-412",
                         "room": "502",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-412",
+                        "group": "ЭК-4112",
                         "room": "502",
                         "additional": "1"
                     }
@@ -327,18 +327,6 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "МО-441",
-                        "room": "429",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-449",
-                        "room": "429",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
                         "group": "ЭК-444",
                         "room": "429",
                         "additional": "1"
@@ -348,9 +336,95 @@
                         "group": "СТ-441",
                         "room": "429",
                         "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "МО-441",
+                        "room": "429",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "ЭК-449",
+                        "room": "429",
+                        "additional": "1"
                     }
                 ],
                 "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-30",
+                "number": 2,
+                "startTime": "10:10",
+                "endTime": "11:40",
+                "subject": "л. Психология управления личностными ресурсами",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "ПИ-811",
+                        "room": "412",
+                        "additional": "1"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 3,
+                "startTime": "11:50",
+                "endTime": "13:20",
+                "subject": "л. Психология управления личностными ресурсами",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "ПИ-811",
+                        "room": "412",
+                        "additional": "1"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "пр. Психология управленческой деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "УП-821",
+                        "room": "605",
+                        "additional": "1"
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "пр. Психология управленческой деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "УП-821",
+                        "room": "605",
+                        "additional": "1"
+                    }
+                ],
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
@@ -414,19 +488,7 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-4110",
-                        "room": "603",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-414",
-                        "room": "603",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-4111",
+                        "group": "ЭК-4112",
                         "room": "603",
                         "additional": "1"
                     },
@@ -438,19 +500,31 @@
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-412",
+                        "group": "ЭК-4110",
                         "room": "603",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-4112",
+                        "group": "ЭК-4111",
                         "room": "603",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
                         "group": "ЭК-411",
+                        "room": "603",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "ЭК-414",
+                        "room": "603",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "ЭК-412",
                         "room": "603",
                         "additional": "1"
                     }
@@ -507,13 +581,7 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-444",
-                        "room": "602",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
-                        "group": "МО-441",
+                        "group": "СТ-441",
                         "room": "602",
                         "additional": "1"
                     },
@@ -525,7 +593,13 @@
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "СТ-441",
+                        "group": "МО-441",
+                        "room": "602",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "ЭК-444",
                         "room": "602",
                         "additional": "1"
                     }
@@ -588,13 +662,13 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-411",
+                        "group": "ЭК-414",
                         "room": "555",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-414",
+                        "group": "ЭК-411",
                         "room": "555",
                         "additional": "1"
                     }
@@ -611,13 +685,13 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-4112",
+                        "group": "ЭК-412",
                         "room": "502",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-412",
+                        "group": "ЭК-4112",
                         "room": "502",
                         "additional": "1"
                     }
@@ -708,6 +782,12 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
+                        "group": "ЭК-449",
+                        "room": "429",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
                         "group": "СТ-441",
                         "room": "429",
                         "additional": "1"
@@ -715,12 +795,6 @@
                     {
                         "teacher": "доц.Волочай А.В.",
                         "group": "ЭК-444",
-                        "room": "429",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-449",
                         "room": "429",
                         "additional": "1"
                     },
@@ -795,19 +869,7 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-4110",
-                        "room": "603",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
                         "group": "ЭК-414",
-                        "room": "603",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
-                        "group": "СТ-411",
                         "room": "603",
                         "additional": "1"
                     },
@@ -819,7 +881,19 @@
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-4111",
+                        "group": "ЭК-412",
+                        "room": "603",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "ЭК-4110",
+                        "room": "603",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "СТ-411",
                         "room": "603",
                         "additional": "1"
                     },
@@ -831,7 +905,7 @@
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-412",
+                        "group": "ЭК-4111",
                         "room": "603",
                         "additional": "1"
                     }
@@ -888,7 +962,7 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "МО-441",
+                        "group": "ЭК-449",
                         "room": "602",
                         "additional": "1"
                     },
@@ -900,13 +974,13 @@
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-449",
+                        "group": "СТ-441",
                         "room": "602",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "СТ-441",
+                        "group": "МО-441",
                         "room": "602",
                         "additional": "1"
                     }
@@ -969,13 +1043,13 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-411",
+                        "group": "ЭК-414",
                         "room": "555",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-414",
+                        "group": "ЭК-411",
                         "room": "555",
                         "additional": "1"
                     }
@@ -992,13 +1066,13 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-4112",
+                        "group": "ЭК-412",
                         "room": "502",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-412",
+                        "group": "ЭК-4112",
                         "room": "502",
                         "additional": "1"
                     }
@@ -1089,12 +1163,6 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "СТ-441",
-                        "room": "429",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
                         "group": "ЭК-449",
                         "room": "429",
                         "additional": "1"
@@ -1108,6 +1176,12 @@
                     {
                         "teacher": "доц.Волочай А.В.",
                         "group": "ЭК-444",
+                        "room": "429",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "СТ-441",
                         "room": "429",
                         "additional": "1"
                     }
@@ -1147,13 +1221,13 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-449",
+                        "group": "ЭК-444",
                         "room": "523",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-444",
+                        "group": "ЭК-449",
                         "room": "523",
                         "additional": "1"
                     }
@@ -1176,13 +1250,13 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "СТ-411",
+                        "group": "ЭК-4111",
                         "room": "603",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-4110",
+                        "group": "СТ-411",
                         "room": "603",
                         "additional": "1"
                     },
@@ -1194,19 +1268,19 @@
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-414",
-                        "room": "603",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
                         "group": "ЭК-4112",
                         "room": "603",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-4111",
+                        "group": "ЭК-414",
+                        "room": "603",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "ЭК-4110",
                         "room": "603",
                         "additional": "1"
                     },
@@ -1269,13 +1343,13 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-444",
+                        "group": "ЭК-449",
                         "room": "602",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "СТ-441",
+                        "group": "ЭК-444",
                         "room": "602",
                         "additional": "1"
                     },
@@ -1287,7 +1361,7 @@
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-449",
+                        "group": "СТ-441",
                         "room": "602",
                         "additional": "1"
                     }
@@ -1350,13 +1424,13 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-411",
+                        "group": "ЭК-414",
                         "room": "555",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-414",
+                        "group": "ЭК-411",
                         "room": "555",
                         "additional": "1"
                     }
@@ -1470,7 +1544,7 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "СТ-441",
+                        "group": "МО-441",
                         "room": "429",
                         "additional": "1"
                     },
@@ -1488,7 +1562,7 @@
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "МО-441",
+                        "group": "СТ-441",
                         "room": "429",
                         "additional": "1"
                     }
@@ -1557,18 +1631,6 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-411",
-                        "room": "603",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-4110",
-                        "room": "603",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
                         "group": "ЭК-4112",
                         "room": "603",
                         "additional": "1"
@@ -1581,13 +1643,25 @@
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "СТ-411",
+                        "group": "ЭК-4110",
+                        "room": "603",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "ЭК-411",
                         "room": "603",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
                         "group": "ЭК-4111",
+                        "room": "603",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "СТ-411",
                         "room": "603",
                         "additional": "1"
                     },
@@ -1650,6 +1724,12 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
+                        "group": "МО-441",
+                        "room": "602",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
                         "group": "ЭК-449",
                         "room": "602",
                         "additional": "1"
@@ -1663,12 +1743,6 @@
                     {
                         "teacher": "доц.Волочай А.В.",
                         "group": "СТ-441",
-                        "room": "602",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
-                        "group": "МО-441",
                         "room": "602",
                         "additional": "1"
                     }
@@ -1731,13 +1805,13 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-414",
+                        "group": "ЭК-411",
                         "room": "555",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-411",
+                        "group": "ЭК-414",
                         "room": "555",
                         "additional": "1"
                     }
@@ -1863,13 +1937,13 @@
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-444",
+                        "group": "СТ-441",
                         "room": "429",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "СТ-441",
+                        "group": "ЭК-444",
                         "room": "429",
                         "additional": "1"
                     }
@@ -1909,13 +1983,13 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-449",
+                        "group": "ЭК-444",
                         "room": "523",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-444",
+                        "group": "ЭК-449",
                         "room": "523",
                         "additional": "1"
                     }
@@ -1944,13 +2018,13 @@
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-4112",
+                        "group": "ЭК-4110",
                         "room": "603",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-4110",
+                        "group": "ЭК-4111",
                         "room": "603",
                         "additional": "1"
                     },
@@ -1974,7 +2048,7 @@
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-4111",
+                        "group": "ЭК-4112",
                         "room": "603",
                         "additional": "1"
                     }
@@ -2037,13 +2111,13 @@
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-449",
+                        "group": "СТ-441",
                         "room": "602",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "СТ-441",
+                        "group": "ЭК-449",
                         "room": "602",
                         "additional": "1"
                     },
@@ -2112,13 +2186,13 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-411",
+                        "group": "ЭК-414",
                         "room": "555",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-414",
+                        "group": "ЭК-411",
                         "room": "555",
                         "additional": "1"
                     }
@@ -2135,13 +2209,13 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-412",
+                        "group": "ЭК-4112",
                         "room": "502",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-4112",
+                        "group": "ЭК-412",
                         "room": "502",
                         "additional": "1"
                     }
@@ -2232,6 +2306,12 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
+                        "group": "МО-441",
+                        "room": "429",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
                         "group": "СТ-441",
                         "room": "429",
                         "additional": "1"
@@ -2245,12 +2325,6 @@
                     {
                         "teacher": "доц.Волочай А.В.",
                         "group": "ЭК-444",
-                        "room": "429",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
-                        "group": "МО-441",
                         "room": "429",
                         "additional": "1"
                     }
@@ -2319,6 +2393,24 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
+                        "group": "ЭК-412",
+                        "room": "603",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "ЭК-414",
+                        "room": "603",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "ЭК-4112",
+                        "room": "603",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
                         "group": "ЭК-4111",
                         "room": "603",
                         "additional": "1"
@@ -2331,31 +2423,13 @@
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-414",
-                        "room": "603",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
                         "group": "ЭК-4110",
                         "room": "603",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-4112",
-                        "room": "603",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
                         "group": "ЭК-411",
-                        "room": "603",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-412",
                         "room": "603",
                         "additional": "1"
                     }
@@ -2412,12 +2486,6 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-444",
-                        "room": "602",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Волочай А.В.",
                         "group": "СТ-441",
                         "room": "602",
                         "additional": "1"
@@ -2431,6 +2499,12 @@
                     {
                         "teacher": "доц.Волочай А.В.",
                         "group": "МО-441",
+                        "room": "602",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "доц.Волочай А.В.",
+                        "group": "ЭК-444",
                         "room": "602",
                         "additional": "1"
                     }
@@ -2493,13 +2567,13 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-414",
+                        "group": "ЭК-411",
                         "room": "555",
                         "additional": "1"
                     },
                     {
                         "teacher": "доц.Волочай А.В.",
-                        "group": "ЭК-411",
+                        "group": "ЭК-414",
                         "room": "555",
                         "additional": "1"
                     }
