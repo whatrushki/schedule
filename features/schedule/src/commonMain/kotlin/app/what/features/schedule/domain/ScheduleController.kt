@@ -120,8 +120,8 @@ class ScheduleController(
         
         settings.lastSearch.set(search)
         
-        // 1. If cache is enabled and group didn't change, immediately display cached schedule with Loading state
-        if (useCache && !groupChanged) {
+        // 1. If cache is enabled, immediately display cached schedule with Loading state
+        if (useCache) {
             val cached = apiRepository.getSchedule(
                 search,
                 useCache = true,
@@ -133,14 +133,15 @@ class ScheduleController(
                     copy(
                         selectedSearch = search,
                         schedules = cached.schedules,
-                        scheduleState = RemoteState.Loading
+                        scheduleState = RemoteState.Loading,
+                        lastModified = cached.lastModified
                     )
                 }
             } else {
                 updateState {
                     copy(
                         selectedSearch = search,
-                        schedules = emptyList(),
+                        schedules = if (groupChanged) emptyList() else viewState.schedules,
                         scheduleState = RemoteState.Loading
                     )
                 }
@@ -177,18 +178,30 @@ class ScheduleController(
         
         updateState {
             when (data) {
-                ScheduleResponse.UpToDate -> copy(scheduleState = RemoteState.Success)
+                ScheduleResponse.UpToDate -> copy(
+                    scheduleState = RemoteState.Success,
+                    isOffline = false
+                )
                 is ScheduleResponse.Available -> copy(
                     scheduleState = RemoteState.Success,
-                    schedules = data.schedules
+                    schedules = data.schedules,
+                    lastModified = data.lastModified,
+                    isOffline = false
                 )
-                is ScheduleResponse.Error -> copy(
-                    scheduleState = if (viewState.schedules.isNotEmpty()) RemoteState.Success else RemoteState.Error(data.exception),
-                    schedules = data.cachedSchedules?.takeIf { it.isNotEmpty() } ?: viewState.schedules
-                )
+                is ScheduleResponse.Error -> {
+                    val availableSchedules = data.cachedSchedules?.takeIf { it.isNotEmpty() }
+                        ?: viewState.schedules.takeIf { it.isNotEmpty() }
+                    copy(
+                        scheduleState = if (availableSchedules != null) RemoteState.Success else RemoteState.Error(data.exception),
+                        schedules = availableSchedules ?: emptyList(),
+                        lastModified = data.lastModified ?: viewState.lastModified,
+                        isOffline = availableSchedules != null
+                    )
+                }
                 ScheduleResponse.Empty -> copy(
                     scheduleState = if (viewState.schedules.isNotEmpty()) RemoteState.Success else RemoteState.Empty,
-                    schedules = viewState.schedules
+                    schedules = viewState.schedules,
+                    isOffline = false
                 )
             }
         }

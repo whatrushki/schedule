@@ -24,6 +24,8 @@ import app.what.schedule.utils.LogScope
 import app.what.schedule.utils.buildTag
 import coil3.ImageLoader
 import coil3.SingletonImageLoader
+import coil3.disk.DiskCache
+import coil3.disk.directory
 import coil3.network.ktor3.KtorNetworkFetcherFactory
 import coil3.request.crossfade
 import com.google.firebase.Firebase
@@ -92,6 +94,12 @@ class ScheduleApp : Application() {
                 .crossfade(true)
                 .components {
                     add(KtorNetworkFetcherFactory({ koin.get<HttpClient>() }))
+                }
+                .diskCache {
+                    DiskCache.Builder()
+                        .directory(cacheDir.resolve("image_cache"))
+                        .maxSizeBytes(50L * 1024 * 1024)
+                        .build()
                 }
                 .build()
         }

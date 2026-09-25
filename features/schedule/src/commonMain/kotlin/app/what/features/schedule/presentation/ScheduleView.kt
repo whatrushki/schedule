@@ -26,16 +26,20 @@ import androidx.compose.foundation.pager.PagerState
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.shapes
 import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
+import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import app.what.foundation.ui.AppPullToRefresh
 import androidx.compose.runtime.Composable
@@ -81,6 +85,7 @@ import app.what.schedule.features.schedule.presentation.components.ViewType
 import app.what.schedule.ui.components.Fallback
 import app.what.schedule.ui.components.ScheduleSearchPane
 import app.what.schedule.ui.theme.icons.WHATIcons
+import app.what.schedule.ui.theme.icons.filled.Network
 import app.what.schedule.ui.theme.icons.filled.Run
 import app.what.schedule.ui.theme.icons.filled.Warn
 import app.what.foundation.utils.Analytics
@@ -276,6 +281,42 @@ fun ScheduleView(
                         color = colorScheme.primary,
                         trackColor = colorScheme.surfaceVariant
                     )
+                }
+            }
+
+            if (state.value.isOffline && state.value.schedules.isNotEmpty()) {
+                Surface(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 4.dp),
+                    shape = RoundedCornerShape(12.dp),
+                    color = colorScheme.surfaceVariant.copy(alpha = 0.7f),
+                    onClick = { listener(ScheduleEvent.OnRefresh) }
+                ) {
+                    Row(
+                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        Icon(
+                            imageVector = WHATIcons.Network,
+                            contentDescription = "Оффлайн",
+                            modifier = Modifier.size(16.dp),
+                            tint = colorScheme.primary
+                        )
+                        Text(
+                            text = "Оффлайн • кэш от ${formatLastModified(state.value.lastModified)}",
+                            style = typography.labelMedium,
+                            color = colorScheme.onSurfaceVariant,
+                            modifier = Modifier.weight(1f)
+                        )
+                        Text(
+                            text = "Обновить",
+                            style = typography.labelSmall,
+                            color = colorScheme.primary,
+                            fontWeight = FontWeight.SemiBold
+                        )
+                    }
                 }
             }
             
@@ -521,4 +562,26 @@ fun ErrorContent(
             )
         }
     }
+}
+
+private fun formatLastModified(dt: kotlinx.datetime.LocalDateTime?): String {
+    if (dt == null) return "ранее"
+    val day = dt.dayOfMonth
+    val monthName = when (dt.monthNumber) {
+        1 -> "янв"
+        2 -> "фев"
+        3 -> "мар"
+        4 -> "апр"
+        5 -> "мая"
+        6 -> "июн"
+        7 -> "июл"
+        8 -> "авг"
+        9 -> "сен"
+        10 -> "окт"
+        11 -> "ноя"
+        12 -> "дек"
+        else -> ""
+    }
+    val time = "${dt.hour.toString().padStart(2, '0')}:${dt.minute.toString().padStart(2, '0')}"
+    return "$day $monthName, $time"
 }
