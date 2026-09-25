@@ -8,5 +8,5 @@ object AppConstants {
     const val APP_OWNER_GITHUB_URL = "https://github.com/topanim"
     const val APP_OWNER_TELEGRAM_URL = "https://t.me/whatrushik"
     const val APP_GITHUB_URL = "https://github.com/whatrushki/schedule"
-    const val VERSION_NAME = "1.3.12"
+    const val VERSION_NAME = "1.3.13"
 }
