@@ -2,6 +2,7 @@ package app.what.schedule.data.remote.providers.rinh
 
 import app.what.data.adapters.AdaptedNewsService
 import app.what.data.adapters.AdaptedScheduleService
+import app.what.data.remote.CloudScheduleClient
 import app.what.foundation.core.Feature
 import app.what.domain.models.MetaInfo
 import app.what.domain.models.SourceType
@@ -24,18 +25,20 @@ private val RINHMetadata
     )
 
 class RINH(
-    provider: RINHProvider
+    provider: RINHProvider,
+    cloudClient: CloudScheduleClient? = null
 ) : Institution {
     companion object Factory : Institution.Factory, KoinComponent {
         override val metadata by lazy { RINHMetadata }
         override fun create(): Institution {
             val client: HttpClient = get()
-            return RINH(RINHProvider(client))
+            val cloudClient = CloudScheduleClient(metadata.id, client)
+            return RINH(RINHProvider(client), cloudClient)
         }
     }
 
     override val metadata: MetaInfo = Factory.metadata
-    override val scheduleService: ScheduleService = AdaptedScheduleService(provider.scheduleClient)
+    override val scheduleService: ScheduleService = AdaptedScheduleService(provider.scheduleClient, cloudClient)
     override val newsService: NewsService = AdaptedNewsService(provider.newsClient)
     override val accountFeature: Feature<*, *>? = null
 }

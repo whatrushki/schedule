@@ -15,6 +15,7 @@ interface ScheduleRepository {
         search: ScheduleSearch,
         useCache: Boolean,
         requiresData: Boolean = true,
-        cloudSync: Boolean = false
+        cloudSync: Boolean = false,
+        forceLive: Boolean = false
     ): ScheduleResponse
 }

@@ -147,14 +147,15 @@ class ScheduleRepositoryImpl(
         search: ScheduleSearch,
         useCache: Boolean,
         requiresData: Boolean,
-        cloudSync: Boolean
+        cloudSync: Boolean,
+        forceLive: Boolean
     ): ScheduleResponse {
         Analytics.logScheduleRequest(search.name, search::class.simpleName.toString())
         val scheduleTag = buildTag(LogScope.SCHEDULE, LogCat.DB)
         val searchType = if (search is ScheduleSearch.Group) "группа" else "преподаватель"
         Auditor.debug(
             scheduleTag,
-            "Запрос расписания для $searchType: ${search.id}, кеш: $useCache, требуются данные: $requiresData"
+            "Запрос расписания для $searchType: ${search.id}, кеш: $useCache, требуются данные: $requiresData, forceLive: $forceLive"
         )
         
         Auditor.debug(scheduleTag, "search_type=$searchType, search_id=${search.id}")
@@ -165,6 +166,9 @@ class ScheduleRepositoryImpl(
         val additional = mutableMapOf<String, Any?>()
         if (cloudSync && lastRequest != null) {
             additional["lastModified"] = lastRequest.lastModified
+        }
+        if (forceLive) {
+            additional["forceLive"] = true
         }
 
         if (useCache && cache != null) {

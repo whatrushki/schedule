@@ -2,6 +2,7 @@ package app.what.schedule.data.remote.providers.sfedu
 
 import app.what.data.adapters.AdaptedNewsService
 import app.what.data.adapters.AdaptedScheduleService
+import app.what.data.remote.CloudScheduleClient
 import app.what.foundation.core.Feature
 import app.what.domain.models.MetaInfo
 import app.what.domain.models.SourceType
@@ -24,18 +25,20 @@ private val SFEDUMetadata
     )
 
 class SFEDU(
-    provider: SFEDUProvider
+    provider: SFEDUProvider,
+    cloudClient: CloudScheduleClient? = null
 ) : Institution {
     companion object Factory : Institution.Factory, KoinComponent {
         override val metadata by lazy { SFEDUMetadata }
         override fun create(): Institution {
             val client: HttpClient = get()
-            return SFEDU(SFEDUProvider(client))
+            val cloudClient = CloudScheduleClient(metadata.id, client)
+            return SFEDU(SFEDUProvider(client), cloudClient)
         }
     }
 
     override val metadata: MetaInfo = Factory.metadata
-    override val scheduleService: ScheduleService = AdaptedScheduleService(provider.scheduleClient)
+    override val scheduleService: ScheduleService = AdaptedScheduleService(provider.scheduleClient, cloudClient)
     override val newsService: NewsService = AdaptedNewsService(provider.newsClient)
     override val accountFeature: Feature<*, *>? = null
 }

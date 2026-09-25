@@ -2,6 +2,7 @@ package app.what.schedule.data.remote.providers.rksi
 
 import app.what.data.adapters.AdaptedNewsService
 import app.what.data.adapters.AdaptedScheduleService
+import app.what.data.remote.CloudScheduleClient
 import app.what.schedule.core.cache.FileCache
 import app.what.domain.models.MetaInfo
 import app.what.domain.models.SourceType
@@ -23,7 +24,8 @@ private val RKSIMetadata
     )
 
 class RKSI(
-    provider: RKSIProvider
+    provider: RKSIProvider,
+    cloudClient: CloudScheduleClient? = null
 ) : Institution {
     companion object Factory : Institution.Factory, KoinComponent {
         override fun create(): Institution {
@@ -31,13 +33,14 @@ class RKSI(
             val fileCache: FileCache = get()
             val xlsxReader = getKoin().getOrNull<app.what.schedule.rksi.parser.XlsxReader>()
             val provider = RKSIProvider(client, fileCache, xlsxReader = xlsxReader)
-            return RKSI(provider)
+            val cloudClient = CloudScheduleClient(metadata.id, client)
+            return RKSI(provider, cloudClient)
         }
         override val metadata: MetaInfo by lazy { RKSIMetadata }
     }
 
     override val metadata: MetaInfo = Factory.metadata
-    override val scheduleService: ScheduleService = AdaptedScheduleService(provider.scheduleClient)
+    override val scheduleService: ScheduleService = AdaptedScheduleService(provider.scheduleClient, cloudClient)
     override val newsService: NewsService = AdaptedNewsService(provider.newsClient)
     override val accountFeature: Feature<*, *>? = null
 }

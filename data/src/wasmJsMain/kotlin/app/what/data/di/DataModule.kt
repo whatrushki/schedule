@@ -36,7 +36,7 @@ import app.what.schedule.data.local.database.InMemoryAppDatabaseSource
 import app.what.data.repositories.ScheduleRepositoryImpl
 
 import app.what.data.adapters.AdaptedScheduleService
-import app.what.data.remote.WebScheduleClient
+import app.what.data.remote.CloudScheduleClient
 import app.what.domain.models.MetaInfo
 import app.what.foundation.services.auto_update.AppUpdateManager
 import app.what.foundation.services.auto_update.UpdateConfig
@@ -55,12 +55,20 @@ class WebInstitutionFactory(
 
     override fun create(): Institution {
         val baseInst = base.create()
-        val webClient = WebScheduleClient(
+        val customUrls = try {
+            val origin = kotlinx.browser.window.location.origin
+            val path = kotlinx.browser.window.location.pathname.trimEnd('/')
+            listOf("$origin$path/schedule/${metadata.id}")
+        } catch (_: Exception) {
+            emptyList()
+        }
+        val cloudClient = CloudScheduleClient(
             institutionId = metadata.id,
-            httpClient = httpClient
+            httpClient = httpClient,
+            customBaseUrls = customUrls
         )
         return object : Institution by baseInst {
-            override val scheduleService: ScheduleService = AdaptedScheduleService(webClient)
+            override val scheduleService: ScheduleService = AdaptedScheduleService(cloudClient)
             override val newsService: NewsService = object : NewsService {}
         }
     }

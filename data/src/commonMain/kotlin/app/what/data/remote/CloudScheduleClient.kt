@@ -13,12 +13,21 @@ import io.ktor.client.request.get
 import io.ktor.client.statement.bodyAsText
 import io.ktor.http.encodeURLPathPart
 import io.ktor.http.isSuccess
-import kotlinx.browser.window
+import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
-class WebScheduleClient(
+@Serializable
+data class CloudInstitutionMeta(
+    val lastSync: String? = null,
+    val institution: String? = null,
+    val groupCount: Int = 0,
+    val teacherCount: Int = 0
+)
+
+class CloudScheduleClient(
     val institutionId: String,
-    private val httpClient: HttpClient
+    private val httpClient: HttpClient,
+    private val customBaseUrls: List<String> = emptyList()
 ) : ScheduleClient {
 
     private val json = Json {
@@ -30,24 +39,19 @@ class WebScheduleClient(
 
     private var cachedGroups: List<GroupDto>? = null
     private var cachedTeachers: List<TeacherDto>? = null
+    private var cachedMeta: CloudInstitutionMeta? = null
 
-    private fun getBaseUrls(): List<String> {
-        val list = mutableListOf<String>()
-        try {
-            val origin = window.location.origin
-            val path = window.location.pathname.trimEnd('/')
-            list.add("$origin$path/schedule/$institutionId")
-        } catch (_: Exception) {}
-        list.add("https://raw.githubusercontent.com/whatrushki/schedule/gh-pages/schedule/$institutionId")
-        list.add("https://raw.githubusercontent.com/whatrushki/schedule/master/.github/schedule/$institutionId")
-        return list
+    private fun getBaseUrls(): List<String> = buildList {
+        addAll(customBaseUrls)
+        add("https://raw.githubusercontent.com/whatrushki/schedule/gh-pages/schedule/$institutionId")
+        add("https://cdn.jsdelivr.net/gh/whatrushki/schedule@gh-pages/schedule/$institutionId")
     }
 
     private suspend fun fetchJson(relativePath: String): String? {
         val urls = getBaseUrls().map { "$it/$relativePath" }
         for (url in urls) {
             try {
-                Auditor.debug(tag, "[WebScheduleClient] Fetching: $url")
+                Auditor.debug(tag, "[CloudScheduleClient] Fetching: $url")
                 val response = httpClient.get(url)
                 if (response.status.isSuccess()) {
                     val text = response.bodyAsText()
@@ -55,13 +59,26 @@ class WebScheduleClient(
                         return text
                     }
                 } else {
-                    Auditor.warn(tag, "[WebScheduleClient] HTTP ${response.status.value} for: $url")
+                    Auditor.warn(tag, "[CloudScheduleClient] HTTP ${response.status.value} for: $url")
                 }
             } catch (e: Exception) {
-                Auditor.warn(tag, "[WebScheduleClient] Failed to fetch $url: ${e.message}")
+                Auditor.warn(tag, "[CloudScheduleClient] Failed to fetch $url: ${e.message}")
             }
         }
         return null
+    }
+
+    suspend fun getMeta(): CloudInstitutionMeta? {
+        cachedMeta?.let { return it }
+        val text = fetchJson("meta.json") ?: return null
+        return try {
+            val meta = json.decodeFromString<CloudInstitutionMeta>(text)
+            cachedMeta = meta
+            meta
+        } catch (e: Exception) {
+            Auditor.err(tag, "[CloudScheduleClient] Error parsing meta.json", e)
+            null
+        }
     }
 
     override suspend fun getGroups(): List<GroupDto> {
@@ -72,7 +89,7 @@ class WebScheduleClient(
             cachedGroups = groups
             groups
         } catch (e: Exception) {
-            Auditor.err(tag, "[WebScheduleClient] Error parsing groups.json", e)
+            Auditor.err(tag, "[CloudScheduleClient] Error parsing groups.json", e)
             emptyList()
         }
     }
@@ -85,7 +102,7 @@ class WebScheduleClient(
             cachedTeachers = teachers
             teachers
         } catch (e: Exception) {
-            Auditor.err(tag, "[WebScheduleClient] Error parsing teachers.json", e)
+            Auditor.err(tag, "[CloudScheduleClient] Error parsing teachers.json", e)
             emptyList()
         }
     }
@@ -113,7 +130,7 @@ class WebScheduleClient(
                 return try {
                     json.decodeFromString<List<DayScheduleDto>>(text)
                 } catch (e: Exception) {
-                    Auditor.err(tag, "[WebScheduleClient] Error parsing schedule for $safeName", e)
+                    Auditor.err(tag, "[CloudScheduleClient] Error parsing schedule for $safeName", e)
                     emptyList()
                 }
             }
@@ -143,7 +160,7 @@ class WebScheduleClient(
                 return try {
                     json.decodeFromString<List<DayScheduleDto>>(text)
                 } catch (e: Exception) {
-                    Auditor.err(tag, "[WebScheduleClient] Error parsing schedule for $safeKey", e)
+                    Auditor.err(tag, "[CloudScheduleClient] Error parsing schedule for $safeKey", e)
                     emptyList()
                 }
             }

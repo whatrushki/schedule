@@ -2,6 +2,7 @@ package app.what.schedule.data.remote.providers.dgtu
 
 import app.what.data.adapters.AdaptedNewsService
 import app.what.data.adapters.AdaptedScheduleService
+import app.what.data.remote.CloudScheduleClient
 import app.what.foundation.core.Feature
 import app.what.domain.models.MetaInfo
 import app.what.domain.models.SourceType
@@ -23,18 +24,20 @@ private val DGTUProviderMetadata
     )
 
 class DGTU(
-    val provider: DGTUProvider
+    val provider: DGTUProvider,
+    val cloudClient: CloudScheduleClient? = null
 ) : Institution, KoinComponent {
     companion object Factory : Institution.Factory, KoinComponent {
         override val metadata by lazy { DGTUProviderMetadata }
         override fun create(): Institution {
             val client: HttpClient = get()
-            return DGTU(DGTUProvider(client))
+            val cloudClient = CloudScheduleClient(metadata.id, client)
+            return DGTU(DGTUProvider(client), cloudClient)
         }
     }
 
     override val metadata: MetaInfo = Factory.metadata
-    override val scheduleService: ScheduleService = AdaptedScheduleService(provider.scheduleClient)
+    override val scheduleService: ScheduleService = AdaptedScheduleService(provider.scheduleClient, cloudClient)
     override val newsService: NewsService = AdaptedNewsService(provider.newsClient)
     override val accountFeature: Feature<*, *>?
         get() = getKoin().getOrNull(named("dgtuAccount"))
