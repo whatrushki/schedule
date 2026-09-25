@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Организация торговли",
-                "otUnits": [
-                    {
-                        "teacher": "Доценко Л.А.",
-                        "group": "ТД-31",
-                        "room": "41",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Автоматизация торгово-технологических процессов",
-                "otUnits": [
-                    {
-                        "teacher": "Доценко Л.А.",
-                        "group": "ТД-31",
-                        "room": "41",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Крылова О.В.",
-                        "group": "ТД-31",
-                        "room": "34",
-                        "additional": "2"
-                    },
-                    {
-                        "teacher": "Марченко С.П.",
-                        "group": "ТД-31",
-                        "room": "акт.зал",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-09-26",
         "scheduleType": "COMMON",
         "lessons": [
@@ -81,7 +18,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-26",
@@ -98,24 +35,58 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-26",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Маркетинговые исследования",
+                "subject": "Организация и управление коммерческой деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Згонникова Т.Ф.",
+                        "teacher": "Шумина О.О.",
                         "group": "ТД-31",
-                        "room": "29",
+                        "room": "17",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-26",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Организация и управление коммерческой деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Шумина О.О.",
+                        "group": "ТД-31",
+                        "room": "17",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-26",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Растороцкий В.В.",
+                        "group": "ТД-31",
+                        "room": "с/з1",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

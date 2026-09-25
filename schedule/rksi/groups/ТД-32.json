@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Марченко С.П.",
-                        "group": "ТД-32",
-                        "room": "33",
-                        "additional": "2"
-                    },
-                    {
-                        "teacher": "Савченко А.А.",
-                        "group": "ТД-32",
-                        "room": "38",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Организация торговли",
-                "otUnits": [
-                    {
-                        "teacher": "Шумина О.О.",
-                        "group": "ТД-32",
-                        "room": "17",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Организация торговли",
-                "otUnits": [
-                    {
-                        "teacher": "Шумина О.О.",
-                        "group": "ТД-32",
-                        "room": "17",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-26",
         "scheduleType": "COMMON",
         "lessons": [
@@ -81,24 +18,41 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-26",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Организация продаж информационно-коммуникационных продуктов и технологий и координация работы с клие",
+                "subject": "Организация торговли",
                 "otUnits": [
                     {
-                        "teacher": "Згонникова Т.Ф.",
+                        "teacher": "Шумина О.О.",
                         "group": "ТД-32",
-                        "room": "29",
+                        "room": "17",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-26",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Растороцкий В.В.",
+                        "group": "ТД-32",
+                        "room": "с/з2",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

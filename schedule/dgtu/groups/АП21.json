@@ -949,19 +949,19 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "пр Русский язык как иностранный",
+                "subject": "пр Безопасность жизнедеятельности",
                 "otUnits": [
-                    {
-                        "teacher": "Сомоева С. Р.",
-                        "group": "АП21",
-                        "room": "220в",
-                        "additional": "1"
-                    },
                     {
                         "teacher": "Климов П. В.",
                         "group": "АП21",
                         "room": "024",
                         "additional": "8"
+                    },
+                    {
+                        "teacher": "Сомоева С. Р.",
+                        "group": "АП21",
+                        "room": "220в",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
@@ -975,21 +975,32 @@
         "lessons": [
             {
                 "date": "2026-09-26",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "лаб Безопасность жизнедеятельности",
                 "otUnits": [
                     {
                         "teacher": "Климов П. В.",
                         "group": "АП21",
-                        "room": "024",
+                        "room": "208",
                         "additional": "8"
-                    },
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-26",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Физика",
+                "otUnits": [
                     {
                         "teacher": "Пруцакова Н. В.",
                         "group": "АП21",
-                        "room": "490",
+                        "room": "402",
                         "additional": "1"
                     }
                 ],
