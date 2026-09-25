@@ -178,7 +178,7 @@
                 "otUnits": [
                     {
                         "teacher": "Пищик В. И.",
-                        "group": "МОЗП16, МОЗП14, МОЗП17, МОЗП11",
+                        "group": "МОЗП17, МОЗП11, МОЗП14, МОЗП16",
                         "room": "374",
                         "additional": "1"
                     }
@@ -458,9 +458,32 @@
                 "otUnits": [
                     {
                         "teacher": "Пищик В. И.",
-                        "group": "МОЗП16, МОЗП14, МОЗП17, МОЗП11",
+                        "group": "МОЗП17, МОЗП11, МОЗП14, МОЗП16",
                         "room": "310",
                         "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-25",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-25",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Психология толпы и массовых беспорядков",
+                "otUnits": [
+                    {
+                        "teacher": "Пищик В. И.",
+                        "group": "ДПС51",
+                        "room": "808",
+                        "additional": "2"
                     }
                 ],
                 "type": "COMMON",
@@ -487,6 +510,29 @@
                     }
                 ],
                 "type": "UNKNOWN",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-01",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Эволюция психотерапии",
+                "otUnits": [
+                    {
+                        "teacher": "Пищик В. И.",
+                        "group": "МП11",
+                        "room": "273",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
                 "state": "COMMON"
             }
         ]

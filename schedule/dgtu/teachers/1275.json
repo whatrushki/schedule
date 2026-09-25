@@ -185,7 +185,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сафарьян О. А.",
-                        "group": "ВКБ41, ВКБ41",
+                        "group": "ВКБ41",
                         "room": "498",
                         "additional": "1"
                     }
@@ -202,7 +202,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сафарьян О. А.",
-                        "group": "ВКБ42, ВКБ42, ВКБ43, ВКБ43, ВКБ41, ВКБ41",
+                        "group": "ВКБ42, ВКБ43, ВКБ41",
                         "room": "238",
                         "additional": "1"
                     }
@@ -282,7 +282,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сафарьян О. А.",
-                        "group": "ВКБ41, ВКБ41",
+                        "group": "ВКБ41",
                         "room": "424",
                         "additional": "1"
                     }
@@ -299,7 +299,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сафарьян О. А.",
-                        "group": "ВКБ52, ВКБ52, ВКБ51, ВКБ51, ВКБ53, ВКБ53",
+                        "group": "ВКБ52, ВКБ53, ВКБ51",
                         "room": "492",
                         "additional": "1"
                     }
@@ -339,7 +339,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сафарьян О. А.",
-                        "group": "ВКБ42, ВКБ42, ВКБ43, ВКБ43, ВКБ41, ВКБ41",
+                        "group": "ВКБ42, ВКБ43, ВКБ41",
                         "room": "305",
                         "additional": "1"
                     }
@@ -419,7 +419,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сафарьян О. А.",
-                        "group": "ВКБ41, ВКБ41",
+                        "group": "ВКБ41",
                         "room": "310",
                         "additional": "1"
                     }
@@ -436,7 +436,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сафарьян О. А.",
-                        "group": "ВКБ52, ВКБ52, ВКБ51, ВКБ51, ВКБ53, ВКБ53",
+                        "group": "ВКБ52, ВКБ53, ВКБ51",
                         "room": "492",
                         "additional": "1"
                     }
@@ -493,7 +493,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сафарьян О. А.",
-                        "group": "ВКБ42, ВКБ42, ВКБ43, ВКБ43, ВКБ41, ВКБ41",
+                        "group": "ВКБ42, ВКБ43, ВКБ41",
                         "room": "305",
                         "additional": "1"
                     }
@@ -607,7 +607,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сафарьян О. А.",
-                        "group": "ВКБ52, ВКБ51, ВКБ53",
+                        "group": "ВКБ52, ВКБ53, ВКБ51",
                         "room": "492",
                         "additional": "1"
                     }
@@ -738,9 +738,66 @@
         ]
     },
     {
+        "date": "2026-09-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-30",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Методология научных исследований в отрасли",
+                "otUnits": [
+                    {
+                        "teacher": "Сафарьян О. А.",
+                        "group": "МИТ11",
+                        "room": "392",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-02",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-10-02",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Information protection (ВИК41), п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Сафарьян О. А.",
+                        "group": "ВИК41",
+                        "room": "Онлайн (ссылка)",
+                        "additional": "Главный"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Information protection (ВИК42), п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Сафарьян О. А.",
+                        "group": "ВИК42",
+                        "room": "Онлайн (ссылка)",
+                        "additional": "Главный"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-10-02",
                 "number": 4,
@@ -753,6 +810,126 @@
                         "group": "ВИК43",
                         "room": "424",
                         "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Information protection (ВИК41), п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Сафарьян О. А.",
+                        "group": "ВИК41",
+                        "room": "Онлайн (ссылка)",
+                        "additional": "Главный"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Information protection (ВИК42), п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Сафарьян О. А.",
+                        "group": "ВИК42",
+                        "room": "Онлайн (ссылка)",
+                        "additional": "Главный"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Information protection (ВИК43), п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Сафарьян О. А.",
+                        "group": "ВИК43",
+                        "room": "424",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-15",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-15",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лаб Information protection (ВИК43), п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Сафарьян О. А.",
+                        "group": "ВИК43",
+                        "room": "424",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-16",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Information protection (ВИК41), п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Сафарьян О. А.",
+                        "group": "ВИК41",
+                        "room": "Онлайн (ссылка)",
+                        "additional": "Главный"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Information protection (ВИК42), п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Сафарьян О. А.",
+                        "group": "ВИК42",
+                        "room": "Онлайн (ссылка)",
+                        "additional": "Главный"
                     }
                 ],
                 "type": "COMMON",
