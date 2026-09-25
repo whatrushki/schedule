@@ -61,7 +61,7 @@ import app.what.domain.models.ScheduleResponse
 import app.what.domain.models.ScheduleSearch
 import app.what.domain.repositories.ScheduleRepository
 import app.what.schedule.data.remote.utils.formatTime
-import app.what.schedule.widget.GlanceUtils.isSystemInDarkTheme
+import app.what.schedule.features.widget.GlanceUtils.isSystemInDarkTheme
 import app.what.foundation.utils.LogCat
 import app.what.foundation.utils.LogScope
 import app.what.foundation.utils.buildTag
@@ -82,42 +82,63 @@ private const val DAY_INDEX_KEY = "day_index"
 internal const val SEARCH_KEY = "search"
 private val MAX_PAGE_INDEX_KEY = ActionParameters.Key<Int>("max_index")
 
+/** Default brand color used as fallback for the dynamic color scheme. */
+private val DefaultBrandColor = Color(0xFF1F2137)
+
 class ScheduleWidget : GlanceAppWidget(), KoinComponent {
     private val settings: AppValues by inject()
     private val scheduleRepository: ScheduleRepository by inject()
     override val stateDefinition: GlanceStateDefinition<*> = PreferencesGlanceStateDefinition
-    
+
+    companion object {
+        /** Shared instance to avoid re-creating KoinComponent on every callback. */
+        val instance by lazy { ScheduleWidget() }
+    }
+
     override suspend fun provideGlance(context: Context, id: GlanceId) {
         val themeType = settings.themeType.get()
         val themeStyle = settings.themeStyle.get()
         val themeColor = settings.themeColor.get()
-        
+
         val prefs = getAppWidgetState(context, stateDefinition, id) as Preferences
         val search = prefs[stringPreferencesKey(SEARCH_KEY)]
-        val schedule = if (search == null) ScheduleResponse.Empty
-        else withContext(IO) {
-            scheduleRepository.getSchedule(
-                Json.decodeFromString<ScheduleSearch>(search),
-                useCache = true,
-                requiresData = true
-            )
+
+        val schedule: ScheduleResponse = if (search == null) {
+            ScheduleResponse.Empty
+        } else {
+            try {
+                withContext(IO) {
+                    scheduleRepository.getSchedule(
+                        Json.decodeFromString<ScheduleSearch>(search),
+                        useCache = true,
+                        requiresData = true
+                    )
+                }
+            } catch (e: Exception) {
+                val widgetTag = buildTag(LogScope.WIDGET, LogCat.UI)
+                Auditor.debug(widgetTag, "Ошибка загрузки расписания для виджета: ${e.message}")
+                ScheduleResponse.Error(
+                    cachedSchedules = null,
+                    lastModified = null,
+                    exception = e
+                )
+            }
         }
-        
+
         provideContent {
             val isDarkTheme = when (themeType) {
                 ThemeType.Dark -> true
                 ThemeType.System -> LocalContext.current.isSystemInDarkTheme()
                 else -> false
             }
-            
-            val defaultColor = Color(0xFF1F2137)
+
             val theme = ColorProviders(
                 when (themeStyle) {
-                    ThemeStyle.CustomColor -> DynamicScheme(themeColor?.let { Color(it) } ?: defaultColor, isDarkTheme)
-                    else -> DynamicScheme(defaultColor, isDarkTheme)
+                    ThemeStyle.CustomColor -> DynamicScheme(themeColor?.let { Color(it) } ?: DefaultBrandColor, isDarkTheme)
+                    else -> DynamicScheme(DefaultBrandColor, isDarkTheme)
                 }.toColorScheme(isAmoled = false)
             )
-            
+
             GlanceTheme(theme) {
                 val currentDayIndex = currentState(intPreferencesKey(DAY_INDEX_KEY)) ?: 0
                 when (schedule) {
@@ -125,12 +146,89 @@ class ScheduleWidget : GlanceAppWidget(), KoinComponent {
                         schedule.schedules,
                         currentDayIndex
                     )
-                    
-                    else -> Unit
+
+                    is ScheduleResponse.Error -> {
+                        // Try to show cached schedules as fallback
+                        val cached = schedule.cachedSchedules
+                        if (!cached.isNullOrEmpty()) {
+                            WidgetContent(cached, currentDayIndex)
+                        } else {
+                            WidgetErrorContent(
+                                message = schedule.exception.message ?: "Неизвестная ошибка"
+                            )
+                        }
+                    }
+
+                    else -> WidgetEmptyContent(
+                        isConfigured = search != null
+                    )
                 }
-                
             }
         }
+    }
+}
+
+/**
+ * Error state: shown when schedule failed to load.
+ */
+@Composable
+fun WidgetErrorContent(message: String) {
+    Column(
+        modifier = GlanceModifier
+            .fillMaxSize()
+            .background(GlanceTheme.colors.widgetBackground)
+            .padding(16.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            "⚠️",
+            style = TextStyle(fontSize = 32.sp)
+        )
+        Spacer(modifier = GlanceModifier.height(8.dp))
+        Text(
+            "Не удалось загрузить расписание",
+            style = TextStyle(
+                color = GlanceTheme.colors.onBackground,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Medium
+            )
+        )
+        Spacer(modifier = GlanceModifier.height(4.dp))
+        Text(
+            message,
+            style = TextStyle(
+                color = GlanceTheme.colors.secondary,
+                fontSize = 12.sp
+            ),
+            maxLines = 2
+        )
+    }
+}
+
+/**
+ * Empty state: shown when no schedule data or widget not configured.
+ */
+@Composable
+fun WidgetEmptyContent(isConfigured: Boolean) {
+    Column(
+        modifier = GlanceModifier
+            .fillMaxSize()
+            .background(GlanceTheme.colors.widgetBackground)
+            .padding(16.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Image(ImageProvider(R.drawable.il_totoro_friends), contentDescription = "Empty")
+        Spacer(modifier = GlanceModifier.height(8.dp))
+        Text(
+            if (isConfigured) "Расписание пусто"
+            else "Нажмите, чтобы выбрать группу",
+            style = TextStyle(
+                color = GlanceTheme.colors.onBackground,
+                fontSize = 14.sp
+            )
+        )
     }
 }
 
@@ -141,29 +239,18 @@ fun WidgetContent(
     currentDayIndex: Int
 ) {
     if (schedule.isEmpty()) {
-        Column(
-            modifier = GlanceModifier
-                .fillMaxSize()
-                .background(GlanceTheme.colors.widgetBackground)
-                .padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Image(ImageProvider(R.drawable.il_totoro_friends), contentDescription = "No schedule")
-            Spacer(modifier = GlanceModifier.height(8.dp))
-            Text(
-                "Расписание пусто",
-                style = TextStyle(color = GlanceTheme.colors.onBackground, fontSize = 14.sp)
-            )
-        }
+        WidgetEmptyContent(isConfigured = true)
         return
     }
 
-    val safeIndex = currentDayIndex.coerceIn(0, schedule.size - 1)
-    val currentDay = schedule[safeIndex]
+    // Auto-detect today's index for smarter day navigation
     val today = app.what.foundation.utils.currentLocalDate()
+    val todayIndex = schedule.indexOfFirst { it.date == today }
+    val effectiveIndex = if (currentDayIndex == 0 && todayIndex >= 0) todayIndex else currentDayIndex
+    val safeIndex = effectiveIndex.coerceIn(0, schedule.size - 1)
+    val currentDay = schedule[safeIndex]
     val diff = currentDay.date.toEpochDays() - today.toEpochDays()
-    
+
     Column(
         modifier = GlanceModifier
             .fillMaxSize()
@@ -192,20 +279,20 @@ fun WidgetContent(
                     fontWeight = FontWeight.Medium
                 )
             )
-            
+
             Row {
                 val maxIndexParameter = actionParametersOf(
                     MAX_PAGE_INDEX_KEY to schedule.size.minus(1)
                 )
-                
+
                 IconButton(
                     "<",
                     actionRunCallback<PrevDayActionCallback>(maxIndexParameter),
                     safeIndex > 0
                 )
-                
+
                 Spacer(modifier = GlanceModifier.width(8.dp))
-                
+
                 IconButton(
                     ">",
                     actionRunCallback<NextDayActionCallback>(maxIndexParameter),
@@ -213,12 +300,15 @@ fun WidgetContent(
                 )
             }
         }
-        
+
         Spacer(modifier = GlanceModifier.height(12.dp))
-        
+
         if (currentDay.lessons.isEmpty()) {
             Image(ImageProvider(R.drawable.il_totoro_friends), contentDescription = "No lessons")
-            Text("Здесь пусто...")
+            Text(
+                "Здесь пусто...",
+                style = TextStyle(color = GlanceTheme.colors.onBackground, fontSize = 14.sp)
+            )
         } else LazyColumn(
             GlanceModifier.cornerRadius(12.dp)
         ) {
@@ -243,23 +333,23 @@ fun LessonCard(
             GlanceTheme.colors.secondaryContainer.let {
                 if (lesson.state != LessonState.REMOVED) it
                 else ColorProvider(it.getColor(LocalContext.current).copy(alpha = .8f))
-                
+
             }
         )
         .cornerRadius(12.dp)
         .padding(16.dp)
 ) {
-    
+
     val primaryColor =
         if (lesson.state == LessonState.REMOVED) GlanceTheme.colors.secondaryContainer
         else if (lesson.type.isNonStandard) GlanceTheme.colors.tertiary
         else GlanceTheme.colors.primary
-    
+
     val onPrimaryColor =
         if (lesson.state == LessonState.REMOVED) GlanceTheme.colors.onSecondaryContainer
         else if (lesson.type.isNonStandard) GlanceTheme.colors.onTertiary
         else GlanceTheme.colors.onPrimary
-    
+
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = GlanceModifier.fillMaxWidth()
@@ -280,9 +370,9 @@ fun LessonCard(
                 )
             )
         }
-        
+
         Spacer(modifier = GlanceModifier.defaultWeight())
-        
+
         Text(
             text = formatTime(lesson.startTime),
             style = TextStyle(
@@ -291,9 +381,9 @@ fun LessonCard(
                 fontWeight = FontWeight.Bold
             )
         )
-        
+
         Spacer(modifier = GlanceModifier.width(8.dp))
-        
+
         Text(
             text = "- ${formatTime(lesson.endTime)}",
             style = TextStyle(
@@ -302,9 +392,9 @@ fun LessonCard(
             )
         )
     }
-    
+
     Spacer(modifier = GlanceModifier.height(8.dp))
-    
+
     // Информация
     Column {
         Text(
@@ -316,9 +406,9 @@ fun LessonCard(
             ),
             maxLines = 2
         )
-        
+
         Spacer(modifier = GlanceModifier.height(4.dp))
-        
+
         Row(
             GlanceModifier.fillMaxWidth()
         ) {
@@ -385,14 +475,14 @@ class PrevDayActionCallback : ActionCallback {
     ) {
         val widgetTag = buildTag(LogScope.WIDGET, LogCat.UI)
         Auditor.debug(widgetTag, "Переключение на предыдущий день в виджете")
-        
+
         updateAppWidgetState(context, glanceId) { prefs ->
             val currentIndex = prefs[intPreferencesKey(DAY_INDEX_KEY)] ?: 0
             prefs[intPreferencesKey(DAY_INDEX_KEY)] = currentIndex.minus(1)
                 .coerceAtLeast(0)
         }
-        
-        ScheduleWidget().update(context, glanceId)
+
+        ScheduleWidget.instance.update(context, glanceId)
     }
 }
 
@@ -404,13 +494,15 @@ class NextDayActionCallback : ActionCallback {
     ) {
         val widgetTag = buildTag(LogScope.WIDGET, LogCat.UI)
         Auditor.debug(widgetTag, "Переключение на следующий день в виджете")
-        
+
+        val maxIndex = parameters[MAX_PAGE_INDEX_KEY] ?: Int.MAX_VALUE
+
         updateAppWidgetState(context, glanceId) { prefs ->
             val currentIndex = prefs[intPreferencesKey(DAY_INDEX_KEY)] ?: 0
             prefs[intPreferencesKey(DAY_INDEX_KEY)] = currentIndex.plus(1)
-                .coerceAtMost(parameters[MAX_PAGE_INDEX_KEY]!!)
+                .coerceAtMost(maxIndex)
         }
-        
-        ScheduleWidget().update(context, glanceId)
+
+        ScheduleWidget.instance.update(context, glanceId)
     }
 }

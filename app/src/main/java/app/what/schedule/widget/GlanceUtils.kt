@@ -1,4 +1,4 @@
-package app.what.schedule.widget
+package app.what.schedule.features.widget
 
 import android.content.Context
 import android.content.res.Configuration
