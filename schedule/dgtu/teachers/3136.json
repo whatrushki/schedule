@@ -35,7 +35,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сорокин Г. В.",
-                        "group": "ПСЗГS21, ПСЗТS21, ПСЗГS22",
+                        "group": "ПСЗГS22, ПСЗТS21, ПСЗГS21",
                         "room": "608",
                         "additional": "25"
                     }
@@ -58,7 +58,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сорокин Г. В.",
-                        "group": "ПСЗГS21, ПСЗТS21, ПСЗГS22",
+                        "group": "ПСЗГS22, ПСЗТS21, ПСЗГS21",
                         "room": "412",
                         "additional": "25"
                     }
@@ -189,14 +189,14 @@
                 "otUnits": [
                     {
                         "teacher": "Сорокин Г. В.",
-                        "group": "ВПМ11",
-                        "room": "238",
+                        "group": "ФФ11",
+                        "room": "419",
                         "additional": "1"
                     },
                     {
                         "teacher": "Сорокин Г. В.",
-                        "group": "ФФ11",
-                        "room": "419",
+                        "group": "ВПМ11",
+                        "room": "238",
                         "additional": "1"
                     }
                 ],
@@ -218,7 +218,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сорокин Г. В.",
-                        "group": "ВПМ11, ВПМ12",
+                        "group": "ВПМ12, ВПМ11",
                         "room": "507",
                         "additional": "6"
                     }
@@ -235,7 +235,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сорокин Г. В.",
-                        "group": "ИЭ15, ИЭ14",
+                        "group": "ИЭ14, ИЭ15",
                         "room": "205",
                         "additional": "26"
                     }
@@ -452,7 +452,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сорокин Г. В.",
-                        "group": "ВПМ11, ВПМ12",
+                        "group": "ВПМ12, ВПМ11",
                         "room": "507",
                         "additional": "6"
                     }
@@ -532,7 +532,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сорокин Г. В.",
-                        "group": "ИЭ12, ИЭ13",
+                        "group": "ИЭ13, ИЭ12",
                         "room": "215",
                         "additional": "25"
                     }
@@ -589,15 +589,15 @@
                 "otUnits": [
                     {
                         "teacher": "Сорокин Г. В.",
-                        "group": "ВПМ11",
-                        "room": "310",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "Сорокин Г. В.",
                         "group": "ИЭ14",
                         "room": "410",
                         "additional": "25"
+                    },
+                    {
+                        "teacher": "Сорокин Г. В.",
+                        "group": "ВПМ11",
+                        "room": "310",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
@@ -692,7 +692,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сорокин Г. В.",
-                        "group": "ИЭ15, ИЭ14",
+                        "group": "ИЭ14, ИЭ15",
                         "room": "205",
                         "additional": "26"
                     }
@@ -743,6 +743,80 @@
         ]
     },
     {
+        "date": "2026-09-25",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-25",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Сорокин Г. В.",
+                        "group": "БТТ12",
+                        "room": "432",
+                        "additional": "8"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Сорокин Г. В.",
+                        "group": "УНЭ11",
+                        "room": "205",
+                        "additional": "6"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Сорокин Г. В.",
+                        "group": "УНИ11",
+                        "room": "423",
+                        "additional": "8"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Сорокин Г. В.",
+                        "group": "УП11",
+                        "room": "024",
+                        "additional": "8"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-09-26",
         "scheduleType": "COMMON",
         "lessons": [
@@ -753,6 +827,12 @@
                 "endTime": "10:05",
                 "subject": "пр Основы российской государственности",
                 "otUnits": [
+                    {
+                        "teacher": "Сорокин Г. В.",
+                        "group": "БТБ12",
+                        "room": "477",
+                        "additional": "1"
+                    },
                     {
                         "teacher": "Сорокин Г. В.",
                         "group": "ИЭ12",
@@ -772,9 +852,21 @@
                 "otUnits": [
                     {
                         "teacher": "Сорокин Г. В.",
-                        "group": "ИЭ12, ИЭ13",
+                        "group": "БТБ12",
+                        "room": "507",
+                        "additional": "6"
+                    },
+                    {
+                        "teacher": "Сорокин Г. В.",
+                        "group": "ИЭ13, ИЭ12",
                         "room": "505",
                         "additional": "26"
+                    },
+                    {
+                        "teacher": "Сорокин Г. В.",
+                        "group": "БТТ12",
+                        "room": "507",
+                        "additional": "6"
                     }
                 ],
                 "type": "COMMON",
@@ -949,7 +1041,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сорокин Г. В.",
-                        "group": "ИЭ12, ИЭ13",
+                        "group": "ИЭ13, ИЭ12",
                         "room": "215",
                         "additional": "25"
                     }
@@ -1103,7 +1195,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сорокин Г. В.",
-                        "group": "ИЭ15, ИЭ14",
+                        "group": "ИЭ14, ИЭ15",
                         "room": "205",
                         "additional": "26"
                     }
@@ -1343,7 +1435,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сорокин Г. В.",
-                        "group": "ИЭ12, ИЭ13",
+                        "group": "ИЭ13, ИЭ12",
                         "room": "215",
                         "additional": "25"
                     }

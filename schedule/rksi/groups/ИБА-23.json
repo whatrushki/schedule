@@ -81,7 +81,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-26",
@@ -127,12 +127,29 @@
                     {
                         "teacher": "Швец Н.А.",
                         "group": "ИБА-23",
-                        "room": "17",
+                        "room": "45",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-26",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Швец Н.А.",
+                        "group": "ИБА-23",
+                        "room": "45",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     }

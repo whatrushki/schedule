@@ -85,6 +85,23 @@
         "lessons": [
             {
                 "date": "2026-09-26",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Кассовые операции банка",
+                "otUnits": [
+                    {
+                        "teacher": "Каверзнева Е.Ю.",
+                        "group": "БД-31",
+                        "room": "47",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-26",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -132,7 +149,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     }

@@ -12,7 +12,7 @@
                 "otUnits": [
                     {
                         "teacher": "Бочарова Е. В.",
-                        "group": "ДЗСО52, ДЗСО51",
+                        "group": "ДЗСО51, ДЗСО52",
                         "room": "283",
                         "additional": "1"
                     }
@@ -29,7 +29,7 @@
                 "otUnits": [
                     {
                         "teacher": "Бочарова Е. В.",
-                        "group": "ДЗСО52, ДЗСО51",
+                        "group": "ДЗСО51, ДЗСО52",
                         "room": "283",
                         "additional": "1"
                     }
@@ -331,7 +331,7 @@
                 "otUnits": [
                     {
                         "teacher": "Бочарова Е. В.",
-                        "group": "ШДК11, ШДС11",
+                        "group": "ШДС11, ШДК11",
                         "room": "513",
                         "additional": "26"
                     }
@@ -700,23 +700,6 @@
         "lessons": [
             {
                 "date": "2026-09-24",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Основы инклюзивной культуры и дефектологических знаний",
-                "otUnits": [
-                    {
-                        "teacher": "Бочарова Е. В.",
-                        "group": "ГТ21",
-                        "room": "302а",
-                        "additional": "6"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -724,7 +707,7 @@
                 "otUnits": [
                     {
                         "teacher": "Бочарова Е. В.",
-                        "group": "ШДК11, ШДС11",
+                        "group": "ШДС11, ШДК11",
                         "room": "513",
                         "additional": "26"
                     }
@@ -765,8 +748,25 @@
                     {
                         "teacher": "Бочарова Е. В.",
                         "group": "ГТ21",
-                        "room": "",
-                        "additional": "Главный"
+                        "room": "445",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Основы инклюзивной культуры и дефектологических знаний",
+                "otUnits": [
+                    {
+                        "teacher": "Бочарова Е. В.",
+                        "group": "ГТ21",
+                        "room": "109",
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
@@ -809,6 +809,132 @@
         ]
     },
     {
+        "date": "2026-09-26",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-26",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Основы инклюзивной культуры и дефектологических знаний",
+                "otUnits": [
+                    {
+                        "teacher": "Бочарова Е. В.",
+                        "group": "ГД11",
+                        "room": "232",
+                        "additional": "8"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-26",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы инклюзивной культуры и дефектологических знаний",
+                "otUnits": [
+                    {
+                        "teacher": "Бочарова Е. В.",
+                        "group": "ГД11",
+                        "room": "801",
+                        "additional": "2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-29",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Медикобиологические проблемы дефектологии",
+                "otUnits": [
+                    {
+                        "teacher": "Бочарова Е. В.",
+                        "group": "МОЗО11",
+                        "room": "257",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-01",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Проблемы инклюзивного образования",
+                "otUnits": [
+                    {
+                        "teacher": "Бочарова Е. В.",
+                        "group": "МУСИ11",
+                        "room": "226",
+                        "additional": "8"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-02",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек История, философия и современные проблемы науки и образования лиц с ограниченными возможностями здоровья",
+                "otUnits": [
+                    {
+                        "teacher": "Бочарова Е. В.",
+                        "group": "МОЗО21",
+                        "room": "219",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр История, философия и современные проблемы науки и образования лиц с ограниченными возможностями здоровья",
+                "otUnits": [
+                    {
+                        "teacher": "Бочарова Е. В.",
+                        "group": "МКЛ21",
+                        "room": "446",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-08",
         "scheduleType": "COMMON",
         "lessons": [
@@ -821,7 +947,7 @@
                 "otUnits": [
                     {
                         "teacher": "Бочарова Е. В.",
-                        "group": "ШДК11, ШДС11",
+                        "group": "ШДС11, ШДК11",
                         "room": "513",
                         "additional": "26"
                     }

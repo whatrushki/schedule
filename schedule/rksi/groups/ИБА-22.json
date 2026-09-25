@@ -96,6 +96,23 @@
         "lessons": [
             {
                 "date": "2026-09-26",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Лютова Л.К.",
+                        "group": "ИБА-22",
+                        "room": "43",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-26",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -104,12 +121,12 @@
                     {
                         "teacher": "Наскалова О.В.",
                         "group": "ИБА-22",
-                        "room": "34",
+                        "room": "35",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-26",
@@ -121,12 +138,12 @@
                     {
                         "teacher": "Швец Н.А.",
                         "group": "ИБА-22",
-                        "room": "17",
+                        "room": "45",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-26",
@@ -138,12 +155,12 @@
                     {
                         "teacher": "Лютова Л.К.",
                         "group": "ИБА-22",
-                        "room": "36",
+                        "room": "43",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-26",
@@ -160,7 +177,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     }

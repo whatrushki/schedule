@@ -75,7 +75,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-26",
@@ -104,12 +104,29 @@
                     {
                         "teacher": "Бережная А.В.",
                         "group": "БД-11",
-                        "room": "33",
+                        "room": "17",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-26",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.В.",
+                        "group": "БД-11",
+                        "room": "42",
+                        "additional": "2"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     }
