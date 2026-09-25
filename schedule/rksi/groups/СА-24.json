@@ -92,7 +92,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-26",
@@ -104,12 +104,12 @@
                     {
                         "teacher": "Токарева Ю.А.",
                         "group": "СА-24",
-                        "room": "210",
+                        "room": "314",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-26",
@@ -127,6 +127,23 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-09-26",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Основы теории информации",
+                "otUnits": [
+                    {
+                        "teacher": "Токарева Ю.А.",
+                        "group": "СА-24",
+                        "room": "314",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     }

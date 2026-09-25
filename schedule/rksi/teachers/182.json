@@ -13,7 +13,7 @@
                     {
                         "teacher": "Долгополая А.С.",
                         "group": "СА-27",
-                        "room": "401",
+                        "room": "303",
                         "additional": "1"
                     }
                 ],
@@ -66,6 +66,12 @@
                         "group": "СА-18",
                         "room": "401",
                         "additional": "1"
+                    },
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "СА-37",
+                        "room": "401",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
@@ -96,6 +102,23 @@
         "lessons": [
             {
                 "date": "2026-09-26",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Дискретная математика с элементами математической логики",
+                "otUnits": [
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "СА-13",
+                        "room": "406",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-26",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -104,12 +127,12 @@
                     {
                         "teacher": "Долгополая А.С.",
                         "group": "СА-13",
-                        "room": "416",
+                        "room": "406",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-26",
@@ -121,12 +144,12 @@
                     {
                         "teacher": "Долгополая А.С.",
                         "group": "СА-17",
-                        "room": "416",
+                        "room": "406",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-26",
@@ -138,12 +161,12 @@
                     {
                         "teacher": "Долгополая А.С.",
                         "group": "СА-19",
-                        "room": "416",
+                        "room": "406",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-26",
@@ -155,12 +178,29 @@
                     {
                         "teacher": "Долгополая А.С.",
                         "group": "СА-37",
-                        "room": "416",
+                        "room": "325",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-26",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "СА-37",
+                        "room": "325",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     }

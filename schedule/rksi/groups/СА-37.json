@@ -8,12 +8,12 @@
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Программное обеспечение компьютерных сетей",
+                "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Болгов Д.Р.",
+                        "teacher": "Корбан С.Н.",
                         "group": "СА-37",
-                        "room": "401",
+                        "room": "с/з4",
                         "additional": "1"
                     }
                 ],
@@ -25,12 +25,12 @@
                 "number": 6,
                 "startTime": "16:40",
                 "endTime": "18:10",
-                "subject": "Администрирование сетевых операционных систем",
+                "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
-                        "teacher": "Савчук И.С.",
+                        "teacher": "Долгополая А.С.",
                         "group": "СА-37",
-                        "room": "418",
+                        "room": "401",
                         "additional": "1"
                     }
                 ],
@@ -75,7 +75,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-26",
@@ -87,12 +87,29 @@
                     {
                         "teacher": "Долгополая А.С.",
                         "group": "СА-37",
-                        "room": "416",
+                        "room": "325",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-26",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "СА-37",
+                        "room": "325",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     }

@@ -548,7 +548,7 @@
                     {
                         "teacher": "Любицкий М. А.",
                         "group": "ТМП11",
-                        "room": "410",
+                        "room": "257",
                         "additional": "1"
                     }
                 ],
@@ -565,7 +565,7 @@
                     {
                         "teacher": "Сорокина Д. Н.",
                         "group": "ТМП11",
-                        "room": "460а",
+                        "room": "343",
                         "additional": "1"
                     },
                     {
@@ -662,6 +662,23 @@
         "lessons": [
             {
                 "date": "2026-09-25",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Курочкина В. А.",
+                        "group": "ТМП11",
+                        "room": "330",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -693,6 +710,23 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Гузенко А. И.",
+                        "group": "ТМП11",
+                        "room": "423",
+                        "additional": "8"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -700,6 +734,40 @@
         "date": "2026-09-26",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-09-26",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Сагирьянц Е. С.",
+                        "group": "ТМП11",
+                        "room": "193а",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-26",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Сагирьянц Е. С.",
+                        "group": "ТМП11",
+                        "room": "507а",
+                        "additional": "2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-09-26",
                 "number": 3,
@@ -716,6 +784,23 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-09-26",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Гузенко А. И.",
+                        "group": "ТМП11",
+                        "room": "231",
+                        "additional": "8"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -725,10 +810,33 @@
         "lessons": [
             {
                 "date": "2026-09-29",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
                 "subject": "Лек Физическая культура и спорт",
+                "otUnits": [
+                    {
+                        "teacher": "Хильчевская И. В.",
+                        "group": "ТМП11",
+                        "room": "манеж",
+                        "additional": "Главный"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-06",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физическая культура и спорт",
                 "otUnits": [
                     {
                         "teacher": "Хильчевская И. В.",
@@ -865,6 +973,52 @@
         ]
     },
     {
+        "date": "2026-10-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-13",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физическая культура и спорт",
+                "otUnits": [
+                    {
+                        "teacher": "Хильчевская И. В.",
+                        "group": "ТМП11",
+                        "room": "манеж",
+                        "additional": "Главный"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-20",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-20",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физическая культура и спорт",
+                "otUnits": [
+                    {
+                        "teacher": "Хильчевская И. В.",
+                        "group": "ТМП11",
+                        "room": "манеж",
+                        "additional": "Главный"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-22",
         "scheduleType": "COMMON",
         "lessons": [
@@ -979,6 +1133,52 @@
                         "group": "ТМП11",
                         "room": "214",
                         "additional": "11"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-27",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-27",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физическая культура и спорт",
+                "otUnits": [
+                    {
+                        "teacher": "Хильчевская И. В.",
+                        "group": "ТМП11",
+                        "room": "манеж",
+                        "additional": "Главный"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-03",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физическая культура и спорт",
+                "otUnits": [
+                    {
+                        "teacher": "Хильчевская И. В.",
+                        "group": "ТМП11",
+                        "room": "манеж",
+                        "additional": "Главный"
                     }
                 ],
                 "type": "COMMON",
@@ -1109,6 +1309,52 @@
         ]
     },
     {
+        "date": "2026-11-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-10",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физическая культура и спорт",
+                "otUnits": [
+                    {
+                        "teacher": "Хильчевская И. В.",
+                        "group": "ТМП11",
+                        "room": "манеж",
+                        "additional": "Главный"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-17",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-17",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физическая культура и спорт",
+                "otUnits": [
+                    {
+                        "teacher": "Хильчевская И. В.",
+                        "group": "ТМП11",
+                        "room": "манеж",
+                        "additional": "Главный"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-19",
         "scheduleType": "COMMON",
         "lessons": [
@@ -1231,6 +1477,52 @@
         ]
     },
     {
+        "date": "2026-11-24",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-24",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физическая культура и спорт",
+                "otUnits": [
+                    {
+                        "teacher": "Хильчевская И. В.",
+                        "group": "ТМП11",
+                        "room": "манеж",
+                        "additional": "Главный"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-01",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физическая культура и спорт",
+                "otUnits": [
+                    {
+                        "teacher": "Хильчевская И. В.",
+                        "group": "ТМП11",
+                        "room": "манеж",
+                        "additional": "Главный"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-12-03",
         "scheduleType": "COMMON",
         "lessons": [
@@ -1345,6 +1637,52 @@
                         "group": "ТМП11",
                         "room": "214",
                         "additional": "11"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-08",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физическая культура и спорт",
+                "otUnits": [
+                    {
+                        "teacher": "Хильчевская И. В.",
+                        "group": "ТМП11",
+                        "room": "манеж",
+                        "additional": "Главный"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-15",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-15",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физическая культура и спорт",
+                "otUnits": [
+                    {
+                        "teacher": "Хильчевская И. В.",
+                        "group": "ТМП11",
+                        "room": "манеж",
+                        "additional": "Главный"
                     }
                 ],
                 "type": "COMMON",
