@@ -1,4 +1,4 @@
-﻿package app.what.domain.constants
+package app.what.domain.constants
 
 object AppConstants {
     const val PRIVACY_POLICY_URL = "https://raw.githubusercontent.com/whatrushki/schedule/refs/heads/master/PRIVACY_POLICY.md"
@@ -8,5 +8,5 @@ object AppConstants {
     const val APP_OWNER_GITHUB_URL = "https://github.com/topanim"
     const val APP_OWNER_TELEGRAM_URL = "https://t.me/whatrushik"
     const val APP_GITHUB_URL = "https://github.com/whatrushki/schedule"
-    const val VERSION_NAME = "1.3.11"
+    const val VERSION_NAME = "1.3.12"
 }
