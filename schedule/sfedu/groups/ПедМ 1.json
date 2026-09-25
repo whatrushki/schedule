@@ -5,15 +5,32 @@
         "lessons": [
             {
                 "date": "2026-09-21",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Теория чисел и числовые системы",
+                "otUnits": [
+                    {
+                        "teacher": "Жмурова Ирина Юньевна",
+                        "group": "",
+                        "room": "325",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-21",
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
-                "subject": "Геометрические построения на плоскости",
+                "subject": "Теория чисел и числовые системы",
                 "otUnits": [
                     {
-                        "teacher": "Москвин Константин Михайлович",
+                        "teacher": "Жмурова Ирина Юньевна",
                         "group": "",
-                        "room": "207",
+                        "room": "325",
                         "additional": ""
                     }
                 ],
@@ -25,16 +42,33 @@
                 "number": 3,
                 "startTime": "11:55",
                 "endTime": "13:30",
-                "subject": "Геометрия",
+                "subject": "Современные технологии обучения математике",
                 "otUnits": [
                     {
-                        "teacher": "Романов Юрий Викторович",
+                        "teacher": "Петрова Вера Ивановна",
                         "group": "",
-                        "room": "325",
+                        "room": "118",
                         "additional": ""
                     }
                 ],
                 "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-21",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Современные технологии обучения математике",
+                "otUnits": [
+                    {
+                        "teacher": "Петрова Вера Ивановна",
+                        "group": "",
+                        "room": "313",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]
@@ -45,32 +79,32 @@
         "lessons": [
             {
                 "date": "2026-09-22",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Методика обучения математике",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Методика обучения решению нестандартных задач школьного курса математики",
                 "otUnits": [
                     {
-                        "teacher": "Азаренко Александр Александрович",
+                        "teacher": "Пырков Вячеслав Евгеньевич",
                         "group": "",
-                        "room": "НИИ МиПМ, 306",
+                        "room": "311",
                         "additional": ""
                     }
                 ],
-                "type": "PRACTICE",
+                "type": "LECTURE",
                 "state": "COMMON"
             },
             {
                 "date": "2026-09-22",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Элементарная математика",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Методика обучения решению нестандартных задач школьного курса математики",
                 "otUnits": [
                     {
-                        "teacher": "Азаренко Александр Александрович",
+                        "teacher": "Шовгеня Евгения Александровна",
                         "group": "",
-                        "room": "ЮГИНФО 114",
+                        "room": "НИИ МиПМ, 306",
                         "additional": ""
                     }
                 ],
@@ -85,19 +119,70 @@
         "lessons": [
             {
                 "date": "2026-09-23",
-                "number": 6,
-                "startTime": "17:40",
-                "endTime": "19:15",
-                "subject": "История математики",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Избранные вопросы элементарной математики",
                 "otUnits": [
                     {
-                        "teacher": "Полякова Татьяна Сергеевна",
+                        "teacher": "Романов Юрий Викторович",
                         "group": "",
-                        "room": "Онлайн",
+                        "room": "208",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-23",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Современные средства оценивания результатов обучения",
+                "otUnits": [
+                    {
+                        "teacher": "Москвин Константин Михайлович",
+                        "group": "",
+                        "room": "305",
                         "additional": ""
                     }
                 ],
                 "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-23",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Элементарная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Романов Юрий Викторович",
+                        "group": "",
+                        "room": "305",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-23",
+                "number": 5,
+                "startTime": "15:50",
+                "endTime": "17:25",
+                "subject": "Дифференциальные уравнения и уравнения в частных производных",
+                "otUnits": [
+                    {
+                        "teacher": "Друзь Анна Николаевна",
+                        "group": "",
+                        "room": "212",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
@@ -108,53 +193,19 @@
         "lessons": [
             {
                 "date": "2026-09-24",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:35",
-                "subject": "Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "",
-                        "group": "",
-                        "room": "207",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "",
-                        "group": "",
-                        "room": "207",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
                 "number": 3,
                 "startTime": "11:55",
                 "endTime": "13:30",
-                "subject": "Методика обучения математике",
+                "subject": "Избранные вопросы элементарной математики",
                 "otUnits": [
                     {
-                        "teacher": "Белик Елена Викторовна",
+                        "teacher": "Романов Юрий Викторович",
                         "group": "",
-                        "room": "НИИ МиПМ, 306",
+                        "room": "217",
                         "additional": ""
                     }
                 ],
-                "type": "PRACTICE",
+                "type": "LECTURE",
                 "state": "COMMON"
             },
             {
@@ -162,12 +213,12 @@
                 "number": 4,
                 "startTime": "13:45",
                 "endTime": "15:20",
-                "subject": "Математический анализ",
+                "subject": "Элементарная математика",
                 "otUnits": [
                     {
-                        "teacher": "Друзь Анна Николаевна",
+                        "teacher": "Романов Юрий Викторович",
                         "group": "",
-                        "room": "325",
+                        "room": "217",
                         "additional": ""
                     }
                 ],
@@ -182,36 +233,64 @@
         "lessons": [
             {
                 "date": "2026-09-25",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Теория чисел и числовые системы",
+                "otUnits": [
+                    {
+                        "teacher": "Жмурова Ирина Юньевна",
+                        "group": "",
+                        "room": "325",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
-                "subject": "Математический анализ",
+                "subject": "Математическая составляющая профессиональной подготовки учителя",
+                "otUnits": [
+                    {
+                        "teacher": "Жмурова Ирина Юньевна",
+                        "group": "",
+                        "room": " ?",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Дифференциальные уравнения и уравнения в частных производных",
                 "otUnits": [
                     {
                         "teacher": "Друзь Анна Николаевна",
                         "group": "",
-                        "room": "322",
+                        "room": " ?",
                         "additional": ""
                     }
                 ],
                 "type": "LECTURE",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
             {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "МУАМ",
+                "date": "2026-09-25",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Современные средства оценивания результатов обучения",
                 "otUnits": [
                     {
-                        "teacher": "",
+                        "teacher": "Москвин Константин Михайлович",
                         "group": "",
                         "room": " ?",
                         "additional": ""
@@ -228,15 +307,32 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Теория чисел и числовые системы",
+                "otUnits": [
+                    {
+                        "teacher": "Жмурова Ирина Юньевна",
+                        "group": "",
+                        "room": "325",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
-                "subject": "Геометрические построения на плоскости",
+                "subject": "Теория чисел и числовые системы",
                 "otUnits": [
                     {
-                        "teacher": "Москвин Константин Михайлович",
+                        "teacher": "Жмурова Ирина Юньевна",
                         "group": "",
-                        "room": "207",
+                        "room": "325",
                         "additional": ""
                     }
                 ],
@@ -248,16 +344,33 @@
                 "number": 3,
                 "startTime": "11:55",
                 "endTime": "13:30",
-                "subject": "Геометрия",
+                "subject": "Современные технологии обучения математике",
                 "otUnits": [
                     {
-                        "teacher": "Романов Юрий Викторович",
+                        "teacher": "Петрова Вера Ивановна",
                         "group": "",
-                        "room": "325",
+                        "room": "118",
                         "additional": ""
                     }
                 ],
                 "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Современные технологии обучения математике",
+                "otUnits": [
+                    {
+                        "teacher": "Петрова Вера Ивановна",
+                        "group": "",
+                        "room": "313",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]
@@ -268,49 +381,32 @@
         "lessons": [
             {
                 "date": "2026-09-29",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Методика обучения решению нестандартных задач школьного курса математики",
+                "otUnits": [
+                    {
+                        "teacher": "Пырков Вячеслав Евгеньевич",
+                        "group": "",
+                        "room": "311",
+                        "additional": ""
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-29",
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
-                "subject": "Методика обучения математике",
+                "subject": "Методика обучения решению нестандартных задач школьного курса математики",
                 "otUnits": [
                     {
-                        "teacher": "Азаренко Александр Александрович",
+                        "teacher": "Шовгеня Евгения Александровна",
                         "group": "",
                         "room": "НИИ МиПМ, 306",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-29",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Элементарная математика",
-                "otUnits": [
-                    {
-                        "teacher": "Азаренко Александр Александрович",
-                        "group": "",
-                        "room": "ЮГИНФО 114",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-29",
-                "number": 4,
-                "startTime": "13:45",
-                "endTime": "15:20",
-                "subject": "Геометрия",
-                "otUnits": [
-                    {
-                        "teacher": "Романов Юрий Викторович",
-                        "group": "",
-                        "room": "ЮГИНФО 114",
                         "additional": ""
                     }
                 ],
@@ -325,19 +421,70 @@
         "lessons": [
             {
                 "date": "2026-09-30",
-                "number": 6,
-                "startTime": "17:40",
-                "endTime": "19:15",
-                "subject": "История математики",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Избранные вопросы элементарной математики",
                 "otUnits": [
                     {
-                        "teacher": "Полякова Татьяна Сергеевна",
+                        "teacher": "Романов Юрий Викторович",
                         "group": "",
-                        "room": "Онлайн",
+                        "room": "208",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Современные средства оценивания результатов обучения",
+                "otUnits": [
+                    {
+                        "teacher": "Москвин Константин Михайлович",
+                        "group": "",
+                        "room": "305",
                         "additional": ""
                     }
                 ],
                 "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Элементарная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Романов Юрий Викторович",
+                        "group": "",
+                        "room": "305",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 5,
+                "startTime": "15:50",
+                "endTime": "17:25",
+                "subject": "Дифференциальные уравнения и уравнения в частных производных",
+                "otUnits": [
+                    {
+                        "teacher": "Друзь Анна Николаевна",
+                        "group": "",
+                        "room": "212",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
@@ -348,49 +495,15 @@
         "lessons": [
             {
                 "date": "2026-10-01",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:35",
-                "subject": "Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "",
-                        "group": "",
-                        "room": "207",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-01",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "",
-                        "group": "",
-                        "room": "207",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-01",
                 "number": 3,
                 "startTime": "11:55",
                 "endTime": "13:30",
-                "subject": "Методика обучения математике",
+                "subject": "Избранные вопросы элементарной математики",
                 "otUnits": [
                     {
-                        "teacher": "Белик Елена Викторовна",
+                        "teacher": "Романов Юрий Викторович",
                         "group": "",
-                        "room": "НИИ МиПМ, 306",
+                        "room": "217",
                         "additional": ""
                     }
                 ],
@@ -402,12 +515,12 @@
                 "number": 4,
                 "startTime": "13:45",
                 "endTime": "15:20",
-                "subject": "Математический анализ",
+                "subject": "Элементарная математика",
                 "otUnits": [
                     {
-                        "teacher": "Друзь Анна Николаевна",
+                        "teacher": "Романов Юрий Викторович",
                         "group": "",
-                        "room": "325",
+                        "room": "217",
                         "additional": ""
                     }
                 ],
@@ -422,15 +535,32 @@
         "lessons": [
             {
                 "date": "2026-10-02",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Теория чисел и числовые системы",
+                "otUnits": [
+                    {
+                        "teacher": "Жмурова Ирина Юньевна",
+                        "group": "",
+                        "room": "325",
+                        "additional": ""
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
-                "subject": "Математический анализ",
+                "subject": "Математическая составляющая профессиональной подготовки учителя",
                 "otUnits": [
                     {
-                        "teacher": "Друзь Анна Николаевна",
+                        "teacher": "Жмурова Ирина Юньевна",
                         "group": "",
-                        "room": "322",
+                        "room": " ?",
                         "additional": ""
                     }
                 ],
@@ -442,12 +572,12 @@
                 "number": 3,
                 "startTime": "11:55",
                 "endTime": "13:30",
-                "subject": "Элементарная математика",
+                "subject": "Дифференциальные уравнения и уравнения в частных производных",
                 "otUnits": [
                     {
-                        "teacher": "Романов Юрий Викторович",
+                        "teacher": "Друзь Анна Николаевна",
                         "group": "",
-                        "room": "322",
+                        "room": " ?",
                         "additional": ""
                     }
                 ],
@@ -459,33 +589,10 @@
                 "number": 4,
                 "startTime": "13:45",
                 "endTime": "15:20",
-                "subject": "Геометрические построения на плоскости",
+                "subject": "Современные средства оценивания результатов обучения",
                 "otUnits": [
                     {
                         "teacher": "Москвин Константин Михайлович",
-                        "group": "",
-                        "room": "322",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-03",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-03",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "МУАМ",
-                "otUnits": [
-                    {
-                        "teacher": "",
                         "group": "",
                         "room": " ?",
                         "additional": ""
