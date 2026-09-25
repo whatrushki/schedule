@@ -18,6 +18,9 @@ env:
   KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
   RELEASE_SIGN_KEY_ALIAS: ${{ secrets.RELEASE_SIGN_KEY_ALIAS }}
   RELEASE_SIGN_KEY_PASSWORD: ${{ secrets.RELEASE_SIGN_KEY_PASSWORD }}
+  KEYSTORE_ACCESS_TOKEN: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_ACTOR: ${{ github.actor }}
 
 jobs:
   build_release_publish:
@@ -153,6 +156,7 @@ jobs:
     if: github.event_name == 'release' || github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/tags/v')
     permissions:
       contents: write
+      packages: read
 
     steps:
       - name: Checkout code
@@ -214,6 +218,7 @@ jobs:
     if: github.event_name == 'release' || github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/tags/v')
     permissions:
       contents: write
+      packages: read
 
     steps:
       - name: Checkout code

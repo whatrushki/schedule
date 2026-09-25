@@ -28,8 +28,14 @@ dependencyResolutionManagement {
         maven {
             url = uri("https://maven.pkg.github.com/whatrushki/compose-foundation")
             credentials {
-                username = providers.gradleProperty("gpr.user").orNull ?: System.getenv("GITHUB_ACTOR")
-                password = providers.gradleProperty("gpr.key").orNull ?: System.getenv("GITHUB_TOKEN")
+                username = providers.gradleProperty("gpr.user").orNull
+                    ?: System.getenv("GPR_USER")
+                    ?: System.getenv("GITHUB_ACTOR")
+                    ?: "whatrushki"
+                password = providers.gradleProperty("gpr.key").orNull
+                    ?: System.getenv("GPR_KEY")
+                    ?: System.getenv("KEYSTORE_ACCESS_TOKEN")
+                    ?: System.getenv("GITHUB_TOKEN")
             }
         }
     }
