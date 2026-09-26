@@ -38,7 +38,8 @@ object NotificationHelper {
         context: Context,
         title: String,
         content: String,
-        details: List<String> = emptyList()
+        details: List<String> = emptyList(),
+        notificationId: Int = NOTIFICATION_ID
     ) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (ContextCompat.checkSelfPermission(
@@ -77,7 +78,7 @@ object NotificationHelper {
         }
 
         try {
-            NotificationManagerCompat.from(context).notify(NOTIFICATION_ID, builder.build())
+            NotificationManagerCompat.from(context).notify(notificationId, builder.build())
         } catch (_: SecurityException) {
             // Permission might have been revoked in runtime
         }

@@ -107,6 +107,11 @@ class AppValues(
         "Уведомления о заменах", "Проверять изменения в расписании в фоне"
     )
 
+    val notifyFavoritesReplacements = createValue(
+        "notify_favorites_replacements", false, Boolean.serializer(),
+        "Отслеживать избранное", "Проверять замены для групп и преподавателей из избранного"
+    )
+
     val replacementNotificationsPeriod = createValue(
         "replacement_notifications_period", NotificationPeriod.H3, NotificationPeriod.serializer(),
         "Интервал проверки", "Периодичность проверки расписания"

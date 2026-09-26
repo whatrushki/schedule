@@ -238,6 +238,9 @@ fun getSettingsList(app: AppValues, utils: AppUtils): List<UIComponent> {
                 app.enableReplacementNotifications.asSwitch {
                     Analytics.logSettingChanged(app.enableReplacementNotifications.key, it.toString())
                 },
+                app.notifyFavoritesReplacements.asSwitch {
+                    Analytics.logSettingChanged(app.notifyFavoritesReplacements.key, it.toString())
+                }.dependsOn(app.enableReplacementNotifications) { it == true },
                 app.replacementNotificationsPeriod.asSingleChoice(
                     enumValues<NotificationPeriod>(),
                     { it.displayName }

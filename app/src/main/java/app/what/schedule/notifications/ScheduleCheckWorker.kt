@@ -8,6 +8,8 @@ import app.what.domain.models.DaySchedule
 import app.what.domain.models.Lesson
 import app.what.domain.models.LessonState
 import app.what.domain.models.ScheduleResponse
+import app.what.domain.models.ScheduleSearch
+import app.what.domain.models.toScheduleSearch
 import app.what.domain.repositories.ScheduleRepository
 import app.what.domain.services.ReplacementDetector
 import app.what.domain.services.ReplacementNotificationFormatter
@@ -41,26 +43,88 @@ class ScheduleCheckWorker(
             return Result.success()
         }
 
-        val search = appValues.lastSearch.get() ?: run {
-            Auditor.debug(tag, "ScheduleCheckWorker: группа не выбрана")
+        val searchesToCheck = LinkedHashSet<ScheduleSearch>()
+        appValues.lastSearch.get()?.let { searchesToCheck.add(it) }
+
+        if (appValues.notifyFavoritesReplacements.get() == true) {
+            try {
+                val favGroups = scheduleRepository.getGroups().filter { it.favorite }.map { it.toScheduleSearch() }
+                val favTeachers = scheduleRepository.getTeachers().filter { it.favorite }.map { it.toScheduleSearch() }
+                searchesToCheck.addAll(favGroups)
+                searchesToCheck.addAll(favTeachers)
+            } catch (e: Exception) {
+                Auditor.debug(tag, "ScheduleCheckWorker: ошибка получения избранного: ${e.message}")
+            }
+        }
+
+        if (searchesToCheck.isEmpty()) {
+            Auditor.debug(tag, "ScheduleCheckWorker: нет групп для проверки")
             return Result.success()
         }
 
         return try {
-            val response = scheduleRepository.getSchedule(
-                search = search,
-                useCache = false,
-                requiresData = true,
-                forceLive = false
-            )
+            val today = currentLocalDate()
+            val rawKnownSignatures = appValues.lastNotifiedReplacementsHash.get()
+            var currentSignatures = ReplacementDetector.deserializeSignatures(rawKnownSignatures)
+            var hasAnySuccess = false
 
-            val schedules: List<DaySchedule> = when (response) {
-                is ScheduleResponse.Available -> response.schedules
-                else -> {
-                    Auditor.debug(tag, "ScheduleCheckWorker: расписание не получено ($response)")
-                    return Result.success()
+            for (search in searchesToCheck) {
+                try {
+                    val response = scheduleRepository.getSchedule(
+                        search = search,
+                        useCache = false,
+                        requiresData = true,
+                        forceLive = false
+                    )
+
+                    val schedules: List<DaySchedule> = when (response) {
+                        is ScheduleResponse.Available -> response.schedules
+                        else -> {
+                            Auditor.debug(tag, "ScheduleCheckWorker: расписание не получено для ${search.name} ($response)")
+                            continue
+                        }
+                    }
+                    hasAnySuccess = true
+
+                    val detection = ReplacementDetector.detect(
+                        searchId = search.id,
+                        schedules = schedules,
+                        today = today,
+                        knownSignatures = currentSignatures,
+                        daysAhead = 2
+                    )
+
+                    currentSignatures = detection.updatedSignatures
+
+                    if (!detection.hasNewReplacements) {
+                        Auditor.debug(tag, "ScheduleCheckWorker: новых замен для ${search.name} не обнаружено")
+                        continue
+                    }
+
+                    val formatted = ReplacementNotificationFormatter.format(
+                        searchName = search.name,
+                        newReplacements = detection.newReplacements,
+                        today = today
+                    )
+
+                    val notificationId = 2001 + (search.id.hashCode() and 0x7FFF)
+                    NotificationHelper.showReplacementsNotification(
+                        context = applicationContext,
+                        title = formatted.title,
+                        content = formatted.summary,
+                        details = formatted.details,
+                        notificationId = notificationId
+                    )
+
+                    Auditor.info(tag, "ScheduleCheckWorker: успешно отправлено уведомление для ${search.name} о ${detection.newReplacements.size} новых заменах")
+                } catch (e: Exception) {
+                    Auditor.debug(tag, "ScheduleCheckWorker: ошибка проверки для ${search.name}: ${e.message}")
                 }
             }
+
+            // Всегда сохраняем обновленные сигнатуры (с очисткой устаревших дат)
+            val updatedRaw = ReplacementDetector.serializeSignatures(currentSignatures)
+            appValues.lastNotifiedReplacementsHash.set(updatedRaw)
 
             // Автоматически обновляем виджеты свежими данными
             try {
@@ -68,46 +132,9 @@ class ScheduleCheckWorker(
             } catch (_: Exception) {
             }
 
-            // Запускаем детектор замен
-            val today = currentLocalDate()
-            val rawKnownSignatures = appValues.lastNotifiedReplacementsHash.get()
-            val knownSignatures = ReplacementDetector.deserializeSignatures(rawKnownSignatures)
-
-            val detection = ReplacementDetector.detect(
-                searchId = search.id,
-                schedules = schedules,
-                today = today,
-                knownSignatures = knownSignatures,
-                daysAhead = 2
-            )
-
-            // Всегда сохраняем обновленные сигнатуры (с очисткой устаревших дат)
-            val updatedRaw = ReplacementDetector.serializeSignatures(detection.updatedSignatures)
-            appValues.lastNotifiedReplacementsHash.set(updatedRaw)
-
-            if (!detection.hasNewReplacements) {
-                Auditor.debug(tag, "ScheduleCheckWorker: новых замен не обнаружено")
-                return Result.success()
-            }
-
-            // Формируем чистое, информативное уведомление без дублирования дат
-            val formatted = ReplacementNotificationFormatter.format(
-                searchName = search.name,
-                newReplacements = detection.newReplacements,
-                today = today
-            )
-
-            NotificationHelper.showReplacementsNotification(
-                context = applicationContext,
-                title = formatted.title,
-                content = formatted.summary,
-                details = formatted.details
-            )
-
-            Auditor.info(tag, "ScheduleCheckWorker: успешно отправлено уведомление о ${detection.newReplacements.size} новых заменах")
-            Result.success()
+            if (hasAnySuccess || searchesToCheck.isEmpty()) Result.success() else Result.retry()
         } catch (e: Exception) {
-            Auditor.debug(tag, "ScheduleCheckWorker ошибка проверки: ${e.message}")
+            Auditor.debug(tag, "ScheduleCheckWorker глобальная ошибка проверки: ${e.message}")
             Result.retry()
         }
     }
