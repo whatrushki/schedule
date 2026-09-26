@@ -5,20 +5,37 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Рыбак Е.Ю.",
+                        "group": "ИБТ-23",
+                        "room": "28",
+                        "additional": "2"
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
                 "subject": "Социальная психология",
                 "otUnits": [
                     {
-                        "teacher": "Рыбак Екатерина Юрьевна",
+                        "teacher": "Рыбак Е.Ю.",
                         "group": "ТД-22",
-                        "room": "32",
+                        "room": "28",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -28,14 +45,14 @@
                 "subject": "Социальная психология",
                 "otUnits": [
                     {
-                        "teacher": "Рыбак Екатерина Юрьевна",
+                        "teacher": "Рыбак Е.Ю.",
                         "group": "ТД-21",
                         "room": "28",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

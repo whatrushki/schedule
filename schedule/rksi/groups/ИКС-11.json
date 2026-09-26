@@ -87,12 +87,12 @@
                     {
                         "teacher": "Пильгун И.С.",
                         "group": "ИКС-11",
-                        "room": "412",
+                        "room": "410",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -117,9 +117,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Романенко Е.Л.",
+                        "group": "ИКС-11",
+                        "room": "418",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },

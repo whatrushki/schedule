@@ -5,20 +5,37 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Гуденко О.Н.",
+                        "group": "ИКС-22",
+                        "room": "310",
+                        "additional": "1"
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
                 "subject": "Литература",
                 "otUnits": [
                     {
-                        "teacher": "Гуденко Ольга Николаевна",
+                        "teacher": "Гуденко О.Н",
                         "group": "РУП-14",
                         "room": "310",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -28,31 +45,31 @@
                 "subject": "Литература",
                 "otUnits": [
                     {
-                        "teacher": "Гуденко Ольга Николаевна",
+                        "teacher": "Гуденко О.Н.",
                         "group": "ТЭС-12",
                         "room": "310",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Русский язык",
+                "subject": "Литература",
                 "otUnits": [
                     {
-                        "teacher": "Гуденко Ольга Николаевна",
+                        "teacher": "Гуденко О.Н.",
                         "group": "РУП-11",
                         "room": "310",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

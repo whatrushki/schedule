@@ -70,12 +70,12 @@
                     {
                         "teacher": "Арутюнян М.А.",
                         "group": "ИКС-14",
-                        "room": "110",
+                        "room": "213",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -87,12 +87,12 @@
                     {
                         "teacher": "Нохрина Ю.В.",
                         "group": "ИКС-14",
-                        "room": "306",
+                        "room": "316",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -117,9 +117,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Нохрина Ю.В.",
+                        "group": "ИКС-14",
+                        "room": "212",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },

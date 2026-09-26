@@ -62,54 +62,77 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Джалагония М.Ш.",
+                        "group": "РУП-16",
+                        "room": "323",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Джалагония М.Ш.",
+                        "group": "ИС-27",
+                        "room": "323",
+                        "additional": "1"
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Математика",
+                "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Джалагония Медеа Шотаевна",
+                        "teacher": "Джалагония М.Ш.",
                         "group": "СА-17",
                         "room": "323",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Математика",
+                "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Джалагония Медеа Шотаевна",
+                        "teacher": "Джалагония М.Ш.",
                         "group": "РУП-16",
                         "room": "323",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Математика",
+                "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Джалагония Медеа Шотаевна",
+                        "teacher": "Джалагония М.Ш.",
                         "group": "РУП-16",
                         "room": "323",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -119,14 +142,14 @@
                 "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Джалагония Медеа Шотаевна",
+                        "teacher": "Джалагония М.Ш.",
                         "group": "РУП-16",
                         "room": "323",
                         "additional": "1"
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },

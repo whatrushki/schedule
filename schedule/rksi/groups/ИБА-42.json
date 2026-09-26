@@ -84,8 +84,8 @@
                 "endTime": "14:05",
                 "subject": "Классный час",
                 "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "type": "CLASS_HOUR",
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-28",
@@ -97,12 +97,12 @@
                     {
                         "teacher": "Бороненкова С.Е.",
                         "group": "ИБА-42",
-                        "room": "40",
+                        "room": "30",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -114,12 +114,12 @@
                     {
                         "teacher": "Бороненкова С.Е.",
                         "group": "ИБА-42",
-                        "room": "40",
+                        "room": "30",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -306,15 +306,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.П.",
-                        "group": "ИБА-42",
-                        "room": "44",
-                        "additional": "2"
-                    },
-                    {
                         "teacher": "Крылова О.В.",
                         "group": "ИБА-42",
                         "room": "33",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "ИБА-42",
+                        "room": "44",
                         "additional": "2"
                     }
                 ],

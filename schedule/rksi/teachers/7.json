@@ -5,20 +5,43 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Барна Н.В.",
+                        "group": "СА-22",
+                        "room": "210а",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Барна Н.В.",
+                        "group": "СА-46",
+                        "room": "210а",
+                        "additional": "1"
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
                 "subject": "Физика",
                 "otUnits": [
                     {
-                        "teacher": "Барна Наталья Владимировна",
+                        "teacher": "Барна Н.В.",
                         "group": "СА-16",
-                        "room": "312",
+                        "room": "212",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

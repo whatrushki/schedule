@@ -5,20 +5,43 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Золотовская М.Ю.",
+                        "group": "ИС-35",
+                        "room": "319",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Золотовская М.Ю.",
+                        "group": "ИС-45",
+                        "room": "319",
+                        "additional": "1"
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:30",
                 "subject": "Социальная психология",
                 "otUnits": [
                     {
-                        "teacher": "Золотовская Маргарита Юрьевна",
+                        "teacher": "Золотовская М.Ю.",
                         "group": "БД-21",
-                        "room": "29",
+                        "room": "24",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

@@ -83,9 +83,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Шумина О.О.",
+                        "group": "БД-21",
+                        "room": "17",
+                        "additional": "2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -114,12 +121,12 @@
                     {
                         "teacher": "Золотовская М.Ю.",
                         "group": "БД-21",
-                        "room": "29",
+                        "room": "24",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

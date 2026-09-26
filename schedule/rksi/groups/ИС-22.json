@@ -50,8 +50,8 @@
                 "endTime": "14:05",
                 "subject": "Классный час",
                 "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "type": "CLASS_HOUR",
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-28",
@@ -63,12 +63,12 @@
                     {
                         "teacher": "Степанец В.В.",
                         "group": "ИС-22",
-                        "room": "305",
+                        "room": "411",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -80,12 +80,12 @@
                     {
                         "teacher": "Степанец В.В.",
                         "group": "ИС-22",
-                        "room": "305",
+                        "room": "411",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -97,12 +97,12 @@
                     {
                         "teacher": "Ревнивцева О.А.",
                         "group": "ИС-22",
-                        "room": "320",
+                        "room": "410",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -283,15 +283,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Лебедева М.В.",
-                        "group": "ИС-22",
-                        "room": "320",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Чубарова А.Б.",
                         "group": "ИС-22",
                         "room": "106",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Лебедева М.В.",
+                        "group": "ИС-22",
+                        "room": "320",
                         "additional": "1"
                     }
                 ],

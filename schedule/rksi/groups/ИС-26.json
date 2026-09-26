@@ -53,12 +53,12 @@
                     {
                         "teacher": "Ревнивцева О.А.",
                         "group": "ИС-26",
-                        "room": "320",
+                        "room": "420",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -66,9 +66,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-26",
+                        "room": "217",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -78,14 +85,14 @@
                 "subject": "Информационные технологии",
                 "otUnits": [
                     {
-                        "teacher": "Бурда Е.Г.",
+                        "teacher": "Бурда Е.Г.,",
                         "group": "ИС-26",
                         "room": "312",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -340,15 +347,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ефремова О.П.",
-                        "group": "ИС-26",
-                        "room": "315а",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Прыгунова Т.А.",
                         "group": "ИС-26",
                         "room": "104",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Ефремова О.П.",
+                        "group": "ИС-26",
+                        "room": "315а",
                         "additional": "1"
                     }
                 ],

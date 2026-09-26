@@ -5,37 +5,60 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Грицай О.П",
+                        "group": "ИС-25",
+                        "room": "404",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Грицай О.П",
+                        "group": "СА-34",
+                        "room": "404",
+                        "additional": "1"
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
                 "subject": "История",
                 "otUnits": [
                     {
-                        "teacher": "Грицай Ольга Петровна",
+                        "teacher": "Грицай О.П.",
                         "group": "РУП-16",
-                        "room": "410",
+                        "room": "404",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "История",
+                "subject": "Обществознание",
                 "otUnits": [
                     {
-                        "teacher": "Грицай Ольга Петровна",
+                        "teacher": "Грицай О.П.",
                         "group": "РУП-12",
-                        "room": "410",
+                        "room": "404",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -45,14 +68,14 @@
                 "subject": "Обществознание",
                 "otUnits": [
                     {
-                        "teacher": "Грицай Ольга Петровна",
+                        "teacher": "Грицай О.П.",
                         "group": "ТЭС-11",
-                        "room": "410",
+                        "room": "318",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -62,14 +85,14 @@
                 "subject": "История России",
                 "otUnits": [
                     {
-                        "teacher": "Грицай Ольга Петровна",
+                        "teacher": "Грицай О.П.",
                         "group": "СА-25",
-                        "room": "410",
+                        "room": "318",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

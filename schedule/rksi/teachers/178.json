@@ -160,6 +160,35 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ТЭС-12",
+                        "room": "217",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-26",
+                        "room": "217",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-37",
+                        "room": "217",
+                        "additional": "1"
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
@@ -168,12 +197,18 @@
                     {
                         "teacher": "Арутюнян М.А.",
                         "group": "ИКС-14",
-                        "room": "110",
+                        "room": "213",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "СА-34",
+                        "room": "217",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -185,12 +220,18 @@
                     {
                         "teacher": "Арутюнян М.А.",
                         "group": "СА-16",
-                        "room": "110",
+                        "room": "213",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "СА-34",
+                        "room": "217",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -202,12 +243,18 @@
                     {
                         "teacher": "Арутюнян М.А.",
                         "group": "ИКС-24",
-                        "room": "110",
+                        "room": "213",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "СА-34",
+                        "room": "217",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

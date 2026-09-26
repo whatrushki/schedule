@@ -49,9 +49,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Мугутдинова Н.Ш.",
+                        "group": "ИБТ-42",
+                        "room": "34",
+                        "additional": "2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -63,12 +70,12 @@
                     {
                         "teacher": "Кузнецова А.В.",
                         "group": "ИБТ-42",
-                        "room": "31",
+                        "room": "33",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -226,15 +233,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.П.",
-                        "group": "ИБТ-42",
-                        "room": "13",
-                        "additional": "2"
-                    },
-                    {
                         "teacher": "Савченко А.А.",
                         "group": "ИБТ-42",
                         "room": "38",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "ИБТ-42",
+                        "room": "13",
                         "additional": "2"
                     }
                 ],

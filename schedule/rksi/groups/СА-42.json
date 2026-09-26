@@ -70,12 +70,12 @@
                     {
                         "teacher": "Зурова А.Е.",
                         "group": "СА-42",
-                        "room": "104",
+                        "room": "324",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -123,9 +123,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Тодорова А.В,",
+                        "group": "СА-42",
+                        "room": "110а",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },

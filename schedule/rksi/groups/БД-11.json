@@ -87,29 +87,29 @@
                     {
                         "teacher": "Бодло А.О.",
                         "group": "БД-11",
-                        "room": "21",
+                        "room": "28",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Химия",
+                "subject": "Русский язык",
                 "otUnits": [
                     {
-                        "teacher": "Мугутдинова Н.Ш.",
+                        "teacher": "Чалая С.А.",
                         "group": "БД-11",
-                        "room": "28",
+                        "room": "24",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -121,12 +121,12 @@
                     {
                         "teacher": "Селезень И.В.",
                         "group": "БД-11",
-                        "room": "38",
+                        "room": "29",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -134,9 +134,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Чалая С.А.",
+                        "group": "БД-11",
+                        "room": "24",
+                        "additional": "2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -148,12 +155,12 @@
                     {
                         "teacher": "Доценко Л.А.",
                         "group": "БД-11",
-                        "room": "13",
+                        "room": "41",
                         "additional": "2"
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -203,15 +210,15 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.П.",
-                        "group": "БД-11",
-                        "room": "13",
-                        "additional": "2"
-                    },
-                    {
                         "teacher": "Крылова О.В.",
                         "group": "БД-11",
                         "room": "33",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "БД-11",
+                        "room": "13",
                         "additional": "2"
                     }
                 ],

@@ -70,12 +70,12 @@
                     {
                         "teacher": "Пильгун И.С.",
                         "group": "ИКС-12",
-                        "room": "412",
+                        "room": "410",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -104,12 +104,12 @@
                     {
                         "teacher": "Гвоздецкая Г.И.",
                         "group": "ИКС-12",
-                        "room": "212",
+                        "room": "210",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -117,9 +117,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Пятибратов Д.В.",
+                        "group": "ИКС-12",
+                        "room": "307",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },

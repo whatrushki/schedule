@@ -5,20 +5,43 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Павленко С.Е.",
+                        "group": "ИБТ-21-",
+                        "room": "13",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Павленко С.Е.",
+                        "group": "ТД-11",
+                        "room": "13",
+                        "additional": "2"
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:30",
                 "subject": "Социальная психология",
                 "otUnits": [
                     {
-                        "teacher": "Павленко Светлана Евгеньевна",
+                        "teacher": "Павленко С.Е.",
                         "group": "ИБТ-21",
                         "room": "13",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

@@ -49,9 +49,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Швец Н.А.",
+                        "group": "ИБТ-31",
+                        "room": "42",
+                        "additional": "2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -63,12 +70,12 @@
                     {
                         "teacher": "Асташевская А.В.",
                         "group": "ИБТ-31",
-                        "room": "21",
+                        "room": "20",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -80,12 +87,12 @@
                     {
                         "teacher": "Асташевская А.В.",
                         "group": "ИБТ-31",
-                        "room": "21",
+                        "room": "20",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

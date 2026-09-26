@@ -70,12 +70,12 @@
                     {
                         "teacher": "Мугутдинова Н.Ш.",
                         "group": "ИБТ-12",
-                        "room": "17",
+                        "room": "33",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -87,12 +87,12 @@
                     {
                         "teacher": "Хайлова Л.В.",
                         "group": "ИБТ-12",
-                        "room": "20",
+                        "room": "34",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -117,9 +117,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Касьянова Е.Ю.",
+                        "group": "ИБТ-12",
+                        "room": "30",
+                        "additional": "2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },

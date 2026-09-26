@@ -130,6 +130,23 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Шабалта А.В.",
+                        "group": "ИБТ-13",
+                        "room": "43",
+                        "additional": "2"
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
@@ -138,12 +155,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБТ-41",
-                        "room": "41",
+                        "room": "44",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -172,12 +189,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБА-24",
-                        "room": "41",
+                        "room": "43",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -189,12 +206,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБТ-11",
-                        "room": "20",
+                        "room": "31",
                         "additional": "2"
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -206,12 +223,12 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБА-24",
-                        "room": "41",
+                        "room": "44",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -615,13 +632,13 @@
                 "otUnits": [
                     {
                         "teacher": "Шабалта А.В.",
-                        "group": "ИБА-34",
+                        "group": "ИБА-33",
                         "room": "44",
                         "additional": "2"
                     },
                     {
                         "teacher": "Шабалта А.В.",
-                        "group": "ИБА-33",
+                        "group": "ИБА-34",
                         "room": "44",
                         "additional": "2"
                     }

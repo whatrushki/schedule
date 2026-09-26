@@ -66,9 +66,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова А.В.",
+                        "group": "ИБА-21",
+                        "room": "31",
+                        "additional": "2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -175,15 +182,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.П.",
-                        "group": "ИБА-21",
-                        "room": "13",
-                        "additional": "2"
-                    },
-                    {
                         "teacher": "Савченко А.А.",
                         "group": "ИБА-21",
                         "room": "38",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "ИБА-21",
+                        "room": "13",
                         "additional": "2"
                     }
                 ],

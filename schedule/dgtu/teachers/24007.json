@@ -52,7 +52,7 @@
                 "otUnits": [
                     {
                         "teacher": "Аласаад Д.  .",
-                        "group": "ДЗСО22, ДЗСО21",
+                        "group": "ДЗСО21, ДЗСО22",
                         "room": "321",
                         "additional": "8"
                     }
@@ -69,7 +69,7 @@
                 "otUnits": [
                     {
                         "teacher": "Аласаад Д.  .",
-                        "group": "ДЗСО22, ДЗСО21",
+                        "group": "ДЗСО21, ДЗСО22",
                         "room": "321",
                         "additional": "8"
                     }
@@ -86,7 +86,7 @@
                 "otUnits": [
                     {
                         "teacher": "Аласаад Д.  .",
-                        "group": "ДЗПП22, ДЗПИ21, ДЗПП21",
+                        "group": "ДЗПИ21, ДЗПП21, ДЗПП22",
                         "room": "423",
                         "additional": "8"
                     }
@@ -103,7 +103,7 @@
                 "otUnits": [
                     {
                         "teacher": "Аласаад Д.  .",
-                        "group": "ДЗПП22, ДЗПИ21, ДЗПП21",
+                        "group": "ДЗПИ21, ДЗПП21, ДЗПП22",
                         "room": "423",
                         "additional": "8"
                     }
@@ -332,7 +332,7 @@
                 "otUnits": [
                     {
                         "teacher": "Аласаад Д.  .",
-                        "group": "МЗРКИ11, МЗПВШ11, МЗКЛ11, МЗОД11, МЗЛ11, МЗСО11",
+                        "group": "МЗКЛ11, МЗЛ11, МЗОД11, МЗПВШ11, МЗРКИ11, МЗСО11",
                         "room": "420",
                         "additional": "8"
                     }
@@ -349,7 +349,7 @@
                 "otUnits": [
                     {
                         "teacher": "Аласаад Д.  .",
-                        "group": "МЗРКИ11, МЗПВШ11, МЗКЛ11, МЗОД11, МЗЛ11, МЗСО11",
+                        "group": "МЗКЛ11, МЗЛ11, МЗОД11, МЗПВШ11, МЗРКИ11, МЗСО11",
                         "room": "420",
                         "additional": "8"
                     }
@@ -422,6 +422,23 @@
         "lessons": [
             {
                 "date": "2026-09-25",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Нормативно-правовые основы профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Аласаад Д.  .",
+                        "group": "ФП21",
+                        "room": "015",
+                        "additional": "8"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -430,7 +447,70 @@
                     {
                         "teacher": "Аласаад Д.  .",
                         "group": "ЛЛ32",
-                        "room": "402",
+                        "room": "538",
+                        "additional": "8"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Технологии организации внеурочной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Аласаад Д.  .",
+                        "group": "ДПО34",
+                        "room": "427а",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-28",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Основы экспертной деятельности в образовании",
+                "otUnits": [
+                    {
+                        "teacher": "Аласаад Д.  .",
+                        "group": "МПВШ21",
+                        "room": "449",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-29",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Научные исследования и проектная деятельность в образовании",
+                "otUnits": [
+                    {
+                        "teacher": "Аласаад Д.  .",
+                        "group": "МПВШ11",
+                        "room": "141",
                         "additional": "8"
                     }
                 ],

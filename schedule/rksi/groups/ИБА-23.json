@@ -101,8 +101,8 @@
                 "endTime": "14:05",
                 "subject": "Классный час",
                 "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "type": "CLASS_HOUR",
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-28",
@@ -114,12 +114,12 @@
                     {
                         "teacher": "Нохрина Ю.В.",
                         "group": "ИБА-23",
-                        "room": "307",
+                        "room": "114",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -131,12 +131,12 @@
                     {
                         "teacher": "Нохрина Ю.В.",
                         "group": "ИБА-23",
-                        "room": "307",
+                        "room": "114",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -391,15 +391,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "ИБА-23",
-                        "room": "32",
-                        "additional": "2"
-                    },
-                    {
                         "teacher": "Савченко А.А.",
                         "group": "ИБА-23",
                         "room": "38",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "ИБА-23",
+                        "room": "32",
                         "additional": "2"
                     }
                 ],

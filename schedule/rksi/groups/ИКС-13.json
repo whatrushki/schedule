@@ -70,12 +70,12 @@
                     {
                         "teacher": "Гвоздецкая Г.И.",
                         "group": "ИКС-13",
-                        "room": "324",
+                        "room": "210",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -99,17 +99,17 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Математика",
+                "subject": "Русский язык",
                 "otUnits": [
                     {
-                        "teacher": "Зимовейская В.А.",
+                        "teacher": "Нефедова Е.М.",
                         "group": "ИКС-13",
-                        "room": "114",
+                        "room": "319",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -117,9 +117,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Файзулин А.О.",
+                        "group": "ИКС-13",
+                        "room": "306",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -129,14 +136,14 @@
                 "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Гвоздецкая Г.И.",
+                        "teacher": "Гвоздецкая Г.И.,",
                         "group": "ИКС-13",
-                        "room": "216",
+                        "room": "210",
                         "additional": "1"
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

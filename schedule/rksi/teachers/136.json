@@ -62,20 +62,43 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Касьянова Е.Ю.",
+                        "group": "ИБТ-12",
+                        "room": "30",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Касьянова Е.Ю.",
+                        "group": "ИБТ-22",
+                        "room": "30",
+                        "additional": "2"
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
                 "subject": "Техническая защита информации",
                 "otUnits": [
                     {
-                        "teacher": "Касьянова Екатерина Юрьевна",
+                        "teacher": "Касьянова Е.Ю.",
                         "group": "ИБА-43",
                         "room": "30",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -85,14 +108,14 @@
                 "subject": "Техническая защита информации",
                 "otUnits": [
                     {
-                        "teacher": "Касьянова Екатерина Юрьевна",
+                        "teacher": "Касьянова Е.Ю.",
                         "group": "ИБА-43",
                         "room": "30",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -102,14 +125,14 @@
                 "subject": "Защита информации в информационно-телекоммуникационных системах и сетях с использованием технических средств защиты",
                 "otUnits": [
                     {
-                        "teacher": "Касьянова Екатерина Юрьевна",
+                        "teacher": "Касьянова Е.Ю.",
                         "group": "ИБТ-41",
                         "room": "30",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

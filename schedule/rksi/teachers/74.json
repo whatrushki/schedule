@@ -5,20 +5,43 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Мугутдинова Н.Ш.",
+                        "group": "ИБТ-33",
+                        "room": "34",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Мугутдинова Н.Ш.",
+                        "group": "ИБТ-42",
+                        "room": "34",
+                        "additional": "2"
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
                 "subject": "Химия",
                 "otUnits": [
                     {
-                        "teacher": "Мугутдинова Нигар Шамсутдиновна",
+                        "teacher": "Мугутдинова Н.Ш.",
                         "group": "ИБТ-12",
-                        "room": "17",
+                        "room": "33",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -28,14 +51,14 @@
                 "subject": "Химия",
                 "otUnits": [
                     {
-                        "teacher": "Мугутдинова Нигар Шамсутдиновна",
-                        "group": "БД-11",
-                        "room": "28",
+                        "teacher": "Мугутдинова Н.Ш.",
+                        "group": "ИБА-12",
+                        "room": "33",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -45,14 +68,14 @@
                 "subject": "Химия",
                 "otUnits": [
                     {
-                        "teacher": "Мугутдинова Нигар Шамсутдиновна",
+                        "teacher": "Мугутдинова Н.Ш.",
                         "group": "ИБА-12",
-                        "room": "28",
+                        "room": "33",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

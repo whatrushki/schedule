@@ -68,20 +68,20 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "СА-14",
-                        "room": "315а",
+                        "room": "320",
                         "additional": "1"
                     },
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Черноштан О.Н.",
                         "group": "СА-14",
-                        "room": "111",
+                        "room": "118",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -93,12 +93,12 @@
                     {
                         "teacher": "Гвоздецкая Г.И.",
                         "group": "СА-14",
-                        "room": "324",
+                        "room": "210",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -123,9 +123,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Упорова Л.В.",
+                        "group": "СА-14",
+                        "room": "410",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -137,12 +144,12 @@
                     {
                         "teacher": "Муравьева М.П.",
                         "group": "СА-14",
-                        "room": "310",
+                        "room": "314",
                         "additional": "1"
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

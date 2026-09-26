@@ -100,9 +100,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Григорьева Л.Ф.",
+                        "group": "СА-31",
+                        "room": "408",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -283,15 +290,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ужегова Е.А.",
-                        "group": "СА-31",
-                        "room": "307",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Прыгунова Т.А.",
                         "group": "СА-31",
                         "room": "104",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Ужегова Е.А.",
+                        "group": "СА-31",
+                        "room": "307",
                         "additional": "1"
                     }
                 ],

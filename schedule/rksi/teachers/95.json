@@ -5,20 +5,43 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Рыбальченко Т.Б.",
+                        "group": "ИС-34",
+                        "room": "210",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Рыбальченко Т.Б.",
+                        "group": "ИС-42",
+                        "room": "210",
+                        "additional": "1"
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
                 "subject": "Основы безопасности и защиты Родины",
                 "otUnits": [
                     {
-                        "teacher": "Рыбальченко Татьяна Борисовна",
+                        "teacher": "Рыбальченко Т.Б.",
                         "group": "ТЭС-11",
-                        "room": "213",
+                        "room": "212",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -28,14 +51,14 @@
                 "subject": "Основы безопасности и защиты Родины",
                 "otUnits": [
                     {
-                        "teacher": "Рыбальченко Татьяна Борисовна",
+                        "teacher": "Рыбальченко Т.Б.",
                         "group": "РУП-13",
-                        "room": "213",
+                        "room": "306",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

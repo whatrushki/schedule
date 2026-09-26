@@ -87,12 +87,12 @@
                     {
                         "teacher": "Нефедова Е.М.",
                         "group": "СА-17",
-                        "room": "213",
+                        "room": "220",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -104,12 +104,12 @@
                     {
                         "teacher": "Долгополая А.С.",
                         "group": "СА-17",
-                        "room": "401",
+                        "room": "303",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -117,9 +117,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "СА-17",
+                        "room": "Акт.зал",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },
@@ -357,15 +364,15 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Ефремова О.П.",
-                        "group": "СА-17",
-                        "room": "315а",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Крупицкая Н.А.",
                         "group": "СА-17",
                         "room": "111",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Ефремова О.П.",
+                        "group": "СА-17",
+                        "room": "315а",
                         "additional": "1"
                     }
                 ],

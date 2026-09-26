@@ -71,17 +71,17 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "ФИЗКУЛЬТУРА",
+                "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Растороцкий В.В.",
+                        "teacher": "Селезень И.В.",
                         "group": "БУ-11",
-                        "room": "с/з1",
+                        "room": "29",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -93,12 +93,12 @@
                     {
                         "teacher": "Селезень И.В.",
                         "group": "БУ-11",
-                        "room": "38",
+                        "room": "29",
                         "additional": "2"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -123,9 +123,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Шумина О.О.",
+                        "group": "БУ-11",
+                        "room": "17",
+                        "additional": "2"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -137,12 +144,12 @@
                     {
                         "teacher": "Доценко Л.А.",
                         "group": "БУ-11",
-                        "room": "13",
+                        "room": "41",
                         "additional": "2"
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -437,15 +444,15 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.П.",
-                        "group": "БУ-11",
-                        "room": "17",
-                        "additional": "2"
-                    },
-                    {
                         "teacher": "Ляшенко Д.И.",
                         "group": "БУ-11",
                         "room": "38",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "БУ-11",
+                        "room": "17",
                         "additional": "2"
                     }
                 ],

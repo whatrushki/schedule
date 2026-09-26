@@ -114,26 +114,49 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "СА-13",
+                        "room": "Акт.зал",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "СА-17",
+                        "room": "Акт.зал",
+                        "additional": "1"
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
                 "subject": "Эксплуатация объектов сетевой инфраструктуры",
                 "otUnits": [
                     {
-                        "teacher": "Зурова Алина Евгеньевна",
+                        "teacher": "Зурова А.Е.",
                         "group": "СА-42",
-                        "room": "104",
+                        "room": "324",
                         "additional": "1"
                     },
                     {
-                        "teacher": "Зурова Алина Евгеньевна",
+                        "teacher": "Зурова А.Е.",
                         "group": "СА-44",
-                        "room": "104",
+                        "room": "324",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -143,14 +166,14 @@
                 "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Зурова Алина Евгеньевна",
+                        "teacher": "Зурова А.Е.",
                         "group": "ИКС-21",
-                        "room": "210а",
+                        "room": "324",
                         "additional": "1"
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -160,14 +183,14 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Зурова Алина Евгеньевна",
+                        "teacher": "Зурова А.Е.",
                         "group": "СА-32",
-                        "room": "Общ№1-1",
-                        "additional": "Общ№1-1"
+                        "room": "212",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -177,14 +200,14 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Зурова Алина Евгеньевна",
+                        "teacher": "Зурова А.Е.",
                         "group": "СА-32",
-                        "room": "Общ№1-1",
-                        "additional": "Общ№1-1"
+                        "room": "212",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -194,14 +217,14 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Зурова Алина Евгеньевна",
+                        "teacher": "Зурова А.Е.",
                         "group": "СА-32",
-                        "room": "Общ№1-1",
-                        "additional": "Общ№1-1"
+                        "room": "212",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -509,13 +532,13 @@
                 "otUnits": [
                     {
                         "teacher": "Зурова Алина Евгеньевна",
-                        "group": "СА-44",
+                        "group": "СА-42",
                         "room": "217",
                         "additional": "1"
                     },
                     {
                         "teacher": "Зурова Алина Евгеньевна",
-                        "group": "СА-42",
+                        "group": "СА-44",
                         "room": "217",
                         "additional": "1"
                     }

@@ -5,6 +5,29 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Бойнар И.Н.",
+                        "group": "РУП-13",
+                        "room": "324",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Бойнар И.Н.",
+                        "group": "СА-25",
+                        "room": "324",
+                        "additional": "1"
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
@@ -18,7 +41,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-28",
@@ -35,7 +58,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-28",
@@ -52,7 +75,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
@@ -86,13 +109,13 @@
                 "otUnits": [
                     {
                         "teacher": "Бойнар Ирина Николаевна",
-                        "group": "ИКС-42",
+                        "group": "ИКС-43",
                         "room": "303",
                         "additional": "1"
                     },
                     {
                         "teacher": "Бойнар Ирина Николаевна",
-                        "group": "ИКС-43",
+                        "group": "ИКС-42",
                         "room": "303",
                         "additional": "1"
                     }
