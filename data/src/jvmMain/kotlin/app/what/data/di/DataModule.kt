@@ -130,6 +130,7 @@ val dataModule = module {
                     prettyPrint = false
                     isLenient = true
                     explicitNulls = false
+                    coerceInputValues = true
                 })
             }
             

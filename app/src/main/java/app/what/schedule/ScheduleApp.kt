@@ -7,8 +7,6 @@ import app.what.foundation.services.AppLogger
 import app.what.foundation.services.AppLogger.Companion.Auditor
 import app.what.foundation.services.initialize
 import app.what.foundation.services.auto_update.AppUpdateManager
-import app.what.foundation.services.auto_update.GitHubUpdateManager
-import app.what.foundation.services.auto_update.GitHubUpdateService
 import app.what.foundation.services.auto_update.InstallSource
 import app.what.foundation.services.auto_update.RuStoreUpdateManager
 import app.what.foundation.services.auto_update.UpdateConfig
@@ -159,15 +157,14 @@ val appModule = module {
         
         when (source) {
             InstallSource.RuStore -> RuStoreUpdateManager(context, get())
-            InstallSource.APK -> GitHubUpdateManager(
-                GitHubUpdateService(get()),
-                androidContext(),
-                UpdateConfig(
+            InstallSource.APK -> app.what.schedule.updater.AppGitHubUpdateManager(
+                context = androidContext(),
+                config = UpdateConfig(
                     BuildConfig.APP_GITHUB_URL.split("/").reversed()[1],
                     BuildConfig.APP_GITHUB_URL.split("/").reversed()[0],
                     BuildConfig.VERSION_NAME
                 ),
-                get()
+                httpClient = get()
             )
         }
     }

@@ -26,6 +26,7 @@ class SFEDUScheduleClient(
         ignoreUnknownKeys = true
         isLenient = true
         explicitNulls = false
+        coerceInputValues = true
     }
 
     private var cachedGroups: List<GroupDto>? = null

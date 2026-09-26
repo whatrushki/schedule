@@ -51,7 +51,9 @@ object SettingUpdateComponent : UIComponent {
         val downloadState = manager.downloadState
         
         LaunchedEffect(Unit) {
-            manager.checkForUpdates()
+            if (manager.updateInfo == null) {
+                manager.checkForUpdates()
+            }
         }
         
         AnimatedVisibility(
