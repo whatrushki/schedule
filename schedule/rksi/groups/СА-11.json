@@ -70,12 +70,12 @@
                     {
                         "teacher": "Троилина В.С.",
                         "group": "СА-11",
-                        "room": "103",
+                        "room": "114",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -87,12 +87,12 @@
                     {
                         "teacher": "Путинцева Ю.М.",
                         "group": "СА-11",
-                        "room": "210",
+                        "room": "305",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -104,12 +104,12 @@
                     {
                         "teacher": "Нохрина Ю.В.",
                         "group": "СА-11",
-                        "room": "109",
+                        "room": "118",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -117,9 +117,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Королькова О.В.",
+                        "group": "СА-11",
+                        "room": "401",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },
@@ -300,15 +307,15 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Прыгунова Т.А.",
-                        "group": "СА-11",
-                        "room": "104",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Ужегова Е.А.",
                         "group": "СА-11",
                         "room": "307",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Прыгунова Т.А.",
+                        "group": "СА-11",
+                        "room": "104",
                         "additional": "1"
                     }
                 ],

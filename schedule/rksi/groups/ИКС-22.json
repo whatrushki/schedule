@@ -49,9 +49,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Гуденко О.Н.",
+                        "group": "ИКС-22",
+                        "room": "310",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -63,12 +70,12 @@
                     {
                         "teacher": "Пильгун И.С.",
                         "group": "ИКС-22",
-                        "room": "412",
+                        "room": "410",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -80,12 +87,12 @@
                     {
                         "teacher": "Щербакова Э.Н.",
                         "group": "ИКС-22",
-                        "room": "с/з1",
+                        "room": "с/з2",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -97,7 +104,7 @@
                     {
                         "teacher": "Чубарова А.Б.",
                         "group": "ИКС-22",
-                        "room": "106",
+                        "room": "320",
                         "additional": "1"
                     },
                     {
@@ -108,7 +115,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

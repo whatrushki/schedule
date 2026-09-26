@@ -49,9 +49,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Гузов А.В.",
+                        "group": "ИКС-23",
+                        "room": "209а",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -80,12 +87,12 @@
                     {
                         "teacher": "Шабранская П.Е.",
                         "group": "ИКС-23",
-                        "room": "314",
+                        "room": "325",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -97,12 +104,12 @@
                     {
                         "teacher": "Шабранская П.Е.",
                         "group": "ИКС-23",
-                        "room": "314",
+                        "room": "325",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -323,15 +330,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Н.А.",
-                        "group": "ИКС-23",
-                        "room": "111",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Черноштан О.Н.",
                         "group": "ИКС-23",
                         "room": "318",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Крупицкая Н.А.",
+                        "group": "ИКС-23",
+                        "room": "111",
                         "additional": "1"
                     }
                 ],

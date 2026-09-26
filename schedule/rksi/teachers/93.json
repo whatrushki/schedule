@@ -5,20 +5,43 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Романенко Е.Л.",
+                        "group": "ИКС-11",
+                        "room": "418",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Романенко Е.Л.",
+                        "group": "ИКС-51",
+                        "room": "418",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
                 "subject": "Стандартизация, сертификация и техническое документоведение",
                 "otUnits": [
                     {
-                        "teacher": "Романенко Екатерина Леонидовна",
-                        "group": "СА-25",
+                        "teacher": "Романенко Е.Л.",
+                        "group": "СА-24",
                         "room": "418",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -28,14 +51,14 @@
                 "subject": "Стандартизация, сертификация и техническое документоведение",
                 "otUnits": [
                     {
-                        "teacher": "Романенко Екатерина Леонидовна",
+                        "teacher": "Романенко Е.Л.",
                         "group": "СА-21",
                         "room": "418",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -45,14 +68,14 @@
                 "subject": "Стандартизация, сертификация и техническое документоведение",
                 "otUnits": [
                     {
-                        "teacher": "Романенко Екатерина Леонидовна",
+                        "teacher": "Романенко Е.Л.",
                         "group": "СА-24",
                         "room": "418",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

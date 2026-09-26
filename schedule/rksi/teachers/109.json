@@ -5,20 +5,43 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Сулавко С.Н.",
+                        "group": "ИС-28",
+                        "room": "415",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Сулавко С.Н.",
+                        "group": "ИС-31",
+                        "room": "415",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
                 "subject": "Основы кибернетики и робототехники",
                 "otUnits": [
                     {
-                        "teacher": "Сулавко Сергей Николаевич",
+                        "teacher": "Сулавко С.Н.",
                         "group": "ИС-25",
-                        "room": "415",
+                        "room": "122",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -28,14 +51,14 @@
                 "subject": "Основы кибернетики и робототехники",
                 "otUnits": [
                     {
-                        "teacher": "Сулавко Сергей Николаевич",
+                        "teacher": "Сулавко С.Н.",
                         "group": "ИС-25",
                         "room": "415",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -45,14 +68,14 @@
                 "subject": "Основы кибернетики и робототехники",
                 "otUnits": [
                     {
-                        "teacher": "Сулавко Сергей Николаевич",
+                        "teacher": "Сулавко С.Н.",
                         "group": "ИС-29",
-                        "room": "122",
+                        "room": "415",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -62,14 +85,14 @@
                 "subject": "Основы программирования беспилотных летательных аппаратов",
                 "otUnits": [
                     {
-                        "teacher": "Сулавко Сергей Николаевич",
+                        "teacher": "Сулавко С.Н.",
                         "group": "ИС-34",
-                        "room": "122",
+                        "room": "415",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

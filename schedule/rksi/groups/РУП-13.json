@@ -104,12 +104,12 @@
                     {
                         "teacher": "Рыбальченко Т.Б.",
                         "group": "РУП-13",
-                        "room": "213",
+                        "room": "306",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -117,9 +117,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Бойнар И.Н.",
+                        "group": "РУП-13",
+                        "room": "324",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },
@@ -266,15 +273,15 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Ужегова Е.А.",
-                        "group": "РУП-13",
-                        "room": "307",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Прыгунова Т.А.",
                         "group": "РУП-13",
                         "room": "104",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Ужегова Е.А.",
+                        "group": "РУП-13",
+                        "room": "307",
                         "additional": "1"
                     }
                 ],

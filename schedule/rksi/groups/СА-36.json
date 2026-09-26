@@ -65,23 +65,17 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Иностранный язык в профессиональной деятельности",
+                "subject": "Администрирование сетевых операционных систем",
                 "otUnits": [
                     {
-                        "teacher": "Чубарова А.Б.",
+                        "teacher": "Савчук И.С.",
                         "group": "СА-36",
-                        "room": "106",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "Лебедева М.В.",
-                        "group": "СА-36",
-                        "room": "104",
+                        "room": "312",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -89,9 +83,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Самохвалова Д.Ю.",
+                        "group": "СА-36",
+                        "room": "416",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -103,29 +104,46 @@
                     {
                         "teacher": "Савчук И.С.",
                         "group": "СА-36",
-                        "room": "212",
+                        "room": "213",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:30",
-                "subject": "Программное обеспечение компьютерных сетей",
+                "subject": "Администрирование сетевых операционных систем",
                 "otUnits": [
                     {
-                        "teacher": "______",
+                        "teacher": "Савчук И.С.",
                         "group": "СА-36",
-                        "room": "Вак2",
-                        "additional": "Вак2"
+                        "room": "414",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:10",
+                "subject": "Администрирование сетевых операционных систем",
+                "otUnits": [
+                    {
+                        "teacher": "Савчук И.С.",
+                        "group": "СА-36",
+                        "room": "414",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

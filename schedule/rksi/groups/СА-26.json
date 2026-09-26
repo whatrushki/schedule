@@ -92,7 +92,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-28",
@@ -100,9 +100,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Упорова Л.В.",
+                        "group": "СА-26",
+                        "room": "410",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -112,20 +119,20 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
+                        "teacher": "Крупицкая Н.А.",
+                        "group": "СА-26",
+                        "room": "320",
+                        "additional": "1"
+                    },
+                    {
                         "teacher": "Новосельцева Е.Ф.",
                         "group": "СА-26",
                         "room": "209а",
                         "additional": "1"
-                    },
-                    {
-                        "teacher": "Крупицкая Н.А.",
-                        "group": "СА-26",
-                        "room": "111",
-                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -137,12 +144,12 @@
                     {
                         "teacher": "Котова Т.И.",
                         "group": "СА-26",
-                        "room": "103",
+                        "room": "217",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -154,12 +161,12 @@
                     {
                         "teacher": "Степанец В.В.",
                         "group": "СА-26",
-                        "room": "305",
+                        "room": "411",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

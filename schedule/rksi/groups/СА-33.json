@@ -53,12 +53,12 @@
                     {
                         "teacher": "Згонников Е.Ф.",
                         "group": "СА-33",
-                        "room": "Общ№1-1",
-                        "additional": "Общ№1-1"
+                        "room": "Общ1-4",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -70,12 +70,12 @@
                     {
                         "teacher": "Згонников Е.Ф.",
                         "group": "СА-33",
-                        "room": "Общ№1-2",
-                        "additional": "Общ№1-2"
+                        "room": "Общ1-1",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -87,12 +87,12 @@
                     {
                         "teacher": "Згонников Е.Ф.",
                         "group": "СА-33",
-                        "room": "Общ№1-2",
-                        "additional": "Общ№1-2"
+                        "room": "Общ1-1",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -100,9 +100,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Смирнова Д.В.",
+                        "group": "СА-33",
+                        "room": "320",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },

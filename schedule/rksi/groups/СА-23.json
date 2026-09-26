@@ -53,12 +53,12 @@
                     {
                         "teacher": "Попова А.Ю.",
                         "group": "СА-23",
-                        "room": "121",
+                        "room": "314",
                         "additional": "1"
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -70,12 +70,12 @@
                     {
                         "teacher": "Попова А.Ю.",
                         "group": "СА-23",
-                        "room": "121",
+                        "room": "314",
                         "additional": "1"
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -83,9 +83,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Григорьева Л.Ф.",
+                        "group": "СА-23",
+                        "room": "408",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -114,12 +121,12 @@
                     {
                         "teacher": "Небратенко Л.В.",
                         "group": "СА-23",
-                        "room": "114",
+                        "room": "318",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -249,15 +256,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Черноштан О.Н.",
-                        "group": "СА-23",
-                        "room": "213",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Новосельцева Е.Ф.",
                         "group": "СА-23",
                         "room": "209а",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Черноштан О.Н.",
+                        "group": "СА-23",
+                        "room": "213",
                         "additional": "1"
                     }
                 ],

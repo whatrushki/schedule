@@ -66,9 +66,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Кротенко Е.М.",
+                        "group": "ИС-24",
+                        "room": "220",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -80,12 +87,12 @@
                     {
                         "teacher": "Ревнивцева О.А.",
                         "group": "ИС-24",
-                        "room": "320",
+                        "room": "410",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -300,15 +307,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Прыгунова Т.А.",
-                        "group": "ИС-24",
-                        "room": "104",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Новосельцева Е.Ф.",
                         "group": "ИС-24",
                         "room": "209а",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Прыгунова Т.А.",
+                        "group": "ИС-24",
+                        "room": "104",
                         "additional": "1"
                     }
                 ],

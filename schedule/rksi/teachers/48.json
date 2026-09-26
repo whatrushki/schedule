@@ -96,20 +96,37 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Корбан С.Н.",
+                        "group": "ИС-42",
+                        "room": "с/з2",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Корбан Сергей Николаевич",
+                        "teacher": "Корбан С.Н.",
                         "group": "ИС-32",
-                        "room": "с/з1",
+                        "room": "с/з2",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -119,14 +136,14 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Корбан Сергей Николаевич",
+                        "teacher": "Корбан С.Н.",
                         "group": "ИС-28",
                         "room": "с/з2",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -136,14 +153,14 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Корбан Сергей Николаевич",
+                        "teacher": "Корбан С.Н.",
                         "group": "СА-22",
-                        "room": "с/з2",
+                        "room": "с/з3",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

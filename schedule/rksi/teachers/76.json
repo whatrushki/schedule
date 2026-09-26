@@ -96,37 +96,60 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Наливайко Е.П.",
+                        "group": "РУП-14",
+                        "room": "322",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Наливайко Е.П.",
+                        "group": "ИС-32",
+                        "room": "322",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Информатика",
+                "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Наливайко Елена Павловна",
+                        "teacher": "Наливайко Е.П.",
                         "group": "РУП-13",
                         "room": "322",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Информатика",
+                "subject": "Математика",
                 "otUnits": [
                     {
-                        "teacher": "Наливайко Елена Павловна",
+                        "teacher": "Наливайко Е.П.",
                         "group": "РУП-14",
                         "room": "322",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -136,14 +159,14 @@
                 "subject": "Математика",
                 "otUnits": [
                     {
-                        "teacher": "Наливайко Елена Павловна",
+                        "teacher": "Наливайко Е.П.",
                         "group": "РУП-14",
                         "room": "322",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -153,14 +176,14 @@
                 "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Наливайко Елена Павловна",
+                        "teacher": "Наливайко Е.П.",
                         "group": "РУП-15",
                         "room": "322",
                         "additional": "1"
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -170,14 +193,14 @@
                 "subject": "Элементы высшей математики",
                 "otUnits": [
                     {
-                        "teacher": "Наливайко Елена Павловна",
+                        "teacher": "Наливайко Е.П.",
                         "group": "ИС-23",
                         "room": "322",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -187,14 +210,14 @@
                 "subject": "Элементы высшей математики",
                 "otUnits": [
                     {
-                        "teacher": "Наливайко Елена Павловна",
+                        "teacher": "Наливайко Е.П.",
                         "group": "ИС-23",
                         "room": "322",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

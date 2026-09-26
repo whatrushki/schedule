@@ -70,12 +70,12 @@
                     {
                         "teacher": "Грицай О.П.",
                         "group": "РУП-16",
-                        "room": "410",
+                        "room": "404",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -117,9 +117,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Джалагония М.Ш.",
+                        "group": "РУП-16",
+                        "room": "323",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -226,15 +233,15 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Н.А.",
-                        "group": "РУП-16",
-                        "room": "111",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Ефремова О.П.",
                         "group": "РУП-16",
                         "room": "315а",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Крупицкая Н.А.",
+                        "group": "РУП-16",
+                        "room": "111",
                         "additional": "1"
                     }
                 ],

@@ -66,43 +66,50 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Коханова Л.Н.",
+                        "group": "ИКС-31",
+                        "room": "312",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:30",
-                "subject": "Монтаж и эксплуатация направляющих систем",
+                "subject": "Монтаж и эксплуатация компьютерных сетей",
                 "otUnits": [
                     {
-                        "teacher": "Голиченко П.С.",
+                        "teacher": "Байбекова И.Г.",
                         "group": "ИКС-31",
-                        "room": "118",
+                        "room": "110",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
                 "number": 6,
                 "startTime": "17:40",
                 "endTime": "19:10",
-                "subject": "Монтаж и эксплуатация направляющих систем",
+                "subject": "Монтаж и эксплуатация компьютерных сетей",
                 "otUnits": [
                     {
-                        "teacher": "Голиченко П.С.",
+                        "teacher": "Байбекова И.Г.",
                         "group": "ИКС-31",
-                        "room": "118",
+                        "room": "110",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -232,15 +239,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Чубарова А.Б.",
-                        "group": "ИКС-31",
-                        "room": "106",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Новосельцева Е.Ф.",
                         "group": "ИКС-31",
                         "room": "209а",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Чубарова А.Б.",
+                        "group": "ИКС-31",
+                        "room": "106",
                         "additional": "1"
                     }
                 ],

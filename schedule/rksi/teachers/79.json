@@ -5,20 +5,60 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Нефедова Е.Ф.",
+                        "group": "СА-44",
+                        "room": "414",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Нефедова Е.Ф.",
+                        "group": "СА-47",
+                        "room": "414",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Литература",
+                "subject": "Русский язык",
                 "otUnits": [
                     {
-                        "teacher": "Нефедова Евгения Михайловна",
+                        "teacher": "Нефедова Е.М.",
                         "group": "СА-17",
-                        "room": "213",
+                        "room": "220",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Русский язык",
+                "otUnits": [
+                    {
+                        "teacher": "Нефедова Е.М.",
+                        "group": "ИКС-13",
+                        "room": "319",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

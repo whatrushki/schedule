@@ -104,12 +104,12 @@
                     {
                         "teacher": "Троилина В.С.",
                         "group": "ТЭС-12",
-                        "room": "103",
+                        "room": "114",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -117,9 +117,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ТЭС-12",
+                        "room": "217",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },
@@ -169,15 +176,15 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Ужегова Е.А.",
-                        "group": "ТЭС-12",
-                        "room": "307",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Черноштан О.Н.",
                         "group": "ТЭС-12",
                         "room": "315а",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Ужегова Е.А.",
+                        "group": "ТЭС-12",
+                        "room": "307",
                         "additional": "1"
                     }
                 ],

@@ -49,9 +49,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Золотовская М.Ю.",
+                        "group": "ИС-35",
+                        "room": "319",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -63,12 +70,12 @@
                     {
                         "teacher": "Кошкина А.А.",
                         "group": "ИС-35",
-                        "room": "420",
+                        "room": "Общ1-1",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -80,18 +87,18 @@
                     {
                         "teacher": "Черноштан О.Н.",
                         "group": "ИС-35",
-                        "room": "315а",
+                        "room": "216",
                         "additional": "1"
                     },
                     {
                         "teacher": "Лебедева М.В.",
                         "group": "ИС-35",
-                        "room": "104",
+                        "room": "307",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -103,12 +110,12 @@
                     {
                         "teacher": "Кошкина А.А.",
                         "group": "ИС-35",
-                        "room": "420",
+                        "room": "Общ1-3",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

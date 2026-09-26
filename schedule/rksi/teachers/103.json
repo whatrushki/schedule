@@ -5,6 +5,29 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Смирнова Д.В.",
+                        "group": "ИКС-42",
+                        "room": "320",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Смирнова Д.В.",
+                        "group": "СА-33",
+                        "room": "320",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -18,24 +41,24 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-28",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Основы безопасности и защиты Родины",
+                "subject": "Обществознание",
                 "otUnits": [
                     {
-                        "teacher": "Смирнов Владимир Павлович",
-                        "group": "ИБТ-11",
-                        "room": "36",
-                        "additional": "2"
+                        "teacher": "Смирнова Д.В.",
+                        "group": "РУП-15",
+                        "room": "Акт.зал",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

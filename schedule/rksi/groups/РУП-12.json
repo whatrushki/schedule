@@ -87,12 +87,12 @@
                     {
                         "teacher": "Грицай О.П.",
                         "group": "РУП-12",
-                        "room": "410",
+                        "room": "404",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -104,12 +104,12 @@
                     {
                         "teacher": "Муравьева М.П.",
                         "group": "РУП-12",
-                        "room": "305",
+                        "room": "326",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -117,9 +117,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Попова А.Ю.",
+                        "group": "РУП-12",
+                        "room": "121",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },

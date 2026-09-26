@@ -62,20 +62,43 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 0,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Попова А.Ю.",
+                        "group": "РУП-12",
+                        "room": "121",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Попова А.Ю.",
+                        "group": "ИКС-52",
+                        "room": "121",
+                        "additional": "1"
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
                 "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Попова Ангелина Юрьевна",
+                        "teacher": "Попова А.Ю.",
                         "group": "СА-23",
-                        "room": "121",
+                        "room": "314",
                         "additional": "1"
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -85,14 +108,14 @@
                 "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Попова Ангелина Юрьевна",
+                        "teacher": "Попова А.Ю.",
                         "group": "СА-23",
-                        "room": "121",
+                        "room": "314",
                         "additional": "1"
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -102,14 +125,14 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Попова Ангелина Юрьевна",
+                        "teacher": "Попова А.Ю.",
                         "group": "СА-45",
                         "room": "121",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -119,14 +142,14 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Попова Ангелина Юрьевна",
+                        "teacher": "Попова А.Ю.",
                         "group": "СА-45",
                         "room": "121",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -136,14 +159,14 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Попова Ангелина Юрьевна",
+                        "teacher": "Попова А.Ю.",
                         "group": "СА-45",
                         "room": "121",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -245,13 +268,13 @@
                 "otUnits": [
                     {
                         "teacher": "Попова Ангелина Юрьевна",
-                        "group": "СА-19",
+                        "group": "СА-18",
                         "room": "121",
                         "additional": "1"
                     },
                     {
                         "teacher": "Попова Ангелина Юрьевна",
-                        "group": "СА-18",
+                        "group": "СА-19",
                         "room": "121",
                         "additional": "1"
                     }

@@ -53,12 +53,12 @@
                     {
                         "teacher": "Сулавко С.Н.",
                         "group": "ИС-25",
-                        "room": "415",
+                        "room": "122",
                         "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-28",
@@ -100,9 +100,16 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
-                "type": "OTHER",
-                "state": "COMMON"
+                "otUnits": [
+                    {
+                        "teacher": "Грицай О.П",
+                        "group": "ИС-25",
+                        "room": "404",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },
@@ -249,15 +256,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Лебедева М.В.",
-                        "group": "ИС-25",
-                        "room": "320",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Чубарова А.Б.",
                         "group": "ИС-25",
                         "room": "106",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Лебедева М.В.",
+                        "group": "ИС-25",
+                        "room": "320",
                         "additional": "1"
                     }
                 ],
