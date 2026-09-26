@@ -11,6 +11,9 @@ import app.what.schedule.data.local.database.*
 import app.what.schedule.data.remote.api.AdditionalData
 import app.what.schedule.data.remote.api.InstitutionManager
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.datetime.LocalDateTime
 
 class ScheduleRepositoryImpl(
@@ -18,6 +21,9 @@ class ScheduleRepositoryImpl(
     private val institutionManager: InstitutionManager,
     private val scope: CoroutineScope
 ) : app.what.domain.repositories.ScheduleRepository {
+    private val _scheduleUpdates = MutableSharedFlow<ScheduleSearch>(extraBufferCapacity = 1)
+    override val scheduleUpdates: Flow<ScheduleSearch> = _scheduleUpdates.asSharedFlow()
+
     private val api
         get() = institutionManager.getSavedInstitution().orThrow { "No provider selected" }
     
@@ -221,6 +227,7 @@ class ScheduleRepositoryImpl(
                     response.lastModified,
                     response.schedules
                 )
+                _scheduleUpdates.tryEmit(search)
                 response
             }
 

@@ -15,6 +15,7 @@ import app.what.foundation.services.crash.CrashHandler
 import app.what.schedule.data.local.database.AppDatabase
 import app.what.data.di.dataModule
 import app.what.features.main.di.mainFeatureModule
+import app.what.domain.repositories.ScheduleRepository
 import app.what.schedule.data.local.settings.AppValues
 import app.what.schedule.utils.AppUtils
 import app.what.schedule.utils.LogCat
@@ -51,6 +52,7 @@ import org.koin.dsl.module
 import java.util.UUID
 
 class ScheduleApp : Application() {
+    @OptIn(FlowPreview::class)
     override fun onCreate() {
         super.onCreate()
         
@@ -127,6 +129,36 @@ class ScheduleApp : Application() {
                         ScheduleWidget.instance.updateAll(this@ScheduleApp)
                     } catch (e: Exception) {
                         Auditor.debug(initTag, "Не удалось обновить виджеты при смене темы: ${e.message}")
+                    }
+                }
+        }
+
+        val scheduleRepository = koin.get<ScheduleRepository>()
+
+        // Автоматическое обновление виджетов при получении свежего расписания из сети
+        appScope.launch {
+            scheduleRepository.scheduleUpdates
+                .debounce(500)
+                .collect {
+                    try {
+                        ScheduleWidget.instance.updateAll(this@ScheduleApp)
+                        Auditor.debug(initTag, "Виджеты успешно обновлены после получения нового расписания")
+                    } catch (e: Exception) {
+                        Auditor.debug(initTag, "Не удалось обновить виджеты при получении расписания: ${e.message}")
+                    }
+                }
+        }
+
+        // Автоматическое обновление виджетов при смене выбранной группы в приложении
+        appScope.launch {
+            appValues.lastSearch.observe()
+                .drop(1)
+                .debounce(350)
+                .collect {
+                    try {
+                        ScheduleWidget.instance.updateAll(this@ScheduleApp)
+                    } catch (e: Exception) {
+                        Auditor.debug(initTag, "Не удалось обновить виджеты при смене группы: ${e.message}")
                     }
                 }
         }
