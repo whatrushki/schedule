@@ -267,6 +267,7 @@ fun ScheduleView(
                     ScheduleCalendar(weeks, weeksPagerState, daysPagerState) {
                         scope.launch { daysPagerState.animateScrollToPage(it) }
                     }
+                    Gap(8)
                 }
             }
 
@@ -278,7 +279,7 @@ fun ScheduleView(
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 12.dp, vertical = 4.dp),
+                        .padding(horizontal = 12.dp, vertical = 2.dp),
                     contentAlignment = Alignment.Center
                 ) {
                     LinearProgressIndicator(
@@ -296,13 +297,13 @@ fun ScheduleView(
                 Surface(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(start = 12.dp, end = 12.dp, top = 4.dp, bottom = 8.dp),
+                        .padding(start = 12.dp, end = 12.dp, top = 2.dp, bottom = 4.dp),
                     shape = RoundedCornerShape(12.dp),
                     color = colorScheme.surfaceVariant.copy(alpha = 0.7f),
                     onClick = { listener(ScheduleEvent.OnRefresh) }
                 ) {
                     Row(
-                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
+                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ) {

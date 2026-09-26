@@ -43,7 +43,9 @@ class CloudScheduleClient(
 
     private fun getBaseUrls(): List<String> = buildList {
         addAll(customBaseUrls)
+        // Первостепенный источник — актуальные файлы напрямую из GitHub
         add("https://raw.githubusercontent.com/whatrushki/schedule/gh-pages/schedule/$institutionId")
+        // Резервный источник — CDN jsDelivr на случай проблем с доступом к raw.githubusercontent.com
         add("https://cdn.jsdelivr.net/gh/whatrushki/schedule@gh-pages/schedule/$institutionId")
     }
 

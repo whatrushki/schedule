@@ -17,7 +17,9 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -45,6 +47,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -127,7 +130,7 @@ fun DgtuZachBookPage(
                     LazyColumn(
                         modifier = Modifier.fillMaxSize(),
                         verticalArrangement = Arrangement.spacedBy(16.dp),
-                        contentPadding = androidx.compose.foundation.layout.PaddingValues(16.dp)
+                        contentPadding = androidx.compose.foundation.layout.PaddingValues(vertical = 16.dp)
                     ) {
                         // Student Info Card
                         item {
@@ -137,6 +140,7 @@ fun DgtuZachBookPage(
                             Row(
                                 modifier = Modifier
                                     .fillMaxWidth()
+                                    .padding(horizontal = 16.dp)
                                     .clip(shapes.large)
                                     .background(colorScheme.surfaceContainer)
                                     .padding(16.dp),
@@ -206,6 +210,7 @@ fun DgtuZachBookPage(
                             Column(
                                 modifier = Modifier
                                     .fillMaxWidth()
+                                    .padding(horizontal = 16.dp)
                                     .clip(shapes.large)
                                     .background(colorScheme.surfaceContainerLow)
                                     .border(1.dp, colorScheme.outlineVariant.copy(alpha = 0.35f), shapes.large)
@@ -259,37 +264,50 @@ fun DgtuZachBookPage(
 
                                 if (data.markCountStatistic.isNotEmpty()) {
                                     Gap(14)
-                                    FlowRow(
-                                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        horizontalArrangement = Arrangement.spacedBy(8.dp)
                                     ) {
                                         for (stat in data.markCountStatistic) {
                                             val markColor = getMarkColor(stat.mark)
-                                            Row(
+                                            Column(
                                                 modifier = Modifier
+                                                    .weight(1f)
                                                     .clip(shapes.small)
                                                     .background(markColor.copy(alpha = 0.12f))
                                                     .border(1.dp, markColor.copy(alpha = 0.25f), shapes.small)
-                                                    .padding(horizontal = 10.dp, vertical = 5.dp),
-                                                verticalAlignment = Alignment.CenterVertically,
-                                                horizontalArrangement = Arrangement.spacedBy(6.dp)
+                                                    .padding(horizontal = 6.dp, vertical = 8.dp),
+                                                horizontalAlignment = Alignment.CenterHorizontally,
+                                                verticalArrangement = Arrangement.spacedBy(4.dp)
                                             ) {
-                                                Box(
-                                                    modifier = Modifier
-                                                        .size(6.dp)
-                                                        .clip(CircleShape)
-                                                        .background(markColor)
-                                                )
+                                                Row(
+                                                    verticalAlignment = Alignment.CenterVertically,
+                                                    horizontalArrangement = Arrangement.spacedBy(5.dp)
+                                                ) {
+                                                    Box(
+                                                        modifier = Modifier
+                                                            .size(6.dp)
+                                                            .clip(CircleShape)
+                                                            .background(markColor)
+                                                    )
+                                                    Text(
+                                                        text = stat.mark,
+                                                        fontSize = 12.sp,
+                                                        fontWeight = FontWeight.Bold,
+                                                        color = markColor
+                                                    )
+                                                    Text(
+                                                        text = "${stat.count}",
+                                                        fontSize = 11.sp,
+                                                        fontWeight = FontWeight.Medium,
+                                                        color = colorScheme.onSurfaceVariant
+                                                    )
+                                                }
                                                 Text(
-                                                    text = stat.mark,
-                                                    fontSize = 12.sp,
-                                                    fontWeight = FontWeight.Bold,
-                                                    color = markColor
-                                                )
-                                                Text(
-                                                    text = "${stat.count} (${stat.percent}%)",
+                                                    text = "${stat.percent}%",
                                                     fontSize = 11.sp,
-                                                    color = colorScheme.onSurfaceVariant
+                                                    color = colorScheme.onSurfaceVariant,
+                                                    textAlign = TextAlign.Center
                                                 )
                                             }
                                         }
@@ -327,21 +345,21 @@ fun DgtuZachBookPage(
                         // Semester switcher
                         if (semesterMap.isNotEmpty()) {
                             item {
-                                Column {
+                                Column(modifier = Modifier.fillMaxWidth()) {
                                     Text(
                                         text = "Семестры",
                                         style = typography.titleSmall,
                                         fontWeight = FontWeight.Bold,
-                                        color = colorScheme.onSurface
+                                        color = colorScheme.onSurface,
+                                        modifier = Modifier.padding(horizontal = 16.dp)
                                     )
                                     Gap(8)
-                                    Row(
-                                        modifier = Modifier
-                                            .fillMaxWidth()
-                                            .horizontalScroll(rememberScrollState()),
-                                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                                    LazyRow(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                        contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 16.dp)
                                     ) {
-                                        semesterMap.forEachIndexed { index, (key, _) ->
+                                        itemsIndexed(semesterMap) { index, (key, _) ->
                                             val (c, s) = key
                                             val isSelected = index == selectedSemesterIndex
                                             Box(
@@ -375,7 +393,7 @@ fun DgtuZachBookPage(
 
                             item {
                                 Row(
-                                    modifier = Modifier.fillMaxWidth().padding(top = 4.dp),
+                                    modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp).padding(top = 4.dp),
                                     horizontalArrangement = Arrangement.SpaceBetween,
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
@@ -394,7 +412,11 @@ fun DgtuZachBookPage(
                             }
 
                             items(disciplines, key = { it.key }) { zachItem ->
-                                ZachDisciplineCard(zachItem, data.hideZET)
+                                ZachDisciplineCard(
+                                    item = zachItem,
+                                    hideZET = data.hideZET,
+                                    modifier = Modifier.padding(horizontal = 16.dp)
+                                )
                             }
                         }
 
@@ -411,9 +433,13 @@ fun DgtuZachBookPage(
 }
 
 @Composable
-private fun ZachDisciplineCard(item: DGTUApi.Models.ZachItem, hideZET: Boolean) {
+private fun ZachDisciplineCard(
+    item: DGTUApi.Models.ZachItem,
+    hideZET: Boolean,
+    modifier: Modifier = Modifier
+) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .clip(shapes.medium)
             .background(colorScheme.surfaceContainer)

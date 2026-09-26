@@ -25,7 +25,8 @@ import org.w3c.dom.events.KeyboardEvent
 
 private fun isMobileBrowser(): Boolean {
     val ua = window.navigator.userAgent.lowercase()
-    return ua.contains("android") || ua.contains("iphone") || ua.contains("ipad") || ua.contains("mobile")
+    val isTouch = window.navigator.maxTouchPoints > 0
+    return ua.contains("android") || ua.contains("iphone") || ua.contains("ipad") || ua.contains("mobile") || isTouch
 }
 
 private class WasmMobileTextInputService : PlatformTextInputService {
@@ -59,6 +60,13 @@ private class WasmMobileTextInputService : PlatformTextInputService {
                 inputElement?.blur()
             }
         }
+
+        val canvas = document.getElementById("ComposeTarget")
+        canvas?.addEventListener("pointerdown") {
+            if (onEditCommandCallback != null) {
+                inputElement?.focus()
+            }
+        }
     }
 
     override fun startInput(
@@ -75,6 +83,9 @@ private class WasmMobileTextInputService : PlatformTextInputService {
         inputElement?.let { el ->
             el.value = value.text
             el.focus()
+            try {
+                el.setSelectionRange(value.selection.start, value.selection.end)
+            } catch (_: Throwable) {}
         }
     }
 
@@ -82,6 +93,12 @@ private class WasmMobileTextInputService : PlatformTextInputService {
         onEditCommandCallback = null
         onImeActionPerformedCallback = null
         inputElement?.blur()
+        inputElement?.let { el ->
+            el.style.left = "0px"
+            el.style.top = "0px"
+            el.style.width = "1px"
+            el.style.height = "1px"
+        }
     }
 
     override fun showSoftwareKeyboard() {
@@ -102,6 +119,12 @@ private class WasmMobileTextInputService : PlatformTextInputService {
     }
 
     override fun notifyFocusedRect(rect: Rect) {
+        inputElement?.let { el ->
+            el.style.left = "${rect.left}px"
+            el.style.top = "${rect.top}px"
+            el.style.width = "${rect.width.coerceAtLeast(10f)}px"
+            el.style.height = "${rect.height.coerceAtLeast(10f)}px"
+        }
     }
 }
 

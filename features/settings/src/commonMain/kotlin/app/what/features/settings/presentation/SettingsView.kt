@@ -111,7 +111,7 @@ fun SettingsView(
                 .widthIn(max = 760.dp)
         ) {
             val isKeyboardOpen = keyboardAsState().value
-            val topSpacing = if (isKeyboardOpen) 16.dp else (maxHeight * 0.15f).coerceIn(36.dp, 130.dp)
+            val headerHeight = if (isKeyboardOpen) 20.dp else (maxHeight * 0.28f).coerceIn(160.dp, 240.dp)
 
             Column(Modifier.fillMaxSize()) {
                 val headerTitle = if (pagerState.currentPage == 0) "Настройки"
@@ -130,7 +130,7 @@ fun SettingsView(
                 SettingsHeader(
                     title = headerTitle,
                     description = headerDesc,
-                    topSpacing = topSpacing
+                    headerHeight = headerHeight
                 )
                 // --------------
                 
@@ -166,37 +166,42 @@ fun SettingsView(
 private fun SettingsHeader(
     title: String,
     description: String,
-    topSpacing: Dp
-) = Column(
+    headerHeight: Dp
+) = Box(
     Modifier
-        .animateContentSize()
         .fillMaxWidth()
-        .padding(top = topSpacing)
+        .height(headerHeight)
 ) {
-    AnimatedEnter {
-        Text(
-            text = title,
-            style = typography.headlineLarge,
-            fontWeight = FontWeight.Bold,
-            fontSize = 46.sp,
-            color = colorScheme.primary,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 18.dp, end = 16.dp)
-        )
-    }
-    
-    AnimatedEnter(delay = 200) {
-        Text(
-            text = description,
-            style = typography.titleLarge,
-            fontStyle = FontStyle.Italic,
-            fontFamily = FontFamily.Monospace,
-            color = colorScheme.secondary,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 18.dp, end = 16.dp, bottom = 12.dp)
-        )
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .align(Alignment.BottomStart)
+    ) {
+        AnimatedEnter {
+            Text(
+                text = title,
+                style = typography.headlineLarge,
+                fontWeight = FontWeight.Bold,
+                fontSize = 46.sp,
+                color = colorScheme.primary,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 18.dp, end = 16.dp)
+            )
+        }
+        
+        AnimatedEnter(delay = 200) {
+            Text(
+                text = description,
+                style = typography.titleLarge,
+                fontStyle = FontStyle.Italic,
+                fontFamily = FontFamily.Monospace,
+                color = colorScheme.secondary,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 18.dp, end = 16.dp, bottom = 12.dp)
+            )
+        }
     }
 }
 
@@ -330,8 +335,14 @@ fun CategoryItem(
         
         Gap(18)
         
-        Column {
-            Text(title, style = typography.titleLarge, color = colorScheme.onBackground)
+        Column(Modifier.weight(1f)) {
+            Text(
+                text = title,
+                style = typography.titleLarge,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                color = colorScheme.onBackground
+            )
             Text(
                 description,
                 maxLines = 1,

@@ -97,14 +97,6 @@ import kotlinx.datetime.LocalDateTime
 internal fun DGTUMainScreen(
     state: State<DgtuState>,
     listener: Listener<DgtuEvent>
-) = Column(
-    modifier = Modifier
-        .fillMaxSize()
-        .wrapContentWidth(Alignment.CenterHorizontally)
-        .widthIn(max = 860.dp)
-        .verticalScroll(rememberScrollState())
-        .background(colorScheme.surface),
-    horizontalAlignment = Alignment.CenterHorizontally
 ) {
     val dialog = rememberDialogController()
     val sheet = rememberSheetController()
@@ -113,37 +105,46 @@ internal fun DGTUMainScreen(
         listener(DgtuEvent.MainOpened)
     }
     
-    if (state.value.studentInfo == null) {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .statusBarsPadding()
-                .padding(top = 120.dp),
-            contentAlignment = Alignment.Center
-        ) {
-            when (state.value.studentInfoFetchState) {
-                is RemoteState.Error -> {
-                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        Text(
-                            "Не удалось загрузить профиль",
-                            color = colorScheme.error,
-                            fontSize = 16.sp
-                        )
-                        Gap(12)
-                        Button(onClick = { listener(DgtuEvent.MainOpened) }) {
-                            Text("Повторить")
+    val studentInfo = state.value.studentInfo
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .wrapContentWidth(Alignment.CenterHorizontally)
+            .widthIn(max = 860.dp)
+            .verticalScroll(rememberScrollState())
+            .background(colorScheme.surface),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        if (studentInfo == null) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .statusBarsPadding()
+                    .padding(top = 120.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                when (state.value.studentInfoFetchState) {
+                    is RemoteState.Error -> {
+                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                            Text(
+                                "Не удалось загрузить профиль",
+                                color = colorScheme.error,
+                                fontSize = 16.sp
+                            )
+                            Gap(12)
+                            Button(onClick = { listener(DgtuEvent.MainOpened) }) {
+                                Text("Повторить")
+                            }
                         }
                     }
-                }
-                else -> {
-                    CircularProgressIndicator(color = colorScheme.primary)
+                    else -> {
+                        CircularProgressIndicator(color = colorScheme.primary)
+                    }
                 }
             }
-        }
-        return
-    }
-    
-    with(state.value.studentInfo!!) {
+        } else {
+            with(studentInfo) {
             Box(
                 Modifier
                     .fillMaxWidth()
@@ -421,6 +422,8 @@ internal fun DGTUMainScreen(
             Gap(60)
             SystemBarsGap()
         }
+    }
+}
 }
 
 
@@ -828,7 +831,7 @@ private fun formatEventDate(start: LocalDateTime, end: LocalDateTime?): String {
 fun EventDetailContent(
     state: State<DgtuState>,
     modifier: Modifier = Modifier,
-    onOpenClicked: () -> Unit = {},
+    onOpenClicked: (() -> Unit)? = null,
 ) {
     val uriHandler = LocalUriHandler.current
     val event = state.value.eventDetail
@@ -847,7 +850,7 @@ fun EventDetailContent(
     val targetUrl = if (rawUrl.startsWith("http://") || rawUrl.startsWith("https://")) rawUrl else "https://$rawUrl"
 
     val handleOpen = {
-        if (onOpenClicked != {}) {
+        if (onOpenClicked != null) {
             onOpenClicked()
         } else {
             try {
@@ -883,9 +886,11 @@ fun EventDetailContent(
             
             Text(
                 text = event.name,
-                style = typography.headlineSmall,
+                style = typography.titleLarge,
                 fontWeight = FontWeight.SemiBold,
-                color = colorScheme.onSurface
+                color = colorScheme.onSurface,
+                maxLines = 4,
+                overflow = TextOverflow.Ellipsis
             )
             
             Gap(20)

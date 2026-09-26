@@ -46,17 +46,21 @@ class DgtuController(
         
         updateState { copy(token = token, studentId = appValues.dgtuStudentId.get()) }
         
-        if (token != null) viewModelScope.launchIO {
+        if (token != null) viewModelScope.launchSafe(
+            debug = debug,
+            onFailure = {
+                loadAllData()
+            }
+        ) {
             val testData = accountService.getUnreadMessagesId(token)
             if (testData.state == -1 && testData.msg?.contains("unauth", true) == true) {
                 appValues.dgtuToken.set(null)
                 appValues.dgtuStudentId.set(null)
                 
                 updateState { copy(token = null, studentId = null) }
+            } else {
+                loadAllData()
             }
-        }.invokeOnCompletion {
-            if (appValues.dgtuToken.get() == null) return@invokeOnCompletion
-            loadAllData()
         }
     }
     
