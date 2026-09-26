@@ -10,6 +10,7 @@ import app.what.domain.models.LessonState
 import app.what.domain.models.ScheduleResponse
 import app.what.domain.repositories.ScheduleRepository
 import app.what.domain.services.ReplacementDetector
+import app.what.domain.services.ReplacementNotificationFormatter
 import app.what.foundation.services.AppLogger.Companion.Auditor
 import app.what.foundation.utils.LogCat
 import app.what.foundation.utils.LogScope
@@ -89,35 +90,18 @@ class ScheduleCheckWorker(
                 return Result.success()
             }
 
-            // Формируем текст уведомления только для НОВЫХ замен
-            val title = "Замены в расписании (${search.name})"
-            val details = detection.newReplacements.map { item ->
-                val day = item.day
-                val lesson = item.lesson
-                val dayLabel = when (day.date) {
-                    today -> "Сегодня"
-                    today.plus(1, DateTimeUnit.DAY) -> "Завтра"
-                    today.plus(2, DateTimeUnit.DAY) -> "Послезавтра"
-                    else -> "${day.date.dayOfMonth}.${day.date.monthNumber}"
-                }
-                val stateLabel = when (lesson.state) {
-                    LessonState.ADDED -> "добавлена"
-                    LessonState.REMOVED -> "отменена"
-                    LessonState.CHANGED -> "изменена"
-                    LessonState.COMMON -> ""
-                }
-                val subject = lesson.subject.ifBlank { "Пара ${lesson.number}" }
-                val timeStr = formatTime(lesson.startTime)
-                "$dayLabel: $subject ($stateLabel в $timeStr)"
-            }
-
-            val summary = details.take(2).joinToString(", ")
+            // Формируем чистое, информативное уведомление без дублирования дат
+            val formatted = ReplacementNotificationFormatter.format(
+                searchName = search.name,
+                newReplacements = detection.newReplacements,
+                today = today
+            )
 
             NotificationHelper.showReplacementsNotification(
                 context = applicationContext,
-                title = title,
-                content = summary,
-                details = details
+                title = formatted.title,
+                content = formatted.summary,
+                details = formatted.details
             )
 
             Auditor.info(tag, "ScheduleCheckWorker: успешно отправлено уведомление о ${detection.newReplacements.size} новых заменах")
