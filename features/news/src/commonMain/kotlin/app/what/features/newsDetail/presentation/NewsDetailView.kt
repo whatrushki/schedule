@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -99,15 +100,22 @@ fun NewsDetailView(
     state: NewsDetailState,
     listener: (NewsDetailEvent) -> Unit,
     onBack: (() -> Unit)? = null
-) = Column(
+) = Box(
     Modifier
         .fillMaxSize()
-        .background(colorScheme.background)
-        .statusBarsPadding()
-        .capplyIf(state.newState != RemoteState.Loading && state.newState !is RemoteState.Error) {
-            verticalScroll(rememberScrollState())
-        }
+        .background(colorScheme.background),
+    contentAlignment = Alignment.TopCenter
 ) {
+    Column(
+        Modifier
+            .fillMaxSize()
+            .wrapContentWidth(Alignment.CenterHorizontally)
+            .widthIn(max = 860.dp)
+            .statusBarsPadding()
+            .capplyIf(state.newState != RemoteState.Loading && state.newState !is RemoteState.Error) {
+                verticalScroll(rememberScrollState())
+            }
+    ) {
     val uriHandler = LocalUriHandler.current
     val sheet = rememberSheetController()
     val shimmer = rememberShimmer(state.newState == RemoteState.Loading)
@@ -278,6 +286,7 @@ fun NewsDetailView(
     }
     
     Gap(50)
+    }
 }
 
 @Composable

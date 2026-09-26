@@ -7,7 +7,10 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.displayCutoutPadding
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.systemBarsPadding
+import app.what.foundation.utils.isDesktop
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Settings
@@ -135,13 +138,19 @@ class MainFeature(
                     .fillMaxSize()
                     .background(colorScheme.background)
             ) {
-                val isWideScreen = maxWidth >= 760.dp
+                val isLandscape = maxWidth > maxHeight && maxWidth >= 480.dp
+                val isWideScreen = isDesktop || maxWidth >= 760.dp || isLandscape
                 if (isWideScreen) {
-                    Row(Modifier.fillMaxSize()) {
+                    Row(
+                        Modifier
+                            .fillMaxSize()
+                            .displayCutoutPadding()
+                            .systemBarsPadding()
+                    ) {
                         SideNavBar(
                             navigator = navigator,
                             screens = screens,
-                            modifier = Modifier.padding(start = 16.dp, end = 8.dp)
+                            modifier = Modifier.padding(start = 8.dp, end = 8.dp)
                         ) {
                             if (!devFeaturesEnabled!!) null
                             else NavAction("Для разработчиков", WHATIcons.FrameBug) {

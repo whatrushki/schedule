@@ -39,6 +39,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
@@ -135,6 +136,10 @@ fun OnboardingView(
 
 @Composable
 fun IntroPage() {
+    val primaryColor = colorScheme.primary
+    val glowBrush = Brush.radialGradient(
+        colors = listOf(primaryColor.copy(0.25f), Color.Transparent)
+    )
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
@@ -142,17 +147,13 @@ fun IntroPage() {
     ) {
         Box(contentAlignment = Alignment.Center) {
             Canvas(modifier = Modifier.size(200.dp)) {
-                drawCircle(
-                    brush = Brush.radialGradient(
-                        colors = listOf(Color(0xFF94FF28).copy(0.3f), Color.Transparent)
-                    )
-                )
+                drawCircle(brush = glowBrush)
             }
             Icon(
                 imageVector = WHATIcons.Crown,
                 contentDescription = null,
                 modifier = Modifier.size(120.dp),
-                tint = colorScheme.primary
+                tint = primaryColor
             )
         }
         
@@ -397,8 +398,10 @@ fun OnboardingBackground(page: Int) {
     
     Canvas(modifier = Modifier.fillMaxSize()) {
         drawRect(
-            brush = Brush.verticalGradient(
-                listOf(color1, surface)
+            brush = Brush.radialGradient(
+                colors = listOf(color1, surface),
+                center = Offset(size.width / 2f, size.height * 0.25f),
+                radius = size.maxDimension * 0.85f
             )
         )
     }

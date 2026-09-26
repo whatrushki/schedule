@@ -249,7 +249,7 @@ fun LogItem(logEntry: LogEntry) {
             ) {
                 Box(
                     modifier = Modifier
-                        .width(68.dp)
+                        .width(78.dp)
                         .clip(RoundedCornerShape(4.dp))
                         .background(levelColor.copy(alpha = 0.15f))
                         .padding(horizontal = 6.dp, vertical = 2.dp),

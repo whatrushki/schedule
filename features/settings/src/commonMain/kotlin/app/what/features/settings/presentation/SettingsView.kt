@@ -3,6 +3,7 @@ package app.what.schedule.features.settings.presentation
 import app.what.foundation.ui.PlatformBackHandler
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -37,6 +38,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.what.foundation.core.Listener
@@ -102,50 +104,56 @@ fun SettingsView(
     CompositionLocalProvider(LocalSettingsNavigator provides navigateToSubScreen) {
         val rootComponents = getSettingsList(appValues, appUtils)
         
-        Column(
+        BoxWithConstraints(
             Modifier
                 .fillMaxSize()
                 .wrapContentWidth(Alignment.CenterHorizontally)
                 .widthIn(max = 760.dp)
         ) {
-            val headerTitle = if (pagerState.currentPage == 0) "Настройки"
-            else subScreen?.title ?: ""
-            
-            val headerDesc = if (pagerState.currentPage == 0) listOf(
-                "( ˶°ㅁ°) !!",
-                "(๑ᵔ⤙ᵔ๑)",
-                "(˶ˆᗜˆ˵)",
-                "◝(ᵔᗜᵔ)◜",
-                "⸜(｡˃ ᵕ ˂ )⸝♡",
-                "(๑>◡<๑)",
-                "(˶˃⤙˂˶)"
-            ).random() else subScreen?.description ?: ""
-            
-            SettingsHeader(
-                title = headerTitle,
-                description = headerDesc
-            )
-            // --------------
-            
-            HorizontalPager(
-                state = pagerState,
-                userScrollEnabled = pagerState.currentPage != 0,
-                modifier = Modifier.weight(1f),
-                verticalAlignment = Alignment.Top
-            ) { page ->
-                LazyColumn(Modifier.fillMaxSize()) {
-                    if (page == 0) {
-                        // Главная страница
-                        item { SettingUpdateComponent.content(Modifier) }
-                        
-                        items(rootComponents.size) { index ->
-                            rootComponents[index].content(Modifier)
-                        }
-                    } else {
-                        // Вторая страница
-                        val components = subScreen?.content ?: emptyList()
-                        items(components.size) { index ->
-                            components[index].content(Modifier)
+            val isKeyboardOpen = keyboardAsState().value
+            val topSpacing = if (isKeyboardOpen) 16.dp else (maxHeight * 0.15f).coerceIn(36.dp, 130.dp)
+
+            Column(Modifier.fillMaxSize()) {
+                val headerTitle = if (pagerState.currentPage == 0) "Настройки"
+                else subScreen?.title ?: ""
+                
+                val headerDesc = if (pagerState.currentPage == 0) listOf(
+                    "( ˶°ㅁ°) !!",
+                    "(๑ᵔ⤙ᵔ๑)",
+                    "(˶ˆᗜˆ˵)",
+                    "◝(ᵔᗜᵔ)◜",
+                    "⸜(｡˃ ᵕ ˂ )⸝♡",
+                    "(๑>◡<๑)",
+                    "(˶˃⤙˂˶)"
+                ).random() else subScreen?.description ?: ""
+                
+                SettingsHeader(
+                    title = headerTitle,
+                    description = headerDesc,
+                    topSpacing = topSpacing
+                )
+                // --------------
+                
+                HorizontalPager(
+                    state = pagerState,
+                    userScrollEnabled = pagerState.currentPage != 0,
+                    modifier = Modifier.weight(1f),
+                    verticalAlignment = Alignment.Top
+                ) { page ->
+                    LazyColumn(Modifier.fillMaxSize()) {
+                        if (page == 0) {
+                            // Главная страница
+                            item { SettingUpdateComponent.content(Modifier) }
+                            
+                            items(rootComponents.size) { index ->
+                                rootComponents[index].content(Modifier)
+                            }
+                        } else {
+                            // Вторая страница
+                            val components = subScreen?.content ?: emptyList()
+                            items(components.size) { index ->
+                                components[index].content(Modifier)
+                            }
                         }
                     }
                 }
@@ -157,40 +165,38 @@ fun SettingsView(
 @Composable
 private fun SettingsHeader(
     title: String,
-    description: String
-) = Box(
+    description: String,
+    topSpacing: Dp
+) = Column(
     Modifier
         .animateContentSize()
-        .height(if (keyboardAsState().value) 20.dp else 240.dp)
+        .fillMaxWidth()
+        .padding(top = topSpacing)
 ) {
-    Column(
-        Modifier.align(Alignment.BottomStart)
-    ) {
-        AnimatedEnter {
-            Text(
-                text = title,
-                style = typography.headlineLarge,
-                fontWeight = FontWeight.Bold,
-                fontSize = 46.sp,
-                color = colorScheme.primary,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 16.dp, start = 18.dp, end = 16.dp)
-            )
-        }
-        
-        AnimatedEnter(delay = 200) {
-            Text(
-                text = description,
-                style = typography.titleLarge,
-                fontStyle = FontStyle.Italic,
-                fontFamily = FontFamily.Monospace,
-                color = colorScheme.secondary,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(start = 18.dp, end = 16.dp)
-            )
-        }
+    AnimatedEnter {
+        Text(
+            text = title,
+            style = typography.headlineLarge,
+            fontWeight = FontWeight.Bold,
+            fontSize = 46.sp,
+            color = colorScheme.primary,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 18.dp, end = 16.dp)
+        )
+    }
+    
+    AnimatedEnter(delay = 200) {
+        Text(
+            text = description,
+            style = typography.titleLarge,
+            fontStyle = FontStyle.Italic,
+            fontFamily = FontFamily.Monospace,
+            color = colorScheme.secondary,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 18.dp, end = 16.dp, bottom = 12.dp)
+        )
     }
 }
 

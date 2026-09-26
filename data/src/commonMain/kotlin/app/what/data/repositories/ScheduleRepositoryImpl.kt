@@ -19,7 +19,8 @@ import kotlinx.datetime.LocalDateTime
 class ScheduleRepositoryImpl(
     private val db: AppDatabaseSource,
     private val institutionManager: InstitutionManager,
-    private val scope: CoroutineScope
+    private val scope: CoroutineScope,
+    private val connectivity: app.what.domain.services.NetworkConnectivity? = null
 ) : app.what.domain.repositories.ScheduleRepository {
     private val _scheduleUpdates = MutableSharedFlow<ScheduleSearch>(extraBufferCapacity = 1)
     override val scheduleUpdates: Flow<ScheduleSearch> = _scheduleUpdates.asSharedFlow()
@@ -190,6 +191,16 @@ class ScheduleRepositoryImpl(
 
         val netTag = buildTag(LogScope.NETWORK, LogCat.NET)
         Auditor.debug(netTag, "Запрос данных из сети для $searchType: ${search.id}")
+
+        if (connectivity?.isConnected() == false) {
+            Auditor.debug(netTag, "Нет подключения к сети, отдаём кэш без сетевого запроса")
+            val cachedSchedules = cache?.daySchedules?.map { it.toModel() }
+            return ScheduleResponse.Error(
+                cachedSchedules = cachedSchedules,
+                lastModified = cache?.request?.lastModified,
+                exception = Exception("Нет подключения к сети")
+            )
+        }
 
         val response = try {
             when (search) {

@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
@@ -49,6 +51,8 @@ internal fun DGTULoginScreen(
         modifier = Modifier
             .fillMaxSize()
             .background(colorScheme.surface)
+            .wrapContentWidth(Alignment.CenterHorizontally)
+            .widthIn(max = 440.dp)
             .systemBarsPadding()
             .padding(horizontal = 20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,

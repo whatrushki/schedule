@@ -1,6 +1,11 @@
 package app.what.schedule.features.schedule.presentation
 
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.expandVertically
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -265,17 +270,20 @@ fun ScheduleView(
                 }
             }
 
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(8.dp),
-                contentAlignment = Alignment.Center
+            AnimatedVisibility(
+                visible = state.value.scheduleState == RemoteState.Loading,
+                enter = fadeIn() + expandVertically(),
+                exit = fadeOut() + shrinkVertically()
             ) {
-                if (state.value.scheduleState == RemoteState.Loading) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 12.dp, vertical = 4.dp),
+                    contentAlignment = Alignment.Center
+                ) {
                     LinearProgressIndicator(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(horizontal = 12.dp)
                             .height(2.dp)
                             .clip(CircleShape),
                         color = colorScheme.primary,
@@ -288,7 +296,7 @@ fun ScheduleView(
                 Surface(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 16.dp, vertical = 4.dp),
+                        .padding(start = 12.dp, end = 12.dp, top = 4.dp, bottom = 8.dp),
                     shape = RoundedCornerShape(12.dp),
                     color = colorScheme.surfaceVariant.copy(alpha = 0.7f),
                     onClick = { listener(ScheduleEvent.OnRefresh) }

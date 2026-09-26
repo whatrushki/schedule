@@ -22,6 +22,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
@@ -98,6 +100,8 @@ internal fun DGTUMainScreen(
 ) = Column(
     modifier = Modifier
         .fillMaxSize()
+        .wrapContentWidth(Alignment.CenterHorizontally)
+        .widthIn(max = 860.dp)
         .verticalScroll(rememberScrollState())
         .background(colorScheme.surface),
     horizontalAlignment = Alignment.CenterHorizontally
@@ -426,6 +430,8 @@ fun StudentDetail(
 ) = Column(
     Modifier
         .fillMaxSize()
+        .wrapContentWidth(Alignment.CenterHorizontally)
+        .widthIn(max = 860.dp)
         .padding(12.dp)
         .systemBarsPadding()
 ) {
@@ -677,11 +683,19 @@ fun StatBox(
 fun EventsListPane(
     state: State<DgtuState>,
     onClick: (EventListItem) -> Unit
-) = LazyColumn(
-    Modifier.fillMaxWidth()
+) = Box(
+    Modifier.fillMaxSize(),
+    contentAlignment = Alignment.TopCenter
 ) {
-    itemsIndexed(state.value.events, key = { i, it -> it.id }) { i, it ->
-        EventListItemView(it, i) { onClick(it) }
+    LazyColumn(
+        Modifier
+            .fillMaxSize()
+            .wrapContentWidth(Alignment.CenterHorizontally)
+            .widthIn(max = 760.dp)
+    ) {
+        itemsIndexed(state.value.events, key = { i, it -> it.id }) { i, it ->
+            EventListItemView(it, i) { onClick(it) }
+        }
     }
 }
 
@@ -843,11 +857,14 @@ fun EventDetailContent(
     }
 
     Box(
-        modifier = modifier.fillMaxSize()
+        modifier = modifier.fillMaxSize(),
+        contentAlignment = Alignment.TopCenter
     ) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .wrapContentWidth(Alignment.CenterHorizontally)
+                .widthIn(max = 760.dp)
                 .padding(horizontal = 24.dp)
                 .verticalScroll(rememberScrollState())
                 .padding(bottom = 76.dp)

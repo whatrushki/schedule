@@ -14,6 +14,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
@@ -76,6 +78,8 @@ fun DgtuZachBookPage(
         modifier = Modifier
             .fillMaxSize()
             .background(colorScheme.surface)
+            .wrapContentWidth(Alignment.CenterHorizontally)
+            .widthIn(max = 860.dp)
     ) {
         AppPullToRefresh(
             isRefreshing = state.value.zachBookFetchState == RemoteState.Loading,
@@ -107,13 +111,16 @@ fun DgtuZachBookPage(
                         data.zachBook
                             .groupBy { it.course to it.sem }
                             .toList()
-                            .sortedWith(compareBy({ it.first.first }, { it.first.second }))
+                            .sortedWith(
+                                compareByDescending<Pair<Pair<Int, Int>, *>> { it.first.first }
+                                    .thenByDescending { it.first.second }
+                            )
                     }
 
                     var selectedSemesterIndex by remember(semesterMap) {
-                        val initialIdx = semesterMap.indexOfLast { (key, _) ->
+                        val initialIdx = semesterMap.indexOfFirst { (key, _) ->
                             key.second == data.currentSem
-                        }.takeIf { it >= 0 } ?: semesterMap.lastIndex.coerceAtLeast(0)
+                        }.takeIf { it >= 0 } ?: 0
                         mutableIntStateOf(initialIdx)
                     }
 
@@ -135,18 +142,6 @@ fun DgtuZachBookPage(
                                     .padding(16.dp),
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Box(
-                                    modifier = Modifier
-                                        .size(46.dp)
-                                        .clip(CircleShape)
-                                        .background(colorScheme.primaryContainer),
-                                    contentAlignment = Alignment.Center
-                                ) {
-                                    WHATIcons.Features.Show(colorScheme.onPrimaryContainer, 22)
-                                }
-
-                                Gap(14)
-
                                 Column(modifier = Modifier.weight(1f)) {
                                     if (name.isNotBlank()) {
                                         Text(
@@ -309,7 +304,7 @@ fun DgtuZachBookPage(
                                             .horizontalScroll(rememberScrollState()),
                                         horizontalArrangement = Arrangement.spacedBy(8.dp)
                                     ) {
-                                        for (courseStat in data.avgCourseStatistic) {
+                                        for (courseStat in data.avgCourseStatistic.sortedByDescending { it.course }) {
                                             Box(
                                                 modifier = Modifier
                                                     .clip(shapes.small)

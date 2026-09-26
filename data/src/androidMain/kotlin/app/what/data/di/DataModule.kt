@@ -60,8 +60,19 @@ val dataModule = module {
     single { InstitutionManager(get(), get()) }
     single<app.what.schedule.rksi.parser.XlsxReader> { app.what.schedule.rksi.parser.JvmXlsxReader() }
     
+    single<app.what.domain.services.NetworkConnectivity> {
+        object : app.what.domain.services.NetworkConnectivity {
+            private val cm = androidContext().getSystemService(android.content.Context.CONNECTIVITY_SERVICE) as? android.net.ConnectivityManager
+            override fun isConnected(): Boolean {
+                val network = cm?.activeNetwork ?: return false
+                val caps = cm.getNetworkCapabilities(network) ?: return false
+                return caps.hasCapability(android.net.NetworkCapabilities.NET_CAPABILITY_INTERNET)
+            }
+        }
+    }
+
     single<ScheduleRepository> {
-        ScheduleRepositoryImpl(get(), get(), get())
+        ScheduleRepositoryImpl(get(), get(), get(), getOrNull())
     }
     
     single<NewsRepository> {

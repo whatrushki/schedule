@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -67,30 +68,38 @@ fun NewsView(
     val columns = if (isWide) GridCells.Adaptive(240.dp) else GridCells.Fixed(1)
     val displayNews = remember(state.news) { state.news.distinctBy { it.id } }
 
-    AppPullToRefresh(
-        isRefreshing = state.newsState == RemoteState.Loading,
-        onRefresh = { listener(NewsEvent.OnRefresh) },
-        modifier = modifier
-    ) {
-        LazyVerticalGrid(
-            columns = columns,
-            state = lazyGridState,
-            modifier = Modifier.fillMaxSize().padding(horizontal = if (isWide) 0.dp else 12.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
-            horizontalArrangement = Arrangement.spacedBy(12.dp)
+    BoxWithConstraints(modifier = modifier) {
+        val topSpacing = if (isWide) 0.dp else (maxHeight * 0.15f).coerceIn(36.dp, 130.dp)
+
+        AppPullToRefresh(
+            isRefreshing = state.newsState == RemoteState.Loading,
+            onRefresh = { listener(NewsEvent.OnRefresh) },
+            modifier = Modifier.fillMaxSize()
         ) {
-            item(span = { GridItemSpan(maxLineSpan) }) {
-                Column {
-                    if (!isWide) {
-                        Box(Modifier.height(116.dp))
-                    }
+            LazyVerticalGrid(
+                columns = columns,
+                state = lazyGridState,
+                modifier = Modifier.fillMaxSize().padding(horizontal = if (isWide) 0.dp else 12.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp),
+                horizontalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                item(span = { GridItemSpan(maxLineSpan) }) {
+                    Column {
+                        if (topSpacing > 0.dp) {
+                            Box(Modifier.height(topSpacing))
+                        }
                     Text(
                         "Новости",
                         style = typography.headlineLarge,
                         fontWeight = FontWeight.Bold,
                         fontSize = if (isWide) 32.sp else 46.sp,
                         color = colorScheme.primary,
-                        modifier = Modifier.padding(horizontal = if (isWide) 4.dp else 8.dp, vertical = 8.dp)
+                        modifier = Modifier.padding(
+                            start = if (isWide) 4.dp else 8.dp,
+                            end = if (isWide) 4.dp else 8.dp,
+                            top = 8.dp,
+                            bottom = 0.dp
+                        )
                     )
                 }
             }
@@ -129,6 +138,7 @@ fun NewsView(
             }
         }
     }
+}
 }
 
 @Composable
