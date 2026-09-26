@@ -72,10 +72,16 @@
                         "group": "СА-41",
                         "room": "307",
                         "additional": "1"
+                    },
+                    {
+                        "teacher": "Лебедева М.В.",
+                        "group": "СА-41",
+                        "room": "316",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
+                "state": "COMMON"
             },
             {
                 "date": "2026-09-28",
@@ -100,33 +106,9 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [
-                    {
-                        "teacher": "Коханова Л.Н.",
-                        "group": "СА-41",
-                        "room": "312",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-28",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Лебедева М.В.",
-                        "group": "СА-41",
-                        "room": "307",
-                        "additional": "1"
-                    }
-                ],
+                "otUnits": [],
                 "type": "OTHER",
-                "state": "ADDED"
+                "state": "COMMON"
             }
         ]
     },
