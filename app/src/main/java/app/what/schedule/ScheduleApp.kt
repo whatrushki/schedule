@@ -39,8 +39,10 @@ import androidx.glance.appwidget.updateAll
 import app.what.schedule.features.widget.ScheduleWidget
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.launch
 import app.what.schedule.notifications.NotificationHelper
@@ -111,6 +113,7 @@ class ScheduleApp : Application() {
 
         // Автоматическое обновление виджетов при смене темы пользователем в приложении
         val appScope = CoroutineScope(Dispatchers.Default + SupervisorJob())
+        @OptIn(FlowPreview::class)
         appScope.launch {
             combine(
                 appValues.themeType.observe(),
@@ -118,6 +121,7 @@ class ScheduleApp : Application() {
                 appValues.themeColor.observe()
             ) { _, _, _ -> }
                 .drop(1)
+                .debounce(350)
                 .collect {
                     try {
                         ScheduleWidget.instance.updateAll(this@ScheduleApp)
