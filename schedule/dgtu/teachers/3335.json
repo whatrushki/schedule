@@ -357,18 +357,18 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Иностранный язык (английский), п/г 1",
+                "subject": "пр Иностранный язык (английский)",
                 "otUnits": [
-                    {
-                        "teacher": "Животкова И. А.",
-                        "group": "ИПБК11",
-                        "room": "220в",
-                        "additional": "1"
-                    },
                     {
                         "teacher": "Животкова И. А.",
                         "group": "ВИС11",
                         "room": "445",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Животкова И. А.",
+                        "group": "ИПБК11",
+                        "room": "220в",
                         "additional": "1"
                     }
                 ],
@@ -520,15 +520,15 @@
         "lessons": [
             {
                 "date": "2026-09-25",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Иностранный язык (английский), п/г 1",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Иностранный язык (английский)",
                 "otUnits": [
                     {
                         "teacher": "Животкова И. А.",
-                        "group": "ВИАС11",
-                        "room": "355",
+                        "group": "ВИС11",
+                        "room": "115",
                         "additional": "1"
                     }
                 ],
@@ -537,15 +537,55 @@
             },
             {
                 "date": "2026-09-25",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "пр Иностранный язык (английский), п/г 1",
                 "otUnits": [
                     {
                         "teacher": "Животкова И. А.",
-                        "group": "ВИС11",
+                        "group": "ВИАС11",
                         "room": "444",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Иностранный язык, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Животкова И. А.",
+                        "group": "ВМО11",
+                        "room": "460",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-26",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-26",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Животкова И. А.",
+                        "group": "ВИС11",
+                        "room": "109",
                         "additional": "1"
                     }
                 ],

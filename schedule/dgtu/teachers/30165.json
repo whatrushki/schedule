@@ -12,7 +12,7 @@
                 "otUnits": [
                     {
                         "teacher": "Метейко В. В.",
-                        "group": "ГД11, ГД11",
+                        "group": "ГД11",
                         "room": "292",
                         "additional": "1"
                     }
@@ -35,7 +35,7 @@
                 "otUnits": [
                     {
                         "teacher": "Метейко В. В.",
-                        "group": "КИЭ11, КСМ11, КИЭ11, КСМ11",
+                        "group": "КИЭ11, КСМ11",
                         "room": "410",
                         "additional": "8"
                     }
@@ -58,7 +58,7 @@
                 "otUnits": [
                     {
                         "teacher": "Метейко В. В.",
-                        "group": "ГД11, ГД11",
+                        "group": "ГД11",
                         "room": "407",
                         "additional": "8"
                     }
@@ -75,7 +75,7 @@
                 "otUnits": [
                     {
                         "teacher": "Метейко В. В.",
-                        "group": "ГП11, ГП11",
+                        "group": "ГП11",
                         "room": "327",
                         "additional": "8"
                     }
@@ -98,7 +98,7 @@
                 "otUnits": [
                     {
                         "teacher": "Метейко В. В.",
-                        "group": "ГП11, ГПО11, ГТ11, ГП11, ГПО11, ГТ11",
+                        "group": "ГП11, ГПО11, ГТ11",
                         "room": "478",
                         "additional": "1"
                     }
@@ -121,7 +121,7 @@
                 "otUnits": [
                     {
                         "teacher": "Метейко В. В.",
-                        "group": "ВКБ11, ВКБ11",
+                        "group": "ВКБ11",
                         "room": "016",
                         "additional": "8"
                     }
@@ -135,23 +135,6 @@
         "date": "2026-09-14",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-09-14",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Русский язык и культура речи",
-                "otUnits": [
-                    {
-                        "teacher": "Метейко В. В.",
-                        "group": "ГД11",
-                        "room": "407",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-09-14",
                 "number": 3,
@@ -201,7 +184,7 @@
                 "otUnits": [
                     {
                         "teacher": "Метейко В. В.",
-                        "group": "КИЭ11, КСМ11, КИЭ11, КСМ11",
+                        "group": "КИЭ11, КСМ11",
                         "room": "410",
                         "additional": "8"
                     }
@@ -258,7 +241,7 @@
                 "otUnits": [
                     {
                         "teacher": "Метейко В. В.",
-                        "group": "ГД11, ГД11",
+                        "group": "ГД11",
                         "room": "407",
                         "additional": "8"
                     }
@@ -275,7 +258,7 @@
                 "otUnits": [
                     {
                         "teacher": "Метейко В. В.",
-                        "group": "ГП11, ГП11",
+                        "group": "ГП11",
                         "room": "327",
                         "additional": "8"
                     }
@@ -324,12 +307,6 @@
                         "group": "ЛЗИ11",
                         "room": "406",
                         "additional": "8"
-                    },
-                    {
-                        "teacher": "Метейко В. В.",
-                        "group": "ГП11, ГПО11, ГТ11",
-                        "room": "402",
-                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
@@ -367,7 +344,7 @@
                 "otUnits": [
                     {
                         "teacher": "Метейко В. В.",
-                        "group": "ВКБ11, ВКБ11",
+                        "group": "ВКБ11",
                         "room": "016",
                         "additional": "8"
                     }
@@ -453,6 +430,52 @@
                     }
                 ],
                 "type": "UNKNOWN",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-25",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-25",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Русский язык и культура речи",
+                "otUnits": [
+                    {
+                        "teacher": "Метейко В. В.",
+                        "group": "ГД11",
+                        "room": "478",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-02",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Метейко В. В.",
+                        "group": "МКШ11",
+                        "room": "407",
+                        "additional": "2"
+                    }
+                ],
+                "type": "COMMON",
                 "state": "COMMON"
             }
         ]
