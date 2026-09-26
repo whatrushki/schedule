@@ -9,6 +9,7 @@ import app.what.domain.models.Lesson
 import app.what.domain.models.LessonState
 import app.what.domain.models.ScheduleResponse
 import app.what.domain.repositories.ScheduleRepository
+import app.what.domain.services.ReplacementDetector
 import app.what.foundation.services.AppLogger.Companion.Auditor
 import app.what.foundation.utils.LogCat
 import app.what.foundation.utils.LogScope
@@ -66,43 +67,33 @@ class ScheduleCheckWorker(
             } catch (_: Exception) {
             }
 
-            // Находим замены на сегодня и ближайшие 2 дня
+            // Запускаем детектор замен
             val today = currentLocalDate()
-            val nextDays = (0..2).map { today.plus(it, DateTimeUnit.DAY) }
+            val rawKnownSignatures = appValues.lastNotifiedReplacementsHash.get()
+            val knownSignatures = ReplacementDetector.deserializeSignatures(rawKnownSignatures)
 
-            val relevantDays = schedules.filter { it.date in nextDays }
-            val replacementLessons = mutableListOf<Pair<DaySchedule, Lesson>>()
+            val detection = ReplacementDetector.detect(
+                searchId = search.id,
+                schedules = schedules,
+                today = today,
+                knownSignatures = knownSignatures,
+                daysAhead = 2
+            )
 
-            for (day in relevantDays) {
-                for (lesson in day.lessons) {
-                    if (lesson.state != LessonState.COMMON) {
-                        replacementLessons.add(day to lesson)
-                    }
-                }
-            }
+            // Всегда сохраняем обновленные сигнатуры (с очисткой устаревших дат)
+            val updatedRaw = ReplacementDetector.serializeSignatures(detection.updatedSignatures)
+            appValues.lastNotifiedReplacementsHash.set(updatedRaw)
 
-            if (replacementLessons.isEmpty()) {
-                Auditor.debug(tag, "ScheduleCheckWorker: замен на ближайшие дни не найдено")
+            if (!detection.hasNewReplacements) {
+                Auditor.debug(tag, "ScheduleCheckWorker: новых замен не обнаружено")
                 return Result.success()
             }
 
-            // Вычисляем уникальную сигнатуру замен, чтобы не спамить повторно
-            val signature = replacementLessons.joinToString(";") { (day, lesson) ->
-                "${day.date}_${lesson.number}_${lesson.subject}_${lesson.state}"
-            }
-
-            val lastSignature = appValues.lastNotifiedReplacementsHash.get()
-            if (signature == lastSignature) {
-                Auditor.debug(tag, "ScheduleCheckWorker: замены уже были отправлены ранее, пропускаем")
-                return Result.success()
-            }
-
-            // Запоминаем отправленную сигнатуру
-            appValues.lastNotifiedReplacementsHash.set(signature)
-
-            // Формируем текст уведомления
+            // Формируем текст уведомления только для НОВЫХ замен
             val title = "Замены в расписании (${search.name})"
-            val details = replacementLessons.map { (day, lesson) ->
+            val details = detection.newReplacements.map { item ->
+                val day = item.day
+                val lesson = item.lesson
                 val dayLabel = when (day.date) {
                     today -> "Сегодня"
                     today.plus(1, DateTimeUnit.DAY) -> "Завтра"
@@ -129,7 +120,7 @@ class ScheduleCheckWorker(
                 details = details
             )
 
-            Auditor.info(tag, "ScheduleCheckWorker: успешно отправлено уведомление о ${replacementLessons.size} заменах")
+            Auditor.info(tag, "ScheduleCheckWorker: успешно отправлено уведомление о ${detection.newReplacements.size} новых заменах")
             Result.success()
         } catch (e: Exception) {
             Auditor.debug(tag, "ScheduleCheckWorker ошибка проверки: ${e.message}")
