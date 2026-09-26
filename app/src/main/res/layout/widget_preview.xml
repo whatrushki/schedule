@@ -4,48 +4,84 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@android:color/background_light">
+    android:background="@drawable/widget_preview_bg">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Сегодня"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="8dp" />
-
+    <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/widget_preview_card_bg"
-        android:padding="12dp">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="08:30 - 10:00"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="#FF6750A4" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Математика"
+            android:layout_weight="1"
+            android:text="Сегодня"
             android:textSize="16sp"
-            android:textColor="@android:color/black" />
+            android:textStyle="bold"
+            android:textColor="@color/widget_preview_text_primary" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‹   ›"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/widget_preview_text_secondary" />
     </LinearLayout>
 
-    <View
+    <!-- Lesson 1 -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="8dp" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/widget_preview_card_bg"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="08:30 — 10:00"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/widget_preview_accent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="каб. 302"
+                android:textSize="12sp"
+                android:textColor="@color/widget_preview_text_secondary" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Высшая математика"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/widget_preview_text_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Иванов И. И."
+            android:textSize="12sp"
+            android:textColor="@color/widget_preview_text_secondary" />
+    </LinearLayout>
+
+    <!-- Lesson 2 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,21 +89,44 @@
         android:background="@drawable/widget_preview_card_bg"
         android:padding="12dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="10:15 — 11:45"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/widget_preview_accent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="каб. 415"
+                android:textSize="12sp"
+                android:textColor="@color/widget_preview_text_secondary" />
+        </LinearLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10:15 - 11:45"
-            android:textSize="14sp"
+            android:layout_marginTop="2dp"
+            android:text="Информатика и ИКТ"
+            android:textSize="15sp"
             android:textStyle="bold"
-            android:textColor="#FF6750A4" />
+            android:textColor="@color/widget_preview_text_primary" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Информатика"
-            android:textSize="16sp"
-            android:textColor="@android:color/black" />
-
+            android:layout_marginTop="2dp"
+            android:text="Петров П. П."
+            android:textSize="12sp"
+            android:textColor="@color/widget_preview_text_secondary" />
     </LinearLayout>
 
 </LinearLayout>

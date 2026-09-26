@@ -34,6 +34,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
+import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.glance.appwidget.GlanceAppWidgetManager
 import androidx.glance.appwidget.state.updateAppWidgetState
@@ -89,12 +90,12 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
             val scheduleRepository = koinInject<ScheduleRepository>()
             val scope = rememberCoroutineScope()
             var searchItems by useState<List<ScheduleSearch>>(emptyList())
-            val search by useState(settings.lastSearch.get())
-            val searchData = remember(searchItems, search) {
+            var selectedSearch by useState<ScheduleSearch?>(settings.lastSearch.get())
+            val searchData = remember(searchItems, selectedSearch) {
                 mutableStateOf(
                     object : ScheduleSearchData {
                         override val scheduleSearches = searchItems
-                        override val selectedSearch = search
+                        override val selectedSearch = selectedSearch
                     }
                 )
             }
@@ -117,7 +118,8 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
 
                     WidgetConfigurationScreen(
                         appWidgetId = appWidgetId,
-                        searchData = searchData
+                        searchData = searchData,
+                        onSelectSearch = { selectedSearch = it }
                     )
                 }
             }
@@ -128,7 +130,8 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
     @Composable
     private fun WidgetConfigurationScreen(
         appWidgetId: Int,
-        searchData: State<ScheduleSearchData>
+        searchData: State<ScheduleSearchData>,
+        onSelectSearch: (ScheduleSearch) -> Unit
     ) = Box(
         modifier = Modifier
             .fillMaxSize()
@@ -182,8 +185,8 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
             // Список для выбора
             ScheduleSearchPane(
                 searchData,
-                { search -> searchData.value.selectedSearch == search },
-                { /* Обработка долгого нажатия */ }
+                onClick = onSelectSearch,
+                onLongClick = { /* Обработка долгого нажатия */ }
             )
         }
     }
@@ -194,6 +197,7 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
 
             updateAppWidgetState(applicationContext, glanceId) { prefs ->
                 prefs[stringPreferencesKey("search")] = Json.encodeToString(search)
+                prefs[intPreferencesKey("day_index")] = 0
             }
 
             ScheduleWidget.instance.update(this@ScheduleWidgetConfigurationActivity, glanceId)
