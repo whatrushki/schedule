@@ -109,8 +109,20 @@ val dataModule = module {
 
     single<AppDatabaseSource> { InMemoryAppDatabaseSource() }
 
+    single<app.what.domain.services.NetworkConnectivity> {
+        object : app.what.domain.services.NetworkConnectivity {
+            override fun isConnected(): Boolean {
+                return try {
+                    kotlinx.browser.window.navigator.onLine
+                } catch (_: Exception) {
+                    true
+                }
+            }
+        }
+    }
+
     single<ScheduleRepository> {
-        ScheduleRepositoryImpl(get(), get(), get())
+        ScheduleRepositoryImpl(get(), get(), get(), getOrNull())
     }
 
     single<NewsRepository> {

@@ -351,7 +351,11 @@ class RKSIScheduleClient(
                             RKSITeacherSubjectCache.resolve(teacher, group)
                         }
                     )
-                    daySchedule.copy(lessons = merged)
+                    val hasClassHour = merged.any { it.type == LessonTypeDto.CLASS_HOUR || it.subject.contains("Классный", ignoreCase = true) }
+                    daySchedule.copy(
+                        lessons = merged,
+                        scheduleType = if (hasClassHour) LessonsScheduleTypeDto.WITH_CLASS_HOUR else daySchedule.scheduleType
+                    )
                 } else {
                     daySchedule.copy(
                         lessons = daySchedule.lessons.groupBy { Triple(it.date, it.startTime, it.subject) }

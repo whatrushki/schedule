@@ -261,7 +261,12 @@ class ScheduleRepositoryImpl(
 
             is ScheduleResponse.Error -> {
                 Auditor.err(netTag, "Ошибка при получении расписания", response.exception)
-                response
+                val cachedSchedules = response.cachedSchedules ?: cache?.daySchedules?.map { it.toModel() }
+                ScheduleResponse.Error(
+                    cachedSchedules = cachedSchedules,
+                    lastModified = response.lastModified ?: cache?.request?.lastModified,
+                    exception = response.exception
+                )
             }
 
             is ScheduleResponse.Available.FromCache -> {

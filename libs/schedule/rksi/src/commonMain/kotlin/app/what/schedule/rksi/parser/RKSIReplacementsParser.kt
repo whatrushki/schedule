@@ -23,8 +23,13 @@ object RKSIReplacementsParser {
             var rowIndex = -1
             val otUnits = mutableListOf<OneTimeUnitDto>()
 
-            val lessonNumber = if ("Пара" !in sheetName) 0
-            else sheetName.split(" ").last().toIntOrNull() ?: 0
+            val isClassHourSheet = sheetName.contains("кл", ignoreCase = true) ||
+                sheetName.contains("классн", ignoreCase = true)
+            val lessonNumber = when {
+                isClassHourSheet -> 0
+                "Пара" !in sheetName -> 0
+                else -> sheetName.split(" ").last().toIntOrNull() ?: 0
+            }
 
             for (row in rows) {
                 rowIndex++
@@ -56,15 +61,16 @@ object RKSIReplacementsParser {
                     }.let { otUnits.addAll(it.flatten()) }
 
                     if (otUnits.isNotEmpty()) {
+                        val isClassHour = lessonNumber == 0 || isClassHourSheet
                         lessons.add(
                             LessonDto(
                                 date = date,
-                                number = lessonNumber,
+                                number = if (isClassHour) 0 else lessonNumber,
                                 startTime = LocalTime(0, 0),
                                 endTime = LocalTime(0, 0),
                                 otUnits = otUnits.toList(),
-                                subject = if (lessonNumber == 0) "Классный час" else "",
-                                type = if (lessonNumber == 0) LessonTypeDto.CLASS_HOUR else LessonTypeDto.OTHER
+                                subject = if (isClassHour) "Классный час" else "",
+                                type = if (isClassHour) LessonTypeDto.CLASS_HOUR else LessonTypeDto.OTHER
                             )
                         )
                         otUnits.clear()
@@ -148,23 +154,40 @@ object RKSIReplacementsParser {
                 val repGroup = replacement.otUnits.firstOrNull()?.group.orEmpty().trim()
                 val resolvedSubject = if (repTeacher.isNotEmpty()) subjectResolver?.invoke(repTeacher, repGroup) else null
 
+                val isClassHour = replacement.number == 0 ||
+                    replacement.subject.contains("Классный", ignoreCase = true) ||
+                    replacement.type == LessonTypeDto.CLASS_HOUR
+
                 val subject = when {
-                    replacement.number == 0 -> "Классный час"
+                    isClassHour -> "Классный час"
                     replacement.subject.isNotBlank() -> replacement.subject
                     !resolvedSubject.isNullOrBlank() -> resolvedSubject
                     else -> "Предмет не указан"
                 }
 
                 replacement.copy(
+                    number = if (isClassHour) 0 else replacement.number,
                     state = LessonStateDto.ADDED,
                     startTime = lessonTime?.start ?: minTime,
                     endTime = lessonTime?.end ?: minTime,
-                    subject = subject
+                    subject = subject,
+                    type = if (isClassHour) LessonTypeDto.CLASS_HOUR else replacement.type
                 )
             } else if (replacement != null && lesson != null) {
+                val isClassHour = replacement.number == 0 ||
+                    replacement.subject.contains("Классный", ignoreCase = true) ||
+                    replacement.type == LessonTypeDto.CLASS_HOUR ||
+                    lesson.number == 0 ||
+                    lesson.type == LessonTypeDto.CLASS_HOUR ||
+                    lesson.subject.contains("Классный", ignoreCase = true)
+
                 if (lesson.equalsWithReplacement(replacement)) {
                     // Преподаватель и аудитория совпадают с базовым расписанием -> пара НЕ изменена
-                    lesson
+                    if (isClassHour && lesson.type != LessonTypeDto.CLASS_HOUR) {
+                        lesson.copy(number = 0, type = LessonTypeDto.CLASS_HOUR)
+                    } else {
+                        lesson
+                    }
                 } else {
                     // Преподаватель или аудитория изменились -> пара изменена
                     val lessonTime = timeSchedule.firstOrNull { it.number == replacement.number }
@@ -173,7 +196,7 @@ object RKSIReplacementsParser {
                     val sameTeacher = lesson.otUnits.any { isSameTeacher(it.teacher, repTeacher) }
 
                     val subject = when {
-                        replacement.number == 0 -> "Классный час"
+                        isClassHour -> "Классный час"
                         replacement.subject.isNotBlank() -> replacement.subject
                         sameTeacher -> lesson.subject.ifEmpty { "Предмет не указан" }
                         else -> {
@@ -182,12 +205,19 @@ object RKSIReplacementsParser {
                         }
                     }
 
+                    val targetType = when {
+                        isClassHour -> LessonTypeDto.CLASS_HOUR
+                        sameTeacher -> lesson.type
+                        else -> LessonTypeDto.COMMON
+                    }
+
                     replacement.copy(
+                        number = if (isClassHour) 0 else replacement.number,
                         state = LessonStateDto.CHANGED,
                         startTime = lesson.startTime.takeIf { it != minTime } ?: (lessonTime?.start ?: minTime),
                         endTime = lesson.endTime.takeIf { it != minTime } ?: (lessonTime?.end ?: minTime),
                         subject = subject,
-                        type = if (sameTeacher) lesson.type else LessonTypeDto.COMMON
+                        type = targetType
                     )
                 }
             } else {

@@ -27,6 +27,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
@@ -114,18 +115,23 @@ fun SettingsView(
             val headerHeight = if (isKeyboardOpen) 20.dp else (maxHeight * 0.28f).coerceIn(160.dp, 240.dp)
 
             Column(Modifier.fillMaxSize()) {
+                val defaultDesc = remember {
+                    listOf(
+                        "( ˶°ㅁ°) !!",
+                        "(๑ᵔ⤙ᵔ๑)",
+                        "(˶ˆᗜˆ˵)",
+                        "◝(ᵔᗜᵔ)◜",
+                        "⸜(｡˃ ᵕ ˂ )⸝♡",
+                        "(๑>◡<๑)",
+                        "(˶˃⤙˂˶)"
+                    ).random()
+                }
+
                 val headerTitle = if (pagerState.currentPage == 0) "Настройки"
                 else subScreen?.title ?: ""
                 
-                val headerDesc = if (pagerState.currentPage == 0) listOf(
-                    "( ˶°ㅁ°) !!",
-                    "(๑ᵔ⤙ᵔ๑)",
-                    "(˶ˆᗜˆ˵)",
-                    "◝(ᵔᗜᵔ)◜",
-                    "⸜(｡˃ ᵕ ˂ )⸝♡",
-                    "(๑>◡<๑)",
-                    "(˶˃⤙˂˶)"
-                ).random() else subScreen?.description ?: ""
+                val headerDesc = if (pagerState.currentPage == 0) defaultDesc
+                else subScreen?.description ?: ""
                 
                 SettingsHeader(
                     title = headerTitle,
@@ -175,7 +181,7 @@ private fun SettingsHeader(
     Column(
         Modifier
             .fillMaxWidth()
-            .align(Alignment.BottomStart)
+            .padding(top = (headerHeight - 110.dp).coerceAtLeast(16.dp))
     ) {
         AnimatedEnter {
             Text(
@@ -184,22 +190,26 @@ private fun SettingsHeader(
                 fontWeight = FontWeight.Bold,
                 fontSize = 46.sp,
                 color = colorScheme.primary,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(start = 18.dp, end = 16.dp)
             )
         }
         
-        AnimatedEnter(delay = 200) {
+        AnimatedEnter(delay = 100) {
             Text(
                 text = description,
                 style = typography.titleLarge,
                 fontStyle = FontStyle.Italic,
                 fontFamily = FontFamily.Monospace,
                 color = colorScheme.secondary,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(start = 18.dp, end = 16.dp, bottom = 12.dp)
+                    .padding(start = 18.dp, end = 16.dp, top = 2.dp)
             )
         }
     }

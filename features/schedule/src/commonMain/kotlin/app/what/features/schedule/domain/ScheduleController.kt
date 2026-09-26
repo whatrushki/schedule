@@ -35,9 +35,12 @@ class ScheduleController(
             cloudSync = true
         )
         
-        ScheduleEvent.OnRefresh -> syncSchedule(viewState.selectedSearch, false)
+        ScheduleEvent.OnRefresh -> syncSchedule(viewState.selectedSearch, useCache = false, forceLive = true)
         ScheduleEvent.OnRefreshSearches -> updateSearches()
-        is ScheduleEvent.OnSearchClicked -> syncSchedule(viewEvent.value)
+        is ScheduleEvent.OnSearchClicked -> {
+            val isSameGroup = viewEvent.value == viewState.selectedSearch
+            syncSchedule(viewEvent.value, useCache = !isSameGroup, forceLive = isSameGroup)
+        }
         is ScheduleEvent.OnSearchLongPressed -> toggleFavorites(viewEvent.value)
     }
     
@@ -91,10 +94,22 @@ class ScheduleController(
     private fun syncSchedule(
         search: ScheduleSearch?,
         useCache: Boolean = true,
-        cloudSync: Boolean = false
+        cloudSync: Boolean = false,
+        forceLive: Boolean = false
     ) {
         val scheduleTag = buildTag(LogScope.SCHEDULE, LogCat.STATE)
-        Auditor.debug(scheduleTag, "Синхронизация расписания: $search, кеш: $useCache")
+        Auditor.debug(scheduleTag, "Синхронизация расписания: $search, кеш: $useCache, forceLive: $forceLive")
+        
+        val groupChanged = search != null && search != viewState.selectedSearch
+        if (search != null && (groupChanged || viewState.schedules.isEmpty())) {
+            updateState {
+                copy(
+                    selectedSearch = search,
+                    schedules = if (groupChanged) emptyList() else viewState.schedules,
+                    scheduleState = RemoteState.Loading
+                )
+            }
+        }
         
         viewModelScope.launchSafe(
             debug = debugMode,
@@ -105,14 +120,15 @@ class ScheduleController(
         ) {
             val searchId = apiRepository.findSearchId(search) ?: search?.id?.takeIf { it.isNotEmpty() }
             if (search != null && searchId != null)
-                updateSchedule(search.copy(id = searchId), useCache, cloudSync)
+                updateSchedule(search.copy(id = searchId), useCache, cloudSync, forceLive)
         }
     }
     
     private suspend fun updateSchedule(
         search: ScheduleSearch?,
         useCache: Boolean,
-        cloudSync: Boolean = false
+        cloudSync: Boolean = false,
+        forceLive: Boolean = false
     ) {
         search ?: return
         val scheduleTag = buildTag(LogScope.SCHEDULE, LogCat.STATE)
@@ -161,7 +177,8 @@ class ScheduleController(
             search,
             useCache = false,
             requiresData = viewState.schedules.isEmpty() || groupChanged,
-            cloudSync = cloudSync
+            cloudSync = cloudSync,
+            forceLive = forceLive
         )
         
         when (data) {

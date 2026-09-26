@@ -80,8 +80,21 @@ val dataModule = module {
         )
     }
     
+    single<app.what.domain.services.NetworkConnectivity> {
+        object : app.what.domain.services.NetworkConnectivity {
+            override fun isConnected(): Boolean {
+                return try {
+                    val interfaces = java.net.NetworkInterface.getNetworkInterfaces()
+                    interfaces?.asSequence()?.any { it.isUp && !it.isLoopback } ?: true
+                } catch (_: Exception) {
+                    true
+                }
+            }
+        }
+    }
+    
     single<ScheduleRepository> {
-        ScheduleRepositoryImpl(get(), get(), get())
+        ScheduleRepositoryImpl(get(), get(), get(), getOrNull())
     }
     
     single<NewsRepository> {

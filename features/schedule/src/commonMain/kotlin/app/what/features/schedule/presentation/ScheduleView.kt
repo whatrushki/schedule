@@ -262,71 +262,68 @@ fun ScheduleView(
             
             
             AnimatedEnter(state.value.schedules.isNotEmpty()) {
-                Column {
-                    Gap(8)
-                    ScheduleCalendar(weeks, weeksPagerState, daysPagerState) {
-                        scope.launch { daysPagerState.animateScrollToPage(it) }
-                    }
-                    Gap(8)
+                ScheduleCalendar(weeks, weeksPagerState, daysPagerState) {
+                    scope.launch { daysPagerState.animateScrollToPage(it) }
                 }
             }
 
-            AnimatedVisibility(
-                visible = state.value.scheduleState == RemoteState.Loading,
-                enter = fadeIn() + expandVertically(),
-                exit = fadeOut() + shrinkVertically()
-            ) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 12.dp, vertical = 2.dp),
-                    contentAlignment = Alignment.Center
-                ) {
-                    LinearProgressIndicator(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(2.dp)
-                            .clip(CircleShape),
-                        color = colorScheme.primary,
-                        trackColor = colorScheme.surfaceVariant
-                    )
-                }
-            }
+            val showLoadingBar = state.value.scheduleState == RemoteState.Loading && state.value.schedules.isNotEmpty()
+            val showOfflineBanner = state.value.isOffline && state.value.schedules.isNotEmpty()
 
-            if (state.value.isOffline && state.value.schedules.isNotEmpty()) {
-                Surface(
+            if (showLoadingBar || showOfflineBanner) {
+                Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(start = 12.dp, end = 12.dp, top = 2.dp, bottom = 4.dp),
-                    shape = RoundedCornerShape(12.dp),
-                    color = colorScheme.surfaceVariant.copy(alpha = 0.7f),
-                    onClick = { listener(ScheduleEvent.OnRefresh) }
+                        .padding(horizontal = 12.dp, vertical = 6.dp),
+                    verticalArrangement = Arrangement.spacedBy(6.dp)
                 ) {
-                    Row(
-                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        Icon(
-                            imageVector = WHATIcons.Network,
-                            contentDescription = "Оффлайн",
-                            modifier = Modifier.size(16.dp),
-                            tint = colorScheme.primary
-                        )
-                        Text(
-                            text = "Оффлайн • кэш от ${formatLastModified(state.value.lastModified)}",
-                            style = typography.labelMedium,
-                            color = colorScheme.onSurfaceVariant,
-                            modifier = Modifier.weight(1f)
-                        )
-                        Text(
-                            text = "Обновить",
-                            style = typography.labelSmall,
+                    if (showLoadingBar) {
+                        LinearProgressIndicator(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(2.dp)
+                                .clip(CircleShape),
                             color = colorScheme.primary,
-                            fontWeight = FontWeight.SemiBold
+                            trackColor = colorScheme.surfaceVariant
                         )
                     }
+
+                    if (showOfflineBanner) {
+                        Surface(
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(12.dp),
+                            color = colorScheme.surfaceVariant.copy(alpha = 0.7f),
+                            onClick = { listener(ScheduleEvent.OnRefresh) }
+                        ) {
+                            Row(
+                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                Icon(
+                                    imageVector = WHATIcons.Network,
+                                    contentDescription = "Оффлайн",
+                                    modifier = Modifier.size(16.dp),
+                                    tint = colorScheme.primary
+                                )
+                                Text(
+                                    text = "Оффлайн • кэш от ${formatLastModified(state.value.lastModified)}",
+                                    style = typography.labelMedium,
+                                    color = colorScheme.onSurfaceVariant,
+                                    modifier = Modifier.weight(1f)
+                                )
+                                Text(
+                                    text = "Обновить",
+                                    style = typography.labelSmall,
+                                    color = colorScheme.primary,
+                                    fontWeight = FontWeight.SemiBold
+                                )
+                            }
+                        }
+                    }
                 }
+            } else if (state.value.schedules.isNotEmpty()) {
+                Gap(8)
             }
             
             when (state.value.scheduleState) {

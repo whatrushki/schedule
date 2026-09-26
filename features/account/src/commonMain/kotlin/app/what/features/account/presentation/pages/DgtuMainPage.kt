@@ -58,7 +58,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import app.what.foundation.ui.animations.rememberShimmer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
@@ -107,6 +109,8 @@ internal fun DGTUMainScreen(
     
     val studentInfo = state.value.studentInfo
 
+    val shimmer = rememberShimmer()
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -116,7 +120,7 @@ internal fun DGTUMainScreen(
             .background(colorScheme.surface),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        if (studentInfo == null) {
+        if (state.value.studentInfoFetchState is RemoteState.Error && studentInfo == null) {
             Box(
                 modifier = Modifier
                     .fillMaxSize()
@@ -124,25 +128,20 @@ internal fun DGTUMainScreen(
                     .padding(top = 120.dp),
                 contentAlignment = Alignment.Center
             ) {
-                when (state.value.studentInfoFetchState) {
-                    is RemoteState.Error -> {
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text(
-                                "Не удалось загрузить профиль",
-                                color = colorScheme.error,
-                                fontSize = 16.sp
-                            )
-                            Gap(12)
-                            Button(onClick = { listener(DgtuEvent.MainOpened) }) {
-                                Text("Повторить")
-                            }
-                        }
-                    }
-                    else -> {
-                        CircularProgressIndicator(color = colorScheme.primary)
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text(
+                        "Не удалось загрузить профиль",
+                        color = colorScheme.error,
+                        fontSize = 16.sp
+                    )
+                    Gap(12)
+                    Button(onClick = { listener(DgtuEvent.MainOpened) }) {
+                        Text("Повторить")
                     }
                 }
             }
+        } else if (studentInfo == null) {
+            DgtuHeaderShimmer(shimmer)
         } else {
             with(studentInfo) {
             Box(
@@ -226,23 +225,34 @@ internal fun DGTUMainScreen(
                             .fillMaxWidth()
                             .padding(horizontal = 12.dp)
                     ) {
-                        with(state.value.studentStatInfo) {
+                        val statInfo = state.value.studentStatInfo
+                        if (statInfo == null) {
+                            repeat(3) {
+                                Box(
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .height(64.dp)
+                                        .clip(RoundedCornerShape(12.dp))
+                                        .background(shimmer)
+                                )
+                            }
+                        } else {
                             StatBox(
-                                (this?.avgCourse ?: 0f).toString(),
+                                statInfo.avgCourse.toString(),
                                 "Ср. балл",
                                 accentColor = colorScheme.tertiary,
                                 modifier = Modifier.weight(1f)
                             )
                             
                             StatBox(
-                                this?.avg4?.toInt()?.takeIf { it != 0 }?.toString() ?: "-",
+                                statInfo.avg4.toInt().takeIf { it != 0 }?.toString() ?: "-",
                                 "Хор.",
                                 isPercent = true,
                                 modifier = Modifier.weight(1f),
                             )
                             
                             StatBox(
-                                this?.avg5?.toInt()?.takeIf { it != 0 }?.toString() ?: "-",
+                                statInfo.avg5.toInt().takeIf { it != 0 }?.toString() ?: "-",
                                 "Отл.",
                                 isPercent = true,
                                 modifier = Modifier.weight(1f)
@@ -316,62 +326,82 @@ internal fun DGTUMainScreen(
                     Gap(18)
                 }
             }
+        }
+    }
+        
+        Gap(16)
+        
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 12.dp)
+        ) {
+            InfoBlock(
+                accentColor = colorScheme.primary,
+                icon = WHATIcons.Features,
+                title = "Зачетка",
+                description = "Оценки и сессии",
+                modifier = Modifier.weight(1f)
+            ) {
+                listener(DgtuEvent.ZachBookOpened)
+                dialog.open(true) {
+                    DgtuZachBookPage(state, listener, onBack = { dialog.close() })
+                }
+            }
             
-            Gap(16)
-            
+            InfoBlock(
+                accentColor = colorScheme.primary,
+                icon = Icons.Default.Mail,
+                title = "Почта",
+                description = "stud.edu.ru",
+                modifier = Modifier.weight(1f)
+            ) {
+                listener(DgtuEvent.MailsOpened)
+                dialog.open(true) {
+                    DgtuMailsPage(state, listener, onBack = { dialog.close() })
+                }
+            }
+        }
+        
+        Column {
             Row(
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 12.dp)
             ) {
-                InfoBlock(
-                    accentColor = colorScheme.primary,
-                    icon = WHATIcons.Features,
-                    title = "Зачетка",
-                    description = "Оценки и сессии",
-                    modifier = Modifier.weight(1f)
-                ) {
-                    listener(DgtuEvent.ZachBookOpened)
-                    dialog.open(true) {
-                        DgtuZachBookPage(state, listener, onBack = { dialog.close() })
-                    }
-                }
+                Text(
+                    "Мои новости",
+                    color = colorScheme.onSurface,
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Medium
+                )
                 
-                InfoBlock(
-                    accentColor = colorScheme.primary,
-                    icon = Icons.Default.Mail,
-                    title = "Почта",
-                    description = "stud.edu.ru",
-                    modifier = Modifier.weight(1f)
-                ) {
-                    listener(DgtuEvent.MailsOpened)
-                    dialog.open(true) {
-                        DgtuMailsPage(state, listener, onBack = { dialog.close() })
-                    }
-                }
+                TextButton(onClick = {
+                    listener(DgtuEvent.OnShowAllNewsClicked)
+                }) { Text("Все") }
             }
             
-            Column {
+            if (state.value.news.isEmpty() && state.value.newsFetchState == RemoteState.Loading) {
                 Row(
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 12.dp)
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    modifier = Modifier.horizontalScroll(rememberScrollState())
                 ) {
-                    Text(
-                        "Мои новости",
-                        color = colorScheme.onSurface,
-                        fontSize = 18.sp,
-                        fontWeight = FontWeight.Medium
-                    )
-                    
-                    TextButton(onClick = {
-                        listener(DgtuEvent.OnShowAllNewsClicked)
-                    }) { Text("Все") }
+                    Gap(4)
+                    repeat(3) {
+                        Box(
+                            modifier = Modifier
+                                .width(220.dp)
+                                .height(130.dp)
+                                .clip(RoundedCornerShape(12.dp))
+                                .background(shimmer)
+                        )
+                    }
+                    Gap(4)
                 }
-                
+            } else if (state.value.news.isNotEmpty()) {
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                     modifier = Modifier.horizontalScroll(rememberScrollState())
@@ -385,32 +415,49 @@ internal fun DGTUMainScreen(
                     Gap(4)
                 }
             }
-            
-            Column {
-                Row(
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 12.dp)
-                ) {
-                    Text(
-                        "События",
-                        color = colorScheme.onSurface,
-                        fontSize = 18.sp,
-                        fontWeight = FontWeight.Medium
-                    )
-                    
-                    TextButton(onClick = {
-                        dialog.open(true) {
-                            EventsListPane(state) {
-                                listener(DgtuEvent.OnEventClicked(it.id.toString()))
-                                dialog.open(true) { EventDetailContent(state) }
-                            }
-                        }
-                    }) { Text("Все") }
-                }
+        }
+        
+        Column {
+            Row(
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 12.dp)
+            ) {
+                Text(
+                    "События",
+                    color = colorScheme.onSurface,
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Medium
+                )
                 
+                TextButton(onClick = {
+                    dialog.open(true) {
+                        EventsListPane(state) {
+                            listener(DgtuEvent.OnEventClicked(it.id.toString()))
+                            dialog.open(true) { EventDetailContent(state) }
+                        }
+                    }
+                }) { Text("Все") }
+            }
+            
+            if (state.value.events.isEmpty() && state.value.eventsFetchState == RemoteState.Loading) {
+                Column(
+                    modifier = Modifier.padding(horizontal = 12.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    repeat(3) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(64.dp)
+                                .clip(RoundedCornerShape(12.dp))
+                                .background(shimmer)
+                        )
+                    }
+                }
+            } else {
                 state.value.events.take(3).forEachIndexed { i, it ->
                     EventListItemView(it, i) {
                         listener(DgtuEvent.OnEventClicked(it.id.toString()))
@@ -418,12 +465,11 @@ internal fun DGTUMainScreen(
                     }
                 }
             }
-            
-            Gap(60)
-            SystemBarsGap()
         }
+        
+        Gap(60)
+        SystemBarsGap()
     }
-}
 }
 
 
@@ -846,8 +892,7 @@ fun EventDetailContent(
         return
     }
 
-    val rawUrl = event.linkOrganizer?.takeIf { it.isNotBlank() } ?: "https://lk.donstu.ru"
-    val targetUrl = if (rawUrl.startsWith("http://") || rawUrl.startsWith("https://")) rawUrl else "https://$rawUrl"
+    val targetUrl = "https://lk.donstu.ru/WebApp/#/EventsCalendar/${event.eventId}"
 
     val handleOpen = {
         if (onOpenClicked != null) {
@@ -1025,5 +1070,116 @@ fun InfoItem(
             style = typography.bodyMedium,
             color = colorScheme.onSurfaceVariant
         )
+    }
+}
+
+@Composable
+private fun DgtuHeaderShimmer(shimmer: Brush) = Box(
+    Modifier
+        .fillMaxWidth()
+        .clip(RoundedCornerShape(bottomStart = 16.dp, bottomEnd = 16.dp))
+        .background(colorScheme.surfaceContainer)
+) {
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .statusBarsPadding()
+    ) {
+        Gap(12)
+        
+        Row(
+            horizontalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 18.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Box(
+                    modifier = Modifier
+                        .size(62.dp)
+                        .clip(CircleShape)
+                        .background(shimmer)
+                )
+                
+                Gap(18)
+                
+                Column {
+                    Box(
+                        modifier = Modifier
+                            .width(140.dp)
+                            .height(20.dp)
+                            .clip(RoundedCornerShape(4.dp))
+                            .background(shimmer)
+                    )
+                    Gap(6)
+                    Box(
+                        modifier = Modifier
+                            .width(80.dp)
+                            .height(14.dp)
+                            .clip(RoundedCornerShape(4.dp))
+                            .background(shimmer)
+                    )
+                    Gap(6)
+                    Box(
+                        modifier = Modifier
+                            .width(60.dp)
+                            .height(16.dp)
+                            .clip(CircleShape)
+                            .background(shimmer)
+                    )
+                }
+            }
+        }
+        
+        Gap(16)
+        
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 12.dp)
+        ) {
+            repeat(3) {
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(64.dp)
+                        .clip(RoundedCornerShape(12.dp))
+                        .background(shimmer)
+                )
+            }
+        }
+        
+        Gap(16)
+        
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 12.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .height(40.dp)
+                    .clip(shapes.small)
+                    .background(shimmer)
+            )
+            Box(
+                modifier = Modifier
+                    .size(48.dp, 40.dp)
+                    .clip(shapes.small)
+                    .background(shimmer)
+            )
+            Box(
+                modifier = Modifier
+                    .size(48.dp, 40.dp)
+                    .clip(shapes.small)
+                    .background(shimmer)
+            )
+        }
+        
+        Gap(18)
     }
 }
