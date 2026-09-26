@@ -11,6 +11,8 @@ import app.what.schedule.rinh.RINHScheduleClient
 import app.what.schedule.rksi.RKSILessonsSchedule
 import app.what.schedule.rksi.RKSIScheduleClient
 import app.what.schedule.rksi.parser.JvmXlsxReader
+import app.what.schedule.rgups.RGUPSScheduleClient
+import app.what.schedule.rgups_tuapse.RGUPSTuapseScheduleClient
 import app.what.schedule.sfedu.SFEDUScheduleClient
 import com.fleeksoft.ksoup.Ksoup
 import io.ktor.client.HttpClient
@@ -87,13 +89,15 @@ fun main(args: Array<String>) = runBlocking(Dispatchers.IO) {
             "iubip" -> syncIubip(client, outDir, failOnError)
             "rinh" -> syncRinh(client, outDir, failOnError)
             "sfedu" -> syncSfedu(client, outDir, failOnError)
+            "rgups" -> syncRgups(client, outDir, failOnError)
+            "rgups_tuapse" -> syncRgupsTuapse(client, outDir, failOnError)
             "others" -> syncOthers(client, outDir, failOnError)
             "all" -> {
                 syncRksi(client, outDir, failOnError)
                 syncOthers(client, outDir, failOnError)
             }
             else -> {
-                println("Unknown target: $target. Use 'rksi', 'dgtu', 'iubip', 'rinh', 'sfedu', 'others', or 'all'.")
+                println("Unknown target: $target. Use 'rksi', 'dgtu', 'iubip', 'rinh', 'sfedu', 'rgups', 'rgups_tuapse', 'others', or 'all'.")
             }
         }
     } finally {
@@ -209,6 +213,8 @@ suspend fun syncOthers(client: HttpClient, rootDir: File, failOnError: Boolean =
     syncIubip(client, rootDir, failOnError)
     syncRinh(client, rootDir, failOnError)
     syncSfedu(client, rootDir, failOnError)
+    syncRgups(client, rootDir, failOnError)
+    syncRgupsTuapse(client, rootDir, failOnError)
 }
 
 suspend fun syncDgtu(client: HttpClient, rootDir: File, failOnError: Boolean = false) {
@@ -531,6 +537,136 @@ suspend fun syncSfedu(client: HttpClient, rootDir: File, failOnError: Boolean = 
         println("  [SFEDU] Sync complete! Saved $groupCount group and $teacherCount teacher schedules.")
     }.onFailure {
         println("  [SFEDU] Error syncing: ${it.message}")
+        it.printStackTrace()
+        if (failOnError) throw it
+    }
+}
+
+suspend fun syncRgups(client: HttpClient, rootDir: File, failOnError: Boolean = false) {
+    println("\n--- Syncing RGUPS ---")
+    val dir = File(rootDir, "rgups").apply { mkdirs() }
+    val groupsDir = File(dir, "groups").apply { mkdirs() }
+    val teachersDir = File(dir, "teachers").apply { mkdirs() }
+
+    runCatching {
+        val rgupsClient = RGUPSScheduleClient(client, log = { println("  [RGUPS] $it") })
+        val nowStr = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString()
+
+        println("  Fetching RGUPS groups...")
+        val groups = rgupsClient.getGroups()
+        println("  Found ${groups.size} groups")
+        if (groups.isEmpty()) {
+            error("RGUPS returned 0 groups")
+        }
+
+        File(dir, "groups.json").writeText(json.encodeToString(groups))
+        File(dir, "teachers.json").writeText("[]")
+
+        var groupCount = 0
+        val semaphore = Semaphore(5)
+
+        coroutineScope {
+            groups.map { group ->
+                async {
+                    semaphore.withPermit {
+                        runCatching {
+                            delay(30)
+                            val schedule = rgupsClient.getGroupSchedule(group.id)
+                            if (schedule.isNotEmpty()) {
+                                val safeName = group.name.replace("/", "_").replace("\\", "_")
+                                File(groupsDir, "$safeName.json").writeText(json.encodeToString(schedule))
+                                synchronized(groupsDir) { groupCount++ }
+                            }
+                        }
+                    }
+                }
+            }.awaitAll()
+        }
+
+        val meta = InstitutionMeta(
+            lastSync = nowStr,
+            institution = "rgups",
+            groupCount = groups.size,
+            teacherCount = 0
+        )
+        File(dir, "meta.json").writeText(json.encodeToString(meta))
+        println("  [RGUPS] Sync complete! Saved $groupCount group schedules.")
+    }.onFailure {
+        println("  [RGUPS] Error syncing: ${it.message}")
+        it.printStackTrace()
+        if (failOnError) throw it
+    }
+}
+
+suspend fun syncRgupsTuapse(client: HttpClient, rootDir: File, failOnError: Boolean = false) {
+    println("\n--- Syncing RGUPS Tuapse ---")
+    val dir = File(rootDir, "rgups_tuapse").apply { mkdirs() }
+    val groupsDir = File(dir, "groups").apply { mkdirs() }
+    val teachersDir = File(dir, "teachers").apply { mkdirs() }
+
+    runCatching {
+        val tuapseClient = RGUPSTuapseScheduleClient(client, log = { println("  [Tuapse] $it") })
+        val nowStr = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString()
+
+        println("  Fetching RGUPS Tuapse groups & teachers...")
+        val groups = tuapseClient.getGroups()
+        val teachers = tuapseClient.getTeachers()
+        println("  Found ${groups.size} groups and ${teachers.size} teachers")
+        if (groups.isEmpty()) {
+            error("RGUPS Tuapse returned 0 groups")
+        }
+
+        File(dir, "groups.json").writeText(json.encodeToString(groups))
+        File(dir, "teachers.json").writeText(json.encodeToString(teachers))
+
+        var groupCount = 0
+        var teacherCount = 0
+        val semaphore = Semaphore(10)
+
+        coroutineScope {
+            groups.map { group ->
+                async {
+                    semaphore.withPermit {
+                        runCatching {
+                            val schedule = tuapseClient.getGroupSchedule(group.id)
+                            if (schedule.isNotEmpty()) {
+                                val safeName = group.name.replace("/", "_").replace("\\", "_")
+                                File(groupsDir, "$safeName.json").writeText(json.encodeToString(schedule))
+                                synchronized(groupsDir) { groupCount++ }
+                            }
+                        }
+                    }
+                }
+            }.awaitAll()
+        }
+
+        coroutineScope {
+            teachers.map { teacher ->
+                async {
+                    semaphore.withPermit {
+                        runCatching {
+                            val schedule = tuapseClient.getTeacherSchedule(teacher.id)
+                            if (schedule.isNotEmpty()) {
+                                val safeId = teacher.id.ifEmpty { teacher.name }.replace("/", "_").replace("\\", "_")
+                                File(teachersDir, "$safeId.json").writeText(json.encodeToString(schedule))
+                                synchronized(teachersDir) { teacherCount++ }
+                            }
+                        }
+                    }
+                }
+            }.awaitAll()
+        }
+
+        val meta = InstitutionMeta(
+            lastSync = nowStr,
+            institution = "rgups_tuapse",
+            groupCount = groups.size,
+            teacherCount = teachers.size
+        )
+        File(dir, "meta.json").writeText(json.encodeToString(meta))
+        println("  [Tuapse] Sync complete! Saved $groupCount group and $teacherCount teacher schedules.")
+    }.onFailure {
+        println("  [Tuapse] Error syncing: ${it.message}")
         it.printStackTrace()
         if (failOnError) throw it
     }

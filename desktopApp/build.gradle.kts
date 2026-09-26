@@ -18,6 +18,8 @@ dependencies {
     implementation(project(":libs:schedule:iubip"))
     implementation(project(":libs:schedule:rinh"))
     implementation(project(":libs:schedule:sfedu"))
+    implementation(project(":libs:schedule:rgups"))
+    implementation(project(":libs:schedule:rgups_tuapse"))
     implementation(project(":composeApp"))
 
     implementation(compose.desktop.currentOs)

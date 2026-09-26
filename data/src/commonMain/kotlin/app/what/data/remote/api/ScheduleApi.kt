@@ -6,6 +6,8 @@ import app.what.foundation.core.UIComponent
 import app.what.schedule.data.local.settings.AppValues
 import app.what.schedule.data.remote.providers.dgtu.DGTU
 import app.what.schedule.data.remote.providers.iubip.IUBIP
+import app.what.schedule.data.remote.providers.rgups.RGUPS
+import app.what.schedule.data.remote.providers.rgups_tuapse.RGUPSTuapse
 import app.what.schedule.data.remote.providers.rinh.RINH
 import app.what.schedule.data.remote.providers.rksi.RKSI
 import app.what.schedule.data.remote.providers.sfedu.SFEDU
@@ -69,7 +71,9 @@ val insts: List<Institution.Factory> by lazy {
         DGTU.Factory,
         RINH.Factory,
         IUBIP.Factory,
-        SFEDU.Factory
+        SFEDU.Factory,
+        RGUPS.Factory,
+        RGUPSTuapse.Factory
     )
 }
 

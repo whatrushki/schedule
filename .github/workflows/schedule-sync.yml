@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
     inputs:
       target:
-        description: 'Target institution (all, rksi, dgtu, iubip, rinh, sfedu, others)'
+        description: 'Target institution (all, rksi, dgtu, iubip, rinh, sfedu, rgups, rgups_tuapse, others)'
         required: true
         default: 'all'
         type: choice
@@ -26,6 +26,8 @@ on:
           - iubip
           - rinh
           - sfedu
+          - rgups
+          - rgups_tuapse
           - others
 
 jobs:

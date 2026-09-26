@@ -60,6 +60,8 @@ include(":libs:schedule:dgtu")
 include(":libs:schedule:iubip")
 include(":libs:schedule:rinh")
 include(":libs:schedule:sfedu")
+include(":libs:schedule:rgups")
+include(":libs:schedule:rgups_tuapse")
 
 include(":tools:schedule-sync")
 include(":desktopApp")
