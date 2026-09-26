@@ -134,14 +134,11 @@ private fun EventView(
     
     Box(
         modifier = modifier
-            .animateContentSize()
+            .padding(horizontal = 12.dp)
             .fillMaxWidth()
-            .capplyIf(expanded) {
-                height(134.dp)
-                    .padding(12.dp, 0.dp)
-                    .clip(shapes.medium)
-            }
+            .clip(shapes.medium)
             .background(backgroundColor)
+            .animateContentSize()
             .bclick(enabled = expandable) {
                 setExpanded(!expanded)
             }

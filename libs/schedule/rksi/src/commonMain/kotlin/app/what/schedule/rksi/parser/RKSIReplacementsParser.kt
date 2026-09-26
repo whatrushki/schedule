@@ -64,7 +64,7 @@ object RKSIReplacementsParser {
                                 endTime = LocalTime(0, 0),
                                 otUnits = otUnits.toList(),
                                 subject = if (lessonNumber == 0) "Классный час" else "",
-                                type = LessonTypeDto.OTHER
+                                type = if (lessonNumber == 0) LessonTypeDto.CLASS_HOUR else LessonTypeDto.OTHER
                             )
                         )
                         otUnits.clear()

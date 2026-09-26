@@ -98,11 +98,13 @@ enum class LessonTypeDto {
     EXAM,
     CREDIT,
     CONSULTATION,
+    CLASS_HOUR,
     OTHER,
     UNKNOWN;
 
     companion object {
         fun fromString(value: String): LessonTypeDto = when {
+            value.contains("класс", ignoreCase = true) -> CLASS_HOUR
             value.contains("пр", ignoreCase = true) -> PRACTICE
             value.contains("лек", ignoreCase = true) -> LECTURE
             value.contains("лаб", ignoreCase = true) -> LABORATORY

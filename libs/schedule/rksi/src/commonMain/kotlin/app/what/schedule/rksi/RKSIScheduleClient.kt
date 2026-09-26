@@ -269,7 +269,7 @@ class RKSIScheduleClient(
                 val aud = if (audBuilding.size > 1) audBuilding.dropLast(1).joinToString("/") else audBuilding.firstOrNull() ?: ""
                 val bld = audBuilding.lastOrNull() ?: "1"
 
-                val isClassHour = "Классный" in subject
+                val isClassHour = subject.contains("Классный", ignoreCase = true)
                 val isAdditional = "Доп." in subject
 
                 val otUnit = OneTimeUnitDto(
@@ -285,9 +285,9 @@ class RKSIScheduleClient(
                     startTime = startTime,
                     endTime = endTime,
                     subject = subject,
-                    otUnits = if (isClassHour) emptyList() else listOf(otUnit),
+                    otUnits = if (otUnit.teacher.isNotBlank() || otUnit.room.isNotBlank()) listOf(otUnit) else emptyList(),
                     type = when {
-                        isClassHour -> LessonTypeDto.OTHER
+                        isClassHour -> LessonTypeDto.CLASS_HOUR
                         isAdditional -> LessonTypeDto.PRACTICE
                         else -> LessonTypeDto.COMMON
                     }
@@ -296,7 +296,7 @@ class RKSIScheduleClient(
 
             // Определение типа сетки звонков
             val scheduleType = when {
-                lessons.any { it.subject.contains("Классный", ignoreCase = true) } -> LessonsScheduleTypeDto.WITH_CLASS_HOUR
+                lessons.any { it.subject.contains("Классный", ignoreCase = true) || it.type == LessonTypeDto.CLASS_HOUR } -> LessonsScheduleTypeDto.WITH_CLASS_HOUR
                 lessons.any { it.startTime == LocalTime(8, 0) && it.endTime == LocalTime(8, 50) } -> LessonsScheduleTypeDto.SHORTENED
                 else -> LessonsScheduleTypeDto.COMMON
             }
@@ -308,9 +308,9 @@ class RKSIScheduleClient(
             }
 
             lessons = lessons.mapIndexed { index, lesson ->
-                val isClassHour = lesson.subject.contains("Классный", ignoreCase = true)
+                val isClassHour = lesson.subject.contains("Классный", ignoreCase = true) || lesson.type == LessonTypeDto.CLASS_HOUR
                 if (isClassHour) {
-                    lesson.copy(number = 0)
+                    lesson.copy(number = 0, type = LessonTypeDto.CLASS_HOUR)
                 } else {
                     val match = timeSchedule.firstOrNull { it.number != 0 && (it.start == lesson.startTime || it.end == lesson.endTime) }
                         ?: RKSILessonsSchedule.COMMON.firstOrNull { it.number != 0 && (it.start == lesson.startTime || it.end == lesson.endTime) }

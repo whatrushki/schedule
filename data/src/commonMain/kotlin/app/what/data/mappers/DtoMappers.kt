@@ -25,6 +25,7 @@ fun LessonTypeDto.toDomain(): LessonType = when (this) {
     LessonTypeDto.PRACTICE -> LessonType.PRACTISE
     LessonTypeDto.LABORATORY -> LessonType.LABORATORY
     LessonTypeDto.CREDIT, LessonTypeDto.EXAM -> LessonType.CREDIT
+    LessonTypeDto.CLASS_HOUR -> LessonType.CLASS_HOUR
     else -> LessonType.COMMON
 }
 
