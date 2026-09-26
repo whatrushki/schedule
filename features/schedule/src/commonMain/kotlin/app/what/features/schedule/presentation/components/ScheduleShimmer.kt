@@ -21,7 +21,7 @@ import app.what.foundation.ui.animations.rememberShimmer
 
 @Composable
 fun ScheduleShimmer() = Column(
-    Modifier.padding(horizontal = 12.dp)
+    Modifier.padding(horizontal = 12.dp)//.padding(top = 8.dp)
 ) {
     val shimmer = rememberShimmer()
     

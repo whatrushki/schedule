@@ -8,28 +8,23 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.Text
-import app.what.foundation.ui.AppPullToRefresh
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.State
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -40,21 +35,18 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.what.foundation.core.Listener
 import app.what.foundation.data.RemoteState
+import app.what.foundation.ui.AppPullToRefresh
 import app.what.foundation.ui.Gap
+import app.what.foundation.ui.PlatformBackHandler
 import app.what.foundation.ui.bclick
+import app.what.foundation.utils.DateTimeUtils
 import app.what.schedule.features.insts.dgtu.domain.models.DgtuEvent
 import app.what.schedule.features.insts.dgtu.domain.models.DgtuState
 import app.what.schedule.features.insts.dgtu.domain.models.Mail
 import app.what.schedule.ui.components.AsyncImageWithFallback
 import app.what.schedule.ui.components.Fallback
-import app.what.foundation.utils.DateTimeUtils
-import kotlinx.datetime.LocalDateTime
-
-import androidx.compose.foundation.pager.HorizontalPager
-import androidx.compose.foundation.pager.rememberPagerState
-import androidx.compose.runtime.rememberCoroutineScope
 import kotlinx.coroutines.launch
-import app.what.foundation.ui.PlatformBackHandler
+import kotlinx.datetime.LocalDateTime
 
 @Composable
 fun DgtuMailsPage(
@@ -65,20 +57,20 @@ fun DgtuMailsPage(
     val pagerState = rememberPagerState(pageCount = { 2 })
     val coroutineScope = rememberCoroutineScope()
     var selectedMail by remember { mutableStateOf<Pair<Int, Int>?>(null) }
-
+    
     PlatformBackHandler(enabled = pagerState.currentPage == 1) {
         coroutineScope.launch {
             pagerState.animateScrollToPage(0)
         }
     }
-
+    
     LaunchedEffect(pagerState.currentPage) {
         if (pagerState.currentPage == 0 && selectedMail != null) {
             selectedMail = null
             listener(DgtuEvent.CloseMailDetail)
         }
     }
-
+    
     HorizontalPager(
         state = pagerState,
         userScrollEnabled = pagerState.currentPage == 1,
@@ -98,12 +90,12 @@ fun DgtuMailsPage(
                         modifier = Modifier.fillMaxSize()
                     ) {
                         val lazyListState = rememberLazyListState()
-
+                        
                         LaunchedEffect(lazyListState.canScrollForward) {
                             if (!lazyListState.canScrollForward && state.value.mailsFetchState != RemoteState.Loading)
                                 listener(DgtuEvent.OnMailsListEndingScrolled)
                         }
-
+                        
                         LazyColumn(
                             modifier = Modifier.fillMaxSize(),
                             state = lazyListState
@@ -116,8 +108,10 @@ fun DgtuMailsPage(
                                         "Попробовать снова" to { listener(DgtuEvent.MailsOpened) }
                                     )
                                 }
-
-                                RemoteState.Success, RemoteState.Loading -> items(state.value.mails, key = { it.id }) { mail ->
+                                
+                                RemoteState.Success, RemoteState.Loading -> items(
+                                    state.value.mails,
+                                    key = { it.id }) { mail ->
                                     MailListItem(
                                         data = mail,
                                         modifier = Modifier.animateItem(),
@@ -130,14 +124,14 @@ fun DgtuMailsPage(
                                         }
                                     )
                                 }
-
+                                
                                 else -> Unit
                             }
                         }
                     }
                 }
             }
-
+            
             1 -> {
                 val currentSelected = selectedMail
                 if (currentSelected != null) {
@@ -181,9 +175,9 @@ fun MailListItem(
                 .size(54.dp)
                 .clip(CircleShape)
         )
-
+        
         Gap(12)
-
+        
         Column(modifier = Modifier.weight(1f)) {
             Row(
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -198,9 +192,9 @@ fun MailListItem(
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.weight(1f, fill = false)
                 )
-
+                
                 Gap(8)
-
+                
                 Text(
                     formatDateTime(data.sendDateTime),
                     fontWeight = FontWeight.Medium,
@@ -208,7 +202,7 @@ fun MailListItem(
                     color = colorScheme.onSurfaceVariant
                 )
             }
-
+            
             Text(
                 data.title,
                 fontWeight = FontWeight.Medium,
@@ -218,7 +212,7 @@ fun MailListItem(
                 overflow = TextOverflow.Ellipsis,
                 color = colorScheme.secondary
             )
-
+            
             Text(
                 data.description,
                 fontWeight = FontWeight.Medium,
@@ -245,10 +239,12 @@ fun formatName(value: String): String {
 fun formatDateTime(value: LocalDateTime): String {
     val today = app.what.foundation.utils.currentLocalDate()
     val date = value.date
-
+    
     val timeStr = DateTimeUtils.formatTime(value.time)
-    val shortMonthStr = "${date.dayOfMonth} ${DateTimeUtils.RUSSIAN_MONTHS.getOrElse(date.monthNumber - 1) { "" }.take(3)}"
-
+    val shortMonthStr = "${date.dayOfMonth} ${
+        DateTimeUtils.RUSSIAN_MONTHS.getOrElse(date.monthNumber - 1) { "" }.take(3)
+    }"
+    
     return when {
         date == today -> timeStr
         date.toEpochDays() == today.toEpochDays() - 1 -> "вчера"

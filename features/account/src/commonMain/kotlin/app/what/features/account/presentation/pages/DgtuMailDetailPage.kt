@@ -10,21 +10,16 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowDownward
 import androidx.compose.material.icons.outlined.AttachFile
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.shapes
@@ -66,9 +61,9 @@ fun DgtuMailDetailPage(
             listener(DgtuEvent.CloseMailDetail)
         }
     }
-
+    
     val uriHandler = LocalUriHandler.current
-
+    
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -84,7 +79,7 @@ fun DgtuMailDetailPage(
                     CircularProgressIndicator(color = colorScheme.primary)
                 }
             }
-
+            
             is RemoteState.Error -> {
                 Fallback(
                     "Не удалось загрузить сообщение",
@@ -94,7 +89,7 @@ fun DgtuMailDetailPage(
                     }
                 )
             }
-
+            
             else -> {
                 val thread = state.value.mailDetail
                 if (thread != null) {
@@ -113,31 +108,35 @@ fun DgtuMailDetailPage(
                             color = colorScheme.onSurface,
                             lineHeight = 28.sp
                         )
-
+                        
                         Gap(16)
-
+                        
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clip(shapes.large)
                                 .background(colorScheme.surfaceContainerLow)
-                                .border(1.dp, colorScheme.outlineVariant.copy(alpha = 0.35f), shapes.large)
+                                .border(
+                                    1.dp,
+                                    colorScheme.outlineVariant.copy(alpha = 0.35f),
+                                    shapes.large
+                                )
                                 .padding(14.dp)
                         ) {
                             val photoUrl = if (thread.photoLinkUserID.isNotBlank()) {
                                 "https://lk.donstu.ru${thread.photoLinkUserID}"
                             } else ""
-
+                            
                             AsyncImageWithFallback(
                                 photoUrl,
                                 modifier = Modifier
                                     .size(46.dp)
                                     .clip(CircleShape)
                             )
-
+                            
                             Gap(12)
-
+                            
                             Column(modifier = Modifier.weight(1f)) {
                                 Row(
                                     modifier = Modifier.fillMaxWidth(),
@@ -153,9 +152,9 @@ fun DgtuMailDetailPage(
                                         overflow = TextOverflow.Ellipsis,
                                         modifier = Modifier.weight(1f, fill = false)
                                     )
-
+                                    
                                     Gap(8)
-
+                                    
                                     Text(
                                         text = formatDateTime(thread.dispatchDate),
                                         fontSize = 12.sp,
@@ -163,7 +162,7 @@ fun DgtuMailDetailPage(
                                         color = colorScheme.onSurfaceVariant
                                     )
                                 }
-
+                                
                                 if (thread.userIdToMessage.isNotBlank()) {
                                     Gap(2)
                                     Text(
@@ -176,16 +175,16 @@ fun DgtuMailDetailPage(
                                 }
                             }
                         }
-
+                        
                         Gap(18)
-
+                        
                         val rawMessage = thread.message.message.takeIf { it.isNotBlank() }
                             ?: thread.message.markdownMessage
                             ?: thread.message.htmlMessage
                             ?: ""
-
+                        
                         val annotatedBody = cleanMailContent(rawMessage)
-
+                        
                         Box(
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -201,7 +200,7 @@ fun DgtuMailDetailPage(
                                 color = colorScheme.onSurface
                             )
                         }
-
+                        
                         if (thread.files.isNotEmpty()) {
                             Gap(22)
                             Text(
@@ -211,7 +210,7 @@ fun DgtuMailDetailPage(
                                 color = colorScheme.onSurface
                             )
                             Gap(10)
-
+                            
                             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                                 for (file in thread.files) {
                                     MailAttachmentItem(file) {
@@ -221,7 +220,7 @@ fun DgtuMailDetailPage(
                                 }
                             }
                         }
-
+                        
                         Gap(32)
                     }
                 }
@@ -259,9 +258,9 @@ private fun MailAttachmentItem(
                 modifier = Modifier.size(20.dp)
             )
         }
-
+        
         Gap(12)
-
+        
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = file.fileName,
@@ -278,9 +277,9 @@ private fun MailAttachmentItem(
                 color = colorScheme.onSurfaceVariant
             )
         }
-
+        
         Gap(8)
-
+        
         Box(
             modifier = Modifier
                 .size(36.dp)
@@ -308,36 +307,37 @@ private fun formatFileSize(bytes: Long): String = when {
 private fun cleanMailContent(raw: String): AnnotatedString {
     var text = raw.trim()
     if (text.isEmpty()) return AnnotatedString("Нет содержимого")
-
+    
     // Replace non-breaking spaces with standard space
     text = text.replace("&nbsp;", " ").replace("\u00A0", " ")
-
+    
     // Remove empty paragraphs or divs like <p></p>, <p><br></p>, <p>&nbsp;</p>, <div><br></div>
-    val emptyBlockRegex = Regex("""<(p|div)[^>]*>\s*(<br\s*/?>|\s)*</\1>""", RegexOption.IGNORE_CASE)
+    val emptyBlockRegex =
+        Regex("""<(p|div)[^>]*>\s*(<br\s*/?>|\s)*</\1>""", RegexOption.IGNORE_CASE)
     while (emptyBlockRegex.containsMatchIn(text)) {
         text = text.replace(emptyBlockRegex, "")
     }
-
+    
     // Collapse multiple consecutive <br> tags into single <br/>
     text = text.replace(Regex("""(<br\s*/?>\s*){2,}""", RegexOption.IGNORE_CASE), "<br/>")
-
+    
     // Remove leading and trailing <br> tags
     text = text.replace(Regex("""^(\s*<br\s*/?>\s*)+""", RegexOption.IGNORE_CASE), "")
     text = text.replace(Regex("""(\s*<br\s*/?>\s*)+$""", RegexOption.IGNORE_CASE), "")
-
+    
     val parsed = AnnotatedString.fromHtml(text.trim())
-
+    
     // Trim AnnotatedString from start and end
     val trimmed = parsed.trimMailBody()
     val rawText = trimmed.text
     if (!rawText.contains("\n\n")) return trimmed
-
+    
     // Collapse multiple consecutive newlines (\n\n, \n\n\n, etc.) into at most 1 newline
     val builder = AnnotatedString.Builder()
     var consecutiveNewlines = 0
     val oldToNewIndex = IntArray(rawText.length + 1)
     var newLen = 0
-
+    
     for (i in rawText.indices) {
         val c = rawText[i]
         oldToNewIndex[i] = newLen
@@ -354,7 +354,7 @@ private fun cleanMailContent(raw: String): AnnotatedString {
         }
     }
     oldToNewIndex[rawText.length] = newLen
-
+    
     for (styleRange in trimmed.spanStyles) {
         val newStart = oldToNewIndex[styleRange.start.coerceIn(0, rawText.length)]
         val newEnd = oldToNewIndex[styleRange.end.coerceIn(0, rawText.length)]
@@ -362,7 +362,7 @@ private fun cleanMailContent(raw: String): AnnotatedString {
             builder.addStyle(styleRange.item, newStart, newEnd)
         }
     }
-
+    
     for (linkRange in trimmed.getLinkAnnotations(0, rawText.length)) {
         val newStart = oldToNewIndex[linkRange.start.coerceIn(0, rawText.length)]
         val newEnd = oldToNewIndex[linkRange.end.coerceIn(0, rawText.length)]
@@ -373,7 +373,7 @@ private fun cleanMailContent(raw: String): AnnotatedString {
             }
         }
     }
-
+    
     return builder.toAnnotatedString().trimMailBody()
 }
 

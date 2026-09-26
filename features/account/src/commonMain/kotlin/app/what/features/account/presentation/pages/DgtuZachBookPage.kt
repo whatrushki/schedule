@@ -7,13 +7,11 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
@@ -22,14 +20,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.FilterChip
-import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.shapes
@@ -55,10 +46,7 @@ import app.what.foundation.core.Listener
 import app.what.foundation.data.RemoteState
 import app.what.foundation.ui.AppPullToRefresh
 import app.what.foundation.ui.Gap
-import app.what.foundation.ui.Show
 import app.what.foundation.ui.bclick
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.Features
 import app.what.schedule.dgtu.models.DGTUApi
 import app.what.schedule.features.insts.dgtu.domain.models.DgtuEvent
 import app.what.schedule.features.insts.dgtu.domain.models.DgtuState
@@ -76,7 +64,7 @@ fun DgtuZachBookPage(
             listener(DgtuEvent.ZachBookOpened)
         }
     }
-
+    
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -97,7 +85,7 @@ fun DgtuZachBookPage(
                         "Попробовать снова" to { listener(DgtuEvent.ZachBookOpened) }
                     )
                 }
-
+                
                 state.value.zachBookFetchState == RemoteState.Loading && state.value.zachBook == null -> {
                     Box(
                         modifier = Modifier.fillMaxSize(),
@@ -106,10 +94,10 @@ fun DgtuZachBookPage(
                         CircularProgressIndicator(color = colorScheme.primary)
                     }
                 }
-
+                
                 state.value.zachBook != null -> {
                     val data = state.value.zachBook!!
-
+                    
                     val semesterMap = remember(data.zachBook) {
                         data.zachBook
                             .groupBy { it.course to it.sem }
@@ -119,14 +107,14 @@ fun DgtuZachBookPage(
                                     .thenByDescending { it.first.second }
                             )
                     }
-
+                    
                     var selectedSemesterIndex by remember(semesterMap) {
                         val initialIdx = semesterMap.indexOfFirst { (key, _) ->
                             key.second == data.currentSem
                         }.takeIf { it >= 0 } ?: 0
                         mutableIntStateOf(initialIdx)
                     }
-
+                    
                     LazyColumn(
                         modifier = Modifier.fillMaxSize(),
                         verticalArrangement = Arrangement.spacedBy(16.dp),
@@ -150,7 +138,7 @@ fun DgtuZachBookPage(
                                     if (name.isNotBlank()) {
                                         Text(
                                             text = name,
-                                            style = MaterialTheme.typography.titleMedium,
+                                            style = typography.titleMedium,
                                             fontWeight = FontWeight.Bold,
                                             color = colorScheme.onSurface,
                                             maxLines = 1,
@@ -158,7 +146,7 @@ fun DgtuZachBookPage(
                                         )
                                         Gap(3)
                                     }
-
+                                    
                                     Row(
                                         horizontalArrangement = Arrangement.spacedBy(8.dp),
                                         verticalAlignment = Alignment.CenterVertically
@@ -178,7 +166,7 @@ fun DgtuZachBookPage(
                                                 )
                                             }
                                         }
-
+                                        
                                         data.studentInfo?.let { info ->
                                             if (info.group.isNotBlank()) {
                                                 Text(
@@ -190,21 +178,22 @@ fun DgtuZachBookPage(
                                             }
                                         }
                                     }
-
-                                    data.studentInfo?.specialty?.takeIf { it.isNotBlank() }?.let { spec ->
-                                        Gap(2)
-                                        Text(
-                                            text = spec,
-                                            fontSize = 11.sp,
-                                            color = colorScheme.onSurfaceVariant,
-                                            maxLines = 1,
-                                            overflow = TextOverflow.Ellipsis
-                                        )
-                                    }
+                                    
+                                    data.studentInfo?.specialty?.takeIf { it.isNotBlank() }
+                                        ?.let { spec ->
+                                            Gap(2)
+                                            Text(
+                                                text = spec,
+                                                fontSize = 11.sp,
+                                                color = colorScheme.onSurfaceVariant,
+                                                maxLines = 1,
+                                                overflow = TextOverflow.Ellipsis
+                                            )
+                                        }
                                 }
                             }
                         }
-
+                        
                         // Performance statistics
                         item {
                             Column(
@@ -213,7 +202,11 @@ fun DgtuZachBookPage(
                                     .padding(horizontal = 16.dp)
                                     .clip(shapes.large)
                                     .background(colorScheme.surfaceContainerLow)
-                                    .border(1.dp, colorScheme.outlineVariant.copy(alpha = 0.35f), shapes.large)
+                                    .border(
+                                        1.dp,
+                                        colorScheme.outlineVariant.copy(alpha = 0.35f),
+                                        shapes.large
+                                    )
                                     .padding(16.dp)
                             ) {
                                 Row(
@@ -224,7 +217,7 @@ fun DgtuZachBookPage(
                                     Column {
                                         Text(
                                             "Успеваемость",
-                                            style = MaterialTheme.typography.titleMedium,
+                                            style = typography.titleMedium,
                                             fontWeight = FontWeight.Bold,
                                             color = colorScheme.onSurface
                                         )
@@ -234,7 +227,7 @@ fun DgtuZachBookPage(
                                             color = colorScheme.onSurfaceVariant
                                         )
                                     }
-
+                                    
                                     val avgValue = data.avgPoint.takeIf { it > 0f } ?: data.avg
                                     if (avgValue != null && avgValue > 0f) {
                                         Box(
@@ -255,13 +248,15 @@ fun DgtuZachBookPage(
                                                     text = "ср. балл",
                                                     fontSize = 11.sp,
                                                     fontWeight = FontWeight.Medium,
-                                                    color = colorScheme.onPrimaryContainer.copy(alpha = 0.8f)
+                                                    color = colorScheme.onPrimaryContainer.copy(
+                                                        alpha = 0.8f
+                                                    )
                                                 )
                                             }
                                         }
                                     }
                                 }
-
+                                
                                 if (data.markCountStatistic.isNotEmpty()) {
                                     Gap(14)
                                     Row(
@@ -275,7 +270,11 @@ fun DgtuZachBookPage(
                                                     .weight(1f)
                                                     .clip(shapes.small)
                                                     .background(markColor.copy(alpha = 0.12f))
-                                                    .border(1.dp, markColor.copy(alpha = 0.25f), shapes.small)
+                                                    .border(
+                                                        1.dp,
+                                                        markColor.copy(alpha = 0.25f),
+                                                        shapes.small
+                                                    )
                                                     .padding(horizontal = 6.dp, vertical = 8.dp),
                                                 horizontalAlignment = Alignment.CenterHorizontally,
                                                 verticalArrangement = Arrangement.spacedBy(4.dp)
@@ -313,7 +312,7 @@ fun DgtuZachBookPage(
                                         }
                                     }
                                 }
-
+                                
                                 if (data.avgCourseStatistic.isNotEmpty()) {
                                     Gap(12)
                                     Row(
@@ -341,7 +340,7 @@ fun DgtuZachBookPage(
                                 }
                             }
                         }
-
+                        
                         // Semester switcher
                         if (semesterMap.isNotEmpty()) {
                             item {
@@ -357,7 +356,9 @@ fun DgtuZachBookPage(
                                     LazyRow(
                                         modifier = Modifier.fillMaxWidth(),
                                         horizontalArrangement = Arrangement.spacedBy(8.dp),
-                                        contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 16.dp)
+                                        contentPadding = androidx.compose.foundation.layout.PaddingValues(
+                                            horizontal = 16.dp
+                                        )
                                     ) {
                                         itemsIndexed(semesterMap) { index, (key, _) ->
                                             val (c, s) = key
@@ -383,23 +384,24 @@ fun DgtuZachBookPage(
                                 }
                             }
                         }
-
+                        
                         // Selected semester disciplines header
                         val selectedSemester = semesterMap.getOrNull(selectedSemesterIndex)
                         if (selectedSemester != null) {
                             val (course, sem) = selectedSemester.first
                             val disciplines = selectedSemester.second
                             val year = disciplines.firstOrNull()?.year.orEmpty()
-
+                            
                             item {
                                 Row(
-                                    modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp).padding(top = 4.dp),
+                                    modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)
+                                        .padding(top = 4.dp),
                                     horizontalArrangement = Arrangement.SpaceBetween,
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
                                     Text(
                                         text = "$course курс • $sem семестр" + if (year.isNotBlank()) " ($year)" else "",
-                                        style = MaterialTheme.typography.titleMedium,
+                                        style = typography.titleMedium,
                                         fontWeight = FontWeight.Bold,
                                         color = colorScheme.primary
                                     )
@@ -410,7 +412,7 @@ fun DgtuZachBookPage(
                                     )
                                 }
                             }
-
+                            
                             items(disciplines, key = { it.key }) { zachItem ->
                                 ZachDisciplineCard(
                                     item = zachItem,
@@ -419,13 +421,13 @@ fun DgtuZachBookPage(
                                 )
                             }
                         }
-
+                        
                         item {
                             Gap(16)
                         }
                     }
                 }
-
+                
                 else -> Unit
             }
         }
@@ -458,9 +460,9 @@ private fun ZachDisciplineCard(
                 color = colorScheme.onSurface,
                 modifier = Modifier.weight(1f)
             )
-
+            
             Gap(10)
-
+            
             val markColor = getMarkColor(item.mark)
             Box(
                 modifier = Modifier
@@ -477,9 +479,9 @@ private fun ZachDisciplineCard(
                 )
             }
         }
-
+        
         Gap(10)
-
+        
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -504,7 +506,7 @@ private fun ZachDisciplineCard(
                         )
                     }
                 }
-
+                
                 val hoursInfo = buildString {
                     if (item.hours > 0) append("${item.hours} ч.")
                     if (!hideZET && item.zet > 0f) {
@@ -520,7 +522,7 @@ private fun ZachDisciplineCard(
                     )
                 }
             }
-
+            
             if (item.date.isNotBlank()) {
                 Text(
                     text = item.date,
@@ -529,7 +531,7 @@ private fun ZachDisciplineCard(
                 )
             }
         }
-
+        
         if (item.teacherName.isNotBlank()) {
             Gap(6)
             Text(
@@ -546,7 +548,15 @@ private fun getMarkColor(mark: String): Color = when {
     mark.contains("Отл", ignoreCase = true) || mark == "5" -> Color(0xFF2E7D32)
     mark.contains("Хор", ignoreCase = true) || mark == "4" -> Color(0xFF1976D2)
     mark.contains("Удов", ignoreCase = true) || mark == "3" -> Color(0xFFE65100)
-    mark.contains("Зачтено", ignoreCase = true) || mark.contains("Зачет", ignoreCase = true) -> Color(0xFF00796B)
-    mark.contains("Не зачтено", ignoreCase = true) || mark.contains("Неуд", ignoreCase = true) || mark == "2" -> Color(0xFFD32F2F)
+    mark.contains("Зачтено", ignoreCase = true) || mark.contains(
+        "Зачет",
+        ignoreCase = true
+    ) -> Color(0xFF00796B)
+    
+    mark.contains("Не зачтено", ignoreCase = true) || mark.contains(
+        "Неуд",
+        ignoreCase = true
+    ) || mark == "2" -> Color(0xFFD32F2F)
+    
     else -> Color(0xFF616161)
 }

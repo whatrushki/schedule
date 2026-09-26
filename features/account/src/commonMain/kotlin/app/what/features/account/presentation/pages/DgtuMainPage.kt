@@ -8,7 +8,6 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -36,7 +35,6 @@ import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.automirrored.filled.OpenInNew
 import androidx.compose.material.icons.filled.Mail
 import androidx.compose.material.icons.filled.Notifications
-import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.outlined.DateRange
 import androidx.compose.material.icons.outlined.LocationOn
 import androidx.compose.material.icons.outlined.Person
@@ -60,7 +58,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import app.what.foundation.ui.animations.rememberShimmer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
@@ -69,17 +66,19 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
+import app.what.domain.models.NewListItem
 import app.what.foundation.core.Listener
 import app.what.foundation.data.RemoteState
 import app.what.foundation.ui.Gap
 import app.what.foundation.ui.Show
 import app.what.foundation.ui.SystemBarsGap
 import app.what.foundation.ui.VerticalGap
+import app.what.foundation.ui.animations.rememberShimmer
 import app.what.foundation.ui.bclick
 import app.what.foundation.ui.controllers.rememberDialogController
 import app.what.foundation.ui.controllers.rememberSheetController
 import app.what.foundation.ui.useState
-import app.what.domain.models.NewListItem
+import app.what.foundation.utils.DateTimeUtils
 import app.what.schedule.features.insts.dgtu.domain.models.DgtuEvent
 import app.what.schedule.features.insts.dgtu.domain.models.DgtuState
 import app.what.schedule.features.insts.dgtu.domain.models.EventListItem
@@ -88,11 +87,9 @@ import app.what.schedule.features.insts.dgtu.presentation.components.InfoBlock
 import app.what.schedule.ui.components.AsyncImageWithFallback
 import app.what.schedule.ui.theme.icons.WHATIcons
 import app.what.schedule.ui.theme.icons.filled.Features
-import app.what.schedule.ui.theme.icons.filled.Logs
 import app.what.schedule.ui.theme.icons.filled.Room
 import app.what.schedule.ui.theme.icons.filled.Run
 import io.github.alexzhirkevich.qrose.rememberQrCodePainter
-import app.what.foundation.utils.DateTimeUtils
 import kotlinx.datetime.LocalDateTime
 
 @Composable
@@ -108,16 +105,15 @@ internal fun DGTUMainScreen(
     }
     
     val studentInfo = state.value.studentInfo
-
+    
     val shimmer = rememberShimmer()
-
+    
     Column(
         modifier = Modifier
             .fillMaxSize()
             .wrapContentWidth(Alignment.CenterHorizontally)
             .widthIn(max = 860.dp)
-            .verticalScroll(rememberScrollState())
-            .background(colorScheme.surface),
+            .verticalScroll(rememberScrollState()),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         if (state.value.studentInfoFetchState is RemoteState.Error && studentInfo == null) {
@@ -144,190 +140,190 @@ internal fun DGTUMainScreen(
             DgtuHeaderShimmer(shimmer)
         } else {
             with(studentInfo) {
-            Box(
-                Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(bottomStart = 16.dp, bottomEnd = 16.dp))
-                    .background(colorScheme.surfaceContainer)
-            ) {
-                Column(
+                Box(
                     Modifier
                         .fillMaxWidth()
-                        .statusBarsPadding()
+                        .clip(RoundedCornerShape(bottomStart = 16.dp, bottomEnd = 16.dp))
+                        .background(colorScheme.surfaceContainer)
                 ) {
-                    Gap(12)
-                    
-                    Row(
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 18.dp)
-                    ) {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                        ) {
-                            AsyncImageWithFallback(
-                                state.value.studentInfo!!.photoLink,
-                                headers = mapOf("authToken" to "Bearer ${state.value.token}"),
-                                modifier = Modifier
-                                    .size(62.dp)
-                                    .clip(CircleShape)
-                                    .border(3.dp, colorScheme.primary, CircleShape)
-                            )
-                            
-                            Gap(18)
-                            
-                            Column {
-                                Text(
-                                    "$name $surname",
-                                    color = colorScheme.onSurface,
-                                    fontSize = 18.sp,
-                                    fontWeight = FontWeight.Bold
-                                )
-                                Text(
-                                    "ID: ${state.value.studentId}",
-                                    color = colorScheme.onSurfaceVariant,
-                                    fontSize = 14.sp,
-                                )
-                                Gap(4)
-                                Text(
-                                    group.name,
-                                    color = colorScheme.tertiary,
-                                    fontSize = 12.sp,
-                                    modifier = Modifier
-                                        .clip(CircleShape)
-                                        .background(colorScheme.tertiary.copy(.3f))
-                                        .padding(horizontal = 8.dp)
-                                        .bclick {
-                                            listener(DgtuEvent.OnGroupClicked)
-                                        }
-                                )
-                            }
-                        }
-                        
-                        IconButton(
-                            onClick = {
-                                dialog.open(true) { NotificationsPane(state.value.notifications) }
-                            }
-                        ) {
-                            Icons.Default.Notifications.Show(
-                                colorScheme.onSurfaceVariant, 24,
-                                Modifier.padding(top = 12.dp, end = 8.dp)
-                            )
-                        }
-                    }
-                    
-                    Gap(16)
-                    
-                    Row(
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 12.dp)
-                    ) {
-                        val statInfo = state.value.studentStatInfo
-                        if (statInfo == null) {
-                            repeat(3) {
-                                Box(
-                                    modifier = Modifier
-                                        .weight(1f)
-                                        .height(64.dp)
-                                        .clip(RoundedCornerShape(12.dp))
-                                        .background(shimmer)
-                                )
-                            }
-                        } else {
-                            StatBox(
-                                statInfo.avgCourse.toString(),
-                                "Ср. балл",
-                                accentColor = colorScheme.tertiary,
-                                modifier = Modifier.weight(1f)
-                            )
-                            
-                            StatBox(
-                                statInfo.avg4.toInt().takeIf { it != 0 }?.toString() ?: "-",
-                                "Хор.",
-                                isPercent = true,
-                                modifier = Modifier.weight(1f),
-                            )
-                            
-                            StatBox(
-                                statInfo.avg5.toInt().takeIf { it != 0 }?.toString() ?: "-",
-                                "Отл.",
-                                isPercent = true,
-                                modifier = Modifier.weight(1f)
-                            )
-                        }
-                    }
-                    
-                    Gap(16)
-                    
-                    Row(
+                    Column(
                         Modifier
-                            .height(IntrinsicSize.Min)
                             .fillMaxWidth()
-                            .padding(horizontal = 12.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
+                            .statusBarsPadding()
                     ) {
-                        Box(
-                            contentAlignment = Alignment.Center,
+                        Gap(12)
+                        
+                        Row(
+                            horizontalArrangement = Arrangement.SpaceBetween,
                             modifier = Modifier
-                                .clip(shapes.small)
-                                .background(colorScheme.primary)
-                                .weight(1f)
-                                .bclick {
-                                    sheet.open(true) { StudentDetail(state.value) }
-                                }
+                                .fillMaxWidth()
+                                .padding(horizontal = 18.dp)
                         ) {
-                            Text(
-                                "Подробнее",
-                                Modifier.padding(12.dp, 8.dp),
-                                color = colorScheme.onPrimary,
-                                fontSize = 14.sp,
-                                fontWeight = FontWeight.Medium
-                            )
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                AsyncImageWithFallback(
+                                    state.value.studentInfo!!.photoLink,
+                                    headers = mapOf("authToken" to "Bearer ${state.value.token}"),
+                                    modifier = Modifier
+                                        .size(62.dp)
+                                        .clip(CircleShape)
+                                        .border(3.dp, colorScheme.primary, CircleShape)
+                                )
+                                
+                                Gap(18)
+                                
+                                Column {
+                                    Text(
+                                        "$name $surname",
+                                        color = colorScheme.onSurface,
+                                        fontSize = 18.sp,
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                    Text(
+                                        "ID: ${state.value.studentId}",
+                                        color = colorScheme.onSurfaceVariant,
+                                        fontSize = 14.sp,
+                                    )
+                                    Gap(4)
+                                    Text(
+                                        group.name,
+                                        color = colorScheme.tertiary,
+                                        fontSize = 12.sp,
+                                        modifier = Modifier
+                                            .clip(CircleShape)
+                                            .background(colorScheme.tertiary.copy(.3f))
+                                            .padding(horizontal = 8.dp)
+                                            .bclick {
+                                                listener(DgtuEvent.OnGroupClicked)
+                                            }
+                                    )
+                                }
+                            }
+                            
+                            IconButton(
+                                modifier = Modifier.padding(top = 12.dp, end = 8.dp),
+                                onClick = {
+                                    dialog.open(true) { NotificationsPane(state.value.notifications) }
+                                }
+                            ) {
+                                Icons.Default.Notifications.Show(
+                                    colorScheme.onSurfaceVariant, 24
+                                )
+                            }
                         }
                         
-                        Gap(8)
+                        Gap(16)
                         
-                        Box(
-                            contentAlignment = Alignment.Center,
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
                             modifier = Modifier
-                                .width(48.dp)
-                                .fillMaxHeight()
-                                .clip(shapes.small)
-                                .background(colorScheme.primary)
-                                .bclick {
-                                    listener(DgtuEvent.GenerateAccessQrCodeClicked)
-                                    dialog.open { AccessQrPane(state) }
-                                }
+                                .fillMaxWidth()
+                                .padding(horizontal = 12.dp)
                         ) {
-                            WHATIcons.Room.Show(colorScheme.onPrimary, 22)
-                        }
-
-                        Gap(8)
-
-                        Box(
-                            contentAlignment = Alignment.Center,
-                            modifier = Modifier
-                                .width(48.dp)
-                                .fillMaxHeight()
-                                .clip(shapes.small)
-                                .background(colorScheme.error)
-                                .bclick {
-                                    listener(DgtuEvent.LogoutClicked)
+                            val statInfo = state.value.studentStatInfo
+                            if (statInfo == null) {
+                                repeat(3) {
+                                    Box(
+                                        modifier = Modifier
+                                            .weight(1f)
+                                            .height(64.dp)
+                                            .clip(RoundedCornerShape(12.dp))
+                                            .background(shimmer)
+                                    )
                                 }
-                        ) {
-                            Icons.AutoMirrored.Filled.Logout.Show(colorScheme.onError, 22)
+                            } else {
+                                StatBox(
+                                    statInfo.avgCourse.toString(),
+                                    "Ср. балл",
+                                    accentColor = colorScheme.tertiary,
+                                    modifier = Modifier.weight(1f)
+                                )
+                                
+                                StatBox(
+                                    statInfo.avg4.toInt().takeIf { it != 0 }?.toString() ?: "-",
+                                    "Хор.",
+                                    isPercent = true,
+                                    modifier = Modifier.weight(1f),
+                                )
+                                
+                                StatBox(
+                                    statInfo.avg5.toInt().takeIf { it != 0 }?.toString() ?: "-",
+                                    "Отл.",
+                                    isPercent = true,
+                                    modifier = Modifier.weight(1f)
+                                )
+                            }
                         }
+                        
+                        Gap(16)
+                        
+                        Row(
+                            Modifier
+                                .height(IntrinsicSize.Min)
+                                .fillMaxWidth()
+                                .padding(horizontal = 12.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.Center
+                        ) {
+                            Box(
+                                contentAlignment = Alignment.Center,
+                                modifier = Modifier
+                                    .clip(shapes.small)
+                                    .background(colorScheme.primary)
+                                    .weight(1f)
+                                    .bclick {
+                                        sheet.open(true) { StudentDetail(state.value) }
+                                    }
+                            ) {
+                                Text(
+                                    "Подробнее",
+                                    Modifier.padding(12.dp, 8.dp),
+                                    color = colorScheme.onPrimary,
+                                    fontSize = 14.sp,
+                                    fontWeight = FontWeight.Medium
+                                )
+                            }
+                            
+                            Gap(8)
+                            
+                            Box(
+                                contentAlignment = Alignment.Center,
+                                modifier = Modifier
+                                    .width(48.dp)
+                                    .fillMaxHeight()
+                                    .clip(shapes.small)
+                                    .background(colorScheme.primary)
+                                    .bclick {
+                                        listener(DgtuEvent.GenerateAccessQrCodeClicked)
+                                        dialog.open { AccessQrPane(state) }
+                                    }
+                            ) {
+                                WHATIcons.Room.Show(colorScheme.onPrimary, 22)
+                            }
+                            
+                            Gap(8)
+                            
+                            Box(
+                                contentAlignment = Alignment.Center,
+                                modifier = Modifier
+                                    .width(48.dp)
+                                    .fillMaxHeight()
+                                    .clip(shapes.small)
+                                    .background(colorScheme.error)
+                                    .bclick {
+                                        listener(DgtuEvent.LogoutClicked)
+                                    }
+                            ) {
+                                Icons.AutoMirrored.Filled.Logout.Show(colorScheme.onError, 22)
+                            }
+                        }
+                        
+                        Gap(18)
                     }
-                    
-                    Gap(18)
                 }
             }
         }
-    }
         
         Gap(16)
         
@@ -770,7 +766,8 @@ fun EventListItemView(data: EventListItem, index: Int, onClick: () -> Unit) =
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Text(
-                        DateTimeUtils.RUSSIAN_MONTHS_NOMINATIVE.getOrElse(data.date.monthNumber - 1) { "" }.take(3).uppercase(),
+                        DateTimeUtils.RUSSIAN_MONTHS_NOMINATIVE.getOrElse(data.date.monthNumber - 1) { "" }
+                            .take(3).uppercase(),
                         color = accentColor,
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp,
@@ -799,10 +796,13 @@ fun EventListItemView(data: EventListItem, index: Int, onClick: () -> Unit) =
                     overflow = TextOverflow.Ellipsis
                 )
                 
-                val timeText = "${data.date.hour.toString().padStart(2, '0')}:${data.date.minute.toString().padStart(2, '0')}"
-                val placeText = data.place?.trim()?.takeIf { it.isNotBlank() && !it.equals("null", ignoreCase = true) }
+                val timeText = "${data.date.hour.toString().padStart(2, '0')}:${
+                    data.date.minute.toString().padStart(2, '0')
+                }"
+                val placeText = data.place?.trim()
+                    ?.takeIf { it.isNotBlank() && !it.equals("null", ignoreCase = true) }
                 val subtitleText = if (placeText != null) "$timeText • $placeText" else timeText
-
+                
                 Text(
                     subtitleText,
                     fontSize = 14.sp,
@@ -881,7 +881,7 @@ fun EventDetailContent(
 ) {
     val uriHandler = LocalUriHandler.current
     val event = state.value.eventDetail
-
+    
     if (event == null) {
         Box(
             modifier = modifier.fillMaxSize().padding(40.dp),
@@ -891,19 +891,20 @@ fun EventDetailContent(
         }
         return
     }
-
+    
     val targetUrl = "https://lk.donstu.ru/WebApp/#/EventsCalendar/${event.eventId}"
-
+    
     val handleOpen = {
         if (onOpenClicked != null) {
             onOpenClicked()
         } else {
             try {
                 uriHandler.openUri(targetUrl)
-            } catch (_: Exception) {}
+            } catch (_: Exception) {
+            }
         }
     }
-
+    
     Box(
         modifier = modifier.fillMaxSize(),
         contentAlignment = Alignment.TopCenter

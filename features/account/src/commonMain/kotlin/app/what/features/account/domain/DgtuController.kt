@@ -2,18 +2,17 @@ package app.what.schedule.features.insts.dgtu.domain
 
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.buildAnnotatedString
-import app.what.data.remote.utils.fromHtml
-import app.what.foundation.utils.currentLocalDate
 import androidx.lifecycle.viewModelScope
+import app.what.data.remote.utils.fromHtml
+import app.what.domain.models.ScheduleSearch
 import app.what.foundation.core.UIController
 import app.what.foundation.data.RemoteState
-import app.what.foundation.utils.launchIO
+import app.what.foundation.utils.currentLocalDate
 import app.what.foundation.utils.launchSafe
 import app.what.schedule.data.local.settings.AppValues
 import app.what.schedule.data.remote.api.InstitutionManager
-import app.what.domain.models.ScheduleSearch
-import app.what.schedule.dgtu.models.DGTUApi
 import app.what.schedule.dgtu.DGTUAccountClient
+import app.what.schedule.dgtu.models.DGTUApi
 import app.what.schedule.features.insts.dgtu.domain.models.DgtuAction
 import app.what.schedule.features.insts.dgtu.domain.models.DgtuAction.OpenNewDetail
 import app.what.schedule.features.insts.dgtu.domain.models.DgtuEvent
@@ -24,10 +23,6 @@ import app.what.schedule.features.insts.dgtu.domain.models.EventDetailItem
 import app.what.schedule.features.insts.dgtu.domain.models.EventListItem
 import app.what.schedule.features.insts.dgtu.domain.models.Mail
 import app.what.schedule.features.insts.dgtu.domain.models.Notification
-import kotlinx.datetime.Clock
-import kotlinx.datetime.LocalDate
-import kotlinx.datetime.TimeZone
-import kotlinx.datetime.toLocalDateTime
 
 class DgtuController(
     private val institutionManager: InstitutionManager,
@@ -80,20 +75,25 @@ class DgtuController(
                     loadAllData()
                 }
             }
+            
             DgtuEvent.OnGroupClicked -> setAction(DgtuAction.OpenSchedule(viewState.studentInfo!!.group))
             DgtuEvent.OnShowAllNewsClicked -> setAction(DgtuAction.OpenNews)
             DgtuEvent.MailsOpened -> {
                 loadMails(true)
             }
+            
             DgtuEvent.ZachBookOpened -> {
                 loadZachBook()
             }
+            
             is DgtuEvent.MailOpened -> {
                 loadDetailMail(viewEvent.threadId, viewEvent.messageId)
             }
+            
             DgtuEvent.CloseMailDetail -> {
                 updateState { copy(mailDetail = null, mailDetailFetchState = RemoteState.Idle) }
             }
+            
             DgtuEvent.OnMailsListEndingScrolled -> loadMails()
             DgtuEvent.GenerateAccessQrCodeClicked -> generateQr()
             is DgtuEvent.OnEventClicked -> loadEventDetail(viewEvent.id)
@@ -101,6 +101,7 @@ class DgtuController(
                 val new = viewState.news.firstOrNull { it.id == viewEvent.id } ?: return
                 setAction(OpenNewDetail(new.id, new.url, new.bannerUrl, new.title, new.description))
             }
+            
             DgtuEvent.LogoutClicked -> logout()
         }
     }
@@ -278,7 +279,7 @@ class DgtuController(
             }
         }
     }
-
+    
     fun loadZachBook() {
         val token = appValues.dgtuToken.get() ?: return
         updateState { copy(zachBookFetchState = RemoteState.Loading) }
@@ -297,7 +298,7 @@ class DgtuController(
             }
         }
     }
-
+    
     fun loadDetailMail(threadId: Int, messageId: Int) {
         val token = appValues.dgtuToken.get() ?: return
         updateState { copy(mailDetailFetchState = RemoteState.Loading) }
@@ -336,7 +337,8 @@ class DgtuController(
             )
             
             val stats = with(response.data) {
-                val rawAvg = if (count > 0) markCountStatistic.sumOf { it.mark * it.count } / count.toFloat() else 0f
+                val rawAvg =
+                    if (count > 0) markCountStatistic.sumOf { it.mark * it.count } / count.toFloat() else 0f
                 DgtuStudentStatInfo(
                     avgCourse = kotlin.math.round(rawAvg * 100f) / 100f,
                     avg3 = markCountStatistic.firstOrNull { it.mark == 3 }?.avg ?: 0f,
@@ -408,7 +410,10 @@ class DgtuController(
                 DgtuStudentInfo(
                     name = name,
                     surname = surname,
-                    group = ScheduleSearch.Group(group?.item1 ?: "", (group?.item2 ?: 0).toString()),
+                    group = ScheduleSearch.Group(
+                        group?.item1 ?: "",
+                        (group?.item2 ?: 0).toString()
+                    ),
                     kafName = kaf?.kafName ?: "",
                     fullName = fullName,
                     middleName = middleName,

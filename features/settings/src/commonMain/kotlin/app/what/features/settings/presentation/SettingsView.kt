@@ -181,7 +181,7 @@ private fun SettingsHeader(
     Column(
         Modifier
             .fillMaxWidth()
-            .padding(top = (headerHeight - 110.dp).coerceAtLeast(16.dp))
+            .padding(top = (headerHeight - 90.dp).coerceAtLeast(16.dp))
     ) {
         AnimatedEnter {
             Text(

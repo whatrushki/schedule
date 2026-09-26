@@ -1,11 +1,6 @@
 package app.what.schedule.features.schedule.presentation
 
-import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateContentSize
-import androidx.compose.animation.expandVertically
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
-import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -22,6 +17,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
@@ -43,10 +39,8 @@ import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.shapes
 import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
-import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import app.what.foundation.ui.AppPullToRefresh
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.State
@@ -62,7 +56,12 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.what.domain.models.DaySchedule
+import app.what.domain.models.Lesson
+import app.what.domain.models.LessonsScheduleType
+import app.what.domain.models.ScheduleSearch
 import app.what.foundation.data.RemoteState
+import app.what.foundation.ui.AppPullToRefresh
 import app.what.foundation.ui.Gap
 import app.what.foundation.ui.SegmentTab
 import app.what.foundation.ui.Show
@@ -74,11 +73,9 @@ import app.what.foundation.ui.controllers.rememberSheetController
 import app.what.foundation.ui.useChange
 import app.what.foundation.ui.useSave
 import app.what.foundation.ui.useState
+import app.what.foundation.utils.Analytics
+import app.what.foundation.utils.DateTimeUtils
 import app.what.foundation.utils.freeze
-import app.what.domain.models.DaySchedule
-import app.what.domain.models.Lesson
-import app.what.domain.models.LessonsScheduleType
-import app.what.domain.models.ScheduleSearch
 import app.what.schedule.features.schedule.domain.models.ScheduleEvent
 import app.what.schedule.features.schedule.domain.models.ScheduleState
 import app.what.schedule.features.schedule.presentation.components.BreakInfo
@@ -93,15 +90,9 @@ import app.what.schedule.ui.theme.icons.WHATIcons
 import app.what.schedule.ui.theme.icons.filled.Network
 import app.what.schedule.ui.theme.icons.filled.Run
 import app.what.schedule.ui.theme.icons.filled.Warn
-import app.what.foundation.utils.Analytics
-import app.what.foundation.utils.DateTimeUtils
 import kotlinx.coroutines.launch
-import kotlinx.datetime.Clock
 import kotlinx.datetime.LocalDate
-import kotlinx.datetime.LocalTime
-import kotlinx.datetime.TimeZone
 import kotlinx.datetime.isoDayNumber
-import kotlinx.datetime.toLocalDateTime
 
 @Composable
 fun ScheduleView(
@@ -180,17 +171,18 @@ fun ScheduleView(
                 state.value.schedules.getOrNull(daysPagerState.currentPage) ?: return@LaunchedEffect
             setScheduleType(currentDaySchedule.scheduleType)
         }
-
+        
         var hasNavigatedToTodayInitially by useSave(false)
         var lastNavigatedSearchId by useSave<String?>(null)
-
+        
         LaunchedEffect(state.value.schedules, state.value.selectedSearch?.id) {
             val schedules = state.value.schedules
             if (schedules.isEmpty()) return@LaunchedEffect
-
+            
             val currentSearchId = state.value.selectedSearch?.id
-            val isInitialForSearch = !hasNavigatedToTodayInitially || lastNavigatedSearchId != currentSearchId
-
+            val isInitialForSearch =
+                !hasNavigatedToTodayInitially || lastNavigatedSearchId != currentSearchId
+            
             if (isInitialForSearch) {
                 hasNavigatedToTodayInitially = true
                 lastNavigatedSearchId = currentSearchId
@@ -249,7 +241,7 @@ fun ScheduleView(
                         sheet.open(content = scheduleExportSheet)
                     }
                 }
-
+                
                 if (app.what.foundation.utils.isDesktop) {
                     StyledIconButton(
                         Icons.Default.Refresh,
@@ -262,14 +254,17 @@ fun ScheduleView(
             
             
             AnimatedEnter(state.value.schedules.isNotEmpty()) {
-                ScheduleCalendar(weeks, weeksPagerState, daysPagerState) {
+                ScheduleCalendar(
+                    weeks, weeksPagerState, daysPagerState, modifier = Modifier.padding(top = 8.dp)
+                ) {
                     scope.launch { daysPagerState.animateScrollToPage(it) }
                 }
             }
-
-            val showLoadingBar = state.value.scheduleState == RemoteState.Loading && state.value.schedules.isNotEmpty()
+            
+            val showLoadingBar =
+                state.value.scheduleState == RemoteState.Loading && state.value.schedules.isNotEmpty()
             val showOfflineBanner = state.value.isOffline && state.value.schedules.isNotEmpty()
-
+            
             if (showLoadingBar || showOfflineBanner) {
                 Column(
                     modifier = Modifier
@@ -287,7 +282,7 @@ fun ScheduleView(
                             trackColor = colorScheme.surfaceVariant
                         )
                     }
-
+                    
                     if (showOfflineBanner) {
                         Surface(
                             modifier = Modifier.fillMaxWidth(),
@@ -322,7 +317,7 @@ fun ScheduleView(
                         }
                     }
                 }
-            } else if (state.value.schedules.isNotEmpty()) {
+            } else {
                 Gap(8)
             }
             
@@ -335,6 +330,7 @@ fun ScheduleView(
                         listener(ScheduleEvent.OnRefresh)
                     }
                 )
+                
                 RemoteState.Success if state.value.schedules.isEmpty() -> Fallback(
                     text = "Тут ничего нет, попробуйте другую группу :3",
                     modifier = Modifier.fillMaxSize(),
@@ -439,6 +435,7 @@ fun ScheduleCalendar(
     weeks: Map<Int, List<DaySchedule>>,
     weeksPagerState: PagerState,
     daysPagerState: PagerState,
+    modifier: Modifier = Modifier,
     onClick: (day: Int) -> Unit
 ) {
     val schedules = weeks.values.flatten()
@@ -446,7 +443,7 @@ fun ScheduleCalendar(
     HorizontalPager(
         weeksPagerState,
         key = { weeks.entries.elementAt(it).key },
-        modifier = Modifier.fillMaxWidth()
+        modifier = modifier.fillMaxWidth()
     ) {
         val thisWeek = weeks.entries.elementAt(it)
         
@@ -460,24 +457,24 @@ fun ScheduleCalendar(
                 val realIndex = schedules.indexOfFirst { it.date == day.date }
                 val selected = daysPagerState.currentPage == realIndex
                 
-                    val dayOfWeekStr = if (thisWeek.value.size > 2) {
-                        DateTimeUtils.RUSSIAN_DAYS_SHORT.getOrElse(day.date.dayOfWeek.ordinal) { "" }
-                    } else {
-                        DateTimeUtils.RUSSIAN_DAYS_FULL.getOrElse(day.date.dayOfWeek.ordinal) { "" }
-                    }
-                    SegmentTab(
-                        selected = selected,
-                        index = realIndex,
-                        count = schedules.size,
-                        icon = null,
-                        label = "${day.date.dayOfMonth}" + (if (thisWeek.value.size > 5) "\n" else " ") + dayOfWeekStr
-                    ) {
-                        onClick(realIndex)
-                    }
+                val dayOfWeekStr = if (thisWeek.value.size > 2) {
+                    DateTimeUtils.RUSSIAN_DAYS_SHORT.getOrElse(day.date.dayOfWeek.ordinal) { "" }
+                } else {
+                    DateTimeUtils.RUSSIAN_DAYS_FULL.getOrElse(day.date.dayOfWeek.ordinal) { "" }
+                }
+                SegmentTab(
+                    selected = selected,
+                    index = realIndex,
+                    count = schedules.size,
+                    icon = null,
+                    label = "${day.date.dayOfMonth}" + (if (thisWeek.value.size > 5) "\n" else " ") + dayOfWeekStr
+                ) {
+                    onClick(realIndex)
                 }
             }
         }
     }
+}
 
 fun LocalDate.getWeekNumber(): Int {
     val jan1 = LocalDate(this.year, 1, 1)

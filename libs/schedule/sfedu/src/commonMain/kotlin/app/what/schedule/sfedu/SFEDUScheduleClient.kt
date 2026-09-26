@@ -43,7 +43,8 @@ class SFEDUScheduleClient(
                     val groupsText = client.get("$baseUrl/APIv1/group/forGrade/${grade.id}").bodyAsText()
                     val groups = json.decodeFromString<List<SfeduGroup>>(groupsText)
                     for (g in groups) {
-                        val displayName = if (g.name.contains(g.num.toString())) g.name else "${g.name} ${g.num}".trim()
+                        val baseName = if (g.name.contains(g.num.toString())) g.name else "${g.name} ${g.num}".trim()
+                        val displayName = if (grade.num > 0) "$baseName - ${grade.num}".trim() else baseName
                         result.add(GroupDto(id = g.id.toString(), name = displayName, course = grade.num))
                     }
                 } catch (e: Exception) {
@@ -116,8 +117,10 @@ class SFEDUScheduleClient(
     private suspend fun resolveGroupId(group: String): String? {
         if (group.all { it.isDigit() }) return group
         val groups = getGroups()
-        return groups.firstOrNull { it.name.equals(group.trim(), ignoreCase = true) }?.id
-            ?: groups.firstOrNull { it.name.contains(group.trim(), ignoreCase = true) }?.id
+        val trimmed = group.trim()
+        return groups.firstOrNull { it.name.equals(trimmed, ignoreCase = true) }?.id
+            ?: groups.firstOrNull { it.name.startsWith(trimmed, ignoreCase = true) }?.id
+            ?: groups.firstOrNull { it.name.contains(trimmed, ignoreCase = true) }?.id
     }
 
     private suspend fun resolveTeacherId(teacher: String): String? {

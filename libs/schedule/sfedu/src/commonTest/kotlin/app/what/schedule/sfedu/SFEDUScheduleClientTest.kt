@@ -89,6 +89,12 @@ class SFEDUScheduleClientTest {
         assertEquals(1, groups.size)
         assertEquals(185, groups[0].id)
         assertEquals("ММ и ИИ", groups[0].name)
+
+        val g = groups[0]
+        val grade = grades[0]
+        val baseName = if (g.name.contains(g.num.toString())) g.name else "${g.name} ${g.num}".trim()
+        val displayName = if (grade.num > 0) "$baseName - ${grade.num}".trim() else baseName
+        assertEquals("ММ и ИИ 7 - 1", displayName)
     }
 
     @Test

@@ -1,9 +1,9 @@
 package app.what.schedule.features.insts.dgtu.domain.models
 
 import androidx.compose.ui.text.AnnotatedString
-import app.what.foundation.data.RemoteState
 import app.what.domain.models.NewListItem
 import app.what.domain.models.ScheduleSearch
+import app.what.foundation.data.RemoteState
 import app.what.schedule.dgtu.models.DGTUApi
 import app.what.schedule.dgtu.models.DGTUApi.Events.Initiator
 import kotlinx.datetime.LocalDate
