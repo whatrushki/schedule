@@ -1,45 +1,5 @@
 [
     {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Инженерная компьютерная графика",
-                "otUnits": [
-                    {
-                        "teacher": "Говорова О.А.",
-                        "group": "ИКС-22",
-                        "room": "212",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Инженерная компьютерная графика",
-                "otUnits": [
-                    {
-                        "teacher": "Говорова О.А.",
-                        "group": "ИКС-22",
-                        "room": "212",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
@@ -57,7 +17,7 @@
                         "additional": "1"
                     }
                 ],
-                "type": "COMMON",
+                "type": "CLASS_HOUR",
                 "state": "CHANGED"
             },
             {

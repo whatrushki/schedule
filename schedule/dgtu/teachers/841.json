@@ -242,7 +242,7 @@
                 "otUnits": [
                     {
                         "teacher": "Катаев В. С.",
-                        "group": "ИСТХОМ21, ИСТЭМ21, ИСТЭМ22",
+                        "group": "ИСТЭМ21, ИСТХОМ21, ИСТЭМ22",
                         "room": "201",
                         "additional": "26"
                     }
@@ -1067,7 +1067,7 @@
                 "otUnits": [
                     {
                         "teacher": "Катаев В. С.",
-                        "group": "ИСТХОМ21, ИСТЭМ21, ИСТЭМ22",
+                        "group": "ИСТЭМ21, ИСТХОМ21, ИСТЭМ22",
                         "room": "201",
                         "additional": "26"
                     }
@@ -1540,6 +1540,23 @@
         "lessons": [
             {
                 "date": "2026-09-28",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Управление качеством",
+                "otUnits": [
+                    {
+                        "teacher": "Катаев В. С.",
+                        "group": "УА41",
+                        "room": "338",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -1624,6 +1641,23 @@
                         "group": "ИПБТ31",
                         "room": "465а",
                         "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-29",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Метрологическое обеспечение жизненного цикла технических изделий и систем",
+                "otUnits": [
+                    {
+                        "teacher": "Катаев В. С.",
+                        "group": "КУК31",
+                        "room": "547",
+                        "additional": "8"
                     }
                 ],
                 "type": "COMMON",
@@ -1769,7 +1803,7 @@
                 "otUnits": [
                     {
                         "teacher": "Катаев В. С.",
-                        "group": "ИСТХОМ21, ИСТЭМ21, ИСТЭМ22",
+                        "group": "ИСТЭМ21, ИСТХОМ21, ИСТЭМ22",
                         "room": "201",
                         "additional": "26"
                     }
@@ -1819,16 +1853,56 @@
         "lessons": [
             {
                 "date": "2026-10-03",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Управление качеством в технических системах",
+                "otUnits": [
+                    {
+                        "teacher": "Катаев В. С.",
+                        "group": "КУК31",
+                        "room": "204",
+                        "additional": "6"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-03",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Метрология и стандартизация",
+                "subject": "лаб Метрологическое обеспечение жизненного цикла технических изделий и систем",
                 "otUnits": [
+                    {
+                        "teacher": "Катаев В. С.",
+                        "group": "КУК31",
+                        "room": "302а",
+                        "additional": "6"
+                    },
                     {
                         "teacher": "Катаев В. С.",
                         "group": "АВА32",
                         "room": "305",
                         "additional": "10"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Метрологическое обеспечение жизненного цикла технических изделий и систем",
+                "otUnits": [
+                    {
+                        "teacher": "Катаев В. С.",
+                        "group": "КУК31",
+                        "room": "505",
+                        "additional": "6"
                     }
                 ],
                 "type": "COMMON",
@@ -1846,6 +1920,86 @@
                         "group": "АВА31",
                         "room": "229",
                         "additional": "10"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-05",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Управление качеством",
+                "otUnits": [
+                    {
+                        "teacher": "Катаев В. С.",
+                        "group": "УА41",
+                        "room": "458",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Управление качеством в технических системах",
+                "otUnits": [
+                    {
+                        "teacher": "Катаев В. С.",
+                        "group": "КУК31",
+                        "room": "547",
+                        "additional": "8"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Управление качеством в технических системах",
+                "otUnits": [
+                    {
+                        "teacher": "Катаев В. С.",
+                        "group": "КУК31",
+                        "room": "426",
+                        "additional": "8"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Управление качеством",
+                "otUnits": [
+                    {
+                        "teacher": "Катаев В. С.",
+                        "group": "УА41",
+                        "room": "219/1",
+                        "additional": "11"
                     }
                 ],
                 "type": "COMMON",
@@ -1911,6 +2065,29 @@
         ]
     },
     {
+        "date": "2026-10-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-10",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Метрологическое обеспечение жизненного цикла технических изделий и систем",
+                "otUnits": [
+                    {
+                        "teacher": "Катаев В. С.",
+                        "group": "КУК31",
+                        "room": "301",
+                        "additional": "6"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-16",
         "scheduleType": "COMMON",
         "lessons": [
@@ -1940,7 +2117,7 @@
                 "otUnits": [
                     {
                         "teacher": "Катаев В. С.",
-                        "group": "ИСТХОМ21, ИСТЭМ21, ИСТЭМ22",
+                        "group": "ИСТЭМ21, ИСТХОМ21, ИСТЭМ22",
                         "room": "201",
                         "additional": "26"
                     }

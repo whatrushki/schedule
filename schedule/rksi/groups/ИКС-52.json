@@ -1,62 +1,5 @@
 [
     {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Технология монтажа и настройки абонентского оборудования",
-                "otUnits": [
-                    {
-                        "teacher": "Якубенко С.Я.",
-                        "group": "ИКС-52",
-                        "room": "216а",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Технология монтажа и настройки абонентского оборудования",
-                "otUnits": [
-                    {
-                        "teacher": "Якубенко С.Я.",
-                        "group": "ИКС-52",
-                        "room": "216а",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Технология монтажа и настройки абонентского оборудования",
-                "otUnits": [
-                    {
-                        "teacher": "Якубенко С.Я.",
-                        "group": "ИКС-52",
-                        "room": "216а",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
@@ -74,7 +17,7 @@
                         "additional": "1"
                     }
                 ],
-                "type": "COMMON",
+                "type": "CLASS_HOUR",
                 "state": "CHANGED"
             },
             {

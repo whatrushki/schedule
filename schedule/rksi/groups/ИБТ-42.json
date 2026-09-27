@@ -1,45 +1,5 @@
 [
     {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Беспалова Н.В.",
-                        "group": "ИБТ-42",
-                        "room": "с/з3",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Защита информации в информационно-телекоммуникационных системах и сетях с использованием технических средств защиты",
-                "otUnits": [
-                    {
-                        "teacher": "Касьянова Е.Ю.",
-                        "group": "ИБТ-42",
-                        "room": "30",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
@@ -57,7 +17,7 @@
                         "additional": "2"
                     }
                 ],
-                "type": "COMMON",
+                "type": "CLASS_HOUR",
                 "state": "CHANGED"
             },
             {
@@ -233,15 +193,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Савченко А.А.",
-                        "group": "ИБТ-42",
-                        "room": "38",
-                        "additional": "2"
-                    },
-                    {
                         "teacher": "Марченко С.П.",
                         "group": "ИБТ-42",
                         "room": "13",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Савченко А.А.",
+                        "group": "ИБТ-42",
+                        "room": "38",
                         "additional": "2"
                     }
                 ],

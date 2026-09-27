@@ -1,45 +1,5 @@
 [
     {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Бизнес-аналитика",
-                "otUnits": [
-                    {
-                        "teacher": "Чумаченко С.Г.",
-                        "group": "ИС-43",
-                        "room": "217",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Бизнес-аналитика",
-                "otUnits": [
-                    {
-                        "teacher": "Чумаченко С.Г.",
-                        "group": "ИС-43",
-                        "room": "217",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
@@ -91,7 +51,7 @@
                         "additional": "1"
                     }
                 ],
-                "type": "COMMON",
+                "type": "CLASS_HOUR",
                 "state": "CHANGED"
             }
         ]
@@ -159,15 +119,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Прыгунова Т.А.",
-                        "group": "ИС-43",
-                        "room": "104",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Ужегова Е.А.",
                         "group": "ИС-43",
                         "room": "307",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Прыгунова Т.А.",
+                        "group": "ИС-43",
+                        "room": "104",
                         "additional": "1"
                     }
                 ],

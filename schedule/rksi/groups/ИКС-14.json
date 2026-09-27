@@ -1,62 +1,5 @@
 [
     {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Корбан С.Н.",
-                        "group": "ИКС-14",
-                        "room": "с/з2",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Нохрина Ю.В.",
-                        "group": "ИКС-14",
-                        "room": "212",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Русский язык",
-                "otUnits": [
-                    {
-                        "teacher": "Иваненков П.П.",
-                        "group": "ИКС-14",
-                        "room": "318",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
@@ -125,7 +68,7 @@
                         "additional": "1"
                     }
                 ],
-                "type": "COMMON",
+                "type": "CLASS_HOUR",
                 "state": "CHANGED"
             }
         ]
@@ -233,15 +176,15 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Ефремова О.П.",
-                        "group": "ИКС-14",
-                        "room": "315а",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Крупицкая Н.А.",
                         "group": "ИКС-14",
                         "room": "111",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Ефремова О.П.",
+                        "group": "ИКС-14",
+                        "room": "315а",
                         "additional": "1"
                     }
                 ],

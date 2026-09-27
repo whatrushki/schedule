@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Математика",
-                "otUnits": [
-                    {
-                        "teacher": "Марченко С.В.",
-                        "group": "ИБТ-13",
-                        "room": "42",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "ИБТ-13",
-                        "room": "24",
-                        "additional": "2"
-                    },
-                    {
-                        "teacher": "Марченко С.П.",
-                        "group": "ИБТ-13",
-                        "room": "33",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Наскалова О.В.",
-                        "group": "ИБТ-13",
-                        "room": "35",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
@@ -131,7 +68,7 @@
                         "additional": "2"
                     }
                 ],
-                "type": "COMMON",
+                "type": "CLASS_HOUR",
                 "state": "CHANGED"
             }
         ]
@@ -410,15 +347,15 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "ИБТ-13",
-                        "room": "38",
-                        "additional": "2"
-                    },
-                    {
                         "teacher": "Марченко С.П.",
                         "group": "ИБТ-13",
                         "room": "17",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "ИБТ-13",
+                        "room": "38",
                         "additional": "2"
                     }
                 ],

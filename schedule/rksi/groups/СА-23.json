@@ -1,45 +1,5 @@
 [
     {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Дискретная математика с элементами математической логики",
-                "otUnits": [
-                    {
-                        "teacher": "Небратенко Л.В.",
-                        "group": "СА-23",
-                        "room": "216",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Операционные системы и среды",
-                "otUnits": [
-                    {
-                        "teacher": "Ляшенко П.А.",
-                        "group": "СА-23",
-                        "room": "326",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
@@ -91,7 +51,7 @@
                         "additional": "1"
                     }
                 ],
-                "type": "COMMON",
+                "type": "CLASS_HOUR",
                 "state": "CHANGED"
             },
             {

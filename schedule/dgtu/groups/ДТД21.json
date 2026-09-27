@@ -1,5 +1,911 @@
 [
     {
+        "date": "2026-09-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-01",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "610",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-01",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "610",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-01",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Сопротивление материалов",
+                "otUnits": [
+                    {
+                        "teacher": "Аваков А. А.",
+                        "group": "ДТД21",
+                        "room": "001А",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-02",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Ширкова И. В.",
+                        "group": "ДТД21",
+                        "room": "216",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-02",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Метрология, стандартизация, сертификация и контроль качества",
+                "otUnits": [
+                    {
+                        "teacher": "Косенко В. В.",
+                        "group": "ДТД21",
+                        "room": "211",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-02",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Метрология, стандартизация, сертификация и контроль качества",
+                "otUnits": [
+                    {
+                        "teacher": "Косенко В. В.",
+                        "group": "ДТД21",
+                        "room": "219",
+                        "additional": "23"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-03",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Общая физическая подготовка",
+                "otUnits": [
+                    {
+                        "teacher": "Зайцева Т. В.",
+                        "group": "ДТД21",
+                        "room": "120а",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-03",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Ширкова И. В.",
+                        "group": "ДТД21",
+                        "room": "309",
+                        "additional": "21"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-03",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Основы гидравлики и теплотехники",
+                "otUnits": [
+                    {
+                        "teacher": "Шишова О. П.",
+                        "group": "ДТД21",
+                        "room": "205",
+                        "additional": "22"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-04",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-04",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Строительное материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Каклюгин А. В.",
+                        "group": "ДТД21",
+                        "room": "207",
+                        "additional": "23"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-04",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Строительное материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Каклюгин А. В.",
+                        "group": "ДТД21",
+                        "room": "221",
+                        "additional": "23"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-04",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Основы архитектуры и строительных конструкций",
+                "otUnits": [
+                    {
+                        "teacher": "Маилян Л. Р.",
+                        "group": "ДТД21",
+                        "room": "601",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-04",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Технологическое предпринимательство",
+                "otUnits": [
+                    {
+                        "teacher": "Степанова Ю. Л.",
+                        "group": "ДТД21",
+                        "room": "212",
+                        "additional": "21"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-07",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Теоретическая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Углич С. И.",
+                        "group": "ДТД21",
+                        "room": "709",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-07",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Механика грунтов",
+                "otUnits": [
+                    {
+                        "teacher": "Жур В. Н.",
+                        "group": "ДТД21",
+                        "room": "119",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-07",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Основы архитектуры и строительных конструкций",
+                "otUnits": [
+                    {
+                        "teacher": "Маилян Л. Р.",
+                        "group": "ДТД21",
+                        "room": "801",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-08",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Строительное материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Каклюгин А. В.",
+                        "group": "ДТД21",
+                        "room": "207",
+                        "additional": "23"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-08",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "610",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-09",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "604",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-09",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Сопротивление материалов",
+                "otUnits": [
+                    {
+                        "teacher": "Аваков А. А.",
+                        "group": "ДТД21",
+                        "room": "211",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-09",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Метрология, стандартизация, сертификация и контроль качества",
+                "otUnits": [
+                    {
+                        "teacher": "Косенко В. В.",
+                        "group": "ДТД21",
+                        "room": "211",
+                        "additional": "23"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-09",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Русский язык как иностранный",
+                "otUnits": [
+                    {
+                        "teacher": "Зубкова И. А.",
+                        "group": "ДТД21",
+                        "room": "608",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-09",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Русский язык как иностранный",
+                "otUnits": [
+                    {
+                        "teacher": "Зубкова И. А.",
+                        "group": "ДТД21",
+                        "room": "608",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-10",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "608",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-10",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Общая физическая подготовка",
+                "otUnits": [
+                    {
+                        "teacher": "Зайцева Т. В.",
+                        "group": "ДТД21",
+                        "room": "120а",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-10",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Теоретическая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Углич С. И.",
+                        "group": "ДТД21",
+                        "room": "123",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-10",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Технологическое предпринимательство",
+                "otUnits": [
+                    {
+                        "teacher": "Степанова Ю. Л.",
+                        "group": "ДТД21",
+                        "room": "612",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-11",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Основы архитектуры и строительных конструкций",
+                "otUnits": [
+                    {
+                        "teacher": "Маилян Л. Р.",
+                        "group": "ДТД21",
+                        "room": "505",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-11",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Ширкова И. В.",
+                        "group": "ДТД21",
+                        "room": "614",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-12",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Основы гидравлики и теплотехники",
+                "otUnits": [
+                    {
+                        "teacher": "Михайлов Е. Д.",
+                        "group": "ДТД21",
+                        "room": "201",
+                        "additional": "22"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-14",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-14",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Теоретическая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Углич С. И.",
+                        "group": "ДТД21",
+                        "room": "707",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-14",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Сопротивление материалов",
+                "otUnits": [
+                    {
+                        "teacher": "Аваков А. А.",
+                        "group": "ДТД21",
+                        "room": "001А",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-14",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Основы гидравлики и теплотехники",
+                "otUnits": [
+                    {
+                        "teacher": "Шишова О. П.",
+                        "group": "ДТД21",
+                        "room": "001",
+                        "additional": "21"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-14",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Основы гидравлики и теплотехники",
+                "otUnits": [
+                    {
+                        "teacher": "Шишова О. П.",
+                        "group": "ДТД21",
+                        "room": "001",
+                        "additional": "21"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-15",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-15",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "610",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-15",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "610",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-15",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Сопротивление материалов",
+                "otUnits": [
+                    {
+                        "teacher": "Аваков А. А.",
+                        "group": "ДТД21",
+                        "room": "001А",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-15",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Русский язык как иностранный",
+                "otUnits": [
+                    {
+                        "teacher": "Зубкова И. А.",
+                        "group": "ДТД21",
+                        "room": "516",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-16",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Метрология, стандартизация, сертификация и контроль качества",
+                "otUnits": [
+                    {
+                        "teacher": "Косенко В. В.",
+                        "group": "ДТД21",
+                        "room": "330",
+                        "additional": "21"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-16",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Метрология, стандартизация, сертификация и контроль качества",
+                "otUnits": [
+                    {
+                        "teacher": "Косенко В. В.",
+                        "group": "ДТД21",
+                        "room": "219",
+                        "additional": "23"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-17",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-17",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "608",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-17",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Общая физическая подготовка",
+                "otUnits": [
+                    {
+                        "teacher": "Зайцева Т. В.",
+                        "group": "ДТД21",
+                        "room": "120а",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-17",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Ширкова И. В.",
+                        "group": "ДТД21",
+                        "room": "608",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-17",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Ширкова И. В.",
+                        "group": "ДТД21",
+                        "room": "407",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-18",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-18",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Строительное материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Каклюгин А. В.",
+                        "group": "ДТД21",
+                        "room": "207",
+                        "additional": "23"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-18",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Строительное материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Каклюгин А. В.",
+                        "group": "ДТД21",
+                        "room": "221",
+                        "additional": "23"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-18",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Основы архитектуры и строительных конструкций",
+                "otUnits": [
+                    {
+                        "teacher": "Маилян Л. Р.",
+                        "group": "ДТД21",
+                        "room": "601",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-18",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Технологическое предпринимательство",
+                "otUnits": [
+                    {
+                        "teacher": "Степанова Ю. Л.",
+                        "group": "ДТД21",
+                        "room": "212",
+                        "additional": "21"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-09-21",
         "scheduleType": "COMMON",
         "lessons": [
@@ -14,7 +920,7 @@
                         "teacher": "Углич С. И.",
                         "group": "ДТД21",
                         "room": "709",
-                        "additional": "Корпус 25"
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",
@@ -31,7 +937,7 @@
                         "teacher": "Жур В. Н.",
                         "group": "ДТД21",
                         "room": "119",
-                        "additional": "Корпус 25"
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",
@@ -48,7 +954,7 @@
                         "teacher": "Маилян Л. Р.",
                         "group": "ДТД21",
                         "room": "513",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -71,7 +977,7 @@
                         "teacher": "Павлов А. Н.",
                         "group": "ДТД21",
                         "room": "610",
-                        "additional": "Корпус 25"
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",
@@ -88,7 +994,7 @@
                         "teacher": "Павлов А. Н.",
                         "group": "ДТД21",
                         "room": "610",
-                        "additional": "Корпус 25"
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",
@@ -111,7 +1017,7 @@
                         "teacher": "Аваков А. А.",
                         "group": "ДТД21",
                         "room": "211",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -128,41 +1034,7 @@
                         "teacher": "Косенко В. В.",
                         "group": "ДТД21",
                         "room": "219",
-                        "additional": "Корпус 23"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Русский язык как иностранный",
-                "otUnits": [
-                    {
-                        "teacher": "Зубкова И. А.",
-                        "group": "ДТД21",
-                        "room": "312",
-                        "additional": "Корпус 25"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Русский язык как иностранный",
-                "otUnits": [
-                    {
-                        "teacher": "Зубкова И. А.",
-                        "group": "ДТД21",
-                        "room": "312",
-                        "additional": "Корпус 25"
+                        "additional": "23"
                     }
                 ],
                 "type": "COMMON",
@@ -185,7 +1057,7 @@
                         "teacher": "Павлов А. Н.",
                         "group": "ДТД21",
                         "room": "608",
-                        "additional": "Корпус 25"
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",
@@ -202,7 +1074,7 @@
                         "teacher": "Зайцева Т. В.",
                         "group": "ДТД21",
                         "room": "120а",
-                        "additional": "Корпус 25"
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",
@@ -219,7 +1091,7 @@
                         "teacher": "Углич С. И.",
                         "group": "ДТД21",
                         "room": "123",
-                        "additional": "Корпус 25"
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",
@@ -236,7 +1108,7 @@
                         "teacher": "Степанова Ю. Л.",
                         "group": "ДТД21",
                         "room": "612",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -259,7 +1131,7 @@
                         "teacher": "Каклюгин А. В.",
                         "group": "ДТД21",
                         "room": "207",
-                        "additional": "Корпус 23"
+                        "additional": "23"
                     }
                 ],
                 "type": "COMMON",
@@ -276,7 +1148,7 @@
                         "teacher": "Маилян Л. Р.",
                         "group": "ДТД21",
                         "room": "505",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -293,7 +1165,41 @@
                         "teacher": "Ширкова И. В.",
                         "group": "ДТД21",
                         "room": "610",
-                        "additional": "Корпус 26"
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Русский язык как иностранный",
+                "otUnits": [
+                    {
+                        "teacher": "Зубкова И. А.",
+                        "group": "ДТД21",
+                        "room": "711",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-25",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Русский язык как иностранный",
+                "otUnits": [
+                    {
+                        "teacher": "Зубкова И. А.",
+                        "group": "ДТД21",
+                        "room": "711",
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -316,7 +1222,7 @@
                         "teacher": "Михайлов Е. Д.",
                         "group": "ДТД21",
                         "room": "201",
-                        "additional": "Корпус 22"
+                        "additional": "22"
                     }
                 ],
                 "type": "COMMON",
@@ -330,10 +1236,10 @@
                 "subject": "лек Механика грунтов",
                 "otUnits": [
                     {
-                        "teacher": "Жур В. Н.",
+                        "teacher": "Сычев И. В.",
                         "group": "ДТД21",
                         "room": "123",
-                        "additional": "Корпус 25"
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",
@@ -356,7 +1262,7 @@
                         "teacher": "Углич С. И.",
                         "group": "ДТД21",
                         "room": "707",
-                        "additional": "Корпус 25"
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",
@@ -373,7 +1279,7 @@
                         "teacher": "Аваков А. А.",
                         "group": "ДТД21",
                         "room": "001А",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -390,7 +1296,7 @@
                         "teacher": "Шишова О. П.",
                         "group": "ДТД21",
                         "room": "001",
-                        "additional": "Корпус 21"
+                        "additional": "21"
                     }
                 ],
                 "type": "COMMON",
@@ -407,7 +1313,7 @@
                         "teacher": "Шишова О. П.",
                         "group": "ДТД21",
                         "room": "001",
-                        "additional": "Корпус 21"
+                        "additional": "21"
                     }
                 ],
                 "type": "COMMON",
@@ -430,7 +1336,7 @@
                         "teacher": "Павлов А. Н.",
                         "group": "ДТД21",
                         "room": "610",
-                        "additional": "Корпус 25"
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",
@@ -447,7 +1353,7 @@
                         "teacher": "Павлов А. Н.",
                         "group": "ДТД21",
                         "room": "610",
-                        "additional": "Корпус 25"
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",
@@ -464,7 +1370,7 @@
                         "teacher": "Аваков А. А.",
                         "group": "ДТД21",
                         "room": "001А",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -481,7 +1387,7 @@
                         "teacher": "Зубкова И. А.",
                         "group": "ДТД21",
                         "room": "516",
-                        "additional": "Корпус 25"
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",
@@ -504,7 +1410,7 @@
                         "teacher": "Косенко В. В.",
                         "group": "ДТД21",
                         "room": "330",
-                        "additional": "Корпус 21"
+                        "additional": "21"
                     }
                 ],
                 "type": "COMMON",
@@ -521,7 +1427,7 @@
                         "teacher": "Косенко В. В.",
                         "group": "ДТД21",
                         "room": "219",
-                        "additional": "Корпус 23"
+                        "additional": "23"
                     }
                 ],
                 "type": "COMMON",
@@ -544,7 +1450,7 @@
                         "teacher": "Павлов А. Н.",
                         "group": "ДТД21",
                         "room": "608",
-                        "additional": "Корпус 25"
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",
@@ -561,7 +1467,7 @@
                         "teacher": "Зайцева Т. В.",
                         "group": "ДТД21",
                         "room": "120а",
-                        "additional": "Корпус 25"
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",
@@ -578,7 +1484,7 @@
                         "teacher": "Ширкова И. В.",
                         "group": "ДТД21",
                         "room": "608",
-                        "additional": "Корпус 25"
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",
@@ -595,7 +1501,7 @@
                         "teacher": "Ширкова И. В.",
                         "group": "ДТД21",
                         "room": "407",
-                        "additional": "Корпус 25"
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",
@@ -618,7 +1524,7 @@
                         "teacher": "Каклюгин А. В.",
                         "group": "ДТД21",
                         "room": "207",
-                        "additional": "Корпус 23"
+                        "additional": "23"
                     }
                 ],
                 "type": "COMMON",
@@ -635,7 +1541,7 @@
                         "teacher": "Каклюгин А. В.",
                         "group": "ДТД21",
                         "room": "221",
-                        "additional": "Корпус 23"
+                        "additional": "23"
                     }
                 ],
                 "type": "COMMON",
@@ -652,7 +1558,7 @@
                         "teacher": "Маилян Л. Р.",
                         "group": "ДТД21",
                         "room": "601",
-                        "additional": "Корпус 26"
+                        "additional": "26"
                     }
                 ],
                 "type": "COMMON",
@@ -669,7 +1575,1027 @@
                         "teacher": "Степанова Ю. Л.",
                         "group": "ДТД21",
                         "room": "212",
-                        "additional": "Корпус 21"
+                        "additional": "21"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-05",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Теоретическая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Углич С. И.",
+                        "group": "ДТД21",
+                        "room": "709",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Механика грунтов",
+                "otUnits": [
+                    {
+                        "teacher": "Жур В. Н.",
+                        "group": "ДТД21",
+                        "room": "119",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Основы архитектуры и строительных конструкций",
+                "otUnits": [
+                    {
+                        "teacher": "Маилян Л. Р.",
+                        "group": "ДТД21",
+                        "room": "513",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-06",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "610",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-06",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "610",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-07",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Сопротивление материалов",
+                "otUnits": [
+                    {
+                        "teacher": "Аваков А. А.",
+                        "group": "ДТД21",
+                        "room": "211",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Метрология, стандартизация, сертификация и контроль качества",
+                "otUnits": [
+                    {
+                        "teacher": "Косенко В. В.",
+                        "group": "ДТД21",
+                        "room": "219",
+                        "additional": "23"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "608",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Общая физическая подготовка",
+                "otUnits": [
+                    {
+                        "teacher": "Зайцева Т. В.",
+                        "group": "ДТД21",
+                        "room": "120а",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Теоретическая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Углич С. И.",
+                        "group": "ДТД21",
+                        "room": "123",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Технологическое предпринимательство",
+                "otUnits": [
+                    {
+                        "teacher": "Степанова Ю. Л.",
+                        "group": "ДТД21",
+                        "room": "612",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-09",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Строительное материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Каклюгин А. В.",
+                        "group": "ДТД21",
+                        "room": "207",
+                        "additional": "23"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Основы архитектуры и строительных конструкций",
+                "otUnits": [
+                    {
+                        "teacher": "Маилян Л. Р.",
+                        "group": "ДТД21",
+                        "room": "505",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Ширкова И. В.",
+                        "group": "ДТД21",
+                        "room": "610",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Русский язык как иностранный",
+                "otUnits": [
+                    {
+                        "teacher": "Зубкова И. А.",
+                        "group": "ДТД21",
+                        "room": "407",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Русский язык как иностранный",
+                "otUnits": [
+                    {
+                        "teacher": "Зубкова И. А.",
+                        "group": "ДТД21",
+                        "room": "407",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-10",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Основы гидравлики и теплотехники",
+                "otUnits": [
+                    {
+                        "teacher": "Михайлов Е. Д.",
+                        "group": "ДТД21",
+                        "room": "201",
+                        "additional": "22"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Механика грунтов",
+                "otUnits": [
+                    {
+                        "teacher": "Сычев И. В.",
+                        "group": "ДТД21",
+                        "room": "123",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-12",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Теоретическая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Углич С. И.",
+                        "group": "ДТД21",
+                        "room": "707",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Сопротивление материалов",
+                "otUnits": [
+                    {
+                        "teacher": "Аваков А. А.",
+                        "group": "ДТД21",
+                        "room": "001А",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Основы гидравлики и теплотехники",
+                "otUnits": [
+                    {
+                        "teacher": "Шишова О. П.",
+                        "group": "ДТД21",
+                        "room": "001",
+                        "additional": "21"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Основы гидравлики и теплотехники",
+                "otUnits": [
+                    {
+                        "teacher": "Шишова О. П.",
+                        "group": "ДТД21",
+                        "room": "001",
+                        "additional": "21"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-13",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "610",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "610",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Сопротивление материалов",
+                "otUnits": [
+                    {
+                        "teacher": "Аваков А. А.",
+                        "group": "ДТД21",
+                        "room": "001А",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Русский язык как иностранный",
+                "otUnits": [
+                    {
+                        "teacher": "Зубкова И. А.",
+                        "group": "ДТД21",
+                        "room": "516",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-14",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-14",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Метрология, стандартизация, сертификация и контроль качества",
+                "otUnits": [
+                    {
+                        "teacher": "Косенко В. В.",
+                        "group": "ДТД21",
+                        "room": "330",
+                        "additional": "21"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Метрология, стандартизация, сертификация и контроль качества",
+                "otUnits": [
+                    {
+                        "teacher": "Косенко В. В.",
+                        "group": "ДТД21",
+                        "room": "219",
+                        "additional": "23"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-15",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-15",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "608",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Общая физическая подготовка",
+                "otUnits": [
+                    {
+                        "teacher": "Зайцева Т. В.",
+                        "group": "ДТД21",
+                        "room": "120а",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Ширкова И. В.",
+                        "group": "ДТД21",
+                        "room": "608",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Ширкова И. В.",
+                        "group": "ДТД21",
+                        "room": "407",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-16",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Строительное материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Каклюгин А. В.",
+                        "group": "ДТД21",
+                        "room": "207",
+                        "additional": "23"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Строительное материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Каклюгин А. В.",
+                        "group": "ДТД21",
+                        "room": "221",
+                        "additional": "23"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Основы архитектуры и строительных конструкций",
+                "otUnits": [
+                    {
+                        "teacher": "Маилян Л. Р.",
+                        "group": "ДТД21",
+                        "room": "601",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Технологическое предпринимательство",
+                "otUnits": [
+                    {
+                        "teacher": "Степанова Ю. Л.",
+                        "group": "ДТД21",
+                        "room": "212",
+                        "additional": "21"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-19",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-19",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Теоретическая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Углич С. И.",
+                        "group": "ДТД21",
+                        "room": "709",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Механика грунтов",
+                "otUnits": [
+                    {
+                        "teacher": "Жур В. Н.",
+                        "group": "ДТД21",
+                        "room": "119",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Основы архитектуры и строительных конструкций",
+                "otUnits": [
+                    {
+                        "teacher": "Маилян Л. Р.",
+                        "group": "ДТД21",
+                        "room": "513",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-20",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-20",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "610",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "610",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-21",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Сопротивление материалов",
+                "otUnits": [
+                    {
+                        "teacher": "Аваков А. А.",
+                        "group": "ДТД21",
+                        "room": "211",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-21",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Метрология, стандартизация, сертификация и контроль качества",
+                "otUnits": [
+                    {
+                        "teacher": "Косенко В. В.",
+                        "group": "ДТД21",
+                        "room": "219",
+                        "additional": "23"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-22",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-22",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Павлов А. Н.",
+                        "group": "ДТД21",
+                        "room": "608",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Общая физическая подготовка",
+                "otUnits": [
+                    {
+                        "teacher": "Зайцева Т. В.",
+                        "group": "ДТД21",
+                        "room": "120а",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Теоретическая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Углич С. И.",
+                        "group": "ДТД21",
+                        "room": "123",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Технологическое предпринимательство",
+                "otUnits": [
+                    {
+                        "teacher": "Степанова Ю. Л.",
+                        "group": "ДТД21",
+                        "room": "612",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-23",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Строительное материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Каклюгин А. В.",
+                        "group": "ДТД21",
+                        "room": "207",
+                        "additional": "23"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Основы архитектуры и строительных конструкций",
+                "otUnits": [
+                    {
+                        "teacher": "Маилян Л. Р.",
+                        "group": "ДТД21",
+                        "room": "505",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Ширкова И. В.",
+                        "group": "ДТД21",
+                        "room": "610",
+                        "additional": "26"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Русский язык как иностранный",
+                "otUnits": [
+                    {
+                        "teacher": "Зубкова И. А.",
+                        "group": "ДТД21",
+                        "room": "407",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Русский язык как иностранный",
+                "otUnits": [
+                    {
+                        "teacher": "Зубкова И. А.",
+                        "group": "ДТД21",
+                        "room": "407",
+                        "additional": "25"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-24",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-24",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Основы гидравлики и теплотехники",
+                "otUnits": [
+                    {
+                        "teacher": "Михайлов Е. Д.",
+                        "group": "ДТД21",
+                        "room": "201",
+                        "additional": "22"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-24",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Механика грунтов",
+                "otUnits": [
+                    {
+                        "teacher": "Сычев И. В.",
+                        "group": "ДТД21",
+                        "room": "123",
+                        "additional": "25"
                     }
                 ],
                 "type": "COMMON",

@@ -1,45 +1,5 @@
 [
     {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Основы теории информации",
-                "otUnits": [
-                    {
-                        "teacher": "Токарева Ю.А.",
-                        "group": "СА-25",
-                        "room": "314",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Информационные технологии",
-                "otUnits": [
-                    {
-                        "teacher": "Трищук С.А.",
-                        "group": "СА-25",
-                        "room": "213",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
@@ -74,7 +34,7 @@
                         "additional": "1"
                     }
                 ],
-                "type": "COMMON",
+                "type": "CLASS_HOUR",
                 "state": "CHANGED"
             },
             {
@@ -290,15 +250,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ужегова Е.А.",
-                        "group": "СА-25",
-                        "room": "307",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Крупицкая Н.А.",
                         "group": "СА-25",
                         "room": "111",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Ужегова Е.А.",
+                        "group": "СА-25",
+                        "room": "307",
                         "additional": "1"
                     }
                 ],

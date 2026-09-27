@@ -1,45 +1,5 @@
 [
     {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Пятибратов Д.В.",
-                        "group": "ИКС-23",
-                        "room": "305",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Пятибратов Д.В.",
-                        "group": "ИКС-23",
-                        "room": "305",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
@@ -57,7 +17,7 @@
                         "additional": "1"
                     }
                 ],
-                "type": "COMMON",
+                "type": "CLASS_HOUR",
                 "state": "CHANGED"
             },
             {
@@ -330,15 +290,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Черноштан О.Н.",
-                        "group": "ИКС-23",
-                        "room": "318",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Крупицкая Н.А.",
                         "group": "ИКС-23",
                         "room": "111",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Черноштан О.Н.",
+                        "group": "ИКС-23",
+                        "room": "318",
                         "additional": "1"
                     }
                 ],

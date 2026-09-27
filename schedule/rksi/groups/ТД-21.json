@@ -1,62 +1,5 @@
 [
     {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "История России",
-                "otUnits": [
-                    {
-                        "teacher": "Иванов Д.Н.",
-                        "group": "ТД-21",
-                        "room": "28",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Индивидуальный проект",
-                "otUnits": [
-                    {
-                        "teacher": "Бережная А.В.",
-                        "group": "ТД-21",
-                        "room": "29",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Беспалова Н.В.",
-                        "group": "ТД-21",
-                        "room": "с/з2",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
@@ -74,7 +17,7 @@
                         "additional": "2"
                     }
                 ],
-                "type": "COMMON",
+                "type": "CLASS_HOUR",
                 "state": "CHANGED"
             },
             {
@@ -125,15 +68,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крылова О.В.",
-                        "group": "ТД-21",
-                        "room": "33",
-                        "additional": "2"
-                    },
-                    {
                         "teacher": "Марченко С.П.",
                         "group": "ТД-21",
                         "room": "13",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Крылова О.В.",
+                        "group": "ТД-21",
+                        "room": "33",
                         "additional": "2"
                     }
                 ],

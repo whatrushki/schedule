@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "БУ-11",
-                        "room": "24",
-                        "additional": "2"
-                    },
-                    {
-                        "teacher": "Марченко С.П.",
-                        "group": "БУ-11",
-                        "room": "33",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Растороцкий В.В.",
-                        "group": "БУ-11",
-                        "room": "с/з2",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Предмет не указан",
-                "otUnits": [
-                    {
-                        "teacher": "Халова Л.В.",
-                        "group": "БУ-11",
-                        "room": "34",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
@@ -131,7 +68,7 @@
                         "additional": "2"
                     }
                 ],
-                "type": "COMMON",
+                "type": "CLASS_HOUR",
                 "state": "CHANGED"
             },
             {
@@ -444,15 +381,15 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "БУ-11",
-                        "room": "38",
-                        "additional": "2"
-                    },
-                    {
                         "teacher": "Марченко С.П.",
                         "group": "БУ-11",
                         "room": "17",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "БУ-11",
+                        "room": "38",
                         "additional": "2"
                     }
                 ],

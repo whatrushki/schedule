@@ -1,51 +1,5 @@
 [
     {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Правовое обеспечение профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Хачикян Л.Г.",
-                        "group": "ТД-22",
-                        "room": "32",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "ТД-22",
-                        "room": "24",
-                        "additional": "2"
-                    },
-                    {
-                        "teacher": "Марченко С.П.",
-                        "group": "ТД-22",
-                        "room": "33",
-                        "additional": "2"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
@@ -80,7 +34,7 @@
                         "additional": "2"
                     }
                 ],
-                "type": "COMMON",
+                "type": "CLASS_HOUR",
                 "state": "CHANGED"
             },
             {
@@ -376,15 +330,15 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.П.",
-                        "group": "ТД-22",
-                        "room": "17",
-                        "additional": "2"
-                    },
-                    {
                         "teacher": "Ляшенко Д.И.",
                         "group": "ТД-22",
                         "room": "38",
+                        "additional": "2"
+                    },
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "ТД-22",
+                        "room": "17",
                         "additional": "2"
                     }
                 ],

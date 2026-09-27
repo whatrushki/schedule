@@ -1,79 +1,5 @@
 [
     {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Троилина В.С.",
-                        "group": "ТЭС-13",
-                        "room": "114",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Информатика",
-                "otUnits": [
-                    {
-                        "teacher": "Арутюнян М.А.",
-                        "group": "ТЭС-13",
-                        "room": "312",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Математика",
-                "otUnits": [
-                    {
-                        "teacher": "Муравьева М.П.",
-                        "group": "ТЭС-13",
-                        "room": "418",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Информатика",
-                "otUnits": [
-                    {
-                        "teacher": "Арутюнян М.А.",
-                        "group": "ТЭС-13",
-                        "room": "323",
-                        "additional": "1"
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
@@ -142,7 +68,7 @@
                         "additional": "1"
                     }
                 ],
-                "type": "COMMON",
+                "type": "CLASS_HOUR",
                 "state": "CHANGED"
             }
         ]
@@ -290,15 +216,15 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Ефремова О.П.",
-                        "group": "ТЭС-13",
-                        "room": "111",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "Новосельцева Е.Ф.",
                         "group": "ТЭС-13",
                         "room": "209а",
+                        "additional": "1"
+                    },
+                    {
+                        "teacher": "Ефремова О.П.",
+                        "group": "ТЭС-13",
+                        "room": "111",
                         "additional": "1"
                     }
                 ],
