@@ -162,10 +162,10 @@ class RGUPSScheduleClient(
             schedule.forEach { day ->
                 day.lessons.forEach { lesson ->
                     lesson.otUnits.forEach { unit ->
-                        val clean = unit.teacher.replace(Regex("""\[.*?\]"""), "").trim()
-                        if (clean.isNotBlank() && clean != "—") {
-                            cachedTeachers.add(clean)
-                        }
+                        val teachers = unit.teacher.split(Regex("""[,;\n/]"""))
+                            .map { it.replace(Regex("""\[.*?\]"""), "").trim() }
+                            .filter { it.isNotBlank() && it != "—" && it != "-" && it != "_" }
+                        teachers.forEach { cachedTeachers.add(it) }
                     }
                 }
             }
@@ -177,6 +177,14 @@ class RGUPSScheduleClient(
     }
 
     override suspend fun getTeacherSchedule(teacher: String, showReplacements: Boolean): List<DayScheduleDto> {
+        val safeTeacherId = teacher.trim().replace("/", "_").replace("\\", "_")
+        val cacheKey = "rgups_teacher_$safeTeacherId.json"
+        val cachedBytes = fileCache.get(cacheKey)
+        if (cachedBytes != null) {
+            try {
+                return json.decodeFromString<List<DayScheduleDto>>(cachedBytes.decodeToString())
+            } catch (_: Exception) {}
+        }
         return emptyList()
     }
 

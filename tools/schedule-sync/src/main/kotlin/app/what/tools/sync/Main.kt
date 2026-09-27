@@ -3,6 +3,7 @@ package app.what.tools.sync
 import app.what.schedule.core.models.DayScheduleDto
 import app.what.schedule.core.models.GroupDto
 import app.what.schedule.core.models.LessonDto
+import app.what.schedule.core.models.LessonStateDto
 import app.what.schedule.core.models.LessonsScheduleTypeDto
 import app.what.schedule.core.models.TeacherDto
 import app.what.schedule.dgtu.DGTUScheduleClient
@@ -581,12 +582,16 @@ suspend fun syncRgups(client: HttpClient, rootDir: File, failOnError: Boolean = 
                                     schedule.forEach { daySchedule ->
                                         daySchedule.lessons.forEach { lesson ->
                                             lesson.otUnits.forEach { unit ->
-                                                val cleanTeacher = unit.teacher.replace(Regex("""\[.*?\]"""), "").trim().let { if (it.isEmpty() || it == "_") "-" else it }
-                                                if (cleanTeacher.isNotBlank() && cleanTeacher != "—" && cleanTeacher != "-") {
+                                                val teachers = unit.teacher.split(Regex("""[,;\n/]"""))
+                                                    .map { it.replace(Regex("""\[.*?\]"""), "").replace(Regex("""\s+"""), " ").trim() }
+                                                    .filter { it.isNotBlank() && it != "—" && it != "-" && it != "_" }
+
+                                                val safeGroup = if (group.name.isBlank() || group.name == "_") "-" else group.name
+                                                val safeRoom = if (unit.room.isBlank() || unit.room == "_") "-" else unit.room
+
+                                                for (cleanTeacher in teachers) {
                                                     val teacherDays = teacherSchedules.getOrPut(cleanTeacher) { mutableMapOf() }
                                                     val dayLessons = teacherDays.getOrPut(daySchedule.date) { mutableListOf() }
-                                                    val safeGroup = if (group.name.isBlank() || group.name == "_") "-" else group.name
-                                                    val safeRoom = if (unit.room.isBlank() || unit.room == "_") "-" else unit.room
                                                     dayLessons.add(
                                                         lesson.copy(
                                                             otUnits = listOf(unit.copy(teacher = cleanTeacher, group = safeGroup, room = safeRoom))
@@ -604,6 +609,7 @@ suspend fun syncRgups(client: HttpClient, rootDir: File, failOnError: Boolean = 
             }.awaitAll()
         }
 
+        println("  [RGUPS] Aggregated ${teacherSchedules.size} teachers from all group schedules")
         val teachersList = teacherSchedules.keys.sorted().map { TeacherDto(id = it, name = it) }
         File(dir, "teachers.json").writeText(json.encodeToString(teachersList))
 
@@ -614,8 +620,14 @@ suspend fun syncRgups(client: HttpClient, rootDir: File, failOnError: Boolean = 
                     .groupBy { Triple(it.number, it.startTime, it.subject) }
                     .map { (_, groupLessons) ->
                         val first = groupLessons.first()
+                        val state = when {
+                            groupLessons.any { it.state == LessonStateDto.CHANGED } -> LessonStateDto.CHANGED
+                            groupLessons.all { it.state == LessonStateDto.REMOVED } -> LessonStateDto.REMOVED
+                            else -> first.state
+                        }
                         first.copy(
-                            otUnits = groupLessons.flatMap { it.otUnits }.distinct()
+                            state = state,
+                            otUnits = groupLessons.flatMap { it.otUnits }.distinctBy { it.group }
                         )
                     }
                     .sortedWith(compareBy({ it.startTime }, { it.number }))
