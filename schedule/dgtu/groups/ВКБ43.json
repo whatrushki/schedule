@@ -1,17 +1,34 @@
 [
     {
-        "date": "2026-09-01",
+        "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-01",
+                "date": "2026-09-28",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Теория кодирования, сжатия и восстановления информации",
+                "otUnits": [
+                    {
+                        "teacher": "Молодцова А. И.",
+                        "group": "ВКБ43",
+                        "room": "398",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "лаб Теоретико-числовые методы в криптографии",
+                "subject": "лаб Методы и средства криптографической защиты информации",
                 "otUnits": [
                     {
-                        "teacher": "Артамонова Е. А.",
+                        "teacher": "Молодцова А. И.",
                         "group": "ВКБ43",
                         "room": "333",
                         "additional": "1"
@@ -21,71 +38,14 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-01",
+                "date": "2026-09-28",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лек Основы построения защищенных баз данных",
+                "subject": "лек Основы построения защищенных компьютерных сетей",
                 "otUnits": [
                     {
-                        "teacher": "Скляров А. В.",
-                        "group": "ВКБ43",
-                        "room": "115",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-01",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Теория кодирования, сжатия и восстановления информации",
-                "otUnits": [
-                    {
-                        "teacher": "Егорова Р. В.",
-                        "group": "ВКБ43",
-                        "room": "353",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-02",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Методы и средства криптографической защиты информации",
-                "otUnits": [
-                    {
-                        "teacher": "Сафарьян О. А.",
-                        "group": "ВКБ43",
-                        "room": "238",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-02",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Надежность и безопасность программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "Савельев В. А.",
+                        "teacher": "Решетникова И. В.",
                         "group": "ВКБ43",
                         "room": "283",
                         "additional": "1"
@@ -95,189 +55,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-02",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Надежность и безопасность программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "Серпокрылов  Н. С.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-03",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-03",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-03",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-03",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-03",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-03",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-03",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-04",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-04",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Основы построения защищенных компьютерных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Решетникова И. В.",
-                        "group": "ВКБ43",
-                        "room": "302",
-                        "additional": "8"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-04",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Защита в операционных системах",
-                "otUnits": [
-                    {
-                        "teacher": "Скляров А. В.",
-                        "group": "ВКБ43",
-                        "room": "208",
-                        "additional": "8"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-04",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Теория кодирования, сжатия и восстановления информации",
-                "otUnits": [
-                    {
-                        "teacher": "Молодцова А. И.",
-                        "group": "ВКБ43",
-                        "room": "448",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-04",
+                "date": "2026-09-28",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -286,7 +64,7 @@
                     {
                         "teacher": "Скляров А. В.",
                         "group": "ВКБ43",
-                        "room": "447",
+                        "room": "499",
                         "additional": "1"
                     }
                 ],
@@ -294,73 +72,16 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-04",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лаб Методы и средства криптографической защиты информации",
-                "otUnits": [
-                    {
-                        "teacher": "Молодцова А. И.",
-                        "group": "ВКБ43",
-                        "room": "447",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-05",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-05",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Теоретико-числовые методы в криптографии",
-                "otUnits": [
-                    {
-                        "teacher": "Артамонова Е. А.",
-                        "group": "ВКБ43",
-                        "room": "447",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-05",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
+                "date": "2026-09-28",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
                 "subject": "лаб Основы построения защищенных баз данных",
                 "otUnits": [
                     {
                         "teacher": "Скляров А. В.",
                         "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-05",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Теория кодирования, сжатия и восстановления информации",
-                "otUnits": [
-                    {
-                        "teacher": "Молодцова А. И.",
-                        "group": "ВКБ43",
-                        "room": "290",
+                        "room": "499",
                         "additional": "1"
                     }
                 ],
@@ -370,128 +91,14 @@
         ]
     },
     {
-        "date": "2026-09-07",
+        "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-07",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Методы и средства криптографической защиты информации",
-                "otUnits": [
-                    {
-                        "teacher": "Молодцова А. И.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-07",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Надежность и безопасность программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "Молодцова А. И.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-08",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-08",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Теоретико-числовые методы в криптографии",
-                "otUnits": [
-                    {
-                        "teacher": "Артамонова Е. А.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-09",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-09",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Методы и средства криптографической защиты информации",
-                "otUnits": [
-                    {
-                        "teacher": "Сафарьян О. А.",
-                        "group": "ВКБ43",
-                        "room": "305",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-09",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Надежность и безопасность программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "Савельев В. А.",
-                        "group": "ВКБ43",
-                        "room": "223",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-09",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Надежность и безопасность программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "Серпокрылов  Н. С.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-09",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
+                "date": "2026-09-29",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
                 "subject": "лаб Основы построения защищенных компьютерных сетей",
                 "otUnits": [
                     {
@@ -503,636 +110,9 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-10",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-10",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             },
             {
-                "date": "2026-09-10",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-10",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-10",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-10",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-10",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-11",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-11",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Основы построения защищенных компьютерных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Решетникова И. В.",
-                        "group": "ВКБ43",
-                        "room": "302",
-                        "additional": "8"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-11",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Защита в операционных системах",
-                "otUnits": [
-                    {
-                        "teacher": "Скляров А. В.",
-                        "group": "ВКБ43",
-                        "room": "223",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-12",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-12",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Основы построения защищенных баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "Скляров А. В.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-12",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Защита в операционных системах",
-                "otUnits": [
-                    {
-                        "teacher": "Скляров А. В.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-12",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Теория кодирования, сжатия и восстановления информации",
-                "otUnits": [
-                    {
-                        "teacher": "Егорова Р. В.",
-                        "group": "ВКБ43",
-                        "room": "384",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-12",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Основы построения защищенных баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "Скляров А. В.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-14",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-14",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Методы и средства криптографической защиты информации",
-                "otUnits": [
-                    {
-                        "teacher": "Молодцова А. И.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-14",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Надежность и безопасность программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "Молодцова А. И.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-15",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-15",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Теоретико-числовые методы в криптографии",
-                "otUnits": [
-                    {
-                        "teacher": "Артамонова Е. А.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-16",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-16",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Методы и средства криптографической защиты информации",
-                "otUnits": [
-                    {
-                        "teacher": "Сафарьян О. А.",
-                        "group": "ВКБ43",
-                        "room": "305",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-16",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Надежность и безопасность программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "Савельев В. А.",
-                        "group": "ВКБ43",
-                        "room": "223",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-16",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Надежность и безопасность программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "Серпокрылов  Н. С.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-16",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "лаб Основы построения защищенных компьютерных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Решетникова И. В.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-17",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-17",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-17",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-17",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-17",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-17",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-17",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-18",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-18",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Основы построения защищенных компьютерных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Решетникова И. В.",
-                        "group": "ВКБ43",
-                        "room": "302",
-                        "additional": "8"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Защита в операционных системах",
-                "otUnits": [
-                    {
-                        "teacher": "Скляров А. В.",
-                        "group": "ВКБ43",
-                        "room": "223",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-19",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Основы построения защищенных баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "Скляров А. В.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Защита в операционных системах",
-                "otUnits": [
-                    {
-                        "teacher": "Скляров А. В.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Теория кодирования, сжатия и восстановления информации",
-                "otUnits": [
-                    {
-                        "teacher": "Егорова Р. В.",
-                        "group": "ВКБ43",
-                        "room": "384",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Основы построения защищенных баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "Скляров А. В.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Надежность и безопасность программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "Молодцова А. И.",
-                        "group": "ВКБ43",
-                        "room": "498",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Методы и средства криптографической защиты информации",
-                "otUnits": [
-                    {
-                        "teacher": "Молодцова А. И.",
-                        "group": "ВКБ43",
-                        "room": "333",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
+                "date": "2026-09-29",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -1147,110 +127,36 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             },
             {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
+                "date": "2026-09-29",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
+                "subject": "лаб Теория кодирования, сжатия и восстановления информации",
                 "otUnits": [
                     {
-                        "teacher": "Полковник9",
+                        "teacher": "Егорова Р. В.",
                         "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
+                        "room": "499",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-24",
+                "date": "2026-09-29",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
+                "subject": "лаб Теория кодирования, сжатия и восстановления информации",
                 "otUnits": [
                     {
-                        "teacher": "Полковник9",
+                        "teacher": "Егорова Р. В.",
                         "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
+                        "room": "499",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
@@ -1259,88 +165,14 @@
         ]
     },
     {
-        "date": "2026-09-25",
+        "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-25",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Основы построения защищенных компьютерных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Решетникова И. В.",
-                        "group": "ВКБ43",
-                        "room": "302",
-                        "additional": "8"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Теоретико-числовые методы в криптографии",
-                "otUnits": [
-                    {
-                        "teacher": "Артамонова Е. А.",
-                        "group": "ВКБ43",
-                        "room": "105",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
+                "date": "2026-09-30",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лек Основы построения защищенных баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "Скляров А. В.",
-                        "group": "ВКБ43",
-                        "room": "423",
-                        "additional": "8"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Теория кодирования, сжатия и восстановления информации",
-                "otUnits": [
-                    {
-                        "teacher": "Молодцова А. И.",
-                        "group": "ВКБ43",
-                        "room": "213",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
                 "subject": "пр Надежность и безопасность программного обеспечения",
                 "otUnits": [
                     {
@@ -1354,33 +186,16 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Надежность и безопасность программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "Молодцова А. И.",
-                        "group": "ВКБ43",
-                        "room": "193а",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
+                "date": "2026-09-30",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
                 "subject": "лек Теория кодирования, сжатия и восстановления информации",
                 "otUnits": [
                     {
                         "teacher": "Егорова Р. В.",
                         "group": "ВКБ43",
-                        "room": "384",
+                        "room": "305",
                         "additional": "1"
                     }
                 ],
@@ -1388,16 +203,16 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-26",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Основы построения защищенных баз данных",
+                "date": "2026-09-30",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Надежность и безопасность программного обеспечения",
                 "otUnits": [
                     {
-                        "teacher": "Скляров А. В.",
+                        "teacher": "Савельев В. А.",
                         "group": "ВКБ43",
-                        "room": "470",
+                        "room": "223",
                         "additional": "1"
                     }
                 ],
@@ -1515,6 +330,291 @@
         ]
     },
     {
+        "date": "2026-10-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-02",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Теоретико-числовые методы в криптографии",
+                "otUnits": [
+                    {
+                        "teacher": "Артамонова Е. А.",
+                        "group": "ВКБ43",
+                        "room": "105",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Основы построения защищенных баз данных",
+                "otUnits": [
+                    {
+                        "teacher": "Скляров А. В.",
+                        "group": "ВКБ43",
+                        "room": "421",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Теория кодирования, сжатия и восстановления информации",
+                "otUnits": [
+                    {
+                        "teacher": "Егорова Р. В.",
+                        "group": "ВКБ43",
+                        "room": "374",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Защита в операционных системах",
+                "otUnits": [
+                    {
+                        "teacher": "Скляров А. В.",
+                        "group": "ВКБ43",
+                        "room": "035/1",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-03",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Надежность и безопасность программного обеспечения",
+                "otUnits": [
+                    {
+                        "teacher": "Молодцова А. И.",
+                        "group": "ВКБ43",
+                        "room": "499",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Методы и средства криптографической защиты информации",
+                "otUnits": [
+                    {
+                        "teacher": "Сафарьян О. А.",
+                        "group": "ВКБ43",
+                        "room": "353",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-05",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Теория кодирования, сжатия и восстановления информации",
+                "otUnits": [
+                    {
+                        "teacher": "Молодцова А. И.",
+                        "group": "ВКБ43",
+                        "room": "105",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Методы и средства криптографической защиты информации",
+                "otUnits": [
+                    {
+                        "teacher": "Молодцова А. И.",
+                        "group": "ВКБ43",
+                        "room": "362",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-06",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Теория кодирования, сжатия и восстановления информации",
+                "otUnits": [
+                    {
+                        "teacher": "Егорова Р. В.",
+                        "group": "ВКБ43",
+                        "room": "333",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-06",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Теоретико-числовые методы в криптографии",
+                "otUnits": [
+                    {
+                        "teacher": "Артамонова Е. А.",
+                        "group": "ВКБ43",
+                        "room": "498",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-06",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Надежность и безопасность программного обеспечения",
+                "otUnits": [
+                    {
+                        "teacher": "Батурин А. С.",
+                        "group": "ВКБ43",
+                        "room": "489",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-07",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Теория кодирования, сжатия и восстановления информации",
+                "otUnits": [
+                    {
+                        "teacher": "Егорова Р. В.",
+                        "group": "ВКБ43",
+                        "room": "238",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Надежность и безопасность программного обеспечения",
+                "otUnits": [
+                    {
+                        "teacher": "Савельев В. А.",
+                        "group": "ВКБ43",
+                        "room": "223",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Основы построения защищенных баз данных",
+                "otUnits": [
+                    {
+                        "teacher": "Скляров А. В.",
+                        "group": "ВКБ43",
+                        "room": "115",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "лаб Основы построения защищенных компьютерных сетей",
+                "otUnits": [
+                    {
+                        "teacher": "Решетникова И. В.",
+                        "group": "ВКБ43",
+                        "room": "333",
+                        "additional": "1"
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-08",
         "scheduleType": "COMMON",
         "lessons": [
@@ -1623,106 +723,72 @@
         ]
     },
     {
-        "date": "2026-10-15",
+        "date": "2026-10-09",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-15",
+                "date": "2026-10-09",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
+                "subject": "лек Основы построения защищенных баз данных",
                 "otUnits": [
                     {
-                        "teacher": "Полковник9",
+                        "teacher": "Скляров А. В.",
                         "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
+                        "room": "035/1",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-15",
+                "date": "2026-10-09",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
+                "subject": "лек Теоретико-числовые методы в криптографии",
                 "otUnits": [
                     {
-                        "teacher": "Полковник9",
+                        "teacher": "Артамонова Е. А.",
                         "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
+                        "room": "105",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-15",
+                "date": "2026-10-09",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
+                "subject": "лек Основы построения защищенных компьютерных сетей",
                 "otUnits": [
                     {
-                        "teacher": "Полковник9",
+                        "teacher": "Решетникова И. В.",
                         "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
+                        "room": "492",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-15",
+                "date": "2026-10-09",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
+                "subject": "пр Теория кодирования, сжатия и восстановления информации",
                 "otUnits": [
                     {
-                        "teacher": "Полковник9",
+                        "teacher": "Молодцова А. И.",
                         "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-15",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-15",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
+                        "room": "213",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
@@ -1731,1078 +797,89 @@
         ]
     },
     {
-        "date": "2026-10-22",
+        "date": "2026-10-10",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-22",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-22",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-22",
+                "date": "2026-10-10",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
+                "subject": "лек Методы и средства криптографической защиты информации",
                 "otUnits": [
                     {
-                        "teacher": "Полковник9",
+                        "teacher": "Сафарьян О. А.",
                         "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
+                        "room": "384",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-22",
+                "date": "2026-10-10",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
+                "subject": "лаб Основы построения защищенных баз данных",
                 "otUnits": [
                     {
-                        "teacher": "Полковник9",
+                        "teacher": "Скляров А. В.",
                         "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
+                        "room": "333",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-22",
+                "date": "2026-10-10",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
+                "subject": "лаб Защита в операционных системах",
                 "otUnits": [
                     {
-                        "teacher": "Полковник9",
+                        "teacher": "Скляров А. В.",
                         "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
+                        "room": "499",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-22",
+                "date": "2026-10-10",
                 "number": 6,
                 "startTime": "17:45",
                 "endTime": "19:20",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
+                "subject": "лаб Защита в операционных системах",
                 "otUnits": [
                     {
-                        "teacher": "Полковник9",
+                        "teacher": "Скляров А. В.",
                         "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-29",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-29",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
+                        "room": "458",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-29",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
+                "date": "2026-10-10",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "лаб Надежность и безопасность программного обеспечения",
                 "otUnits": [
                     {
-                        "teacher": "Полковник9",
+                        "teacher": "Молодцова А. И.",
                         "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-29",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-29",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-29",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-29",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-05",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-05",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-05",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-05",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-05",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-05",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-05",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-12",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-12",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-12",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-12",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-12",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-12",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-12",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-19",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-19",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-19",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-19",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-19",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-19",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-26",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-26",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-26",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-26",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-26",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-26",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-03",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-03",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-03",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-03",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-03",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-03",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-03",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-10",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-10",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-10",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-10",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-10",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-10",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-10",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-17",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-17",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-17",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-17",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-17",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-17",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-17",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-24",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-24",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-24",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-24",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-24",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-24",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Военная кафедра (ЦСП оф.запаса чт)",
-                "otUnits": [
-                    {
-                        "teacher": "Полковник9",
-                        "group": "ВКБ43",
-                        "room": "Шаповалова9",
-                        "additional": "Главный"
+                        "room": "333",
+                        "additional": "1"
                     }
                 ],
                 "type": "COMMON",
