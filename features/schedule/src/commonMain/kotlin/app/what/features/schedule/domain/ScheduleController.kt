@@ -216,8 +216,8 @@ class ScheduleController(
                     )
                 }
                 ScheduleResponse.Empty -> copy(
-                    scheduleState = if (viewState.schedules.isNotEmpty()) RemoteState.Success else RemoteState.Empty,
-                    schedules = viewState.schedules,
+                    scheduleState = RemoteState.Empty,
+                    schedules = emptyList(),
                     isOffline = false
                 )
             }

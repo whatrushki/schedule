@@ -47,7 +47,7 @@ class RGUPSTuapseNewsClient(
                 NewListItemDto(
                     id = id,
                     title = title,
-                    description = desc,
+                    description = "",
                     date = date,
                     imageUrl = imageUrl,
                     sourceUrl = if (href.startsWith("http")) href else "$baseUrl$href"
@@ -76,7 +76,8 @@ class RGUPSTuapseNewsClient(
         val bannerSrc = doc.selectFirst(".item-image img, figure.item-image img, figure img")?.attr("src")?.trim()?.ifEmpty { null }
         val bannerUrl = bannerSrc?.let { if (it.startsWith("http")) it else "$baseUrl$it" }
 
-        val bodyElem = doc.selectFirst(".com-content-article__body, .item-page, article")
+        val bodyElem = doc.selectFirst(".com-content-article__body")
+            ?: doc.selectFirst(".item-page, article")
 
         val dateElem = doc.selectFirst(".published, time, dd.published")
         val date = parseDate(dateElem?.text().orEmpty())
@@ -85,23 +86,47 @@ class RGUPSTuapseNewsClient(
         bannerUrl?.let { allImages.add(it) }
 
         val blocks = mutableListOf<NewContentBlockDto>()
+
+        fun processP(p: com.fleeksoft.ksoup.nodes.Element) {
+            val imgs = p.select("img")
+            for (img in imgs) {
+                val src = img.attr("src").trim()
+                if (src.isNotEmpty()) {
+                    val fullSrc = if (src.startsWith("http")) src else "$baseUrl$src"
+                    blocks.add(NewContentBlockDto.Image(fullSrc))
+                    allImages.add(fullSrc)
+                }
+            }
+            val textOnly = p.clone()
+            textOnly.select("img").remove()
+            val text = textOnly.text().trim()
+            if (text.isNotEmpty()) {
+                val innerHtml = textOnly.html().trim()
+                blocks.add(NewContentBlockDto.Text(innerHtml))
+            }
+        }
+
         bodyElem?.children()?.forEach { child ->
             when (child.tagName().lowercase()) {
-                "p" -> {
-                    val imgs = child.select("img")
-                    for (img in imgs) {
-                        val src = img.attr("src").trim()
-                        if (src.isNotEmpty()) {
-                            val fullSrc = if (src.startsWith("http")) src else "$baseUrl$src"
-                            blocks.add(NewContentBlockDto.Image(fullSrc))
-                            allImages.add(fullSrc)
+                "p" -> processP(child)
+                "div" -> {
+                    val nestedPs = child.select("p")
+                    if (nestedPs.isNotEmpty()) {
+                        nestedPs.forEach { processP(it) }
+                    } else {
+                        val imgs = child.select("img")
+                        for (img in imgs) {
+                            val src = img.attr("src").trim()
+                            if (src.isNotEmpty()) {
+                                val fullSrc = if (src.startsWith("http")) src else "$baseUrl$src"
+                                blocks.add(NewContentBlockDto.Image(fullSrc))
+                                allImages.add(fullSrc)
+                            }
                         }
-                    }
-                    val textOnly = child.clone()
-                    textOnly.select("img").remove()
-                    val pText = textOnly.text().trim()
-                    if (pText.isNotEmpty()) {
-                        blocks.add(NewContentBlockDto.Text(pText))
+                        val text = child.text().trim()
+                        if (text.isNotEmpty()) {
+                            blocks.add(NewContentBlockDto.Text(child.html().trim()))
+                        }
                     }
                 }
                 "img" -> {
@@ -134,7 +159,6 @@ class RGUPSTuapseNewsClient(
         }
 
         val fullText = blocks.filterIsInstance<NewContentBlockDto.Text>().joinToString("\n\n") { it.html }
-            .ifEmpty { bodyElem?.select("p")?.joinToString("\n\n") { it.text().trim() } ?: "" }
 
         if (blocks.isEmpty() && fullText.isNotEmpty()) {
             blocks.add(NewContentBlockDto.Text(fullText))
@@ -144,7 +168,7 @@ class RGUPSTuapseNewsClient(
             id = id,
             title = title,
             fullText = fullText,
-            descriptionHtml = bodyElem?.html(),
+            descriptionHtml = null,
             date = date,
             bannerUrl = bannerUrl ?: allImages.firstOrNull(),
             images = allImages.distinct(),

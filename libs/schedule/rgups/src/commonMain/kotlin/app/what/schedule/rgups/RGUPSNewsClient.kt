@@ -51,7 +51,7 @@ class RGUPSNewsClient(
                 NewListItemDto(
                     id = href,
                     title = desc,
-                    description = desc,
+                    description = "",
                     date = date,
                     imageUrl = imageUrl,
                     sourceUrl = if (href.startsWith("http")) href else "$baseUrl$href"
@@ -71,7 +71,8 @@ class RGUPSNewsClient(
         val title = doc.selectFirst("h1")?.text()?.trim()
             ?: doc.selectFirst("h2, .page-header h2")?.text()?.trim()
             ?: ""
-        val bodyElem = doc.selectFirst("div.text, .container .row .col-md-12, .content, .news-detail, article, main")
+        val bodyElem = doc.selectFirst("div.text, .text")
+            ?: doc.selectFirst(".news-detail, article, main")
 
         val dateStr = doc.selectFirst("time.publication-time, time, .date")?.text()?.trim()
             ?: Regex("""\b(\d{2}\.\d{2}\.\d{4})\b""").find(doc.text())?.value.orEmpty()
@@ -80,23 +81,45 @@ class RGUPSNewsClient(
         val allImages = mutableListOf<String>()
         val blocks = mutableListOf<NewContentBlockDto>()
 
+        fun processP(p: com.fleeksoft.ksoup.nodes.Element) {
+            val imgs = p.select("img")
+            for (img in imgs) {
+                val src = img.attr("src").trim()
+                if (src.isNotEmpty()) {
+                    val fullSrc = if (src.startsWith("http")) src else "$baseUrl$src"
+                    blocks.add(NewContentBlockDto.Image(fullSrc))
+                    allImages.add(fullSrc)
+                }
+            }
+            val textOnly = p.clone()
+            textOnly.select("img").remove()
+            val pText = textOnly.text().trim()
+            if (pText.isNotEmpty()) {
+                blocks.add(NewContentBlockDto.Text(textOnly.html().trim()))
+            }
+        }
+
         bodyElem?.children()?.forEach { child ->
             when (child.tagName().lowercase()) {
-                "p" -> {
-                    val imgs = child.select("img")
-                    for (img in imgs) {
-                        val src = img.attr("src").trim()
-                        if (src.isNotEmpty()) {
-                            val fullSrc = if (src.startsWith("http")) src else "$baseUrl$src"
-                            blocks.add(NewContentBlockDto.Image(fullSrc))
-                            allImages.add(fullSrc)
+                "p" -> processP(child)
+                "div" -> {
+                    val nestedPs = child.select("p")
+                    if (nestedPs.isNotEmpty()) {
+                        nestedPs.forEach { processP(it) }
+                    } else {
+                        val imgs = child.select("img")
+                        for (img in imgs) {
+                            val src = img.attr("src").trim()
+                            if (src.isNotEmpty()) {
+                                val fullSrc = if (src.startsWith("http")) src else "$baseUrl$src"
+                                blocks.add(NewContentBlockDto.Image(fullSrc))
+                                allImages.add(fullSrc)
+                            }
                         }
-                    }
-                    val textOnly = child.clone()
-                    textOnly.select("img").remove()
-                    val pText = textOnly.text().trim()
-                    if (pText.isNotEmpty()) {
-                        blocks.add(NewContentBlockDto.Text(pText))
+                        val text = child.text().trim()
+                        if (text.isNotEmpty()) {
+                            blocks.add(NewContentBlockDto.Text(child.html().trim()))
+                        }
                     }
                 }
                 "img" -> {
@@ -109,7 +132,9 @@ class RGUPSNewsClient(
                 }
                 "h2", "h3", "h4" -> {
                     val text = child.text().trim()
-                    if (text.isNotEmpty()) blocks.add(NewContentBlockDto.Subtitle(text))
+                    if (text.isNotEmpty() && !text.equals(title, ignoreCase = true)) {
+                        blocks.add(NewContentBlockDto.Subtitle(text))
+                    }
                 }
                 "ul" -> {
                     val items = child.select("li").map { it.text().trim() }.filter { it.isNotEmpty() }
@@ -119,11 +144,14 @@ class RGUPSNewsClient(
                     val items = child.select("li").map { it.text().trim() }.filter { it.isNotEmpty() }
                     if (items.isNotEmpty()) blocks.add(NewContentBlockDto.SortedList(items))
                 }
+                "blockquote" -> {
+                    val text = child.text().trim()
+                    if (text.isNotEmpty()) blocks.add(NewContentBlockDto.Info(text))
+                }
             }
         }
 
         val fullText = blocks.filterIsInstance<NewContentBlockDto.Text>().joinToString("\n\n") { it.html }
-            .ifEmpty { bodyElem?.select("p")?.joinToString("\n\n") { it.text().trim() } ?: "" }
 
         if (blocks.isEmpty() && fullText.isNotEmpty()) {
             blocks.add(NewContentBlockDto.Text(fullText))
@@ -133,10 +161,10 @@ class RGUPSNewsClient(
             id = id,
             title = title,
             fullText = fullText,
-            descriptionHtml = bodyElem?.html(),
+            descriptionHtml = null,
             date = date,
             bannerUrl = allImages.firstOrNull(),
-            images = allImages,
+            images = allImages.distinct(),
             sourceUrl = url,
             contentBlocks = blocks
         )

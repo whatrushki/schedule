@@ -152,7 +152,7 @@ class RGUPSTuapseScheduleClient(
 
             val teacherName = data.teachers[teacherId.toString()].orEmpty()
             val groupName = data.groups.firstOrNull { it.id == groupId }?.n.orEmpty()
-            val room = if (audIdx >= 0) data.audiences.getOrNull(audIdx).orEmpty() else ""
+            val room = "-"
 
             val otUnit = OneTimeUnitDto(
                 teacher = teacherName,

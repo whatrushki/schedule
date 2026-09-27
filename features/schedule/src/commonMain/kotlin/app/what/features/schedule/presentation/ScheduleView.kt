@@ -331,10 +331,18 @@ fun ScheduleView(
                     }
                 )
                 
-                RemoteState.Success if state.value.schedules.isEmpty() -> Fallback(
-                    text = "Тут ничего нет, попробуйте другую группу :3",
+                RemoteState.Empty -> Fallback(
+                    text = "На эту группу расписания нет",
                     modifier = Modifier.fillMaxSize(),
-                    action = "Выбрать" to {
+                    action = "Выбрать другую" to {
+                        sheet.open(content = scheduleSearchSheet, full = true)
+                    }
+                )
+                
+                RemoteState.Success if state.value.schedules.isEmpty() || state.value.schedules.all { it.lessons.isEmpty() } -> Fallback(
+                    text = "На эту группу расписания нет",
+                    modifier = Modifier.fillMaxSize(),
+                    action = "Выбрать другую" to {
                         sheet.open(content = scheduleSearchSheet, full = true)
                     }
                 )
