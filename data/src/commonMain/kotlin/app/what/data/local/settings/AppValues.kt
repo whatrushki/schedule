@@ -102,6 +102,11 @@ class AppValues(
         "Анализ пользования", "Разрешите собирать анонимную статистику пользования"
     )
 
+    val showCancelledLessons = createValue(
+        "show_cancelled_lessons", true, Boolean.serializer(),
+        "Отображать отмененные пары", "Показывать отмененные занятия в расписании"
+    )
+
     val enableReplacementNotifications = createValue(
         "enable_replacement_notifications", false, Boolean.serializer(),
         "Уведомления о заменах", "Проверять изменения в расписании в фоне"

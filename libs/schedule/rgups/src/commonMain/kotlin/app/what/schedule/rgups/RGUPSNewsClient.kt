@@ -66,6 +66,10 @@ class RGUPSNewsClient(
     override suspend fun getNewDetail(id: String): NewDetailDto {
         val url = if (id.startsWith("http")) id else "$baseUrl$id"
         val html = client.get(url).bodyAsText()
+        return parseNewsDetail(html, url, id)
+    }
+
+    fun parseNewsDetail(html: String, url: String, id: String = url): NewDetailDto {
         val doc = Ksoup.parse(html)
 
         val title = doc.selectFirst("h1")?.text()?.trim()
@@ -93,9 +97,9 @@ class RGUPSNewsClient(
             }
             val textOnly = p.clone()
             textOnly.select("img").remove()
-            val pText = textOnly.text().trim()
-            if (pText.isNotEmpty()) {
-                blocks.add(NewContentBlockDto.Text(textOnly.html().trim()))
+            val pHtml = textOnly.html().trim()
+            if (pHtml.isNotEmpty()) {
+                blocks.addAll(smartParseTextToBlocks(pHtml))
             }
         }
 
@@ -116,9 +120,11 @@ class RGUPSNewsClient(
                                 allImages.add(fullSrc)
                             }
                         }
-                        val text = child.text().trim()
-                        if (text.isNotEmpty()) {
-                            blocks.add(NewContentBlockDto.Text(child.html().trim()))
+                        val textOnly = child.clone()
+                        textOnly.select("img").remove()
+                        val divHtml = textOnly.html().trim()
+                        if (divHtml.isNotEmpty()) {
+                            blocks.addAll(smartParseTextToBlocks(divHtml))
                         }
                     }
                 }
@@ -182,6 +188,122 @@ class RGUPSNewsClient(
             sourceUrl = url,
             contentBlocks = blocks
         )
+    }
+
+    private fun smartParseTextToBlocks(rawHtml: String): List<NewContentBlockDto> {
+        val cleanHtml = rawHtml.trim()
+        if (cleanHtml.isEmpty()) return emptyList()
+
+        // Normalize breaks: double breaks -> \n\n, single break -> \n
+        val normalized = cleanHtml
+            .replace(Regex("""(<br\s*/?>\s*){2,}""", RegexOption.IGNORE_CASE), "\n\n")
+            .replace(Regex("""<br\s*/?>""", RegexOption.IGNORE_CASE), "\n")
+            .replace("\r\n", "\n")
+            .replace("\r", "\n")
+
+        val rawLines = normalized.split("\n").map { it.trim() }
+        val result = mutableListOf<NewContentBlockDto>()
+
+        var currentParagraph = StringBuilder()
+        val currentUnsortedList = mutableListOf<String>()
+        val currentSortedList = mutableListOf<String>()
+
+        fun flushList() {
+            if (currentUnsortedList.isNotEmpty()) {
+                result.add(NewContentBlockDto.UnsortedList(currentUnsortedList.toList()))
+                currentUnsortedList.clear()
+            }
+            if (currentSortedList.isNotEmpty()) {
+                result.add(NewContentBlockDto.SortedList(currentSortedList.toList()))
+                currentSortedList.clear()
+            }
+        }
+
+        fun flushParagraph() {
+            val text = currentParagraph.toString().trim()
+            if (text.isNotEmpty()) {
+                val balanced = Ksoup.parseBodyFragment(text).body().html().trim()
+                if (balanced.isNotEmpty()) {
+                    result.add(NewContentBlockDto.Text(balanced))
+                }
+            }
+            currentParagraph = StringBuilder()
+        }
+
+        val bulletRegex = Regex("""^[-—–•*]\s*(.+)""")
+        val numberRegex = Regex("""^(\d+)[\.)]\s*(.+)""")
+
+        for (line in rawLines) {
+            if (line.isEmpty()) {
+                flushParagraph()
+                flushList()
+                continue
+            }
+
+            val bulletMatch = bulletRegex.find(line)
+            val numberMatch = numberRegex.find(line)
+
+            if (bulletMatch != null) {
+                flushParagraph()
+                if (currentSortedList.isNotEmpty()) flushList()
+                val itemText = bulletMatch.groups[1]?.value?.trim().orEmpty()
+                if (itemText.isNotEmpty()) {
+                    currentUnsortedList.add(Ksoup.parseBodyFragment(itemText).body().html().trim())
+                }
+                continue
+            }
+
+            if (numberMatch != null) {
+                flushParagraph()
+                if (currentUnsortedList.isNotEmpty()) flushList()
+                val itemText = numberMatch.groups[2]?.value?.trim().orEmpty()
+                if (itemText.isNotEmpty()) {
+                    currentSortedList.add(Ksoup.parseBodyFragment(itemText).body().html().trim())
+                }
+                continue
+            }
+
+            // Normal text line
+            flushList()
+
+            if (currentParagraph.isEmpty()) {
+                currentParagraph.append(line)
+            } else {
+                val prevText = currentParagraph.toString().trim()
+                val prevClean = Ksoup.parseBodyFragment(prevText).body().text().trim()
+                val currClean = Ksoup.parseBodyFragment(line).body().text().trim()
+
+                val prevEndsWithSentencePunct = prevClean.isNotEmpty() &&
+                    (prevClean.endsWith(".") || prevClean.endsWith("!") || prevClean.endsWith("?") ||
+                     prevClean.endsWith(":") || prevClean.endsWith("»") || prevClean.endsWith("\"") ||
+                     prevClean.endsWith(";"))
+
+                val currStartsWithUpper = currClean.isNotEmpty() &&
+                    (currClean[0].isUpperCase() || currClean.startsWith("«") || currClean.startsWith("\""))
+
+                val currStartsWithLower = currClean.isNotEmpty() && currClean[0].isLowerCase()
+
+                if (prevEndsWithSentencePunct && currStartsWithUpper) {
+                    flushParagraph()
+                    currentParagraph.append(line)
+                } else if (currStartsWithLower) {
+                    currentParagraph.append(" ").append(line)
+                } else if (prevClean.endsWith(":")) {
+                    flushParagraph()
+                    currentParagraph.append(line)
+                } else if (currStartsWithUpper && prevClean.length > 50) {
+                    flushParagraph()
+                    currentParagraph.append(line)
+                } else {
+                    currentParagraph.append(" ").append(line)
+                }
+            }
+        }
+
+        flushParagraph()
+        flushList()
+
+        return result
     }
 
     private fun parseDate(str: String): LocalDate {

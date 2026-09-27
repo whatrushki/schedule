@@ -119,6 +119,14 @@ class ScheduleWidget : GlanceAppWidget(), KoinComponent {
                 )
             }
         }
+        val showCancelled = settings.showCancelledLessons.get() ?: true
+
+        fun filterSchedules(list: List<DaySchedule>): List<DaySchedule> {
+            if (showCancelled) return list
+            return list.map { day ->
+                day.copy(lessons = day.lessons.filter { it.state != LessonState.REMOVED })
+            }
+        }
 
         provideContent {
             val localContext = LocalContext.current
@@ -142,7 +150,7 @@ class ScheduleWidget : GlanceAppWidget(), KoinComponent {
                 val currentDayIndex = currentState(intPreferencesKey(DAY_INDEX_KEY)) ?: 0
                 when (schedule) {
                     is ScheduleResponse.Available -> WidgetContent(
-                        schedule.schedules,
+                        filterSchedules(schedule.schedules),
                         currentDayIndex
                     )
 
@@ -150,7 +158,7 @@ class ScheduleWidget : GlanceAppWidget(), KoinComponent {
                         // Try to show cached schedules as fallback
                         val cached = schedule.cachedSchedules
                         if (!cached.isNullOrEmpty()) {
-                            WidgetContent(cached, currentDayIndex)
+                            WidgetContent(filterSchedules(cached), currentDayIndex)
                         } else {
                             WidgetErrorContent(
                                 message = schedule.exception.message ?: "Неизвестная ошибка"

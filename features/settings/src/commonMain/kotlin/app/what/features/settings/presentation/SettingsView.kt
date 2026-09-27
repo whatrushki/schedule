@@ -229,6 +229,9 @@ fun getSettingsList(app: AppValues, utils: AppUtils): List<UIComponent> {
                     app.lastSearch.set(null)
                     utils.restart()
                 },
+                app.showCancelledLessons.asSwitch {
+                    Analytics.logSettingChanged(app.showCancelledLessons.key, it.toString())
+                },
                 app.isAnalyticsEnabled.asSwitch {
                     Analytics.setAnalyticsCollectionEnabled(it)
                 },

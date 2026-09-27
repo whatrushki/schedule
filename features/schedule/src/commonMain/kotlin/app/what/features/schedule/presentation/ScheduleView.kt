@@ -58,8 +58,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.what.domain.models.DaySchedule
 import app.what.domain.models.Lesson
+import app.what.domain.models.LessonState
 import app.what.domain.models.LessonsScheduleType
 import app.what.domain.models.ScheduleSearch
+import app.what.schedule.data.local.settings.rememberAppValues
 import app.what.foundation.data.RemoteState
 import app.what.foundation.ui.AppPullToRefresh
 import app.what.foundation.ui.Gap
@@ -114,6 +116,8 @@ fun ScheduleView(
     ) {
         val sheet = rememberSheetController()
         val dialog = rememberDialogController()
+        val appValues = rememberAppValues()
+        val showCancelledLessons by appValues.showCancelledLessons.collect()
         val scheduleExportSheet = remember(state.value.schedules) {
             @Composable { ScheduleExportPane(state.value.selectedSearch, state.value.schedules) }
         }
@@ -364,7 +368,11 @@ fun ScheduleView(
                             .fillMaxHeight()
                     ) {
                         val date = state.value.schedules[it].date
-                        val lessons = state.value.schedules[it].lessons
+                        val rawLessons = state.value.schedules[it].lessons
+                        val lessons = remember(rawLessons, showCancelledLessons) {
+                            if (showCancelledLessons != false) rawLessons
+                            else rawLessons.filter { it.state != LessonState.REMOVED }
+                        }
                         
                         Column(
                             verticalArrangement = Arrangement.spacedBy(if (showBreaks) 4.dp else 12.dp),

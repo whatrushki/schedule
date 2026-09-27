@@ -167,27 +167,58 @@ class RGUPSScheduleClientTest {
         val monLessons = schedule[0].lessons
         assertEquals(1, monLessons.size)
         assertEquals(4, monLessons[0].number)
-        assertEquals("Управление эксплуатационной работой", monLessons[0].subject)
+        assertEquals("Управление эксплуатационной работой (практика)", monLessons[0].subject)
         assertEquals(app.what.schedule.core.models.LessonStateDto.CHANGED, monLessons[0].state)
         assertEquals("Мусиенко Н.Н.", monLessons[0].otUnits[0].teacher)
 
-        // Tuesday: 1 lesson with 2 otUnits (subgroups [1] and [2]) with state CHANGED
+        // Tuesday: 1 lesson with 2 otUnits (subgroups [1] and [2] stripped) with state CHANGED
         val tueLessons = schedule[1].lessons
         assertEquals(1, tueLessons.size)
         assertEquals(3, tueLessons[0].number)
-        assertEquals("Безопасность жизнедеятельности", tueLessons[0].subject)
+        assertEquals("Безопасность жизнедеятельности (лабораторная)", tueLessons[0].subject)
         assertEquals(app.what.schedule.core.models.LessonStateDto.CHANGED, tueLessons[0].state)
         assertEquals(2, tueLessons[0].otUnits.size)
-        assertEquals("Порческо А.А. [1]", tueLessons[0].otUnits[0].teacher)
-        assertEquals("Воробинская Л.И. [2]", tueLessons[0].otUnits[1].teacher)
+        assertEquals("Порческо А.А.", tueLessons[0].otUnits[0].teacher)
+        assertEquals("Воробинская Л.И.", tueLessons[0].otUnits[1].teacher)
 
         // Wednesday: 1 lesson with state REMOVED (cancelled)
         val wedLessons = schedule[2].lessons
         assertEquals(1, wedLessons.size)
         assertEquals(4, wedLessons[0].number)
-        assertEquals("Управление грузовой и коммерческой работой", wedLessons[0].subject)
+        assertEquals("Управление грузовой и коммерческой работой (практика)", wedLessons[0].subject)
         assertEquals(app.what.schedule.core.models.LessonStateDto.REMOVED, wedLessons[0].state)
         assertEquals("Пасечная Е.В.", wedLessons[0].otUnits[0].teacher)
+    }
+
+    @Test
+    fun testNewsSmartParagraphsAndLists() {
+        val detailHtml = """
+        <div class="news-detail">
+            <h1>Всероссийские соревнования</h1>
+            <div class="text">
+                <p>
+                    В сентябре состоялись соревнования. РГУПС достойно представили:<br>
+                    - Даниил Сапухин<br>
+                    - Савелий Шаров<br>
+                    По итогам соревнований победу одержал Даниил.<br>
+                    Поздравляем ребят с победой!
+                </p>
+            </div>
+        </div>
+        """.trimIndent()
+
+        // Dummy client since parseNewsDetail doesn't use HTTP
+        val client = RGUPSNewsClient(io.ktor.client.HttpClient())
+        val detail = client.parseNewsDetail(detailHtml, "https://www.rgups.ru/news/test/")
+        assertEquals(4, detail.contentBlocks.size)
+        assertTrue(detail.contentBlocks[0] is app.what.schedule.core.models.NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[1] is app.what.schedule.core.models.NewContentBlockDto.UnsortedList)
+        val listBlock = detail.contentBlocks[1] as app.what.schedule.core.models.NewContentBlockDto.UnsortedList
+        assertEquals(2, listBlock.items.size)
+        assertEquals("Даниил Сапухин", listBlock.items[0])
+        assertEquals("Савелий Шаров", listBlock.items[1])
+        assertTrue(detail.contentBlocks[2] is app.what.schedule.core.models.NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[3] is app.what.schedule.core.models.NewContentBlockDto.Text)
     }
 }
 

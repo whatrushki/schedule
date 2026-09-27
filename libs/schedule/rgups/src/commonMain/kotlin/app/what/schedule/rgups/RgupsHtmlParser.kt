@@ -115,7 +115,7 @@ object RgupsHtmlParser {
                 val (st, et) = parseTimeRange(tds[1].text().trim())
                 val weekLabel = tds[2].text().trim()
                 val subject = tds[3].text().trim()
-                val teacher = tds[4].text().trim()
+                val teacher = cleanTeacher(tds[4].text().trim())
                 val room = tds[5].text().trim()
 
                 val slot = ParsedSlot(
@@ -129,12 +129,12 @@ object RgupsHtmlParser {
             } else if (tds.size >= 4) {
                 val weekLabel = tds[0].text().trim()
                 val subject = tds[1].text().trim()
-                val teacher = tds[2].text().trim()
+                val teacher = cleanTeacher(tds[2].text().trim())
                 val room = tds[3].text().trim()
                 currentSlot?.rows?.add(ParsedSlotRow(isDisabled, weekLabel, subject, teacher, room))
             } else if (tds.size >= 3) {
                 val subject = tds[0].text().trim()
-                val teacher = tds[1].text().trim()
+                val teacher = cleanTeacher(tds[1].text().trim())
                 val room = tds[2].text().trim()
                 val weekLabel = currentSlot?.rows?.lastOrNull()?.weekLabel.orEmpty()
                 currentSlot?.rows?.add(ParsedSlotRow(isDisabled, weekLabel, subject, teacher, room))
@@ -245,20 +245,26 @@ object RgupsHtmlParser {
         }
     }
 
+    fun cleanTeacher(teacher: String): String {
+        return teacher.replace(Regex("""\s*\[\d+\]"""), "").trim()
+    }
+
     private fun parseSubjectAndType(raw: String): Pair<String, LessonTypeDto> {
         val regex = Regex("^(.*?)(?:\\s*\\((.*?)\\))?$")
         val match = regex.find(raw.trim())
-        val subject = match?.groups?.get(1)?.value?.trim().orEmpty()
+        val baseSubject = match?.groups?.get(1)?.value?.trim().orEmpty()
         val typeStr = match?.groups?.get(2)?.value?.trim().orEmpty()
-        val type = when {
-            typeStr.contains("ЛЕК", ignoreCase = true) -> LessonTypeDto.LECTURE
-            typeStr.contains("ПРАК", ignoreCase = true) || typeStr.contains("ПР", ignoreCase = true) -> LessonTypeDto.PRACTICE
-            typeStr.contains("ЛАБ", ignoreCase = true) -> LessonTypeDto.LABORATORY
-            typeStr.contains("КОНС", ignoreCase = true) -> LessonTypeDto.CONSULTATION
-            typeStr.contains("ЭКЗ", ignoreCase = true) -> LessonTypeDto.EXAM
-            typeStr.contains("ЗАЧ", ignoreCase = true) -> LessonTypeDto.CREDIT
-            else -> LessonTypeDto.COMMON
+        val (type, typeLabel) = when {
+            typeStr.contains("ЛЕК", ignoreCase = true) -> LessonTypeDto.LECTURE to " (лекция)"
+            typeStr.contains("ПРАК", ignoreCase = true) || typeStr.contains("ПР", ignoreCase = true) -> LessonTypeDto.PRACTICE to " (практика)"
+            typeStr.contains("ЛАБ", ignoreCase = true) -> LessonTypeDto.LABORATORY to " (лабораторная)"
+            typeStr.contains("КОНС", ignoreCase = true) -> LessonTypeDto.CONSULTATION to " (консультация)"
+            typeStr.contains("ЭКЗ", ignoreCase = true) -> LessonTypeDto.EXAM to " (экзамен)"
+            typeStr.contains("ЗАЧ", ignoreCase = true) -> LessonTypeDto.CREDIT to " (зачёт)"
+            typeStr.isNotBlank() -> LessonTypeDto.COMMON to " ($typeStr)"
+            else -> LessonTypeDto.COMMON to ""
         }
+        val subject = if (typeLabel.isNotEmpty()) "$baseSubject$typeLabel" else baseSubject
         return subject to type
     }
 
