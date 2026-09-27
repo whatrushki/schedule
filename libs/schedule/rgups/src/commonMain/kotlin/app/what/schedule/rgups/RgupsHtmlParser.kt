@@ -115,8 +115,8 @@ object RgupsHtmlParser {
                 val (st, et) = parseTimeRange(tds[1].text().trim())
                 val weekLabel = tds[2].text().trim()
                 val subject = tds[3].text().trim()
-                val teacher = cleanTeacher(tds[4].text().trim())
-                val room = tds[5].text().trim()
+                val teacher = cleanTeacher(tds[4].text())
+                val room = cleanField(tds[5].text())
 
                 val slot = ParsedSlot(
                     parnum = parnum,
@@ -129,17 +129,19 @@ object RgupsHtmlParser {
             } else if (tds.size >= 4) {
                 val weekLabel = tds[0].text().trim()
                 val subject = tds[1].text().trim()
-                val teacher = cleanTeacher(tds[2].text().trim())
-                val room = tds[3].text().trim()
+                val teacher = cleanTeacher(tds[2].text())
+                val room = cleanField(tds[3].text())
                 currentSlot?.rows?.add(ParsedSlotRow(isDisabled, weekLabel, subject, teacher, room))
             } else if (tds.size >= 3) {
                 val subject = tds[0].text().trim()
-                val teacher = cleanTeacher(tds[1].text().trim())
-                val room = tds[2].text().trim()
+                val teacher = cleanTeacher(tds[1].text())
+                val room = cleanField(tds[2].text())
                 val weekLabel = currentSlot?.rows?.lastOrNull()?.weekLabel.orEmpty()
                 currentSlot?.rows?.add(ParsedSlotRow(isDisabled, weekLabel, subject, teacher, room))
             }
         }
+
+        val safeGroup = cleanField(groupName)
 
         return daysMap.map { (date, slots) ->
             val dayLessons = mutableListOf<LessonDto>()
@@ -160,7 +162,7 @@ object RgupsHtmlParser {
                                 startTime = slot.startTime,
                                 endTime = slot.endTime,
                                 subject = subj,
-                                otUnits = listOf(OneTimeUnitDto(teacher = r.teacher, group = groupName, room = r.room)),
+                                otUnits = listOf(OneTimeUnitDto(teacher = cleanTeacher(r.teacher), group = safeGroup, room = cleanField(r.room))),
                                 type = type,
                                 state = LessonStateDto.COMMON
                             )
@@ -181,7 +183,7 @@ object RgupsHtmlParser {
                     for ((subjRaw, subjRows) in bySubj) {
                         val (subj, type) = parseSubjectAndType(subjRaw)
                         val units = subjRows.map { r ->
-                            OneTimeUnitDto(teacher = r.teacher, group = groupName, room = r.room)
+                            OneTimeUnitDto(teacher = cleanTeacher(r.teacher), group = safeGroup, room = cleanField(r.room))
                         }.distinct()
                         dayLessons.add(
                             LessonDto(
@@ -204,7 +206,7 @@ object RgupsHtmlParser {
                         for ((subjRaw, subjRows) in bySubj) {
                             val (subj, type) = parseSubjectAndType(subjRaw)
                             val units = subjRows.map { r ->
-                                OneTimeUnitDto(teacher = r.teacher, group = groupName, room = r.room)
+                                OneTimeUnitDto(teacher = cleanTeacher(r.teacher), group = safeGroup, room = cleanField(r.room))
                             }.distinct()
                             dayLessons.add(
                                 LessonDto(
@@ -245,8 +247,14 @@ object RgupsHtmlParser {
         }
     }
 
-    fun cleanTeacher(teacher: String): String {
-        return teacher.replace(Regex("""\s*\[\d+\]"""), "").trim()
+    fun cleanField(value: String?): String {
+        val clean = value?.replace("\u00A0", " ")?.trim().orEmpty()
+        return if (clean.isEmpty() || clean == "_" || clean == "—" || clean == "–") "-" else clean
+    }
+
+    fun cleanTeacher(teacher: String?): String {
+        val stripped = teacher?.replace(Regex("""\s*\[\d+\]"""), "")?.replace("\u00A0", " ")?.trim().orEmpty()
+        return if (stripped.isEmpty() || stripped == "_" || stripped == "—" || stripped == "–") "-" else stripped
     }
 
     private fun parseSubjectAndType(raw: String): Pair<String, LessonTypeDto> {

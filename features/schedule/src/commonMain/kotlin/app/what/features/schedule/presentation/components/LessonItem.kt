@@ -403,7 +403,7 @@ private fun OtUnitsView(
             AdditionalInfo(
                 color = color,
                 icon = WHATIcons.Building,
-                texts = listOf(it.building.replace("(?i)корпус\\s*|(?i)корп\\.?\\s*".toRegex(), "").trim().ifEmpty { "_" })
+                texts = listOf(it.building.replace("(?i)корпус\\s*|(?i)корп\\.?\\s*".toRegex(), "").trim().let { if (it.isEmpty() || it == "_") "-" else it })
             )
         }
     }

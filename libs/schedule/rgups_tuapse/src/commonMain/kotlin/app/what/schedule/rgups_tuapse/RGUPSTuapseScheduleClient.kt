@@ -150,8 +150,8 @@ class RGUPSTuapseScheduleClient(
             val typeStr = data.types.getOrNull(typeIdx).orEmpty()
             val type = LessonTypeDto.fromString(typeStr)
 
-            val teacherName = data.teachers[teacherId.toString()].orEmpty()
-            val groupName = data.groups.firstOrNull { it.id == groupId }?.n.orEmpty()
+            val teacherName = data.teachers[teacherId.toString()]?.trim().orEmpty().let { if (it.isEmpty() || it == "_") "-" else it }
+            val groupName = data.groups.firstOrNull { it.id == groupId }?.n?.trim().orEmpty().let { if (it.isEmpty() || it == "_") "-" else it }
             val room = "-"
 
             val otUnit = OneTimeUnitDto(

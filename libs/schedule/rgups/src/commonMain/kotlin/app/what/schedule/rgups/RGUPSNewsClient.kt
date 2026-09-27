@@ -78,6 +78,14 @@ class RGUPSNewsClient(
         val bodyElem = doc.selectFirst("div.text, .text")
             ?: doc.selectFirst(".news-detail, article, main")
 
+        // Normalize relative URLs in <a> tags
+        bodyElem?.select("a")?.forEach { a ->
+            val href = a.attr("href").trim()
+            if (href.startsWith("/")) {
+                a.attr("href", "$baseUrl$href")
+            }
+        }
+
         val dateStr = doc.selectFirst("time.publication-time, time, .date")?.text()?.trim()
             ?: Regex("""\b(\d{2}\.\d{2}\.\d{4})\b""").find(doc.text())?.value.orEmpty()
         val date = parseDate(dateStr)
@@ -97,6 +105,10 @@ class RGUPSNewsClient(
             }
             val textOnly = p.clone()
             textOnly.select("img").remove()
+            val cleanText = textOnly.text().replace("\u00A0", " ").trim()
+            if (cleanText.isEmpty() && textOnly.select("iframe, video").isEmpty()) {
+                return // Ignore empty paragraph spacing
+            }
             val pHtml = textOnly.html().trim()
             if (pHtml.isNotEmpty()) {
                 blocks.addAll(smartParseTextToBlocks(pHtml))
@@ -122,9 +134,12 @@ class RGUPSNewsClient(
                         }
                         val textOnly = child.clone()
                         textOnly.select("img").remove()
-                        val divHtml = textOnly.html().trim()
-                        if (divHtml.isNotEmpty()) {
-                            blocks.addAll(smartParseTextToBlocks(divHtml))
+                        val cleanText = textOnly.text().replace("\u00A0", " ").trim()
+                        if (cleanText.isNotEmpty() || textOnly.select("iframe, video").isNotEmpty()) {
+                            val divHtml = textOnly.html().trim()
+                            if (divHtml.isNotEmpty()) {
+                                blocks.addAll(smartParseTextToBlocks(divHtml))
+                            }
                         }
                     }
                 }
@@ -136,26 +151,47 @@ class RGUPSNewsClient(
                         allImages.add(fullSrc)
                     }
                 }
-                "h2", "h3", "h4" -> {
-                    val text = child.text().trim()
+                "h1", "h2", "h3", "h4", "h5", "h6" -> {
+                    val text = child.text().replace("\u00A0", " ").trim()
                     if (text.isNotEmpty() && !text.equals(title, ignoreCase = true)) {
-                        blocks.add(NewContentBlockDto.Subtitle(text))
+                        val links = child.select("a")
+                        if (links.isNotEmpty()) {
+                            // Subtitle contains links: preserve as bold Text block so links are clickable!
+                            blocks.add(NewContentBlockDto.Text("<strong>${child.html().trim()}</strong>"))
+                        } else {
+                            blocks.add(NewContentBlockDto.Subtitle(text))
+                        }
                     }
                 }
                 "ul" -> {
-                    val items = child.select("li").map { it.text().trim() }.filter { it.isNotEmpty() }
+                    val items = child.select("li").map { it.text().replace("\u00A0", " ").trim() }.filter { it.isNotEmpty() }
                     if (items.isNotEmpty()) blocks.add(NewContentBlockDto.UnsortedList(items))
                 }
                 "ol" -> {
-                    val items = child.select("li").map { it.text().trim() }.filter { it.isNotEmpty() }
+                    val items = child.select("li").map { it.text().replace("\u00A0", " ").trim() }.filter { it.isNotEmpty() }
                     if (items.isNotEmpty()) blocks.add(NewContentBlockDto.SortedList(items))
                 }
                 "blockquote" -> {
-                    val text = child.text().trim()
+                    val text = child.text().replace("\u00A0", " ").trim()
                     if (text.isNotEmpty()) blocks.add(NewContentBlockDto.Info(text))
                 }
             }
         }
+
+        // Merge consecutive list blocks of same type
+        val mergedListBlocks = mutableListOf<NewContentBlockDto>()
+        for (block in blocks) {
+            val last = mergedListBlocks.lastOrNull()
+            if (last is NewContentBlockDto.SortedList && block is NewContentBlockDto.SortedList) {
+                mergedListBlocks[mergedListBlocks.size - 1] = NewContentBlockDto.SortedList(last.items + block.items)
+            } else if (last is NewContentBlockDto.UnsortedList && block is NewContentBlockDto.UnsortedList) {
+                mergedListBlocks[mergedListBlocks.size - 1] = NewContentBlockDto.UnsortedList(last.items + block.items)
+            } else {
+                mergedListBlocks.add(block)
+            }
+        }
+        blocks.clear()
+        blocks.addAll(mergedListBlocks)
 
         // Combine trailing series of photos (>= 2 images) into a carousel
         val trailingImages = mutableListOf<String>()
@@ -194,6 +230,11 @@ class RGUPSNewsClient(
         val cleanHtml = rawHtml.trim()
         if (cleanHtml.isEmpty()) return emptyList()
 
+        val textCheck = Ksoup.parseBodyFragment(cleanHtml).text().replace("\u00A0", " ").trim()
+        if (textCheck.isEmpty() && !cleanHtml.contains("<img", ignoreCase = true) && !cleanHtml.contains("<iframe", ignoreCase = true)) {
+            return emptyList()
+        }
+
         // Normalize breaks: double breaks -> \n\n, single break -> \n
         val normalized = cleanHtml
             .replace(Regex("""(<br\s*/?>\s*){2,}""", RegexOption.IGNORE_CASE), "\n\n")
@@ -222,9 +263,12 @@ class RGUPSNewsClient(
         fun flushParagraph() {
             val text = currentParagraph.toString().trim()
             if (text.isNotEmpty()) {
-                val balanced = Ksoup.parseBodyFragment(text).body().html().trim()
-                if (balanced.isNotEmpty()) {
-                    result.add(NewContentBlockDto.Text(balanced))
+                val clean = Ksoup.parseBodyFragment(text).text().replace("\u00A0", " ").trim()
+                if (clean.isNotEmpty()) {
+                    val balanced = Ksoup.parseBodyFragment(text).body().html().trim()
+                    if (balanced.isNotEmpty()) {
+                        result.add(NewContentBlockDto.Text(balanced))
+                    }
                 }
             }
             currentParagraph = StringBuilder()
@@ -234,7 +278,8 @@ class RGUPSNewsClient(
         val numberRegex = Regex("""^(\d+)[\.)]\s*(.+)""")
 
         for (line in rawLines) {
-            if (line.isEmpty()) {
+            val lineClean = Ksoup.parseBodyFragment(line).text().replace("\u00A0", " ").trim()
+            if (lineClean.isEmpty()) {
                 flushParagraph()
                 flushList()
                 continue
@@ -247,8 +292,9 @@ class RGUPSNewsClient(
                 flushParagraph()
                 if (currentSortedList.isNotEmpty()) flushList()
                 val itemText = bulletMatch.groups[1]?.value?.trim().orEmpty()
-                if (itemText.isNotEmpty()) {
-                    currentUnsortedList.add(Ksoup.parseBodyFragment(itemText).body().html().trim())
+                val cleanItem = Ksoup.parseBodyFragment(itemText).text().replace("\u00A0", " ").trim()
+                if (cleanItem.isNotEmpty()) {
+                    currentUnsortedList.add(cleanItem)
                 }
                 continue
             }
@@ -257,8 +303,9 @@ class RGUPSNewsClient(
                 flushParagraph()
                 if (currentUnsortedList.isNotEmpty()) flushList()
                 val itemText = numberMatch.groups[2]?.value?.trim().orEmpty()
-                if (itemText.isNotEmpty()) {
-                    currentSortedList.add(Ksoup.parseBodyFragment(itemText).body().html().trim())
+                val cleanItem = Ksoup.parseBodyFragment(itemText).text().replace("\u00A0", " ").trim()
+                if (cleanItem.isNotEmpty()) {
+                    currentSortedList.add(cleanItem)
                 }
                 continue
             }

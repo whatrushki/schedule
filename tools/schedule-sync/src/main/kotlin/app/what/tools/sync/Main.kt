@@ -581,13 +581,15 @@ suspend fun syncRgups(client: HttpClient, rootDir: File, failOnError: Boolean = 
                                     schedule.forEach { daySchedule ->
                                         daySchedule.lessons.forEach { lesson ->
                                             lesson.otUnits.forEach { unit ->
-                                                val cleanTeacher = unit.teacher.replace(Regex("""\[.*?\]"""), "").trim()
-                                                if (cleanTeacher.isNotBlank() && cleanTeacher != "—") {
+                                                val cleanTeacher = unit.teacher.replace(Regex("""\[.*?\]"""), "").trim().let { if (it.isEmpty() || it == "_") "-" else it }
+                                                if (cleanTeacher.isNotBlank() && cleanTeacher != "—" && cleanTeacher != "-") {
                                                     val teacherDays = teacherSchedules.getOrPut(cleanTeacher) { mutableMapOf() }
                                                     val dayLessons = teacherDays.getOrPut(daySchedule.date) { mutableListOf() }
+                                                    val safeGroup = if (group.name.isBlank() || group.name == "_") "-" else group.name
+                                                    val safeRoom = if (unit.room.isBlank() || unit.room == "_") "-" else unit.room
                                                     dayLessons.add(
                                                         lesson.copy(
-                                                            otUnits = listOf(unit.copy(teacher = cleanTeacher, group = group.name))
+                                                            otUnits = listOf(unit.copy(teacher = cleanTeacher, group = safeGroup, room = safeRoom))
                                                         )
                                                     )
                                                 }

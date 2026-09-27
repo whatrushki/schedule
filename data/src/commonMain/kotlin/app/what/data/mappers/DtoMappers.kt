@@ -13,12 +13,19 @@ import app.what.data.remote.utils.fromHtml
 fun GroupDto.toDomain(): Group = Group(name = name, id = id)
 fun TeacherDto.toDomain(): Teacher = Teacher(name = name, id = id)
 
-fun OneTimeUnitDto.toDomain(): OneTimeUnit = OneTimeUnit(
-    group = Group(name = group, id = group),
-    teacher = Teacher(name = teacher, id = teacher),
-    auditory = room,
-    building = additional.replace("(?i)корпус\\s*|(?i)корп\\.?\\s*".toRegex(), "").trim()
-)
+fun OneTimeUnitDto.toDomain(): OneTimeUnit {
+    val cleanGroup = group.replace("\u00A0", " ").trim().let { if (it.isEmpty() || it == "_") "-" else it }
+    val cleanTeacher = teacher.replace("\u00A0", " ").trim().let { if (it.isEmpty() || it == "_") "-" else it }
+    val cleanRoom = room.replace("\u00A0", " ").trim().let { if (it.isEmpty() || it == "_") "-" else it }
+    val cleanBuilding = additional.replace("(?i)корпус\\s*|(?i)корп\\.?\\s*".toRegex(), "").replace("\u00A0", " ").trim().let { if (it.isEmpty() || it == "_") "-" else it }
+
+    return OneTimeUnit(
+        group = Group(name = cleanGroup, id = cleanGroup),
+        teacher = Teacher(name = cleanTeacher, id = cleanTeacher),
+        auditory = cleanRoom,
+        building = cleanBuilding
+    )
+}
 
 fun LessonTypeDto.toDomain(): LessonType = when (this) {
     LessonTypeDto.LECTURE -> LessonType.LECTURE

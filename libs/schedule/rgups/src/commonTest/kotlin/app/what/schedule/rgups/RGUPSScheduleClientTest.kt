@@ -220,5 +220,102 @@ class RGUPSScheduleClientTest {
         assertTrue(detail.contentBlocks[2] is app.what.schedule.core.models.NewContentBlockDto.Text)
         assertTrue(detail.contentBlocks[3] is app.what.schedule.core.models.NewContentBlockDto.Text)
     }
+
+    @Test
+    fun testNewsConsecutiveNumberedListAndEmptyParagraphs() {
+        val html = """
+        <div class="text">
+            <p>Начинается регистрация участников из числа научно-педагогических работников в Международном конкурсе лучших педагогических практик «Лидеры транспортного образования».</p>
+            <p>Цель конкурса – выявление, поддержка и тиражирование эффективных педагогических практик в сфере инженерного и транспортного образования, формирование профессионального сообщества преподавателей, ориентированных на развитие практико-ориентированного подхода и внедрение современных образовательных технологий.</p>
+            <p>Регистрация на платформе конкурса осуществляется в период с 01.09.2026 по 25.09.2026 на платформе конкурса <a href="https://edtech.rut-miit.ru/">https://edtech.rut-miit.ru/</a></p>
+            <p>Призы и награды:</p>
+            <p>1. Денежные призы за 1 место в каждой номинации;</p>
+            <p>2. Публикация лучших практик в сборнике;</p>
+            <p>3. Дипломы для участников, призеров и победителей;</p>
+            <p>4. Повышение квалификации с выдачей удостоверения.</p>
+            <p style="margin-top:12px">&nbsp;</p>
+            <p><strong>Контактное лицо: </strong>Мироненко Екатерина Игоревна, кабинет А-209, <a href="mailto:umu@rgups.ru">umu@rgups.ru</a></p>
+            <img src="/site/assets/files/237921/ped__konkurs_na_sait_page-0001-1.jpg">
+        </div>
+        """.trimIndent()
+
+        val client = RGUPSNewsClient(io.ktor.client.HttpClient())
+        val detail = client.parseNewsDetail(html, "https://www.rgups.ru/news/test/")
+
+        // Verify empty spacing paragraph was ignored
+        // Expected blocks: Text(Начинается), Text(Цель), Text(Регистрация), Text(Призы), SortedList(4 items), Text(Контактное), Image
+        assertEquals(7, detail.contentBlocks.size)
+        assertTrue(detail.contentBlocks[0] is app.what.schedule.core.models.NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[1] is app.what.schedule.core.models.NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[2] is app.what.schedule.core.models.NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[3] is app.what.schedule.core.models.NewContentBlockDto.Text)
+
+        // The 4 separate <p> items must be merged into 1 single SortedList
+        assertTrue(detail.contentBlocks[4] is app.what.schedule.core.models.NewContentBlockDto.SortedList)
+        val sortedList = detail.contentBlocks[4] as app.what.schedule.core.models.NewContentBlockDto.SortedList
+        assertEquals(4, sortedList.items.size)
+        assertEquals("Денежные призы за 1 место в каждой номинации;", sortedList.items[0])
+        assertEquals("Публикация лучших практик в сборнике;", sortedList.items[1])
+        assertEquals("Дипломы для участников, призеров и победителей;", sortedList.items[2])
+        assertEquals("Повышение квалификации с выдачей удостоверения.", sortedList.items[3])
+
+        assertTrue(detail.contentBlocks[5] is app.what.schedule.core.models.NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[6] is app.what.schedule.core.models.NewContentBlockDto.Image)
+        val img = detail.contentBlocks[6] as app.what.schedule.core.models.NewContentBlockDto.Image
+        assertEquals("https://www.rgups.ru/site/assets/files/237921/ped__konkurs_na_sait_page-0001-1.jpg", img.url)
+    }
+
+    @Test
+    fun testNewsHeaderWithLinkPreserved() {
+        val html = """
+        <div class="text">
+            <p>Продолжается набор на занятия по мобильной робототехнике.&nbsp;</p>
+            <p>Занятия проводятся каждую субботу с <strong>10:00 до 13:00.</strong></p>
+            <h3><a href="/university/struktura-i-organy-upravleniia-1632/strukturnye-podrazdeleniia/crk/otdel-dovuzovskoi-podgotovki/tvorcheskie-kruzhki-dlya-shkolnikov/mobil-naia-robototekhnika/">Ознакомиться с кружком по ссылке</a></h3>
+            <img src="/site/assets/files/237167/banner_robototekhnika_1.jpg">
+        </div>
+        """.trimIndent()
+
+        val client = RGUPSNewsClient(io.ktor.client.HttpClient())
+        val detail = client.parseNewsDetail(html, "https://www.rgups.ru/news/test/")
+
+        assertEquals(4, detail.contentBlocks.size)
+        assertTrue(detail.contentBlocks[0] is app.what.schedule.core.models.NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[1] is app.what.schedule.core.models.NewContentBlockDto.Text)
+
+        // Header with <a> link must be preserved as Text with absolute URL so the link is clickable
+        assertTrue(detail.contentBlocks[2] is app.what.schedule.core.models.NewContentBlockDto.Text)
+        val headerText = (detail.contentBlocks[2] as app.what.schedule.core.models.NewContentBlockDto.Text).html
+        assertTrue(headerText.contains("https://www.rgups.ru/university/struktura-i-organy-upravleniia-1632/"))
+        assertTrue(headerText.contains("Ознакомиться с кружком по ссылке"))
+
+        assertTrue(detail.contentBlocks[3] is app.what.schedule.core.models.NewContentBlockDto.Image)
+    }
+
+    @Test
+    fun testEmptyOrUnderscoreTeacherAndRoomBecomeDash() {
+        val tableHtml = """
+        <table class="table">
+            <tr><th colspan="6">Понедельник</th></tr>
+            <tr>
+                <td>1</td>
+                <td>08.30-10.00</td>
+                <td>обе недели</td>
+                <td>Информатика</td>
+                <td>_</td>
+                <td></td>
+            </tr>
+        </table>
+        """.trimIndent()
+
+        val monday = LocalDate(2026, 9, 28)
+        val schedule = RgupsHtmlParser.parseTimetable(tableHtml, monday, groupName = "_")
+        assertEquals(1, schedule.size)
+        val lesson = schedule[0].lessons[0]
+        val unit = lesson.otUnits[0]
+        assertEquals("-", unit.teacher)
+        assertEquals("-", unit.room)
+        assertEquals("-", unit.group)
+    }
 }
 
