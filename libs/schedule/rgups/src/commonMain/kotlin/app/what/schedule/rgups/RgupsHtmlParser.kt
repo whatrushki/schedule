@@ -60,6 +60,21 @@ object RgupsHtmlParser {
         }.distinctBy { it.id }
     }
 
+    private data class ParsedSlotRow(
+        val isDisabled: Boolean,
+        val weekLabel: String,
+        val subject: String,
+        val teacher: String,
+        val room: String
+    )
+
+    private data class ParsedSlot(
+        val parnum: Int,
+        val startTime: LocalTime,
+        val endTime: LocalTime,
+        val rows: MutableList<ParsedSlotRow> = mutableListOf()
+    )
+
     fun parseTimetable(html: String, currentLocalDate: LocalDate, groupName: String = ""): List<DayScheduleDto> {
         val doc = Ksoup.parse(html)
         val table = doc.selectFirst("table.table") ?: return emptyList()
@@ -69,11 +84,9 @@ object RgupsHtmlParser {
         val currentDayOfWeek = currentLocalDate.dayOfWeek.isoDayNumber // 1..7
         val monday = currentLocalDate.minus(DatePeriod(days = currentDayOfWeek - 1))
 
-        val daysMap = mutableMapOf<LocalDate, MutableList<LessonDto>>()
+        val daysMap = mutableMapOf<LocalDate, MutableList<ParsedSlot>>()
         var currentDayDate: LocalDate? = null
-        var lastParnum = 0
-        var lastStartTime = LocalTime(8, 0)
-        var lastEndTime = LocalTime(9, 30)
+        var currentSlot: ParsedSlot? = null
 
         for (r in rows) {
             val th = r.selectFirst("th")
@@ -83,7 +96,7 @@ object RgupsHtmlParser {
                 currentDayDate = if (dayOfWeekNum in 1..7) {
                     monday.plus(DatePeriod(days = dayOfWeekNum - 1))
                 } else null
-                lastParnum = 0
+                currentSlot = null
                 continue
             }
 
@@ -95,76 +108,125 @@ object RgupsHtmlParser {
             }
 
             val isDisabled = tds.any { it.hasClass("disable") }
-            // If it's disabled, it belongs to the opposite week parity.
-            // For now, we collect active lessons, but if both exist, active one takes precedence.
+            val firstText = tds[0].text().trim()
 
-            if (tds.size >= 6) {
-                val parnumStr = tds[0].text().trim()
-                val parnum = parnumStr.toIntOrNull() ?: (lastParnum + 1)
-                lastParnum = parnum
-
-                val timeStr = tds[1].text().trim()
-                val (st, et) = parseTimeRange(timeStr)
-                lastStartTime = st
-                lastEndTime = et
-
-                val subjectRaw = tds[3].text().trim()
-                if (subjectRaw == "—" || subjectRaw.isBlank()) continue
-
-                val (subject, type) = parseSubjectAndType(subjectRaw)
+            if (tds.size >= 6 && firstText.toIntOrNull() != null) {
+                val parnum = firstText.toInt()
+                val (st, et) = parseTimeRange(tds[1].text().trim())
+                val weekLabel = tds[2].text().trim()
+                val subject = tds[3].text().trim()
                 val teacher = tds[4].text().trim()
                 val room = tds[5].text().trim()
 
-                val lesson = LessonDto(
-                    date = targetDate,
-                    number = parnum,
+                val slot = ParsedSlot(
+                    parnum = parnum,
                     startTime = st,
                     endTime = et,
-                    subject = subject,
-                    otUnits = listOf(OneTimeUnitDto(teacher = teacher, group = groupName, room = room)),
-                    type = type,
-                    state = if (isDisabled) LessonStateDto.CHANGED else LessonStateDto.COMMON
+                    rows = mutableListOf(ParsedSlotRow(isDisabled, weekLabel, subject, teacher, room))
                 )
-                daysMap.getOrPut(targetDate) { mutableListOf() }.add(lesson)
+                currentSlot = slot
+                daysMap.getOrPut(targetDate) { mutableListOf() }.add(slot)
             } else if (tds.size >= 4) {
-                // Secondary row of rowspan pair (e.g. ['под чертой', subject, teacher, room])
-                val subjectRaw = tds[1].text().trim()
-                if (subjectRaw == "—" || subjectRaw.isBlank()) continue
-
-                val (subject, type) = parseSubjectAndType(subjectRaw)
+                val weekLabel = tds[0].text().trim()
+                val subject = tds[1].text().trim()
                 val teacher = tds[2].text().trim()
                 val room = tds[3].text().trim()
-
-                val lesson = LessonDto(
-                    date = targetDate,
-                    number = lastParnum,
-                    startTime = lastStartTime,
-                    endTime = lastEndTime,
-                    subject = subject,
-                    otUnits = listOf(OneTimeUnitDto(teacher = teacher, group = groupName, room = room)),
-                    type = type,
-                    state = if (isDisabled) LessonStateDto.CHANGED else LessonStateDto.COMMON
-                )
-                daysMap.getOrPut(targetDate) { mutableListOf() }.add(lesson)
+                currentSlot?.rows?.add(ParsedSlotRow(isDisabled, weekLabel, subject, teacher, room))
+            } else if (tds.size >= 3) {
+                val subject = tds[0].text().trim()
+                val teacher = tds[1].text().trim()
+                val room = tds[2].text().trim()
+                val weekLabel = currentSlot?.rows?.lastOrNull()?.weekLabel.orEmpty()
+                currentSlot?.rows?.add(ParsedSlotRow(isDisabled, weekLabel, subject, teacher, room))
             }
         }
 
-        return daysMap.map { (date, lessons) ->
-            val mergedLessons = lessons
-                .groupBy { Triple(it.number, it.startTime, it.subject) }
-                .map { (_, groupLessons) ->
-                    // Prefer non-disabled (state == COMMON) if both exist
-                    val activeLesson = groupLessons.firstOrNull { it.state == LessonStateDto.COMMON } ?: groupLessons.first()
-                    activeLesson.copy(
-                        otUnits = groupLessons.flatMap { it.otUnits }.distinct()
-                    )
+        return daysMap.map { (date, slots) ->
+            val dayLessons = mutableListOf<LessonDto>()
+
+            for (slot in slots) {
+                val slotRows = slot.rows
+                if (slotRows.isEmpty()) continue
+
+                // Check "обе недели"
+                if (slotRows.size == 1 && slotRows[0].weekLabel.contains("обе недели", ignoreCase = true)) {
+                    val r = slotRows[0]
+                    if (r.subject.isNotBlank() && r.subject != "—") {
+                        val (subj, type) = parseSubjectAndType(r.subject)
+                        dayLessons.add(
+                            LessonDto(
+                                date = date,
+                                number = slot.parnum,
+                                startTime = slot.startTime,
+                                endTime = slot.endTime,
+                                subject = subj,
+                                otUnits = listOf(OneTimeUnitDto(teacher = r.teacher, group = groupName, room = r.room)),
+                                type = type,
+                                state = LessonStateDto.COMMON
+                            )
+                        )
+                    }
+                    continue
                 }
-                .sortedWith(compareBy({ it.startTime }, { it.number }))
+
+                // Split week (над чертой / под чертой)
+                val activeRows = slotRows.filter { !it.isDisabled }
+                val disabledRows = slotRows.filter { it.isDisabled }
+
+                val validActive = activeRows.filter { it.subject.isNotBlank() && it.subject != "—" }
+
+                if (validActive.isNotEmpty()) {
+                    // Group valid active rows by subject (e.g. sub-groups [1] and [2])
+                    val bySubj = validActive.groupBy { it.subject }
+                    for ((subjRaw, subjRows) in bySubj) {
+                        val (subj, type) = parseSubjectAndType(subjRaw)
+                        val units = subjRows.map { r ->
+                            OneTimeUnitDto(teacher = r.teacher, group = groupName, room = r.room)
+                        }.distinct()
+                        dayLessons.add(
+                            LessonDto(
+                                date = date,
+                                number = slot.parnum,
+                                startTime = slot.startTime,
+                                endTime = slot.endTime,
+                                subject = subj,
+                                otUnits = units,
+                                type = type,
+                                state = LessonStateDto.CHANGED
+                            )
+                        )
+                    }
+                } else {
+                    // Active week has no lesson (dash '—' or empty) -> pair is cancelled
+                    val validDisabled = disabledRows.filter { it.subject.isNotBlank() && it.subject != "—" }
+                    if (validDisabled.isNotEmpty()) {
+                        val bySubj = validDisabled.groupBy { it.subject }
+                        for ((subjRaw, subjRows) in bySubj) {
+                            val (subj, type) = parseSubjectAndType(subjRaw)
+                            val units = subjRows.map { r ->
+                                OneTimeUnitDto(teacher = r.teacher, group = groupName, room = r.room)
+                            }.distinct()
+                            dayLessons.add(
+                                LessonDto(
+                                    date = date,
+                                    number = slot.parnum,
+                                    startTime = slot.startTime,
+                                    endTime = slot.endTime,
+                                    subject = subj,
+                                    otUnits = units,
+                                    type = type,
+                                    state = LessonStateDto.REMOVED
+                                )
+                            )
+                        }
+                    }
+                }
+            }
 
             DayScheduleDto(
                 date = date,
                 scheduleType = LessonsScheduleTypeDto.COMMON,
-                lessons = mergedLessons
+                lessons = dayLessons.sortedWith(compareBy({ it.startTime }, { it.number }))
             )
         }.sortedBy { it.date }
     }

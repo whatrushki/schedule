@@ -158,6 +158,32 @@ class RGUPSTuapseNewsClient(
             }
         }
 
+        // Combine trailing series of photos into a carousel, ignoring trailing links
+        var endIdx = blocks.size - 1
+        val trailingLinks = mutableListOf<NewContentBlockDto>()
+        while (endIdx >= 0) {
+            val b = blocks[endIdx]
+            if (b is NewContentBlockDto.Text && (b.html.contains("<a", ignoreCase = true) || b.html.contains("http", ignoreCase = true))) {
+                trailingLinks.add(0, b)
+                endIdx--
+            } else {
+                break
+            }
+        }
+        val trailingImages = mutableListOf<String>()
+        var imgIdx = endIdx
+        while (imgIdx >= 0 && blocks[imgIdx] is NewContentBlockDto.Image) {
+            trailingImages.add(0, (blocks[imgIdx] as NewContentBlockDto.Image).url)
+            imgIdx--
+        }
+        if (trailingImages.size >= 2) {
+            while (blocks.size > imgIdx + 1) {
+                blocks.removeAt(blocks.size - 1)
+            }
+            blocks.add(NewContentBlockDto.ImageCarousel(trailingImages))
+            blocks.addAll(trailingLinks)
+        }
+
         val fullText = blocks.filterIsInstance<NewContentBlockDto.Text>().joinToString("\n\n") { it.html }
 
         if (blocks.isEmpty() && fullText.isNotEmpty()) {

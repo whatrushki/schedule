@@ -151,6 +151,20 @@ class RGUPSNewsClient(
             }
         }
 
+        // Combine trailing series of photos (>= 2 images) into a carousel
+        val trailingImages = mutableListOf<String>()
+        var i = blocks.size - 1
+        while (i >= 0 && blocks[i] is NewContentBlockDto.Image) {
+            trailingImages.add(0, (blocks[i] as NewContentBlockDto.Image).url)
+            i--
+        }
+        if (trailingImages.size >= 2) {
+            while (blocks.size > i + 1) {
+                blocks.removeAt(blocks.size - 1)
+            }
+            blocks.add(NewContentBlockDto.ImageCarousel(trailingImages))
+        }
+
         val fullText = blocks.filterIsInstance<NewContentBlockDto.Text>().joinToString("\n\n") { it.html }
 
         if (blocks.isEmpty() && fullText.isNotEmpty()) {
