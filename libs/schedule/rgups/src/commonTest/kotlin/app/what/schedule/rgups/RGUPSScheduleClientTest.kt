@@ -24,6 +24,23 @@ class RGUPSScheduleClientTest {
     }
 
     @Test
+    fun testParseFacultiesWithSiblingText() {
+        val html = """
+        <div class="schedule-section faculty" data-action="course">
+            <a class="btn btn-primary" data-element="schedule" data-fac-id="316" href="#"></a>Аспирантура и докторантура
+            <a class="btn btn-primary" data-element="schedule" data-fac-id="8" href="#"></a>Гуманитарный
+        </div>
+        """.trimIndent()
+
+        val faculties = RgupsHtmlParser.parseFaculties(html)
+        assertEquals(2, faculties.size)
+        assertEquals("316", faculties[0].id)
+        assertEquals("Аспирантура и докторантура", faculties[0].name)
+        assertEquals("8", faculties[1].id)
+        assertEquals("Гуманитарный", faculties[1].name)
+    }
+
+    @Test
     fun testParseCourses() {
         val html = """
         <div class="schedule-section btn-group" data-action="groups"> 

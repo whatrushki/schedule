@@ -8,11 +8,26 @@ import kotlinx.datetime.*
 object RgupsHtmlParser {
 
     fun parseFaculties(html: String): List<RgupsFaculty> {
+        val regex = Regex("""<a[^>]*data-fac-id=["'](\d+)["'][^>]*>(.*?)</a>([^<]*)""", RegexOption.IGNORE_CASE)
+        val list = mutableListOf<RgupsFaculty>()
+        for (match in regex.findAll(html)) {
+            val id = match.groupValues[1].trim()
+            val inner = match.groupValues[2].trim()
+            val outer = match.groupValues[3].trim()
+            val name = if (inner.isNotEmpty()) inner else outer
+            if (id.isNotEmpty() && name.isNotEmpty()) {
+                list.add(RgupsFaculty(id = id, name = name))
+            }
+        }
+        if (list.isNotEmpty()) {
+            return list.distinctBy { it.id }
+        }
+
         val doc = Ksoup.parse(html)
         val links = doc.select("a[data-fac-id]")
         return links.mapNotNull { a ->
             val id = a.attr("data-fac-id").trim()
-            val name = a.text().trim()
+            val name = a.text().trim().ifEmpty { a.nextSibling()?.toString()?.trim().orEmpty() }
             if (id.isNotEmpty() && name.isNotEmpty()) {
                 RgupsFaculty(id = id, name = name)
             } else null
@@ -45,7 +60,7 @@ object RgupsHtmlParser {
         }.distinctBy { it.id }
     }
 
-    fun parseTimetable(html: String, currentLocalDate: LocalDate): List<DayScheduleDto> {
+    fun parseTimetable(html: String, currentLocalDate: LocalDate, groupName: String = ""): List<DayScheduleDto> {
         val doc = Ksoup.parse(html)
         val table = doc.selectFirst("table.table") ?: return emptyList()
         val rows = table.select("tr")
@@ -106,7 +121,7 @@ object RgupsHtmlParser {
                     startTime = st,
                     endTime = et,
                     subject = subject,
-                    otUnits = listOf(OneTimeUnitDto(teacher = teacher, group = "", room = room)),
+                    otUnits = listOf(OneTimeUnitDto(teacher = teacher, group = groupName, room = room)),
                     type = type,
                     state = if (isDisabled) LessonStateDto.CHANGED else LessonStateDto.COMMON
                 )
@@ -126,7 +141,7 @@ object RgupsHtmlParser {
                     startTime = lastStartTime,
                     endTime = lastEndTime,
                     subject = subject,
-                    otUnits = listOf(OneTimeUnitDto(teacher = teacher, group = "", room = room)),
+                    otUnits = listOf(OneTimeUnitDto(teacher = teacher, group = groupName, room = room)),
                     type = type,
                     state = if (isDisabled) LessonStateDto.CHANGED else LessonStateDto.COMMON
                 )

@@ -34,14 +34,14 @@ class RGUPSTuapseNewsClient(
                 val href = titleElem.attr("href").trim()
                 val id = href
 
-                val imgElem = item.selectFirst("img")
+                val imgElem = item.selectFirst(".item-image img, figure img, img")
                 val imgSrc = imgElem?.attr("src")?.trim()?.ifEmpty { null }
                 val imageUrl = imgSrc?.let { if (it.startsWith("http")) it else "$baseUrl$it" }
 
                 val dateElem = item.selectFirst(".published, time, dd.published")
                 val date = parseDate(dateElem?.text().orEmpty())
 
-                val descElem = item.selectFirst("p, .intro")
+                val descElem = item.select("p").firstOrNull { it.select("img").isEmpty() && it.text().isNotBlank() }
                 val desc = descElem?.text()?.trim().orEmpty()
 
                 NewListItemDto(
@@ -64,35 +64,78 @@ class RGUPSTuapseNewsClient(
         val html = client.get(url).bodyAsText()
         val doc = Ksoup.parse(html)
 
-        val title = doc.selectFirst("h1, h2.item-title")?.text()?.trim() ?: ""
+        var title = doc.selectFirst(".item-page h2, .page-header h2, h2")?.text()?.trim().orEmpty()
+        if (title.isEmpty() || title.equals("Новости", ignoreCase = true)) {
+            val pageTitle = doc.selectFirst("title")?.text()?.trim().orEmpty()
+            title = pageTitle.substringBefore(" - ").substringBefore(" | ").trim()
+        }
+        if (title.isEmpty() || title.equals("Новости", ignoreCase = true)) {
+            title = doc.selectFirst("h1")?.text()?.trim().orEmpty()
+        }
+
+        val bannerSrc = doc.selectFirst(".item-image img, figure.item-image img, figure img")?.attr("src")?.trim()?.ifEmpty { null }
+        val bannerUrl = bannerSrc?.let { if (it.startsWith("http")) it else "$baseUrl$it" }
+
         val bodyElem = doc.selectFirst(".com-content-article__body, .item-page, article")
 
         val dateElem = doc.selectFirst(".published, time, dd.published")
         val date = parseDate(dateElem?.text().orEmpty())
 
-        val images = bodyElem?.select("img")?.mapNotNull { img ->
-            val src = img.attr("src").trim().ifEmpty { null } ?: return@mapNotNull null
-            if (src.startsWith("http")) src else "$baseUrl$src"
-        } ?: emptyList()
-
-        val fullText = bodyElem?.select("p")?.joinToString("\n\n") { it.text().trim() } ?: ""
+        val allImages = mutableListOf<String>()
+        bannerUrl?.let { allImages.add(it) }
 
         val blocks = mutableListOf<NewContentBlockDto>()
         bodyElem?.children()?.forEach { child ->
             when (child.tagName().lowercase()) {
                 "p" -> {
-                    val pText = child.text().trim()
-                    if (pText.isNotEmpty()) blocks.add(NewContentBlockDto.Text(pText))
+                    val imgs = child.select("img")
+                    for (img in imgs) {
+                        val src = img.attr("src").trim()
+                        if (src.isNotEmpty()) {
+                            val fullSrc = if (src.startsWith("http")) src else "$baseUrl$src"
+                            blocks.add(NewContentBlockDto.Image(fullSrc))
+                            allImages.add(fullSrc)
+                        }
+                    }
+                    val textOnly = child.clone()
+                    textOnly.select("img").remove()
+                    val pText = textOnly.text().trim()
+                    if (pText.isNotEmpty()) {
+                        blocks.add(NewContentBlockDto.Text(pText))
+                    }
                 }
                 "img" -> {
                     val src = child.attr("src").trim()
                     if (src.isNotEmpty()) {
                         val fullSrc = if (src.startsWith("http")) src else "$baseUrl$src"
                         blocks.add(NewContentBlockDto.Image(fullSrc))
+                        allImages.add(fullSrc)
                     }
+                }
+                "h2", "h3", "h4" -> {
+                    val text = child.text().trim()
+                    if (text.isNotEmpty() && !text.equals(title, ignoreCase = true) && !text.equals("Новости", ignoreCase = true)) {
+                        blocks.add(NewContentBlockDto.Subtitle(text))
+                    }
+                }
+                "ul" -> {
+                    val items = child.select("li").map { it.text().trim() }.filter { it.isNotEmpty() }
+                    if (items.isNotEmpty()) blocks.add(NewContentBlockDto.UnsortedList(items))
+                }
+                "ol" -> {
+                    val items = child.select("li").map { it.text().trim() }.filter { it.isNotEmpty() }
+                    if (items.isNotEmpty()) blocks.add(NewContentBlockDto.SortedList(items))
+                }
+                "blockquote" -> {
+                    val text = child.text().trim()
+                    if (text.isNotEmpty()) blocks.add(NewContentBlockDto.Info(text))
                 }
             }
         }
+
+        val fullText = blocks.filterIsInstance<NewContentBlockDto.Text>().joinToString("\n\n") { it.html }
+            .ifEmpty { bodyElem?.select("p")?.joinToString("\n\n") { it.text().trim() } ?: "" }
+
         if (blocks.isEmpty() && fullText.isNotEmpty()) {
             blocks.add(NewContentBlockDto.Text(fullText))
         }
@@ -103,8 +146,8 @@ class RGUPSTuapseNewsClient(
             fullText = fullText,
             descriptionHtml = bodyElem?.html(),
             date = date,
-            bannerUrl = images.firstOrNull(),
-            images = images,
+            bannerUrl = bannerUrl ?: allImages.firstOrNull(),
+            images = allImages.distinct(),
             sourceUrl = url,
             contentBlocks = blocks
         )

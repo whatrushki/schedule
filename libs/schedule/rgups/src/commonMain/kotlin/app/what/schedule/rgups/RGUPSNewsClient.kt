@@ -27,27 +27,30 @@ class RGUPSNewsClient(
 
             val items = doc.select(".news-item")
             items.mapNotNull { item ->
-                val linkElem = item.selectFirst("a") ?: return@mapNotNull null
+                val linkElem = item.selectFirst(".caption a, .thumbnail a, a[href*='/news/']") ?: return@mapNotNull null
                 val href = linkElem.attr("href").trim()
-                if (href.isBlank()) return@mapNotNull null
+                if (href.isBlank() || href == "/news/") return@mapNotNull null
 
-                val title = item.selectFirst("a:not([class*='more']), h2, h3, .title")?.text()?.trim()
-                    ?: linkElem.text().trim()
-                if (title.isBlank()) return@mapNotNull null
-
-                val imgElem = item.selectFirst("img")
+                val imgElem = item.selectFirst(".thumbnail img, img")
                 val imgSrc = imgElem?.attr("src")?.trim()?.ifEmpty { null }
                 val imageUrl = imgSrc?.let { if (it.startsWith("http")) it else "$baseUrl$it" }
 
-                val dateStr = item.selectFirst(".date, time")?.text()?.trim()
-                    ?: Regex("\\b(\\d{2}\\.\\d{2}\\.\\d{4})\\b").find(item.text())?.value.orEmpty()
+                val dateStr = item.selectFirst("time.news-item__time, time, .date")?.text()?.trim()
+                    ?: Regex("""\b(\d{2}\.\d{2}\.\d{4})\b""").find(item.text())?.value.orEmpty()
                 val date = parseDate(dateStr)
 
-                val desc = item.selectFirst("p, .desc, .text")?.text()?.trim().orEmpty()
+                // RGUPS news card does not have a separate title tag; text is in caption <p>
+                val captionPs = item.select(".caption p")
+                val textP = captionPs.firstOrNull { p ->
+                    p.select("a").isEmpty() && !p.text().contains("Подробнее", ignoreCase = true)
+                } ?: captionPs.firstOrNull { !it.text().contains("Подробнее", ignoreCase = true) }
+
+                val desc = textP?.text()?.trim().orEmpty()
+                if (desc.isBlank()) return@mapNotNull null
 
                 NewListItemDto(
                     id = href,
-                    title = title,
+                    title = desc,
                     description = desc,
                     date = date,
                     imageUrl = imageUrl,
@@ -65,36 +68,63 @@ class RGUPSNewsClient(
         val html = client.get(url).bodyAsText()
         val doc = Ksoup.parse(html)
 
-        val title = doc.selectFirst("h1, h2.title")?.text()?.trim() ?: ""
-        val bodyElem = doc.selectFirst(".content, .news-detail, article, main")
+        val title = doc.selectFirst("h1")?.text()?.trim()
+            ?: doc.selectFirst("h2, .page-header h2")?.text()?.trim()
+            ?: ""
+        val bodyElem = doc.selectFirst("div.text, .container .row .col-md-12, .content, .news-detail, article, main")
 
-        val dateStr = doc.selectFirst(".date, time")?.text()?.trim()
-            ?: Regex("\\b(\\d{2}\\.\\d{2}\\.\\d{4})\\b").find(doc.text())?.value.orEmpty()
+        val dateStr = doc.selectFirst("time.publication-time, time, .date")?.text()?.trim()
+            ?: Regex("""\b(\d{2}\.\d{2}\.\d{4})\b""").find(doc.text())?.value.orEmpty()
         val date = parseDate(dateStr)
 
-        val images = bodyElem?.select("img")?.mapNotNull { img ->
-            val src = img.attr("src").trim().ifEmpty { null } ?: return@mapNotNull null
-            if (src.startsWith("http")) src else "$baseUrl$src"
-        } ?: emptyList()
-
-        val fullText = bodyElem?.select("p")?.joinToString("\n\n") { it.text().trim() } ?: ""
-
+        val allImages = mutableListOf<String>()
         val blocks = mutableListOf<NewContentBlockDto>()
+
         bodyElem?.children()?.forEach { child ->
             when (child.tagName().lowercase()) {
                 "p" -> {
-                    val pText = child.text().trim()
-                    if (pText.isNotEmpty()) blocks.add(NewContentBlockDto.Text(pText))
+                    val imgs = child.select("img")
+                    for (img in imgs) {
+                        val src = img.attr("src").trim()
+                        if (src.isNotEmpty()) {
+                            val fullSrc = if (src.startsWith("http")) src else "$baseUrl$src"
+                            blocks.add(NewContentBlockDto.Image(fullSrc))
+                            allImages.add(fullSrc)
+                        }
+                    }
+                    val textOnly = child.clone()
+                    textOnly.select("img").remove()
+                    val pText = textOnly.text().trim()
+                    if (pText.isNotEmpty()) {
+                        blocks.add(NewContentBlockDto.Text(pText))
+                    }
                 }
                 "img" -> {
                     val src = child.attr("src").trim()
                     if (src.isNotEmpty()) {
                         val fullSrc = if (src.startsWith("http")) src else "$baseUrl$src"
                         blocks.add(NewContentBlockDto.Image(fullSrc))
+                        allImages.add(fullSrc)
                     }
+                }
+                "h2", "h3", "h4" -> {
+                    val text = child.text().trim()
+                    if (text.isNotEmpty()) blocks.add(NewContentBlockDto.Subtitle(text))
+                }
+                "ul" -> {
+                    val items = child.select("li").map { it.text().trim() }.filter { it.isNotEmpty() }
+                    if (items.isNotEmpty()) blocks.add(NewContentBlockDto.UnsortedList(items))
+                }
+                "ol" -> {
+                    val items = child.select("li").map { it.text().trim() }.filter { it.isNotEmpty() }
+                    if (items.isNotEmpty()) blocks.add(NewContentBlockDto.SortedList(items))
                 }
             }
         }
+
+        val fullText = blocks.filterIsInstance<NewContentBlockDto.Text>().joinToString("\n\n") { it.html }
+            .ifEmpty { bodyElem?.select("p")?.joinToString("\n\n") { it.text().trim() } ?: "" }
+
         if (blocks.isEmpty() && fullText.isNotEmpty()) {
             blocks.add(NewContentBlockDto.Text(fullText))
         }
@@ -105,8 +135,8 @@ class RGUPSNewsClient(
             fullText = fullText,
             descriptionHtml = bodyElem?.html(),
             date = date,
-            bannerUrl = images.firstOrNull(),
-            images = images,
+            bannerUrl = allImages.firstOrNull(),
+            images = allImages,
             sourceUrl = url,
             contentBlocks = blocks
         )

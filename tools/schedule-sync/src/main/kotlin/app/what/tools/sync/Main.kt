@@ -560,9 +560,9 @@ suspend fun syncRgups(client: HttpClient, rootDir: File, failOnError: Boolean = 
         }
 
         File(dir, "groups.json").writeText(json.encodeToString(groups))
-        File(dir, "teachers.json").writeText("[]")
 
         var groupCount = 0
+        val teacherSchedules = mutableMapOf<String, MutableMap<LocalDate, MutableList<LessonDto>>>()
         val semaphore = Semaphore(5)
 
         coroutineScope {
@@ -576,6 +576,25 @@ suspend fun syncRgups(client: HttpClient, rootDir: File, failOnError: Boolean = 
                                 val safeName = group.name.replace("/", "_").replace("\\", "_")
                                 File(groupsDir, "$safeName.json").writeText(json.encodeToString(schedule))
                                 synchronized(groupsDir) { groupCount++ }
+
+                                synchronized(teacherSchedules) {
+                                    schedule.forEach { daySchedule ->
+                                        daySchedule.lessons.forEach { lesson ->
+                                            lesson.otUnits.forEach { unit ->
+                                                val cleanTeacher = unit.teacher.replace(Regex("""\[.*?\]"""), "").trim()
+                                                if (cleanTeacher.isNotBlank() && cleanTeacher != "—") {
+                                                    val teacherDays = teacherSchedules.getOrPut(cleanTeacher) { mutableMapOf() }
+                                                    val dayLessons = teacherDays.getOrPut(daySchedule.date) { mutableListOf() }
+                                                    dayLessons.add(
+                                                        lesson.copy(
+                                                            otUnits = listOf(unit.copy(teacher = cleanTeacher, group = group.name))
+                                                        )
+                                                    )
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -583,14 +602,41 @@ suspend fun syncRgups(client: HttpClient, rootDir: File, failOnError: Boolean = 
             }.awaitAll()
         }
 
+        val teachersList = teacherSchedules.keys.sorted().map { TeacherDto(id = it, name = it) }
+        File(dir, "teachers.json").writeText(json.encodeToString(teachersList))
+
+        var teacherCount = 0
+        teacherSchedules.forEach { (teacherName, daysMap) ->
+            val teacherDays = daysMap.map { (date, lessons) ->
+                val merged = lessons
+                    .groupBy { Triple(it.number, it.startTime, it.subject) }
+                    .map { (_, groupLessons) ->
+                        val first = groupLessons.first()
+                        first.copy(
+                            otUnits = groupLessons.flatMap { it.otUnits }.distinct()
+                        )
+                    }
+                    .sortedWith(compareBy({ it.startTime }, { it.number }))
+                DayScheduleDto(
+                    date = date,
+                    scheduleType = LessonsScheduleTypeDto.COMMON,
+                    lessons = merged
+                )
+            }.sortedBy { it.date }
+
+            val safeTeacherId = teacherName.replace("/", "_").replace("\\", "_")
+            File(teachersDir, "$safeTeacherId.json").writeText(json.encodeToString(teacherDays))
+            teacherCount++
+        }
+
         val meta = InstitutionMeta(
             lastSync = nowStr,
             institution = "rgups",
             groupCount = groups.size,
-            teacherCount = 0
+            teacherCount = teachersList.size
         )
         File(dir, "meta.json").writeText(json.encodeToString(meta))
-        println("  [RGUPS] Sync complete! Saved $groupCount group schedules.")
+        println("  [RGUPS] Sync complete! Saved $groupCount group schedules and $teacherCount teacher schedules.")
     }.onFailure {
         println("  [RGUPS] Error syncing: ${it.message}")
         it.printStackTrace()

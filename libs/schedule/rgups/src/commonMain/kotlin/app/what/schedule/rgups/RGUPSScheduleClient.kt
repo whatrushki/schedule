@@ -37,6 +37,8 @@ class RGUPSScheduleClient(
     private var cachedGroups: List<RgupsGroup>? = null
     private val groupsMutex = Mutex()
 
+    private val cachedTeachers = mutableSetOf<String>()
+
     suspend fun getRgupsGroups(): List<RgupsGroup> {
         cachedGroups?.let { return it }
         return groupsMutex.withLock {
@@ -60,37 +62,40 @@ class RGUPSScheduleClient(
                 val faculties = RgupsHtmlParser.parseFaculties(initialHtml)
                 log?.invoke("Found ${faculties.size} faculties")
 
+                val eduTypes = listOf("internal", "distance")
                 val groupsFromAllFaculties = coroutineScope {
                     faculties.map { fac ->
                         async {
                             val facGroups = mutableListOf<RgupsGroup>()
-                            try {
-                                val courseResp = client.submitForm(
-                                    url = "$baseUrl/services/time/",
-                                    formParameters = parameters {
-                                        append("action", "course")
-                                        append("fac-id", fac.id)
-                                        append("edu-type", "internal")
-                                    }
-                                ).bodyAsText()
-                                val courses = RgupsHtmlParser.parseCourses(courseResp).ifEmpty { listOf(1, 2, 3, 4, 5) }
+                            for (eduType in eduTypes) {
+                                try {
+                                    val courseResp = client.submitForm(
+                                        url = "$baseUrl/services/time/",
+                                        formParameters = parameters {
+                                            append("action", "course")
+                                            append("fac-id", fac.id)
+                                            append("edu-type", eduType)
+                                        }
+                                    ).bodyAsText()
+                                    val courses = RgupsHtmlParser.parseCourses(courseResp).ifEmpty { listOf(1, 2, 3, 4, 5) }
 
-                                for (courseId in courses) {
-                                    try {
-                                        val groupsResp = client.submitForm(
-                                            url = "$baseUrl/services/time/",
-                                            formParameters = parameters {
-                                                append("action", "groups")
-                                                append("fac-id", fac.id)
-                                                append("course-id", courseId.toString())
-                                                append("edu-type", "internal")
-                                            }
-                                        ).bodyAsText()
-                                        val groups = RgupsHtmlParser.parseGroups(groupsResp, fac.id, courseId, "internal")
-                                        facGroups.addAll(groups)
-                                    } catch (_: Exception) {}
-                                }
-                            } catch (_: Exception) {}
+                                    for (courseId in courses) {
+                                        try {
+                                            val groupsResp = client.submitForm(
+                                                url = "$baseUrl/services/time/",
+                                                formParameters = parameters {
+                                                    append("action", "groups")
+                                                    append("fac-id", fac.id)
+                                                    append("course-id", courseId.toString())
+                                                    append("edu-type", eduType)
+                                                }
+                                            ).bodyAsText()
+                                            val groups = RgupsHtmlParser.parseGroups(groupsResp, fac.id, courseId, eduType)
+                                            facGroups.addAll(groups)
+                                        } catch (_: Exception) {}
+                                    }
+                                } catch (_: Exception) {}
+                            }
                             facGroups
                         }
                     }.awaitAll().flatten()
@@ -121,6 +126,18 @@ class RGUPSScheduleClient(
     }
 
     override suspend fun getTeachers(): List<TeacherDto> {
+        if (cachedTeachers.isNotEmpty()) {
+            return cachedTeachers.map { TeacherDto(id = it, name = it) }.sortedBy { it.name }
+        }
+        val cacheKey = "rgups_teachers.json"
+        val cachedBytes = fileCache.get(cacheKey)
+        if (cachedBytes != null) {
+            try {
+                val list = json.decodeFromString<List<TeacherDto>>(cachedBytes.decodeToString())
+                list.forEach { cachedTeachers.add(it.name) }
+                return list
+            } catch (_: Exception) {}
+        }
         return emptyList()
     }
 
@@ -141,7 +158,18 @@ class RGUPSScheduleClient(
             ).bodyAsText()
 
             val today = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).date
-            RgupsHtmlParser.parseTimetable(responseHtml, today)
+            val schedule = RgupsHtmlParser.parseTimetable(responseHtml, today, target.name)
+            schedule.forEach { day ->
+                day.lessons.forEach { lesson ->
+                    lesson.otUnits.forEach { unit ->
+                        val clean = unit.teacher.replace(Regex("""\[.*?\]"""), "").trim()
+                        if (clean.isNotBlank() && clean != "—") {
+                            cachedTeachers.add(clean)
+                        }
+                    }
+                }
+            }
+            schedule
         } catch (e: Exception) {
             log?.invoke("Error fetching RGUPS schedule for group $group: ${e.message}")
             emptyList()
