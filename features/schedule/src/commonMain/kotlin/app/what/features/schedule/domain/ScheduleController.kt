@@ -36,7 +36,7 @@ class ScheduleController(
         )
         
         ScheduleEvent.OnRefresh -> syncSchedule(viewState.selectedSearch, useCache = false, forceLive = true)
-        ScheduleEvent.OnRefreshSearches -> updateSearches()
+        ScheduleEvent.OnRefreshSearches -> updateSearches(showLoading = true, forceReload = true)
         is ScheduleEvent.OnSearchClicked -> {
             val isSameGroup = viewEvent.value == viewState.selectedSearch
             syncSchedule(viewEvent.value, useCache = !isSameGroup, forceLive = isSameGroup)
@@ -131,15 +131,21 @@ class ScheduleController(
         forceLive: Boolean = false
     ) {
         search ?: return
+        val currentInstitutionId = settings.institution.get()
+        val effectiveSearch = if (search.institutionId == null && currentInstitutionId != null) {
+            search.copy(institutionId = currentInstitutionId)
+        } else {
+            search
+        }
         val scheduleTag = buildTag(LogScope.SCHEDULE, LogCat.STATE)
-        val groupChanged = settings.lastSearch.get() != search
+        val groupChanged = settings.lastSearch.get() != effectiveSearch
         
-        settings.lastSearch.set(search)
+        settings.lastSearch.set(effectiveSearch)
         
         // 1. If cache is enabled, immediately display cached schedule with Loading state
         if (useCache) {
             val cached = apiRepository.getSchedule(
-                search,
+                effectiveSearch,
                 useCache = true,
                 requiresData = false,
                 cloudSync = false
@@ -147,7 +153,7 @@ class ScheduleController(
             if (cached is ScheduleResponse.Available && cached.schedules.isNotEmpty()) {
                 updateState {
                     copy(
-                        selectedSearch = search,
+                        selectedSearch = effectiveSearch,
                         schedules = cached.schedules,
                         scheduleState = RemoteState.Loading,
                         lastModified = cached.lastModified
@@ -156,7 +162,7 @@ class ScheduleController(
             } else {
                 updateState {
                     copy(
-                        selectedSearch = search,
+                        selectedSearch = effectiveSearch,
                         schedules = if (groupChanged) emptyList() else viewState.schedules,
                         scheduleState = RemoteState.Loading
                     )
@@ -165,7 +171,7 @@ class ScheduleController(
         } else {
             updateState {
                 copy(
-                    selectedSearch = search,
+                    selectedSearch = effectiveSearch,
                     schedules = if (groupChanged) emptyList() else viewState.schedules,
                     scheduleState = RemoteState.Loading
                 )
@@ -174,7 +180,7 @@ class ScheduleController(
         
         // 2. Fetch latest schedule with replacements from network
         val data = apiRepository.getSchedule(
-            search,
+            effectiveSearch,
             useCache = false,
             requiresData = viewState.schedules.isEmpty() || groupChanged,
             cloudSync = cloudSync,
@@ -224,7 +230,7 @@ class ScheduleController(
         }
     }
     
-    private fun updateSearches(showLoading: Boolean = true) {
+    private fun updateSearches(showLoading: Boolean = true, forceReload: Boolean = false) {
         viewModelScope.launchSafe(
             retryCount = 0,
             onFailure = {
@@ -240,8 +246,8 @@ class ScheduleController(
             }
             
             val (teachers, groups) = coroutineScope {
-                val ut = async { apiRepository.getTeachers().map { it.toScheduleSearch() } }
-                val ug = async { apiRepository.getGroups().map { it.toScheduleSearch() } }
+                val ut = async { apiRepository.getTeachers(forceReload = forceReload).map { it.toScheduleSearch() } }
+                val ug = async { apiRepository.getGroups(forceReload = forceReload).map { it.toScheduleSearch() } }
                 ut.await() to ug.await()
             }
             val data = (teachers + groups).distinctBy { "${it::class.simpleName}_${it.name.trim()}" }

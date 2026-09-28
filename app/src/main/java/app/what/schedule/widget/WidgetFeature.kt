@@ -76,8 +76,10 @@ class ScheduleWidgetReceiver : GlanceAppWidgetReceiver() {
     override val glanceAppWidget: GlanceAppWidget = ScheduleWidget()
 }
 
-private const val DAY_INDEX_KEY = "day_index"
+internal const val DAY_INDEX_KEY = "day_index"
 internal const val SEARCH_KEY = "search"
+internal const val INSTITUTION_ID_KEY = "institution_id"
+internal const val LAST_DATE_KEY = "last_date"
 private val MAX_PAGE_INDEX_KEY = ActionParameters.Key<Int>("max_index")
 
 class ScheduleWidget : GlanceAppWidget(), KoinComponent {
@@ -97,14 +99,33 @@ class ScheduleWidget : GlanceAppWidget(), KoinComponent {
 
         val prefs = getAppWidgetState(context, stateDefinition, id) as Preferences
         val search = prefs[stringPreferencesKey(SEARCH_KEY)]
+        val savedInstitutionId = prefs[stringPreferencesKey(INSTITUTION_ID_KEY)]
+        val lastDate = prefs[stringPreferencesKey(LAST_DATE_KEY)]
+        val todayStr = app.what.foundation.utils.currentLocalDate().toString()
+
+        if (lastDate != todayStr) {
+            try {
+                updateAppWidgetState(context, id) { currentPrefs ->
+                    currentPrefs[stringPreferencesKey(LAST_DATE_KEY)] = todayStr
+                    currentPrefs[intPreferencesKey(DAY_INDEX_KEY)] = 0
+                }
+            } catch (_: Exception) {
+            }
+        }
 
         val schedule: ScheduleResponse = if (search == null) {
             ScheduleResponse.Empty
         } else {
             try {
+                val decodedSearch = Json.decodeFromString<ScheduleSearch>(search)
+                val targetSearch = if (decodedSearch.institutionId == null && savedInstitutionId != null) {
+                    decodedSearch.copy(institutionId = savedInstitutionId)
+                } else {
+                    decodedSearch
+                }
                 withContext(IO) {
                     scheduleRepository.getSchedule(
-                        Json.decodeFromString<ScheduleSearch>(search),
+                        targetSearch,
                         useCache = true,
                         requiresData = true
                     )

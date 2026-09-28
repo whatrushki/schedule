@@ -11,6 +11,7 @@ import app.what.schedule.data.remote.providers.rgups_tuapse.RGUPSTuapse
 import app.what.schedule.data.remote.providers.rinh.RINH
 import app.what.schedule.data.remote.providers.rksi.RKSI
 import app.what.schedule.data.remote.providers.sfedu.SFEDU
+import app.what.schedule.data.remote.providers.tvgu.TvGU
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -73,7 +74,8 @@ val insts: List<Institution.Factory> by lazy {
         IUBIP.Factory,
         SFEDU.Factory,
         RGUPS.Factory,
-        RGUPSTuapse.Factory
+        RGUPSTuapse.Factory,
+        TvGU.Factory
     )
 }
 
@@ -105,6 +107,9 @@ class InstitutionManager(
     
     private var savedInstitution: Institution? = null
     fun getSavedInstitution(): Institution? = savedInstitution
+
+    fun getInstitution(id: String): Institution? =
+        institutions.firstOrNull { it.metadata.id == id }?.create()
     
     fun reset() {
         savedInstitution = null

@@ -19,6 +19,7 @@ import app.what.foundation.utils.LogScope
 import app.what.foundation.utils.buildTag
 import app.what.foundation.utils.currentLocalDate
 import app.what.schedule.data.local.settings.AppValues
+import app.what.schedule.data.remote.api.InstitutionManager
 import app.what.schedule.data.remote.utils.formatTime
 import app.what.schedule.features.widget.ScheduleWidget
 import kotlinx.datetime.DateTimeUnit
@@ -32,6 +33,7 @@ class ScheduleCheckWorker(
 ) : CoroutineWorker(context, params), KoinComponent {
 
     private val appValues: AppValues by inject()
+    private val institutionManager: InstitutionManager by inject()
     private val scheduleRepository: ScheduleRepository by inject()
 
     override suspend fun doWork(): Result {
@@ -44,12 +46,18 @@ class ScheduleCheckWorker(
         }
 
         val searchesToCheck = LinkedHashSet<ScheduleSearch>()
-        appValues.lastSearch.get()?.let { searchesToCheck.add(it) }
+        appValues.lastSearch.get()?.let { last ->
+            val enriched = if (last.institutionId == null) {
+                val currentInstId = institutionManager.getSavedInstitution()?.metadata?.id
+                last.copy(institutionId = currentInstId)
+            } else last
+            searchesToCheck.add(enriched)
+        }
 
         if (appValues.notifyFavoritesReplacements.get() == true) {
             try {
-                val favGroups = scheduleRepository.getGroups().filter { it.favorite }.map { it.toScheduleSearch() }
-                val favTeachers = scheduleRepository.getTeachers().filter { it.favorite }.map { it.toScheduleSearch() }
+                val favGroups = scheduleRepository.getAllFavoriteGroups().map { it.toScheduleSearch() }
+                val favTeachers = scheduleRepository.getAllFavoriteTeachers().map { it.toScheduleSearch() }
                 searchesToCheck.addAll(favGroups)
                 searchesToCheck.addAll(favTeachers)
             } catch (e: Exception) {
@@ -87,7 +95,7 @@ class ScheduleCheckWorker(
                     hasAnySuccess = true
 
                     val detection = ReplacementDetector.detect(
-                        searchId = search.id,
+                        searchId = "${search.institutionId ?: "default"}_${search.id}",
                         schedules = schedules,
                         today = today,
                         knownSignatures = currentSignatures,
@@ -107,7 +115,7 @@ class ScheduleCheckWorker(
                         today = today
                     )
 
-                    val notificationId = 2001 + (search.id.hashCode() and 0x7FFF)
+                    val notificationId = 2001 + ("${search.institutionId}_${search.id}".hashCode() and 0x7FFF)
                     NotificationHelper.showReplacementsNotification(
                         context = applicationContext,
                         title = formatted.title,
@@ -116,7 +124,7 @@ class ScheduleCheckWorker(
                         notificationId = notificationId
                     )
 
-                    Auditor.info(tag, "ScheduleCheckWorker: успешно отправлено уведомление для ${search.name} о ${detection.newReplacements.size} новых заменах")
+                    Auditor.info(tag, "ScheduleCheckWorker: успешно отправлено уведомление для ${search.name} (${search.institutionId}) о ${detection.newReplacements.size} новых заменах")
                 } catch (e: Exception) {
                     Auditor.debug(tag, "ScheduleCheckWorker: ошибка проверки для ${search.name}: ${e.message}")
                 }

@@ -83,6 +83,7 @@ val dataModule = module {
     singleOf(::GoogleDriveParser)
     single<FileCache> { InMemoryFileCache() }
     single { DGTUAccountClient(get()) }
+    single { app.what.schedule.rksi.RKSIAccountClient(get()) }
     
     single {
         val httpClient: HttpClient = get()

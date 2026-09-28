@@ -148,7 +148,7 @@ fun NewsDetailView(
     }
     Box {
         AsyncImageWithFallback(
-            url = state.newListInfo.bannerUrl,
+            url = state.newDetailInfo?.bannerUrl?.takeIf { it.isNotBlank() } ?: state.newListInfo.bannerUrl,
             enableDetailView = true,
             modifier = Modifier
                 .fillMaxWidth()
@@ -557,25 +557,28 @@ fun NewContentPainter(content: List<NewContent>) {
                         Column(
                             Modifier.padding(12.dp)
                         ) {
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween
-                            ) {
-                                AsyncImageWithFallback(
-                                    it.author.avatarUrl,
-                                    Modifier
-                                        .clip(shapes.medium)
-                                        .height(120.dp)
-                                        .aspectRatio(3 / 4f, true)
-                                )
+                            val hasAvatar = !it.author.avatarUrl.isNullOrBlank()
+                            if (hasAvatar) {
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    AsyncImageWithFallback(
+                                        it.author.avatarUrl,
+                                        Modifier
+                                            .clip(shapes.medium)
+                                            .height(120.dp)
+                                            .aspectRatio(3 / 4f, true)
+                                    )
+                                    
+                                    WHATIcons.Quote.Show(
+                                        colorScheme.tertiary, 48,
+                                        Modifier.wiggle(15f)
+                                    )
+                                }
                                 
-                                WHATIcons.Quote.Show(
-                                    colorScheme.tertiary, 48,
-                                    Modifier.wiggle(15f)
-                                )
+                                Gap(18)
                             }
-                            
-                            Gap(18)
                             
                             Text(
                                 it.data,
@@ -585,22 +588,29 @@ fun NewContentPainter(content: List<NewContent>) {
                                 fontWeight = FontWeight.Medium
                             )
                             
-                            Gap(20)
-                            
-                            Column {
-                                Text(
-                                    it.author.name,
-                                    color = colorScheme.onSurface,
-                                    fontSize = 16.sp,
-                                    fontWeight = FontWeight.SemiBold
-                                )
+                            val hasAuthorInfo = it.author.name.isNotBlank() || it.author.role.isNotBlank()
+                            if (hasAuthorInfo) {
+                                Gap(16)
                                 
-                                Text(
-                                    it.author.role,
-                                    color = colorScheme.secondary,
-                                    fontSize = 12.sp,
-                                    lineHeight = 14.sp
-                                )
+                                Column {
+                                    if (it.author.name.isNotBlank()) {
+                                        Text(
+                                            it.author.name,
+                                            color = colorScheme.onSurface,
+                                            fontSize = 16.sp,
+                                            fontWeight = FontWeight.SemiBold
+                                        )
+                                    }
+                                    
+                                    if (it.author.role.isNotBlank()) {
+                                        Text(
+                                            it.author.role,
+                                            color = colorScheme.secondary,
+                                            fontSize = 12.sp,
+                                            lineHeight = 14.sp
+                                        )
+                                    }
+                                }
                             }
                         }
                     }

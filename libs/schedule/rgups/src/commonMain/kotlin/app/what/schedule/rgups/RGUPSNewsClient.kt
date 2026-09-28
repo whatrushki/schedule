@@ -207,6 +207,43 @@ class RGUPSNewsClient(
             blocks.add(NewContentBlockDto.ImageCarousel(trailingImages))
         }
 
+        // Remove duplicated title at the beginning of content if present
+        if (title.isNotBlank() && blocks.isNotEmpty()) {
+            fun normalizeForComparison(s: String) = s.lowercase()
+                .replace(Regex("""[«»"“”',.!?:;\-\s]+"""), "")
+                .trim()
+
+            val cleanTitle = normalizeForComparison(title)
+            if (cleanTitle.isNotEmpty()) {
+                val firstTextIdx = blocks.indexOfFirst { it is NewContentBlockDto.Text || it is NewContentBlockDto.Subtitle }
+                if (firstTextIdx != -1) {
+                    val block = blocks[firstTextIdx]
+                    val blockText = when (block) {
+                        is NewContentBlockDto.Text -> Ksoup.parseBodyFragment(block.html).text().trim()
+                        is NewContentBlockDto.Subtitle -> block.text.trim()
+                        else -> ""
+                    }
+                    val cleanBlock = normalizeForComparison(blockText)
+                    if (cleanBlock.isNotEmpty()) {
+                        if (cleanTitle == cleanBlock || 
+                            (cleanBlock.startsWith(cleanTitle) && cleanBlock.length <= cleanTitle.length + 15) ||
+                            (cleanTitle.startsWith(cleanBlock) && cleanTitle.length <= cleanBlock.length + 15)) {
+                            blocks.removeAt(firstTextIdx)
+                        } else if (cleanBlock.startsWith(cleanTitle)) {
+                            val rawClean = Ksoup.parseBodyFragment(blockText).text().trim()
+                            val afterTitle = rawClean.removePrefix(title).trim()
+                                .removePrefix(".").removePrefix(":").removePrefix("-").removePrefix("—").trim()
+                            if (afterTitle.isNotEmpty()) {
+                                blocks[firstTextIdx] = NewContentBlockDto.Text(afterTitle)
+                            } else {
+                                blocks.removeAt(firstTextIdx)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         val fullText = blocks.filterIsInstance<NewContentBlockDto.Text>().joinToString("\n\n") { it.html }
 
         if (blocks.isEmpty() && fullText.isNotEmpty()) {
@@ -274,10 +311,15 @@ class RGUPSNewsClient(
             currentParagraph = StringBuilder()
         }
 
-        val bulletRegex = Regex("""^[-—–•*]\s*(.+)""")
-        val numberRegex = Regex("""^(\d+)[\.)]\s*(.+)""")
+        val bulletRegex = Regex("""^(?:[•*]|[-—–](?![-—–]))\s+(.+)""")
+        val numberRegex = Regex("""^(\d{1,3})[\.)]\s+(.+)""")
 
-        for (line in rawLines) {
+        for (rawLine in rawLines) {
+            val line = if (rawLine.startsWith("--")) {
+                "— " + rawLine.removePrefix("--").trimStart()
+            } else {
+                rawLine
+            }
             val lineClean = Ksoup.parseBodyFragment(line).text().replace("\u00A0", " ").trim()
             if (lineClean.isEmpty()) {
                 flushParagraph()
@@ -285,8 +327,14 @@ class RGUPSNewsClient(
                 continue
             }
 
-            val bulletMatch = bulletRegex.find(line)
-            val numberMatch = numberRegex.find(line)
+            val hasLinksOrMedia = line.contains("<a ", ignoreCase = true) || 
+                                  line.contains("<iframe", ignoreCase = true) || 
+                                  line.contains("<video", ignoreCase = true)
+
+            val isDateAtStart = Regex("""^\d{1,2}\.\d{1,2}(\.\d{2,4})?(\s*г\.?|\s*года)?\b""").containsMatchIn(lineClean)
+
+            val bulletMatch = if (!hasLinksOrMedia) bulletRegex.find(line) else null
+            val numberMatch = if (!hasLinksOrMedia && !isDateAtStart) numberRegex.find(line) else null
 
             if (bulletMatch != null) {
                 flushParagraph()

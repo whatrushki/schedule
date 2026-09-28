@@ -83,7 +83,9 @@ import app.what.schedule.features.insts.dgtu.domain.models.DgtuEvent
 import app.what.schedule.features.insts.dgtu.domain.models.DgtuState
 import app.what.schedule.features.insts.dgtu.domain.models.EventListItem
 import app.what.schedule.features.insts.dgtu.domain.models.Notification
-import app.what.schedule.features.insts.dgtu.presentation.components.InfoBlock
+import app.what.features.account.components.InfoBlock
+import app.what.features.account.components.KeyValueList
+import app.what.features.account.components.NewItemView
 import app.what.schedule.ui.components.AsyncImageWithFallback
 import app.what.schedule.ui.theme.icons.WHATIcons
 import app.what.schedule.ui.theme.icons.filled.Features
@@ -331,6 +333,7 @@ internal fun DGTUMainScreen(
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             modifier = Modifier
                 .fillMaxWidth()
+                .height(IntrinsicSize.Min)
                 .padding(horizontal = 12.dp)
         ) {
             InfoBlock(
@@ -338,7 +341,7 @@ internal fun DGTUMainScreen(
                 icon = WHATIcons.Features,
                 title = "Зачетка",
                 description = "Оценки и сессии",
-                modifier = Modifier.weight(1f)
+                modifier = Modifier.weight(1f).fillMaxHeight()
             ) {
                 listener(DgtuEvent.ZachBookOpened)
                 dialog.open(true) {
@@ -351,7 +354,7 @@ internal fun DGTUMainScreen(
                 icon = Icons.Default.Mail,
                 title = "Почта",
                 description = "stud.edu.ru",
-                modifier = Modifier.weight(1f)
+                modifier = Modifier.weight(1f).fillMaxHeight()
             ) {
                 listener(DgtuEvent.MailsOpened)
                 dialog.open(true) {
@@ -500,45 +503,7 @@ fun StudentDetail(
     )
 }
 
-@Composable
-private fun KeyValueList(
-    items: List<Pair<String, String>>
-) {
-    Column(
-        modifier = Modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
-    ) {
-        items.forEach { (key, value) ->
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = key,
-                    style = typography.bodyMedium,
-                    color = colorScheme.onSurfaceVariant
-                )
-                
-                Text(
-                    text = value,
-                    style = typography.bodyLarge,
-                    fontWeight = FontWeight.Medium,
-                    color = colorScheme.onSurface,
-                    textAlign = TextAlign.End,
-                    modifier = Modifier.weight(1f, fill = false)
-                )
-            }
-            
-            if (items.last().first != key) {
-                HorizontalDivider(
-                    color = colorScheme.outlineVariant.copy(alpha = 0.3f),
-                    thickness = 1.dp
-                )
-            }
-        }
-    }
-}
+
 
 fun getCategoryIcon(category: String): ImageVector = when (category) {
     "Журналы" -> WHATIcons.Run // Книга, как на фото
@@ -814,52 +779,7 @@ fun EventListItemView(data: EventListItem, index: Int, onClick: () -> Unit) =
         }
     }
 
-@Composable
-fun NewItemView(data: NewListItem, modifier: Modifier = Modifier, onClick: () -> Unit) = Box(
-    modifier
-        .width(230.dp)
-        .clip(shapes.large)
-        .background(colorScheme.surfaceContainer)
-        .bclick(block = onClick)
-) {
-    data.tags.firstOrNull()?.let { tag ->
-        FilterChip(
-            true, {},
-            label = { Text(tag.name) },
-            modifier = Modifier
-                .zIndex(2f)
-                .padding(top = 8.dp, start = 8.dp)
-        )
-    }
-    
-    Column {
-        AsyncImageWithFallback(
-            data.bannerUrl,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(140.dp)
-        )
-        
-        Column(
-            Modifier.padding(12.dp)
-        ) {
-            Text(
-                DateTimeUtils.formatDate(data.timestamp),
-                fontSize = 14.sp,
-                color = colorScheme.onSurfaceVariant
-            )
-            
-            Text(
-                data.title,
-                fontSize = 14.sp,
-                lineHeight = 18.sp,
-                fontWeight = FontWeight.Medium,
-                maxLines = 2,
-                color = colorScheme.onSurface
-            )
-        }
-    }
-}
+
 
 private fun formatEventDate(start: LocalDateTime, end: LocalDateTime?): String {
     val dayMonth = DateTimeUtils.formatShortDate(start.date).replaceFirstChar { it.uppercase() }

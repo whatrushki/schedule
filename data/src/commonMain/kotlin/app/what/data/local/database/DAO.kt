@@ -160,6 +160,9 @@ interface GroupsDAO {
     @Query("SELECT * FROM `groups` WHERE  `groups`.institutionId = :institutionId AND `groups`.name = :name")
     suspend fun selectByName(institutionId: String, name: String): GroupDBO?
     
+    @Query("SELECT * FROM `groups` WHERE `groups`.favorite = 1")
+    suspend fun selectAllFavorites(): List<GroupDBO>
+
     @Query("SELECT * FROM `groups` WHERE `groups`.year = :year")
     suspend fun selectByYear(year: Int): GroupDBO
     
@@ -180,6 +183,9 @@ interface TeachersDAO {
     
     @Query("SELECT * FROM teachers WHERE teachers.institutionId = :institutionId")
     suspend fun selectByInstitution(institutionId: String): List<TeacherDBO>
+
+    @Query("SELECT * FROM teachers WHERE teachers.favorite = 1")
+    suspend fun selectAllFavorites(): List<TeacherDBO>
     
     @Query("SELECT * FROM teachers WHERE teachers.id = :id")
     suspend fun selectById(id: Long): TeacherDBO

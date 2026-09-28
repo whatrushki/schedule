@@ -34,6 +34,7 @@ kotlin {
             implementation(project(":libs:schedule:sfedu"))
             implementation(project(":libs:schedule:rgups"))
             implementation(project(":libs:schedule:rgups_tuapse"))
+            implementation(project(":libs:schedule:tvgu"))
 
             implementation(compose.runtime)
             implementation(compose.foundation)

@@ -28,6 +28,8 @@ kotlin {
             api(libs.compose.foundation)
             api(libs.foundation.navigation)
             implementation(project(":libs:schedule:dgtu"))
+            implementation(project(":libs:schedule:rksi"))
+            implementation(project(":libs:schedule:core"))
             implementation(project(":features:schedule"))
             implementation(project(":features:news"))
 

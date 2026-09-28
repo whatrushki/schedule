@@ -9,8 +9,10 @@ import kotlinx.coroutines.flow.Flow
 
 interface ScheduleRepository {
     val scheduleUpdates: Flow<ScheduleSearch>
-    suspend fun getGroups(): List<Group>
-    suspend fun getTeachers(): List<Teacher>
+    suspend fun getGroups(institutionId: String? = null, forceReload: Boolean = false): List<Group>
+    suspend fun getTeachers(institutionId: String? = null, forceReload: Boolean = false): List<Teacher>
+    suspend fun getAllFavoriteGroups(): List<Group> = emptyList()
+    suspend fun getAllFavoriteTeachers(): List<Teacher> = emptyList()
     suspend fun toggleFavorites(value: ScheduleSearch.Group)
     suspend fun toggleFavorites(value: ScheduleSearch.Teacher)
     suspend fun findSearchId(search: ScheduleSearch?): String?

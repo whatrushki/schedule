@@ -174,6 +174,9 @@ private class InMemoryGroupsDAO : GroupsDAO {
     override suspend fun selectByInstitution(institutionId: String): List<GroupDBO> =
         groups.values.filter { it.institutionId == institutionId }
 
+    override suspend fun selectAllFavorites(): List<GroupDBO> =
+        groups.values.filter { it.favorite }
+
     override suspend fun selectById(id: Long): GroupDBO = groups[id] ?: error("Group not found")
 
     override suspend fun selectByGroupId(institutionId: String, id: String): GroupDBO? =
@@ -214,6 +217,9 @@ private class InMemoryTeachersDAO : TeachersDAO {
 
     override suspend fun selectByInstitution(institutionId: String): List<TeacherDBO> =
         teachers.values.filter { it.institutionId == institutionId }
+
+    override suspend fun selectAllFavorites(): List<TeacherDBO> =
+        teachers.values.filter { it.favorite }
 
     override suspend fun selectById(id: Long): TeacherDBO = teachers[id] ?: error("Teacher not found")
 

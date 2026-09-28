@@ -86,7 +86,9 @@ data class OneTimeUnitDto(
     val teacher: String,
     val group: String,
     val room: String,
-    val additional: String = ""
+    val additional: String = "",
+    val onlineUrl: String? = null,
+    val subject: String? = null
 )
 
 @Serializable
@@ -146,3 +148,108 @@ sealed interface SearchTargetDto {
     @Serializable
     data class Teacher(override val id: String, override val name: String) : SearchTargetDto
 }
+
+@Serializable
+enum class AccountCapability {
+    PROFILE,
+    EDIT_PROFILE,
+    ENQUIRIES,
+    PAYMENT_QR,
+    RE_ATTESTATION,
+    ELECTRONIC_PASS,
+    GRADES_BOOK,
+    INTERNAL_MAIL,
+    EVENTS
+}
+
+@Serializable
+data class AccountProfileDto(
+    val fullName: String,
+    val name: String,
+    val surname: String,
+    val middleName: String? = null,
+    val group: String,
+    val specialty: String? = null,
+    val curator: String? = null,
+    val curatorPhone: String? = null,
+    val photoUrl: String? = null,
+    val educationForm: String? = null,
+    val healthGroup: String? = null,
+    val socialStatus: String? = null,
+    val extraDetails: Map<String, String> = emptyMap()
+)
+
+@Serializable
+data class EnquiryItemDto(
+    val title: String,
+    val status: String,
+    val orderDate: String,
+    val pickupLocation: String,
+    val count: Int
+)
+
+@Serializable
+data class EnquiryTypeDto(
+    val id: String,
+    val title: String,
+    val description: String? = null
+)
+
+@Serializable
+data class ReAttestationItemDto(
+    val discipline: String,
+    val teacher: String,
+    val issueDate: String,
+    val deadlineDate: String
+)
+
+@Serializable
+data class PaymentTargetOptionDto(
+    val id: String,
+    val title: String
+)
+
+@Serializable
+data class PaymentYearOptionDto(
+    val id: String,
+    val title: String
+)
+
+@Serializable
+data class PaymentPeriodOptionDto(
+    val id: String,
+    val title: String
+)
+
+@Serializable
+data class PaymentQrConfigDto(
+    val targets: List<PaymentTargetOptionDto>,
+    val years: List<PaymentYearOptionDto>,
+    val periods: List<PaymentPeriodOptionDto>
+)
+
+@Serializable
+data class ProfileInputFieldDto(
+    val id: String,
+    val name: String,
+    val label: String,
+    val value: String,
+    val type: String = "text",
+    val options: List<Pair<String, String>> = emptyList(),
+    val isRequired: Boolean = false,
+    val isReadOnly: Boolean = false
+)
+
+@Serializable
+data class ProfileSectionDto(
+    val title: String,
+    val fields: List<ProfileInputFieldDto>
+)
+
+@Serializable
+data class SocialStatusOptionDto(
+    val id: String,
+    val title: String,
+    val isChecked: Boolean
+)
+

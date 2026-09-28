@@ -12,13 +12,15 @@ import app.what.domain.models.Teacher
 fun TeacherDBO.toModel() = Teacher(
     name = name,
     id = teacherId,
-    favorite = favorite
+    favorite = favorite,
+    institutionId = institutionId
 )
 
 fun GroupDBO.toModel() = Group(
     name = name,
     id = groupId,
-    favorite = favorite
+    favorite = favorite,
+    institutionId = institutionId
 )
 
 fun DayScheduleSDBO.toModel() = DaySchedule(
@@ -38,7 +40,9 @@ fun DayScheduleSDBO.toModel() = DaySchedule(
                     group = it.group.toModel(),
                     teacher = it.teacher.toModel(),
                     building = it.unit.building,
-                    auditory = it.unit.auditory
+                    auditory = it.unit.auditory,
+                    onlineUrl = it.unit.onlineUrl,
+                    subject = it.unit.subject
                 )
             }
         )

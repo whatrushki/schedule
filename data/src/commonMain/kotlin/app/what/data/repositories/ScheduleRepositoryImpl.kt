@@ -33,8 +33,8 @@ class ScheduleRepositoryImpl(
     override suspend fun toggleFavorites(value: ScheduleSearch.Group) {
         val dbTag = buildTag(LogScope.DATABASE, LogCat.DB)
         Auditor.debug(dbTag, "Переключение избранного для группы: ${value.id}")
-        
-        val group = db.groupsDao.selectByGroupId(getFilialId(), value.id) ?: run {
+        val filialId = value.institutionId ?: getFilialId()
+        val group = db.groupsDao.selectByGroupId(filialId, value.id) ?: run {
             Auditor.warn(dbTag, "Группа ${value.id} не найдена в БД для переключения избранного")
             return
         }
@@ -49,8 +49,8 @@ class ScheduleRepositoryImpl(
     override suspend fun toggleFavorites(value: ScheduleSearch.Teacher) {
         val dbTag = buildTag(LogScope.DATABASE, LogCat.DB)
         Auditor.debug(dbTag, "Переключение избранного для преподавателя: ${value.id}")
-        
-        val teacher = db.teachersDao.selectByTeacherId(getFilialId(), value.id) ?: run {
+        val filialId = value.institutionId ?: getFilialId()
+        val teacher = db.teachersDao.selectByTeacherId(filialId, value.id) ?: run {
             Auditor.warn(dbTag, "Преподаватель ${value.id} не найден в БД для переключения избранного")
             return
         }
@@ -62,90 +62,128 @@ class ScheduleRepositoryImpl(
         )
     }
     
-    override suspend fun getGroups(): List<Group> {
+    private val syncedCatalogs = mutableSetOf<String>()
+
+    override suspend fun getGroups(institutionId: String?, forceReload: Boolean): List<Group> {
+        val targetApi = (institutionId?.let { institutionManager.getInstitution(it) }) ?: api
+        val targetFilialId = targetApi.metadata.id
         val dbTag = buildTag(LogScope.DATABASE, LogCat.DB)
+        val syncKey = "$targetFilialId:groups"
+        val needsSync = forceReload || !syncedCatalogs.contains(syncKey)
+        
+        if (needsSync) {
+            Auditor.debug(dbTag, "Синхронизация каталога групп из API/Cloud для $targetFilialId (force=$forceReload)")
+            val fetched = try {
+                targetApi.scheduleService.getGroups()
+            } catch (e: Exception) {
+                Auditor.err(dbTag, "Ошибка при загрузке групп из API для $targetFilialId", e)
+                emptyList()
+            }
+            if (fetched.isNotEmpty()) {
+                val seenNames = mutableSetOf<String>()
+                val seenIds = mutableSetOf<String>()
+                val uniqueFetched = mutableListOf<Group>()
+                for (g in fetched) {
+                    val trimmedName = g.name.trim()
+                    val id = if (g.id.trim().isNotEmpty()) g.id.trim() else trimmedName
+                    if (trimmedName.isNotEmpty() && seenNames.add(trimmedName) && seenIds.add(id)) {
+                        uniqueFetched.add(g.copy(name = trimmedName, id = id, institutionId = targetFilialId))
+                    }
+                }
+                val toInsert = uniqueFetched.map {
+                    GroupDBO(
+                        institutionId = targetFilialId,
+                        name = it.name,
+                        groupId = it.id,
+                        year = it.year
+                    )
+                }
+                db.groupsDao.insert(toInsert)
+                syncedCatalogs.add(syncKey)
+                Auditor.debug(dbTag, "Загружено и сохранено групп в БД: ${uniqueFetched.size}")
+            }
+        }
+        
         val groups = db.groupsDao
-            .selectByInstitution(getFilialId())
+            .selectByInstitution(targetFilialId)
             .map { it.toModel() }
             .distinctBy { it.name.trim() }
-        
-        return if (groups.isEmpty()) {
-            Auditor.debug(dbTag, "Группы не найдены в БД, загрузка из API")
-            val institutionId = getFilialId()
-            val fetched = api.scheduleService.getGroups()
-            val seenNames = mutableSetOf<String>()
-            val seenIds = mutableSetOf<String>()
-            val uniqueFetched = mutableListOf<Group>()
-            for (g in fetched) {
-                val trimmedName = g.name.trim()
-                val id = if (g.id.trim().isNotEmpty()) g.id.trim() else trimmedName
-                if (trimmedName.isNotEmpty() && seenNames.add(trimmedName) && seenIds.add(id)) {
-                    uniqueFetched.add(g.copy(name = trimmedName, id = id))
-                }
-            }
-            val toInsert = uniqueFetched.map {
-                GroupDBO(
-                    institutionId = institutionId,
-                    name = it.name,
-                    groupId = it.id,
-                    year = it.year
-                )
-            }
-            db.groupsDao.insert(toInsert)
-            Auditor.debug(dbTag, "Загружено групп из API: ${uniqueFetched.size}")
-            uniqueFetched
-        } else {
-            Auditor.debug(dbTag, "Группы загружены из БД: ${groups.size}")
-            groups
-        }
+            .sortedBy { it.name }
+        Auditor.debug(dbTag, "Группы отданы из БД: ${groups.size}")
+        return groups
     }
     
-    override suspend fun getTeachers(): List<Teacher> {
+    override suspend fun getTeachers(institutionId: String?, forceReload: Boolean): List<Teacher> {
+        val targetApi = (institutionId?.let { institutionManager.getInstitution(it) }) ?: api
+        val targetFilialId = targetApi.metadata.id
         val dbTag = buildTag(LogScope.DATABASE, LogCat.DB)
+        val syncKey = "$targetFilialId:teachers"
+        val needsSync = forceReload || !syncedCatalogs.contains(syncKey)
+        
+        if (needsSync) {
+            Auditor.debug(dbTag, "Синхронизация каталога преподавателей из API/Cloud для $targetFilialId (force=$forceReload)")
+            val fetched = try {
+                targetApi.scheduleService.getTeachers()
+            } catch (e: Exception) {
+                Auditor.err(dbTag, "Ошибка при загрузке преподавателей из API для $targetFilialId", e)
+                emptyList()
+            }
+            if (fetched.isNotEmpty()) {
+                val seenNames = mutableSetOf<String>()
+                val seenIds = mutableSetOf<String>()
+                val uniqueFetched = mutableListOf<Teacher>()
+                for (t in fetched) {
+                    val trimmedName = t.name.trim()
+                    val id = if (t.id.trim().isNotEmpty()) t.id.trim() else trimmedName
+                    if (trimmedName.isNotEmpty() && seenNames.add(trimmedName) && seenIds.add(id)) {
+                        uniqueFetched.add(t.copy(name = trimmedName, id = id, institutionId = targetFilialId))
+                    }
+                }
+                val toInsert = uniqueFetched.map {
+                    TeacherDBO(
+                        institutionId = targetFilialId,
+                        name = it.name,
+                        teacherId = it.id
+                    )
+                }
+                db.teachersDao.insert(toInsert)
+                syncedCatalogs.add(syncKey)
+                Auditor.debug(dbTag, "Загружено и сохранено преподавателей в БД: ${uniqueFetched.size}")
+            }
+        }
+        
         val teachers = db.teachersDao
-            .selectByInstitution(getFilialId())
+            .selectByInstitution(targetFilialId)
             .map { it.toModel() }
             .distinctBy { it.name.trim() }
-        
-        return if (teachers.isEmpty()) {
-            Auditor.debug(dbTag, "Преподаватели не найдены в БД, загрузка из API")
-            val institutionId = getFilialId()
-            val fetched = api.scheduleService.getTeachers()
-            val seenNames = mutableSetOf<String>()
-            val seenIds = mutableSetOf<String>()
-            val uniqueFetched = mutableListOf<Teacher>()
-            for (t in fetched) {
-                val trimmedName = t.name.trim()
-                val id = if (t.id.trim().isNotEmpty()) t.id.trim() else trimmedName
-                if (trimmedName.isNotEmpty() && seenNames.add(trimmedName) && seenIds.add(id)) {
-                    uniqueFetched.add(t.copy(name = trimmedName, id = id))
-                }
-            }
-            val toInsert = uniqueFetched.map {
-                TeacherDBO(
-                    institutionId = institutionId,
-                    name = it.name,
-                    teacherId = it.id
-                )
-            }
-            db.teachersDao.insert(toInsert)
-            Auditor.debug(dbTag, "Загружено преподавателей из API: ${uniqueFetched.size}")
-            uniqueFetched
-        } else {
-            Auditor.debug(dbTag, "Преподаватели загружены из БД: ${teachers.size}")
-            teachers
-        }
+            .sortedBy { it.name }
+        Auditor.debug(dbTag, "Преподаватели отданы из БД: ${teachers.size}")
+        return teachers
+    }
+
+    override suspend fun getAllFavoriteGroups(): List<Group> {
+        return db.groupsDao.selectAllFavorites().map { it.toModel() }
+    }
+
+    override suspend fun getAllFavoriteTeachers(): List<Teacher> {
+        return db.teachersDao.selectAllFavorites().map { it.toModel() }
     }
     
     override suspend fun findSearchId(search: ScheduleSearch?): String? = when (search) {
-        is ScheduleSearch.Group -> db.groupsDao.selectByGroupId(getFilialId(), search.id)?.groupId
-            ?: db.groupsDao.selectByName(getFilialId(), search.name)?.groupId
+        is ScheduleSearch.Group -> {
+            val filialId = search.institutionId ?: getFilialId()
+            db.groupsDao.selectByGroupId(filialId, search.id)?.groupId
+                ?: db.groupsDao.selectByName(filialId, search.name)?.groupId
+        }
         
-        is ScheduleSearch.Teacher -> db.teachersDao.selectByTeacherId(
-            getFilialId(),
-            search.id
-        )?.teacherId
-            ?: db.teachersDao.selectByName(getFilialId(), search.name)?.teacherId
+        is ScheduleSearch.Teacher -> {
+            val filialId = search.institutionId ?: getFilialId()
+            db.teachersDao.selectByTeacherId(
+                filialId,
+                search.id
+            )?.teacherId
+                ?: db.teachersDao.selectByName(filialId, search.name)?.teacherId
+        }
         
         null -> null
     }
@@ -157,18 +195,21 @@ class ScheduleRepositoryImpl(
         cloudSync: Boolean,
         forceLive: Boolean
     ): ScheduleResponse {
+        val targetApi = (search.institutionId?.let { institutionManager.getInstitution(it) }) ?: api
+        val targetFilialId = targetApi.metadata.id
+
         Analytics.logScheduleRequest(search.name, search::class.simpleName.toString())
         val scheduleTag = buildTag(LogScope.SCHEDULE, LogCat.DB)
         val searchType = if (search is ScheduleSearch.Group) "группа" else "преподаватель"
         Auditor.debug(
             scheduleTag,
-            "Запрос расписания для $searchType: ${search.id}, кеш: $useCache, требуются данные: $requiresData, forceLive: $forceLive"
+            "Запрос расписания для $searchType: ${search.id} ($targetFilialId), кеш: $useCache, требуются данные: $requiresData, forceLive: $forceLive"
         )
         
-        Auditor.debug(scheduleTag, "search_type=$searchType, search_id=${search.id}")
+        Auditor.debug(scheduleTag, "search_type=$searchType, search_id=${search.id}, institution=$targetFilialId")
         
-        val lastRequest = db.requestsDao.selectLastOfInstitution(getFilialId())
-        val cache: RequestSDBO? = db.requestsDao.selectLastWithData(getFilialId(), search.id)
+        val lastRequest = db.requestsDao.selectLastOfInstitution(targetFilialId)
+        val cache: RequestSDBO? = db.requestsDao.selectLastWithData(targetFilialId, search.id)
 
         val additional = mutableMapOf<String, Any?>()
         if (cloudSync && lastRequest != null) {
@@ -190,7 +231,7 @@ class ScheduleRepositoryImpl(
         }
 
         val netTag = buildTag(LogScope.NETWORK, LogCat.NET)
-        Auditor.debug(netTag, "Запрос данных из сети для $searchType: ${search.id}")
+        Auditor.debug(netTag, "Запрос данных из сети для $searchType: ${search.id} ($targetFilialId)")
 
         if (connectivity?.isConnected() == false) {
             Auditor.debug(netTag, "Нет подключения к сети, отдаём кэш без сетевого запроса")
@@ -204,20 +245,20 @@ class ScheduleRepositoryImpl(
 
         val response = try {
             when (search) {
-                is ScheduleSearch.Group -> api.scheduleService.getGroupSchedule(
+                is ScheduleSearch.Group -> targetApi.scheduleService.getGroupSchedule(
                     group = search.id,
                     showReplacements = true,
                     additional = additional
                 )
 
-                is ScheduleSearch.Teacher -> api.scheduleService.getTeacherSchedule(
+                is ScheduleSearch.Teacher -> targetApi.scheduleService.getTeacherSchedule(
                     teacher = search.id,
                     showReplacements = true,
                     additional = additional
                 )
             }
         } catch (e: Exception) {
-            Auditor.err(netTag, "Ошибка сети при запросе расписания", e)
+            Auditor.err(netTag, "Ошибка сети при запросе расписания ($targetFilialId)", e)
             val cachedSchedules = cache?.daySchedules?.map { it.toModel() }
             return ScheduleResponse.Error(
                 cachedSchedules = cachedSchedules,
@@ -233,7 +274,7 @@ class ScheduleRepositoryImpl(
                     "Получены новые данные из источника: дней=${response.schedules.size}"
                 )
                 saveRequest(
-                    getFilialId(),
+                    targetFilialId,
                     search.id,
                     response.lastModified,
                     response.schedules
@@ -331,7 +372,9 @@ class ScheduleRepositoryImpl(
                                 groupId = groupId,
                                 teacherId = teacherId,
                                 auditory = otUnit.auditory,
-                                building = otUnit.building
+                                building = otUnit.building,
+                                onlineUrl = otUnit.onlineUrl,
+                                subject = otUnit.subject
                             )
                         )
                     }

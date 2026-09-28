@@ -100,20 +100,27 @@ class MainFeature(
     
     @Composable
     override fun content(modifier: Modifier) {
+        val state = controller.collectStates()
         val navigator = rememberHostNavigator()
         val appValues = rememberAppValues()
         val devFeaturesEnabled by appValues.devPanelEnabled.collect()
+        val currentInstitution by appValues.institution.collect()
         val dgtuToken by appValues.dgtuToken.collect()
-        val isDgtuAuthorized = controller.getState().hasProfilePage && dgtuToken != null
+        val rksiCookies by appValues.rksiCookies.collect()
+        val isAccountAuthorized = state.value.hasProfilePage && when (currentInstitution?.lowercase()) {
+            "dgtu" -> !dgtuToken.isNullOrBlank()
+            "rksi" -> !rksiCookies.isNullOrBlank()
+            else -> false
+        }
 
-        val screens = remember(isDgtuAuthorized, controller.getState().hasProfilePage) {
+        val screens = remember(isAccountAuthorized, state.value.hasProfilePage) {
             buildList {
-                if (!isDgtuAuthorized && app.what.foundation.utils.currentPlatform != app.what.foundation.utils.PlatformType.Wasm) {
+                if (!isAccountAuthorized && app.what.foundation.utils.currentPlatform != app.what.foundation.utils.PlatformType.Wasm) {
                     add(navItem("Новости", WHATIcons.News, NewsProvider))
                 }
                 add(navItem("Расписание", Icons.Default.DateRange, ScheduleProvider()))
                 add(navItem("Настройки", Icons.Default.Settings, SettingsProvider))
-                if (controller.getState().hasProfilePage) {
+                if (state.value.hasProfilePage) {
                     add(0, navItem("Профиль", WHATIcons.Person, AccountProvider))
                 }
             }

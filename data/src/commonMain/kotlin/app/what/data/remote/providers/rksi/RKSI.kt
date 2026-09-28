@@ -12,6 +12,7 @@ import app.what.schedule.rksi.RKSIProvider
 import io.ktor.client.HttpClient
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.get
+import org.koin.core.qualifier.named
 
 private val RKSIMetadata
     get() = MetaInfo(
@@ -42,5 +43,6 @@ class RKSI(
     override val metadata: MetaInfo = Factory.metadata
     override val scheduleService: ScheduleService = AdaptedScheduleService(provider.scheduleClient, cloudClient)
     override val newsService: NewsService = AdaptedNewsService(provider.newsClient)
-    override val accountFeature: Feature<*, *>? = null
+    override val accountFeature: Feature<*, *>?
+        get() = getKoin().getOrNull(named("rksiAccount"))
 }

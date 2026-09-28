@@ -26,7 +26,7 @@ class RKSIProvider(
         description = "Ростовский-на-Дону Колледж Связи и Информатики",
         sourceTypes = setOf(SourceTypeDto.PARSER, SourceTypeDto.EXCEL),
         sourceUrl = "https://rksi.ru/mobile_schedule",
-        hasAccountService = false
+        hasAccountService = true
     )
 
     override val scheduleClient: ScheduleClient = RKSIScheduleClient(
@@ -38,6 +38,11 @@ class RKSIProvider(
     )
 
     override val newsClient: NewsClient = RKSINewsClient(
+        client = client,
+        baseUrl = baseUrl
+    )
+
+    val accountClient: RKSIAccountClient = RKSIAccountClient(
         client = client,
         baseUrl = baseUrl
     )

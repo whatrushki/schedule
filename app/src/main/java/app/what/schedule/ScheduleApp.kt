@@ -50,6 +50,8 @@ import app.what.schedule.notifications.NotificationHelper
 import app.what.schedule.notifications.ScheduleWorkManager
 import org.koin.dsl.module
 import java.util.UUID
+import kotlin.time.Duration.Companion.milliseconds
+import kotlin.time.Duration.Companion.seconds
 
 class ScheduleApp : Application() {
     @OptIn(FlowPreview::class)
@@ -123,7 +125,7 @@ class ScheduleApp : Application() {
                 appValues.themeColor.observe()
             ) { _, _, _ -> }
                 .drop(1)
-                .debounce(350)
+                .debounce(5.seconds)
                 .collect {
                     try {
                         ScheduleWidget.instance.updateAll(this@ScheduleApp)
@@ -138,7 +140,7 @@ class ScheduleApp : Application() {
         // Автоматическое обновление виджетов при получении свежего расписания из сети
         appScope.launch {
             scheduleRepository.scheduleUpdates
-                .debounce(500)
+                .debounce(500.milliseconds)
                 .collect {
                     try {
                         ScheduleWidget.instance.updateAll(this@ScheduleApp)
@@ -204,4 +206,4 @@ val appModule = module {
             )
         }
     }
-}
+}

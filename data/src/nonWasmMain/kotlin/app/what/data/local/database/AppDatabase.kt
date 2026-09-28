@@ -15,7 +15,7 @@ import androidx.room.TypeConverters
         DayScheduleDBO::class,
         RequestDBO::class
     ],
-    version = 3,
+    version = 5,
     exportSchema = false
 )
 @TypeConverters(Converters::class)

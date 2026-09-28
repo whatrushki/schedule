@@ -83,6 +83,8 @@ data class OneTimeUnit(
     val teacher: Teacher,
     val auditory: String,
     val building: String,
+    val onlineUrl: String? = null,
+    val subject: String? = null
 ) {
     companion object {
         fun empty() = OneTimeUnit(Group("-"), Teacher("-"), "-", "-")
@@ -94,14 +96,16 @@ data class Group(
     val name: String,
     val id: String = name,
     val year: Int? = null,
-    val favorite: Boolean = false
+    val favorite: Boolean = false,
+    val institutionId: String? = null
 )
 
 @Serializable
 data class Teacher(
     val name: String,
     val id: String = name,
-    val favorite: Boolean = false
+    val favorite: Boolean = false,
+    val institutionId: String? = null
 )
 
 enum class ParseMode {
@@ -130,13 +134,15 @@ sealed class ScheduleSearch {
     abstract val name: String
     abstract val id: String
     abstract val favorite: Boolean
+    abstract val institutionId: String?
     
     @Serializable
     @SerialName("group")
     class Group(
         override val name: String,
         override val id: String = name,
-        override val favorite: Boolean = false
+        override val favorite: Boolean = false,
+        override val institutionId: String? = null
     ) : ScheduleSearch()
     
     @Serializable
@@ -144,20 +150,23 @@ sealed class ScheduleSearch {
     class Teacher(
         override val name: String,
         override val id: String = name,
-        override val favorite: Boolean = false
+        override val favorite: Boolean = false,
+        override val institutionId: String? = null
     ) : ScheduleSearch()
     
     operator fun component1() = name
     operator fun component2() = id
     operator fun component3() = favorite
+    operator fun component4() = institutionId
     
     override fun equals(other: Any?): Boolean =
-        other is ScheduleSearch && this::class == other::class && id == other.id && favorite == other.favorite && name == other.name
+        other is ScheduleSearch && this::class == other::class && id == other.id && favorite == other.favorite && name == other.name && institutionId == other.institutionId
     
     override fun hashCode(): Int {
         var result = favorite.hashCode()
         result = 31 * result + name.hashCode()
         result = 31 * result + id.hashCode()
+        result = 31 * result + (institutionId?.hashCode() ?: 0)
         result = 31 * result + this::class.hashCode()
         return result
     }
@@ -165,15 +174,16 @@ sealed class ScheduleSearch {
     fun copy(
         name: String = this.name,
         id: String = this.id,
-        favorite: Boolean = this.favorite
+        favorite: Boolean = this.favorite,
+        institutionId: String? = this.institutionId
     ) = when (this) {
-        is Group -> Group(name, id, favorite)
-        is Teacher -> Teacher(name, id, favorite)
+        is Group -> Group(name, id, favorite, institutionId)
+        is Teacher -> Teacher(name, id, favorite, institutionId)
     }
 }
 
-fun Group.toScheduleSearch() = ScheduleSearch.Group(name, id, favorite)
-fun Teacher.toScheduleSearch() = ScheduleSearch.Teacher(name, id, favorite)
+fun Group.toScheduleSearch() = ScheduleSearch.Group(name, id, favorite, institutionId)
+fun Teacher.toScheduleSearch() = ScheduleSearch.Teacher(name, id, favorite, institutionId)
 
-fun ScheduleSearch.Group.toGroup() = Group(name, id, favorite = favorite)
-fun ScheduleSearch.Teacher.toTeacher() = Teacher(name, id, favorite)
+fun ScheduleSearch.Group.toGroup() = Group(name, id, favorite = favorite, institutionId = institutionId)
+fun ScheduleSearch.Teacher.toTeacher() = Teacher(name, id, favorite, institutionId = institutionId)

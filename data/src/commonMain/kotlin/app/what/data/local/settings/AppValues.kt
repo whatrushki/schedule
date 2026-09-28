@@ -104,7 +104,7 @@ class AppValues(
 
     val showCancelledLessons = createValue(
         "show_cancelled_lessons", true, Boolean.serializer(),
-        "Отображать отмененные пары", "Показывать отмененные занятия в расписании"
+        "Отображать отмененные", "Показывать отмененные занятия в расписании"
     )
 
     val enableReplacementNotifications = createValue(
@@ -160,5 +160,28 @@ class AppValues(
         Int.serializer(),
         isEncrypted = true,
     )
+
+    // RKSI ---------------
+    val rksiCookies = createValue(
+        "rksi_cookies",
+        null,
+        String.serializer(),
+        isEncrypted = true,
+    )
+
+    val rksiLogin = createValue(
+        "rksi_login",
+        null,
+        String.serializer(),
+        isEncrypted = true,
+    )
+
+    val rksiPassword = createValue(
+        "rksi_password",
+        null,
+        String.serializer(),
+        isEncrypted = true,
+    )
 }
+
 

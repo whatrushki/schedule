@@ -15,6 +15,7 @@ import app.what.schedule.rksi.parser.JvmXlsxReader
 import app.what.schedule.rgups.RGUPSScheduleClient
 import app.what.schedule.rgups_tuapse.RGUPSTuapseScheduleClient
 import app.what.schedule.sfedu.SFEDUScheduleClient
+import app.what.schedule.tvgu.TvGUScheduleClient
 import com.fleeksoft.ksoup.Ksoup
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
@@ -92,13 +93,14 @@ fun main(args: Array<String>) = runBlocking(Dispatchers.IO) {
             "sfedu" -> syncSfedu(client, outDir, failOnError)
             "rgups" -> syncRgups(client, outDir, failOnError)
             "rgups_tuapse" -> syncRgupsTuapse(client, outDir, failOnError)
+            "tvgu" -> syncTvgu(client, outDir, failOnError)
             "others" -> syncOthers(client, outDir, failOnError)
             "all" -> {
                 syncRksi(client, outDir, failOnError)
                 syncOthers(client, outDir, failOnError)
             }
             else -> {
-                println("Unknown target: $target. Use 'rksi', 'dgtu', 'iubip', 'rinh', 'sfedu', 'rgups', 'rgups_tuapse', 'others', or 'all'.")
+                println("Unknown target: $target. Use 'rksi', 'dgtu', 'iubip', 'rinh', 'sfedu', 'rgups', 'rgups_tuapse', 'tvgu', 'others', or 'all'.")
             }
         }
     } finally {
@@ -216,6 +218,7 @@ suspend fun syncOthers(client: HttpClient, rootDir: File, failOnError: Boolean =
     syncSfedu(client, rootDir, failOnError)
     syncRgups(client, rootDir, failOnError)
     syncRgupsTuapse(client, rootDir, failOnError)
+    syncTvgu(client, rootDir, failOnError)
 }
 
 suspend fun syncDgtu(client: HttpClient, rootDir: File, failOnError: Boolean = false) {
@@ -731,3 +734,116 @@ suspend fun syncRgupsTuapse(client: HttpClient, rootDir: File, failOnError: Bool
         if (failOnError) throw it
     }
 }
+
+suspend fun syncTvgu(client: HttpClient, rootDir: File, failOnError: Boolean = false) {
+    println("\n--- Syncing TvGU ---")
+    val dir = File(rootDir, "tvgu").apply { mkdirs() }
+    val groupsDir = File(dir, "groups").apply { mkdirs() }
+    val teachersDir = File(dir, "teachers").apply { mkdirs() }
+
+    runCatching {
+        val tvguClient = TvGUScheduleClient(client, log = { println("  [TvGU] $it") })
+        val nowStr = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString()
+
+        println("  Fetching TvGU groups...")
+        val groups = tvguClient.getGroups()
+        println("  Found ${groups.size} groups")
+        if (groups.isEmpty()) {
+            error("TvGU returned 0 groups")
+        }
+
+        File(dir, "groups.json").writeText(json.encodeToString(groups))
+
+        var groupCount = 0
+        val teacherSchedules = mutableMapOf<String, MutableMap<LocalDate, MutableList<LessonDto>>>()
+        val semaphore = Semaphore(6)
+
+        println("  Fetching TvGU group schedules...")
+        coroutineScope {
+            groups.map { group ->
+                async {
+                    semaphore.withPermit {
+                        runCatching {
+                            delay(30)
+                            val schedule = tvguClient.getGroupSchedule(group.name)
+                            if (schedule.isNotEmpty()) {
+                                val safeName = group.name.replace("/", "_").replace("\\", "_")
+                                File(groupsDir, "$safeName.json").writeText(json.encodeToString(schedule))
+                                synchronized(groupsDir) { groupCount++ }
+
+                                synchronized(teacherSchedules) {
+                                    schedule.forEach { daySchedule ->
+                                        daySchedule.lessons.forEach { lesson ->
+                                            lesson.otUnits.forEach { unit ->
+                                                val cleanTeacher = unit.teacher.trim()
+                                                if (cleanTeacher.isNotBlank() && cleanTeacher != "—" && cleanTeacher != "-" && cleanTeacher != "_") {
+                                                    val safeGroup = if (group.name.isBlank() || group.name == "_") "-" else group.name
+                                                    val safeRoom = if (unit.room.isBlank() || unit.room == "_") "-" else unit.room
+                                                    val teacherDays = teacherSchedules.getOrPut(cleanTeacher) { mutableMapOf() }
+                                                    val dayLessons = teacherDays.getOrPut(daySchedule.date) { mutableListOf() }
+                                                    dayLessons.add(
+                                                        lesson.copy(
+                                                            otUnits = listOf(unit.copy(teacher = cleanTeacher, group = safeGroup, room = safeRoom))
+                                                        )
+                                                    )
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }.awaitAll()
+        }
+
+        println("  [TvGU] Aggregated ${teacherSchedules.size} teachers from group schedules")
+        val teachersList = teacherSchedules.keys.sorted().map { TeacherDto(id = it, name = it) }
+        File(dir, "teachers.json").writeText(json.encodeToString(teachersList))
+
+        var teacherCount = 0
+        teacherSchedules.forEach { (teacherName, daysMap) ->
+            val teacherDays = daysMap.map { (date, lessons) ->
+                val merged = lessons
+                    .groupBy { Triple(it.number, it.startTime, it.subject) }
+                    .map { (_, groupLessons) ->
+                        val first = groupLessons.first()
+                        val state = when {
+                            groupLessons.any { it.state == LessonStateDto.CHANGED } -> LessonStateDto.CHANGED
+                            groupLessons.all { it.state == LessonStateDto.REMOVED } -> LessonStateDto.REMOVED
+                            else -> first.state
+                        }
+                        first.copy(
+                            state = state,
+                            otUnits = groupLessons.flatMap { it.otUnits }.distinctBy { it.group }
+                        )
+                    }
+                    .sortedWith(compareBy({ it.startTime }, { it.number }))
+                DayScheduleDto(
+                    date = date,
+                    scheduleType = LessonsScheduleTypeDto.COMMON,
+                    lessons = merged
+                )
+            }.sortedBy { it.date }
+
+            val safeTeacherId = teacherName.replace("/", "_").replace("\\", "_")
+            File(teachersDir, "$safeTeacherId.json").writeText(json.encodeToString(teacherDays))
+            teacherCount++
+        }
+
+        val meta = InstitutionMeta(
+            lastSync = nowStr,
+            institution = "tvgu",
+            groupCount = groups.size,
+            teacherCount = teachersList.size
+        )
+        File(dir, "meta.json").writeText(json.encodeToString(meta))
+        println("  [TvGU] Sync complete! Saved $groupCount group schedules and $teacherCount teacher schedules.")
+    }.onFailure {
+        println("  [TvGU] Error syncing: ${it.message}")
+        it.printStackTrace()
+        if (failOnError) throw it
+    }
+}
+

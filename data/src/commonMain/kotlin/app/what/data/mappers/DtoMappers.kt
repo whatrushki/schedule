@@ -23,7 +23,9 @@ fun OneTimeUnitDto.toDomain(): OneTimeUnit {
         group = Group(name = cleanGroup, id = cleanGroup),
         teacher = Teacher(name = cleanTeacher, id = cleanTeacher),
         auditory = cleanRoom,
-        building = cleanBuilding
+        building = cleanBuilding,
+        onlineUrl = onlineUrl,
+        subject = subject
     )
 }
 

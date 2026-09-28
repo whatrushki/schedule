@@ -83,6 +83,8 @@ data class OneTimeUnitDBO(
     val teacherId: Long,
     val auditory: String,
     val building: String,
+    val onlineUrl: String? = null,
+    val subject: String? = null,
 )
 
 @Entity(

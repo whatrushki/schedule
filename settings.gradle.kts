@@ -62,6 +62,7 @@ include(":libs:schedule:rinh")
 include(":libs:schedule:sfedu")
 include(":libs:schedule:rgups")
 include(":libs:schedule:rgups_tuapse")
+include(":libs:schedule:tvgu")
 
 include(":tools:schedule-sync")
 include(":desktopApp")

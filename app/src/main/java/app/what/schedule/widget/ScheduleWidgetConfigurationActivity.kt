@@ -16,10 +16,17 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBarsPadding
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.typography
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.State
@@ -30,6 +37,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -41,9 +49,11 @@ import androidx.glance.appwidget.state.updateAppWidgetState
 import androidx.lifecycle.lifecycleScope
 import app.what.foundation.ui.Gap
 import app.what.foundation.ui.animations.AnimatedEnter
+import app.what.foundation.ui.bclick
 import app.what.foundation.ui.useState
 import app.what.schedule.data.local.settings.AppValues
 import app.what.schedule.data.local.settings.ProvideGLobalAppValues
+import app.what.schedule.data.remote.api.InstitutionManager
 import app.what.domain.models.ScheduleSearch
 import app.what.domain.models.toScheduleSearch
 import app.what.domain.repositories.ScheduleRepository
@@ -87,10 +97,20 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
             }
 
             val settings = koinInject<AppValues>()
+            val institutionManager = koinInject<InstitutionManager>()
             val scheduleRepository = koinInject<ScheduleRepository>()
             val scope = rememberCoroutineScope()
+
+            val institutions = remember { institutionManager.getInstitutions() }
+            var selectedInstitutionId by useState<String>(
+                settings.institution.get() ?: institutions.firstOrNull()?.metadata?.id ?: "rksi"
+            )
+            var showInstitutionDialog by useState(false)
+
             var searchItems by useState<List<ScheduleSearch>>(emptyList())
-            var selectedSearch by useState<ScheduleSearch?>(settings.lastSearch.get())
+            var selectedSearch by useState<ScheduleSearch?>(
+                settings.lastSearch.get()?.takeIf { it.institutionId == selectedInstitutionId }
+            )
             val searchData = remember(searchItems, selectedSearch) {
                 mutableStateOf(
                     object : ScheduleSearchData {
@@ -102,24 +122,34 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
 
             ProvideGLobalAppValues(settings) {
                 AppTheme {
-                    LaunchedEffect(Unit) {
+                    LaunchedEffect(selectedInstitutionId) {
                         scope.launch(IO) {
-                            val ut =
-                                async {
-                                    scheduleRepository.getTeachers().map { it.toScheduleSearch() }
-                                }
-                            val ug =
-                                async {
-                                    scheduleRepository.getGroups().map { it.toScheduleSearch() }
-                                }
+                            val ut = async {
+                                scheduleRepository.getTeachers(selectedInstitutionId).map { it.toScheduleSearch() }
+                            }
+                            val ug = async {
+                                scheduleRepository.getGroups(selectedInstitutionId).map { it.toScheduleSearch() }
+                            }
                             searchItems = awaitAll(ut, ug).flatten()
                         }
                     }
 
                     WidgetConfigurationScreen(
                         appWidgetId = appWidgetId,
+                        institutions = institutions.map { it.metadata.id to it.metadata.name },
+                        selectedInstitutionId = selectedInstitutionId,
+                        showInstitutionDialog = showInstitutionDialog,
+                        onShowInstitutionDialogChange = { showInstitutionDialog = it },
+                        onSelectInstitution = { newId ->
+                            selectedInstitutionId = newId
+                            selectedSearch = null
+                            showInstitutionDialog = false
+                        },
                         searchData = searchData,
-                        onSelectSearch = { selectedSearch = it }
+                        onSelectSearch = { selectedSearch = it },
+                        onSave = { search ->
+                            saveWidgetConfiguration(appWidgetId, search, selectedInstitutionId)
+                        }
                     )
                 }
             }
@@ -130,8 +160,14 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
     @Composable
     private fun WidgetConfigurationScreen(
         appWidgetId: Int,
+        institutions: List<Pair<String, String>>,
+        selectedInstitutionId: String,
+        showInstitutionDialog: Boolean,
+        onShowInstitutionDialogChange: (Boolean) -> Unit,
+        onSelectInstitution: (String) -> Unit,
         searchData: State<ScheduleSearchData>,
-        onSelectSearch: (ScheduleSearch) -> Unit
+        onSelectSearch: (ScheduleSearch) -> Unit,
+        onSave: (ScheduleSearch) -> Unit
     ) = Box(
         modifier = Modifier
             .fillMaxSize()
@@ -146,32 +182,67 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
                 .systemBarsPadding()
                 .padding(bottom = 16.dp)
         ) {
-
             ExtendedFloatingActionButton(
                 onClick = {
                     val selected = searchData.value.selectedSearch ?: return@ExtendedFloatingActionButton
-                    saveWidgetConfiguration(appWidgetId, selected)
+                    onSave(selected)
                 }
             ) {
                 Text(if (hasSelection) "Выбрать" else "Выберите группу")
             }
+        }
 
+        if (showInstitutionDialog) {
+            AlertDialog(
+                onDismissRequest = { onShowInstitutionDialogChange(false) },
+                title = { Text("Выберите учебное заведение") },
+                text = {
+                    LazyColumn {
+                        items(institutions) { (id, name) ->
+                            androidx.compose.foundation.layout.Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clip(RoundedCornerShape(8.dp))
+                                    .bclick { onSelectInstitution(id) }
+                                    .padding(vertical = 10.dp, horizontal = 4.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                RadioButton(
+                                    selected = id == selectedInstitutionId,
+                                    onClick = null
+                                )
+                                Gap(12)
+                                Text(
+                                    text = name,
+                                    style = typography.bodyLarge,
+                                    color = colorScheme.onSurface
+                                )
+                            }
+                        }
+                    }
+                },
+                confirmButton = {
+                    TextButton(onClick = { onShowInstitutionDialogChange(false) }) {
+                        Text("Отмена")
+                    }
+                }
+            )
         }
 
         Column {
             Box(
                 Modifier
                     .animateContentSize()
-                    .height(200.dp)
+                    .height(180.dp)
             ) {
                 AnimatedEnter(
                     modifier = Modifier.align(Alignment.BottomStart)
                 ) {
                     Text(
-                        text = "Настройка виджета расписания",
+                        text = "Настройка виджета",
                         style = typography.headlineLarge,
                         fontWeight = FontWeight.Bold,
-                        fontSize = 46.sp,
+                        fontSize = 40.sp,
                         color = colorScheme.primary,
                         modifier = Modifier
                             .fillMaxWidth()
@@ -180,7 +251,42 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
                 }
             }
 
-            Gap(24)
+            Gap(8)
+
+            // Выбор учебного заведения
+            val currentInstName = institutions.firstOrNull { it.first == selectedInstitutionId }?.second ?: selectedInstitutionId
+            androidx.compose.foundation.layout.Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 18.dp)
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(colorScheme.surfaceVariant.copy(alpha = 0.5f))
+                    .clickable { onShowInstitutionDialogChange(true) }
+                    .padding(horizontal = 16.dp, vertical = 12.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        text = "Учебное заведение",
+                        style = typography.labelSmall,
+                        color = colorScheme.secondary
+                    )
+                    Text(
+                        text = currentInstName,
+                        style = typography.titleMedium,
+                        fontWeight = FontWeight.SemiBold,
+                        color = colorScheme.onSurface
+                    )
+                }
+                Text(
+                    text = "Сменить",
+                    style = typography.labelMedium,
+                    color = colorScheme.primary,
+                    fontWeight = FontWeight.Medium
+                )
+            }
+
+            Gap(16)
 
             // Список для выбора
             ScheduleSearchPane(
@@ -191,13 +297,20 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
         }
     }
 
-    private fun saveWidgetConfiguration(appWidgetId: Int, search: ScheduleSearch) =
+    private fun saveWidgetConfiguration(appWidgetId: Int, search: ScheduleSearch, institutionId: String) =
         lifecycleScope.launch {
             val glanceId = GlanceAppWidgetManager(applicationContext).getGlanceIdBy(appWidgetId)
+            val searchWithInstitution = if (search.institutionId == null) {
+                search.copy(institutionId = institutionId)
+            } else {
+                search
+            }
 
             updateAppWidgetState(applicationContext, glanceId) { prefs ->
-                prefs[stringPreferencesKey("search")] = Json.encodeToString(search)
-                prefs[intPreferencesKey("day_index")] = 0
+                prefs[stringPreferencesKey(INSTITUTION_ID_KEY)] = institutionId
+                prefs[stringPreferencesKey(SEARCH_KEY)] = Json.encodeToString(searchWithInstitution)
+                prefs[intPreferencesKey(DAY_INDEX_KEY)] = 0
+                prefs[stringPreferencesKey(LAST_DATE_KEY)] = app.what.foundation.utils.currentLocalDate().toString()
             }
 
             ScheduleWidget.instance.update(this@ScheduleWidgetConfigurationActivity, glanceId)

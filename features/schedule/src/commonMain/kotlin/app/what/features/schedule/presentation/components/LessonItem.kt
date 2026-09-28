@@ -17,9 +17,24 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Videocam
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MaterialTheme.colorScheme
@@ -28,16 +43,20 @@ import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import kotlinx.coroutines.launch
 import app.what.foundation.core.Listener
 import app.what.foundation.ui.Gap
 import app.what.foundation.ui.Show
@@ -114,6 +133,9 @@ private fun EventView(
     val commonViewAccentColor = getCommonViewAccentColor(data.state, data.type)
     
     val (expanded, setExpanded) = useState(currentTime != null && currentTime in data.startTime..data.endTime)
+    var currentUnitIndex by remember(data.otUnits) { mutableIntStateOf(0) }
+    val currentUnit = data.otUnits.getOrNull(currentUnitIndex) ?: data.otUnits.firstOrNull()
+    val currentSubject = currentUnit?.subject?.takeIf { it.isNotBlank() } ?: data.subject
     
     val expandedTitleBoxBackground by animateColorAsState(
         if (expanded) commonViewAccentColor.copy(alpha = .2f)
@@ -196,7 +218,7 @@ private fun EventView(
                 }
                 
                 Text(
-                    text = data.subject,
+                    text = currentSubject,
                     color = titleColor,
                     textDecoration = if (data.state == LessonState.REMOVED) TextDecoration.LineThrough
                     else TextDecoration.None,
@@ -213,8 +235,10 @@ private fun EventView(
                     viewType = viewType,
                     otUnits = data.otUnits,
                     color = commonViewAccentColor,
-                    horizontalArrangement = Arrangement.SpaceEvenly,
+                    horizontalAlignment = Alignment.CenterHorizontally,
                     expanded = false,
+                    currentIndex = currentUnitIndex,
+                    onIndexChanged = { idx, _ -> currentUnitIndex = idx },
                     onSearchClicked = {
                         listener(ScheduleEvent.OnSearchClicked(it))
                     }
@@ -235,6 +259,10 @@ private fun CommonView(
     val commonViewAccentColor = getCommonViewAccentColor(data.state, data.type)
     val (expanded, setExpanded) = useState(false)
     val (expandable, setExpandable) = useState(data.otUnits.size > 3)
+    var currentUnitIndex by remember(data.otUnits) { mutableIntStateOf(0) }
+    var isSlideNext by remember(data.otUnits) { mutableStateOf(true) }
+    val currentUnit = data.otUnits.getOrNull(currentUnitIndex) ?: data.otUnits.firstOrNull()
+    val currentSubject = currentUnit?.subject?.takeIf { it.isNotBlank() } ?: data.subject
     
     Box(
         modifier
@@ -242,7 +270,7 @@ private fun CommonView(
             .fillMaxWidth()
             .applyIf(!expanded, elseBlock = {
                 height(IntrinsicSize.Min)
-            }) { height(146.dp) }
+            }) { height(150.dp) }
             .clip(shapes.medium)
             .background(
                 if (data.state == LessonState.REMOVED) colorScheme.surfaceVariant
@@ -279,21 +307,27 @@ private fun CommonView(
             
             Column {
                 CommonViewSubject(
-                    data.subject,
-                    data.type,
-                    data.state,
-                    commonViewAccentColor,
-                    expanded,
-                    setExpandable
+                    subject = currentSubject,
+                    type = data.type,
+                    state = data.state,
+                    accentColor = commonViewAccentColor,
+                    expanded = expanded,
+                    setExpandable = setExpandable,
+                    isSlideNext = isSlideNext
                 )
                 
                 Gap(8)
                 
                 OtUnitsView(
-                    viewType,
-                    data.otUnits,
-                    expanded,
-                    setExpandable,
+                    viewType = viewType,
+                    otUnits = data.otUnits,
+                    expanded = expanded,
+                    setExpandable = setExpandable,
+                    currentIndex = currentUnitIndex,
+                    onIndexChanged = { idx, next ->
+                        currentUnitIndex = idx
+                        isSlideNext = next
+                    },
                     onSearchClicked = {
                         listener(ScheduleEvent.OnSearchClicked(it))
                     }
@@ -355,35 +389,33 @@ private fun Tag(
 }
 
 @Composable
-private fun OtUnitsView(
+private fun SingleOtUnitView(
     viewType: ViewType,
-    otUnits: List<OneTimeUnit>,
+    unit: OneTimeUnit,
     expanded: Boolean,
     setExpandable: (Boolean) -> Unit = {},
     onSearchClicked: (ScheduleSearch) -> Unit,
     color: Color = colorScheme.secondary,
-    horizontalArrangement: Arrangement.Horizontal =
-        Arrangement.spacedBy(if (viewType == ViewType.TEACHER) 16.dp else 8.dp)
-) = Row(
-    modifier = Modifier
-        .fillMaxWidth()
-        .animateContentSize(),
-    horizontalArrangement = horizontalArrangement
+    horizontalAlignment: Alignment.Horizontal = Alignment.Start,
+    modifier: Modifier = Modifier
 ) {
-    val unionUnits = otUnits.size > 3
-    otUnits.subList(0, if (unionUnits) 1 else otUnits.size).forEach {
-        Column {
+    val uriHandler = LocalUriHandler.current
+    val cleanBuilding = unit.building
+//        .replace("(?i)корпус\\s*|(?i)корп\\.?\\s*".toRegex(), "")
+        .trim()
+        .let { if (it.isEmpty() || it == "_") "-" else it }
+    val isOnline = !unit.onlineUrl.isNullOrBlank() || unit.auditory.startsWith("http://") || unit.auditory.startsWith("https://")
+    val meetingUrl = unit.onlineUrl ?: if (unit.auditory.startsWith("http")) unit.auditory else null
+
+    Box(
+        modifier = modifier,
+        contentAlignment = if (horizontalAlignment == Alignment.CenterHorizontally) Alignment.Center else Alignment.TopStart
+    ) {
+        Column(horizontalAlignment = Alignment.Start) {
             AdditionalInfo(
                 color = color,
-                icon = if (viewType == ViewType.STUDENT) WHATIcons.Person
-                else WHATIcons.Group,
-                texts = if (unionUnits) otUnits.map {
-                    if (viewType == ViewType.TEACHER) it.group.name
-                    else it.teacher.name
-                } else listOf(
-                    if (viewType == ViewType.TEACHER) it.group.name
-                    else it.teacher.name
-                ),
+                icon = if (viewType == ViewType.STUDENT) WHATIcons.Person else WHATIcons.Group,
+                texts = listOf(if (viewType == ViewType.TEACHER) unit.group.name else unit.teacher.name),
                 maxLines = if (viewType == ViewType.TEACHER && !expanded) 1 else Int.MAX_VALUE,
                 setExpandable = setExpandable,
                 onClick = {
@@ -393,18 +425,169 @@ private fun OtUnitsView(
                     )
                 }
             )
-            
-            AdditionalInfo(
-                color = color,
-                icon = WHATIcons.Room,
-                texts = listOf(it.auditory)
-            )
-            
-            AdditionalInfo(
-                color = color,
-                icon = WHATIcons.Building,
-                texts = listOf(it.building.replace("(?i)корпус\\s*|(?i)корп\\.?\\s*".toRegex(), "").trim().let { if (it.isEmpty() || it == "_") "-" else it })
-            )
+
+            if (isOnline && meetingUrl != null) {
+                Row(
+                    modifier = Modifier
+                        .clip(CircleShape)
+                        .bclick { uriHandler.openUri(meetingUrl) }
+                        .padding(vertical = 2.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Videocam,
+                        contentDescription = "Онлайн",
+                        modifier = Modifier.size(18.dp),
+                        tint = colorScheme.primary
+                    )
+                    Gap(8)
+                    Text(
+                        text = "Подключиться",
+                        color = colorScheme.primary,
+                        style = typography.bodyMedium.copy(
+                            fontWeight = FontWeight.Bold,
+                            textDecoration = TextDecoration.Underline
+                        )
+                    )
+                }
+            } else {
+                AdditionalInfo(
+                    color = color,
+                    icon = WHATIcons.Room,
+                    texts = listOf(unit.auditory)
+                )
+
+                if (cleanBuilding != "-") {
+                    AdditionalInfo(
+                        color = color,
+                        icon = WHATIcons.Building,
+                        texts = listOf(cleanBuilding)
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun OtUnitsView(
+    viewType: ViewType,
+    otUnits: List<OneTimeUnit>,
+    expanded: Boolean,
+    setExpandable: (Boolean) -> Unit = {},
+    currentIndex: Int = 0,
+    onIndexChanged: (Int, Boolean) -> Unit = { _, _ -> },
+    onSearchClicked: (ScheduleSearch) -> Unit,
+    color: Color = colorScheme.secondary,
+    horizontalAlignment: Alignment.Horizontal = Alignment.Start,
+    horizontalArrangement: Arrangement.Horizontal =
+        Arrangement.spacedBy(if (viewType == ViewType.TEACHER) 16.dp else 8.dp)
+) {
+    if (otUnits.isEmpty()) return
+
+    if (otUnits.size == 1) {
+        SingleOtUnitView(
+            viewType = viewType,
+            unit = otUnits.first(),
+            expanded = expanded,
+            setExpandable = setExpandable,
+            onSearchClicked = onSearchClicked,
+            color = color,
+            horizontalAlignment = horizontalAlignment,
+            modifier = Modifier.fillMaxWidth()
+        )
+    } else {
+        val currentIdx by rememberUpdatedState(currentIndex)
+        val onIndexChangedState by rememberUpdatedState(onIndexChanged)
+        var dragAccumulator by remember { mutableFloatStateOf(0f) }
+        var isSlideNext by remember { mutableStateOf(true) }
+
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .animateContentSize(),
+            horizontalAlignment = horizontalAlignment
+        ) {
+            AnimatedContent(
+                targetState = currentIndex,
+                transitionSpec = {
+                    if (isSlideNext) {
+                        (slideInHorizontally { width -> width } + fadeIn()).togetherWith(
+                            slideOutHorizontally { width -> -width } + fadeOut()
+                        )
+                    } else {
+                        (slideInHorizontally { width -> -width } + fadeIn()).togetherWith(
+                            slideOutHorizontally { width -> width } + fadeOut()
+                        )
+                    }
+                },
+                label = "OtUnitsCarousel",
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .pointerInput(otUnits.size) {
+                        detectHorizontalDragGestures(
+                            onDragCancel = {
+                                dragAccumulator = 0f
+                            },
+                            onDragEnd = {
+                                if (dragAccumulator < -40f) {
+                                    isSlideNext = true
+                                    val nextIndex = (currentIdx + 1) % otUnits.size
+                                    onIndexChangedState(nextIndex, true)
+                                } else if (dragAccumulator > 40f) {
+                                    isSlideNext = false
+                                    val prevIndex = (currentIdx - 1 + otUnits.size) % otUnits.size
+                                    onIndexChangedState(prevIndex, false)
+                                }
+                                dragAccumulator = 0f
+                            },
+                            onHorizontalDrag = { _, dragAmount ->
+                                dragAccumulator += dragAmount
+                            }
+                        )
+                    }
+            ) { page ->
+                SingleOtUnitView(
+                    viewType = viewType,
+                    unit = otUnits[page % otUnits.size],
+                    expanded = expanded,
+                    setExpandable = setExpandable,
+                    onSearchClicked = onSearchClicked,
+                    color = color,
+                    horizontalAlignment = horizontalAlignment,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+
+            Gap(4)
+
+            // Centered dots indicator
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 2.dp),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                repeat(otUnits.size) { index ->
+                    val isSelected = currentIndex == index
+                    Box(
+                        modifier = Modifier
+                            .padding(horizontal = 3.dp)
+                            .size(if (isSelected) 6.dp else 4.dp)
+                            .clip(CircleShape)
+                            .background(
+                                if (isSelected) colorScheme.primary
+                                else colorScheme.outlineVariant
+                            )
+                            .bclick {
+                                val next = index >= currentIdx
+                                isSlideNext = next
+                                onIndexChangedState(index, next)
+                            }
+                    )
+                }
+            }
         }
     }
 }
@@ -416,38 +599,55 @@ private fun CommonViewSubject(
     state: LessonState,
     accentColor: Color,
     expanded: Boolean,
-    setExpandable: (Boolean) -> Unit
+    setExpandable: (Boolean) -> Unit,
+    isSlideNext: Boolean = true
 ) = Box(
     Modifier
         .clip(if (expanded) shapes.medium else CircleShape)
         .fillMaxWidth()
         .background(accentColor.copy(alpha = .2f))
 ) {
-    val isLongTitle = subject.split(" ").size > 3
-    val (subjectFontSize, setSubjectFontSize) = useState(if (isLongTitle) 12 else 16)
-    
-    Text(
-        modifier = Modifier.padding(16.dp, 8.dp),
-        text = subject,
-        color = when (state) {
-            LessonState.REMOVED -> colorScheme.secondary
-            else -> if (type.isNonStandard) colorScheme.tertiary
-            else colorScheme.onPrimaryContainer
+    AnimatedContent(
+        targetState = subject,
+        transitionSpec = {
+            if (isSlideNext) {
+                (slideInHorizontally { width -> width / 4 } + fadeIn()).togetherWith(
+                    slideOutHorizontally { width -> -width / 4 } + fadeOut()
+                )
+            } else {
+                (slideInHorizontally { width -> -width / 4 } + fadeIn()).togetherWith(
+                    slideOutHorizontally { width -> width / 4 } + fadeOut()
+                )
+            }
         },
-        fontSize = subjectFontSize.sp,
-        overflow = TextOverflow.Ellipsis,
-        maxLines = if (expanded) Int.MAX_VALUE else 2,
-        style = typography.titleSmall.copy(
-            fontWeight = FontWeight.ExtraBold,
-            lineHeight = (subjectFontSize + 4).sp,
-            textDecoration = if (state == LessonState.REMOVED) TextDecoration.LineThrough
-            else TextDecoration.None
-        ),
-        onTextLayout = {
-            if (it.hasVisualOverflow) setExpandable(it.hasVisualOverflow)
-            if (it.lineCount > 1) setSubjectFontSize(12)
-        }
-    )
+        label = "SubjectAnimation"
+    ) { currentText ->
+        val isLongTitle = currentText.split(" ").size > 3
+        val (subjectFontSize, setSubjectFontSize) = useState(if (isLongTitle) 12 else 16)
+        
+        Text(
+            modifier = Modifier.padding(16.dp, 8.dp),
+            text = currentText,
+            color = when (state) {
+                LessonState.REMOVED -> colorScheme.secondary
+                else -> if (type.isNonStandard) colorScheme.tertiary
+                else colorScheme.onPrimaryContainer
+            },
+            fontSize = subjectFontSize.sp,
+            overflow = TextOverflow.Ellipsis,
+            maxLines = if (expanded) Int.MAX_VALUE else 2,
+            style = typography.titleSmall.copy(
+                fontWeight = FontWeight.ExtraBold,
+                lineHeight = (subjectFontSize + 4).sp,
+                textDecoration = if (state == LessonState.REMOVED) TextDecoration.LineThrough
+                else TextDecoration.None
+            ),
+            onTextLayout = {
+                if (it.hasVisualOverflow) setExpandable(true)
+                if (it.lineCount > 1 && subjectFontSize != 12) setSubjectFontSize(12)
+            }
+        )
+    }
 }
 
 

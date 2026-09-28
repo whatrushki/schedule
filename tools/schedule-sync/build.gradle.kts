@@ -25,6 +25,7 @@ dependencies {
     implementation(project(":libs:schedule:sfedu"))
     implementation(project(":libs:schedule:rgups"))
     implementation(project(":libs:schedule:rgups_tuapse"))
+    implementation(project(":libs:schedule:tvgu"))
 
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.kotlinx.datetime)
