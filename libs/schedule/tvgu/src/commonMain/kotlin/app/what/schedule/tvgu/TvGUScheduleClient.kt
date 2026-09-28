@@ -88,19 +88,31 @@ class TvGUScheduleClient(
         showReplacements: Boolean
     ): List<DayScheduleDto> {
         val cleanGroup = group.trim()
-        val url = "$baseUrl/api/v3/timetable?group_name=${encodeParam(cleanGroup)}&type=0"
+        val allGroups = cachedGroups ?: getGroups()
+        val canonicalGroup = allGroups.firstOrNull { it.name.equals(cleanGroup, ignoreCase = true) }?.name
+            ?: cleanGroup.uppercase()
+
+        val url = "$baseUrl/api/v3/timetable?group_name=${encodeParam(canonicalGroup)}&type=0"
         return try {
             val response = client.get(url) {
                 header(HttpHeaders.UserAgent, USER_AGENT)
                 header(HttpHeaders.Accept, "application/json")
             }
+            if (response.status.value !in 200..299) {
+                log?.invoke("TvGU getGroupSchedule HTTP ${response.status.value} for $canonicalGroup")
+                return emptyList()
+            }
             val text = response.bodyAsText()
+            if (text.contains("Расписание не найдено") || text.contains("\"status\":404")) {
+                return emptyList()
+            }
             val timetable = json.decodeFromString<TvGuTimetableResponse>(text)
-            val result = parseTimetable(cleanGroup, timetable)
+            val result = parseTimetable(canonicalGroup, timetable)
+            groupScheduleCache[canonicalGroup] = result
             groupScheduleCache[cleanGroup] = result
             result
         } catch (e: Exception) {
-            log?.invoke("TvGU getGroupSchedule error for $cleanGroup: ${e.message}")
+            log?.invoke("TvGU getGroupSchedule error for $canonicalGroup: ${e.message}")
             emptyList()
         }
     }
@@ -332,16 +344,16 @@ class TvGUScheduleClient(
 
     private fun encodeParam(s: String): String {
         return buildString {
-            for (ch in s) {
-                if (ch.isLetterOrDigit() || ch == '-' || ch == '_' || ch == '.' || ch == '~') {
+            for (b in s.encodeToByteArray()) {
+                val byteVal = b.toInt() and 0xFF
+                val ch = byteVal.toChar()
+                if (ch in 'a'..'z' || ch in 'A'..'Z' || ch in '0'..'9' || ch == '-' || ch == '_' || ch == '.' || ch == '~') {
                     append(ch)
                 } else {
-                    for (b in ch.toString().encodeToByteArray()) {
-                        val hex = (b.toInt() and 0xFF).toString(16).uppercase()
-                        append('%')
-                        if (hex.length == 1) append('0')
-                        append(hex)
-                    }
+                    val hex = byteVal.toString(16).uppercase()
+                    append('%')
+                    if (hex.length == 1) append('0')
+                    append(hex)
                 }
             }
         }
