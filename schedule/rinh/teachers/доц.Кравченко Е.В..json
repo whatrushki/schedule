@@ -1,144 +1,5 @@
 [
     {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "л. Финансовая грамотность",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кравченко Е.В.",
-                        "group": "ЭК-4110",
-                        "room": "604",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Кравченко Е.В.",
-                        "group": "ЭК-4112",
-                        "room": "604",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Кравченко Е.В.",
-                        "group": "ЭК-414",
-                        "room": "604",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Кравченко Е.В.",
-                        "group": "ЭК-4111",
-                        "room": "604",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Кравченко Е.В.",
-                        "group": "ЭК-412",
-                        "room": "604",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Кравченко Е.В.",
-                        "group": "ЭК-411",
-                        "room": "604",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "пр. Финансовая грамотность",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кравченко Е.В.",
-                        "group": "ЭК-4110",
-                        "room": "515",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Финансовая грамотность",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кравченко Е.В.",
-                        "group": "ЭК-411",
-                        "room": "555",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Кравченко Е.В.",
-                        "group": "ЭК-414",
-                        "room": "555",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Финансовая грамотность",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кравченко Е.В.",
-                        "group": "ЭК-4112",
-                        "room": "502",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Кравченко Е.В.",
-                        "group": "ЭК-412",
-                        "room": "502",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Финансовая грамотность",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кравченко Е.В.",
-                        "group": "ЭК-4111",
-                        "room": "503",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -153,7 +14,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -170,13 +33,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -199,13 +66,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -222,37 +93,49 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -269,7 +152,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "417",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -292,37 +177,49 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -345,7 +242,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "515",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -362,13 +261,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -385,13 +288,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -408,7 +315,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -431,7 +340,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -448,13 +359,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -477,13 +392,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -500,37 +419,49 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -547,7 +478,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "417",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -570,37 +503,49 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -623,7 +568,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "515",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -640,13 +587,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -663,13 +614,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -686,7 +641,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -709,7 +666,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -726,13 +685,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -755,13 +718,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -778,37 +745,49 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -825,7 +804,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "417",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -848,37 +829,49 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -901,7 +894,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "515",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -918,13 +913,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -941,13 +940,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -964,7 +967,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -987,7 +992,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1004,13 +1011,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1033,13 +1044,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1056,37 +1071,49 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1103,7 +1130,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "417",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1126,37 +1155,49 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1179,7 +1220,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "515",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1196,13 +1239,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1219,13 +1266,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1242,7 +1293,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1265,7 +1318,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1282,13 +1337,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1311,13 +1370,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1334,37 +1397,49 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1381,7 +1456,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "417",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1404,37 +1481,49 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1457,7 +1546,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "515",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1474,13 +1565,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1497,13 +1592,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1520,7 +1619,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1543,7 +1644,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1560,13 +1663,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1589,13 +1696,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1612,37 +1723,49 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1659,7 +1782,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "417",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1682,37 +1807,49 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1735,7 +1872,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4110",
                         "room": "515",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1752,13 +1891,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-411",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-414",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1775,13 +1918,17 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4112",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-412",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1798,7 +1945,9 @@
                         "teacher": "доц.Кравченко Е.В.",
                         "group": "ЭК-4111",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

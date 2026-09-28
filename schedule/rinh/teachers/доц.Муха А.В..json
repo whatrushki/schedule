@@ -1,114 +1,5 @@
 [
     {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "л. Основы конвергентной журналистики",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Муха А.В.",
-                        "group": "ЖУР-733",
-                        "room": "507",
-                        "additional": "4"
-                    },
-                    {
-                        "teacher": "доц.Муха А.В.",
-                        "group": "ЖУР-731",
-                        "room": "507",
-                        "additional": "4"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "л. Основы журналистской деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Муха А.В.",
-                        "group": "ЖУР-732",
-                        "room": "410",
-                        "additional": "4"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "л. Основы журналистской деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Муха А.В.",
-                        "group": "ЖУР-741",
-                        "room": "410",
-                        "additional": "4"
-                    },
-                    {
-                        "teacher": "доц.Муха А.В.",
-                        "group": "ЖУР-742",
-                        "room": "410",
-                        "additional": "4"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Основы конвергентной журналистики",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Муха А.В.",
-                        "group": "ЖУР-731",
-                        "room": "503",
-                        "additional": "4"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "пр. Основы конвергентной журналистики",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Муха А.В.",
-                        "group": "ЖУР-733",
-                        "room": "404",
-                        "additional": "4"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -123,7 +14,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-712",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -140,13 +33,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -163,7 +60,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-721",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -180,7 +79,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-743",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -203,7 +104,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-732",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -220,13 +123,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-742",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-741",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -243,7 +150,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -266,13 +175,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "508",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "508",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -289,7 +202,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-743",
                         "room": "512",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -306,7 +221,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "512",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -329,13 +246,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -352,7 +273,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-732",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -369,13 +292,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-742",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-741",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -398,7 +325,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "503",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -415,7 +344,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "404",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -438,7 +369,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-712",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -455,13 +388,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -478,7 +415,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-721",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -495,7 +434,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-743",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -518,7 +459,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-732",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -535,13 +478,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-742",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-741",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -558,7 +505,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -581,13 +530,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "508",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "508",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -604,7 +557,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-743",
                         "room": "512",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -621,7 +576,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "512",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -644,13 +601,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -667,7 +628,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-732",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -684,13 +647,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-741",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-742",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -713,7 +680,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "503",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -730,7 +699,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "404",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -753,7 +724,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-712",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -770,13 +743,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -793,7 +770,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-721",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -810,7 +789,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-743",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -833,7 +814,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-732",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -850,13 +833,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-742",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-741",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -873,7 +860,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -896,13 +885,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "508",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "508",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -919,7 +912,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-743",
                         "room": "512",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -936,7 +931,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "512",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -959,13 +956,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -982,7 +983,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-732",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -999,13 +1002,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-742",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-741",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1028,7 +1035,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-712",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1045,13 +1054,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1068,7 +1081,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-721",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1085,7 +1100,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-743",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1108,7 +1125,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-732",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1125,13 +1144,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-741",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-742",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1148,7 +1171,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1171,13 +1196,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "508",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "508",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1194,7 +1223,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-743",
                         "room": "512",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1211,7 +1242,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "512",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1234,13 +1267,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1257,7 +1294,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-732",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1274,13 +1313,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-741",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-742",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1303,7 +1346,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "503",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1320,7 +1365,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "404",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1343,7 +1390,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-712",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1360,13 +1409,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1383,7 +1436,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-721",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1400,7 +1455,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-743",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1423,7 +1480,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-732",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1440,13 +1499,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-742",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-741",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1463,7 +1526,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1486,13 +1551,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "508",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "508",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1509,7 +1578,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-743",
                         "room": "512",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1526,7 +1597,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "512",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1549,13 +1622,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1572,7 +1649,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-732",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1589,13 +1668,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-741",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-742",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1618,7 +1701,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "503",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1635,7 +1720,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "404",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1658,7 +1745,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-712",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1675,13 +1764,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1698,7 +1791,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-721",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1715,7 +1810,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-743",
                         "room": "307",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1738,7 +1835,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-732",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1755,13 +1854,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-742",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-741",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1778,7 +1881,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1801,13 +1906,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "508",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "508",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1824,7 +1933,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-743",
                         "room": "512",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1841,7 +1952,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "512",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1864,13 +1977,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1887,7 +2004,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-732",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1904,13 +2023,17 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-741",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-742",
                         "room": "410",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1933,7 +2056,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-731",
                         "room": "503",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1950,7 +2075,9 @@
                         "teacher": "доц.Муха А.В.",
                         "group": "ЖУР-733",
                         "room": "404",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

@@ -1,183 +1,5 @@
 [
     {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "пр. Анализ данных",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Рудяга А.А.",
-                        "group": "ПО-221",
-                        "room": "212а",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Анализ данных",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Рудяга А.А.",
-                        "group": "ПРИ-321",
-                        "room": "602",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "л. Эконометрика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Рудяга А.А.",
-                        "group": "ТОР-234",
-                        "room": "602",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Рудяга А.А.",
-                        "group": "ТД-231",
-                        "room": "602",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Рудяга А.А.",
-                        "group": "ТОР-231",
-                        "room": "602",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Рудяга А.А.",
-                        "group": "ТОР-232",
-                        "room": "602",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Рудяга А.А.",
-                        "group": "ТОР-235",
-                        "room": "602",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "лаб. Эконометрика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Рудяга А.А.",
-                        "group": "ТОР-234",
-                        "room": "532",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "пр. Эконометрика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Рудяга А.А.",
-                        "group": "ТОР-232",
-                        "room": "314",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Рудяга А.А.",
-                        "group": "ТОР-234",
-                        "room": "314",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Анализ данных",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Рудяга А.А.",
-                        "group": "РСО-221",
-                        "room": "314",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Анализ данных",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Рудяга А.А.",
-                        "group": "ИСТ-321",
-                        "room": "314",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Анализ данных",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Рудяга А.А.",
-                        "group": "ПИ-321",
-                        "room": "314",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -192,31 +14,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-223",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-222",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-224",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -233,31 +65,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-235",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-231",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТД-231",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -280,19 +122,25 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ИСТ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПИ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПРИ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -309,7 +157,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -326,13 +176,17 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -349,7 +203,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -372,7 +228,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -389,7 +247,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПРИ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -406,31 +266,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-235",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-231",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТД-231",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -447,7 +317,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -470,13 +342,17 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -493,7 +369,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-221",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -510,7 +388,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ИСТ-321",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -527,7 +407,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПИ-321",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -550,31 +432,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-223",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-222",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-224",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -591,31 +483,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-231",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТД-231",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-235",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -638,19 +540,25 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ИСТ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПРИ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПИ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -667,7 +575,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -684,13 +594,17 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -707,7 +621,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -730,7 +646,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -747,7 +665,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПРИ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -764,31 +684,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТД-231",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-231",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-235",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -805,7 +735,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -828,13 +760,17 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -851,7 +787,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-221",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -868,7 +806,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ИСТ-321",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -885,7 +825,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПИ-321",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -908,31 +850,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-224",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-223",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-222",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -949,31 +901,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-235",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-231",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТД-231",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -996,19 +958,25 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПИ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПРИ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ИСТ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1025,7 +993,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1042,13 +1012,17 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1065,7 +1039,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1088,13 +1064,17 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1111,7 +1091,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-221",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1128,7 +1110,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ИСТ-321",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1145,7 +1129,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПИ-321",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1168,31 +1154,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-224",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-222",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-223",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1209,31 +1205,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-235",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТД-231",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-231",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1256,19 +1262,25 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ИСТ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПИ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПРИ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1285,7 +1297,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1302,13 +1316,17 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1325,7 +1343,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1348,7 +1368,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1365,7 +1387,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПРИ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1382,31 +1406,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-235",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТД-231",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-231",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1423,7 +1457,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1446,13 +1482,17 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1469,7 +1509,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-221",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1486,7 +1528,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ИСТ-321",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1503,7 +1547,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПИ-321",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1526,31 +1572,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-222",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-223",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-224",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1567,31 +1623,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТД-231",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-231",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-235",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1614,19 +1680,25 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПИ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПРИ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ИСТ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1643,7 +1715,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1660,13 +1734,17 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1683,7 +1761,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1706,7 +1786,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1723,7 +1805,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПРИ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1740,31 +1824,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-231",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТД-231",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-235",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1781,7 +1875,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1804,13 +1900,17 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1827,7 +1927,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-221",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1844,7 +1946,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ИСТ-321",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1861,7 +1965,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПИ-321",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1884,31 +1990,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-223",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-224",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-222",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1925,31 +2041,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-231",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-235",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТД-231",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1972,19 +2098,25 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПРИ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ИСТ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПИ-321",
                         "room": "605",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2001,7 +2133,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2018,13 +2152,17 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2041,7 +2179,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2064,7 +2204,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПО-221",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2081,7 +2223,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПРИ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2098,31 +2242,41 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-235",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-231",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТД-231",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2139,7 +2293,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2162,13 +2318,17 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-232",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ТОР-234",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2185,7 +2345,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "РСО-221",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2202,7 +2364,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ИСТ-321",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2219,7 +2383,9 @@
                         "teacher": "доц.Рудяга А.А.",
                         "group": "ПИ-321",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

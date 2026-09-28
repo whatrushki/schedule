@@ -1,189 +1,5 @@
 [
     {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "л. Статистика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "СТ-431",
-                        "room": "516",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "л. Эконометрика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "СТ-431",
-                        "room": "516",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Статистика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "СТ-431",
-                        "room": "516",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "л. Эконометрика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "ЭК-536",
-                        "room": "431",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "ЭК-531",
-                        "room": "431",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "ЭК-533",
-                        "room": "431",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "ЭК-532",
-                        "room": "431",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "ЭК-538",
-                        "room": "431",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Эконометрика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "СТ-431",
-                        "room": "516",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "лаб. Эконометрика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "СТ-431",
-                        "room": "516",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "лаб. Анализ временных рядов",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "СТ-441",
-                        "room": "501",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "лаб. Эконометрика, п/г 1",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "ЭК-532",
-                        "room": "201",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
@@ -198,7 +14,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -215,7 +33,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -238,31 +58,41 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-538",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-531",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-533",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -279,7 +109,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-441",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -302,7 +134,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -319,7 +153,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -342,7 +178,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -359,7 +197,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -382,7 +222,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -399,7 +241,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -422,7 +266,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -439,31 +285,41 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-538",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-531",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-533",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -486,7 +342,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -503,7 +361,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -526,7 +386,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -543,7 +405,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -566,7 +430,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -583,7 +449,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -606,31 +474,41 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-531",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-538",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-533",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -647,7 +525,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-441",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -670,7 +550,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -687,7 +569,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -710,7 +594,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -727,7 +613,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -750,7 +638,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -767,7 +657,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -790,7 +682,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -807,31 +701,41 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-538",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-531",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-533",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -854,7 +758,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -871,7 +777,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -894,7 +802,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -911,7 +821,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -934,7 +846,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -951,7 +865,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -974,31 +890,41 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-531",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-533",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-538",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1015,7 +941,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-441",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1038,7 +966,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1055,7 +985,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1078,7 +1010,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1095,7 +1029,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1118,7 +1054,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1135,7 +1073,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1158,7 +1098,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1175,7 +1117,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1198,7 +1142,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1215,7 +1161,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1238,7 +1186,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1255,7 +1205,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1278,31 +1230,41 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-538",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-531",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-533",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1319,7 +1281,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-441",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1342,7 +1306,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1359,7 +1325,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1382,7 +1350,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1399,7 +1369,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1422,7 +1394,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1439,7 +1413,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1462,7 +1438,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1479,31 +1457,41 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-533",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-531",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-538",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1526,7 +1514,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1543,7 +1533,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1566,7 +1558,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1583,7 +1577,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1606,7 +1602,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1623,7 +1621,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1646,31 +1646,41 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-538",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-531",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-533",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1687,7 +1697,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-441",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1710,7 +1722,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1727,7 +1741,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1750,7 +1766,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1767,7 +1785,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1790,7 +1810,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1807,7 +1829,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1830,7 +1854,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1847,31 +1873,41 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-531",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-533",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-538",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1894,7 +1930,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1911,7 +1949,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1934,7 +1974,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1951,7 +1993,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1974,7 +2018,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1991,7 +2037,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2014,31 +2062,41 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-533",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-538",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-531",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2055,7 +2113,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-441",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2078,7 +2138,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2095,7 +2157,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2118,7 +2182,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2135,7 +2201,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2158,7 +2226,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2175,7 +2245,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2198,7 +2270,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2215,31 +2289,41 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-538",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-531",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-533",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-536",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "431",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2262,7 +2346,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2279,7 +2365,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2302,7 +2390,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2319,7 +2409,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "ЭК-532",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",

@@ -1,176 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "л. Теоретические основы товароведения и экспертизы",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Путилина Т.И.",
-                        "group": "ТОВOZ-2202",
-                        "room": "*305/д",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "л. Теоретические основы товароведения и экспертизы",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Путилина Т.И.",
-                        "group": "ТОВOZ-2202",
-                        "room": "*305/д",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Теоретические основы товароведения и экспертизы",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Путилина Т.И.",
-                        "group": "ТОВOZ-2202",
-                        "room": "*404/д",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Теоретические основы товароведения и экспертизы",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Путилина Т.И.",
-                        "group": "ТОВOZ-2202",
-                        "room": "*404/д",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "л. Экспертиза зерномучных и плодоовощных товаров",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Путилина Т.И.",
-                        "group": "ТОВOZS-2202",
-                        "room": "*405/д",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "л. Экспертиза зерномучных и плодоовощных товаров",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Путилина Т.И.",
-                        "group": "ТОВOZS-2202",
-                        "room": "*405/д",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "пр. Товароведческая экспертиза в таможенной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Путилина Т.И.",
-                        "group": "ТД-222",
-                        "room": "655",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Товароведческая экспертиза в таможенной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Путилина Т.И.",
-                        "group": "ТД-221",
-                        "room": "338",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "лаб. Основы товароведения",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Путилина Т.И.",
-                        "group": "УК-211",
-                        "room": "655",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -185,7 +14,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "527",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -202,13 +33,17 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -231,7 +66,17 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТОВOZ-2202",
                         "room": "*305/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -248,7 +93,17 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТОВOZ-2202",
                         "room": "*305/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -265,7 +120,17 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТОВOZS-2202",
                         "room": "*405/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -282,7 +147,17 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТОВOZS-2202",
                         "room": "*405/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -305,7 +180,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -322,7 +199,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -339,7 +218,123 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 2,
+                "startTime": "10:10",
+                "endTime": "11:40",
+                "subject": "л. Экспертиза зерномучных и плодоовощных товаров",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 3,
+                "startTime": "11:50",
+                "endTime": "13:20",
+                "subject": "л. Экспертиза зерномучных и плодоовощных товаров",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "пр. Теоретические основы товароведения и экспертизы",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "пр. Теоретические основы товароведения и экспертизы",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -362,7 +357,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "655",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -379,7 +376,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -396,10 +395,72 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "655",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-13",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "л. Экспертиза товаров и услуг",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "УКZS-2401",
+                        "room": "654",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "УКZS-2401",
+                        "room": "654",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "л. Экспертиза товаров и услуг",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "УКZS-2401",
+                        "room": "654",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "УКZS-2401",
+                        "room": "654",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]
@@ -419,7 +480,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "527",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -436,16 +499,140 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-15",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-15",
+                "number": 3,
+                "startTime": "11:50",
+                "endTime": "13:20",
+                "subject": "пр. Теоретические основы товароведения и экспертизы",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "пр. Теоретические основы товароведения и экспертизы",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-16",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "пр. Экспертиза зерномучных и плодоовощных товаров",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "пр. Экспертиза зерномучных и плодоовощных товаров",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
@@ -465,7 +652,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -482,7 +671,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -499,10 +690,186 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-22",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-22",
+                "number": 3,
+                "startTime": "11:50",
+                "endTime": "13:20",
+                "subject": "пр. Теоретические основы товароведения и экспертизы",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "пр. Теоретические основы товароведения и экспертизы",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "л. Экспертиза зерномучных и плодоовощных товаров",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "л. Экспертиза зерномучных и плодоовощных товаров",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-23",
+                "number": 3,
+                "startTime": "11:50",
+                "endTime": "13:20",
+                "subject": "лаб. Экспертиза товаров и услуг",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "УКZS-2401",
+                        "room": "654",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "УКZS-2401",
+                        "room": "654",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "лаб. Экспертиза товаров и услуг",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "УКZS-2401",
+                        "room": "654",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "УКZS-2401",
+                        "room": "654",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
                 "state": "COMMON"
             }
         ]
@@ -522,7 +889,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "655",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -539,7 +908,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -556,7 +927,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "655",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -579,7 +952,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "527",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -596,16 +971,80 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-29",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "пр. Экспертиза товаров и услуг",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "УКZS-2401",
+                        "room": "654",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "УКZS-2401",
+                        "room": "654",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 7,
+                "startTime": "18:45",
+                "endTime": "20:15",
+                "subject": "пр. Экспертиза товаров и услуг",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "УКZS-2401",
+                        "room": "654",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "УКZS-2401",
+                        "room": "654",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
@@ -625,7 +1064,17 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТОВOZ-2202",
                         "room": "*305/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -642,7 +1091,71 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТОВOZ-2202",
                         "room": "*305/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-30",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "пр. Экспертиза зерномучных и плодоовощных товаров",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-30",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "пр. Экспертиза зерномучных и плодоовощных товаров",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -665,7 +1178,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -682,7 +1197,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -699,7 +1216,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -722,7 +1241,17 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТОВOZ-2202",
                         "room": "*305/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -739,7 +1268,17 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТОВOZ-2202",
                         "room": "*305/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -762,7 +1301,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "655",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -779,7 +1320,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -796,7 +1339,96 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "655",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-07",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "экз. Экспертиза товаров и услуг",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "УКZS-2401",
+                        "room": "654",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "УКZS-2401",
+                        "room": "654",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-10",
+                "number": 2,
+                "startTime": "10:10",
+                "endTime": "11:40",
+                "subject": "лаб. Экспертиза зерномучных и плодоовощных товаров",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
+                "number": 3,
+                "startTime": "11:50",
+                "endTime": "13:20",
+                "subject": "лаб. Экспертиза зерномучных и плодоовощных товаров",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -819,7 +1451,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "527",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -836,16 +1470,140 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-12",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "лаб. Экспертиза зерномучных и плодоовощных товаров",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "527",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "527",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "лаб. Экспертиза зерномучных и плодоовощных товаров",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "527",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZS-2202",
+                        "room": "527",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-13",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "лаб. Теоретические основы товароведения и экспертизы",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "лаб. Теоретические основы товароведения и экспертизы",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
                 "state": "COMMON"
             }
         ]
@@ -865,7 +1623,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -882,7 +1642,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -899,10 +1661,39 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "лаб. Теоретические основы товароведения и экспертизы",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "527",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Путилина Т.И.",
+                        "group": "ТОВOZ-2202",
+                        "room": "527",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
                 "state": "COMMON"
             }
         ]
@@ -922,7 +1713,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "655",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -939,7 +1732,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -956,7 +1751,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "655",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -979,7 +1776,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "527",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -996,13 +1795,17 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1025,7 +1828,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1042,7 +1847,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1059,7 +1866,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1082,7 +1891,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "655",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1099,7 +1910,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1116,7 +1929,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "655",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1139,7 +1954,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "527",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1156,13 +1973,17 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1185,7 +2006,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1202,7 +2025,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "455",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1219,7 +2044,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1242,7 +2069,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-222",
                         "room": "655",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1259,7 +2088,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "ТД-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1276,7 +2107,9 @@
                         "teacher": "доц.Путилина Т.И.",
                         "group": "УК-211",
                         "room": "655",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",

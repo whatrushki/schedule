@@ -1,137 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "лаб. Основы информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "асс.Прокопенко А.В.",
-                        "group": "ЭК-538",
-                        "room": "210",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "асс.Прокопенко А.В.",
-                        "group": "ЭК-533",
-                        "room": "210",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "лаб. Основы информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "асс.Прокопенко А.В.",
-                        "group": "МЕН-133",
-                        "room": "308а",
-                        "additional": "2"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "лаб. Основы информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "асс.Прокопенко А.В.",
-                        "group": "МЕН-132",
-                        "room": "308",
-                        "additional": "2"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "лаб. Основы информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "асс.Прокопенко А.В.",
-                        "group": "МЕН-134",
-                        "room": "308",
-                        "additional": "2"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Организационное и правовое обеспечение информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "асс.Прокопенко А.В.",
-                        "group": "ИБ-341",
-                        "room": "301",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Организационное и правовое обеспечение информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "асс.Прокопенко А.В.",
-                        "group": "ИБ-342",
-                        "room": "532",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -146,7 +14,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -169,7 +39,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -192,7 +64,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -209,7 +83,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -232,13 +108,17 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ЭК-538",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ЭК-533",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -261,7 +141,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "МЕН-133",
                         "room": "308а",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -278,7 +160,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "МЕН-132",
                         "room": "308",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -295,7 +179,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "МЕН-134",
                         "room": "308",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -318,7 +204,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -341,7 +229,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -364,7 +254,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -387,7 +279,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -410,7 +304,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -427,7 +323,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -450,13 +348,17 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ЭК-538",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ЭК-533",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -479,7 +381,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "МЕН-133",
                         "room": "308а",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -496,7 +400,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "МЕН-132",
                         "room": "308",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -513,7 +419,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "МЕН-134",
                         "room": "308",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -536,7 +444,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -559,7 +469,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -582,7 +494,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -605,7 +519,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -628,7 +544,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -645,7 +563,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -668,13 +588,17 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ЭК-533",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ЭК-538",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -697,7 +621,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -720,7 +646,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -743,7 +671,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -766,7 +696,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -789,7 +721,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -806,7 +740,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -829,13 +765,17 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ЭК-533",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ЭК-538",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -858,7 +798,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "МЕН-133",
                         "room": "308а",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -875,7 +817,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "МЕН-132",
                         "room": "308",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -892,7 +836,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "МЕН-134",
                         "room": "308",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -915,7 +861,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -938,7 +886,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -961,7 +911,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -984,7 +936,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1007,7 +961,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1024,7 +980,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1047,13 +1005,17 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ЭК-533",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ЭК-538",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1076,7 +1038,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "МЕН-133",
                         "room": "308а",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1093,7 +1057,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "МЕН-132",
                         "room": "308",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1110,7 +1076,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "МЕН-134",
                         "room": "308",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1133,7 +1101,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1156,7 +1126,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1179,7 +1151,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1202,7 +1176,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1225,7 +1201,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1242,7 +1220,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1265,13 +1245,17 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ЭК-533",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ЭК-538",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1294,7 +1278,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "МЕН-133",
                         "room": "308а",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1311,7 +1297,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "МЕН-132",
                         "room": "308",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1328,7 +1316,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "МЕН-134",
                         "room": "308",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1351,7 +1341,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-341",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1374,7 +1366,9 @@
                         "teacher": "асс.Прокопенко А.В.",
                         "group": "ИБ-342",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

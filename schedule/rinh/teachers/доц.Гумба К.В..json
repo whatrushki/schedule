@@ -1,96 +1,5 @@
 [
     {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "л. Теневая экономика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Гумба К.В.",
-                        "group": "ЭБZS-1501",
-                        "room": "208",
-                        "additional": "2"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "л. Теневая экономика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Гумба К.В.",
-                        "group": "ЭБZS-1501",
-                        "room": "208",
-                        "additional": "2"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Государственное и муниципальное управление",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Гумба К.В.",
-                        "group": "ГМУ-121",
-                        "room": "307",
-                        "additional": "2"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "л. Комплекс интегрированных маркетинговых коммуникаций",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Гумба К.В.",
-                        "group": "ТОР-232",
-                        "room": "328",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "пр. Комплекс интегрированных маркетинговых коммуникаций",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Гумба К.В.",
-                        "group": "ТОР-232",
-                        "room": "328",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -105,7 +14,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ГМУ-121",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -128,7 +39,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-242",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -151,7 +64,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ЭБZ-1501",
                         "room": "206а",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -168,7 +83,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ЭБZ-1501",
                         "room": "206а",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -191,7 +108,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -208,7 +127,47 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "пр. Инструментарий научных исследований в маркетинге",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Гумба К.В.",
+                        "group": "ТОР-812",
+                        "room": "412",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "пр. Инструментарий научных исследований в маркетинге",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Гумба К.В.",
+                        "group": "ТОР-812",
+                        "room": "412",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -231,7 +190,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ЭБZS-1501",
                         "room": "209",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -248,7 +209,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ЭБZS-1501",
                         "room": "209",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -271,7 +234,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ЭБZS-1501",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -288,7 +253,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ЭБZS-1501",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -311,7 +278,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ГМУ-121",
                         "room": "307",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -328,7 +297,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -345,7 +316,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -368,7 +341,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ГМУ-121",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -391,7 +366,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-242",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -414,7 +391,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ЭБZS-1501",
                         "room": "210",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "CREDIT",
@@ -437,7 +416,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -454,7 +435,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -471,7 +454,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ЭБZS-1501",
                         "room": "307",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -488,7 +473,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ЭБZ-1501",
                         "room": "206а",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -505,7 +492,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ЭБZ-1501",
                         "room": "206а",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -528,7 +517,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ГМУ-121",
                         "room": "307",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -545,7 +536,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -562,7 +555,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -585,7 +580,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ГМУ-121",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -608,7 +605,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-242",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -631,7 +630,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -648,7 +649,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -671,7 +674,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ГМУ-121",
                         "room": "307",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -688,7 +693,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -705,7 +712,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -728,7 +737,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ГМУ-121",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -751,7 +762,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-242",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -774,7 +787,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -791,7 +806,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -814,7 +831,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ГМУ-121",
                         "room": "307",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -831,7 +850,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -848,7 +869,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -871,7 +894,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ГМУ-121",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -894,7 +919,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-242",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -917,7 +944,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -934,7 +963,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -957,7 +988,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ГМУ-121",
                         "room": "307",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -974,7 +1007,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -991,7 +1026,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1014,7 +1051,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ГМУ-121",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1037,7 +1076,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-242",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1060,7 +1101,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1077,7 +1120,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1100,7 +1145,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ГМУ-121",
                         "room": "307",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1117,7 +1164,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1134,7 +1183,9 @@
                         "teacher": "доц.Гумба К.В.",
                         "group": "ТОР-232",
                         "room": "328",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
