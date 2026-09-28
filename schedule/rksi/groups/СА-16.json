@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-09-28",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-09-28",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Химия",
-                "otUnits": [
-                    {
-                        "teacher": "Кравченко И.Ю.",
-                        "group": "СА-16",
-                        "room": "411",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-28",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Информатика",
-                "otUnits": [
-                    {
-                        "teacher": "Арутюнян М.А.",
-                        "group": "СА-16",
-                        "room": "213",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-28",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Индивидуальный проект",
-                "otUnits": [
-                    {
-                        "teacher": "Бакулярова И.Н.",
-                        "group": "СА-16",
-                        "room": "314",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-28",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [
-                    {
-                        "teacher": "Смолянинов К.А.",
-                        "group": "СА-16",
-                        "room": "Акт.зал",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CLASS_HOUR",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
@@ -109,38 +27,38 @@
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Основы безопасности и защиты Родины",
+                "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Коханова Л.Н.",
+                        "teacher": "Арутюнян М.А.",
                         "group": "СА-16",
-                        "room": "312",
+                        "room": "212",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-29",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Физика",
+                "subject": "Русский язык",
                 "otUnits": [
                     {
-                        "teacher": "Барна Н.В.",
+                        "teacher": "Рожченко Т.В.",
                         "group": "СА-16",
-                        "room": "408",
+                        "room": "Акт зал",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -320,17 +238,17 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Ефремова О.П.",
                         "group": "СА-16",
-                        "room": "111",
+                        "room": "315а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ефремова О.П.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "СА-16",
-                        "room": "315а",
+                        "room": "111",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

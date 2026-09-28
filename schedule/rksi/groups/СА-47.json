@@ -5,6 +5,25 @@
         "lessons": [
             {
                 "date": "2026-09-29",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Организация администрирования компьютерных систем",
+                "otUnits": [
+                    {
+                        "teacher": "Савчук И.С.",
+                        "group": "СА-47",
+                        "room": "210а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-29",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -32,14 +51,14 @@
                     {
                         "teacher": "Бороненкова С.Е.",
                         "group": "СА-47",
-                        "room": "306",
+                        "room": "325",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-29",
@@ -51,14 +70,14 @@
                     {
                         "teacher": "Бороненкова С.Е.",
                         "group": "СА-47",
-                        "room": "306",
+                        "room": "325",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-29",
@@ -77,7 +96,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

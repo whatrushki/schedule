@@ -1,165 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 6,
-                "startTime": "17:10",
-                "endTime": "18:40",
-                "subject": "л. Налоговый консалтинг",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кузнецов И.А.",
-                        "group": "ЭК-826",
-                        "room": "520",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 7,
-                "startTime": "18:45",
-                "endTime": "20:15",
-                "subject": "л. Налоговый консалтинг",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кузнецов И.А.",
-                        "group": "ЭК-826",
-                        "room": "520",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "лаб. Компьютеризация бухгалтерской деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кузнецов И.А.",
-                        "group": "ЭК-447",
-                        "room": "501",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 6,
-                "startTime": "17:10",
-                "endTime": "18:40",
-                "subject": "лаб. Лабораторный практикум по бухгалтерскому учету",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кузнецов И.А.",
-                        "group": "ЭК-441",
-                        "room": "501",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "лаб. Компьютеризация бухгалтерской деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кузнецов И.А.",
-                        "group": "ЭК-447",
-                        "room": "501",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 6,
-                "startTime": "17:10",
-                "endTime": "18:40",
-                "subject": "лаб. Компьютеризация бухгалтерской деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кузнецов И.А.",
-                        "group": "ЭК-449",
-                        "room": "516",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "лаб. Лабораторный практикум по бухгалтерскому учету",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кузнецов И.А.",
-                        "group": "ЭК-441",
-                        "room": "501",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 6,
-                "startTime": "17:10",
-                "endTime": "18:40",
-                "subject": "лаб. Компьютеризация бухгалтерской деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кузнецов И.А.",
-                        "group": "ЭК-449",
-                        "room": "516",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -174,7 +14,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -191,7 +33,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -214,7 +58,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -231,7 +77,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -248,7 +96,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-826",
                         "room": "513",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -265,7 +115,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-826",
                         "room": "513",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -288,7 +140,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -305,7 +159,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -328,7 +184,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -345,7 +203,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -368,7 +228,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -385,7 +247,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -408,7 +272,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -425,7 +291,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -448,7 +316,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -465,7 +335,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -488,7 +360,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -505,7 +379,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -528,7 +404,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -545,7 +423,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -568,7 +448,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -585,7 +467,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -608,7 +492,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -625,7 +511,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -648,7 +536,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -665,7 +555,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -688,7 +580,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -705,7 +599,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -728,7 +624,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -745,7 +643,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -768,7 +668,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -785,7 +687,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -808,7 +712,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -825,7 +731,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -848,7 +756,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -865,7 +775,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -888,7 +800,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -905,7 +819,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -928,7 +844,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -945,7 +863,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -968,7 +888,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -985,7 +907,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1008,7 +932,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1025,7 +951,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1048,7 +976,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1065,7 +995,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1088,7 +1020,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1105,7 +1039,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1128,7 +1064,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1145,7 +1083,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1168,7 +1108,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1185,7 +1127,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1208,7 +1152,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1225,7 +1171,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1248,7 +1196,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1265,7 +1215,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1288,7 +1240,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1305,7 +1259,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1328,7 +1284,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1345,7 +1303,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1368,7 +1328,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1385,7 +1347,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1408,7 +1372,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1425,7 +1391,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1448,7 +1416,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1465,7 +1435,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1488,7 +1460,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1505,7 +1479,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1528,7 +1504,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-447",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1545,7 +1523,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1568,7 +1548,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-441",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1585,7 +1567,9 @@
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭК-449",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",

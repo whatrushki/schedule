@@ -1,10 +1,10 @@
 [
     {
-        "date": "2026-09-28",
+        "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-28",
+                "date": "2026-09-29",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
@@ -12,60 +12,35 @@
                 "otUnits": [
                     {
                         "teacher": "Куракова Г.В.",
-                        "group": "СА-41",
-                        "room": "404",
-                        "additional": "1",
+                        "group": "ИБА-33",
+                        "room": "47",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
-                "state": "CHANGED"
+                "type": "OTHER",
+                "state": "ADDED"
             },
             {
-                "date": "2026-09-28",
+                "date": "2026-09-29",
                 "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Правовое обеспечение профессиональной деятельности",
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Основы философии",
                 "otUnits": [
                     {
                         "teacher": "Куракова Г.В.",
-                        "group": "ИС-32",
-                        "room": "404",
-                        "additional": "1",
+                        "group": "ИБА-31",
+                        "room": "36",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
-                "state": "CHANGED"
+                "type": "OTHER",
+                "state": "ADDED"
             },
-            {
-                "date": "2026-09-28",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
-                "subject": "Правовое обеспечение профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Куракова Г.В.",
-                        "group": "ИС-34",
-                        "room": "404",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-29",
-        "scheduleType": "COMMON",
-        "lessons": [
             {
                 "date": "2026-09-29",
                 "number": 5,
@@ -74,7 +49,7 @@
                 "subject": "Основы философии",
                 "otUnits": [
                     {
-                        "teacher": "Куракова Галина Владимировна",
+                        "teacher": "Куракова Г.В.",
                         "group": "ИБА-32",
                         "room": "36",
                         "additional": "2",
@@ -83,7 +58,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-29",
@@ -93,7 +68,7 @@
                 "subject": "Основы философии",
                 "otUnits": [
                     {
-                        "teacher": "Куракова Галина Владимировна",
+                        "teacher": "Куракова Г.В.",
                         "group": "ИБА-31",
                         "room": "36",
                         "additional": "2",
@@ -102,7 +77,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-29",
@@ -121,7 +96,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

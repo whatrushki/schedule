@@ -1,182 +1,5 @@
 [
     {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "пр. Иностранный язык, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Лешневская К.В.",
-                        "group": "СТ-431",
-                        "room": "507",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "л. Статистика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "СТ-431",
-                        "room": "516",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "л. Эконометрика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "СТ-431",
-                        "room": "516",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Иностранный язык, п/г 1",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Прохорова А.П.",
-                        "group": "СТ-431",
-                        "room": "653",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Статистика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "СТ-431",
-                        "room": "516",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Основы проектной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Красноплахтич М.В.",
-                        "group": "СТ-431",
-                        "room": "520",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "пр. Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Лешневская К.В.",
-                        "group": "СТ-431",
-                        "room": "653",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Прохорова А.П.",
-                        "group": "СТ-431",
-                        "room": "507",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Эконометрика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "СТ-431",
-                        "room": "516",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "лаб. Эконометрика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Житников И.В.",
-                        "group": "СТ-431",
-                        "room": "516",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -191,7 +14,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -208,7 +33,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -225,7 +52,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -248,7 +77,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -265,7 +96,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -288,7 +121,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "652",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -305,7 +140,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -322,7 +159,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "652",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -345,7 +184,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -362,7 +203,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -385,7 +228,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -402,7 +247,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -419,7 +266,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -436,7 +285,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "653",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -459,7 +310,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -476,7 +329,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "СТ-431",
                         "room": "520",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -499,13 +354,17 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "653",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -522,7 +381,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -539,7 +400,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -562,7 +425,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -579,7 +444,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -596,7 +463,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -619,7 +488,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -636,7 +507,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -659,7 +532,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "652",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -676,7 +551,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -693,7 +570,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "652",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -716,7 +595,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -733,7 +614,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -756,7 +639,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -773,7 +658,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -790,7 +677,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -807,7 +696,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "653",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -830,7 +721,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -847,7 +740,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "СТ-431",
                         "room": "520",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -867,16 +762,20 @@
                 "subject": "пр. Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "доц.Прохорова А.П.",
-                        "group": "СТ-431",
-                        "room": "507",
-                        "additional": "1"
-                    },
-                    {
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "653",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Прохорова А.П.",
+                        "group": "СТ-431",
+                        "room": "507",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -893,7 +792,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -910,7 +811,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -933,7 +836,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -950,7 +855,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -967,7 +874,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -990,7 +899,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1007,7 +918,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1030,7 +943,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "652",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1047,7 +962,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1064,7 +981,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "652",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1087,7 +1006,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1104,7 +1025,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1127,7 +1050,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1144,7 +1069,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1161,7 +1088,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1178,7 +1107,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "653",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1201,13 +1132,17 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "653",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1224,7 +1159,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1241,7 +1178,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1264,7 +1203,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1281,7 +1222,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1298,7 +1241,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1321,7 +1266,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1338,7 +1285,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1361,7 +1310,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "652",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1378,7 +1329,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1395,7 +1348,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "652",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1418,7 +1373,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1435,7 +1392,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1458,7 +1417,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1475,7 +1436,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1492,7 +1455,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1509,7 +1474,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "653",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1532,7 +1499,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1549,7 +1518,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "СТ-431",
                         "room": "520",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1572,13 +1543,17 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "653",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1595,7 +1570,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1612,7 +1589,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1635,7 +1614,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1652,7 +1633,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1669,7 +1652,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1692,7 +1677,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1709,7 +1696,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1732,7 +1721,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "652",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1749,7 +1740,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1766,7 +1759,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "652",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1789,7 +1784,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1806,7 +1803,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1829,7 +1828,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1846,7 +1847,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1863,7 +1866,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1880,7 +1885,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "653",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1903,7 +1910,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1920,7 +1929,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "СТ-431",
                         "room": "520",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1943,13 +1954,17 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "653",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1966,7 +1981,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1983,7 +2000,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2006,7 +2025,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2023,7 +2044,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2040,7 +2063,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2063,7 +2088,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2080,7 +2107,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2103,7 +2132,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "652",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2120,7 +2151,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2137,7 +2170,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "652",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2160,7 +2195,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2177,7 +2214,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2200,7 +2239,9 @@
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2217,7 +2258,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2234,7 +2277,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2251,7 +2296,9 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "653",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2274,7 +2321,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2291,7 +2340,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "СТ-431",
                         "room": "520",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2314,13 +2365,17 @@
                         "teacher": "доц.Прохорова А.П.",
                         "group": "СТ-431",
                         "room": "507",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Лешневская К.В.",
                         "group": "СТ-431",
                         "room": "653",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2337,7 +2392,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2354,7 +2411,9 @@
                         "teacher": "доц.Житников И.В.",
                         "group": "СТ-431",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",

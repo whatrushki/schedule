@@ -1,91 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "лаб. Инструменты и библиотеки языка Python",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Бухов Н.В.",
-                        "group": "ПМИ-321",
-                        "room": "551",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "лаб. Системные программы",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Бухов Н.В.",
-                        "group": "ФИ-321",
-                        "room": "551",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 6,
-                "startTime": "17:10",
-                "endTime": "18:40",
-                "subject": "лаб. Основы искусственного интеллекта",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Бухов Н.В.",
-                        "group": "ЭК-445",
-                        "room": "513",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "пр. Системные программы",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Бухов Н.В.",
-                        "group": "ФИ-321",
-                        "room": "311",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-01",
         "scheduleType": "COMMON",
         "lessons": [
@@ -100,7 +14,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -117,7 +33,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -140,7 +58,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -157,7 +77,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ЭК-445",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -174,7 +96,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -197,7 +121,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -214,7 +140,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -237,7 +165,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ЭК-445",
                         "room": "513",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -260,7 +190,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -283,7 +215,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -300,7 +234,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -323,7 +259,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -340,7 +278,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ЭК-445",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -357,7 +297,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -380,7 +322,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -397,7 +341,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -420,7 +366,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ЭК-445",
                         "room": "513",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -443,7 +391,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -466,7 +416,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -483,7 +435,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -506,7 +460,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -523,7 +479,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ЭК-445",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -540,7 +498,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -563,7 +523,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -580,7 +542,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -603,7 +567,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ЭК-445",
                         "room": "513",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -626,7 +592,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -649,7 +617,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -666,7 +636,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -689,7 +661,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -706,7 +680,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ЭК-445",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -723,7 +699,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -746,7 +724,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -763,7 +743,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -786,7 +768,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ЭК-445",
                         "room": "513",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -809,7 +793,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -832,7 +818,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -849,7 +837,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -872,7 +862,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -889,7 +881,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ЭК-445",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -906,7 +900,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -929,7 +925,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -946,7 +944,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -969,7 +969,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ЭК-445",
                         "room": "513",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -992,7 +994,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1015,7 +1019,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1032,7 +1038,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1055,7 +1063,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1072,7 +1082,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ЭК-445",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1089,7 +1101,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1112,7 +1126,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ПМИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1129,7 +1145,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1152,7 +1170,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ЭК-445",
                         "room": "513",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1175,7 +1195,9 @@
                         "teacher": "доц.Бухов Н.В.",
                         "group": "ФИ-321",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

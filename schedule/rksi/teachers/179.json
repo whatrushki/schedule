@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-09-28",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-09-28",
-                "number": 0,
-                "startTime": "00:00",
-                "endTime": "00:00",
-                "subject": "Классный час",
-                "otUnits": [
-                    {
-                        "teacher": "Бодло О.О.",
-                        "group": "ТД-13",
-                        "room": "20",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CLASS_HOUR",
-                "state": "ADDED"
-            },
-            {
-                "date": "2026-09-28",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Основы безопасности и защиты Родины",
-                "otUnits": [
-                    {
-                        "teacher": "Бодло А.О.",
-                        "group": "БД-11",
-                        "room": "28",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-28",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Безопасность жизнедеятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Бодло А.О.",
-                        "group": "БД-21",
-                        "room": "28",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
@@ -76,14 +13,14 @@
                     {
                         "teacher": "Бодло А.О.",
                         "group": "БУ-11",
-                        "room": "30",
+                        "room": "44",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

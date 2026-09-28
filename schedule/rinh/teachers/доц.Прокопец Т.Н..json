@@ -1,142 +1,5 @@
 [
     {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "л. Основы индустрии гостеприимства",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Прокопец Т.Н.",
-                        "group": "СЕР-111",
-                        "room": "208",
-                        "additional": "2"
-                    },
-                    {
-                        "teacher": "доц.Прокопец Т.Н.",
-                        "group": "ТУР-111",
-                        "room": "208",
-                        "additional": "2"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Современные технологии и инструментарий менеджмента в туризме",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Прокопец Т.Н.",
-                        "group": "ТУР-811",
-                        "room": "411",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "пр. Современные технологии и инструментарий менеджмента в туризме",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Прокопец Т.Н.",
-                        "group": "ТУР-811",
-                        "room": "411",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Основы индустрии гостеприимства",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Прокопец Т.Н.",
-                        "group": "ТУР-111",
-                        "room": "207",
-                        "additional": "2"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Основы индустрии гостеприимства",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Прокопец Т.Н.",
-                        "group": "СЕР-111",
-                        "room": "211",
-                        "additional": "2"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Современные технологии и инструментарий менеджмента в сервисе",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Прокопец Т.Н.",
-                        "group": "СЕР-811",
-                        "room": "411",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "пр. Современные технологии и инструментарий менеджмента в сервисе",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Прокопец Т.Н.",
-                        "group": "СЕР-811",
-                        "room": "411",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
@@ -151,7 +14,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-811",
                         "room": "403",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -168,7 +33,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-811",
                         "room": "403",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -191,13 +58,17 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -214,7 +85,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУРZS-1401",
                         "room": "403",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -231,7 +104,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУРZS-1401",
                         "room": "403",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -254,7 +129,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-811",
                         "room": "411",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -271,7 +148,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-811",
                         "room": "411",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -288,7 +167,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-811",
                         "room": "411",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -305,7 +186,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-811",
                         "room": "411",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -328,7 +211,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -345,7 +230,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -368,13 +255,17 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -397,7 +288,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -414,7 +307,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -431,7 +326,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУРZS-1401",
                         "room": "407а",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -448,7 +345,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУРZS-1401",
                         "room": "407а",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -471,13 +370,17 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -500,7 +403,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -517,7 +422,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -540,7 +447,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУРZS-1401",
                         "room": "206б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -563,13 +472,17 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -592,7 +505,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -609,7 +524,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -632,13 +549,17 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -661,7 +582,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -678,7 +601,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -701,13 +626,17 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -730,7 +659,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -747,7 +678,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -770,13 +703,17 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -799,7 +736,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -816,7 +755,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -839,13 +780,17 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -868,7 +813,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -885,7 +832,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -908,13 +857,17 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -937,7 +890,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -954,7 +909,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -977,13 +934,17 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1006,7 +967,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1023,7 +986,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1046,13 +1011,17 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1075,7 +1044,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1092,7 +1063,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1115,13 +1088,17 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1144,7 +1121,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "ТУР-111",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1161,7 +1140,9 @@
                         "teacher": "доц.Прокопец Т.Н.",
                         "group": "СЕР-111",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

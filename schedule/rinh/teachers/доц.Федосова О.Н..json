@@ -1,177 +1,5 @@
 [
     {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "л. Статистика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Федосова О.Н.",
-                        "group": "МЕН-123",
-                        "room": "208",
-                        "additional": "2"
-                    },
-                    {
-                        "teacher": "доц.Федосова О.Н.",
-                        "group": "МЕН-127",
-                        "room": "208",
-                        "additional": "2"
-                    },
-                    {
-                        "teacher": "доц.Федосова О.Н.",
-                        "group": "МЕН-122",
-                        "room": "208",
-                        "additional": "2"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Статистика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Федосова О.Н.",
-                        "group": "МЕН-122",
-                        "room": "210",
-                        "additional": "2"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Статистика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Федосова О.Н.",
-                        "group": "МЕН-123",
-                        "room": "210",
-                        "additional": "2"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Статистика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Федосова О.Н.",
-                        "group": "МЕН-127",
-                        "room": "210",
-                        "additional": "2"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "л. Анализ данных",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Федосова О.Н.",
-                        "group": "МО-422",
-                        "room": "602",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Федосова О.Н.",
-                        "group": "МО-421",
-                        "room": "602",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Анализ данных",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Федосова О.Н.",
-                        "group": "МО-422",
-                        "room": "503",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Анализ данных",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Федосова О.Н.",
-                        "group": "МО-421",
-                        "room": "501",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Статистика",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Федосова О.Н.",
-                        "group": "ЭК-527",
-                        "room": "429",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Федосова О.Н.",
-                        "group": "ЭК-526",
-                        "room": "429",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -186,19 +14,25 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -215,7 +49,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -232,7 +68,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -249,7 +87,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -272,13 +112,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-527",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-526",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -295,13 +139,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -318,7 +166,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "514",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -335,7 +185,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -358,13 +210,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ФКOZ-8102",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ФКOZ-8101",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -381,13 +237,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ФКOZ-8101",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ФКOZ-8102",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -410,19 +270,25 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -439,7 +305,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "210",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -456,7 +324,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "210",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -473,7 +343,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "210",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -496,13 +368,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -519,7 +395,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -536,7 +414,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -553,13 +433,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-526",
                         "room": "429",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-527",
                         "room": "429",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -582,19 +466,25 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -611,7 +501,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -628,7 +520,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -645,7 +539,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -668,13 +564,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-527",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-526",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -691,13 +591,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -714,7 +618,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "514",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -731,7 +637,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -754,19 +662,25 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -783,7 +697,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "210",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -800,7 +716,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "210",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -817,7 +735,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "210",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -840,13 +760,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -863,7 +787,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -880,7 +806,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -897,13 +825,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-527",
                         "room": "429",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-526",
                         "room": "429",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -926,19 +858,25 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -955,7 +893,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -972,7 +912,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -989,7 +931,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1012,13 +956,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-527",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-526",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1035,13 +983,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1058,7 +1010,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "514",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1075,7 +1029,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1098,13 +1054,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1121,7 +1081,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1138,7 +1100,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1155,13 +1119,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-526",
                         "room": "429",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-527",
                         "room": "429",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1184,19 +1152,25 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1213,7 +1187,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1230,7 +1206,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1247,7 +1225,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1270,13 +1250,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-526",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-527",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1293,13 +1277,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1316,7 +1304,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "514",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1333,7 +1323,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1356,19 +1348,25 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1385,7 +1383,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "210",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1402,7 +1402,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "210",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1419,7 +1421,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "210",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1442,13 +1446,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1465,7 +1473,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1482,7 +1492,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1499,13 +1511,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-526",
                         "room": "429",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-527",
                         "room": "429",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1528,19 +1544,25 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1557,7 +1579,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1574,7 +1598,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1591,7 +1617,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1614,13 +1642,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-526",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-527",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1637,13 +1669,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1660,7 +1696,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "514",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1677,7 +1715,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1700,19 +1740,25 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1729,7 +1775,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "210",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1746,7 +1794,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "210",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1763,7 +1813,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "210",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1786,13 +1838,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1809,7 +1865,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1826,7 +1884,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1843,13 +1903,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-526",
                         "room": "429",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-527",
                         "room": "429",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1872,19 +1936,25 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1901,7 +1971,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1918,7 +1990,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1935,7 +2009,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "106",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1958,13 +2034,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-526",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-527",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1981,13 +2061,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2004,7 +2088,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "514",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2021,7 +2107,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "502",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2044,19 +2132,25 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "208",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2073,7 +2167,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-122",
                         "room": "210",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2090,7 +2186,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-123",
                         "room": "210",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2107,7 +2205,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МЕН-127",
                         "room": "210",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2130,13 +2230,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2153,7 +2257,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-422",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2170,7 +2276,9 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "МО-421",
                         "room": "501",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2187,13 +2295,17 @@
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-526",
                         "room": "429",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Федосова О.Н.",
                         "group": "ЭК-527",
                         "room": "429",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

@@ -1,160 +1,5 @@
 [
     {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Социальные аспекты поведения потребителей",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кулькова Е.П.",
-                        "group": "ТОР-232",
-                        "room": "339",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Кулькова Е.П.",
-                        "group": "ТОР-234",
-                        "room": "339",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "лаб. Маркетинг",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кулькова Е.П.",
-                        "group": "ТОР-221",
-                        "room": "324",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Социальные аспекты поведения потребителей",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кулькова Е.П.",
-                        "group": "ТОР-235",
-                        "room": "329",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Кулькова Е.П.",
-                        "group": "ТОР-231",
-                        "room": "329",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "лаб. Маркетинг",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кулькова Е.П.",
-                        "group": "ТОР-224",
-                        "room": "324",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "л. Логистика складирования",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кулькова Е.П.",
-                        "group": "ТОР-244",
-                        "room": "324",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "л. Бизнес-проектирование коммерческой деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кулькова Е.П.",
-                        "group": "ТОР-822",
-                        "room": "412",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Кулькова Е.П.",
-                        "group": "ТОР-823",
-                        "room": "412",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "л. Бизнес-проектирование коммерческой деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кулькова Е.П.",
-                        "group": "ТОР-822",
-                        "room": "412",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Кулькова Е.П.",
-                        "group": "ТОР-823",
-                        "room": "412",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
@@ -169,13 +14,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-231",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-235",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -192,7 +41,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-244",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -209,7 +60,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-222",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -226,13 +79,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-232",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-234",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -255,13 +112,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-232",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-234",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -278,7 +139,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-221",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -295,13 +158,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-231",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-235",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -318,7 +185,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-224",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -341,7 +210,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-244",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -364,13 +235,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-231",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-235",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -387,7 +262,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-244",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -404,7 +281,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-222",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -421,13 +300,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-234",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-232",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -450,13 +333,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-232",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-234",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -473,7 +360,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-221",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -490,13 +379,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-231",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-235",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -513,7 +406,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-224",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -536,7 +431,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-244",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -559,13 +456,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-235",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-231",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -582,7 +483,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-244",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -599,7 +502,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-222",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -616,13 +521,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-232",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-234",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -645,13 +554,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-234",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-232",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -668,7 +581,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-221",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -685,13 +600,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-231",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-235",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -708,7 +627,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-224",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -731,7 +652,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-244",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -754,13 +677,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-231",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-235",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -777,7 +704,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-244",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -794,7 +723,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-222",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -811,13 +742,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-232",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-234",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -840,13 +775,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-234",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-232",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -863,7 +802,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-221",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -880,13 +821,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-231",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-235",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -903,7 +848,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-224",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -926,7 +873,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-244",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -949,13 +898,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-235",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-231",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -972,7 +925,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-244",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -989,7 +944,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-222",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1006,13 +963,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-232",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-234",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1035,13 +996,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-234",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-232",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1058,7 +1023,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-221",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1075,13 +1042,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-231",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-235",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1098,7 +1069,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-224",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1121,7 +1094,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-244",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1144,13 +1119,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-231",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-235",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1167,7 +1146,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-244",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1184,7 +1165,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-222",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1201,13 +1184,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-232",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-234",
                         "room": "336",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1230,13 +1217,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-232",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-234",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1253,7 +1244,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-221",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1270,13 +1263,17 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-231",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-235",
                         "room": "329",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1293,7 +1290,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-224",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1316,7 +1315,9 @@
                         "teacher": "доц.Кулькова Е.П.",
                         "group": "ТОР-244",
                         "room": "324",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",

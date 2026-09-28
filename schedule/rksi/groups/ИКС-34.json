@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-09-28",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-09-28",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Монтаж и эксплуатация направляющих систем",
-                "otUnits": [
-                    {
-                        "teacher": "Голиченко П.С.",
-                        "group": "ИКС-34",
-                        "room": "118",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "REMOVED"
-            },
-            {
-                "date": "2026-09-28",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [
-                    {
-                        "teacher": "Видинеева Е.А.",
-                        "group": "ИКС-34",
-                        "room": "411",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CLASS_HOUR",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-28",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Монтаж и эксплуатация систем видеонаблюдения и систем безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "Згонников Е.Ф.",
-                        "group": "ИКС-34",
-                        "room": "Общ1-4",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-28",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
-                "subject": "Монтаж и эксплуатация систем видеонаблюдения и систем безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "Згонников Е.Ф.",
-                        "group": "ИКС-34",
-                        "room": "Общ1",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            }
-        ]
-    },
-    {
         "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
@@ -102,7 +20,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-29",
@@ -121,7 +39,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-29",
@@ -133,14 +51,52 @@
                     {
                         "teacher": "Корбан С.Н.",
                         "group": "ИКС-34",
-                        "room": "с/з2",
+                        "room": "с/з4",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-29",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Монтаж и эксплуатация систем видеонаблюдения и систем безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Згонников Е.Ф.",
+                        "group": "ИКС-34",
+                        "room": "Общ1-3",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-29",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Монтаж и эксплуатация систем видеонаблюдения и систем безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Згонников Е.Ф.",
+                        "group": "ИКС-34",
+                        "room": "Общ1-3",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

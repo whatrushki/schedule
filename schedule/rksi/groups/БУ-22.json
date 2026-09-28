@@ -1,59 +1,5 @@
 [
     {
-        "date": "2026-09-28",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-09-28",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "CLASS_HOUR",
-                "state": "REMOVED"
-            },
-            {
-                "date": "2026-09-28",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
-                "subject": "Основы финансовой грамотности",
-                "otUnits": [
-                    {
-                        "teacher": "Каверзнева Е.Ю.",
-                        "group": "БУ-22",
-                        "room": "40",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-28",
-                "number": 6,
-                "startTime": "17:40",
-                "endTime": "19:10",
-                "subject": "Статистика",
-                "otUnits": [
-                    {
-                        "teacher": "Шумина О.О.",
-                        "group": "БУ-22",
-                        "room": "17",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
@@ -67,14 +13,14 @@
                     {
                         "teacher": "Упорова Л.В.",
                         "group": "БУ-22",
-                        "room": "34",
+                        "room": "13",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-29",
@@ -86,14 +32,14 @@
                     {
                         "teacher": "Упорова Л.В.",
                         "group": "БУ-22",
-                        "room": "34",
+                        "room": "13",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

@@ -1,119 +1,5 @@
 [
     {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "лаб. Информационные технологии",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Фрид Л.М.",
-                        "group": "ФИ-321",
-                        "room": "212",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "лаб. Технологии обработки данных, п/г 1",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Фрид Л.М.",
-                        "group": "ИСТ-321",
-                        "room": "212",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "лаб. Информационные технологии, п/г 1",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Фрид Л.М.",
-                        "group": "ПРИ-321",
-                        "room": "209",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "лаб. Информационные технологии",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Фрид Л.М.",
-                        "group": "ИСТ-321",
-                        "room": "301",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "лаб. Информационные технологии",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Фрид Л.М.",
-                        "group": "ПИ-321",
-                        "room": "213",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "лаб. Технологии обработки данных",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Фрид Л.М.",
-                        "group": "ПИ-321",
-                        "room": "213",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
@@ -128,7 +14,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -145,7 +33,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -162,7 +52,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -185,7 +77,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -202,25 +96,33 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -237,13 +139,17 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -260,7 +166,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -283,7 +191,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -300,7 +210,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -323,7 +235,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -340,7 +254,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -357,7 +273,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -374,7 +292,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -397,7 +317,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -414,7 +336,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -431,7 +355,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -454,7 +380,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -471,25 +399,33 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -506,13 +442,17 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -529,7 +469,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -552,7 +494,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -569,7 +513,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -592,7 +538,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -609,7 +557,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -626,7 +576,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -643,7 +595,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -666,7 +620,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -683,7 +639,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -700,7 +658,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -723,7 +683,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -740,25 +702,33 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -775,13 +745,17 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -798,7 +772,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -821,7 +797,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -838,7 +816,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -861,7 +841,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -878,7 +860,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -895,7 +879,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -918,7 +904,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -935,25 +923,33 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -970,13 +966,17 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -993,7 +993,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1016,7 +1018,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1033,7 +1037,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1056,7 +1062,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1073,7 +1081,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1090,7 +1100,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1107,7 +1119,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1130,7 +1144,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1147,7 +1163,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1164,7 +1182,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1187,7 +1207,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1204,25 +1226,33 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1239,13 +1269,17 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1262,7 +1296,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1285,7 +1321,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1302,7 +1340,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1325,7 +1365,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1342,7 +1384,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1359,7 +1403,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1376,7 +1422,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1399,7 +1447,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1416,7 +1466,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1433,7 +1485,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1456,7 +1510,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1473,25 +1529,33 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1508,13 +1572,17 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1531,7 +1599,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1554,7 +1624,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ФИ-321",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1571,7 +1643,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1594,7 +1668,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПРИ-321",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1611,7 +1687,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ИСТ-321",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1628,7 +1706,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1645,7 +1725,9 @@
                         "teacher": "доц.Фрид Л.М.",
                         "group": "ПИ-321",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",

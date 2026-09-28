@@ -1,49 +1,60 @@
 [
     {
-        "date": "2026-09-28",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "date": "2026-09-29",
+        "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-28",
-                "number": 0,
-                "startTime": "00:00",
-                "endTime": "00:00",
-                "subject": "Классный час",
+                "date": "2026-09-29",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Информатика",
                 "otUnits": [
                     {
                         "teacher": "Арутюнян М.А.",
                         "group": "ТЭС-12",
-                        "room": "118",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Арутюнян М.М.",
-                        "group": "ИС-26",
-                        "room": "217",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Арутюнян М.М.",
-                        "group": "ИС-37",
-                        "room": "217",
+                        "room": "213",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "CLASS_HOUR",
+                "type": "OTHER",
                 "state": "ADDED"
             },
             {
-                "date": "2026-09-28",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Математика",
+                "date": "2026-09-29",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.А.",
+                        "group": "СА-16",
+                        "room": "212",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Арутюнян М.А.",
+                        "group": "ИКС-14",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-29",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Доп.занятие",
                 "otUnits": [
                     {
                         "teacher": "Арутюнян М.А.",
@@ -55,61 +66,26 @@
                     },
                     {
                         "teacher": "Арутюнян М.М.",
-                        "group": "СА-34",
-                        "room": "217",
+                        "group": "ИС-25",
+                        "room": "220",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "OTHER",
-                "state": "ADDED"
+                "type": "PRACTICE",
+                "state": "CHANGED"
             },
             {
-                "date": "2026-09-28",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Информатика",
+                "date": "2026-09-29",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян М.А.",
-                        "group": "СА-16",
-                        "room": "213",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
                         "teacher": "Арутюнян М.М.",
-                        "group": "СА-34",
-                        "room": "217",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            },
-            {
-                "date": "2026-09-28",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Основы алгоритмизации и программирования",
-                "otUnits": [
-                    {
-                        "teacher": "Арутюнян М.А.",
-                        "group": "ИКС-24",
-                        "room": "213",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Арутюнян М.М.",
-                        "group": "СА-34",
+                        "group": "ИС-25",
                         "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
@@ -120,88 +96,6 @@
                 "state": "CHANGED"
             },
             {
-                "date": "2026-09-28",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Основы алгоритмизации и программирования",
-                "otUnits": [
-                    {
-                        "teacher": "Арутюнян Мария Михайловна",
-                        "group": "СА-34",
-                        "room": "217",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "REMOVED"
-            },
-            {
-                "date": "2026-09-28",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
-                "subject": "Основы алгоритмизации и программирования",
-                "otUnits": [
-                    {
-                        "teacher": "Арутюнян Мария Михайловна",
-                        "group": "СА-34",
-                        "room": "217",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "REMOVED"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-29",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-29",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Доп.занятие",
-                "otUnits": [
-                    {
-                        "teacher": "Арутюнян Мария Михайловна",
-                        "group": "ИС-25",
-                        "room": "217",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-29",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Доп.занятие",
-                "otUnits": [
-                    {
-                        "teacher": "Арутюнян Мария Михайловна",
-                        "group": "ИС-25",
-                        "room": "217",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
                 "date": "2026-09-29",
                 "number": 5,
                 "startTime": "15:00",
@@ -209,7 +103,7 @@
                 "subject": "Математическое моделирование",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Мария Михайловна",
+                        "teacher": "Арутюнян М.М.",
                         "group": "ИС-44",
                         "room": "217",
                         "additional": "1",
@@ -218,7 +112,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-29",
@@ -228,7 +122,7 @@
                 "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Мария Михайловна",
+                        "teacher": "Арутюнян М.М.",
                         "group": "ИС-23",
                         "room": "217",
                         "additional": "1",
@@ -236,8 +130,8 @@
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-29",
@@ -247,7 +141,7 @@
                 "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Мария Михайловна",
+                        "teacher": "Арутюнян М.М.",
                         "group": "ИС-23",
                         "room": "217",
                         "additional": "1",
@@ -255,8 +149,8 @@
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },
