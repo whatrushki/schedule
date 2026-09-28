@@ -1,160 +1,5 @@
 [
     {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "л. Налоговое право",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Казаченков С.Д.",
-                        "group": "ЮР-634",
-                        "room": "#307/д",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "ст.пр.Казаченков С.Д.",
-                        "group": "ЮР-632",
-                        "room": "#307/д",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "ст.пр.Казаченков С.Д.",
-                        "group": "ЮР-631",
-                        "room": "#307/д",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "ст.пр.Казаченков С.Д.",
-                        "group": "ЮР-633",
-                        "room": "#307/д",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Налоговое право",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Казаченков С.Д.",
-                        "group": "ЮР-634",
-                        "room": "#402/д",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Налоговое право",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Казаченков С.Д.",
-                        "group": "ЮР-635",
-                        "room": "308",
-                        "additional": "3"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "пр. Банковское право",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Казаченков С.Д.",
-                        "group": "ЮР-635",
-                        "room": "403",
-                        "additional": "3"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Налоговое право",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Казаченков С.Д.",
-                        "group": "ЮР-633",
-                        "room": "#103/д",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Налоговое право",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Казаченков С.Д.",
-                        "group": "ЮР-631",
-                        "room": "#403/д",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "пр. Налоговое право",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Казаченков С.Д.",
-                        "group": "ЮР-632",
-                        "room": "#405/д",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
@@ -169,7 +14,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#402/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -186,7 +33,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#401/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -203,7 +52,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#401/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -226,7 +77,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -249,7 +102,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#403/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -266,7 +121,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -289,25 +146,33 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -330,7 +195,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#402/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -347,7 +214,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -364,7 +233,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -387,7 +258,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#103/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -404,7 +277,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#403/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -421,7 +296,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#405/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -444,7 +321,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#402/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -461,7 +340,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#401/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -478,7 +359,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#401/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -501,7 +384,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -524,7 +409,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#403/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -541,7 +428,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -564,25 +453,33 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -605,7 +502,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#402/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -622,7 +521,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -639,7 +540,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -662,7 +565,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#103/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -679,7 +584,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#403/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -696,7 +603,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#405/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -719,7 +628,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#402/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -736,7 +647,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#401/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -753,7 +666,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#401/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -776,7 +691,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -799,7 +716,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#403/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -816,7 +735,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -839,7 +760,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#402/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -856,7 +779,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -873,7 +798,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -896,7 +823,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#103/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -913,7 +842,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#403/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -930,7 +861,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#405/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -953,7 +886,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#402/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -970,7 +905,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#401/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -987,7 +924,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#401/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1010,7 +949,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1033,7 +974,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#403/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1050,7 +993,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1073,25 +1018,33 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1114,7 +1067,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#402/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1131,7 +1086,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1148,7 +1105,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1171,7 +1130,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#103/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1188,7 +1149,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#403/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1205,7 +1168,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#405/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1228,7 +1193,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#402/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1245,7 +1212,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#401/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1262,7 +1231,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#401/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1285,7 +1256,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1308,7 +1281,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#403/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1325,7 +1300,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1348,25 +1325,33 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1389,7 +1374,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#402/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1406,7 +1393,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1423,7 +1412,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1446,7 +1437,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#103/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1463,7 +1456,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#403/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1480,7 +1475,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#405/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1503,7 +1500,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#402/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1520,7 +1519,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#401/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1537,7 +1538,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#401/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1560,7 +1563,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1583,7 +1588,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#403/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1600,7 +1607,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1623,25 +1632,33 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1664,7 +1681,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-634",
                         "room": "#402/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1681,7 +1700,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1698,7 +1719,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-635",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1721,7 +1744,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-633",
                         "room": "#103/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1738,7 +1763,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-631",
                         "room": "#403/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1755,7 +1782,9 @@
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮР-632",
                         "room": "#405/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

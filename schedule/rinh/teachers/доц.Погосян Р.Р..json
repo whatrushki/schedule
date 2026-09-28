@@ -1,131 +1,5 @@
 [
     {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "л. Бизнес-планирование",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Погосян Р.Р.",
-                        "group": "МЕН-144",
-                        "room": "211",
-                        "additional": "2"
-                    },
-                    {
-                        "teacher": "доц.Погосян Р.Р.",
-                        "group": "МЕН-143",
-                        "room": "211",
-                        "additional": "2"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "л. Финансирование проектов в бизнесе",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Погосян Р.Р.",
-                        "group": "МЕН-144",
-                        "room": "210б",
-                        "additional": "2"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Бизнес-планирование",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Погосян Р.Р.",
-                        "group": "МЕН-143",
-                        "room": "207",
-                        "additional": "2"
-                    },
-                    {
-                        "teacher": "доц.Погосян Р.Р.",
-                        "group": "МЕН-144",
-                        "room": "207",
-                        "additional": "2"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Финансирование проектов в бизнесе",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Погосян Р.Р.",
-                        "group": "МЕН-144",
-                        "room": "206б",
-                        "additional": "2"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "л. Бизнес-планирование",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Погосян Р.Р.",
-                        "group": "СЕРZ-1501",
-                        "room": "204",
-                        "additional": "2"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "л. Бизнес-планирование",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Погосян Р.Р.",
-                        "group": "СЕРZ-1501",
-                        "room": "204",
-                        "additional": "2"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
@@ -140,13 +14,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -163,7 +41,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "210б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -186,13 +66,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "403",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "403",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -209,7 +93,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "СЕРZ-1501",
                         "room": "407а",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -226,7 +112,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "СЕРZ-1501",
                         "room": "407а",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -249,13 +137,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -272,7 +164,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "210б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -289,7 +183,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "СЕРZ-1501",
                         "room": "206б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -312,13 +208,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -335,7 +235,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "206б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -358,13 +260,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -381,7 +287,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "210б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -404,13 +312,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "403",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "403",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -427,7 +339,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "СЕРZ-1501",
                         "room": "204",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -450,13 +364,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -473,7 +391,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "210б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -496,13 +416,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -519,7 +443,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "206б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -542,13 +468,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -565,7 +495,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "210б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -588,13 +520,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "403",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "403",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -617,13 +553,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -640,7 +580,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "210б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -663,13 +605,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -686,7 +632,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "206б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -709,13 +657,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -732,7 +684,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "210б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -755,13 +709,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "403",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "403",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -784,13 +742,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -807,7 +769,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "210б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -830,13 +794,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -853,7 +821,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "206б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -876,13 +846,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -899,7 +873,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "210б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -922,13 +898,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "403",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "403",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -951,13 +931,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -974,7 +958,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "210б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -997,13 +983,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1020,7 +1010,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "206б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1043,13 +1035,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "409",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1066,7 +1062,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "210б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1089,13 +1087,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "403",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "403",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1118,13 +1120,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "211",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1141,7 +1147,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "210б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1164,13 +1172,17 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-143",
                         "room": "207",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1187,7 +1199,9 @@
                         "teacher": "доц.Погосян Р.Р.",
                         "group": "МЕН-144",
                         "room": "206б",
-                        "additional": "2"
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

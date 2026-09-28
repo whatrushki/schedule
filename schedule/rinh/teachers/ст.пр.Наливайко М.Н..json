@@ -1,85 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Химия",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Наливайко М.Н.",
-                        "group": "ТОВOZS-2202",
-                        "room": "*404/д",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Химия",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Наливайко М.Н.",
-                        "group": "ТОВOZS-2202",
-                        "room": "*404/д",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Химия",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Наливайко М.Н.",
-                        "group": "ТОВ-211",
-                        "room": "322",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "лаб. Химия",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Наливайко М.Н.",
-                        "group": "ТОВ-211",
-                        "room": "322",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-02",
         "scheduleType": "COMMON",
         "lessons": [
@@ -94,7 +14,9 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -111,7 +33,17 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВOZS-2202",
                         "room": "*405/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -128,7 +60,17 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВOZS-2202",
                         "room": "*405/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -151,7 +93,9 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -168,10 +112,72 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-13",
+                "number": 3,
+                "startTime": "11:50",
+                "endTime": "13:20",
+                "subject": "пр. Химия",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "пр. Химия",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
@@ -191,7 +197,9 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -214,7 +222,9 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -231,10 +241,111 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-21",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "пр. Химия",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-22",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-22",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "пр. Химия",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-29",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "пр. Химия",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*305/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
@@ -254,10 +365,39 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-30",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "пр. Химия",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
@@ -277,7 +417,9 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -294,7 +436,129 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-05",
+                "number": 3,
+                "startTime": "11:50",
+                "endTime": "13:20",
+                "subject": "пр. Химия",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "пр. Химия",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "*405/д",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-09",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "лаб. Химия",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 7,
+                "startTime": "18:45",
+                "endTime": "20:15",
+                "subject": "лаб. Химия",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -317,7 +581,63 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
+                "number": 3,
+                "startTime": "11:50",
+                "endTime": "13:20",
+                "subject": "лаб. Химия",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "лаб. Химия",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "ст.пр.Наливайко М.Н.",
+                        "group": "ТОВOZS-2202",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -340,7 +660,9 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -357,7 +679,9 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -380,7 +704,9 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -403,7 +729,9 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -420,7 +748,9 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -443,7 +773,9 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -466,7 +798,9 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -483,7 +817,9 @@
                         "teacher": "ст.пр.Наливайко М.Н.",
                         "group": "ТОВ-211",
                         "room": "322",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",

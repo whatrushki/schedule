@@ -1,188 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "лаб. Проектирование баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Абрамова А.В.",
-                        "group": "ИСТ-321",
-                        "room": "203",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "лаб. Проектирование баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Абрамова А.В.",
-                        "group": "ПИ-321",
-                        "room": "203",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "лаб. Разработка и сопровождение программных систем",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Абрамова А.В.",
-                        "group": "ПИ-331",
-                        "room": "214",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "лаб. Web-технологии",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Абрамова А.В.",
-                        "group": "ИСТ-331",
-                        "room": "213",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "лаб. Web-программирование",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Абрамова А.В.",
-                        "group": "ИСТ-331",
-                        "room": "212а",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "лаб. Разработка и сопровождение программных систем",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Абрамова А.В.",
-                        "group": "ИСТ-331",
-                        "room": "201",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "лаб. Операционные системы",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Абрамова А.В.",
-                        "group": "ПИ-311",
-                        "room": "213",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "лаб. Основы программирования",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Абрамова А.В.",
-                        "group": "ФИ-311",
-                        "room": "212а",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "лаб. Web-технологии",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Абрамова А.В.",
-                        "group": "ПИ-331",
-                        "room": "201",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -197,7 +14,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -220,7 +39,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ФИ-311",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -237,7 +58,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -260,7 +83,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -277,7 +102,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -294,7 +121,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -317,7 +146,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -334,7 +165,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -357,7 +190,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-311",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -380,7 +215,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-321",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -397,7 +234,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-321",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -420,7 +259,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -437,7 +278,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИZS-3401",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -454,7 +297,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИZS-3401",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -477,7 +322,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -494,7 +341,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -511,13 +360,17 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИZS-3401",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИZ-3401",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -534,13 +387,17 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИZS-3401",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИZ-3401",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -563,7 +420,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -580,7 +439,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-311",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -603,7 +464,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ФИ-311",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -620,7 +483,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -643,7 +508,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -666,7 +533,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ФИ-311",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -683,7 +552,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -706,7 +577,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -723,7 +596,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -740,7 +615,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -763,7 +640,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -780,7 +659,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -797,7 +678,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИZS-3401",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -814,7 +697,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИZS-3401",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -837,7 +722,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-311",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -860,7 +747,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-321",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -877,7 +766,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-321",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -900,7 +791,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -917,7 +810,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИZS-3401",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "CREDIT",
@@ -940,7 +835,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -957,7 +854,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -974,7 +873,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИZ-3401",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -991,7 +892,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИZ-3401",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1014,7 +917,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1031,7 +936,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-311",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1054,7 +961,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ФИ-311",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1071,7 +980,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1088,7 +999,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИZ-3401",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1105,7 +1018,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИZ-3401",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1128,7 +1043,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1151,7 +1068,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ФИ-311",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1168,7 +1087,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1191,7 +1112,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1208,7 +1131,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1225,7 +1150,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1242,7 +1169,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИZ-3401",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "CREDIT",
@@ -1265,7 +1194,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1282,7 +1213,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1305,7 +1238,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-311",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1328,7 +1263,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-321",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1345,7 +1282,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-321",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1368,7 +1307,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1391,7 +1332,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1408,7 +1351,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-311",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1431,7 +1376,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ФИ-311",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1448,7 +1395,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1471,7 +1420,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1494,7 +1445,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ФИ-311",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1511,7 +1464,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1534,7 +1489,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1551,7 +1508,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1568,7 +1527,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1591,7 +1552,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1608,7 +1571,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1631,7 +1596,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-311",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1654,7 +1621,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-321",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1671,7 +1640,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-321",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1694,7 +1665,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1717,7 +1690,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1734,7 +1709,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1757,7 +1734,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1774,7 +1753,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-311",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1797,7 +1778,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ФИ-311",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1814,7 +1797,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1837,7 +1822,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1860,7 +1847,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ФИ-311",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1877,7 +1866,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1900,7 +1891,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1917,7 +1910,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1934,7 +1929,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1957,7 +1954,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1974,7 +1973,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1997,7 +1998,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-311",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2020,7 +2023,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-321",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2037,7 +2042,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-321",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2060,7 +2067,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2083,7 +2092,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2100,7 +2111,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2123,7 +2136,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2140,7 +2155,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-311",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2163,7 +2180,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ФИ-311",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2180,7 +2199,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2203,7 +2224,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2226,7 +2249,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ФИ-311",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2243,7 +2268,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2266,7 +2293,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-321",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2283,7 +2312,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2300,7 +2331,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2323,7 +2356,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2340,7 +2375,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "210",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2363,7 +2400,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-311",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2386,7 +2425,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-321",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2403,7 +2444,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-321",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2426,7 +2469,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2449,7 +2494,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2466,7 +2513,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2489,7 +2538,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ИСТ-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2506,7 +2557,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-311",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2529,7 +2582,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ФИ-311",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2546,7 +2601,9 @@
                         "teacher": "ст.пр.Абрамова А.В.",
                         "group": "ПИ-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",

@@ -1,182 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Культурология",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Штофер Л.Л.",
-                        "group": "РСО-223",
-                        "room": "338",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Культурология",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Штофер Л.Л.",
-                        "group": "РСО-222",
-                        "room": "334",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Культурология",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Штофер Л.Л.",
-                        "group": "РСО-224",
-                        "room": "339",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "пр. Культурология",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Штофер Л.Л.",
-                        "group": "РСО-221",
-                        "room": "334",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Профессиональная этика и служебный этикет",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Штофер Л.Л.",
-                        "group": "СЭ-611",
-                        "room": "205",
-                        "additional": "3"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Культурология",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Штофер Л.Л.",
-                        "group": "СЭ-631",
-                        "room": "205",
-                        "additional": "3"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Культурология",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Штофер Л.Л.",
-                        "group": "СЭ-632",
-                        "room": "205",
-                        "additional": "3"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Культурология",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Штофер Л.Л.",
-                        "group": "ЖУР-722",
-                        "room": "306",
-                        "additional": "4"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "пр. Культурология",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Штофер Л.Л.",
-                        "group": "ЖУР-721",
-                        "room": "306",
-                        "additional": "4"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -191,7 +14,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -208,13 +33,17 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-631",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-632",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -237,25 +66,33 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -272,13 +109,17 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-721",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-722",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -301,7 +142,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -318,7 +161,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -341,7 +186,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -358,7 +205,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -375,7 +224,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "326",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -398,7 +249,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -421,7 +274,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "334",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -438,7 +293,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -455,7 +312,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "334",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -478,7 +337,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -495,7 +356,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-631",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -512,7 +375,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-632",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -535,7 +400,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-722",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -552,7 +419,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-721",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -575,7 +444,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -592,13 +463,17 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-631",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-632",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -621,25 +496,33 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -656,13 +539,17 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-721",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-722",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -685,7 +572,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -702,7 +591,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -725,7 +616,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -742,7 +635,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -759,7 +654,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "326",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -782,7 +679,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -805,7 +704,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "334",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -822,7 +723,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -839,7 +742,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "334",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -862,7 +767,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -879,7 +786,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-631",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -896,7 +805,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-632",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -919,7 +830,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-722",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -936,7 +849,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-721",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -959,7 +874,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -976,13 +893,17 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-632",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-631",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1005,25 +926,33 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1040,13 +969,17 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-722",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-721",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1069,7 +1002,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1086,7 +1021,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1109,7 +1046,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1126,7 +1065,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1143,7 +1084,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "326",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1166,7 +1109,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1189,7 +1134,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1206,7 +1153,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-631",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1223,7 +1172,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-632",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1246,7 +1197,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-722",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1263,7 +1216,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-721",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1286,7 +1241,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1303,13 +1260,17 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-631",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-632",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1332,25 +1293,33 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1367,13 +1336,17 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-721",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-722",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1396,7 +1369,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1413,7 +1388,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1436,7 +1413,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1453,7 +1432,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1470,7 +1451,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "326",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1493,7 +1476,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1516,7 +1501,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "334",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1533,7 +1520,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1550,7 +1539,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "334",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1573,7 +1564,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1590,7 +1583,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-631",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1607,7 +1602,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-632",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1630,7 +1627,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-722",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1647,7 +1646,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-721",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1670,7 +1671,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1687,13 +1690,17 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-632",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-631",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1716,25 +1723,33 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1751,13 +1766,17 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-721",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-722",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1780,7 +1799,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1797,7 +1818,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1820,7 +1843,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1837,7 +1862,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1854,7 +1881,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "326",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1877,7 +1906,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1900,7 +1931,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "334",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1917,7 +1950,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1934,7 +1969,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "334",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1957,7 +1994,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1974,7 +2013,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-631",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1991,7 +2032,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-632",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2014,7 +2057,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-722",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2031,7 +2076,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-721",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2054,7 +2101,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2071,13 +2120,17 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-631",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-632",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2100,25 +2153,33 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "604",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2135,13 +2196,17 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-721",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-722",
                         "room": "507",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2164,7 +2229,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2181,7 +2248,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "103",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2204,7 +2273,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2221,7 +2292,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2238,7 +2311,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "326",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2261,7 +2336,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-223",
                         "room": "338",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2284,7 +2361,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-222",
                         "room": "334",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2301,7 +2380,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-224",
                         "room": "339",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2318,7 +2399,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "РСО-221",
                         "room": "334",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2341,7 +2424,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-611",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2358,7 +2443,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-631",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2375,7 +2462,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "СЭ-632",
                         "room": "205",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2398,7 +2487,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-722",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2415,7 +2506,9 @@
                         "teacher": "проф.Штофер Л.Л.",
                         "group": "ЖУР-721",
                         "room": "306",
-                        "additional": "4"
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

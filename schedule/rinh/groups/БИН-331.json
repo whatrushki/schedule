@@ -1,182 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "пр. Методы научных исследований",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Дмитриева В.Д.",
-                        "group": "БИН-331",
-                        "room": "314",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 6,
-                "startTime": "17:10",
-                "endTime": "18:40",
-                "subject": "л. Анализ данных",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Карнаухов С.Н.",
-                        "group": "БИН-331",
-                        "room": "311",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "лаб. Проектирование информационных систем",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Демиденко А.В.",
-                        "group": "БИН-331",
-                        "room": "303",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Культура речи и деловое общение",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Ковальская И.А.",
-                        "group": "БИН-331",
-                        "room": "701",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "пр. Основы проектной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Красноплахтич М.В.",
-                        "group": "БИН-331",
-                        "room": "314",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "лаб. Информационное и программное обеспечение бизнес-процессов",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Чувиков С.В.",
-                        "group": "БИН-331",
-                        "room": "213",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 6,
-                "startTime": "17:10",
-                "endTime": "18:40",
-                "subject": "лаб. Хранилища данных",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Линникова А.А.",
-                        "group": "БИН-331",
-                        "room": "203",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "лаб. Моделирование бизнес-процессов",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Шарыпова Т.Н.",
-                        "group": "БИН-331",
-                        "room": "303",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "лаб. Анализ данных",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Никогосян В.М.",
-                        "group": "БИН-331",
-                        "room": "203",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -191,7 +14,9 @@
                         "teacher": "ст.пр.Линникова А.А.",
                         "group": "БИН-331",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -208,7 +33,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -225,7 +52,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "БИН-331",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -248,7 +77,9 @@
                         "teacher": "доц.Маркина Ю.В.",
                         "group": "БИН-331",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -265,7 +96,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -288,7 +121,9 @@
                         "teacher": "доц.Дмитриева В.Д.",
                         "group": "БИН-331",
                         "room": "451",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -305,7 +140,9 @@
                         "teacher": "доц.Никогосян В.М.",
                         "group": "БИН-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -322,7 +159,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -345,7 +184,9 @@
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -362,7 +203,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -379,7 +222,9 @@
                         "teacher": "доц.Попов М.В.",
                         "group": "БИН-331",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -402,7 +247,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -419,7 +266,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -442,7 +291,9 @@
                         "teacher": "доц.Дмитриева В.Д.",
                         "group": "БИН-331",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -459,7 +310,9 @@
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "БИН-331",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -482,7 +335,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -499,7 +354,9 @@
                         "teacher": "ст.пр.Ковальская И.А.",
                         "group": "БИН-331",
                         "room": "701",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -516,7 +373,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "БИН-331",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -539,7 +398,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -556,7 +417,9 @@
                         "teacher": "ст.пр.Линникова А.А.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -579,7 +442,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -596,7 +461,9 @@
                         "teacher": "доц.Никогосян В.М.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -619,7 +486,9 @@
                         "teacher": "ст.пр.Линникова А.А.",
                         "group": "БИН-331",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -636,7 +505,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -653,7 +524,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "БИН-331",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -676,7 +549,9 @@
                         "teacher": "доц.Маркина Ю.В.",
                         "group": "БИН-331",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -693,7 +568,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -716,7 +593,9 @@
                         "teacher": "доц.Дмитриева В.Д.",
                         "group": "БИН-331",
                         "room": "451",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -733,7 +612,9 @@
                         "teacher": "доц.Никогосян В.М.",
                         "group": "БИН-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -750,7 +631,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -773,7 +656,9 @@
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -790,7 +675,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -807,7 +694,9 @@
                         "teacher": "доц.Попов М.В.",
                         "group": "БИН-331",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -830,7 +719,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -847,7 +738,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -870,7 +763,9 @@
                         "teacher": "доц.Дмитриева В.Д.",
                         "group": "БИН-331",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -887,7 +782,9 @@
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "БИН-331",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -910,7 +807,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -927,7 +826,9 @@
                         "teacher": "ст.пр.Ковальская И.А.",
                         "group": "БИН-331",
                         "room": "701",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -944,7 +845,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "БИН-331",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -967,7 +870,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -984,7 +889,9 @@
                         "teacher": "ст.пр.Линникова А.А.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1007,7 +914,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1024,7 +933,9 @@
                         "teacher": "доц.Никогосян В.М.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1047,7 +958,9 @@
                         "teacher": "ст.пр.Линникова А.А.",
                         "group": "БИН-331",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1064,7 +977,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1081,7 +996,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "БИН-331",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1104,7 +1021,9 @@
                         "teacher": "доц.Маркина Ю.В.",
                         "group": "БИН-331",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1121,7 +1040,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1144,7 +1065,9 @@
                         "teacher": "доц.Дмитриева В.Д.",
                         "group": "БИН-331",
                         "room": "451",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1161,7 +1084,9 @@
                         "teacher": "доц.Никогосян В.М.",
                         "group": "БИН-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1178,7 +1103,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1201,7 +1128,9 @@
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1218,7 +1147,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1235,7 +1166,9 @@
                         "teacher": "доц.Попов М.В.",
                         "group": "БИН-331",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1258,7 +1191,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1275,7 +1210,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1298,7 +1235,9 @@
                         "teacher": "доц.Дмитриева В.Д.",
                         "group": "БИН-331",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1315,7 +1254,9 @@
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "БИН-331",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1338,7 +1279,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1355,7 +1298,9 @@
                         "teacher": "ст.пр.Ковальская И.А.",
                         "group": "БИН-331",
                         "room": "701",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1372,7 +1317,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "БИН-331",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1395,7 +1342,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1412,7 +1361,9 @@
                         "teacher": "ст.пр.Линникова А.А.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1435,7 +1386,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1452,7 +1405,9 @@
                         "teacher": "доц.Никогосян В.М.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1475,7 +1430,9 @@
                         "teacher": "ст.пр.Линникова А.А.",
                         "group": "БИН-331",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1492,7 +1449,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1509,7 +1468,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "БИН-331",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1532,7 +1493,9 @@
                         "teacher": "доц.Маркина Ю.В.",
                         "group": "БИН-331",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1549,7 +1512,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1572,7 +1537,9 @@
                         "teacher": "доц.Дмитриева В.Д.",
                         "group": "БИН-331",
                         "room": "451",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1589,7 +1556,9 @@
                         "teacher": "доц.Никогосян В.М.",
                         "group": "БИН-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1606,7 +1575,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1629,7 +1600,9 @@
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1646,7 +1619,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1663,7 +1638,9 @@
                         "teacher": "доц.Попов М.В.",
                         "group": "БИН-331",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1686,7 +1663,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1703,7 +1682,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1726,7 +1707,9 @@
                         "teacher": "доц.Дмитриева В.Д.",
                         "group": "БИН-331",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1743,7 +1726,9 @@
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "БИН-331",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1766,7 +1751,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1783,7 +1770,9 @@
                         "teacher": "ст.пр.Ковальская И.А.",
                         "group": "БИН-331",
                         "room": "701",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1800,7 +1789,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "БИН-331",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1823,7 +1814,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1840,7 +1833,9 @@
                         "teacher": "ст.пр.Линникова А.А.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1863,7 +1858,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1880,7 +1877,9 @@
                         "teacher": "доц.Никогосян В.М.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1903,7 +1902,9 @@
                         "teacher": "ст.пр.Линникова А.А.",
                         "group": "БИН-331",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1920,7 +1921,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1937,7 +1940,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "БИН-331",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1960,7 +1965,9 @@
                         "teacher": "доц.Маркина Ю.В.",
                         "group": "БИН-331",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1977,7 +1984,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2000,7 +2009,9 @@
                         "teacher": "доц.Дмитриева В.Д.",
                         "group": "БИН-331",
                         "room": "451",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2017,7 +2028,9 @@
                         "teacher": "доц.Никогосян В.М.",
                         "group": "БИН-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2034,7 +2047,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2057,7 +2072,9 @@
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2074,7 +2091,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2091,7 +2110,9 @@
                         "teacher": "доц.Попов М.В.",
                         "group": "БИН-331",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2114,7 +2135,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2131,7 +2154,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2154,7 +2179,9 @@
                         "teacher": "доц.Дмитриева В.Д.",
                         "group": "БИН-331",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2171,7 +2198,9 @@
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "БИН-331",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2194,7 +2223,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2211,7 +2242,9 @@
                         "teacher": "ст.пр.Ковальская И.А.",
                         "group": "БИН-331",
                         "room": "701",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2228,7 +2261,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "БИН-331",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2251,7 +2286,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2268,7 +2305,9 @@
                         "teacher": "ст.пр.Линникова А.А.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2291,7 +2330,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2308,7 +2349,9 @@
                         "teacher": "доц.Никогосян В.М.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2331,7 +2374,9 @@
                         "teacher": "ст.пр.Линникова А.А.",
                         "group": "БИН-331",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2348,7 +2393,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2365,7 +2412,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "БИН-331",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2388,7 +2437,9 @@
                         "teacher": "доц.Маркина Ю.В.",
                         "group": "БИН-331",
                         "room": "424",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2405,7 +2456,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2428,7 +2481,9 @@
                         "teacher": "доц.Дмитриева В.Д.",
                         "group": "БИН-331",
                         "room": "451",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2445,7 +2500,9 @@
                         "teacher": "доц.Никогосян В.М.",
                         "group": "БИН-331",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2462,7 +2519,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2485,7 +2544,9 @@
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2502,7 +2563,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2519,7 +2582,9 @@
                         "teacher": "доц.Попов М.В.",
                         "group": "БИН-331",
                         "room": "602",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2542,7 +2607,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2559,7 +2626,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2582,7 +2651,9 @@
                         "teacher": "доц.Дмитриева В.Д.",
                         "group": "БИН-331",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2599,7 +2670,9 @@
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "БИН-331",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2622,7 +2695,9 @@
                         "teacher": "ст.пр.Демиденко А.В.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2639,7 +2714,9 @@
                         "teacher": "ст.пр.Ковальская И.А.",
                         "group": "БИН-331",
                         "room": "701",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2656,7 +2733,9 @@
                         "teacher": "доц.Красноплахтич М.В.",
                         "group": "БИН-331",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2679,7 +2758,9 @@
                         "teacher": "доц.Чувиков С.В.",
                         "group": "БИН-331",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2696,7 +2777,9 @@
                         "teacher": "ст.пр.Линникова А.А.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2719,7 +2802,9 @@
                         "teacher": "доц.Шарыпова Т.Н.",
                         "group": "БИН-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2736,7 +2821,9 @@
                         "teacher": "доц.Никогосян В.М.",
                         "group": "БИН-331",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",

@@ -1,148 +1,5 @@
 [
     {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "л. Теория информационной безопасности и методология защиты информации",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Маршаков Д.В.",
-                        "group": "ИБ-331",
-                        "room": "307",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Маршаков Д.В.",
-                        "group": "ИБ-332",
-                        "room": "307",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "лаб. Теория информационной безопасности и методология защиты информации, п/г1",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Маршаков Д.В.",
-                        "group": "ИБ-331",
-                        "room": "303",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "лаб. Теория информационной безопасности и методология защиты информации, п/г1",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Маршаков Д.В.",
-                        "group": "ИБ-332",
-                        "room": "214",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "лаб. Теория информационной безопасности и методология защиты информации, п/г1",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Маршаков Д.В.",
-                        "group": "ИБ-332",
-                        "room": "214",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "пр. Основы управления информационной безопасностью",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Маршаков Д.В.",
-                        "group": "ИБ-341",
-                        "room": "313",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "л. Основы управления информационной безопасностью",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Маршаков Д.В.",
-                        "group": "ИБ-342",
-                        "room": "307",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Маршаков Д.В.",
-                        "group": "ИБ-341",
-                        "room": "307",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Основы управления информационной безопасностью",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Маршаков Д.В.",
-                        "group": "ИБ-342",
-                        "room": "213",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-02",
         "scheduleType": "COMMON",
         "lessons": [
@@ -157,7 +14,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -174,7 +33,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -191,13 +52,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -214,7 +79,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -237,7 +104,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -254,13 +123,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -277,7 +150,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -300,13 +175,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -323,7 +202,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -340,7 +221,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -357,7 +240,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -380,7 +265,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -397,13 +284,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -420,7 +311,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -443,7 +336,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -460,7 +355,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -477,13 +374,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -500,7 +401,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -523,7 +426,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -540,13 +445,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -563,7 +472,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -586,13 +497,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -609,7 +524,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -626,7 +543,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -643,7 +562,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -666,7 +587,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -683,13 +606,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -706,7 +633,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -729,7 +658,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -746,7 +677,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -763,13 +696,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -786,7 +723,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -809,7 +748,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -826,13 +767,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -849,7 +794,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -872,13 +819,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -895,7 +846,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -912,7 +865,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -929,7 +884,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -952,7 +909,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -969,13 +928,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -992,7 +955,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1015,7 +980,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1032,7 +999,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1049,13 +1018,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1072,7 +1045,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1095,7 +1070,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1112,13 +1089,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1135,7 +1116,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1158,13 +1141,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1181,7 +1168,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1198,7 +1187,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1215,7 +1206,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1238,7 +1231,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1255,13 +1250,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1278,7 +1277,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1301,7 +1302,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1318,7 +1321,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1335,13 +1340,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1358,7 +1367,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1381,7 +1392,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1398,13 +1411,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1421,7 +1438,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1444,13 +1463,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1467,7 +1490,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1484,7 +1509,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1501,7 +1528,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1524,7 +1553,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1541,13 +1572,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1564,7 +1599,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1587,7 +1624,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1604,7 +1643,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "532",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1621,13 +1662,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1644,7 +1689,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1667,7 +1714,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1684,13 +1733,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1707,7 +1760,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1730,13 +1785,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1753,7 +1812,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-331",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1770,7 +1831,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1787,7 +1850,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-332",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1810,7 +1875,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1827,13 +1894,17 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1850,7 +1921,9 @@
                         "teacher": "доц.Маршаков Д.В.",
                         "group": "ИБ-342",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

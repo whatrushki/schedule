@@ -1,125 +1,5 @@
 [
     {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "л. Эконометрическое моделирование",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Синявская Т.Г.",
-                        "group": "СТ-441",
-                        "room": "503",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Инструментарий научных исследований",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Синявская Т.Г.",
-                        "group": "ПРИ-341",
-                        "room": "314",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Синявская Т.Г.",
-                        "group": "ПИ-341",
-                        "room": "314",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "пр. Эконометрическое моделирование",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Синявская Т.Г.",
-                        "group": "СТ-441",
-                        "room": "503",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Методология научной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Синявская Т.Г.",
-                        "group": "ПИ-811",
-                        "room": "403",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Методология научной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Синявская Т.Г.",
-                        "group": "ПИ-811",
-                        "room": "403",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "лаб. Эконометрическое моделирование",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Синявская Т.Г.",
-                        "group": "СТ-441",
-                        "room": "516",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -134,7 +14,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -151,13 +33,17 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -180,7 +66,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-811",
                         "room": "405",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -197,7 +85,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-811",
                         "room": "405",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -214,7 +104,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -231,7 +123,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -254,7 +148,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -271,13 +167,17 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИ-341",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -294,7 +194,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -317,7 +219,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -340,7 +244,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -357,13 +263,17 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -380,19 +290,25 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИZ-3401",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИZS-3401",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИZ-3401",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -409,19 +325,25 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИZ-3401",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИZS-3401",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИZ-3401",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -444,7 +366,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -461,7 +385,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -484,13 +410,17 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИZS-3401",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИZ-3401",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -507,13 +437,17 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИZ-3401",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИZS-3401",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -536,7 +470,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИZ-3401",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -553,7 +489,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИZ-3401",
                         "room": "301",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -576,7 +514,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -593,13 +533,17 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИ-341",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -616,7 +560,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -639,7 +585,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -656,13 +604,17 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИZ-3401",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИZS-3401",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -679,7 +631,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИZ-3401",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -702,7 +656,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -719,13 +675,17 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -748,7 +708,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -765,7 +727,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -782,7 +746,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИZ-3401",
                         "room": "212а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -799,7 +765,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИZ-3401",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -822,7 +790,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИZS-3401",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -845,7 +815,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -868,7 +840,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -885,13 +859,17 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -914,7 +892,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -931,7 +911,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -954,7 +936,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -971,13 +955,17 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИ-341",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -994,7 +982,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1017,7 +1007,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1040,7 +1032,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1057,13 +1051,17 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1086,7 +1084,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1103,7 +1103,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1126,7 +1128,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1143,13 +1147,17 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИ-341",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1166,7 +1174,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1189,7 +1199,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1212,7 +1224,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "551",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1229,13 +1243,17 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1258,7 +1276,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1275,7 +1295,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1298,7 +1320,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1315,13 +1339,17 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПРИ-341",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1338,7 +1366,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "503",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1361,7 +1391,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "СТ-441",
                         "room": "516",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",

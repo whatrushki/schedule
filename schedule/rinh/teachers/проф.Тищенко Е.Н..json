@@ -1,148 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "л. Математические и инструментальные методы обеспечения информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Тищенко Е.Н.",
-                        "group": "ИБ-821",
-                        "room": "403",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 6,
-                "startTime": "17:10",
-                "endTime": "18:40",
-                "subject": "л. Математические и инструментальные методы обеспечения информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Тищенко Е.Н.",
-                        "group": "ИБ-821",
-                        "room": "403",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 7,
-                "startTime": "18:45",
-                "endTime": "20:15",
-                "subject": "л. Экспертиза вычислительной техники и компьютерных носителей информации",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Тищенко Е.Н.",
-                        "group": "ИБOZ-8201",
-                        "room": "301",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 8,
-                "startTime": "20:20",
-                "endTime": "21:50",
-                "subject": "л. Экспертиза вычислительной техники и компьютерных носителей информации",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Тищенко Е.Н.",
-                        "group": "ИБOZ-8201",
-                        "room": "301",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "л. Основы информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Тищенко Е.Н.",
-                        "group": "ИБ-311",
-                        "room": "307",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "проф.Тищенко Е.Н.",
-                        "group": "ИБ-312",
-                        "room": "307",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "л. Математические и инструментальные методы обеспечения информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Тищенко Е.Н.",
-                        "group": "ИБ-821",
-                        "room": "302",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 6,
-                "startTime": "17:10",
-                "endTime": "18:40",
-                "subject": "л. Математические и инструментальные методы обеспечения информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Тищенко Е.Н.",
-                        "group": "ИБ-821",
-                        "room": "302",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -157,7 +14,9 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБOZ-8201",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -174,7 +33,9 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБOZ-8201",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -197,13 +58,17 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-311",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-312",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -226,7 +91,9 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-821",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -243,7 +110,9 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-821",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -266,7 +135,9 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-821",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -283,7 +154,9 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-821",
                         "room": "214",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -306,13 +179,17 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-311",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-312",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -335,13 +212,17 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-311",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-312",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -364,13 +245,17 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-312",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-311",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -393,13 +278,17 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-311",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-312",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -422,13 +311,17 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-311",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-312",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -451,13 +344,17 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-311",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-312",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -480,13 +377,17 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-312",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-311",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -509,13 +410,17 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-311",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-312",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -538,13 +443,17 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-311",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-312",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -567,13 +476,17 @@
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-311",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Тищенко Е.Н.",
                         "group": "ИБ-312",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",

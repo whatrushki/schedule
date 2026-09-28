@@ -1,155 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "л. Конституционное право",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Капранова Ю.В.",
-                        "group": "ЮР-6210",
-                        "room": "#307/д",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Капранова Ю.В.",
-                        "group": "ЮР-626",
-                        "room": "#307/д",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Капранова Ю.В.",
-                        "group": "ЮР-625",
-                        "room": "#307/д",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Капранова Ю.В.",
-                        "group": "ЮР-624",
-                        "room": "#307/д",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "доц.Капранова Ю.В.",
-                        "group": "ЮР-627",
-                        "room": "#307/д",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "пр. Конституционное право",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Капранова Ю.В.",
-                        "group": "ЮР-627",
-                        "room": "403",
-                        "additional": "3"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Муниципальное право",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Капранова Ю.В.",
-                        "group": "ЮР-629",
-                        "room": "403",
-                        "additional": "3"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Конституционное право",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Капранова Ю.В.",
-                        "group": "ЮР-627",
-                        "room": "310",
-                        "additional": "3"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Муниципальное право",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Капранова Ю.В.",
-                        "group": "ЮР-627",
-                        "room": "310",
-                        "additional": "3"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Муниципальное право",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Капранова Ю.В.",
-                        "group": "ЮР-6210",
-                        "room": "203",
-                        "additional": "3"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -164,7 +14,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "405",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -181,7 +33,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "202",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -198,7 +52,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "202",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -215,7 +71,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-629",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -238,31 +96,41 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-626",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-625",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-624",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -285,31 +153,41 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-626",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-624",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-625",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -332,7 +210,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -349,7 +229,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-629",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -372,7 +254,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "310",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -389,7 +273,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "310",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -412,7 +298,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "203",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -435,7 +323,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "405",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -452,7 +342,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "202",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -469,7 +361,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "202",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -486,7 +380,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-629",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -509,31 +405,41 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-625",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-624",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-626",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -556,31 +462,41 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-626",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-625",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-624",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -603,7 +519,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -620,7 +538,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-629",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -643,7 +563,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "310",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -660,7 +582,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "310",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -683,7 +607,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "203",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -706,7 +632,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "405",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -723,7 +651,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "202",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -740,7 +670,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "202",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -757,7 +689,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-629",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -780,31 +714,41 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-626",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-625",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-624",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -827,31 +771,41 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-626",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-625",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-624",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -874,7 +828,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -891,7 +847,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-629",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -914,7 +872,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "203",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -937,7 +897,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "405",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -954,7 +916,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "202",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -971,7 +935,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "202",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -988,7 +954,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-629",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1011,31 +979,41 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-624",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-625",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-626",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1058,31 +1036,41 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-625",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-624",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-626",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1105,7 +1093,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1122,7 +1112,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-629",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1145,7 +1137,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "310",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1162,7 +1156,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "310",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1185,7 +1181,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "203",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1208,7 +1206,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "405",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1225,7 +1225,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "202",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1242,7 +1244,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "202",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1259,7 +1263,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-629",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1282,31 +1288,41 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-626",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-625",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-624",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1329,31 +1345,41 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-624",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-626",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-625",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1376,7 +1402,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1393,7 +1421,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-629",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1416,7 +1446,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "310",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1433,7 +1465,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "310",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1456,7 +1490,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "203",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1479,7 +1515,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "405",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1496,7 +1534,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "202",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1513,7 +1553,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "202",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1530,7 +1572,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-629",
                         "room": "308",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1553,31 +1597,41 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-624",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-626",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-625",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1600,31 +1654,41 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-624",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-625",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-626",
                         "room": "#307/д",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1647,7 +1711,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1664,7 +1730,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-629",
                         "room": "403",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1687,7 +1755,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "310",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1704,7 +1774,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-627",
                         "room": "310",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1727,7 +1799,9 @@
                         "teacher": "доц.Капранова Ю.В.",
                         "group": "ЮР-6210",
                         "room": "203",
-                        "additional": "3"
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

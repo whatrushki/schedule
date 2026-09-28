@@ -1,137 +1,5 @@
 [
     {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "л. Защита информации от утечки информации по техническим каналам",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Серпенинов О.В.",
-                        "group": "ИБ-331",
-                        "room": "307",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "проф.Серпенинов О.В.",
-                        "group": "ИБ-332",
-                        "room": "307",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "л. Организационное и правовое обеспечение информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Серпенинов О.В.",
-                        "group": "ИБ-341",
-                        "room": "307",
-                        "additional": "1"
-                    },
-                    {
-                        "teacher": "проф.Серпенинов О.В.",
-                        "group": "ИБ-342",
-                        "room": "307",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Защита информации от утечки информации по техническим каналам",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Серпенинов О.В.",
-                        "group": "ИБ-332",
-                        "room": "302",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "пр. Защита информации от утечки информации по техническим каналам",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Серпенинов О.В.",
-                        "group": "ИБ-331",
-                        "room": "302",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "л. Технологии выявления следов компьютерных преступлений, правонарушений и инцидентов",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Серпенинов О.В.",
-                        "group": "ИБ-821",
-                        "room": "400",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "л. Технологии выявления следов компьютерных преступлений, правонарушений и инцидентов",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Серпенинов О.В.",
-                        "group": "ИБ-821",
-                        "room": "400",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -146,13 +14,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-342",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-341",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -169,13 +41,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -198,7 +74,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -215,7 +93,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -238,7 +118,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-821",
                         "room": "406",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -255,7 +137,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-821",
                         "room": "406",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -278,13 +162,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -301,13 +189,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-342",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -330,7 +222,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -347,7 +241,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -370,13 +266,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-342",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-341",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -393,13 +293,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -422,7 +326,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -439,7 +345,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -462,13 +370,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -485,13 +397,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-342",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -514,7 +430,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -531,7 +449,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -554,13 +474,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-342",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-341",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -577,13 +501,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -606,7 +534,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -623,7 +553,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -646,13 +578,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -669,13 +605,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-342",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -698,7 +638,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -715,7 +657,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -738,13 +682,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-342",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-341",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -761,13 +709,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -790,7 +742,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -807,7 +761,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -830,13 +786,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -853,13 +813,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-342",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -882,7 +846,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -899,7 +865,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -922,13 +890,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-341",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-342",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -945,13 +917,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -974,7 +950,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -991,7 +969,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1014,13 +994,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1037,13 +1021,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-342",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1066,7 +1054,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1083,7 +1073,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1106,13 +1098,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-342",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-341",
                         "room": "555",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1129,13 +1125,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1158,7 +1158,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1175,7 +1177,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1198,13 +1202,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1221,13 +1229,17 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-342",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1250,7 +1262,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-332",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1267,7 +1281,9 @@
                         "teacher": "проф.Серпенинов О.В.",
                         "group": "ИБ-331",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

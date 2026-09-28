@@ -1,165 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "лаб. Управление корпоративными информационными системами",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Полуянов В.П.",
-                        "group": "ПИ-341",
-                        "room": "209",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "л. Информационные системы в бухгалтерском учете и аудите",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Жебровская Л.А.",
-                        "group": "ПИ-341",
-                        "room": "212",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "лаб. Информационный бизнес",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Веретенникова Е.Г.",
-                        "group": "ПИ-341",
-                        "room": "303",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Инструментарий научных исследований",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Синявская Т.Г.",
-                        "group": "ПИ-341",
-                        "room": "314",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "лаб. Информационные системы в бухгалтерском учете и аудите",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Данилова Т.В.",
-                        "group": "ПИ-341",
-                        "room": "201",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "лаб. Тестирование программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Гречкина В.Ю.",
-                        "group": "ПИ-341",
-                        "room": "201",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Стандартизация и управление качеством",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Барауля Е.В.",
-                        "group": "ПИ-341",
-                        "room": "527",
-                        "additional": "1"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "лаб. Виртуальные и облачные технологии",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Орлова Н.В.",
-                        "group": "ПИ-341",
-                        "room": "209",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LABORATORY",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
@@ -174,7 +14,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -191,7 +33,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -214,7 +58,9 @@
                         "teacher": "проф.Щербаков С.М.",
                         "group": "ПИ-341",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -231,7 +77,9 @@
                         "teacher": "доц.Аручиди Н.А.",
                         "group": "ПИ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -248,7 +96,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -271,7 +121,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -288,7 +140,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -305,7 +159,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -328,7 +184,9 @@
                         "teacher": "доц.Барауля Е.В.",
                         "group": "ПИ-341",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -345,7 +203,9 @@
                         "teacher": "доц.Веретенникова Е.Г.",
                         "group": "ПИ-341",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -368,7 +228,9 @@
                         "teacher": "доц.Данилова Т.В.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -385,7 +247,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -408,7 +272,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -425,7 +291,9 @@
                         "teacher": "доц.Жебровская Л.А.",
                         "group": "ПИ-341",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -448,7 +316,9 @@
                         "teacher": "доц.Веретенникова Е.Г.",
                         "group": "ПИ-341",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -465,7 +335,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -488,7 +360,9 @@
                         "teacher": "доц.Данилова Т.В.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -505,7 +379,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -528,7 +404,9 @@
                         "teacher": "доц.Барауля Е.В.",
                         "group": "ПИ-341",
                         "room": "527",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -545,7 +423,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -568,7 +448,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -585,7 +467,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -608,7 +492,9 @@
                         "teacher": "проф.Щербаков С.М.",
                         "group": "ПИ-341",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -625,7 +511,9 @@
                         "teacher": "доц.Аручиди Н.А.",
                         "group": "ПИ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -642,7 +530,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -665,7 +555,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -682,7 +574,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -699,7 +593,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -722,7 +618,9 @@
                         "teacher": "доц.Барауля Е.В.",
                         "group": "ПИ-341",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -739,7 +637,9 @@
                         "teacher": "доц.Веретенникова Е.Г.",
                         "group": "ПИ-341",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -762,7 +662,9 @@
                         "teacher": "доц.Данилова Т.В.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -779,7 +681,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -802,7 +706,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -819,7 +725,9 @@
                         "teacher": "доц.Жебровская Л.А.",
                         "group": "ПИ-341",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -842,7 +750,9 @@
                         "teacher": "доц.Веретенникова Е.Г.",
                         "group": "ПИ-341",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -859,7 +769,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -882,7 +794,9 @@
                         "teacher": "доц.Данилова Т.В.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -899,7 +813,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -922,7 +838,9 @@
                         "teacher": "доц.Барауля Е.В.",
                         "group": "ПИ-341",
                         "room": "527",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -939,7 +857,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -962,7 +882,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -979,7 +901,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1002,7 +926,9 @@
                         "teacher": "проф.Щербаков С.М.",
                         "group": "ПИ-341",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1019,7 +945,9 @@
                         "teacher": "доц.Аручиди Н.А.",
                         "group": "ПИ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1036,7 +964,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1059,7 +989,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1076,7 +1008,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1093,7 +1027,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1116,7 +1052,9 @@
                         "teacher": "доц.Барауля Е.В.",
                         "group": "ПИ-341",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1133,7 +1071,9 @@
                         "teacher": "доц.Веретенникова Е.Г.",
                         "group": "ПИ-341",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1156,7 +1096,9 @@
                         "teacher": "доц.Данилова Т.В.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1173,7 +1115,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1196,7 +1140,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1213,7 +1159,9 @@
                         "teacher": "доц.Жебровская Л.А.",
                         "group": "ПИ-341",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1236,7 +1184,9 @@
                         "teacher": "доц.Данилова Т.В.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1253,7 +1203,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1276,7 +1228,9 @@
                         "teacher": "доц.Барауля Е.В.",
                         "group": "ПИ-341",
                         "room": "527",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1293,7 +1247,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1316,7 +1272,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1333,7 +1291,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1356,7 +1316,9 @@
                         "teacher": "проф.Щербаков С.М.",
                         "group": "ПИ-341",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1373,7 +1335,9 @@
                         "teacher": "доц.Аручиди Н.А.",
                         "group": "ПИ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1390,7 +1354,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1413,7 +1379,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1430,7 +1398,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1447,7 +1417,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1470,7 +1442,9 @@
                         "teacher": "доц.Барауля Е.В.",
                         "group": "ПИ-341",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1487,7 +1461,9 @@
                         "teacher": "доц.Веретенникова Е.Г.",
                         "group": "ПИ-341",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1510,7 +1486,9 @@
                         "teacher": "доц.Данилова Т.В.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1527,7 +1505,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1550,7 +1530,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1567,7 +1549,9 @@
                         "teacher": "доц.Жебровская Л.А.",
                         "group": "ПИ-341",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1590,7 +1574,9 @@
                         "teacher": "доц.Веретенникова Е.Г.",
                         "group": "ПИ-341",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1607,7 +1593,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1630,7 +1618,9 @@
                         "teacher": "доц.Данилова Т.В.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1647,7 +1637,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1670,7 +1662,9 @@
                         "teacher": "доц.Барауля Е.В.",
                         "group": "ПИ-341",
                         "room": "527",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -1687,7 +1681,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1710,7 +1706,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1727,7 +1725,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1750,7 +1750,9 @@
                         "teacher": "проф.Щербаков С.М.",
                         "group": "ПИ-341",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1767,7 +1769,9 @@
                         "teacher": "доц.Аручиди Н.А.",
                         "group": "ПИ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1784,7 +1788,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1807,7 +1813,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1824,7 +1832,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1841,7 +1851,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1864,7 +1876,9 @@
                         "teacher": "доц.Барауля Е.В.",
                         "group": "ПИ-341",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1881,7 +1895,9 @@
                         "teacher": "доц.Веретенникова Е.Г.",
                         "group": "ПИ-341",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1904,7 +1920,9 @@
                         "teacher": "доц.Данилова Т.В.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1921,7 +1939,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1944,7 +1964,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -1961,7 +1983,9 @@
                         "teacher": "доц.Жебровская Л.А.",
                         "group": "ПИ-341",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -1984,7 +2008,9 @@
                         "teacher": "доц.Веретенникова Е.Г.",
                         "group": "ПИ-341",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2001,7 +2027,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2024,7 +2052,9 @@
                         "teacher": "доц.Данилова Т.В.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2041,7 +2071,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2064,7 +2096,9 @@
                         "teacher": "доц.Барауля Е.В.",
                         "group": "ПИ-341",
                         "room": "527",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2081,7 +2115,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2104,7 +2140,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "307",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2121,7 +2159,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2144,7 +2184,9 @@
                         "teacher": "проф.Щербаков С.М.",
                         "group": "ПИ-341",
                         "room": "311",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2161,7 +2203,9 @@
                         "teacher": "доц.Аручиди Н.А.",
                         "group": "ПИ-341",
                         "room": "302",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2178,7 +2222,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "313",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2201,7 +2247,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2218,7 +2266,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2235,7 +2285,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2258,7 +2310,9 @@
                         "teacher": "доц.Барауля Е.В.",
                         "group": "ПИ-341",
                         "room": "603",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2275,7 +2329,9 @@
                         "teacher": "доц.Веретенникова Е.Г.",
                         "group": "ПИ-341",
                         "room": "213",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2298,7 +2354,9 @@
                         "teacher": "доц.Данилова Т.В.",
                         "group": "ПИ-341",
                         "room": "203",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2315,7 +2373,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2338,7 +2398,9 @@
                         "teacher": "проф.Полуянов В.П.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2355,7 +2417,9 @@
                         "teacher": "доц.Жебровская Л.А.",
                         "group": "ПИ-341",
                         "room": "212",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -2378,7 +2442,9 @@
                         "teacher": "доц.Веретенникова Е.Г.",
                         "group": "ПИ-341",
                         "room": "303",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2395,7 +2461,9 @@
                         "teacher": "доц.Синявская Т.Г.",
                         "group": "ПИ-341",
                         "room": "314",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2418,7 +2486,9 @@
                         "teacher": "доц.Данилова Т.В.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2435,7 +2505,9 @@
                         "teacher": "доц.Гречкина В.Ю.",
                         "group": "ПИ-341",
                         "room": "201",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -2458,7 +2530,9 @@
                         "teacher": "доц.Барауля Е.В.",
                         "group": "ПИ-341",
                         "room": "527",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -2475,7 +2549,9 @@
                         "teacher": "доц.Орлова Н.В.",
                         "group": "ПИ-341",
                         "room": "209",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
