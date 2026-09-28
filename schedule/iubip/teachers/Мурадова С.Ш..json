@@ -1,168 +1,27 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 5,
-                "startTime": "15:10",
-                "endTime": "16:40",
-                "subject": "Докум. обесп. управл",
-                "otUnits": [
-                    {
-                        "teacher": "Мурадова С.Ш.",
-                        "group": "К2Л1(9),К2Л2(9)",
-                        "room": "407",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 6,
-                "startTime": "17:00",
-                "endTime": "18:30",
-                "subject": "Орг. работы СУП",
-                "otUnits": [
-                    {
-                        "teacher": "Мурадова С.Ш.",
-                        "group": "УПЗу401",
-                        "room": "509",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 7,
-                "startTime": "18:40",
-                "endTime": "20:10",
-                "subject": "Орг. работы СУП",
-                "otUnits": [
-                    {
-                        "teacher": "Мурадова С.Ш.",
-                        "group": "УПЗу401",
-                        "room": "509",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 4,
-                "startTime": "13:30",
-                "endTime": "15:00",
-                "subject": "Освоен. долж. служ.  21299 Делопр-тель",
-                "otUnits": [
-                    {
-                        "teacher": "Мурадова С.Ш.",
-                        "group": "К1Э1(11)",
-                        "room": "509",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 5,
-                "startTime": "15:10",
-                "endTime": "16:40",
-                "subject": "Докум. обесп. управл",
-                "otUnits": [
-                    {
-                        "teacher": "Мурадова С.Ш.",
-                        "group": "К1Л1(11),К2Л4(9)",
-                        "room": "509",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 6,
-                "startTime": "17:00",
-                "endTime": "18:30",
-                "subject": "Докум-е управл. деят",
-                "otUnits": [
-                    {
-                        "teacher": "Мурадова С.Ш.",
-                        "group": "МД301",
-                        "room": "507",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 4,
-                "startTime": "13:30",
-                "endTime": "15:00",
-                "subject": "Освоен. долж. служ.  21299 Делопр-тель",
-                "otUnits": [
-                    {
-                        "teacher": "Мурадова С.Ш.",
-                        "group": "К1Э1(11)",
-                        "room": "608а",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 6,
-                "startTime": "17:00",
-                "endTime": "18:30",
-                "subject": "Освоен. долж. служ.  21299 Делопр-тель",
-                "otUnits": [
-                    {
-                        "teacher": "Мурадова С.Ш.",
-                        "group": "К2Э1(9)",
-                        "room": "601а",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-09-28",
+                "number": 4,
+                "startTime": "13:30",
+                "endTime": "15:00",
+                "subject": "Охрана труда",
+                "otUnits": [
+                    {
+                        "teacher": "Мурадова С.Ш.",
+                        "group": "К2Т1(9)",
+                        "room": "315",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-09-28",
                 "number": 6,
@@ -174,7 +33,9 @@
                         "teacher": "Мурадова С.Ш.",
                         "group": "К1Т1(11),К2Т2(9)",
                         "room": "304",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -195,9 +56,11 @@
                 "otUnits": [
                     {
                         "teacher": "Мурадова С.Ш.",
-                        "group": "К1Л1(11),К2Л4(9)",
+                        "group": "К2Л3(9)",
                         "room": "509",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -214,7 +77,9 @@
                         "teacher": "Мурадова С.Ш.",
                         "group": "К1Э1(11)",
                         "room": "609а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -237,7 +102,9 @@
                         "teacher": "Мурадова С.Ш.",
                         "group": "К2Т1(9)",
                         "room": "315",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -254,7 +121,9 @@
                         "teacher": "Мурадова С.Ш.",
                         "group": "К1Э1(11)",
                         "room": "510",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -277,7 +146,9 @@
                         "teacher": "Мурадова С.Ш.",
                         "group": "К2Э1(9)",
                         "room": "602а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -294,7 +165,9 @@
                         "teacher": "Мурадова С.Ш.",
                         "group": "К1Э1(11)",
                         "room": "510",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -311,7 +184,9 @@
                         "teacher": "Мурадова С.Ш.",
                         "group": "К2Л1(9),К2Л2(9)",
                         "room": "509",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",

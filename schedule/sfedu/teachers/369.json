@@ -1,91 +1,5 @@
 [
     {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 4,
-                "startTime": "13:45",
-                "endTime": "15:20",
-                "subject": "Технологии и фронтиры в области компьютерных наук и искусственного интеллекта",
-                "otUnits": [
-                    {
-                        "teacher": "Корниевский Александр Сергеевич",
-                        "group": "ММ и искусственный интеллект",
-                        "room": "ЛОС 1,2(НИИ МиПМ)",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Modeling of unmanned devices and processes (Моделирование беспилотных устройств и процессов)",
-                "otUnits": [
-                    {
-                        "teacher": "Корниевский Александр Сергеевич",
-                        "group": "ПМИ MSD(eng)",
-                        "room": "ЛОС 4 (НИИ МиПМ)",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 4,
-                "startTime": "13:45",
-                "endTime": "15:20",
-                "subject": "Modeling of unmanned devices and processes (Моделирование беспилотных устройств и процессов)",
-                "otUnits": [
-                    {
-                        "teacher": "Корниевский Александр Сергеевич",
-                        "group": "ПМИ MSD(eng)",
-                        "room": "ЛОС 4 (НИИ МиПМ)",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:35",
-                "subject": "Основы компьютерных наук и искусственного интеллекта",
-                "otUnits": [
-                    {
-                        "teacher": "Корниевский Александр Сергеевич",
-                        "group": "ММ и искусственный интеллект",
-                        "room": "118",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
@@ -100,7 +14,9 @@
                         "teacher": "Корниевский Александр Сергеевич",
                         "group": "ММ и искусственный интеллект",
                         "room": "ЛОС 1,2(НИИ МиПМ)",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -123,7 +39,9 @@
                         "teacher": "Корниевский Александр Сергеевич",
                         "group": "ПМИ MSD(eng)",
                         "room": "ЛОС 4 (НИИ МиПМ)",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -140,7 +58,9 @@
                         "teacher": "Корниевский Александр Сергеевич",
                         "group": "ПМИ MSD(eng)",
                         "room": "ЛОС 4 (НИИ МиПМ)",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -163,7 +83,103 @@
                         "teacher": "Корниевский Александр Сергеевич",
                         "group": "ММ и искусственный интеллект",
                         "room": "118",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-06",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Технологии и фронтиры в области компьютерных наук и искусственного интеллекта",
+                "otUnits": [
+                    {
+                        "teacher": "Корниевский Александр Сергеевич",
+                        "group": "ММ и искусственный интеллект",
+                        "room": "ЛОС 1,2(НИИ МиПМ)",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-07",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Modeling of unmanned devices and processes (Моделирование беспилотных устройств и процессов)",
+                "otUnits": [
+                    {
+                        "teacher": "Корниевский Александр Сергеевич",
+                        "group": "ПМИ MSD(eng)",
+                        "room": "ЛОС 4 (НИИ МиПМ)",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Modeling of unmanned devices and processes (Моделирование беспилотных устройств и процессов)",
+                "otUnits": [
+                    {
+                        "teacher": "Корниевский Александр Сергеевич",
+                        "group": "ПМИ MSD(eng)",
+                        "room": "ЛОС 4 (НИИ МиПМ)",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-10",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Основы компьютерных наук и искусственного интеллекта",
+                "otUnits": [
+                    {
+                        "teacher": "Корниевский Александр Сергеевич",
+                        "group": "ММ и искусственный интеллект",
+                        "room": "118",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

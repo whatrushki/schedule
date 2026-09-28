@@ -1,45 +1,5 @@
 [
     {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:35",
-                "subject": "Уравнения математической физики",
-                "otUnits": [
-                    {
-                        "teacher": "Карапетянц Алексей Николаевич",
-                        "group": "Мех. и ММ",
-                        "room": "215",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Уравнения математической физики",
-                "otUnits": [
-                    {
-                        "teacher": "Карапетянц Алексей Николаевич",
-                        "group": "Мех. и ММ",
-                        "room": "215",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-01",
         "scheduleType": "COMMON",
         "lessons": [
@@ -54,7 +14,9 @@
                         "teacher": "Карапетянц Алексей Николаевич",
                         "group": "Мех. и ММ",
                         "room": "215",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -71,7 +33,53 @@
                         "teacher": "Карапетянц Алексей Николаевич",
                         "group": "Математика",
                         "room": "103(чит.зал)",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Уравнения математической физики",
+                "otUnits": [
+                    {
+                        "teacher": "Карапетянц Алексей Николаевич",
+                        "group": "Мех. и ММ",
+                        "room": "215",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Уравнения математической физики",
+                "otUnits": [
+                    {
+                        "teacher": "Карапетянц Алексей Николаевич",
+                        "group": "Мех. и ММ",
+                        "room": "215",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

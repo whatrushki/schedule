@@ -1,79 +1,5 @@
 [
     {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:35",
-                "subject": "Распараллеливающие преобразования программ",
-                "otUnits": [
-                    {
-                        "teacher": "Штейнберг Борис Яковлевич",
-                        "group": "ФИИТ",
-                        "room": "318",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Дискретная математика",
-                "otUnits": [
-                    {
-                        "teacher": "Штейнберг Борис Яковлевич",
-                        "group": "ММ и ИИ",
-                        "room": "310",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Распараллеливающие преобразования программ",
-                "otUnits": [
-                    {
-                        "teacher": "Штейнберг Борис Яковлевич",
-                        "group": "ФИИТ",
-                        "room": "318",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Дискретная математика",
-                "otUnits": [
-                    {
-                        "teacher": "Штейнберг Борис Яковлевич",
-                        "group": "ММ и ИИ",
-                        "room": "310",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-01",
         "scheduleType": "COMMON",
         "lessons": [
@@ -88,7 +14,9 @@
                         "teacher": "Штейнберг Борис Яковлевич",
                         "group": "ФИИТ",
                         "room": "318",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -105,7 +33,9 @@
                         "teacher": "Штейнберг Борис Яковлевич",
                         "group": "ММ и ИИ",
                         "room": "310",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -122,7 +52,9 @@
                         "teacher": "Штейнберг Борис Яковлевич",
                         "group": "ФИИТ",
                         "room": "318",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -139,7 +71,91 @@
                         "teacher": "Штейнберг Борис Яковлевич",
                         "group": "ММ и ИИ",
                         "room": "310",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Распараллеливающие преобразования программ",
+                "otUnits": [
+                    {
+                        "teacher": "Штейнберг Борис Яковлевич",
+                        "group": "ФИИТ",
+                        "room": "318",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Дискретная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Штейнберг Борис Яковлевич",
+                        "group": "ММ и ИИ",
+                        "room": "310",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Распараллеливающие преобразования программ",
+                "otUnits": [
+                    {
+                        "teacher": "Штейнберг Борис Яковлевич",
+                        "group": "ФИИТ",
+                        "room": "318",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Дискретная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Штейнберг Борис Яковлевич",
+                        "group": "ММ и ИИ",
+                        "room": "310",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

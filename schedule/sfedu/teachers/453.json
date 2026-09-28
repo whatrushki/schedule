@@ -1,45 +1,5 @@
 [
     {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Психолого-педагогический модуль",
-                "otUnits": [
-                    {
-                        "teacher": "Шевырева Елена Геннадиевна",
-                        "group": "ПедМ",
-                        "room": "314",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 4,
-                "startTime": "13:45",
-                "endTime": "15:20",
-                "subject": "Психолого-педагогический модуль",
-                "otUnits": [
-                    {
-                        "teacher": "Шевырева Елена Геннадиевна",
-                        "group": "ПедМ",
-                        "room": "314",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -54,7 +14,9 @@
                         "teacher": "Шевырева Елена Геннадиевна",
                         "group": "ПедМ",
                         "room": "322",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -71,7 +33,9 @@
                         "teacher": "Шевырева Елена Геннадиевна",
                         "group": "ПедМ",
                         "room": "314",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -88,7 +52,53 @@
                         "teacher": "Шевырева Елена Геннадиевна",
                         "group": "ПедМ",
                         "room": "314",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-07",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Психолого-педагогический модуль",
+                "otUnits": [
+                    {
+                        "teacher": "Шевырева Елена Геннадиевна",
+                        "group": "ПедМ",
+                        "room": "314",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Психолого-педагогический модуль",
+                "otUnits": [
+                    {
+                        "teacher": "Шевырева Елена Геннадиевна",
+                        "group": "ПедМ",
+                        "room": "314",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Вычислительная механика",
-                "otUnits": [
-                    {
-                        "teacher": "Говорухин Василий Николаевич",
-                        "group": "ПМИ-ФМММ",
-                        "room": "114",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Вычислительная механика",
-                "otUnits": [
-                    {
-                        "teacher": "Говорухин Василий Николаевич",
-                        "group": "ПМИ-ФМММ",
-                        "room": "114",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Модели нелинейной динамики",
-                "otUnits": [
-                    {
-                        "teacher": "Говорухин Василий Николаевич",
-                        "group": "ПМИ",
-                        "room": "212",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -77,7 +14,9 @@
                         "teacher": "Говорухин Василий Николаевич",
                         "group": "ПМИ-ФМММ",
                         "room": "114",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -94,7 +33,9 @@
                         "teacher": "Говорухин Василий Николаевич",
                         "group": "ПМИ-ФМММ",
                         "room": "114",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -117,7 +58,78 @@
                         "teacher": "Говорухин Василий Николаевич",
                         "group": "ПМИ",
                         "room": "212",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-05",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Вычислительная механика",
+                "otUnits": [
+                    {
+                        "teacher": "Говорухин Василий Николаевич",
+                        "group": "ПМИ-ФМММ",
+                        "room": "114",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Вычислительная механика",
+                "otUnits": [
+                    {
+                        "teacher": "Говорухин Василий Николаевич",
+                        "group": "ПМИ-ФМММ",
+                        "room": "114",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-06",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Модели нелинейной динамики",
+                "otUnits": [
+                    {
+                        "teacher": "Говорухин Василий Николаевич",
+                        "group": "ПМИ",
+                        "room": "212",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",

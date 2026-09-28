@@ -1,85 +1,5 @@
 [
     {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:35",
-                "subject": "Современные проблемы науки и образования",
-                "otUnits": [
-                    {
-                        "teacher": "Бреус Ирина Анатольевна",
-                        "group": "Пед-МИ",
-                        "room": "207",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:35",
-                "subject": "Методика обучения математике",
-                "otUnits": [
-                    {
-                        "teacher": "Бреус Ирина Анатольевна",
-                        "group": "ПедМИ",
-                        "room": "313",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Геометрия",
-                "otUnits": [
-                    {
-                        "teacher": "Бреус Ирина Анатольевна",
-                        "group": "ПедМ",
-                        "room": "325",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Геометрия",
-                "otUnits": [
-                    {
-                        "teacher": "Бреус Ирина Анатольевна",
-                        "group": "ПедМ",
-                        "room": "322",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -94,7 +14,9 @@
                         "teacher": "Бреус Ирина Анатольевна",
                         "group": "Пед-МИ",
                         "room": "207",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -117,7 +39,9 @@
                         "teacher": "Бреус Ирина Анатольевна",
                         "group": "ПедМ",
                         "room": "325",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -134,7 +58,97 @@
                         "teacher": "Бреус Ирина Анатольевна",
                         "group": "ПедМ",
                         "room": "322",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-07",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Современные проблемы науки и образования",
+                "otUnits": [
+                    {
+                        "teacher": "Бреус Ирина Анатольевна",
+                        "group": "Пед-МИ",
+                        "room": "207",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Методика обучения математике",
+                "otUnits": [
+                    {
+                        "teacher": "Бреус Ирина Анатольевна",
+                        "group": "ПедМИ",
+                        "room": "313",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Бреус Ирина Анатольевна",
+                        "group": "ПедМ",
+                        "room": "325",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Бреус Ирина Анатольевна",
+                        "group": "ПедМ",
+                        "room": "322",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",

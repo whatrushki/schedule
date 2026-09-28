@@ -1,51 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 5,
-                "startTime": "15:50",
-                "endTime": "17:25",
-                "subject": "Calculus (Непрерывная математика)",
-                "otUnits": [
-                    {
-                        "teacher": "Абрамян Михаил Эдуардович",
-                        "group": "TCS&IT (ФИИТ)",
-                        "room": "Онлайн",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 6,
-                "startTime": "17:40",
-                "endTime": "19:15",
-                "subject": "Языки программирования",
-                "otUnits": [
-                    {
-                        "teacher": "Абрамян Михаил Эдуардович",
-                        "group": "ФИИТ-МИ",
-                        "room": "Онлайн",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -60,7 +14,9 @@
                         "teacher": "Абрамян Михаил Эдуардович",
                         "group": "TCS&IT (ФИИТ)",
                         "room": "Онлайн",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -83,7 +39,59 @@
                         "teacher": "Абрамян Михаил Эдуардович",
                         "group": "ФИИТ-МИ",
                         "room": "Онлайн",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-05",
+                "number": 5,
+                "startTime": "15:50",
+                "endTime": "17:25",
+                "subject": "Calculus (Непрерывная математика)",
+                "otUnits": [
+                    {
+                        "teacher": "Абрамян Михаил Эдуардович",
+                        "group": "TCS&IT (ФИИТ)",
+                        "room": "Онлайн",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-09",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:15",
+                "subject": "Языки программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Абрамян Михаил Эдуардович",
+                        "group": "ФИИТ-МИ",
+                        "room": "Онлайн",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",

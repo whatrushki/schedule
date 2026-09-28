@@ -1,199 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 2,
-                "startTime": "10:00",
-                "endTime": "11:30",
-                "subject": "ТГП",
-                "otUnits": [
-                    {
-                        "teacher": "Волконитин А.Н.",
-                        "group": "ЮД101",
-                        "room": "407",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 3,
-                "startTime": "11:40",
-                "endTime": "13:10",
-                "subject": "Осн. примен. ИИ",
-                "otUnits": [
-                    {
-                        "teacher": "Орлов Д.И.",
-                        "group": "ЮД101",
-                        "room": "602а",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 4,
-                "startTime": "13:30",
-                "endTime": "15:00",
-                "subject": "Осн. примен. ИИ",
-                "otUnits": [
-                    {
-                        "teacher": "Фоменко А.И.",
-                        "group": "ЮД101",
-                        "room": "602а",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 5,
-                "startTime": "15:10",
-                "endTime": "16:40",
-                "subject": "ФКиС",
-                "otUnits": [
-                    {
-                        "teacher": "Химич М.Н.",
-                        "group": "ЮД101",
-                        "room": ".СЗ/",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 3,
-                "startTime": "11:40",
-                "endTime": "13:10",
-                "subject": "Философия",
-                "otUnits": [
-                    {
-                        "teacher": "Надирова М.Е.",
-                        "group": "ЮД101",
-                        "room": "407",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 4,
-                "startTime": "13:30",
-                "endTime": "15:00",
-                "subject": "Безоп. жизнедеят",
-                "otUnits": [
-                    {
-                        "teacher": "Никуличева Т.В.",
-                        "group": "ЮД101",
-                        "room": "Библиотека",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 2,
-                "startTime": "10:00",
-                "endTime": "11:30",
-                "subject": "ТГП",
-                "otUnits": [
-                    {
-                        "teacher": "Волконитин А.Н.",
-                        "group": "ЮД101",
-                        "room": "407",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 3,
-                "startTime": "11:40",
-                "endTime": "13:10",
-                "subject": "ТГП",
-                "otUnits": [
-                    {
-                        "teacher": "Волконитин А.Н.",
-                        "group": "ЮД101",
-                        "room": "407",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 2,
-                "startTime": "10:00",
-                "endTime": "11:30",
-                "subject": "ФКиС",
-                "otUnits": [
-                    {
-                        "teacher": "Химич М.Н.",
-                        "group": "ЮД101",
-                        "room": ".СЗ/",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 3,
-                "startTime": "11:40",
-                "endTime": "13:10",
-                "subject": "ИЯ",
-                "otUnits": [
-                    {
-                        "teacher": "Галоян Я.Э.",
-                        "group": "ЮД101",
-                        "room": "407",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -208,7 +14,9 @@
                         "teacher": "Галоян Я.Э.",
                         "group": "ЮД101",
                         "room": "407",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -225,7 +33,9 @@
                         "teacher": "Орлов Д.И.",
                         "group": "ЮД101",
                         "room": "601а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -248,7 +58,9 @@
                         "teacher": "Волконитин А.Н.",
                         "group": "ЮД101",
                         "room": "407",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -265,7 +77,9 @@
                         "teacher": "Волконитин А.Н.",
                         "group": "ЮД101",
                         "room": "407",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -282,7 +96,9 @@
                         "teacher": "Надирова М.Е.",
                         "group": "ЮД101",
                         "room": "407",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -299,7 +115,9 @@
                         "teacher": "Никуличева Т.В.",
                         "group": "ЮД101",
                         "room": "409а",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -313,23 +131,6 @@
         "lessons": [
             {
                 "date": "2026-09-30",
-                "number": 1,
-                "startTime": "08:20",
-                "endTime": "09:50",
-                "subject": "ИГиПЗС",
-                "otUnits": [
-                    {
-                        "teacher": "Кравец А.Е.",
-                        "group": "ЮД101",
-                        "room": "407",
-                        "additional": "1"
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-30",
                 "number": 2,
                 "startTime": "10:00",
                 "endTime": "11:30",
@@ -339,7 +140,47 @@
                         "teacher": "Волконитин А.Н.",
                         "group": "ЮД101",
                         "room": "407",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 3,
+                "startTime": "11:40",
+                "endTime": "13:10",
+                "subject": "Осн. примен. ИИ",
+                "otUnits": [
+                    {
+                        "teacher": "Орлов Д.И.",
+                        "group": "ЮД101",
+                        "room": "608а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 4,
+                "startTime": "13:30",
+                "endTime": "15:00",
+                "subject": "ИЯ",
+                "otUnits": [
+                    {
+                        "teacher": "Галоян Я.Э.",
+                        "group": "ЮД101",
+                        "room": "510",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -362,7 +203,9 @@
                         "teacher": "Химич М.Н.",
                         "group": "ЮД101",
                         "room": ".СЗ/",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -379,7 +222,9 @@
                         "teacher": "Никуличева Т.В.",
                         "group": "ЮД101",
                         "room": "407",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -402,7 +247,9 @@
                         "teacher": "Химич М.Н.",
                         "group": "ЮД101",
                         "room": ".СЗ/",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -419,7 +266,9 @@
                         "teacher": "Кравец А.Е.",
                         "group": "ЮД101",
                         "room": "407",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",

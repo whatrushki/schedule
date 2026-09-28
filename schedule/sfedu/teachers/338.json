@@ -1,85 +1,5 @@
 [
     {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 4,
-                "startTime": "13:45",
-                "endTime": "15:20",
-                "subject": "CS332. Компьютерная графика",
-                "otUnits": [
-                    {
-                        "teacher": "Дуюнов Сергей Игоревич",
-                        "group": "ФИИТ",
-                        "room": "202",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 5,
-                "startTime": "15:50",
-                "endTime": "17:25",
-                "subject": "CS332. Компьютерная графика",
-                "otUnits": [
-                    {
-                        "teacher": "Дуюнов Сергей Игоревич",
-                        "group": "ФИИТ",
-                        "room": "202",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Эффективность бизнес-процессов в IT",
-                "otUnits": [
-                    {
-                        "teacher": "Дуюнов Сергей Игоревич",
-                        "group": "ФИИТ-МИ",
-                        "room": "311",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 4,
-                "startTime": "13:45",
-                "endTime": "15:20",
-                "subject": "Эффективность бизнес-процессов в IT",
-                "otUnits": [
-                    {
-                        "teacher": "Дуюнов Сергей Игоревич",
-                        "group": "ФИИТ-МИ",
-                        "room": "311",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
@@ -94,7 +14,9 @@
                         "teacher": "Дуюнов Сергей Игоревич",
                         "group": "ФИИТ-МИ",
                         "room": "218",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -111,7 +33,9 @@
                         "teacher": "Дуюнов Сергей Игоревич",
                         "group": "ФИИТ-МИ",
                         "room": "218",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -134,7 +58,9 @@
                         "teacher": "Дуюнов Сергей Игоревич",
                         "group": "ФИИТ",
                         "room": "202",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -157,7 +83,9 @@
                         "teacher": "Дуюнов Сергей Игоревич",
                         "group": "ФИИТ-МИ",
                         "room": "311",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -174,7 +102,97 @@
                         "teacher": "Дуюнов Сергей Игоревич",
                         "group": "ФИИТ-МИ",
                         "room": "311",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-07",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "CS332. Компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Дуюнов Сергей Игоревич",
+                        "group": "ФИИТ",
+                        "room": "202",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 5,
+                "startTime": "15:50",
+                "endTime": "17:25",
+                "subject": "CS332. Компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Дуюнов Сергей Игоревич",
+                        "group": "ФИИТ",
+                        "room": "202",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-10",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Эффективность бизнес-процессов в IT",
+                "otUnits": [
+                    {
+                        "teacher": "Дуюнов Сергей Игоревич",
+                        "group": "ФИИТ-МИ",
+                        "room": "311",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Эффективность бизнес-процессов в IT",
+                "otUnits": [
+                    {
+                        "teacher": "Дуюнов Сергей Игоревич",
+                        "group": "ФИИТ-МИ",
+                        "room": "311",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

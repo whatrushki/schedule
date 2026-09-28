@@ -1,193 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Прикладные пакеты для работы с сигналами и изображениями",
-                "otUnits": [
-                    {
-                        "teacher": "Зеленчук Павел Анатольевич",
-                        "group": "",
-                        "room": "113",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Вычислительная механика",
-                "otUnits": [
-                    {
-                        "teacher": "Говорухин Василий Николаевич",
-                        "group": "",
-                        "room": "114",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Прикладные пакеты для работы с сигналами и изображениями",
-                "otUnits": [
-                    {
-                        "teacher": "Зеленчук Павел Анатольевич",
-                        "group": "",
-                        "room": "113",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Вычислительная механика",
-                "otUnits": [
-                    {
-                        "teacher": "Говорухин Василий Николаевич",
-                        "group": "",
-                        "room": "114",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 4,
-                "startTime": "13:45",
-                "endTime": "15:20",
-                "subject": "Математические модели естествознания",
-                "otUnits": [
-                    {
-                        "teacher": "Цибулин Вячеслав Георгиевич",
-                        "group": "",
-                        "room": "114",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 5,
-                "startTime": "15:50",
-                "endTime": "17:25",
-                "subject": "Научно-исследовательский семинар",
-                "otUnits": [
-                    {
-                        "teacher": "Гайбарян С А",
-                        "group": "",
-                        "room": "114",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Группы Ли и дифференциальные уравнения",
-                "otUnits": [
-                    {
-                        "teacher": "Жуков Михаил Юрьевич",
-                        "group": "",
-                        "room": "103(чит.зал)",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 4,
-                "startTime": "13:45",
-                "endTime": "15:20",
-                "subject": "Группы Ли и дифференциальные уравнения",
-                "otUnits": [
-                    {
-                        "teacher": "Жуков Михаил Юрьевич",
-                        "group": "",
-                        "room": "103(чит.зал)",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Актуальные задачи моделирования",
-                "otUnits": [
-                    {
-                        "teacher": "Цибулин Вячеслав Георгиевич",
-                        "group": "",
-                        "room": "114",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Актуальные задачи моделирования",
-                "otUnits": [
-                    {
-                        "teacher": "Цибулин Вячеслав Георгиевич",
-                        "group": "",
-                        "room": "114",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -202,7 +14,9 @@
                         "teacher": "Зеленчук Павел Анатольевич",
                         "group": "",
                         "room": "113",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -219,7 +33,9 @@
                         "teacher": "Говорухин Василий Николаевич",
                         "group": "",
                         "room": "114",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -236,7 +52,9 @@
                         "teacher": "Зеленчук Павел Анатольевич",
                         "group": "",
                         "room": "113",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -253,7 +71,9 @@
                         "teacher": "Говорухин Василий Николаевич",
                         "group": "",
                         "room": "114",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -270,7 +90,9 @@
                         "teacher": "Цибулин Вячеслав Георгиевич",
                         "group": "",
                         "room": "114",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -287,7 +109,9 @@
                         "teacher": "Гайбарян С А",
                         "group": "",
                         "room": "114",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -310,7 +134,9 @@
                         "teacher": "Жуков Михаил Юрьевич",
                         "group": "",
                         "room": "103(чит.зал)",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -327,7 +153,9 @@
                         "teacher": "Жуков Михаил Юрьевич",
                         "group": "",
                         "room": "103(чит.зал)",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -350,7 +178,9 @@
                         "teacher": "Цибулин Вячеслав Георгиевич",
                         "group": "",
                         "room": "114",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -367,7 +197,217 @@
                         "teacher": "Цибулин Вячеслав Георгиевич",
                         "group": "",
                         "room": "114",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-05",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Прикладные пакеты для работы с сигналами и изображениями",
+                "otUnits": [
+                    {
+                        "teacher": "Зеленчук Павел Анатольевич",
+                        "group": "",
+                        "room": "113",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Вычислительная механика",
+                "otUnits": [
+                    {
+                        "teacher": "Говорухин Василий Николаевич",
+                        "group": "",
+                        "room": "114",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Прикладные пакеты для работы с сигналами и изображениями",
+                "otUnits": [
+                    {
+                        "teacher": "Зеленчук Павел Анатольевич",
+                        "group": "",
+                        "room": "113",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Вычислительная механика",
+                "otUnits": [
+                    {
+                        "teacher": "Говорухин Василий Николаевич",
+                        "group": "",
+                        "room": "114",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Математические модели естествознания",
+                "otUnits": [
+                    {
+                        "teacher": "Цибулин Вячеслав Георгиевич",
+                        "group": "",
+                        "room": "114",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 5,
+                "startTime": "15:50",
+                "endTime": "17:25",
+                "subject": "Научно-исследовательский семинар",
+                "otUnits": [
+                    {
+                        "teacher": "Гайбарян С А",
+                        "group": "",
+                        "room": "114",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-07",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Группы Ли и дифференциальные уравнения",
+                "otUnits": [
+                    {
+                        "teacher": "Жуков Михаил Юрьевич",
+                        "group": "",
+                        "room": "103(чит.зал)",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Группы Ли и дифференциальные уравнения",
+                "otUnits": [
+                    {
+                        "teacher": "Жуков Михаил Юрьевич",
+                        "group": "",
+                        "room": "103(чит.зал)",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Актуальные задачи моделирования",
+                "otUnits": [
+                    {
+                        "teacher": "Цибулин Вячеслав Георгиевич",
+                        "group": "",
+                        "room": "114",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Актуальные задачи моделирования",
+                "otUnits": [
+                    {
+                        "teacher": "Цибулин Вячеслав Георгиевич",
+                        "group": "",
+                        "room": "114",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

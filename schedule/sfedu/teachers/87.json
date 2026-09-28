@@ -1,74 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Теоретико-исторические основы информатики",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова Елена Михайловна",
-                        "group": "ФИИТ-РО",
-                        "room": "ЮГИНФО 111",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Теоретико-исторические основы информатики",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова Елена Михайловна",
-                        "group": "Пед-РО",
-                        "room": "301",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 4,
-                "startTime": "13:45",
-                "endTime": "15:20",
-                "subject": "CS251. Технологии баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова Елена Михайловна",
-                        "group": "ФИИТ",
-                        "room": "118",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -83,7 +14,9 @@
                         "teacher": "Кузнецова Елена Михайловна",
                         "group": "ФИИТ-РО",
                         "room": "ЮГИНФО 111",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -106,7 +39,9 @@
                         "teacher": "Кузнецова Елена Михайловна",
                         "group": "ПедМ",
                         "room": "ЛОС 1,2(НИИ МиПМ)",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -129,7 +64,9 @@
                         "teacher": "Кузнецова Елена Михайловна",
                         "group": "Пед-РО",
                         "room": "301",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -146,7 +83,9 @@
                         "teacher": "Кузнецова Елена Михайловна",
                         "group": "Пед-МИ",
                         "room": "ЮГИНФО 112",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -169,7 +108,9 @@
                         "teacher": "Кузнецова Елена Михайловна",
                         "group": "ФИИТ",
                         "room": "118",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -186,7 +127,84 @@
                         "teacher": "Кузнецова Елена Михайловна",
                         "group": "ФИИТ",
                         "room": "118",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-05",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Теоретико-исторические основы информатики",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова Елена Михайловна",
+                        "group": "ФИИТ-РО",
+                        "room": "ЮГИНФО 111",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Теоретико-исторические основы информатики",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова Елена Михайловна",
+                        "group": "Пед-РО",
+                        "room": "301",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-09",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "CS251. Технологии баз данных",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова Елена Михайловна",
+                        "group": "ФИИТ",
+                        "room": "118",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",

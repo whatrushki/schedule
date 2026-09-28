@@ -1,136 +1,5 @@
 [
     {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:35",
-                "subject": "Теория и методика обучения информатике",
-                "otUnits": [
-                    {
-                        "teacher": "Блинова Екатерина Евгеньевна",
-                        "group": "Пед-РО",
-                        "room": "ЮГИНФО 111",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Технологии дистанционного, электронного и смешанного обучения",
-                "otUnits": [
-                    {
-                        "teacher": "Блинова Екатерина Евгеньевна",
-                        "group": "ФИИТ-РО",
-                        "room": "ЮГИНФО 111",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Методика обучения информатике",
-                "otUnits": [
-                    {
-                        "teacher": "Блинова Екатерина Евгеньевна",
-                        "group": "ПедМИ",
-                        "room": "ЮГИНФО 206",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Методология и методы научного исследования (информатика и робототехника)",
-                "otUnits": [
-                    {
-                        "teacher": "Блинова Екатерина Евгеньевна",
-                        "group": "Пед-РО",
-                        "room": "ЮГИНФО 111",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:35",
-                "subject": "Методика обучения информатике",
-                "otUnits": [
-                    {
-                        "teacher": "Блинова Екатерина Евгеньевна",
-                        "group": "ПедМИ",
-                        "room": "ЮГИНФО 206",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Методика обучения информатике",
-                "otUnits": [
-                    {
-                        "teacher": "Блинова Екатерина Евгеньевна",
-                        "group": "ПедМИ",
-                        "room": "ЮГИНФО 118",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 4,
-                "startTime": "13:45",
-                "endTime": "15:20",
-                "subject": "Теория и методика обучения и воспитания в системе непрерывного образования",
-                "otUnits": [
-                    {
-                        "teacher": "Блинова Екатерина Евгеньевна",
-                        "group": "Пед-МИ",
-                        "room": "ЮГИНФО 119",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -145,7 +14,9 @@
                         "teacher": "Блинова Екатерина Евгеньевна",
                         "group": "ФИИТ-РО",
                         "room": "ЮГИНФО 111",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -162,7 +33,9 @@
                         "teacher": "Блинова Екатерина Евгеньевна",
                         "group": "ПедМИ",
                         "room": "ЮГИНФО 206",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -179,7 +52,9 @@
                         "teacher": "Блинова Екатерина Евгеньевна",
                         "group": "Пед-РО",
                         "room": "ЮГИНФО 111",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -202,7 +77,9 @@
                         "teacher": "Блинова Екатерина Евгеньевна",
                         "group": "ПедМИ",
                         "room": "ЮГИНФО 118",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -219,7 +96,9 @@
                         "teacher": "Блинова Екатерина Евгеньевна",
                         "group": "Пед-МИ",
                         "room": "ЮГИНФО 206",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -236,10 +115,157 @@
                         "teacher": "Блинова Екатерина Евгеньевна",
                         "group": "Пед-РО",
                         "room": "ЮГИНФО 206",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-07",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Теория и методика обучения информатике",
+                "otUnits": [
+                    {
+                        "teacher": "Блинова Екатерина Евгеньевна",
+                        "group": "Пед-РО",
+                        "room": "ЮГИНФО 111",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Технологии дистанционного, электронного и смешанного обучения",
+                "otUnits": [
+                    {
+                        "teacher": "Блинова Екатерина Евгеньевна",
+                        "group": "ФИИТ-РО",
+                        "room": "ЮГИНФО 111",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Методика обучения информатике",
+                "otUnits": [
+                    {
+                        "teacher": "Блинова Екатерина Евгеньевна",
+                        "group": "ПедМИ",
+                        "room": "ЮГИНФО 206",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Методология и методы научного исследования (информатика и робототехника)",
+                "otUnits": [
+                    {
+                        "teacher": "Блинова Екатерина Евгеньевна",
+                        "group": "Пед-РО",
+                        "room": "ЮГИНФО 111",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Методика обучения информатике",
+                "otUnits": [
+                    {
+                        "teacher": "Блинова Екатерина Евгеньевна",
+                        "group": "ПедМИ",
+                        "room": "ЮГИНФО 206",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Методика обучения информатике",
+                "otUnits": [
+                    {
+                        "teacher": "Блинова Екатерина Евгеньевна",
+                        "group": "ПедМИ",
+                        "room": "ЮГИНФО 118",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Теория и методика обучения и воспитания в системе непрерывного образования",
+                "otUnits": [
+                    {
+                        "teacher": "Блинова Екатерина Евгеньевна",
+                        "group": "Пед-МИ",
+                        "room": "ЮГИНФО 119",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]

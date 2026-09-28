@@ -1,28 +1,5 @@
 [
     {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Physical Culture and Sport (Физическая культура и спорт)",
-                "otUnits": [
-                    {
-                        "teacher": "Седлов Семен Иванович",
-                        "group": "TCS&IT (ФИИТ)",
-                        "room": "Онлайн",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
@@ -37,10 +14,37 @@
                         "teacher": "Седлов Семен Иванович",
                         "group": "TCS&IT (ФИИТ)",
                         "room": "Онлайн",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-06",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Physical Culture and Sport (Физическая культура и спорт)",
+                "otUnits": [
+                    {
+                        "teacher": "Седлов Семен Иванович",
+                        "group": "TCS&IT (ФИИТ)",
+                        "room": "Онлайн",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]

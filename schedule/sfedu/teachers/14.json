@@ -1,28 +1,5 @@
 [
     {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Методика обучения математике",
-                "otUnits": [
-                    {
-                        "teacher": "Белик Елена Викторовна",
-                        "group": "ПедМ",
-                        "room": "НИИ МиПМ, 306",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-01",
         "scheduleType": "COMMON",
         "lessons": [
@@ -37,7 +14,9 @@
                         "teacher": "Белик Елена Викторовна",
                         "group": "Пед-МИ",
                         "room": "312",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -54,10 +33,37 @@
                         "teacher": "Белик Елена Викторовна",
                         "group": "ПедМ",
                         "room": "НИИ МиПМ, 306",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Методика обучения математике",
+                "otUnits": [
+                    {
+                        "teacher": "Белик Елена Викторовна",
+                        "group": "ПедМ",
+                        "room": "НИИ МиПМ, 306",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]

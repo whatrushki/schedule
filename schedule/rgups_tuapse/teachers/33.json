@@ -1,97 +1,5 @@
 [
     {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 1,
-                "startTime": "08:20",
-                "endTime": "09:50",
-                "subject": "Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Беляев К.П.",
-                        "group": "СЭЗ-1-027",
-                        "room": "-",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 2,
-                "startTime": "10:05",
-                "endTime": "11:35",
-                "subject": "Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Беляев К.П.",
-                        "group": "СТ-1-021",
-                        "room": "-",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "Беляев К.П.",
-                        "group": "СТ-1-020",
-                        "room": "-",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 1,
-                "startTime": "08:20",
-                "endTime": "09:50",
-                "subject": "Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Беляев К.П.",
-                        "group": "СТ-1-020",
-                        "room": "-",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "Беляев К.П.",
-                        "group": "СТ-1-021",
-                        "room": "-",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-23",
-                "number": 2,
-                "startTime": "10:05",
-                "endTime": "11:35",
-                "subject": "Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Беляев К.П.",
-                        "group": "СЭЗ-1-027",
-                        "room": "-",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -106,13 +14,17 @@
                         "teacher": "Беляев К.П.",
                         "group": "СТ-1-021",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "СТ-1-020",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -129,7 +41,9 @@
                         "teacher": "Беляев К.П.",
                         "group": "СЭЗ-1-027",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -150,27 +64,35 @@
                 "otUnits": [
                     {
                         "teacher": "Беляев К.П.",
-                        "group": "ЗГС-1-416",
+                        "group": "ЗПС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
-                        "group": "ЗЛС-1-416",
+                        "group": "ЗГС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗМС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
-                        "group": "ЗПС-1-416",
+                        "group": "ЗЛС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -187,25 +109,33 @@
                         "teacher": "Беляев К.П.",
                         "group": "ЗМС-1-416",
                         "room": "-",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "Беляев К.П.",
-                        "group": "ЗЛС-1-416",
-                        "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗПС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Беляев К.П.",
+                        "group": "ЗЛС-1-416",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗГС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -228,37 +158,49 @@
                         "teacher": "Беляев К.П.",
                         "group": "ЗЛС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗГС-1-416",
                         "room": "-",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "Беляев К.П.",
-                        "group": "КСБ-1-416",
-                        "room": "-",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "Беляев К.П.",
-                        "group": "ЗСБ-1-416",
-                        "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗМС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗПС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Беляев К.П.",
+                        "group": "КСБ-1-416",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Беляев К.П.",
+                        "group": "ЗСБ-1-416",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -273,39 +215,51 @@
                 "otUnits": [
                     {
                         "teacher": "Беляев К.П.",
-                        "group": "ЗСБ-1-416",
+                        "group": "ЗПС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "КСБ-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
-                        "group": "ЗПС-1-416",
+                        "group": "ЗСБ-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗЛС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗМС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗГС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -320,27 +274,35 @@
                 "otUnits": [
                     {
                         "teacher": "Беляев К.П.",
-                        "group": "ЗГС-2-415",
+                        "group": "ЗМС-2-415",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗЛС-2-415",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
-                        "group": "ЗМС-2-415",
+                        "group": "ЗГС-2-415",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗПС-2-415",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -355,27 +317,35 @@
                 "otUnits": [
                     {
                         "teacher": "Беляев К.П.",
-                        "group": "ЗГС-2-415",
-                        "room": "-",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "Беляев К.П.",
-                        "group": "ЗМС-2-415",
-                        "room": "-",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "Беляев К.П.",
                         "group": "ЗПС-2-415",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Беляев К.П.",
+                        "group": "ЗГС-2-415",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗЛС-2-415",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Беляев К.П.",
+                        "group": "ЗМС-2-415",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -398,7 +368,9 @@
                         "teacher": "Беляев К.П.",
                         "group": "ЗСБ-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -415,25 +387,33 @@
                         "teacher": "Беляев К.П.",
                         "group": "ЗЛС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗМС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗПС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗГС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -448,27 +428,35 @@
                 "otUnits": [
                     {
                         "teacher": "Беляев К.П.",
+                        "group": "ЗЛС-1-416",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Беляев К.П.",
                         "group": "ЗПС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗМС-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗГС-1-416",
                         "room": "-",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "Беляев К.П.",
-                        "group": "ЗЛС-1-416",
-                        "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -491,7 +479,9 @@
                         "teacher": "Беляев К.П.",
                         "group": "ЗСБ-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -508,7 +498,9 @@
                         "teacher": "Беляев К.П.",
                         "group": "ЗСБ-1-416",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -523,27 +515,35 @@
                 "otUnits": [
                     {
                         "teacher": "Беляев К.П.",
-                        "group": "ЗЛС-2-415",
-                        "room": "-",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "Беляев К.П.",
                         "group": "ЗПС-2-415",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗМС-2-415",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Беляев К.П.",
+                        "group": "ЗЛС-2-415",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗГС-2-415",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -558,27 +558,139 @@
                 "otUnits": [
                     {
                         "teacher": "Беляев К.П.",
-                        "group": "ЗМС-2-415",
+                        "group": "ЗГС-2-415",
                         "room": "-",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "Беляев К.П.",
-                        "group": "ЗПС-2-415",
-                        "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
                         "group": "ЗЛС-2-415",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Беляев К.П.",
-                        "group": "ЗГС-2-415",
+                        "group": "ЗПС-2-415",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Беляев К.П.",
+                        "group": "ЗМС-2-415",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-06",
+                "number": 2,
+                "startTime": "10:05",
+                "endTime": "11:35",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Беляев К.П.",
+                        "group": "СТ-1-021",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Беляев К.П.",
+                        "group": "СТ-1-020",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-06",
+                "number": 3,
+                "startTime": "12:05",
+                "endTime": "13:35",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Беляев К.П.",
+                        "group": "СЭЗ-1-027",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 2,
+                "startTime": "10:05",
+                "endTime": "11:35",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Беляев К.П.",
+                        "group": "СЭЗ-1-027",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 3,
+                "startTime": "12:05",
+                "endTime": "13:35",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Беляев К.П.",
+                        "group": "СТ-1-021",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Беляев К.П.",
+                        "group": "СТ-1-020",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",

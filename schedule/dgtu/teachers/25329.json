@@ -1,37 +1,41 @@
 [
     {
-        "date": "2026-09-01",
+        "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-01",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
+                "date": "2026-09-29",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "пр Надежность ПО",
                 "otUnits": [
                     {
                         "teacher": "Глушко С. Г.",
                         "group": "ВИ42",
-                        "room": "485",
-                        "additional": "1"
+                        "room": "402",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-01",
+                "date": "2026-09-29",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лаб Операционные системы",
+                "subject": "лаб Сетевые технологии",
                 "otUnits": [
                     {
                         "teacher": "Глушко С. Г.",
-                        "group": "ВИ22",
-                        "room": "105",
-                        "additional": "1"
+                        "group": "ВИ33",
+                        "room": "351",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -40,45 +44,11 @@
         ]
     },
     {
-        "date": "2026-09-02",
+        "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-02",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Операционные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ21",
-                        "room": "215",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-02",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Надежность ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ43",
-                        "room": "218а",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-02",
+                "date": "2026-09-30",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
@@ -87,8 +57,10 @@
                     {
                         "teacher": "Глушко С. Г.",
                         "group": "ВИ34",
-                        "room": "470",
-                        "additional": "1"
+                        "room": "388",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -97,11 +69,55 @@
         ]
     },
     {
-        "date": "2026-09-05",
+        "date": "2026-10-02",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-05",
+                "date": "2026-10-02",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Операционные системы",
+                "otUnits": [
+                    {
+                        "teacher": "Глушко С. Г.",
+                        "group": "ВИ21",
+                        "room": "301",
+                        "additional": "10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-03",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Операционные системы",
+                "otUnits": [
+                    {
+                        "teacher": "Глушко С. Г.",
+                        "group": "ВИ22",
+                        "room": "333",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-03",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -110,8 +126,48 @@
                     {
                         "teacher": "Глушко С. Г.",
                         "group": "ВИ23",
-                        "room": "490",
-                        "additional": "1"
+                        "room": "317",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Надежность ПО",
+                "otUnits": [
+                    {
+                        "teacher": "Глушко С. Г.",
+                        "group": "ВИ44",
+                        "room": "208",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Надежность ПО",
+                "otUnits": [
+                    {
+                        "teacher": "Глушко С. Г.",
+                        "group": "ВИ43",
+                        "room": "470",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -120,21 +176,67 @@
         ]
     },
     {
-        "date": "2026-09-07",
+        "date": "2026-10-05",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-07",
+                "date": "2026-10-05",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Операционные системы",
+                "otUnits": [
+                    {
+                        "teacher": "Глушко С. Г.",
+                        "group": "ВИ22",
+                        "room": "333",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-09",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
+                "subject": "пр Надежность ПО",
+                "otUnits": [
+                    {
+                        "teacher": "Глушко С. Г.",
+                        "group": "ВИ43",
+                        "room": "424",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
                 "subject": "лаб Сетевые технологии",
                 "otUnits": [
                     {
                         "teacher": "Глушко С. Г.",
-                        "group": "ВИ34",
-                        "room": "460",
-                        "additional": "1"
+                        "group": "ВИ33",
+                        "room": "362",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -143,11 +245,11 @@
         ]
     },
     {
-        "date": "2026-09-08",
+        "date": "2026-10-10",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-08",
+                "date": "2026-10-10",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
@@ -156,267 +258,36 @@
                     {
                         "teacher": "Глушко С. Г.",
                         "group": "ВИ42",
-                        "room": "470",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-09",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-09",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Надежность ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ43",
                         "room": "358",
-                        "additional": "1"
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-10",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
             {
-                "date": "2026-09-10",
+                "date": "2026-10-10",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Надежность ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ44",
-                        "room": "355",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-10",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Сетевые технологии",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ33",
-                        "room": "319",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-12",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-12",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Операционные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ22",
-                        "room": "105",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-12",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Операционные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ23",
-                        "room": "467",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-12",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
                 "subject": "лаб Операционные системы",
                 "otUnits": [
                     {
                         "teacher": "Глушко С. Г.",
                         "group": "ВИ21",
-                        "room": "109",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-14",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-14",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Сетевые технологии",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ34",
-                        "room": "383б",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-15",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-15",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Надежность ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ42",
-                        "room": "392",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-16",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-16",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Надежность ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ43",
-                        "room": "383б",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-17",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-17",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Надежность ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ44",
-                        "room": "355",
-                        "additional": "1"
+                        "room": "492",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-17",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Сетевые технологии",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ33",
-                        "room": "319",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-19",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Операционные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ22",
-                        "room": "105",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-19",
+                "date": "2026-10-10",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -425,124 +296,36 @@
                     {
                         "teacher": "Глушко С. Г.",
                         "group": "ВИ23",
-                        "room": "467",
-                        "additional": "1"
+                        "room": "458",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-19",
+                "date": "2026-10-10",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лаб Операционные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ21",
-                        "room": "109",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
                 "subject": "лаб Сетевые технологии",
                 "otUnits": [
                     {
                         "teacher": "Глушко С. Г.",
                         "group": "ВИ34",
-                        "room": "460",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Надежность ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ42",
-                        "room": "470",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Сетевые технологии",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ33",
-                        "room": "355",
-                        "additional": "1"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Операционные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Глушко С. Г.",
-                        "group": "ВИ23",
-                        "room": "490",
-                        "additional": "1"
+                        "room": "351",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-26",
+                "date": "2026-10-10",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
@@ -551,8 +334,10 @@
                     {
                         "teacher": "Глушко С. Г.",
                         "group": "ВИ44",
-                        "room": "355",
-                        "additional": "1"
+                        "room": "015",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",

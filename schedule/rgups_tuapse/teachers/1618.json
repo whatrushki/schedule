@@ -1,34 +1,5 @@
 [
     {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 2,
-                "startTime": "10:05",
-                "endTime": "11:35",
-                "subject": "Сервисная деятельность",
-                "otUnits": [
-                    {
-                        "teacher": "Иваненко А.Ю.",
-                        "group": "СТ-2-018",
-                        "room": "-",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "Иваненко А.Ю.",
-                        "group": "СТ-2-019",
-                        "room": "-",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -41,15 +12,19 @@
                 "otUnits": [
                     {
                         "teacher": "Иваненко А.Ю.",
-                        "group": "СТ-2-019",
+                        "group": "СТ-2-018",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Иваненко А.Ю.",
-                        "group": "СТ-2-018",
+                        "group": "СТ-2-019",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -72,13 +47,50 @@
                         "teacher": "Иваненко А.Ю.",
                         "group": "СТ-2-018",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Иваненко А.Ю.",
                         "group": "СТ-2-019",
                         "room": "-",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-09",
+                "number": 2,
+                "startTime": "10:05",
+                "endTime": "11:35",
+                "subject": "Сервисная деятельность",
+                "otUnits": [
+                    {
+                        "teacher": "Иваненко А.Ю.",
+                        "group": "СТ-2-019",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Иваненко А.Ю.",
+                        "group": "СТ-2-018",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",

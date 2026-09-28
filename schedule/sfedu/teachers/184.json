@@ -1,148 +1,5 @@
 [
     {
-        "date": "2026-09-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-24",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Базы данных",
-                "otUnits": [
-                    {
-                        "teacher": "Чердынцева Марина Игорьевна",
-                        "group": "ПМИ",
-                        "room": "202",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 4,
-                "startTime": "13:45",
-                "endTime": "15:20",
-                "subject": "Программирование на С++",
-                "otUnits": [
-                    {
-                        "teacher": "Чердынцева Марина Игорьевна",
-                        "group": "ПМИ",
-                        "room": "202",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-24",
-                "number": 5,
-                "startTime": "15:50",
-                "endTime": "17:25",
-                "subject": "Программирование на С++",
-                "otUnits": [
-                    {
-                        "teacher": "Чердынцева Марина Игорьевна",
-                        "group": "ПМИ",
-                        "room": "202",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:35",
-                "subject": "CS251. Технологии баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "Чердынцева Марина Игорьевна",
-                        "group": "ФИИТ",
-                        "room": "317",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "Чердынцева Марина Игорьевна",
-                        "group": "ФИИТ",
-                        "room": "318",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "CS251. Технологии баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "Чердынцева Марина Игорьевна",
-                        "group": "ФИИТ",
-                        "room": "317",
-                        "additional": ""
-                    },
-                    {
-                        "teacher": "Чердынцева Марина Игорьевна",
-                        "group": "ФИИТ",
-                        "room": "318",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "CS251. Технологии баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "Чердынцева Марина Игорьевна",
-                        "group": "ФИИТ",
-                        "room": "120",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 4,
-                "startTime": "13:45",
-                "endTime": "15:20",
-                "subject": "Базы данных",
-                "otUnits": [
-                    {
-                        "teacher": "Чердынцева Марина Игорьевна",
-                        "group": "ПМИ",
-                        "room": "120",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-01",
         "scheduleType": "COMMON",
         "lessons": [
@@ -157,7 +14,9 @@
                         "teacher": "Чердынцева Марина Игорьевна",
                         "group": "ПМИ",
                         "room": "202",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -174,7 +33,9 @@
                         "teacher": "Чердынцева Марина Игорьевна",
                         "group": "ПМИ",
                         "room": "202",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -191,7 +52,9 @@
                         "teacher": "Чердынцева Марина Игорьевна",
                         "group": "ПМИ",
                         "room": "202",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -214,13 +77,17 @@
                         "teacher": "Чердынцева Марина Игорьевна",
                         "group": "ФИИТ",
                         "room": "317",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Чердынцева Марина Игорьевна",
                         "group": "ФИИТ",
                         "room": "318",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -237,13 +104,17 @@
                         "teacher": "Чердынцева Марина Игорьевна",
                         "group": "ФИИТ",
                         "room": "317",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     },
                     {
                         "teacher": "Чердынцева Марина Игорьевна",
                         "group": "ФИИТ",
                         "room": "318",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -260,7 +131,9 @@
                         "teacher": "Чердынцева Марина Игорьевна",
                         "group": "ФИИТ",
                         "room": "120",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -277,7 +150,170 @@
                         "teacher": "Чердынцева Марина Игорьевна",
                         "group": "ПМИ",
                         "room": "120",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Базы данных",
+                "otUnits": [
+                    {
+                        "teacher": "Чердынцева Марина Игорьевна",
+                        "group": "ПМИ",
+                        "room": "202",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Программирование на С++",
+                "otUnits": [
+                    {
+                        "teacher": "Чердынцева Марина Игорьевна",
+                        "group": "ПМИ",
+                        "room": "202",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 5,
+                "startTime": "15:50",
+                "endTime": "17:25",
+                "subject": "Программирование на С++",
+                "otUnits": [
+                    {
+                        "teacher": "Чердынцева Марина Игорьевна",
+                        "group": "ПМИ",
+                        "room": "202",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-09",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "CS251. Технологии баз данных",
+                "otUnits": [
+                    {
+                        "teacher": "Чердынцева Марина Игорьевна",
+                        "group": "ФИИТ",
+                        "room": "317",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Чердынцева Марина Игорьевна",
+                        "group": "ФИИТ",
+                        "room": "318",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "CS251. Технологии баз данных",
+                "otUnits": [
+                    {
+                        "teacher": "Чердынцева Марина Игорьевна",
+                        "group": "ФИИТ",
+                        "room": "317",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Чердынцева Марина Игорьевна",
+                        "group": "ФИИТ",
+                        "room": "318",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "CS251. Технологии баз данных",
+                "otUnits": [
+                    {
+                        "teacher": "Чердынцева Марина Игорьевна",
+                        "group": "ФИИТ",
+                        "room": "120",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Базы данных",
+                "otUnits": [
+                    {
+                        "teacher": "Чердынцева Марина Игорьевна",
+                        "group": "ПМИ",
+                        "room": "120",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",

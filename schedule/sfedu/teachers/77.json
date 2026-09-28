@@ -1,142 +1,5 @@
 [
     {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:35",
-                "subject": "Дополнительные главы алгебры и геометрии",
-                "otUnits": [
-                    {
-                        "teacher": "Козак Анатолий Всеволодович",
-                        "group": "КН и прикладной ИИ",
-                        "room": "120",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Алгебра и геометрия",
-                "otUnits": [
-                    {
-                        "teacher": "Козак Анатолий Всеволодович",
-                        "group": "КН и прикладной ИИ",
-                        "room": "120",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-22",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Математический анализ 1",
-                "otUnits": [
-                    {
-                        "teacher": "Козак Анатолий Всеволодович",
-                        "group": "ММ и искусственный интеллект",
-                        "room": "216",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-25",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:35",
-                "subject": "Математический анализ",
-                "otUnits": [
-                    {
-                        "teacher": "Козак Анатолий Всеволодович",
-                        "group": "ММ и искусственный интеллект",
-                        "room": "211",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-25",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Математический анализ 1",
-                "otUnits": [
-                    {
-                        "teacher": "Козак Анатолий Всеволодович",
-                        "group": "ММ и искусственный интеллект",
-                        "room": "211",
-                        "additional": ""
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-26",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:35",
-                "subject": "Операторы свертки и обработка изображений",
-                "otUnits": [
-                    {
-                        "teacher": "Козак Анатолий Всеволодович",
-                        "group": "ПМИ-ИИ",
-                        "room": "208",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Операторы свертки и обработка изображений",
-                "otUnits": [
-                    {
-                        "teacher": "Козак Анатолий Всеволодович",
-                        "group": "ПМИ-ИИ",
-                        "room": "208",
-                        "additional": ""
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-29",
         "scheduleType": "COMMON",
         "lessons": [
@@ -151,7 +14,9 @@
                         "teacher": "Козак Анатолий Всеволодович",
                         "group": "КН и прикладной ИИ",
                         "room": "215",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -168,7 +33,9 @@
                         "teacher": "Козак Анатолий Всеволодович",
                         "group": "КН и прикладной ИИ",
                         "room": "120",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -185,7 +52,9 @@
                         "teacher": "Козак Анатолий Всеволодович",
                         "group": "ММ и искусственный интеллект",
                         "room": "216",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -208,7 +77,9 @@
                         "teacher": "Козак Анатолий Всеволодович",
                         "group": "ММ и искусственный интеллект",
                         "room": "211",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -225,7 +96,9 @@
                         "teacher": "Козак Анатолий Всеволодович",
                         "group": "ММ и искусственный интеллект",
                         "room": "211",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -248,7 +121,9 @@
                         "teacher": "Козак Анатолий Всеволодович",
                         "group": "ПМИ-ИИ",
                         "room": "208",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -265,7 +140,160 @@
                         "teacher": "Козак Анатолий Всеволодович",
                         "group": "ПМИ-ИИ",
                         "room": "208",
-                        "additional": ""
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-06",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Дополнительные главы алгебры и геометрии",
+                "otUnits": [
+                    {
+                        "teacher": "Козак Анатолий Всеволодович",
+                        "group": "КН и прикладной ИИ",
+                        "room": "120",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-06",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Алгебра и геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Козак Анатолий Всеволодович",
+                        "group": "КН и прикладной ИИ",
+                        "room": "120",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-06",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Математический анализ 1",
+                "otUnits": [
+                    {
+                        "teacher": "Козак Анатолий Всеволодович",
+                        "group": "ММ и искусственный интеллект",
+                        "room": "216",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-09",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Козак Анатолий Всеволодович",
+                        "group": "ММ и искусственный интеллект",
+                        "room": "211",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Математический анализ 1",
+                "otUnits": [
+                    {
+                        "teacher": "Козак Анатолий Всеволодович",
+                        "group": "ММ и искусственный интеллект",
+                        "room": "211",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-10",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Операторы свертки и обработка изображений",
+                "otUnits": [
+                    {
+                        "teacher": "Козак Анатолий Всеволодович",
+                        "group": "ПМИ-ИИ",
+                        "room": "208",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Операторы свертки и обработка изображений",
+                "otUnits": [
+                    {
+                        "teacher": "Козак Анатолий Всеволодович",
+                        "group": "ПМИ-ИИ",
+                        "room": "208",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
