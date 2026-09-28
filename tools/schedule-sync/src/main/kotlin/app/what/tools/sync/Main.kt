@@ -124,6 +124,12 @@ private fun normalizeName(name: String): String = name
     .trim()
     .lowercase()
 
+fun sanitizeFileName(name: String): String = name
+    .replace(Regex("""[\\/:*?"<>|\r\n\t]"""), "_")
+    .trim()
+    .trimEnd('.')
+    .ifEmpty { "unknown" }
+
 suspend fun syncRksi(client: HttpClient, rootDir: File, failOnError: Boolean = false) {
     println("\n--- Syncing RKSI ---")
     val dir = File(rootDir, "rksi").apply { mkdirs() }
@@ -767,7 +773,7 @@ suspend fun syncTvgu(client: HttpClient, rootDir: File, failOnError: Boolean = f
                             delay(30)
                             val schedule = tvguClient.getGroupSchedule(group.name)
                             if (schedule.isNotEmpty()) {
-                                val safeName = group.name.replace("/", "_").replace("\\", "_")
+                                val safeName = sanitizeFileName(group.name)
                                 File(groupsDir, "$safeName.json").writeText(json.encodeToString(schedule))
                                 synchronized(groupsDir) { groupCount++ }
 
@@ -799,7 +805,7 @@ suspend fun syncTvgu(client: HttpClient, rootDir: File, failOnError: Boolean = f
         }
 
         println("  [TvGU] Aggregated ${teacherSchedules.size} teachers from group schedules")
-        val teachersList = teacherSchedules.keys.sorted().map { TeacherDto(id = it, name = it) }
+        val teachersList = teacherSchedules.keys.sorted().map { TeacherDto(id = sanitizeFileName(it), name = it) }
         File(dir, "teachers.json").writeText(json.encodeToString(teachersList))
 
         var teacherCount = 0
@@ -827,7 +833,7 @@ suspend fun syncTvgu(client: HttpClient, rootDir: File, failOnError: Boolean = f
                 )
             }.sortedBy { it.date }
 
-            val safeTeacherId = teacherName.replace("/", "_").replace("\\", "_")
+            val safeTeacherId = sanitizeFileName(teacherName)
             File(teachersDir, "$safeTeacherId.json").writeText(json.encodeToString(teacherDays))
             teacherCount++
         }

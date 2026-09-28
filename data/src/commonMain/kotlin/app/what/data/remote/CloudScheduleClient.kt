@@ -126,7 +126,7 @@ class CloudScheduleClient(
         }
 
         for (candidate in candidateNames) {
-            val safeName = candidate.replace("/", "_").replace("\\", "_")
+            val safeName = sanitizeKey(candidate)
             val text = fetchJson("groups/${safeName.encodeURLPathPart()}.json")
             if (text != null) {
                 return try {
@@ -156,7 +156,7 @@ class CloudScheduleClient(
         }
 
         for (key in candidateKeys) {
-            val safeKey = key.replace("/", "_").replace("\\", "_")
+            val safeKey = sanitizeKey(key)
             val text = fetchJson("teachers/${safeKey.encodeURLPathPart()}.json")
             if (text != null) {
                 return try {
@@ -170,4 +170,10 @@ class CloudScheduleClient(
 
         return emptyList()
     }
+
+    private fun sanitizeKey(key: String): String = key
+        .replace(Regex("""[\\/:*?"<>|\r\n\t]"""), "_")
+        .trim()
+        .trimEnd('.')
+        .ifEmpty { "unknown" }
 }
