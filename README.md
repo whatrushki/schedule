@@ -13,7 +13,7 @@
 
 <!-- 2. Информационные чипсы (height="24") -->
 <img src="https://img.shields.io/badge/status-stable-09090b?style=for-the-badge&labelColor=000000" height="24" />
-<img src="https://img.shields.io/badge/version-1.3.10-09090b?style=for-the-badge&labelColor=000000" height="24" />
+<img src="https://img.shields.io/badge/version-1.3.15-09090b?style=for-the-badge&labelColor=000000" height="24" />
 <img src="https://img.shields.io/badge/platform-Android_%7C_Desktop_%7C_Web-09090b?style=for-the-badge&labelColor=000000" height="24" />
 <img src="https://img.shields.io/badge/license-MIT-09090b?style=for-the-badge&labelColor=000000" height="24" />
 
@@ -56,14 +56,20 @@ Schedule — мультиплатформенная экосистема для 
 * **Автоматическое наложение замен**  
   Интеллектуальное сопоставление базового расписания с оперативными изменениями, вычисление добавленных, отмененных и перенесенных занятий.
 
+* **Личные кабинеты студентов**  
+  Авторизация, зачетные книжки, корпоративная почта, заказ справок, переаттестации и платежные QR-коды для поддерживаемых учебных заведений (ДГТУ, РКСИ).
+
+* **Виджеты рабочего стола и уведомления о заменах**  
+  Android Glance-виджеты расписания с динамической адаптацией тем оформления и периодический фоновый WorkManager-мониторинг оперативных замен для избранных групп.
+
 * **Академические новости и галереи**  
-  Интегрированная лента новостей учебных заведений с адаптивной версткой, предпросмотром медиафайлов и полноэкранным просмотром деталей.
+  Интегрированная лента новостей учебных заведений с адаптивной версткой, предпросмотром медиафайлов, форматированием цитат и полноэкранным просмотром деталей.
 
 * **Автономность и фоновый кэш**  
   Многоуровневое кэширование расписания и метаданных для бесперебойной работы клиентов в условиях нестабильной сети или недоступности серверов учреждений.
 
-* **Еженедельный мониторинг стабильности**  
-  Автоматизированный CI-конвейер проверки доступности парсеров с независимой матрицей исполнения и мгновенными алертами в Telegram.
+* **Периодический мониторинг и синхронизация**  
+  Автоматизированный CI-конвейер проверки стабильности парсеров и синхронизации актуальных расписаний (`schedule-sync`) для веб-клиента и облачного fallback-источника.
 
 #### Поддерживаемые учебные заведения
 
@@ -74,6 +80,9 @@ Schedule — мультиплатформенная экосистема для 
 | **РГЭУ (РИНХ)** — Ростовский государственный экономический университет | `:libs:schedule:rinh` | Официальный веб-сервис | Поддерживается |
 | **ИУБиП** — Институт управления, бизнеса и права | `:libs:schedule:iubip` | Информационный портал | Поддерживается |
 | **ЮФУ (Мехмат)** — Институт математики, механики и КН им. И.И. Воровича | `:libs:schedule:sfedu` | Официальный REST API / Веб | Поддерживается |
+| **РГУПС** — Ростовский государственный университет путей сообщения | `:libs:schedule:rgups` | Веб-портал расписания | Поддерживается |
+| **РГУПС (Туапсе)** — Филиал РГУПС в г. Туапсе | `:libs:schedule:rgups_tuapse` | Информационный сервис | Поддерживается |
+| **ТвГУ** — Тверской государственный университет | `:libs:schedule:tvgu` | Официальный REST API / Веб | Поддерживается |
 
 ---
 
@@ -121,6 +130,10 @@ graph TD
         P_DGTU["dgtu (Донской тех. ун-т)"]
         P_IUBIP["iubip (Институт упр-я и права)"]
         P_RINH["rinh (РГЭУ РИНХ)"]
+        P_SFEDU["sfedu (ЮФУ Мехмат)"]
+        P_RGUPS["rgups (РГУПС)"]
+        P_TUAPSE["rgups_tuapse (РГУПС Туапсе)"]
+        P_TVGU["tvgu (ТвГУ Тверь)"]
     end
 
     subgraph ToolsLayer["Инструменты"]
@@ -142,17 +155,29 @@ graph TD
     DATA --> P_DGTU
     DATA --> P_IUBIP
     DATA --> P_RINH
+    DATA --> P_SFEDU
+    DATA --> P_RGUPS
+    DATA --> P_TUAPSE
+    DATA --> P_TVGU
 
     P_RKSI --> CORE_PARSER
     P_DGTU --> CORE_PARSER
     P_IUBIP --> CORE_PARSER
     P_RINH --> CORE_PARSER
+    P_SFEDU --> CORE_PARSER
+    P_RGUPS --> CORE_PARSER
+    P_TUAPSE --> CORE_PARSER
+    P_TVGU --> CORE_PARSER
 
     SYNC --> CORE_PARSER
     SYNC --> P_RKSI
     SYNC --> P_DGTU
     SYNC --> P_IUBIP
     SYNC --> P_RINH
+    SYNC --> P_SFEDU
+    SYNC --> P_RGUPS
+    SYNC --> P_TUAPSE
+    SYNC --> P_TVGU
 ```
 
 #### Подключение библиотек парсеров (Maven Packages)
@@ -173,12 +198,15 @@ dependencyResolutionManagement {
 
 // build.gradle.kts
 dependencies {
-    implementation("app.what.schedule:core:1.3.4")
-    implementation("app.what.schedule:rksi:1.3.4")
-    implementation("app.what.schedule:dgtu:1.3.4")
-    implementation("app.what.schedule:iubip:1.3.4")
-    implementation("app.what.schedule:rinh:1.3.4")
-    implementation("app.what.schedule:sfedu:1.3.4")
+    implementation("app.what.schedule:core:1.3.15")
+    implementation("app.what.schedule:rksi:1.3.15")
+    implementation("app.what.schedule:dgtu:1.3.15")
+    implementation("app.what.schedule:iubip:1.3.15")
+    implementation("app.what.schedule:rinh:1.3.15")
+    implementation("app.what.schedule:sfedu:1.3.15")
+    implementation("app.what.schedule:rgups:1.3.15")
+    implementation("app.what.schedule:rgups_tuapse:1.3.15")
+    implementation("app.what.schedule:tvgu:1.3.15")
 }
 ```
 
