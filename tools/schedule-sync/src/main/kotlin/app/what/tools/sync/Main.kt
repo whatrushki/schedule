@@ -63,10 +63,14 @@ fun main(args: Array<String>) = runBlocking(Dispatchers.IO) {
     val outDir = File(outPath)
     outDir.mkdirs()
 
+    val filterIndex = args.indexOf("--filter").takeIf { it != -1 } ?: args.indexOf("--group")
+    val filter = if (filterIndex in 0 until args.size - 1) args[filterIndex + 1] else null
+
     val failOnError = args.contains("--fail-on-error")
 
     println("=== Starting Schedule Sync ===")
     println("Target: $target")
+    println("Filter: ${filter ?: "none"}")
     println("Output: ${outDir.absolutePath}")
     println("Fail on error: $failOnError")
 
@@ -93,7 +97,7 @@ fun main(args: Array<String>) = runBlocking(Dispatchers.IO) {
             "sfedu" -> syncSfedu(client, outDir, failOnError)
             "rgups" -> syncRgups(client, outDir, failOnError)
             "rgups_tuapse" -> syncRgupsTuapse(client, outDir, failOnError)
-            "tvgu" -> syncTvgu(client, outDir, failOnError)
+            "tvgu" -> syncTvgu(client, outDir, failOnError, filter)
             "others" -> syncOthers(client, outDir, failOnError)
             "all" -> {
                 syncRksi(client, outDir, failOnError)
@@ -741,7 +745,7 @@ suspend fun syncRgupsTuapse(client: HttpClient, rootDir: File, failOnError: Bool
     }
 }
 
-suspend fun syncTvgu(client: HttpClient, rootDir: File, failOnError: Boolean = false) {
+suspend fun syncTvgu(client: HttpClient, rootDir: File, failOnError: Boolean = false, filter: String? = null) {
     println("\n--- Syncing TvGU ---")
     val dir = File(rootDir, "tvgu").apply { mkdirs() }
     val groupsDir = File(dir, "groups").apply { mkdirs() }
@@ -760,13 +764,20 @@ suspend fun syncTvgu(client: HttpClient, rootDir: File, failOnError: Boolean = f
 
         File(dir, "groups.json").writeText(json.encodeToString(groups))
 
+        val targetGroups = if (!filter.isNullOrBlank()) {
+            val cleanFilter = filter.trim().lowercase()
+            groups.filter { it.name.lowercase().contains(cleanFilter) || it.id.lowercase().contains(cleanFilter) }
+        } else {
+            groups
+        }
+
         var groupCount = 0
         val teacherSchedules = mutableMapOf<String, MutableMap<LocalDate, MutableList<LessonDto>>>()
         val semaphore = Semaphore(6)
 
-        println("  Fetching TvGU group schedules...")
+        println("  Fetching TvGU schedules for ${targetGroups.size} groups (filter: ${filter ?: "all"})...")
         coroutineScope {
-            groups.map { group ->
+            targetGroups.map { group ->
                 async {
                     semaphore.withPermit {
                         runCatching {

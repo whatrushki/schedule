@@ -30,6 +30,11 @@ on:
           - rgups_tuapse
           - tvgu
           - others
+      filter:
+        description: 'Optional group/name filter (e.g. ЮР-33)'
+        required: false
+        default: ''
+        type: string
 
 jobs:
   sync_schedule:
@@ -74,7 +79,11 @@ jobs:
       - name: Run Schedule Sync CLI
         run: |
           mkdir -p build/schedule_out/schedule
-          ./gradlew :tools:schedule-sync:run --args="--target ${{ steps.determine_target.outputs.target }} --out ${GITHUB_WORKSPACE}/build/schedule_out/schedule"
+          ARGS="--target ${{ steps.determine_target.outputs.target }} --out ${GITHUB_WORKSPACE}/build/schedule_out/schedule"
+          if [ -n "${{ github.event.inputs.filter }}" ]; then
+            ARGS="$ARGS --filter '${{ github.event.inputs.filter }}'"
+          fi
+          ./gradlew :tools:schedule-sync:run --args="$ARGS"
 
       - name: Deploy Schedule to gh-pages Branch
         uses: peaceiris/actions-gh-pages@v4
