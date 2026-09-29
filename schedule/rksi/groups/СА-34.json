@@ -68,6 +68,25 @@
         "lessons": [
             {
                 "date": "2026-09-30",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Згонников Е.Ф.",
+                        "group": "СА-34",
+                        "room": "Общ1-3",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-30",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -76,14 +95,14 @@
                     {
                         "teacher": "Згонников Е.Ф.",
                         "group": "СА-34",
-                        "room": "Общ№1-1",
-                        "additional": "Общ№1-1",
+                        "room": "Общ1-3",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-30",
@@ -102,7 +121,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

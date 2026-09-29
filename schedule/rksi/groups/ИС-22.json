@@ -87,22 +87,60 @@
         "lessons": [
             {
                 "date": "2026-09-30",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян А.Э.",
+                        "group": "ИС-22",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Малая М.А.",
+                        "group": "ИС-22",
+                        "room": "422",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-30",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Психология общения",
+                "subject": "Операционные системы и среды",
                 "otUnits": [
                     {
-                        "teacher": "Золотовская М.Ю.",
+                        "teacher": "Малая М.А.",
                         "group": "ИС-22",
-                        "room": "319",
+                        "room": "422",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-30",
@@ -140,7 +178,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-30",
@@ -159,7 +197,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

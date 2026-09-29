@@ -83,7 +83,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-30",
@@ -102,7 +102,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-30",
@@ -133,14 +133,52 @@
                     {
                         "teacher": "Зурова А.Е.",
                         "group": "ИКС-21",
-                        "room": "103",
+                        "room": "212",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Основы электронной и вычислительной техники",
+                "otUnits": [
+                    {
+                        "teacher": "Пузыревский И.А.",
+                        "group": "ИКС-21",
+                        "room": "314",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Основы электронной и вычислительной техники",
+                "otUnits": [
+                    {
+                        "teacher": "Пузыревский И.А.",
+                        "group": "ИКС-21",
+                        "room": "314",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

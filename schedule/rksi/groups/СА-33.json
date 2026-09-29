@@ -68,41 +68,60 @@
         "lessons": [
             {
                 "date": "2026-09-30",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "СА-33",
+                        "room": "217",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-09-30",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Администрирование сетевых операционных систем",
+                "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
-                        "teacher": "Комов Е.Ю.",
+                        "teacher": "Арутюнян М.М.",
                         "group": "СА-33",
-                        "room": "110а",
+                        "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-30",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Программное обеспечение компьютерных сетей",
+                "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
-                        "teacher": "____",
+                        "teacher": "Арутюнян М.М.",
                         "group": "СА-33",
-                        "room": "Вак1",
-                        "additional": "Вак1",
+                        "room": "217",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-09-30",
@@ -121,7 +140,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-09-30",
@@ -140,7 +159,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
