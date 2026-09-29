@@ -45,7 +45,7 @@ data class SfeduState(
         }
 
     val displayStudentName: String
-        get() = studentName?.takeIf { it.isNotBlank() } ?: "Владислав Сергеевич Паршин"
+        get() = studentName?.takeIf { it.isNotBlank() } ?: "Студент ЮФУ"
 
     val displayShortName: String
         get() {
@@ -66,27 +66,27 @@ data class SfeduState(
         }
 
     val displayDirection: String?
-        get() = studentDirection?.takeIf { it.isNotBlank() } ?: "Прикладная математика и информатика"
+        get() = studentDirection?.takeIf { it.isNotBlank() }
 
     val displayGroup: String?
-        get() = studentGroup?.takeIf { it.isNotBlank() } ?: "5 группа"
+        get() = studentGroup?.takeIf { it.isNotBlank() }
 
     val displayFaculty: String?
-        get() = facultyName?.takeIf { it.isNotBlank() } ?: "Институт математики, механики и компьютерных наук"
+        get() = facultyName?.takeIf { it.isNotBlank() }
 
-    val displayCourse: Int
-        get() = courseNum ?: 2
+    val displayCourse: Int?
+        get() = courseNum
 
-    val displayDegree: String
+    val displayDegree: String?
         get() = when (degree?.trim()?.lowercase()) {
             "bachelor" -> "Бакалавриат"
             "master" -> "Магистратура"
             "specialist" -> "Специалитет"
-            else -> degree?.takeIf { it.isNotBlank() } ?: "Бакалавриат"
+            else -> degree?.takeIf { it.isNotBlank() }
         }
 
     val displayEmail: String?
-        get() = email?.takeIf { it.isNotBlank() } ?: "vpar@sfedu.ru"
+        get() = email?.takeIf { it.isNotBlank() }
 
     val averageRate: Double?
         get() {

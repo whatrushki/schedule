@@ -245,12 +245,19 @@ internal fun SfeduMainScreen(
                             )
                             
                             // Курс и степень обучения (например: 2 курс • Бакалавриат)
-                            Text(
-                                text = "${state.value.displayCourse} курс • ${state.value.displayDegree}",
-                                color = colorScheme.primary,
-                                fontSize = 12.sp,
-                                fontWeight = FontWeight.Medium
-                            )
+                            val courseAndDegree = buildList {
+                                state.value.displayCourse?.let { add("$it курс") }
+                                state.value.displayDegree?.let { add(it) }
+                            }.joinToString(" • ")
+                            
+                            if (courseAndDegree.isNotBlank()) {
+                                Text(
+                                    text = courseAndDegree,
+                                    color = colorScheme.primary,
+                                    fontSize = 12.sp,
+                                    fontWeight = FontWeight.Medium
+                                )
+                            }
                             
                             state.value.displayDirection?.let { direction ->
                                 Text(
@@ -786,8 +793,8 @@ private fun SfeduStudentDetailSheet(
         add("ФИО" to state.displayStudentName)
         state.displayDirection?.let { add("Направление" to it) }
         state.displayFaculty?.let { add("Подразделение" to it) }
-        add("Курс" to "${state.displayCourse} курс")
-        add("Уровень образования" to state.displayDegree)
+        state.displayCourse?.let { add("Курс" to "$it курс") }
+        state.displayDegree?.let { add("Уровень образования" to it) }
         state.displayGroup?.let { add("Группа" to it) }
         state.displayEmail?.let { add("E-Mail" to it) }
         state.token?.let {
@@ -843,7 +850,7 @@ private fun SfeduProfileEditDialog(
             name, setName,
             modifier = Modifier.fillMaxWidth(),
             debounce = 500,
-            placeholder = "ФИО (напр. Владислав Сергеевич Паршин)",
+            placeholder = "ФИО (напр. Иванов Иван Иванович)",
             shape = shapes.medium
         )
         

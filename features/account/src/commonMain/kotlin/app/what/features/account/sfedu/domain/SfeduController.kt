@@ -26,33 +26,11 @@ class SfeduController(
         get() = institutionManager.getSavedInstitution()?.newsService
 
     init {
-        var savedToken = appValues.sfeduGradeToken.get()
-        var savedName = appValues.sfeduStudentName.get()
-        var savedGroup = appValues.sfeduStudentGroup.get()
-        var savedDirection = appValues.sfeduStudentDirection.get()
-        var savedEmail = appValues.sfeduStudentEmail.get()
-
-        if (savedToken.isNullOrBlank()) {
-            savedToken = "c3525456f3e37e73cf0efac8f419bd60b3ad2fb8"
-            appValues.sfeduGradeToken.set(savedToken)
-        }
-
-        if (savedName.isNullOrBlank()) {
-            savedName = "Владислав Сергеевич Паршин"
-            appValues.sfeduStudentName.set(savedName)
-        }
-        if (savedGroup.isNullOrBlank()) {
-            savedGroup = "5 группа"
-            appValues.sfeduStudentGroup.set(savedGroup)
-        }
-        if (savedDirection.isNullOrBlank()) {
-            savedDirection = "Прикладная математика и информатика"
-            appValues.sfeduStudentDirection.set(savedDirection)
-        }
-        if (savedEmail.isNullOrBlank()) {
-            savedEmail = "vpar@sfedu.ru"
-            appValues.sfeduStudentEmail.set(savedEmail)
-        }
+        val savedToken = appValues.sfeduGradeToken.get()
+        val savedName = appValues.sfeduStudentName.get()
+        val savedGroup = appValues.sfeduStudentGroup.get()
+        val savedDirection = appValues.sfeduStudentDirection.get()
+        val savedEmail = appValues.sfeduStudentEmail.get()
 
         updateState {
             copy(
@@ -63,7 +41,9 @@ class SfeduController(
                 email = savedEmail
             )
         }
-        loadData()
+        if (!savedToken.isNullOrBlank()) {
+            loadData()
+        }
     }
 
     override fun obtainEvent(viewEvent: SfeduEvent) {
@@ -110,8 +90,8 @@ class SfeduController(
 
     private fun submitToken(rawInput: String, name: String?, group: String?) {
         var token = rawInput.trim()
-        var resolvedName = name
-        var resolvedGroup = group
+        var resolvedName = name?.ifBlank { null }
+        var resolvedGroup = group?.ifBlank { null }
         var resolvedDirection: String? = null
         var resolvedEmail: String? = null
         var resolvedFaculty: String? = null
@@ -133,22 +113,13 @@ class SfeduController(
             val hexMatch = Regex("[a-fA-F0-9]{32,64}").find(rawInput)
             if (hexMatch != null) {
                 token = hexMatch.value
-            } else {
-                token = appValues.sfeduGradeToken.get() ?: "c3525456f3e37e73cf0efac8f419bd60b3ad2fb8"
             }
         }
 
-        if (token == "c3525456f3e37e73cf0efac8f419bd60b3ad2fb8") {
-            if (resolvedName.isNullOrBlank()) resolvedName = "Владислав Сергеевич Паршин"
-            if (resolvedGroup.isNullOrBlank()) resolvedGroup = "5 группа"
-            if (resolvedDirection.isNullOrBlank()) resolvedDirection = "Прикладная математика и информатика"
-            if (resolvedEmail.isNullOrBlank()) resolvedEmail = "vpar@sfedu.ru"
-            if (resolvedFaculty.isNullOrBlank()) resolvedFaculty = "Институт математики, механики и компьютерных наук"
-            if (resolvedCourse == null) resolvedCourse = 2
-            if (resolvedDegree.isNullOrBlank()) resolvedDegree = "Бакалавриат"
+        if (token.isBlank()) {
+            updateState { copy(tokenError = "Введите токен БРС или вставьте HTML профиля") }
+            return
         }
-
-        if (token.isBlank()) return
         updateState { copy(isValidating = true, tokenError = null) }
         viewModelScope.launchSafe(
             debug = debug,
