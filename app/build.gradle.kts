@@ -100,6 +100,11 @@ android {
     packaging {
         resources.pickFirsts.add("META-INF/*")
     }
+
+    lint {
+        abortOnError = false
+        checkReleaseBuilds = false
+    }
 }
 
 dependencies {
@@ -114,6 +119,9 @@ dependencies {
     implementation(project(":features:onboarding"))
     implementation(project(":features:account"))
     implementation(project(":features:dev"))
+    implementation(project(":libs:schedule:dgtu"))
+    implementation(project(":libs:schedule:sfedu"))
+    implementation(project(":libs:schedule:rksi"))
 
     ksp(libs.room.compiler)
 

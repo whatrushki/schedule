@@ -40,6 +40,16 @@ class CloudScheduleClient(
     private var cachedGroups: List<GroupDto>? = null
     private var cachedTeachers: List<TeacherDto>? = null
     private var cachedMeta: CloudInstitutionMeta? = null
+    private var groupsNotFound = false
+    private var teachersNotFound = false
+
+    fun clearCache() {
+        cachedMeta = null
+        cachedGroups = null
+        cachedTeachers = null
+        groupsNotFound = false
+        teachersNotFound = false
+    }
 
     private fun getBaseUrls(): List<String> = buildList {
         addAll(customBaseUrls)
@@ -49,8 +59,17 @@ class CloudScheduleClient(
         add("https://cdn.jsdelivr.net/gh/whatrushki/schedule@gh-pages/schedule/$institutionId")
     }
 
-    private suspend fun fetchJson(relativePath: String): String? {
+    private sealed class FetchResult {
+        data class Success(val text: String) : FetchResult()
+        object NotFound : FetchResult()
+        data class Error(val cause: Exception?) : FetchResult()
+    }
+
+    private suspend fun fetchWithStatus(relativePath: String): FetchResult {
         val urls = getBaseUrls().map { "$it/$relativePath" }
+        var is404 = false
+        var lastException: Exception? = null
+
         for (url in urls) {
             try {
                 Auditor.debug(tag, "[CloudScheduleClient] Fetching: $url")
@@ -58,16 +77,32 @@ class CloudScheduleClient(
                 if (response.status.isSuccess()) {
                     val text = response.bodyAsText()
                     if (text.isNotBlank()) {
-                        return text
+                        return FetchResult.Success(text)
                     }
                 } else {
                     Auditor.warn(tag, "[CloudScheduleClient] HTTP ${response.status.value} for: $url")
+                    if (response.status.value == 404) {
+                        is404 = true
+                        if (url.contains("raw.githubusercontent.com")) {
+                            // Файла нет в ветке gh-pages. Зеркало jsDelivr опрашивать бессмысленно —
+                            // оно вернет тот же 404, но может зависать на 10-12 секунд.
+                            break
+                        }
+                    }
                 }
             } catch (e: Exception) {
                 Auditor.warn(tag, "[CloudScheduleClient] Failed to fetch $url: ${e.message}")
+                lastException = e
             }
         }
-        return null
+        return if (is404) FetchResult.NotFound else FetchResult.Error(lastException)
+    }
+
+    private suspend fun fetchJson(relativePath: String): String? {
+        return when (val res = fetchWithStatus(relativePath)) {
+            is FetchResult.Success -> res.text
+            else -> null
+        }
     }
 
     suspend fun getMeta(): CloudInstitutionMeta? {
@@ -85,55 +120,99 @@ class CloudScheduleClient(
 
     override suspend fun getGroups(): List<GroupDto> {
         cachedGroups?.let { return it }
-        val text = fetchJson("groups.json") ?: return emptyList()
-        return try {
-            val groups = json.decodeFromString<List<GroupDto>>(text)
-            cachedGroups = groups
-            groups
-        } catch (e: Exception) {
-            Auditor.err(tag, "[CloudScheduleClient] Error parsing groups.json", e)
-            emptyList()
+        if (groupsNotFound) return emptyList()
+
+        return when (val result = fetchWithStatus("groups.json")) {
+            is FetchResult.Success -> {
+                try {
+                    val groups = json.decodeFromString<List<GroupDto>>(result.text)
+                    cachedGroups = groups
+                    groups
+                } catch (e: Exception) {
+                    Auditor.err(tag, "[CloudScheduleClient] Error parsing groups.json", e)
+                    emptyList()
+                }
+            }
+            is FetchResult.NotFound -> {
+                // Сервер явно ответил 404: файла каталога групп в облаке нет
+                groupsNotFound = true
+                cachedGroups = emptyList()
+                emptyList()
+            }
+            is FetchResult.Error -> {
+                // Сетевая ошибка или таймаут — НЕ помечаем как NotFound, чтобы запрос можно было повторить
+                emptyList()
+            }
         }
     }
 
     override suspend fun getTeachers(): List<TeacherDto> {
         cachedTeachers?.let { return it }
-        val text = fetchJson("teachers.json") ?: return emptyList()
-        return try {
-            val teachers = json.decodeFromString<List<TeacherDto>>(text)
-            cachedTeachers = teachers
-            teachers
-        } catch (e: Exception) {
-            Auditor.err(tag, "[CloudScheduleClient] Error parsing teachers.json", e)
-            emptyList()
+        if (teachersNotFound) return emptyList()
+
+        return when (val result = fetchWithStatus("teachers.json")) {
+            is FetchResult.Success -> {
+                try {
+                    val teachers = json.decodeFromString<List<TeacherDto>>(result.text)
+                    cachedTeachers = teachers
+                    teachers
+                } catch (e: Exception) {
+                    Auditor.err(tag, "[CloudScheduleClient] Error parsing teachers.json", e)
+                    emptyList()
+                }
+            }
+            is FetchResult.NotFound -> {
+                // Сервер явно ответил 404: файла каталога преподавателей в облаке нет
+                teachersNotFound = true
+                cachedTeachers = emptyList()
+                emptyList()
+            }
+            is FetchResult.Error -> {
+                // Сетевая ошибка или таймаут — НЕ помечаем как NotFound
+                emptyList()
+            }
         }
     }
 
     override suspend fun getGroupSchedule(group: String, showReplacements: Boolean): List<DayScheduleDto> {
-        val groups = cachedGroups ?: getGroups()
-        val matchedGroup = groups.firstOrNull { it.id == group || it.name.equals(group, ignoreCase = true) }
-
-        val candidateNames = buildList {
-            if (matchedGroup != null) {
-                add(matchedGroup.name)
-                if (matchedGroup.id != matchedGroup.name) {
-                    add(matchedGroup.id)
-                }
-            }
-            if (group !in this) {
-                add(group)
+        // Шаг 1: Сначала сразу пробуем загрузить расписание по прямому имени группы (например groups/ЮР-33.json).
+        // В 99% случаев файл называется именно по имени группы, поэтому расписание отдается моментально без запроса groups.json.
+        val directKey = sanitizeKey(group)
+        val directText = fetchJson("groups/${directKey.encodeURLPathPart()}.json")
+        if (directText != null) {
+            return try {
+                json.decodeFromString<List<DayScheduleDto>>(directText)
+            } catch (e: Exception) {
+                Auditor.err(tag, "[CloudScheduleClient] Error parsing schedule for $directKey", e)
+                emptyList()
             }
         }
 
-        for (candidate in candidateNames) {
-            val safeName = sanitizeKey(candidate)
-            val text = fetchJson("groups/${safeName.encodeURLPathPart()}.json")
-            if (text != null) {
-                return try {
-                    json.decodeFromString<List<DayScheduleDto>>(text)
-                } catch (e: Exception) {
-                    Auditor.err(tag, "[CloudScheduleClient] Error parsing schedule for $safeName", e)
-                    emptyList()
+        // Шаг 2 (Фолбэк): Если файл по прямому имени не найден (например, был передан числовой ID вместо имени),
+        // только тогда обращаемся к каталогу groups.json для поиска соответствия ID -> Имя.
+        val groups = cachedGroups ?: if (!groupsNotFound) getGroups() else emptyList()
+        val matchedGroup = groups.firstOrNull { it.id == group || it.name.equals(group, ignoreCase = true) }
+
+        if (matchedGroup != null) {
+            val candidateNames = buildList {
+                if (!matchedGroup.name.equals(group, ignoreCase = true)) {
+                    add(matchedGroup.name)
+                }
+                if (matchedGroup.id != matchedGroup.name && !matchedGroup.id.equals(group, ignoreCase = true)) {
+                    add(matchedGroup.id)
+                }
+            }
+
+            for (candidate in candidateNames) {
+                val safeName = sanitizeKey(candidate)
+                val text = fetchJson("groups/${safeName.encodeURLPathPart()}.json")
+                if (text != null) {
+                    return try {
+                        json.decodeFromString<List<DayScheduleDto>>(text)
+                    } catch (e: Exception) {
+                        Auditor.err(tag, "[CloudScheduleClient] Error parsing schedule for $safeName", e)
+                        emptyList()
+                    }
                 }
             }
         }
@@ -142,28 +221,42 @@ class CloudScheduleClient(
     }
 
     override suspend fun getTeacherSchedule(teacher: String, showReplacements: Boolean): List<DayScheduleDto> {
-        val teachers = cachedTeachers ?: getTeachers()
-        val matchedTeacher = teachers.firstOrNull { it.id == teacher || it.name.equals(teacher, ignoreCase = true) }
-
-        val candidateKeys = buildList {
-            if (matchedTeacher != null) {
-                if (matchedTeacher.id.isNotEmpty()) add(matchedTeacher.id)
-                add(matchedTeacher.name)
-            }
-            if (teacher !in this) {
-                add(teacher)
+        // Шаг 1: Сначала сразу пробуем загрузить расписание по прямому ключу/ФИО преподавателя.
+        val directKey = sanitizeKey(teacher)
+        val directText = fetchJson("teachers/${directKey.encodeURLPathPart()}.json")
+        if (directText != null) {
+            return try {
+                json.decodeFromString<List<DayScheduleDto>>(directText)
+            } catch (e: Exception) {
+                Auditor.err(tag, "[CloudScheduleClient] Error parsing schedule for $directKey", e)
+                emptyList()
             }
         }
 
-        for (key in candidateKeys) {
-            val safeKey = sanitizeKey(key)
-            val text = fetchJson("teachers/${safeKey.encodeURLPathPart()}.json")
-            if (text != null) {
-                return try {
-                    json.decodeFromString<List<DayScheduleDto>>(text)
-                } catch (e: Exception) {
-                    Auditor.err(tag, "[CloudScheduleClient] Error parsing schedule for $safeKey", e)
-                    emptyList()
+        // Шаг 2 (Фолбэк): Если по прямому ключу не найдено, ищем соответствие в каталоге teachers.json
+        val teachers = cachedTeachers ?: if (!teachersNotFound) getTeachers() else emptyList()
+        val matchedTeacher = teachers.firstOrNull { it.id == teacher || it.name.equals(teacher, ignoreCase = true) }
+
+        if (matchedTeacher != null) {
+            val candidateKeys = buildList {
+                if (matchedTeacher.id.isNotEmpty() && !matchedTeacher.id.equals(teacher, ignoreCase = true)) {
+                    add(matchedTeacher.id)
+                }
+                if (!matchedTeacher.name.equals(teacher, ignoreCase = true)) {
+                    add(matchedTeacher.name)
+                }
+            }
+
+            for (key in candidateKeys) {
+                val safeKey = sanitizeKey(key)
+                val text = fetchJson("teachers/${safeKey.encodeURLPathPart()}.json")
+                if (text != null) {
+                    return try {
+                        json.decodeFromString<List<DayScheduleDto>>(text)
+                    } catch (e: Exception) {
+                        Auditor.err(tag, "[CloudScheduleClient] Error parsing schedule for $safeKey", e)
+                        emptyList()
+                    }
                 }
             }
         }

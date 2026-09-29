@@ -58,6 +58,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.launch
 import app.what.foundation.core.Listener
+import app.what.schedule.data.local.settings.rememberAppValues
 import app.what.foundation.ui.Gap
 import app.what.foundation.ui.Show
 import app.what.foundation.ui.applyIf
@@ -133,7 +134,20 @@ private fun EventView(
     val commonViewAccentColor = getCommonViewAccentColor(data.state, data.type)
     
     val (expanded, setExpanded) = useState(currentTime != null && currentTime in data.startTime..data.endTime)
-    var currentUnitIndex by remember(data.otUnits) { mutableIntStateOf(0) }
+    val appValues = rememberAppValues()
+    val defaultSubgroup = appValues.defaultSubgroup.get()
+    val targetSubgroupNumber = defaultSubgroup?.value
+    val initialUnitIndex = remember(data.otUnits, targetSubgroupNumber) {
+        if (targetSubgroupNumber != null && data.otUnits.size > 1) {
+            val matching = data.otUnits.indexOfFirst {
+                it.group.name.contains("$targetSubgroupNumber")
+            }
+            if (matching != -1) matching
+            else if (targetSubgroupNumber in 1..data.otUnits.size) targetSubgroupNumber - 1
+            else 0
+        } else 0
+    }
+    var currentUnitIndex by remember(data.otUnits, initialUnitIndex) { mutableIntStateOf(initialUnitIndex) }
     val currentUnit = data.otUnits.getOrNull(currentUnitIndex) ?: data.otUnits.firstOrNull()
     val currentSubject = currentUnit?.subject?.takeIf { it.isNotBlank() } ?: data.subject
     
@@ -236,7 +250,7 @@ private fun EventView(
                     otUnits = data.otUnits,
                     color = commonViewAccentColor,
                     horizontalAlignment = Alignment.CenterHorizontally,
-                    expanded = false,
+                    expanded = true,
                     currentIndex = currentUnitIndex,
                     onIndexChanged = { idx, _ -> currentUnitIndex = idx },
                     onSearchClicked = {
@@ -259,7 +273,20 @@ private fun CommonView(
     val commonViewAccentColor = getCommonViewAccentColor(data.state, data.type)
     val (expanded, setExpanded) = useState(false)
     val (expandable, setExpandable) = useState(data.otUnits.size > 3)
-    var currentUnitIndex by remember(data.otUnits) { mutableIntStateOf(0) }
+    val appValues = rememberAppValues()
+    val defaultSubgroup = appValues.defaultSubgroup.get()
+    val targetSubgroupNumber = defaultSubgroup?.value
+    val initialUnitIndex = remember(data.otUnits, targetSubgroupNumber) {
+        if (targetSubgroupNumber != null && data.otUnits.size > 1) {
+            val matching = data.otUnits.indexOfFirst {
+                it.group.name.contains("$targetSubgroupNumber")
+            }
+            if (matching != -1) matching
+            else if (targetSubgroupNumber in 1..data.otUnits.size) targetSubgroupNumber - 1
+            else 0
+        } else 0
+    }
+    var currentUnitIndex by remember(data.otUnits, initialUnitIndex) { mutableIntStateOf(initialUnitIndex) }
     var isSlideNext by remember(data.otUnits) { mutableStateOf(true) }
     val currentUnit = data.otUnits.getOrNull(currentUnitIndex) ?: data.otUnits.firstOrNull()
     val currentSubject = currentUnit?.subject?.takeIf { it.isNotBlank() } ?: data.subject
@@ -291,7 +318,9 @@ private fun CommonView(
         TimeLine(currentTime, data.startTime, data.endTime, commonViewAccentColor)
         
         Row(
-            Modifier.padding(8.dp, 12.dp)
+            Modifier
+                .padding(8.dp, 12.dp)
+                .applyIf(!expanded) { fillMaxHeight() }
         ) {
             Gap(4)
             
@@ -305,7 +334,11 @@ private fun CommonView(
             
             Gap(12)
             
-            Column {
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .applyIf(!expanded) { fillMaxHeight() }
+            ) {
                 CommonViewSubject(
                     subject = currentSubject,
                     type = data.type,
@@ -330,7 +363,8 @@ private fun CommonView(
                     },
                     onSearchClicked = {
                         listener(ScheduleEvent.OnSearchClicked(it))
-                    }
+                    },
+                    modifier = if (!expanded) Modifier.weight(1f) else Modifier
                 )
             }
         }
@@ -412,19 +446,22 @@ private fun SingleOtUnitView(
         contentAlignment = if (horizontalAlignment == Alignment.CenterHorizontally) Alignment.Center else Alignment.TopStart
     ) {
         Column(horizontalAlignment = Alignment.Start) {
-            AdditionalInfo(
-                color = color,
-                icon = if (viewType == ViewType.STUDENT) WHATIcons.Person else WHATIcons.Group,
-                texts = listOf(if (viewType == ViewType.TEACHER) unit.group.name else unit.teacher.name),
-                maxLines = if (viewType == ViewType.TEACHER && !expanded) 1 else Int.MAX_VALUE,
-                setExpandable = setExpandable,
-                onClick = {
-                    onSearchClicked(
-                        if (viewType == ViewType.TEACHER) ScheduleSearch.Group(it)
-                        else ScheduleSearch.Teacher(it)
-                    )
-                }
-            )
+            val teacherOrGroup = if (viewType == ViewType.TEACHER) unit.group.name else unit.teacher.name
+            if (teacherOrGroup.isNotBlank() && teacherOrGroup != "-") {
+                AdditionalInfo(
+                    color = color,
+                    icon = if (viewType == ViewType.STUDENT) WHATIcons.Person else WHATIcons.Group,
+                    texts = listOf(teacherOrGroup),
+                    maxLines = if (viewType == ViewType.TEACHER && !expanded) 1 else Int.MAX_VALUE,
+                    setExpandable = setExpandable,
+                    onClick = {
+                        onSearchClicked(
+                            if (viewType == ViewType.TEACHER) ScheduleSearch.Group(it)
+                            else ScheduleSearch.Teacher(it)
+                        )
+                    }
+                )
+            }
 
             if (isOnline && meetingUrl != null) {
                 Row(
@@ -451,11 +488,13 @@ private fun SingleOtUnitView(
                     )
                 }
             } else {
-                AdditionalInfo(
-                    color = color,
-                    icon = WHATIcons.Room,
-                    texts = listOf(unit.auditory)
-                )
+                if (unit.auditory.isNotBlank() && unit.auditory != "-") {
+                    AdditionalInfo(
+                        color = color,
+                        icon = WHATIcons.Room,
+                        texts = listOf(unit.auditory)
+                    )
+                }
 
                 if (cleanBuilding != "-") {
                     AdditionalInfo(
@@ -481,7 +520,8 @@ private fun OtUnitsView(
     color: Color = colorScheme.secondary,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     horizontalArrangement: Arrangement.Horizontal =
-        Arrangement.spacedBy(if (viewType == ViewType.TEACHER) 16.dp else 8.dp)
+        Arrangement.spacedBy(if (viewType == ViewType.TEACHER) 16.dp else 8.dp),
+    modifier: Modifier = Modifier
 ) {
     if (otUnits.isEmpty()) return
 
@@ -494,7 +534,7 @@ private fun OtUnitsView(
             onSearchClicked = onSearchClicked,
             color = color,
             horizontalAlignment = horizontalAlignment,
-            modifier = Modifier.fillMaxWidth()
+            modifier = modifier.fillMaxWidth()
         )
     } else {
         val currentIdx by rememberUpdatedState(currentIndex)
@@ -503,27 +543,16 @@ private fun OtUnitsView(
         var isSlideNext by remember { mutableStateOf(true) }
 
         Column(
-            modifier = Modifier
+            modifier = modifier
                 .fillMaxWidth()
-                .animateContentSize(),
+                .applyIf(!expanded) { fillMaxHeight() },
+            verticalArrangement = if (!expanded) Arrangement.SpaceBetween else Arrangement.Top,
             horizontalAlignment = horizontalAlignment
         ) {
-            AnimatedContent(
-                targetState = currentIndex,
-                transitionSpec = {
-                    if (isSlideNext) {
-                        (slideInHorizontally { width -> width } + fadeIn()).togetherWith(
-                            slideOutHorizontally { width -> -width } + fadeOut()
-                        )
-                    } else {
-                        (slideInHorizontally { width -> -width } + fadeIn()).togetherWith(
-                            slideOutHorizontally { width -> width } + fadeOut()
-                        )
-                    }
-                },
-                label = "OtUnitsCarousel",
+            Box(
                 modifier = Modifier
                     .fillMaxWidth()
+                    .then(if (!expanded) Modifier.weight(1f) else Modifier)
                     .pointerInput(otUnits.size) {
                         detectHorizontalDragGestures(
                             onDragCancel = {
@@ -546,20 +575,39 @@ private fun OtUnitsView(
                             }
                         )
                     }
-            ) { page ->
-                SingleOtUnitView(
-                    viewType = viewType,
-                    unit = otUnits[page % otUnits.size],
-                    expanded = expanded,
-                    setExpandable = setExpandable,
-                    onSearchClicked = onSearchClicked,
-                    color = color,
-                    horizontalAlignment = horizontalAlignment,
+            ) {
+                AnimatedContent(
+                    targetState = currentIndex,
+                    transitionSpec = {
+                        if (isSlideNext) {
+                            (slideInHorizontally { width -> width } + fadeIn()).togetherWith(
+                                slideOutHorizontally { width -> -width } + fadeOut()
+                            )
+                        } else {
+                            (slideInHorizontally { width -> -width } + fadeIn()).togetherWith(
+                                slideOutHorizontally { width -> width } + fadeOut()
+                            )
+                        }
+                    },
+                    label = "OtUnitsCarousel",
                     modifier = Modifier.fillMaxWidth()
-                )
+                ) { page ->
+                    SingleOtUnitView(
+                        viewType = viewType,
+                        unit = otUnits[page % otUnits.size],
+                        expanded = expanded,
+                        setExpandable = setExpandable,
+                        onSearchClicked = onSearchClicked,
+                        color = color,
+                        horizontalAlignment = horizontalAlignment,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                }
             }
 
-            Gap(4)
+            if (expanded) {
+                Gap(4)
+            }
 
             // Centered dots indicator
             Row(

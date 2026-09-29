@@ -85,6 +85,10 @@ private class InMemoryRequestsDAO(private val db: InMemoryAppDatabaseSource) : R
     override suspend fun deleteAll(institutionId: String, query: String) {
         db.requests.entries.removeAll { it.value.institutionId == institutionId && it.value.query == query }
     }
+
+    override suspend fun clearAll() {
+        db.requests.clear()
+    }
 }
 
 private class InMemoryDayScheduleDAO(private val db: InMemoryAppDatabaseSource) : DayScheduleDAO {
@@ -105,6 +109,10 @@ private class InMemoryDayScheduleDAO(private val db: InMemoryAppDatabaseSource) 
 
     override suspend fun delete(daySchedule: DayScheduleDBO) {
         db.daySchedules.remove(daySchedule.id)
+    }
+
+    override suspend fun clearAll() {
+        db.daySchedules.clear()
     }
 }
 
@@ -128,6 +136,10 @@ private class InMemoryLessonDAO : LessonDAO {
     override suspend fun delete(lesson: LessonDBO) {
         lessons.remove(lesson.id)
     }
+
+    override suspend fun clearAll() {
+        lessons.clear()
+    }
 }
 
 private class InMemoryOtUnitDAO : OtUnitDAO {
@@ -149,6 +161,10 @@ private class InMemoryOtUnitDAO : OtUnitDAO {
 
     override suspend fun delete(unit: OneTimeUnitDBO) {
         units.remove(unit.id)
+    }
+
+    override suspend fun clearAll() {
+        units.clear()
     }
 }
 

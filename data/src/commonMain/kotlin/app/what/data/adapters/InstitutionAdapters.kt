@@ -7,6 +7,7 @@ import app.what.domain.models.NewItem
 import app.what.domain.models.NewListItem
 import app.what.domain.models.ScheduleResponse
 import app.what.domain.models.Teacher
+import app.what.data.remote.CloudScheduleClient
 import app.what.foundation.services.AppLogger.Companion.Auditor
 import app.what.foundation.utils.LogCat
 import app.what.foundation.utils.LogScope
@@ -69,7 +70,7 @@ class AdaptedScheduleService(
                 val cloudSchedules = cloudClient.getTeacherSchedule(teacher, showReplacements)
                 if (cloudSchedules.isNotEmpty()) {
                     Auditor.debug(tag, "[AdaptedScheduleService] Loaded schedule for teacher $teacher from cloud source")
-                    return cloudSchedules.toDomainResponse()
+                    return cloudSchedules.mergeTeacherLessons().toDomainResponse()
                 }
             } catch (e: Exception) {
                 Auditor.warn(tag, "[AdaptedScheduleService] Cloud schedule fetch failed for teacher $teacher, falling back to live parser: ${e.message}")
@@ -77,19 +78,48 @@ class AdaptedScheduleService(
         }
 
         return try {
-            client.getTeacherSchedule(teacher, showReplacements).toDomainResponse()
+            client.getTeacherSchedule(teacher, showReplacements).mergeTeacherLessons().toDomainResponse()
         } catch (e: Exception) {
             if (forceLive && cloudClient != null) {
                 try {
                     val cloudSchedules = cloudClient.getTeacherSchedule(teacher, showReplacements)
                     if (cloudSchedules.isNotEmpty()) {
                         Auditor.debug(tag, "[AdaptedScheduleService] Live failed, loaded schedule for teacher $teacher from cloud fallback")
-                        return cloudSchedules.toDomainResponse()
+                        return cloudSchedules.mergeTeacherLessons().toDomainResponse()
                     }
                 } catch (_: Exception) {}
             }
             ScheduleResponse.Error(null, null, e)
         }
+    }
+
+    private fun List<app.what.schedule.core.models.DayScheduleDto>.mergeTeacherLessons(): List<app.what.schedule.core.models.DayScheduleDto> = map { day ->
+        val merged = day.lessons
+            .groupBy { it.number to it.startTime }
+            .map { (_, groupLessons) ->
+                if (groupLessons.size == 1) {
+                    groupLessons.first()
+                } else {
+                    val first = groupLessons.first()
+                    val state = when {
+                        groupLessons.any { it.state == app.what.schedule.core.models.LessonStateDto.CHANGED } -> app.what.schedule.core.models.LessonStateDto.CHANGED
+                        groupLessons.all { it.state == app.what.schedule.core.models.LessonStateDto.REMOVED } -> app.what.schedule.core.models.LessonStateDto.REMOVED
+                        else -> first.state
+                    }
+                    val combinedUnits = groupLessons.flatMap { l ->
+                        l.otUnits.map { u ->
+                            if (u.subject.isNullOrBlank()) u.copy(subject = l.subject) else u
+                        }
+                    }.distinctBy { it.group to it.room to it.teacher to it.subject }
+
+                    first.copy(
+                        state = state,
+                        otUnits = combinedUnits
+                    )
+                }
+            }
+            .sortedWith(compareBy({ it.startTime }, { it.number }))
+        day.copy(lessons = merged)
     }
 
     override suspend fun getGroups(): List<Group> {
@@ -128,6 +158,10 @@ class AdaptedScheduleService(
         } catch (_: Exception) {
             emptyList()
         }
+    }
+
+    override fun clearCache() {
+        (cloudClient as? CloudScheduleClient)?.clearCache()
     }
 }
 

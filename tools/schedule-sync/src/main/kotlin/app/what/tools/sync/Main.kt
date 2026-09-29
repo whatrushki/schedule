@@ -823,7 +823,7 @@ suspend fun syncTvgu(client: HttpClient, rootDir: File, failOnError: Boolean = f
         teacherSchedules.forEach { (teacherName, daysMap) ->
             val teacherDays = daysMap.map { (date, lessons) ->
                 val merged = lessons
-                    .groupBy { Triple(it.number, it.startTime, it.subject) }
+                    .groupBy { it.number to it.startTime }
                     .map { (_, groupLessons) ->
                         val first = groupLessons.first()
                         val state = when {
@@ -831,9 +831,15 @@ suspend fun syncTvgu(client: HttpClient, rootDir: File, failOnError: Boolean = f
                             groupLessons.all { it.state == LessonStateDto.REMOVED } -> LessonStateDto.REMOVED
                             else -> first.state
                         }
+                        val combinedUnits = groupLessons.flatMap { l ->
+                            l.otUnits.map { u ->
+                                if (u.subject.isNullOrBlank()) u.copy(subject = l.subject) else u
+                            }
+                        }.distinctBy { it.group to it.room to it.teacher to it.subject }
+
                         first.copy(
                             state = state,
-                            otUnits = groupLessons.flatMap { it.otUnits }.distinctBy { it.group }
+                            otUnits = combinedUnits
                         )
                     }
                     .sortedWith(compareBy({ it.startTime }, { it.number }))

@@ -30,6 +30,31 @@ class ScheduleRepositoryImpl(
     
     private fun getFilialId() = api.metadata.id
     
+    /**
+     * Нормализует имя преподавателя для дедупликации.
+     * "Смолянинова В.А." и "Смолянинова Валентина Анатольевна" → "смоляниноваВА"
+     * Убирает невидимые символы, заменяет латинские lookalikes.
+     */
+    private fun normalizeTeacherKey(name: String): String {
+        val cleaned = name.trim()
+            .replace('\u00A0', ' ')  // non-breaking space
+            .replace("c", "с", ignoreCase = true)
+            .replace("a", "а", ignoreCase = true)
+            .replace("e", "е", ignoreCase = true)
+            .replace("o", "о", ignoreCase = true)
+            .replace("p", "р", ignoreCase = true)
+            .replace("x", "х", ignoreCase = true)
+            .trim()
+        val parts = cleaned.split("\\s+".toRegex()).filter { it.isNotBlank() }
+        if (parts.isEmpty()) return cleaned.lowercase()
+        val surname = parts[0].lowercase()
+        val initials = parts.drop(1).mapNotNull { part ->
+            val clean = part.replace(".", "").trim()
+            if (clean.isNotEmpty()) clean.first().lowercaseChar().toString() else null
+        }
+        return surname + initials.joinToString("")
+    }
+    
     override suspend fun toggleFavorites(value: ScheduleSearch.Group) {
         val dbTag = buildTag(LogScope.DATABASE, LogCat.DB)
         Auditor.debug(dbTag, "Переключение избранного для группы: ${value.id}")
@@ -69,15 +94,24 @@ class ScheduleRepositoryImpl(
         val targetFilialId = targetApi.metadata.id
         val dbTag = buildTag(LogScope.DATABASE, LogCat.DB)
         val syncKey = "$targetFilialId:groups"
+        if (forceReload) {
+            syncedCatalogs.remove(syncKey)
+            targetApi.scheduleService.clearCache()
+        }
         val needsSync = forceReload || !syncedCatalogs.contains(syncKey)
         
         if (needsSync) {
             Auditor.debug(dbTag, "Синхронизация каталога групп из API/Cloud для $targetFilialId (force=$forceReload)")
+            var errorOccurred = false
             val fetched = try {
                 targetApi.scheduleService.getGroups()
             } catch (e: Exception) {
                 Auditor.err(dbTag, "Ошибка при загрузке групп из API для $targetFilialId", e)
+                errorOccurred = true
                 emptyList()
+            }
+            if (!errorOccurred) {
+                syncedCatalogs.add(syncKey)
             }
             if (fetched.isNotEmpty()) {
                 val seenNames = mutableSetOf<String>()
@@ -99,7 +133,6 @@ class ScheduleRepositoryImpl(
                     )
                 }
                 db.groupsDao.insert(toInsert)
-                syncedCatalogs.add(syncKey)
                 Auditor.debug(dbTag, "Загружено и сохранено групп в БД: ${uniqueFetched.size}")
             }
         }
@@ -118,15 +151,24 @@ class ScheduleRepositoryImpl(
         val targetFilialId = targetApi.metadata.id
         val dbTag = buildTag(LogScope.DATABASE, LogCat.DB)
         val syncKey = "$targetFilialId:teachers"
+        if (forceReload) {
+            syncedCatalogs.remove(syncKey)
+            targetApi.scheduleService.clearCache()
+        }
         val needsSync = forceReload || !syncedCatalogs.contains(syncKey)
         
         if (needsSync) {
             Auditor.debug(dbTag, "Синхронизация каталога преподавателей из API/Cloud для $targetFilialId (force=$forceReload)")
+            var errorOccurred = false
             val fetched = try {
                 targetApi.scheduleService.getTeachers()
             } catch (e: Exception) {
                 Auditor.err(dbTag, "Ошибка при загрузке преподавателей из API для $targetFilialId", e)
+                errorOccurred = true
                 emptyList()
+            }
+            if (!errorOccurred) {
+                syncedCatalogs.add(syncKey)
             }
             if (fetched.isNotEmpty()) {
                 val seenNames = mutableSetOf<String>()
@@ -147,7 +189,6 @@ class ScheduleRepositoryImpl(
                     )
                 }
                 db.teachersDao.insert(toInsert)
-                syncedCatalogs.add(syncKey)
                 Auditor.debug(dbTag, "Загружено и сохранено преподавателей в БД: ${uniqueFetched.size}")
             }
         }
@@ -155,7 +196,7 @@ class ScheduleRepositoryImpl(
         val teachers = db.teachersDao
             .selectByInstitution(targetFilialId)
             .map { it.toModel() }
-            .distinctBy { it.name.trim() }
+            .distinctBy { normalizeTeacherKey(it.name) }
             .sortedBy { it.name }
         Auditor.debug(dbTag, "Преподаватели отданы из БД: ${teachers.size}")
         return teachers
@@ -228,6 +269,18 @@ class ScheduleRepositoryImpl(
                 cache.daySchedules.map { it.toModel() },
                 cache.request.lastModified
             )
+        }
+
+        if (useCache && !requiresData) {
+            Auditor.debug(
+                scheduleTag,
+                "Кэш отсутствует и сетевые данные не запрашиваются (useCache=true, requiresData=false)"
+            )
+            return ScheduleResponse.Empty
+        }
+
+        if (!useCache) {
+            targetApi.scheduleService.clearCache()
         }
 
         val netTag = buildTag(LogScope.NETWORK, LogCat.NET)
@@ -444,6 +497,15 @@ class ScheduleRepositoryImpl(
         return db.teachersDao.selectByName(institutionId, trimmedTeacherName)?.id
             ?: db.teachersDao.selectIdByTeacherId(institutionId, teacher.id.trim())
             ?: 0L
+    }
+
+    override suspend fun clearScheduleCache() {
+        val tag = buildTag(LogScope.DATABASE, LogCat.DB)
+        Auditor.info(tag, "Очистка кэша расписаний в БД")
+        db.requestsDao.clearAll()
+        db.daySchedulesDao.clearAll()
+        db.lessonsDao.clearAll()
+        db.otUnitsDao.clearAll()
     }
 }
 

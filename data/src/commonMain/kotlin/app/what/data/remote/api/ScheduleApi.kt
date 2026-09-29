@@ -53,6 +53,8 @@ interface ScheduleService {
     
     suspend fun getGroups(): List<Group>
     suspend fun getTeachers(): List<Teacher>
+
+    fun clearCache() {}
 }
 
 interface NewsService {
@@ -106,7 +108,13 @@ class InstitutionManager(
     }
     
     private var savedInstitution: Institution? = null
-    fun getSavedInstitution(): Institution? = savedInstitution
+    fun getSavedInstitution(): Institution? {
+        val savedData = settings.institution.get()
+        if (savedInstitution?.metadata?.id != savedData) {
+            actualize()
+        }
+        return savedInstitution
+    }
 
     fun getInstitution(id: String): Institution? =
         institutions.firstOrNull { it.metadata.id == id }?.create()

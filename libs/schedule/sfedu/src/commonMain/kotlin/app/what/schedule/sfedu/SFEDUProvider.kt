@@ -20,7 +20,8 @@ class SFEDUProvider(
         fullName = "Южный федеральный университет (Институт математики, механики и компьютерных наук им. И.И. Воровича)",
         description = "ЮФУ (Мехмат) — расписание занятий и новости института",
         sourceTypes = setOf(SourceTypeDto.API, SourceTypeDto.PARSER),
-        sourceUrl = "https://schedule.sfedu.ru/"
+        sourceUrl = "https://schedule.sfedu.ru/",
+        hasAccountService = true
     )
 
     override val scheduleClient: ScheduleClient by lazy {
@@ -29,5 +30,9 @@ class SFEDUProvider(
 
     override val newsClient: NewsClient by lazy {
         SFEDUNewsClient(client, newsBaseUrl, log)
+    }
+
+    val gradeClient: app.what.schedule.sfedu.grade.SfeduGradeClient by lazy {
+        app.what.schedule.sfedu.grade.SfeduGradeClient(client)
     }
 }

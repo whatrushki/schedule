@@ -58,6 +58,7 @@ val dataModule = module {
     single<FileCache> { app.what.data.cache.JvmFileCache() }
     single { DGTUAccountClient(get()) }
     single { app.what.schedule.rksi.RKSIAccountClient(get()) }
+    single { app.what.schedule.sfedu.grade.SfeduGradeClient(get()) }
     single { InstitutionManager(get(), get()) }
     singleOf(::AppUtils)
     single<app.what.schedule.rksi.parser.XlsxReader> { app.what.schedule.rksi.parser.JvmXlsxReader() }

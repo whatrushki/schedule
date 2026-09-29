@@ -76,12 +76,12 @@ object SettingUpdateComponent : UIComponent {
                     UpdateHeader(info, downloadState)
                     
                     if (downloadState is DownloadState.Downloading || downloadState is DownloadState.Preparing) {
-                        val progress =
-                            (downloadState as? DownloadState.Downloading)?.progress?.toFloat() ?: 0f
+                        val percent = (downloadState as? DownloadState.Downloading)?.progress ?: 0
+                        val fraction = (percent / 100f).coerceIn(0f, 1f)
                         
                         Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
                             LinearProgressIndicator(
-                                progress = { progress },
+                                progress = { fraction },
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .clip(CircleShape),
@@ -89,7 +89,7 @@ object SettingUpdateComponent : UIComponent {
                                 trackColor = colorScheme.primary.copy(0.2f)
                             )
                             Text(
-                                text = "Загрузка: ${(progress * 100).toInt()}%",
+                                text = "Загрузка: $percent%",
                                 style = typography.labelSmall,
                                 color = colorScheme.primary
                             )

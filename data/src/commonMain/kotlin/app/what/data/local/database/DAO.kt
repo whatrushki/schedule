@@ -87,6 +87,9 @@ interface RequestsDAO {
     
     @Query("DELETE FROM requests WHERE institutionId = :institutionId AND `query` = :query")
     suspend fun deleteAll(institutionId: String, query: String)
+
+    @Query("DELETE FROM requests")
+    suspend fun clearAll()
 }
 
 @Dao
@@ -102,6 +105,9 @@ interface DayScheduleDAO {
     
     @Delete
     suspend fun delete(daySchedule: DayScheduleDBO)
+
+    @Query("DELETE FROM days")
+    suspend fun clearAll()
 }
 
 @Dao
@@ -117,6 +123,9 @@ interface LessonDAO {
     
     @Delete
     suspend fun delete(lesson: LessonDBO)
+
+    @Query("DELETE FROM lessons")
+    suspend fun clearAll()
 }
 
 @Dao
@@ -132,6 +141,9 @@ interface OtUnitDAO {
     
     @Delete
     suspend fun delete(unit: OneTimeUnitDBO)
+
+    @Query("DELETE FROM ot_units")
+    suspend fun clearAll()
 }
 
 @Dao

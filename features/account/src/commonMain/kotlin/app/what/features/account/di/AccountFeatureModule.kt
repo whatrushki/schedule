@@ -5,6 +5,8 @@ import app.what.schedule.features.insts.dgtu.DgtuFeature
 import app.what.schedule.features.insts.dgtu.domain.DgtuController
 import app.what.schedule.features.insts.rksi.RksiFeature
 import app.what.schedule.features.insts.rksi.domain.RksiController
+import app.what.schedule.features.insts.sfedu.SfeduFeature
+import app.what.schedule.features.insts.sfedu.domain.SfeduController
 import org.koin.core.module.dsl.singleOf
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
@@ -15,4 +17,7 @@ val accountFeatureModule = module {
 
     singleOf(::RksiController)
     single<Feature<*, *>>(named("rksiAccount")) { RksiFeature() }
+
+    singleOf(::SfeduController)
+    single<Feature<*, *>>(named("sfeduAccount")) { SfeduFeature() }
 }

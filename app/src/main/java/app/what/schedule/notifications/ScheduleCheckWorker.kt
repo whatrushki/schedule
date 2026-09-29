@@ -38,10 +38,19 @@ class ScheduleCheckWorker(
 
     override suspend fun doWork(): Result {
         val tag = buildTag(LogScope.CORE, LogCat.NET)
-        Auditor.info(tag, "ScheduleCheckWorker: запуск фоновой проверки замен")
+        Auditor.info(tag, "ScheduleCheckWorker: запуск фоновой проверки")
+
+        if (appValues.enableReplacementNotifications.get() != true && appValues.enableUniversityNotifications.get() != true) {
+            Auditor.debug(tag, "ScheduleCheckWorker: все уведомления отключены в настройках")
+            return Result.success()
+        }
+
+        if (appValues.enableUniversityNotifications.get() == true) {
+            checkUniversityNotifications(tag)
+        }
 
         if (appValues.enableReplacementNotifications.get() != true) {
-            Auditor.debug(tag, "ScheduleCheckWorker: уведомления отключены в настройках")
+            Auditor.debug(tag, "ScheduleCheckWorker: уведомления о заменах отключены в настройках")
             return Result.success()
         }
 
@@ -140,10 +149,25 @@ class ScheduleCheckWorker(
             } catch (_: Exception) {
             }
 
+            // Актуализируем напоминание о первой паре
+            try {
+                FirstLessonScheduler.scheduleNext(applicationContext)
+            } catch (_: Exception) {
+            }
+
             if (hasAnySuccess || searchesToCheck.isEmpty()) Result.success() else Result.retry()
         } catch (e: Exception) {
             Auditor.debug(tag, "ScheduleCheckWorker глобальная ошибка проверки: ${e.message}")
             Result.retry()
+        }
+    }
+
+    private suspend fun checkUniversityNotifications(tag: String) {
+        try {
+            val universityNotificationManager: app.what.schedule.notifications.university.UniversityNotificationManager? = getKoin().getOrNull()
+            universityNotificationManager?.checkAll(applicationContext, tag)
+        } catch (e: Exception) {
+            Auditor.debug(tag, "ScheduleCheckWorker: ошибка проверки уведомлений университета: ${e.message}")
         }
     }
 }

@@ -23,4 +23,5 @@ interface ScheduleRepository {
         cloudSync: Boolean = false,
         forceLive: Boolean = false
     ): ScheduleResponse
+    suspend fun clearScheduleCache()
 }

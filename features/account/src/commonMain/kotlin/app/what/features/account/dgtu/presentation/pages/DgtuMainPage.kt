@@ -33,6 +33,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.automirrored.filled.OpenInNew
+import androidx.compose.material.icons.filled.CloudOff
 import androidx.compose.material.icons.filled.Mail
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.outlined.DateRange
@@ -107,9 +108,80 @@ internal fun DGTUMainScreen(
     }
     
     val studentInfo = state.value.studentInfo
-    
     val shimmer = rememberShimmer()
-    
+
+    if (state.value.studentInfoFetchState is RemoteState.Error && studentInfo == null) {
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .systemBarsPadding()
+                .padding(24.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .widthIn(max = 480.dp)
+                    .padding(horizontal = 16.dp)
+            ) {
+                Box(
+                    modifier = Modifier
+                        .size(72.dp)
+                        .clip(CircleShape)
+                        .background(colorScheme.errorContainer.copy(alpha = 0.5f)),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.CloudOff,
+                        contentDescription = null,
+                        tint = colorScheme.error,
+                        modifier = Modifier.size(36.dp)
+                    )
+                }
+
+                Gap(20)
+
+                Text(
+                    "Не удалось загрузить профиль",
+                    color = colorScheme.onSurface,
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center
+                )
+
+                Gap(8)
+
+                Text(
+                    "Проверьте интернет-соединение или повторите попытку позже.",
+                    color = colorScheme.onSurfaceVariant,
+                    fontSize = 14.sp,
+                    lineHeight = 20.sp,
+                    textAlign = TextAlign.Center
+                )
+
+                Gap(24)
+
+                Button(
+                    onClick = { listener(DgtuEvent.MainOpened) },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text("Повторить попытку")
+                }
+
+                Gap(8)
+
+                TextButton(
+                    onClick = { listener(DgtuEvent.LogoutClicked) },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text("Выйти из аккаунта", color = colorScheme.error)
+                }
+            }
+        }
+        return
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -118,27 +190,7 @@ internal fun DGTUMainScreen(
             .verticalScroll(rememberScrollState()),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        if (state.value.studentInfoFetchState is RemoteState.Error && studentInfo == null) {
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .statusBarsPadding()
-                    .padding(top = 120.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(
-                        "Не удалось загрузить профиль",
-                        color = colorScheme.error,
-                        fontSize = 16.sp
-                    )
-                    Gap(12)
-                    Button(onClick = { listener(DgtuEvent.MainOpened) }) {
-                        Text("Повторить")
-                    }
-                }
-            }
-        } else if (studentInfo == null) {
+        if (studentInfo == null) {
             DgtuHeaderShimmer(shimmer)
         } else {
             with(studentInfo) {

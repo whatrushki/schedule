@@ -62,12 +62,14 @@ object RKSIReplacementsParser {
 
                     if (otUnits.isNotEmpty()) {
                         val isClassHour = lessonNumber == 0 || isClassHourSheet
+                        val defaultStartTime = if (isClassHour) LocalTime(13, 5) else LocalTime(0, 0)
+                        val defaultEndTime = if (isClassHour) LocalTime(14, 5) else LocalTime(0, 0)
                         lessons.add(
                             LessonDto(
                                 date = date,
                                 number = if (isClassHour) 0 else lessonNumber,
-                                startTime = LocalTime(0, 0),
-                                endTime = LocalTime(0, 0),
+                                startTime = defaultStartTime,
+                                endTime = defaultEndTime,
                                 otUnits = otUnits.toList(),
                                 subject = if (isClassHour) "Классный час" else "",
                                 type = if (isClassHour) LessonTypeDto.CLASS_HOUR else LessonTypeDto.OTHER
@@ -165,11 +167,18 @@ object RKSIReplacementsParser {
                     else -> "Предмет не указан"
                 }
 
+                val classHourStart = LocalTime(13, 5)
+                val classHourEnd = LocalTime(14, 5)
+                val start = lessonTime?.start
+                    ?: if (isClassHour) classHourStart else replacement.startTime.takeIf { it != minTime } ?: minTime
+                val end = lessonTime?.end
+                    ?: if (isClassHour) classHourEnd else replacement.endTime.takeIf { it != minTime } ?: minTime
+
                 replacement.copy(
                     number = if (isClassHour) 0 else replacement.number,
                     state = LessonStateDto.ADDED,
-                    startTime = lessonTime?.start ?: minTime,
-                    endTime = lessonTime?.end ?: minTime,
+                    startTime = start,
+                    endTime = end,
                     subject = subject,
                     type = if (isClassHour) LessonTypeDto.CLASS_HOUR else replacement.type
                 )
@@ -181,10 +190,15 @@ object RKSIReplacementsParser {
                     lesson.type == LessonTypeDto.CLASS_HOUR ||
                     lesson.subject.contains("Классный", ignoreCase = true)
 
+                val classHourStart = LocalTime(13, 5)
+                val classHourEnd = LocalTime(14, 5)
+
                 if (lesson.equalsWithReplacement(replacement)) {
                     // Преподаватель и аудитория совпадают с базовым расписанием -> пара НЕ изменена
-                    if (isClassHour && lesson.type != LessonTypeDto.CLASS_HOUR) {
-                        lesson.copy(number = 0, type = LessonTypeDto.CLASS_HOUR)
+                    if (isClassHour) {
+                        val start = lesson.startTime.takeIf { it != minTime } ?: classHourStart
+                        val end = lesson.endTime.takeIf { it != minTime } ?: classHourEnd
+                        lesson.copy(number = 0, type = LessonTypeDto.CLASS_HOUR, startTime = start, endTime = end)
                     } else {
                         lesson
                     }
@@ -211,11 +225,16 @@ object RKSIReplacementsParser {
                         else -> LessonTypeDto.COMMON
                     }
 
+                    val start = lesson.startTime.takeIf { it != minTime }
+                        ?: (lessonTime?.start ?: if (isClassHour) classHourStart else replacement.startTime.takeIf { it != minTime } ?: minTime)
+                    val end = lesson.endTime.takeIf { it != minTime }
+                        ?: (lessonTime?.end ?: if (isClassHour) classHourEnd else replacement.endTime.takeIf { it != minTime } ?: minTime)
+
                     replacement.copy(
                         number = if (isClassHour) 0 else replacement.number,
                         state = LessonStateDto.CHANGED,
-                        startTime = lesson.startTime.takeIf { it != minTime } ?: (lessonTime?.start ?: minTime),
-                        endTime = lesson.endTime.takeIf { it != minTime } ?: (lessonTime?.end ?: minTime),
+                        startTime = start,
+                        endTime = end,
                         subject = subject,
                         type = targetType
                     )

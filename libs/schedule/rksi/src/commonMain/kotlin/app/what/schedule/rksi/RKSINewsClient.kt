@@ -263,6 +263,14 @@ class RKSIAccountClient(
         return sessionCookies.joinToString("; ")
     }
 
+    private fun formatImageUrl(url: String): String = when {
+        url.isEmpty() -> ""
+        url.startsWith("http") -> url
+        url.startsWith("//") -> "https:$url"
+        url.startsWith("/") -> "$baseUrl$url"
+        else -> "$baseUrl/$url"
+    }
+
     fun isSessionExpired(html: String): Boolean {
         return html.contains("name=\"log\"") ||
                html.contains("name=\"pwrd\"") ||
@@ -271,28 +279,24 @@ class RKSIAccountClient(
     }
 
     suspend fun login(login: String, pass: String): Boolean {
-        return try {
-            val response = client.submitForm(
-                url = "$baseUrl/account",
-                formParameters = io.ktor.http.parameters {
-                    append("log", login)
-                    append("pwrd", pass)
-                    append("babah", "Вход в аккаунт")
-                }
-            ) {
-                headers.append("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64)")
-                headers.append("Referer", "$baseUrl/account")
+        val response = client.submitForm(
+            url = "$baseUrl/account",
+            formParameters = io.ktor.http.parameters {
+                append("log", login)
+                append("pwrd", pass)
+                append("babah", "Вход в аккаунт")
             }
-            val setCookies = response.headers.getAll("Set-Cookie") ?: emptyList()
-            val parsedCookies = setCookies.map { it.split(";").first().trim() }.filter { it.isNotBlank() }
-            if (parsedCookies.isNotEmpty()) {
-                sessionCookies = parsedCookies
-            }
-            val html = response.bodyAsText()
-            !isSessionExpired(html) && (html.contains("exitacc") || html.contains("Мой профиль") || (html.contains("Кабинет студента") && !html.contains("Авторизация студента")))
-        } catch (_: Exception) {
-            false
+        ) {
+            headers.append("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64)")
+            headers.append("Referer", "$baseUrl/account")
         }
+        val setCookies = response.headers.getAll("Set-Cookie") ?: emptyList()
+        val parsedCookies = setCookies.map { it.split(";").first().trim() }.filter { it.isNotBlank() }
+        if (parsedCookies.isNotEmpty()) {
+            sessionCookies = parsedCookies
+        }
+        val html = response.bodyAsText()
+        return !isSessionExpired(html) && (html.contains("exitacc") || html.contains("Мой профиль") || (html.contains("Кабинет студента") && !html.contains("Авторизация студента")))
     }
 
     suspend fun getProfile(): AccountProfileDto {
@@ -306,8 +310,12 @@ class RKSIAccountClient(
         val h1 = doc.getElementsByTag("h1").firstOrNull()?.text()?.trim() ?: ""
         val studentFullName = h1.split("::").firstOrNull()?.trim() ?: ""
 
-        if (isSessionExpired(html) || studentFullName.equals("Кабинет студента", ignoreCase = true) || studentFullName.isBlank()) {
+        if (isSessionExpired(html)) {
             throw RksiSessionExpiredException()
+        }
+
+        if (studentFullName.isBlank() || studentFullName.equals("Кабинет студента", ignoreCase = true)) {
+            throw IllegalStateException("Не удалось получить данные профиля")
         }
 
         val nameParts = studentFullName.split(" ").filter { it.isNotBlank() }
@@ -347,6 +355,9 @@ class RKSIAccountClient(
             }
         }
 
+        val photoImg = doc.getElementById("myfoto") ?: doc.select("img[src*='/afoto/']").firstOrNull()
+        val photoUrl = photoImg?.attr("src")?.takeIf { it.isNotBlank() }?.let { formatImageUrl(it) }
+
         return AccountProfileDto(
             fullName = studentFullName.ifBlank { "Студент РКСИ" },
             name = name,
@@ -356,7 +367,7 @@ class RKSIAccountClient(
             specialty = specialty,
             curator = curator,
             curatorPhone = curatorPhone,
-            photoUrl = null,
+            photoUrl = photoUrl,
             educationForm = educationForm,
             healthGroup = healthGroup,
             socialStatus = socialStatus,

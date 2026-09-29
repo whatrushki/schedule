@@ -27,10 +27,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Assignment
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Call
+import androidx.compose.material.icons.filled.CloudOff
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.QrCode
+import androidx.compose.ui.text.style.TextAlign
+import app.what.schedule.ui.components.AsyncImageWithFallback
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -80,6 +83,78 @@ internal fun RksiMainScreen(
     val profile = state.value.profile
     val shimmer = rememberShimmer()
 
+    if (state.value.profileFetchState is RemoteState.Error && profile == null) {
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .systemBarsPadding()
+                .padding(24.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .widthIn(max = 480.dp)
+                    .padding(horizontal = 16.dp)
+            ) {
+                Box(
+                    modifier = Modifier
+                        .size(72.dp)
+                        .clip(CircleShape)
+                        .background(colorScheme.errorContainer.copy(alpha = 0.5f)),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.CloudOff,
+                        contentDescription = null,
+                        tint = colorScheme.error,
+                        modifier = Modifier.size(36.dp)
+                    )
+                }
+
+                Gap(20)
+
+                Text(
+                    "Не удалось загрузить профиль",
+                    color = colorScheme.onSurface,
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center
+                )
+
+                Gap(8)
+
+                Text(
+                    "Проверьте интернет-соединение или повторите попытку позже.",
+                    color = colorScheme.onSurfaceVariant,
+                    fontSize = 14.sp,
+                    lineHeight = 20.sp,
+                    textAlign = TextAlign.Center
+                )
+
+                Gap(24)
+
+                Button(
+                    onClick = { listener(RksiEvent.MainOpened) },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text("Повторить попытку")
+                }
+
+                Gap(8)
+
+                TextButton(
+                    onClick = { listener(RksiEvent.LogoutClicked) },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text("Выйти из аккаунта", color = colorScheme.error)
+                }
+            }
+        }
+        return
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -88,27 +163,7 @@ internal fun RksiMainScreen(
             .verticalScroll(rememberScrollState()),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        if (state.value.profileFetchState is RemoteState.Error && profile == null) {
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .statusBarsPadding()
-                    .padding(top = 120.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(
-                        "Не удалось загрузить профиль",
-                        color = colorScheme.error,
-                        fontSize = 16.sp
-                    )
-                    Gap(12)
-                    Button(onClick = { listener(RksiEvent.MainOpened) }) {
-                        Text("Повторить")
-                    }
-                }
-            }
-        } else if (profile == null) {
+        if (profile == null) {
             // Loading Shimmer
             Box(
                 modifier = Modifier
@@ -189,12 +244,19 @@ internal fun RksiMainScreen(
                                     .border(2.dp, colorScheme.primary, CircleShape),
                                 contentAlignment = Alignment.Center
                             ) {
-                                Icon(
-                                    imageVector = Icons.Default.Person,
-                                    contentDescription = null,
-                                    tint = colorScheme.primary,
-                                    modifier = Modifier.size(36.dp)
-                                )
+                                if (!profile.photoUrl.isNullOrBlank()) {
+                                    AsyncImageWithFallback(
+                                        profile.photoUrl,
+                                        modifier = Modifier.fillMaxSize()
+                                    )
+                                } else {
+                                    Icon(
+                                        imageVector = Icons.Default.Person,
+                                        contentDescription = null,
+                                        tint = colorScheme.primary,
+                                        modifier = Modifier.size(36.dp)
+                                    )
+                                }
                             }
 
                             Gap(16)

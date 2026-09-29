@@ -136,11 +136,32 @@ class TvGUScheduleClient(
         }
 
         return allDays.map { (date, lessons) ->
+            val mergedLessons = lessons
+                .groupBy { it.number to it.startTime }
+                .map { (_, groupLessons) ->
+                    val first = groupLessons.first()
+                    val state = when {
+                        groupLessons.any { it.state == LessonStateDto.CHANGED } -> LessonStateDto.CHANGED
+                        groupLessons.all { it.state == LessonStateDto.REMOVED } -> LessonStateDto.REMOVED
+                        else -> first.state
+                    }
+                    val combinedUnits = groupLessons.flatMap { l ->
+                        l.otUnits.map { u ->
+                            if (u.subject.isNullOrBlank()) u.copy(subject = l.subject) else u
+                        }
+                    }.distinctBy { it.group to it.room to it.teacher to it.subject }
+
+                    first.copy(
+                        state = state,
+                        otUnits = combinedUnits
+                    )
+                }
+                .sortedWith(compareBy({ it.startTime }, { it.number }))
+
             DayScheduleDto(
                 date = date,
                 scheduleType = LessonsScheduleTypeDto.COMMON,
-                lessons = lessons.distinctBy { it.startTime to it.subject to it.number }
-                    .sortedWith(compareBy({ it.startTime }, { it.number }))
+                lessons = mergedLessons
             )
         }.sortedBy { it.date }
     }

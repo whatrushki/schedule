@@ -84,6 +84,7 @@ val dataModule = module {
     single<FileCache> { InMemoryFileCache() }
     single { DGTUAccountClient(get()) }
     single { app.what.schedule.rksi.RKSIAccountClient(get()) }
+    single { app.what.schedule.sfedu.grade.SfeduGradeClient(get()) }
     
     single {
         val httpClient: HttpClient = get()

@@ -19,6 +19,8 @@ import app.what.foundation.utils.LogScope
 import app.what.foundation.utils.buildTag
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.flow.drop
+import kotlinx.coroutines.launch
 
 class ScheduleController(
     private val apiRepository: ScheduleRepository,
@@ -46,6 +48,21 @@ class ScheduleController(
     
     init {
         init()
+        viewModelScope.launch {
+            settings.institution.observe().drop(1).collect {
+                settings.lastSearch.set(null)
+                updateState {
+                    copy(
+                        selectedSearch = null,
+                        scheduleState = RemoteState.Idle,
+                        schedules = emptyList(),
+                        scheduleSearches = emptyList(),
+                        scheduleSearchesState = RemoteState.Loading
+                    )
+                }
+                updateSearches(showLoading = true, forceReload = true)
+            }
+        }
     }
     
     val debugMode: Boolean
@@ -245,9 +262,10 @@ class ScheduleController(
                 updateState { copy(scheduleSearchesState = RemoteState.Loading) }
             }
             
+            val currentInstitutionId = settings.institution.get()
             val (teachers, groups) = coroutineScope {
-                val ut = async { apiRepository.getTeachers(forceReload = forceReload).map { it.toScheduleSearch() } }
-                val ug = async { apiRepository.getGroups(forceReload = forceReload).map { it.toScheduleSearch() } }
+                val ut = async { apiRepository.getTeachers(institutionId = currentInstitutionId, forceReload = forceReload).map { it.toScheduleSearch() } }
+                val ug = async { apiRepository.getGroups(institutionId = currentInstitutionId, forceReload = forceReload).map { it.toScheduleSearch() } }
                 ut.await() to ug.await()
             }
             val data = (teachers + groups).distinctBy { "${it::class.simpleName}_${it.name.trim()}" }

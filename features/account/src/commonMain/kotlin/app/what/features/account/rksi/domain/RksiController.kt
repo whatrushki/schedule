@@ -44,6 +44,7 @@ class RksiController(
     }
 
     fun loadNews() {
+        if (viewState.newsFetchState is RemoteState.Loading) return
         val service = newsService ?: return
         updateState { copy(newsFetchState = RemoteState.Loading) }
         viewModelScope.launchSafe(
@@ -98,21 +99,30 @@ class RksiController(
 
     private suspend fun performLogin(login: String, pass: String) {
         updateState { copy(isLoggingIn = true, loginError = null) }
-        val success = accountClient.login(login, pass)
-        if (success) {
-            val cookieStr = accountClient.sessionCookies.joinToString(";;")
-            appValues.rksiCookies.set(cookieStr)
-            appValues.rksiLogin.set(login)
-            appValues.rksiPassword.set(pass)
-            updateState { copy(isAuthorized = true, isLoggingIn = false, loginError = null) }
-            setAction(RksiAction.OpenMain)
-            loadProfile()
-            loadNews()
-        } else {
+        try {
+            val success = accountClient.login(login, pass)
+            if (success) {
+                val cookieStr = accountClient.sessionCookies.joinToString(";;")
+                appValues.rksiCookies.set(cookieStr)
+                appValues.rksiLogin.set(login)
+                appValues.rksiPassword.set(pass)
+                updateState { copy(isAuthorized = true, isLoggingIn = false, loginError = null) }
+                setAction(RksiAction.OpenMain)
+                loadProfile()
+                loadNews()
+            } else {
+                updateState {
+                    copy(
+                        isLoggingIn = false,
+                        loginError = "Неверный логин или пароль"
+                    )
+                }
+            }
+        } catch (e: Exception) {
             updateState {
                 copy(
                     isLoggingIn = false,
-                    loginError = "Неверный логин или пароль, либо ошибка сети"
+                    loginError = "Ошибка подключения к сети. Проверьте интернет."
                 )
             }
         }
@@ -135,7 +145,13 @@ class RksiController(
         return try {
             block()
         } catch (e: RksiSessionExpiredException) {
-            if (reLoginIfNeeded()) {
+            val reloginSuccess = try {
+                reLoginIfNeeded()
+            } catch (netEx: Exception) {
+                // Network error during re-login attempt: DO NOT unauthorize the user!
+                throw netEx
+            }
+            if (reloginSuccess) {
                 block()
             } else {
                 updateState { copy(isAuthorized = false) }
@@ -146,6 +162,7 @@ class RksiController(
     }
 
     fun loadProfile() {
+        if (viewState.profileFetchState is RemoteState.Loading) return
         updateState { copy(profileFetchState = RemoteState.Loading) }
         viewModelScope.launchSafe(
             debug = debug,

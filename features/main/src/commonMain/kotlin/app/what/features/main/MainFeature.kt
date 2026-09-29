@@ -58,6 +58,7 @@ import app.what.schedule.features.settings.navigation.settingsRegistry
 import app.what.schedule.ui.theme.icons.WHATIcons
 import app.what.schedule.ui.theme.icons.filled.FrameBug
 import app.what.schedule.ui.theme.icons.filled.News
+import kotlinx.coroutines.flow.drop
 import app.what.schedule.ui.theme.icons.filled.Person
 import app.what.foundation.utils.Analytics
 import app.what.foundation.utils.LogCat
@@ -107,20 +108,23 @@ class MainFeature(
         val currentInstitution by appValues.institution.collect()
         val dgtuToken by appValues.dgtuToken.collect()
         val rksiCookies by appValues.rksiCookies.collect()
-        val isAccountAuthorized = state.value.hasProfilePage && when (currentInstitution?.lowercase()) {
+        val sfeduGradeToken by appValues.sfeduGradeToken.collect()
+        val enableProfileTab by appValues.enableProfileTab.collect()
+        val isAccountAuthorized = state.value.hasProfilePage && enableProfileTab != false && when (currentInstitution?.lowercase()) {
             "dgtu" -> !dgtuToken.isNullOrBlank()
             "rksi" -> !rksiCookies.isNullOrBlank()
+            "sfedu" -> !sfeduGradeToken.isNullOrBlank()
             else -> false
         }
 
-        val screens = remember(isAccountAuthorized, state.value.hasProfilePage) {
+        val screens = remember(isAccountAuthorized, state.value.hasProfilePage, enableProfileTab) {
             buildList {
                 if (!isAccountAuthorized && app.what.foundation.utils.currentPlatform != app.what.foundation.utils.PlatformType.Wasm) {
                     add(navItem("Новости", WHATIcons.News, NewsProvider))
                 }
                 add(navItem("Расписание", Icons.Default.DateRange, ScheduleProvider()))
                 add(navItem("Настройки", Icons.Default.Settings, SettingsProvider))
-                if (state.value.hasProfilePage) {
+                if (state.value.hasProfilePage && enableProfileTab != false) {
                     add(0, navItem("Профиль", WHATIcons.Person, AccountProvider))
                 }
             }
@@ -132,6 +136,17 @@ class MainFeature(
                 val navTag = buildTag(LogScope.CORE, LogCat.NAV)
                 Auditor.debug(navTag, "Навигация: ${destination.route}")
                 Analytics.logScreenView(destination.route ?: "no route")
+            }
+        }
+
+        LaunchedEffect(Unit) {
+            appValues.institution.observe().drop(1).collect {
+                navigator.c.navigate(ScheduleProvider()) {
+                    popUpTo(navigator.c.graph.startDestinationId) {
+                        inclusive = false
+                    }
+                    launchSingleTop = true
+                }
             }
         }
         

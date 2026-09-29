@@ -1,15 +1,19 @@
 package app.what.schedule.features.widget
 
 import android.annotation.SuppressLint
+import android.appwidget.AppWidgetManager
 import android.content.Context
+import android.content.Intent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.intPreferencesKey
+import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.glance.GlanceId
+import androidx.glance.appwidget.AppWidgetId
 import androidx.glance.GlanceModifier
 import androidx.glance.GlanceTheme
 import androidx.glance.Image
@@ -23,6 +27,7 @@ import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.GlanceAppWidgetReceiver
 import androidx.glance.appwidget.action.ActionCallback
 import androidx.glance.appwidget.action.actionRunCallback
+import androidx.glance.appwidget.action.actionStartActivity
 import androidx.glance.appwidget.cornerRadius
 import androidx.glance.appwidget.lazy.LazyColumn
 import androidx.glance.appwidget.lazy.items
@@ -123,12 +128,28 @@ class ScheduleWidget : GlanceAppWidget(), KoinComponent {
                 } else {
                     decodedSearch
                 }
-                withContext(IO) {
+                val result = withContext(IO) {
                     scheduleRepository.getSchedule(
                         targetSearch,
                         useCache = true,
                         requiresData = true
                     )
+                }
+                // Если по ID кеш пуст и результат пуст — пробуем по имени
+                if (result is ScheduleResponse.Empty && targetSearch.name.isNotBlank() && targetSearch.name != targetSearch.id) {
+                    val nameSearch = when (targetSearch) {
+                        is ScheduleSearch.Group -> targetSearch.copy(id = targetSearch.name)
+                        is ScheduleSearch.Teacher -> targetSearch.copy(id = targetSearch.name)
+                    }
+                    withContext(IO) {
+                        scheduleRepository.getSchedule(
+                            nameSearch,
+                            useCache = true,
+                            requiresData = true
+                        )
+                    }
+                } else {
+                    result
                 }
             } catch (e: Exception) {
                 val widgetTag = buildTag(LogScope.WIDGET, LogCat.UI)
@@ -172,23 +193,26 @@ class ScheduleWidget : GlanceAppWidget(), KoinComponent {
                 when (schedule) {
                     is ScheduleResponse.Available -> WidgetContent(
                         filterSchedules(schedule.schedules),
-                        currentDayIndex
+                        currentDayIndex,
+                        id
                     )
 
                     is ScheduleResponse.Error -> {
                         // Try to show cached schedules as fallback
                         val cached = schedule.cachedSchedules
                         if (!cached.isNullOrEmpty()) {
-                            WidgetContent(filterSchedules(cached), currentDayIndex)
+                            WidgetContent(filterSchedules(cached), currentDayIndex, id)
                         } else {
                             WidgetErrorContent(
-                                message = schedule.exception.message ?: "Неизвестная ошибка"
+                                message = schedule.exception.message ?: "Неизвестная ошибка",
+                                glanceId = id
                             )
                         }
                     }
 
                     else -> WidgetEmptyContent(
-                        isConfigured = search != null
+                        isConfigured = search != null,
+                        glanceId = id
                     )
                 }
             }
@@ -200,12 +224,21 @@ class ScheduleWidget : GlanceAppWidget(), KoinComponent {
  * Error state: shown when schedule failed to load.
  */
 @Composable
-fun WidgetErrorContent(message: String) {
+fun WidgetErrorContent(message: String, glanceId: GlanceId? = null) {
+    val context = LocalContext.current
+    val rawId = glanceId?.let { (it as? AppWidgetId)?.appWidgetId }
+    val intent = Intent(context, ScheduleWidgetConfigurationActivity::class.java).apply {
+        flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        if (rawId != null) {
+            putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, rawId)
+        }
+    }
     Column(
         modifier = GlanceModifier
             .fillMaxSize()
             .background(GlanceTheme.colors.widgetBackground)
-            .padding(16.dp),
+            .padding(16.dp)
+            .clickable(actionStartActivity(intent)),
         verticalAlignment = Alignment.CenterVertically,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -224,12 +257,12 @@ fun WidgetErrorContent(message: String) {
         )
         Spacer(modifier = GlanceModifier.height(4.dp))
         Text(
-            message,
+            "$message\nНажмите для повторной настройки",
             style = TextStyle(
                 color = GlanceTheme.colors.secondary,
                 fontSize = 12.sp
             ),
-            maxLines = 2
+            maxLines = 3
         )
     }
 }
@@ -238,12 +271,21 @@ fun WidgetErrorContent(message: String) {
  * Empty state: shown when no schedule data or widget not configured.
  */
 @Composable
-fun WidgetEmptyContent(isConfigured: Boolean) {
+fun WidgetEmptyContent(isConfigured: Boolean, glanceId: GlanceId? = null) {
+    val context = LocalContext.current
+    val rawId = glanceId?.let { (it as? AppWidgetId)?.appWidgetId }
+    val intent = Intent(context, ScheduleWidgetConfigurationActivity::class.java).apply {
+        flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        if (rawId != null) {
+            putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, rawId)
+        }
+    }
     Column(
         modifier = GlanceModifier
             .fillMaxSize()
             .background(GlanceTheme.colors.widgetBackground)
-            .padding(16.dp),
+            .padding(16.dp)
+            .clickable(actionStartActivity(intent)),
         verticalAlignment = Alignment.CenterVertically,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -264,17 +306,28 @@ fun WidgetEmptyContent(isConfigured: Boolean) {
 @Composable
 fun WidgetContent(
     schedule: List<DaySchedule>,
-    currentDayIndex: Int
+    currentDayIndex: Int,
+    glanceId: GlanceId? = null
 ) {
     if (schedule.isEmpty()) {
-        WidgetEmptyContent(isConfigured = true)
+        WidgetEmptyContent(isConfigured = true, glanceId = glanceId)
         return
     }
 
     // Auto-detect today's index for smarter day navigation
     val today = app.what.foundation.utils.currentLocalDate()
     val todayIndex = schedule.indexOfFirst { it.date == today }
-    val effectiveIndex = if (currentDayIndex == 0 && todayIndex >= 0) todayIndex else currentDayIndex
+    val effectiveIndex = if (currentDayIndex == 0) {
+        if (todayIndex >= 0 && schedule[todayIndex].lessons.isNotEmpty()) {
+            todayIndex
+        } else {
+            val upcoming = schedule.indexOfFirst { it.date >= today && it.lessons.isNotEmpty() }
+            if (upcoming >= 0) upcoming else {
+                val anyWithLessons = schedule.indexOfFirst { it.lessons.isNotEmpty() }
+                if (anyWithLessons >= 0) anyWithLessons else if (todayIndex >= 0) todayIndex else 0
+            }
+        }
+    } else currentDayIndex
     val safeIndex = effectiveIndex.coerceIn(0, schedule.size - 1)
     val currentDay = schedule[safeIndex]
     val diff = currentDay.date.toEpochDays() - today.toEpochDays()

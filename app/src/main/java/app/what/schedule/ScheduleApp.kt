@@ -36,8 +36,12 @@ import org.koin.android.ext.android.getKoin
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 import org.koin.core.module.dsl.singleOf
+import androidx.glance.appwidget.GlanceAppWidgetManager
+import androidx.glance.appwidget.state.updateAppWidgetState
 import androidx.glance.appwidget.updateAll
+import androidx.datastore.preferences.core.longPreferencesKey
 import app.what.schedule.features.widget.ScheduleWidget
+import app.what.schedule.notifications.FirstLessonScheduler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.FlowPreview
@@ -46,17 +50,29 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.launch
+import androidx.work.Configuration
 import app.what.schedule.notifications.NotificationHelper
 import app.what.schedule.notifications.ScheduleWorkManager
+import com.jakewharton.processphoenix.ProcessPhoenix
 import org.koin.dsl.module
 import java.util.UUID
 import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.seconds
 
-class ScheduleApp : Application() {
+class ScheduleApp : Application(), Configuration.Provider {
+
+    override val workManagerConfiguration: Configuration
+        get() = Configuration.Builder()
+            .setMinimumLoggingLevel(android.util.Log.INFO)
+            .build()
+
     @OptIn(FlowPreview::class)
     override fun onCreate() {
         super.onCreate()
+
+        if (ProcessPhoenix.isPhoenixProcess(this)) {
+            return
+        }
         
         if (FirebaseApp.getApps(this).isEmpty()) {
             FirebaseApp.initializeApp(this)
@@ -125,13 +141,35 @@ class ScheduleApp : Application() {
                 appValues.themeColor.observe()
             ) { _, _, _ -> }
                 .drop(1)
-                .debounce(5.seconds)
+                .debounce(300.milliseconds)
                 .collect {
                     try {
+                        val manager = GlanceAppWidgetManager(this@ScheduleApp)
+                        val glanceIds = manager.getGlanceIds(ScheduleWidget::class.java)
+                        for (glanceId in glanceIds) {
+                            try {
+                                updateAppWidgetState(this@ScheduleApp, glanceId) { prefs ->
+                                    prefs[longPreferencesKey("theme_timestamp")] = System.currentTimeMillis()
+                                }
+                            } catch (_: Exception) {}
+                        }
                         ScheduleWidget.instance.updateAll(this@ScheduleApp)
                     } catch (e: Exception) {
                         Auditor.debug(initTag, "Не удалось обновить виджеты при смене темы: ${e.message}")
                     }
+                }
+        }
+
+        // Автоматическое переключение иконки приложения (алиаса) при смене темы в настройках
+        app.what.schedule.launcher.AppIconManager.init(this@ScheduleApp, appValues)
+        appScope.launch {
+            combine(
+                appValues.themeType.observe(),
+                appValues.themeStyle.observe(),
+                appValues.themeColor.observe()
+            ) { _, _, _ -> }
+                .collect {
+                    app.what.schedule.launcher.AppIconManager.updateIcon(this@ScheduleApp, appValues)
                 }
         }
 
@@ -168,20 +206,47 @@ class ScheduleApp : Application() {
         // Инициализация канала уведомлений
         NotificationHelper.createNotificationChannel(this)
 
-        // Планирование / отмена периодической проверки замен в фоне
+        // Планирование / отмена периодической проверки замен и уведомлений универа в фоне
         appScope.launch {
             combine(
                 appValues.enableReplacementNotifications.observe(),
+                appValues.enableUniversityNotifications.observe(),
                 appValues.replacementNotificationsPeriod.observe()
-            ) { enabled, period -> enabled to period }
-                .collect { (enabled, period) ->
-                    if (enabled == true) {
+            ) { repEnabled, uniEnabled, period -> Triple(repEnabled == true, uniEnabled == true, period) }
+                .collect { (repEnabled, uniEnabled, period) ->
+                    if (repEnabled || uniEnabled) {
                         val hours = period?.hours ?: 3
                         ScheduleWorkManager.schedulePeriodicCheck(this@ScheduleApp, hours)
                     } else {
                         ScheduleWorkManager.cancelPeriodicCheck(this@ScheduleApp)
                     }
                 }
+        }
+
+        // Автоматическое планирование напоминания о первой паре за 40 минут
+        appScope.launch {
+            combine(
+                appValues.enableFirstLessonNotification.observe(),
+                appValues.lastSearch.observe()
+            ) { _, _ -> }
+                .collect {
+                    try {
+                        FirstLessonScheduler.scheduleNext(this@ScheduleApp)
+                    } catch (e: Exception) {
+                        Auditor.debug(initTag, "Не удалось запланировать напоминание о первой паре: ${e.message}")
+                    }
+                }
+        }
+    }
+
+    override fun onConfigurationChanged(newConfig: android.content.res.Configuration) {
+        super.onConfigurationChanged(newConfig)
+        try {
+            val appValues = getKoin().getOrNull<AppValues>()
+            if (appValues != null) {
+                app.what.schedule.launcher.AppIconManager.updateIcon(this, appValues)
+            }
+        } catch (_: Exception) {
         }
     }
 }
@@ -205,5 +270,14 @@ val appModule = module {
                 httpClient = get()
             )
         }
+    }
+
+    single {
+        app.what.schedule.notifications.university.UniversityNotificationManager(
+            listOf(
+                app.what.schedule.notifications.university.checkers.DgtuNotificationChecker(get(), get()),
+                app.what.schedule.notifications.university.checkers.SfeduNotificationChecker(get(), get())
+            )
+        )
     }
 }

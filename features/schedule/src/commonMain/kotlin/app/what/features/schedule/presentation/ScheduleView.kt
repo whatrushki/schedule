@@ -93,8 +93,10 @@ import app.what.schedule.ui.theme.icons.filled.Network
 import app.what.schedule.ui.theme.icons.filled.Run
 import app.what.schedule.ui.theme.icons.filled.Warn
 import kotlinx.coroutines.launch
+import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.isoDayNumber
+import kotlinx.datetime.plus
 
 @Composable
 fun ScheduleView(
@@ -191,9 +193,13 @@ fun ScheduleView(
                 hasNavigatedToTodayInitially = true
                 lastNavigatedSearchId = currentSearchId
                 val today = app.what.foundation.utils.currentLocalDate()
-                val targetIndex = schedules.indexOfFirst { it.date == today }
+                val isEvening = appValues.showNextDayInEvening.get() == true &&
+                    app.what.foundation.utils.currentLocalTime().hour >= 18
+                val targetDate = if (isEvening) today.plus(1, DateTimeUnit.DAY) else today
+                val targetIndex = schedules.indexOfFirst { it.date == targetDate }
                     .takeIf { it != -1 }
-                    ?: schedules.indexOfFirst { it.date >= today }.takeIf { it != -1 }
+                    ?: schedules.indexOfFirst { it.date >= targetDate }.takeIf { it != -1 }
+                    ?: schedules.indexOfFirst { it.date == today }.takeIf { it != -1 }
                     ?: 0
                 daysPagerState.scrollToPage(targetIndex)
             } else {

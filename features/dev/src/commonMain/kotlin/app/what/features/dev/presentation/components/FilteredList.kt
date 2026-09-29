@@ -58,14 +58,15 @@ interface Filter<T> {
 }
 
 fun <T> List<T>.applyFilters(filter: Filter<T>, query: String): List<T> {
-    if (query.isBlank()) return this
+    val snapshot = try { synchronized(this) { this.toList() } } catch (_: Exception) { this.toList() }
+    if (query.isBlank()) return snapshot
     
     return try {
         filter.parseQuery(query)
-        this.filter { filter.matches(it) }
+        snapshot.filter { filter.matches(it) }
     } catch (e: Exception) {
         // В случае ошибки парсинга возвращаем все логи
-        this
+        snapshot
     }
 }
 
@@ -85,8 +86,14 @@ fun <T> FilteredList(
 ) {
     val (filterText, setFilterText) = useState("")
     var isHelpDialogExpanded by remember { mutableStateOf(false) }
-    val filteredValues = remember(values, filterText) {
-        values.applyFilters(filter, filterText)
+    val safeValues = remember(values) {
+        try { values.toList() } catch (_: Exception) { emptyList() }
+    }
+    val filteredValues = remember(safeValues, filterText) {
+        safeValues.applyFilters(filter, filterText)
+    }
+    val reversedValues = remember(filteredValues) {
+        filteredValues.toList().reversed()
     }
     
     Column(
@@ -238,7 +245,7 @@ fun <T> FilteredList(
             )
         } else {
             LazyColumn(modifier = Modifier.weight(1f)) {
-                itemsIndexed(filteredValues.reversed(), key = { index, item -> "${vKey(item)}_$index" }) { _, item ->
+                itemsIndexed(reversedValues, key = { index, item -> "${vKey(item)}_$index" }) { _, item ->
                     vContent(item)
                 }
             }

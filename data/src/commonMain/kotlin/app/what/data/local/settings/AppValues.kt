@@ -37,6 +37,13 @@ enum class NotificationPeriod(val hours: Int, override val displayName: String) 
     H12(12, "12 часов")
 }
 
+@Serializable
+enum class SubgroupPreference(val value: Int?, override val displayName: String) : Named {
+    All(null, "Все"),
+    First(1, "1 подгруппа"),
+    Second(2, "2 подгруппа")
+}
+
 
 @Composable
 fun ProvideGLobalAppValues(appValues: AppValues, content: @Composable () -> Unit) =
@@ -78,7 +85,7 @@ class AppValues(
     )
     
     val themeType = createValue(
-        "theme_type", ThemeType.System, ThemeType.serializer(),
+        "theme_type", ThemeType.Light, ThemeType.serializer(),
         "Тип темы", "Режим темы: светлая, темная или системная"
     )
     
@@ -120,6 +127,35 @@ class AppValues(
     val replacementNotificationsPeriod = createValue(
         "replacement_notifications_period", NotificationPeriod.H3, NotificationPeriod.serializer(),
         "Интервал проверки", "Периодичность проверки расписания"
+    )
+
+    val defaultSubgroup = createValue(
+        "default_subgroup", SubgroupPreference.All, SubgroupPreference.serializer(),
+        "Подгруппа по умолчанию", "Автоматический выбор вашей подгруппы в расписании"
+    )
+
+    val showNextDayInEvening = createValue(
+        "show_next_day_in_evening", true, Boolean.serializer(),
+        "Расписание на завтра вечером", "После 18:00 открывать следующий учебный день"
+    )
+
+    val enableProfileTab = createValue(
+        "enable_profile_tab", true, Boolean.serializer(),
+        "Вкладка профиля", "Отображать вкладку профиля в панели навигации"
+    )
+
+    val enableUniversityNotifications = createValue(
+        "enable_university_notifications", false, Boolean.serializer(),
+        "Уведомления из ЛК", "Периодически проверять сообщения и уведомления в личном кабинете"
+    )
+
+    val enableFirstLessonNotification = createValue(
+        "enable_first_lesson_notification", false, Boolean.serializer(),
+        "Первая пара", "Уведомление о месте проведения первой пары за 40 минут до начала"
+    )
+
+    val lastNotifiedUniversityNotificationId = createValue(
+        "last_notified_univ_notif_id", "", String.serializer()
     )
 
     val lastNotifiedReplacementsHash = createValue(
@@ -181,6 +217,39 @@ class AppValues(
         null,
         String.serializer(),
         isEncrypted = true,
+    )
+
+    // SFEDU Grade ---------------
+    val sfeduGradeToken = createValue(
+        "sfedu_grade_token",
+        null,
+        String.serializer(),
+        isEncrypted = true,
+    )
+    val sfeduStudentName = createValue(
+        "sfedu_student_name",
+        null,
+        String.serializer(),
+    )
+    val sfeduStudentGroup = createValue(
+        "sfedu_student_group",
+        null,
+        String.serializer(),
+    )
+    val sfeduStudentDirection = createValue(
+        "sfedu_student_direction",
+        null,
+        String.serializer(),
+    )
+    val sfeduStudentEmail = createValue(
+        "sfedu_student_email",
+        null,
+        String.serializer(),
+    )
+    val sfeduLastKnownGrades = createValue(
+        "sfedu_last_known_grades",
+        "",
+        String.serializer(),
     )
 }
 

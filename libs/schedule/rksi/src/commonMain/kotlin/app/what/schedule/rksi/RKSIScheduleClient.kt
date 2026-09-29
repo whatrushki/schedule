@@ -83,6 +83,7 @@ class RKSIScheduleClient(
     }
 
     private fun normalizeName(name: String): String = name
+        .replace('\u00A0', ' ')  // non-breaking space
         .replace(" ", "")
         .replace("-", "")
         .replace("—", "")
@@ -96,6 +97,25 @@ class RKSIScheduleClient(
         .replace("x", "х", ignoreCase = true)
         .trim()
         .lowercase()
+
+    /**
+     * Извлекает фамилию и инициалы из имени преподавателя.
+     * "Смолянинова В.А." -> "смоляниновава"
+     * "Смолянинова Валентина Анатольевна" -> "смоляниновава"
+     * Returns null if parsing fails.
+     */
+    private fun extractSurnameAndInitials(name: String): String? {
+        val trimmed = name.trim().replace('\u00A0', ' ')
+        val parts = trimmed.split("\\s+".toRegex()).filter { it.isNotBlank() }
+        if (parts.isEmpty()) return null
+        val surname = normalizeName(parts[0])
+        if (parts.size == 1) return surname
+        val initials = parts.drop(1).mapNotNull { part ->
+            val clean = part.replace(".", "").trim()
+            if (clean.isNotEmpty()) normalizeName(clean.first().toString()) else null
+        }
+        return surname + initials.joinToString("")
+    }
 
 
     private var cachedGroups: List<GroupDto>? = null
@@ -125,14 +145,29 @@ class RKSIScheduleClient(
 
         val result = if (activeNames.isNotEmpty()) {
             val activeNormMap = activeNames.associateBy { normalizeName(it) }
+            // Карта инициалов для сопоставления коротких и полных имён
+            val activeInitialsMap = activeNames.groupBy { extractSurnameAndInitials(it) ?: normalizeName(it) }
             val filtered = mobileTeachers.mapNotNull { teacher ->
+                // Прямое совпадение по нормализованному имени
                 val canonical = activeNormMap[normalizeName(teacher.name)]
                 if (canonical != null) {
                     teacher.copy(name = canonical)
-                } else null
+                } else {
+                    // Пробуем сопоставить по фамилии + инициалам
+                    val teacherKey = extractSurnameAndInitials(teacher.name)
+                    if (teacherKey != null) {
+                        val matches = activeInitialsMap[teacherKey]
+                        if (matches != null && matches.isNotEmpty()) {
+                            // Предпочитаем короткую форму (с инициалами)
+                            val best = matches.minByOrNull { it.length } ?: matches.first()
+                            teacher.copy(name = best)
+                        } else null
+                    } else null
+                }
             }
             if (filtered.isNotEmpty()) {
-                filtered.distinctBy { normalizeName(it.name) }.sortedBy { it.name }
+                // Дедупликация по фамилии+инициалам
+                filtered.distinctBy { extractSurnameAndInitials(it.name) ?: normalizeName(it.name) }.sortedBy { it.name }
             } else {
                 mobileTeachers.distinctBy { it.name.trim() }.sortedBy { it.name }
             }
@@ -338,7 +373,15 @@ class RKSIScheduleClient(
             daySchedules.map { daySchedule ->
                 val dayReplacements = replacements.filter { it.date == daySchedule.date }
                 if (dayReplacements.isNotEmpty()) {
-                    val timeSchedule = when (daySchedule.scheduleType) {
+                    val hasClassHourInReplacements = dayReplacements.any {
+                        it.number == 0 || it.type == LessonTypeDto.CLASS_HOUR || it.subject.contains("Классный", ignoreCase = true)
+                    }
+                    val effectiveScheduleType = if (hasClassHourInReplacements) {
+                        LessonsScheduleTypeDto.WITH_CLASS_HOUR
+                    } else {
+                        daySchedule.scheduleType
+                    }
+                    val timeSchedule = when (effectiveScheduleType) {
                         LessonsScheduleTypeDto.SHORTENED -> RKSILessonsSchedule.SHORTENED
                         LessonsScheduleTypeDto.WITH_CLASS_HOUR -> RKSILessonsSchedule.WITH_CLASS_HOUR
                         else -> RKSILessonsSchedule.COMMON
@@ -351,9 +394,9 @@ class RKSIScheduleClient(
                             RKSITeacherSubjectCache.resolve(teacher, group)
                         }
                     )
-                    val hasClassHour = merged.any { it.type == LessonTypeDto.CLASS_HOUR || it.subject.contains("Классный", ignoreCase = true) }
+                    val hasClassHour = hasClassHourInReplacements || merged.any { it.type == LessonTypeDto.CLASS_HOUR || it.subject.contains("Классный", ignoreCase = true) }
                     daySchedule.copy(
-                        lessons = merged,
+                        lessons = merged.sortedWith(compareBy({ it.startTime }, { it.number })),
                         scheduleType = if (hasClassHour) LessonsScheduleTypeDto.WITH_CLASS_HOUR else daySchedule.scheduleType
                     )
                 } else {
