@@ -1,79 +1,5 @@
 [
     {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Теория государства и права",
-                "otUnits": [
-                    {
-                        "teacher": "Русских В. В.",
-                        "group": "ЮЮ14, ЮЮ15, ЮЮ18",
-                        "room": "305",
-                        "additional": "25"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Теория государства и права",
-                "otUnits": [
-                    {
-                        "teacher": "Русских В. В.",
-                        "group": "ЮЮ16, ЮЮ19",
-                        "room": "205",
-                        "additional": "26"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Актуальные проблемы современного государственного развития",
-                "otUnits": [
-                    {
-                        "teacher": "Русских В. В.",
-                        "group": "ЮЮ47",
-                        "room": "311",
-                        "additional": "25"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-21",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "пр Теория государства и права",
-                "otUnits": [
-                    {
-                        "teacher": "Русских В. В.",
-                        "group": "ЮЮ18",
-                        "room": "415",
-                        "additional": "25"
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-09-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -88,7 +14,9 @@
                         "teacher": "Русских В. В.",
                         "group": "ЮЮ47",
                         "room": "516",
-                        "additional": "25"
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -105,7 +33,9 @@
                         "teacher": "Русских В. В.",
                         "group": "ЮЮ47",
                         "room": "710",
-                        "additional": "25"
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -122,7 +52,9 @@
                         "teacher": "Русских В. В.",
                         "group": "ЮОЗЮ11",
                         "room": "313",
-                        "additional": "25"
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -139,7 +71,9 @@
                         "teacher": "Русских В. В.",
                         "group": "ЮЮ18",
                         "room": "415",
-                        "additional": "25"
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -162,7 +96,91 @@
                         "teacher": "Русских В. В.",
                         "group": "АМЮ21, АМЮЦ21",
                         "room": "123",
-                        "additional": "25"
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-05",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Теория государства и права",
+                "otUnits": [
+                    {
+                        "teacher": "Русских В. В.",
+                        "group": "ЮЮ14, ЮЮ15, ЮЮ18",
+                        "room": "305",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Теория государства и права",
+                "otUnits": [
+                    {
+                        "teacher": "Русских В. В.",
+                        "group": "ЮЮ16, ЮЮ19",
+                        "room": "205",
+                        "additional": "26",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Актуальные проблемы современного государственного развития",
+                "otUnits": [
+                    {
+                        "teacher": "Русских В. В.",
+                        "group": "ЮЮ47",
+                        "room": "311",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Теория государства и права",
+                "otUnits": [
+                    {
+                        "teacher": "Русских В. В.",
+                        "group": "ЮЮ18",
+                        "room": "415",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
