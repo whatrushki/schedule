@@ -1,95 +1,5 @@
 [
     {
-        "date": "2026-09-29",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-29",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Математика",
-                "otUnits": [
-                    {
-                        "teacher": "Небратенко Л.В.",
-                        "group": "СА-13",
-                        "room": "305",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-29",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Математика",
-                "otUnits": [
-                    {
-                        "teacher": "Небратенко Л.В.",
-                        "group": "СА-13",
-                        "room": "305",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-29",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "Лебедева М.В.",
-                        "group": "СА-13",
-                        "room": "319",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Новосельцева Е.Ф.",
-                        "group": "СА-13",
-                        "room": "209а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-29",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Литература",
-                "otUnits": [
-                    {
-                        "teacher": "Рожченко Т.В.",
-                        "group": "СА-13",
-                        "room": "210",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -185,14 +95,14 @@
                     {
                         "teacher": "Рожченко Т.В.",
                         "group": "СА-13",
-                        "room": "316",
+                        "room": "401",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-01",
@@ -223,14 +133,33 @@
                     {
                         "teacher": "Коханова Л.Н.",
                         "group": "СА-13",
-                        "room": "404",
+                        "room": "312",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Кравченко И.Ю.",
+                        "group": "СА-13",
+                        "room": "411",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

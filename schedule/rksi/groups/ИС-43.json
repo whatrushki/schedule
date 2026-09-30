@@ -1,95 +1,5 @@
 [
     {
-        "date": "2026-09-29",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-29",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Web-программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Павлова В.А.",
-                        "group": "ИС-43",
-                        "room": "420",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-29",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Технология разработки и защиты баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "Малая М.А.",
-                        "group": "ИС-43",
-                        "room": "422",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-29",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Инструментальные средства разработки программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "Павлова В.А.",
-                        "group": "ИС-43",
-                        "room": "420",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-29",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Прыгунова Т.А.",
-                        "group": "ИС-43",
-                        "room": "320",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Ужегова Е.А.",
-                        "group": "ИС-43",
-                        "room": "307",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -173,7 +83,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-01",
@@ -193,6 +103,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Web-программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Павлова В.А.",
+                        "group": "ИС-43",
+                        "room": "420",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

@@ -1,49 +1,5 @@
 [
     {
-        "date": "2026-09-29",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-29",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Обществознание",
-                "otUnits": [
-                    {
-                        "teacher": "Золотовская М.Ю.",
-                        "group": "ТД-12",
-                        "room": "17",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-09-29",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Обществознание",
-                "otUnits": [
-                    {
-                        "teacher": "Золотовская М.Ю.",
-                        "group": "ТД-12",
-                        "room": "17",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-09-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -99,7 +55,7 @@
                 "subject": "Психология общения",
                 "otUnits": [
                     {
-                        "teacher": "Золотовская Маргарита Юрьевна",
+                        "teacher": "Золотовская М.Ю.",
                         "group": "ИС-29",
                         "room": "319",
                         "additional": "1",
@@ -108,7 +64,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Психология общения",
+                "otUnits": [
+                    {
+                        "teacher": "Золотовская М.Ю.",
+                        "group": "ИС-29",
+                        "room": "319",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
