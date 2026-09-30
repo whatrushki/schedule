@@ -380,6 +380,9 @@ fun ScheduleView(
                             else rawLessons.filter { it.state != LessonState.REMOVED }
                         }
                         
+                        val lessonPairs = remember(lessons) { lessons.zipWithNext() }
+                        val lastLesson = remember(lessons) { lessons.lastOrNull() }
+                        
                         Column(
                             verticalArrangement = Arrangement.spacedBy(if (showBreaks) 4.dp else 12.dp),
                             modifier = Modifier.fillMaxHeight()
@@ -398,19 +401,18 @@ fun ScheduleView(
                                     )
                                 }
                             } else {
-                                lessons.zipWithNext()
-                                    .forEach { (first, second) ->
-                                        first.Show(date)
-                                        
-                                        AnimatedEnter(showBreaks) {
-                                            BreakInfo(
-                                                (second.startTime.toSecondOfDay() - first.endTime.toSecondOfDay()) / 60,
-                                                currentTime.value in first.startTime..second.startTime && currentDate == first.date
-                                            )
-                                        }
+                                lessonPairs.forEach { (first, second) ->
+                                    first.Show(date)
+                                    
+                                    AnimatedEnter(showBreaks) {
+                                        BreakInfo(
+                                            (second.startTime.toSecondOfDay() - first.endTime.toSecondOfDay()) / 60,
+                                            currentTime.value in first.startTime..second.startTime && currentDate == first.date
+                                        )
                                     }
+                                }
                                 
-                                lessons.lastOrNull()?.Show(date)
+                                lastLesson?.Show(date)
                             }
                             
                             Gap(132)

@@ -30,6 +30,10 @@ class ScheduleRepositoryImpl(
     
     private fun getFilialId() = api.metadata.id
     
+    companion object {
+        private val WHITESPACE_REGEX = Regex("\\s+")
+    }
+
     /**
      * Нормализует имя преподавателя для дедупликации.
      * "Смолянинова В.А." и "Смолянинова Валентина Анатольевна" → "смоляниноваВА"
@@ -45,7 +49,7 @@ class ScheduleRepositoryImpl(
             .replace("p", "р", ignoreCase = true)
             .replace("x", "х", ignoreCase = true)
             .trim()
-        val parts = cleaned.split("\\s+".toRegex()).filter { it.isNotBlank() }
+        val parts = cleaned.split(WHITESPACE_REGEX).filter { it.isNotBlank() }
         if (parts.isEmpty()) return cleaned.lowercase()
         val surname = parts[0].lowercase()
         val initials = parts.drop(1).mapNotNull { part ->

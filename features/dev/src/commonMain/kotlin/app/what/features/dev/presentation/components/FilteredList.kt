@@ -58,7 +58,7 @@ interface Filter<T> {
 }
 
 fun <T> List<T>.applyFilters(filter: Filter<T>, query: String): List<T> {
-    val snapshot = try { synchronized(this) { this.toList() } } catch (_: Exception) { this.toList() }
+    val snapshot = this.toList()
     if (query.isBlank()) return snapshot
     
     return try {

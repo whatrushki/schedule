@@ -13,11 +13,13 @@ import app.what.data.remote.utils.fromHtml
 fun GroupDto.toDomain(): Group = Group(name = name, id = id)
 fun TeacherDto.toDomain(): Teacher = Teacher(name = name, id = id)
 
+private val BUILDING_REGEX = Regex("(?i)корпус\\s*|(?i)корп\\.?\\s*")
+
 fun OneTimeUnitDto.toDomain(): OneTimeUnit {
     val cleanGroup = group.replace("\u00A0", " ").trim().let { if (it.isEmpty() || it == "_") "-" else it }
     val cleanTeacher = teacher.replace("\u00A0", " ").trim().let { if (it.isEmpty() || it == "_") "-" else it }
     val cleanRoom = room.replace("\u00A0", " ").trim().let { if (it.isEmpty() || it == "_") "-" else it }
-    val cleanBuilding = additional.replace("(?i)корпус\\s*|(?i)корп\\.?\\s*".toRegex(), "").replace("\u00A0", " ").trim().let { if (it.isEmpty() || it == "_") "-" else it }
+    val cleanBuilding = additional.replace(BUILDING_REGEX, "").replace("\u00A0", " ").trim().let { if (it.isEmpty() || it == "_") "-" else it }
 
     return OneTimeUnit(
         group = Group(name = cleanGroup, id = cleanGroup),

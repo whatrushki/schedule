@@ -143,6 +143,9 @@ fun main() {
         requestResize = null,
         applyDefaultStyles = true,
         content = {
+            androidx.compose.runtime.LaunchedEffect(Unit) {
+                document.getElementById("app-loader")?.classList?.add("loaded")
+            }
             if (mobileInputService != null) {
                 CompositionLocalProvider(
                     LocalTextInputService provides mobileInputService

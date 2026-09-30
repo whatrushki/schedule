@@ -29,6 +29,11 @@ import kotlinx.datetime.TimeZone
 import kotlinx.datetime.minus
 import kotlinx.datetime.toLocalDateTime
 
+private val WHITESPACE_REGEX = Regex("\\s+")
+private val BR_REGEX = Regex("<br\\s*/?>")
+private val DASH_REGEX = Regex("[-—–]")
+private val HTML_TAG_REGEX = Regex("<.*?>")
+
 object RKSILessonsSchedule {
     val COMMON = listOf(
         LessonTimeDto(1, LocalTime(8, 0), LocalTime(9, 30)),
@@ -106,7 +111,7 @@ class RKSIScheduleClient(
      */
     private fun extractSurnameAndInitials(name: String): String? {
         val trimmed = name.trim().replace('\u00A0', ' ')
-        val parts = trimmed.split("\\s+".toRegex()).filter { it.isNotBlank() }
+        val parts = trimmed.split(WHITESPACE_REGEX).filter { it.isNotBlank() }
         if (parts.isEmpty()) return null
         val surname = normalizeName(parts[0])
         if (parts.size == 1) return surname
@@ -288,17 +293,17 @@ class RKSIScheduleClient(
 
             var lessons = dayElement.getElementsByTag("p").mapNotNull { lessonRaw ->
                 if (lessonRaw.html().contains("href")) return@mapNotNull null
-                val content = lessonRaw.html().split(Regex("<br\\s*/?>"))
+                val content = lessonRaw.html().split(BR_REGEX)
                 if (content.size < 2) return@mapNotNull null
 
-                val timeParts = content[0].split(Regex("[-—–]"))
+                val timeParts = content[0].split(DASH_REGEX)
                 if (timeParts.size < 2) return@mapNotNull null
                 val startTime = try { parseTime(timeParts.first().trim()) } catch (_: Exception) { return@mapNotNull null }
                 val endTime = try { parseTime(timeParts.last().trim()) } catch (_: Exception) { return@mapNotNull null }
-                val subject = content[1].replace("<.*?>".toRegex(), "").trim()
+                val subject = content[1].replace(HTML_TAG_REGEX, "").trim()
 
                 val thirdLine = content.getOrNull(2)?.split(", ")
-                val teacherOrGroup = thirdLine?.firstOrNull()?.replace("<.*?>".toRegex(), "")?.trim() ?: ""
+                val teacherOrGroup = thirdLine?.firstOrNull()?.replace(HTML_TAG_REGEX, "")?.trim() ?: ""
                 val audBuilding = thirdLine?.lastOrNull()?.split(" ")?.lastOrNull()?.split("/") ?: emptyList()
 
                 val aud = if (audBuilding.size > 1) audBuilding.dropLast(1).joinToString("/") else audBuilding.firstOrNull() ?: ""
