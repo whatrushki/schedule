@@ -40,7 +40,8 @@ compose.desktop {
     application {
         mainClass = "app.what.schedule.desktop.MainKt"
         buildTypes.release.proguard {
-            isEnabled.set(false)
+            isEnabled.set(true)
+            configurationFiles.from(project.file("desktop.pro"))
         }
         nativeDistributions {
             targetFormats(
