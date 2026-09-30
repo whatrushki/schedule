@@ -46,7 +46,7 @@
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Математика",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
                         "teacher": "Степанец В.В.",
@@ -102,7 +102,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-01",
@@ -114,14 +114,33 @@
                     {
                         "teacher": "Леонова И.Ю.",
                         "group": "БУ-21",
-                        "room": "41",
+                        "room": "35",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Документационное обеспечение управления",
+                "otUnits": [
+                    {
+                        "teacher": "Селезень И.В.",
+                        "group": "БУ-21",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

@@ -87,6 +87,25 @@
         "lessons": [
             {
                 "date": "2026-10-01",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Селезень И.В.",
+                        "group": "ИБТ-21",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-01",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -140,7 +159,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
