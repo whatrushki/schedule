@@ -68,41 +68,60 @@
         "lessons": [
             {
                 "date": "2026-10-02",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Нохрина Ю.В.",
+                        "group": "БУ-11",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-02",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
                 "subject": "Физика",
                 "otUnits": [
                     {
-                        "teacher": "Нохрина Юлия Валерьевна",
+                        "teacher": "Нохрина Ю.В.",
                         "group": "ТД-13",
-                        "room": "30",
+                        "room": "28",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-02",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Физика",
+                "subject": "Электроника и схемотехника",
                 "otUnits": [
                     {
-                        "teacher": "Нохрина Юлия Валерьевна",
-                        "group": "БУ-11",
-                        "room": "30",
+                        "teacher": "Нохрина Ю.В.",
+                        "group": "ИБА-23",
+                        "room": "28",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

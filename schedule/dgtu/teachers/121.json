@@ -94,7 +94,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сафронов А. Е.",
-                        "group": "ЭЗЛ41, ЭЗЛ42",
+                        "group": "ЭЗЛ42, ЭЗЛ41",
                         "room": "321",
                         "additional": "10",
                         "onlineUrl": null,
@@ -441,7 +441,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сафронов А. Е.",
-                        "group": "БТБ41, БТБ42",
+                        "group": "БТБ42, БТБ41",
                         "room": "039",
                         "additional": "1",
                         "onlineUrl": null,
@@ -630,7 +630,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сафронов А. Е.",
-                        "group": "ЭЛ41, ЭЛ43",
+                        "group": "ЭЛ43, ЭЛ41",
                         "room": "406",
                         "additional": "10",
                         "onlineUrl": null,
@@ -1209,7 +1209,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сафронов А. Е.",
-                        "group": "ЭЛ41, ЭЛ43",
+                        "group": "ЭЛ43, ЭЛ41",
                         "room": "406",
                         "additional": "10",
                         "onlineUrl": null,
@@ -1666,7 +1666,7 @@
                 "otUnits": [
                     {
                         "teacher": "Сафронов А. Е.",
-                        "group": "БТБ41, БТБ42",
+                        "group": "БТБ42, БТБ41",
                         "room": "141",
                         "additional": "8",
                         "onlineUrl": null,
@@ -1894,6 +1894,44 @@
         "lessons": [
             {
                 "date": "2026-10-06",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Управленческая экономика",
+                "otUnits": [
+                    {
+                        "teacher": "Сафронов А. Е.",
+                        "group": "АММФ11",
+                        "room": "314",
+                        "additional": "21",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-06",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Антикризисный менеджмент",
+                "otUnits": [
+                    {
+                        "teacher": "Сафронов А. Е.",
+                        "group": "АММФ21",
+                        "room": "510",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-06",
                 "number": 7,
                 "startTime": "19:30",
                 "endTime": "21:05",
@@ -1931,6 +1969,14 @@
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
+                    },
+                    {
+                        "teacher": "Сафронов А. Е.",
+                        "group": "ЭЛ43",
+                        "room": "527",
+                        "additional": "10",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -1941,13 +1987,40 @@
                 "number": 6,
                 "startTime": "17:45",
                 "endTime": "19:20",
-                "subject": "пр Управление проектами",
+                "subject": "лек Экономическая теория и управление проектами",
                 "otUnits": [
+                    {
+                        "teacher": "Сафронов А. Е.",
+                        "group": "ЭЛ43, ЭЛ41",
+                        "room": "406",
+                        "additional": "10",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Сафронов А. Е.",
                         "group": "БТБ41",
                         "room": "547",
                         "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Экономическая теория и управление проектами",
+                "otUnits": [
+                    {
+                        "teacher": "Сафронов А. Е.",
+                        "group": "ЭЛ41",
+                        "room": "211б",
+                        "additional": "10",
                         "onlineUrl": null,
                         "subject": null
                     }

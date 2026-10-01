@@ -32,7 +32,7 @@
                     {
                         "teacher": "Куракова Г.В.",
                         "group": "ИБА-33",
-                        "room": "47",
+                        "room": "36",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -70,7 +70,7 @@
                     {
                         "teacher": "Куракова Г.В.",
                         "group": "ИБА-33",
-                        "room": "47",
+                        "room": "36",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -85,6 +85,44 @@
         "date": "2026-10-02",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-10-02",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Сети и системы передачи информации",
+                "otUnits": [
+                    {
+                        "teacher": "Гунько Д.Д.",
+                        "group": "ИБА-33",
+                        "room": "323",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Сети и системы передачи информации",
+                "otUnits": [
+                    {
+                        "teacher": "Гунько Д.Д.",
+                        "group": "ИБА-33",
+                        "room": "323",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-10-02",
                 "number": 5,
@@ -102,7 +140,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-02",
@@ -121,7 +159,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

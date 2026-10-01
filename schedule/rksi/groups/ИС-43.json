@@ -68,22 +68,41 @@
         "lessons": [
             {
                 "date": "2026-10-02",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Web-программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Павлова В.А.",
+                        "group": "ИС-43",
+                        "room": "420",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-02",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Математическое моделирование",
+                "subject": "Web-программирование",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян М.М.",
+                        "teacher": "Павлова В.А.",
                         "group": "ИС-43",
-                        "room": "217",
+                        "room": "420",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-02",
@@ -95,14 +114,14 @@
                     {
                         "teacher": "Павлова В.А.",
                         "group": "ИС-43",
-                        "room": "323",
+                        "room": "420",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-02",
@@ -121,7 +140,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

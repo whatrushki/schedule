@@ -87,6 +87,25 @@
         "lessons": [
             {
                 "date": "2026-10-02",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Монтаж и эксплуатация компьютерных сетей",
+                "otUnits": [
+                    {
+                        "teacher": "Комов Е.Ю.",
+                        "group": "ИКС-32",
+                        "room": "306",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-02",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -95,14 +114,14 @@
                     {
                         "teacher": "Комов Е.Ю.",
                         "group": "ИКС-32",
-                        "room": "110а",
+                        "room": "306",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-02",
@@ -141,14 +160,14 @@
                     {
                         "teacher": "Чубарова А.Б.",
                         "group": "ИКС-32",
-                        "room": "106",
+                        "room": "210а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-02",
@@ -167,7 +186,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
