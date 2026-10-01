@@ -259,7 +259,7 @@ jobs:
 
       - name: Build Web Target (Wasm)
         run: |
-          ./gradlew :wasmApp:wasmJsBrowserDistribution || true
+          ./gradlew :wasmApp:wasmJsBrowserDistribution
           mkdir -p release_assets
           DIST_DIR="wasmApp/build/dist/wasmJs/productionExecutable"
           if [ -d "$DIST_DIR" ]; then
