@@ -10,6 +10,17 @@
     <script type="application/javascript" src="schedule-web.js"></script>
 </head>
 <body>
+    <div id="app-loader" class="loader-container">
+        <div class="loader-content">
+            <div class="loader-logo-wrapper">
+                <img src="logo.svg" alt="Schedule" class="loader-logo" width="72" height="72" />
+            </div>
+            <div class="loader-bar-wrapper">
+                <div class="loader-bar"></div>
+            </div>
+            <span class="loader-text">Загрузка расписания...</span>
+        </div>
+    </div>
     <canvas id="ComposeTarget"></canvas>
     <input id="mobile-ime-input"
            type="text"
