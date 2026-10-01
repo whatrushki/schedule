@@ -12,7 +12,7 @@
                 "otUnits": [
                     {
                         "teacher": "Медведева Т. А.",
-                        "group": "ВМО31, ВМО32, ВМО33",
+                        "group": "ВМО33, ВМО31, ВМО32",
                         "room": "283",
                         "additional": "1",
                         "onlineUrl": null,
@@ -226,7 +226,7 @@
                 "otUnits": [
                     {
                         "teacher": "Медведева Т. А.",
-                        "group": "ВМО31, ВМО32, ВМО33",
+                        "group": "ВМО33, ВМО31, ВМО32",
                         "room": "283",
                         "additional": "1",
                         "onlineUrl": null,
@@ -308,7 +308,7 @@
                 "otUnits": [
                     {
                         "teacher": "Медведева Т. А.",
-                        "group": "ВПР31, ВПР32, ВПР33",
+                        "group": "ВПР31, ВПР33, ВПР32",
                         "room": "421",
                         "additional": "1",
                         "onlineUrl": null,
@@ -423,7 +423,7 @@
                 "otUnits": [
                     {
                         "teacher": "Медведева Т. А.",
-                        "group": "ВМО31, ВМО32, ВМО33",
+                        "group": "ВМО33, ВМО31, ВМО32",
                         "room": "283",
                         "additional": "1",
                         "onlineUrl": null,
@@ -467,7 +467,7 @@
                 "otUnits": [
                     {
                         "teacher": "Медведева Т. А.",
-                        "group": "ВПР31, ВПР32, ВПР33",
+                        "group": "ВПР31, ВПР33, ВПР32",
                         "room": "421",
                         "additional": "1",
                         "onlineUrl": null,
@@ -650,7 +650,7 @@
                 "otUnits": [
                     {
                         "teacher": "Медведева Т. А.",
-                        "group": "ВМО31, ВМО32, ВМО33",
+                        "group": "ВМО33, ВМО31, ВМО32",
                         "room": "321",
                         "additional": "8",
                         "onlineUrl": null,
@@ -820,7 +820,7 @@
                 "otUnits": [
                     {
                         "teacher": "Медведева Т. А.",
-                        "group": "ВМО31, ВМО32, ВМО33",
+                        "group": "ВМО33, ВМО31, ВМО32",
                         "room": "321",
                         "additional": "8",
                         "onlineUrl": null,
@@ -917,8 +917,16 @@
                 "number": 7,
                 "startTime": "19:30",
                 "endTime": "21:05",
-                "subject": "лаб Методы и средства анализа данных",
+                "subject": "лаб Машинное обучение",
                 "otUnits": [
+                    {
+                        "teacher": "Медведева Т. А.",
+                        "group": "ВМО31",
+                        "room": "362",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Медведева Т. А.",
                         "group": "МПР21",
@@ -947,8 +955,8 @@
                     {
                         "teacher": "Медведева Т. А.",
                         "group": "ВПР31",
-                        "room": "015",
-                        "additional": "8",
+                        "room": "460а",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -997,31 +1005,6 @@
         ]
     },
     {
-        "date": "2026-10-03",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-03",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Машинное обучение",
-                "otUnits": [
-                    {
-                        "teacher": "Медведева Т. А.",
-                        "group": "ВМО31",
-                        "room": "362",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-06",
         "scheduleType": "COMMON",
         "lessons": [
@@ -1034,7 +1017,7 @@
                 "otUnits": [
                     {
                         "teacher": "Медведева Т. А.",
-                        "group": "ВМО31, ВМО32, ВМО33",
+                        "group": "ВМО33, ВМО31, ВМО32",
                         "room": "321",
                         "additional": "8",
                         "onlineUrl": null,
@@ -1088,6 +1071,25 @@
         "date": "2026-10-07",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-10-07",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Вычислительная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Медведева Т. А.",
+                        "group": "ВПР33",
+                        "room": "211",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-10-07",
                 "number": 5,
@@ -1201,31 +1203,6 @@
                         "group": "ВМО31",
                         "room": "394",
                         "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-10",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-10",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Вычислительная математика",
-                "otUnits": [
-                    {
-                        "teacher": "Медведева Т. А.",
-                        "group": "ВПР33",
-                        "room": "531",
-                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }

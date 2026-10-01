@@ -14,7 +14,9 @@
                         "teacher": "Зуева Н. М.",
                         "group": "ЕВ51",
                         "room": "302а",
-                        "additional": "6"
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -31,7 +33,9 @@
                         "teacher": "Зуева Н. М.",
                         "group": "ЕВ52",
                         "room": "202",
-                        "additional": "6"
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -52,9 +56,11 @@
                 "otUnits": [
                     {
                         "teacher": "Зуева Н. М.",
-                        "group": "ЕВ52, ЕВ51",
+                        "group": "ЕВ51, ЕВ52",
                         "room": "402",
-                        "additional": "6"
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -75,9 +81,11 @@
                 "otUnits": [
                     {
                         "teacher": "Зуева Н. М.",
-                        "group": "ЕВ52, ЕВ51",
+                        "group": "ЕВ51, ЕВ52",
                         "room": "402",
-                        "additional": "6"
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -98,9 +106,80 @@
                 "otUnits": [
                     {
                         "teacher": "Зуева Н. М.",
-                        "group": "ЕВ52, ЕВ51",
+                        "group": "ЕВ51, ЕВ52",
                         "room": "402",
-                        "additional": "6"
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-01",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Инструментальные методы диагностики",
+                "otUnits": [
+                    {
+                        "teacher": "Зуева Н. М.",
+                        "group": "ЕВ51",
+                        "room": "301",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Инструментальные методы диагностики",
+                "otUnits": [
+                    {
+                        "teacher": "Зуева Н. М.",
+                        "group": "ЕВ52",
+                        "room": "505",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-06",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Инструментальные методы диагностики",
+                "otUnits": [
+                    {
+                        "teacher": "Зуева Н. М.",
+                        "group": "ЕВ51, ЕВ52",
+                        "room": "402",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
