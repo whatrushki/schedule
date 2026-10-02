@@ -1,18 +1,37 @@
 [
     {
-        "date": "2026-10-01",
+        "date": "2026-10-07",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-01",
+                "date": "2026-10-07",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Организационное и правовое обеспечение информационной безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Асташевская Анна Владимировна",
+                        "group": "ИБТ-31",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
                 "subject": "Организационное и правовое обеспечение информационной безопасности",
                 "otUnits": [
                     {
-                        "teacher": "Асташевская А.В.",
-                        "group": "ИБТ-32",
+                        "teacher": "Асташевская Анна Владимировна",
+                        "group": "ИБТ-31",
                         "room": "21",
                         "additional": "2",
                         "onlineUrl": null,
@@ -20,17 +39,61 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
+                "state": "COMMON"
             },
             {
-                "date": "2026-10-01",
+                "date": "2026-10-07",
                 "number": 6,
                 "startTime": "16:40",
                 "endTime": "18:10",
                 "subject": "Организационное и правовое обеспечение информационной безопасности",
                 "otUnits": [
                     {
-                        "teacher": "Асташевская А.В.",
+                        "teacher": "Асташевская Анна Владимировна",
+                        "group": "ИБТ-33",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Организационное и правовое обеспечение информационной безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Асташевская Анна Владимировна",
+                        "group": "ИБТ-33",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-09",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Организационное и правовое обеспечение информационной безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Асташевская Анна Владимировна",
                         "group": "ИБТ-32",
                         "room": "21",
                         "additional": "2",
@@ -39,7 +102,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Организационное и правовое обеспечение информационной безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Асташевская Анна Владимировна",
+                        "group": "ИБТ-32",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     }

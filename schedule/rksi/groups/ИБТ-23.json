@@ -32,7 +32,7 @@
                     {
                         "teacher": "Леонова И.Ю.",
                         "group": "ИБТ-23",
-                        "room": "42",
+                        "room": "40",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -51,7 +51,7 @@
                     {
                         "teacher": "Леонова И.Ю.",
                         "group": "ИБТ-23",
-                        "room": "42",
+                        "room": "40",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -71,19 +71,19 @@
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "ФИЗКУЛЬТУРА",
+                "subject": "Безопасность жизнедеятельности",
                 "otUnits": [
                     {
-                        "teacher": "Растороцкий В.В.",
+                        "teacher": "Лютова Л.К",
                         "group": "ИБТ-23",
-                        "room": "с/з2",
+                        "room": "43",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-03",
@@ -95,14 +95,14 @@
                     {
                         "teacher": "Дущенков Д.А.",
                         "group": "ИБТ-23",
-                        "room": "45",
+                        "room": "20",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-03",
@@ -114,14 +114,14 @@
                     {
                         "teacher": "Дущенков Д.А.",
                         "group": "ИБТ-23",
-                        "room": "45",
+                        "room": "20",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-03",
@@ -131,9 +131,435 @@
                 "subject": "Безопасность жизнедеятельности",
                 "otUnits": [
                     {
+                        "teacher": "Лютова Л.К",
+                        "group": "ИБТ-23",
+                        "room": "43",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-05",
+        "scheduleType": "WITH_CLASS_HOUR",
+        "lessons": [
+            {
+                "date": "2026-10-05",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 4,
+                "startTime": "14:10",
+                "endTime": "15:40",
+                "subject": "Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова С.Ю.",
+                        "group": "ИБТ-23",
+                        "room": "43",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:30",
+                "subject": "Социальная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Рыбак Е.Ю.",
+                        "group": "ИБТ-23",
+                        "room": "38",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-06",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "ИБТ-23",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-06",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Электротехника",
+                "otUnits": [
+                    {
+                        "teacher": "Скороходов Г.Ю.",
+                        "group": "ИБТ-23",
+                        "room": "42",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-06",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Электротехника",
+                "otUnits": [
+                    {
+                        "teacher": "Скороходов Г.Ю.",
+                        "group": "ИБТ-23",
+                        "room": "42",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-06",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Электротехника",
+                "otUnits": [
+                    {
+                        "teacher": "Скороходов Г.Ю.",
+                        "group": "ИБТ-23",
+                        "room": "42",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-07",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Электротехника",
+                "otUnits": [
+                    {
+                        "teacher": "Скороходов Г.Ю.",
+                        "group": "ИБТ-23",
+                        "room": "36",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "История",
+                "otUnits": [
+                    {
+                        "teacher": "Упорова Л.В.",
+                        "group": "ИБТ-23",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "История",
+                "otUnits": [
+                    {
+                        "teacher": "Упорова Л.В.",
+                        "group": "ИБТ-23",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "История",
+                "otUnits": [
+                    {
+                        "teacher": "Упорова Л.В.",
+                        "group": "ИБТ-23",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Селезень И.В.",
+                        "group": "ИБТ-23",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Экономика и управление",
+                "otUnits": [
+                    {
+                        "teacher": "Леонова И.Ю.",
+                        "group": "ИБТ-23",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Экономика и управление",
+                "otUnits": [
+                    {
+                        "teacher": "Леонова И.Ю.",
+                        "group": "ИБТ-23",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-09",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Дущенков Д.А.",
+                        "group": "ИБТ-23",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Селезень И.В.",
+                        "group": "ИБТ-23",
+                        "room": "32",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
                         "teacher": "Лютова Л.К.",
                         "group": "ИБТ-23",
-                        "room": "47",
+                        "room": "29",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова А.В.",
+                        "group": "ИБТ-23",
+                        "room": "31",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-10",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова А.В.",
+                        "group": "ИБТ-23",
+                        "room": "31",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Растороцкий В.В.",
+                        "group": "ИБТ-23",
+                        "room": "с/з3",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Дущенков Д.А.",
+                        "group": "ИБТ-23",
+                        "room": "35",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null

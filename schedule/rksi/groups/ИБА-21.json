@@ -95,14 +95,14 @@
                     {
                         "teacher": "Зурова А.Е.",
                         "group": "ИБА-21",
-                        "room": "27",
+                        "room": "21",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-03",
@@ -114,17 +114,134 @@
                     {
                         "teacher": "Зурова А.Е.",
                         "group": "ИБА-21",
-                        "room": "27",
+                        "room": "21",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-03",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Лютова Л.К",
+                        "group": "ИБА-21",
+                        "room": "43",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Швец Н.А.",
+                        "group": "ИБА-21",
+                        "room": "45",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-05",
+        "scheduleType": "WITH_CLASS_HOUR",
+        "lessons": [
+            {
+                "date": "2026-10-05",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Социальная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Арсеньева Е.А.",
+                        "group": "ИБА-21",
+                        "room": "27",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Социальная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Арсеньева Е.А.",
+                        "group": "ИБА-21",
+                        "room": "27",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-06",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "История",
+                "otUnits": [
+                    {
+                        "teacher": "Иванов Д.Н.",
+                        "group": "ИБА-21",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-06",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
@@ -143,16 +260,333 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-03",
+                "date": "2026-10-06",
                 "number": 6,
                 "startTime": "16:40",
                 "endTime": "18:10",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "ИБА-21",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-06",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "ИБА-21",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-07",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Растороцкий В.В.",
+                        "group": "ИБА-21",
+                        "room": "с/з1",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Савченко А.А.",
+                        "group": "ИБА-21",
+                        "room": "38",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "ИБА-21",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Основы информационной безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Шабалта А.В.",
+                        "group": "ИБА-21",
+                        "room": "47",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Основы информационной безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Шабалта А.В.",
+                        "group": "ИБА-21",
+                        "room": "47",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Выполнение работ по профессии 16199 'Оператор вычислительных и электронно-вычислительных машин'",
+                "otUnits": [
+                    {
+                        "teacher": "Дьяченко Е.О.",
+                        "group": "ИБА-21",
+                        "room": "216а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Выполнение работ по профессии 16199 'Оператор вычислительных и электронно-вычислительных машин'",
+                "otUnits": [
+                    {
+                        "teacher": "Дьяченко Е.О.",
+                        "group": "ИБА-21",
+                        "room": "216а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Электроника и схемотехника",
+                "otUnits": [
+                    {
+                        "teacher": "Нохрина Ю.В.",
+                        "group": "ИБА-21",
+                        "room": "114",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-09",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
                 "subject": "Информатика",
                 "otUnits": [
                     {
                         "teacher": "Швец Н.А.",
                         "group": "ИБА-21",
-                        "room": "21",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Бондаренко О.О.",
+                        "group": "ИБА-21",
+                        "room": "36",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Швец Н.А.",
+                        "group": "ИБА-21",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Лютова Л.К.",
+                        "group": "ИБА-21",
+                        "room": "29",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-10",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Бондаренко О.О.",
+                        "group": "ИБА-21",
+                        "room": "27",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Элементы математической логики",
+                "otUnits": [
+                    {
+                        "teacher": "Наскалова О.В.",
+                        "group": "ИБА-21",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "История",
+                "otUnits": [
+                    {
+                        "teacher": "Иванов Д.Н.",
+                        "group": "ИБА-21",
+                        "room": "28",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null

@@ -13,7 +13,7 @@
                     {
                         "teacher": "Леонова И.Ю.",
                         "group": "ИБТ-23",
-                        "room": "42",
+                        "room": "40",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -32,7 +32,7 @@
                     {
                         "teacher": "Леонова И.Ю.",
                         "group": "ИБТ-23",
-                        "room": "42",
+                        "room": "40",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -51,7 +51,7 @@
                     {
                         "teacher": "Леонова И.Ю.",
                         "group": "БУ-21",
-                        "room": "42",
+                        "room": "40",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -74,7 +74,26 @@
                 "subject": "Бизнес планирование",
                 "otUnits": [
                     {
-                        "teacher": "Леонова Ирина Юрьевна",
+                        "teacher": "Леонова И.Ю.",
+                        "group": "БУ-31",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Бизнес планирование",
+                "otUnits": [
+                    {
+                        "teacher": "Леонова И.Ю.",
                         "group": "БУ-31",
                         "room": "41",
                         "additional": "2",
@@ -83,13 +102,57 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-03",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Бизнес планирование",
+                "otUnits": [
+                    {
+                        "teacher": "Леонова И.Ю.",
+                        "group": "БУ-31",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Бизнес планирование",
+                "otUnits": [
+                    {
+                        "teacher": "Леонова И.Ю.",
+                        "group": "БУ-31",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-06",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
                 "subject": "Бизнес планирование",
                 "otUnits": [
                     {
@@ -105,7 +168,177 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-03",
+                "date": "2026-10-06",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Бизнес планирование",
+                "otUnits": [
+                    {
+                        "teacher": "Леонова Ирина Юрьевна",
+                        "group": "БУ-31",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Экономика организации",
+                "otUnits": [
+                    {
+                        "teacher": "Леонова Ирина Юрьевна",
+                        "group": "БУ-21",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Экономика и управление",
+                "otUnits": [
+                    {
+                        "teacher": "Леонова Ирина Юрьевна",
+                        "group": "ИБТ-23",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Экономика и управление",
+                "otUnits": [
+                    {
+                        "teacher": "Леонова Ирина Юрьевна",
+                        "group": "ИБТ-23",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-09",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Экономика организации",
+                "otUnits": [
+                    {
+                        "teacher": "Леонова Ирина Юрьевна",
+                        "group": "БУ-21",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Экономика организации",
+                "otUnits": [
+                    {
+                        "teacher": "Леонова Ирина Юрьевна",
+                        "group": "БУ-22",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Экономика организации",
+                "otUnits": [
+                    {
+                        "teacher": "Леонова Ирина Юрьевна",
+                        "group": "БУ-21",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Экономика организации",
+                "otUnits": [
+                    {
+                        "teacher": "Леонова Ирина Юрьевна",
+                        "group": "БУ-22",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-10",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
@@ -124,7 +357,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-03",
+                "date": "2026-10-10",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",

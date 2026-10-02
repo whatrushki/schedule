@@ -8,7 +8,7 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Предмет не указан",
+                "subject": "УП",
                 "otUnits": [
                     {
                         "teacher": "Згонников Е.Ф.",
@@ -27,7 +27,7 @@
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Предмет не указан",
+                "subject": "УП",
                 "otUnits": [
                     {
                         "teacher": "Згонников Е.Ф.",
@@ -46,7 +46,7 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Предмет не указан",
+                "subject": "УП",
                 "otUnits": [
                     {
                         "teacher": "Згонников Е.Ф.",
@@ -87,6 +87,107 @@
         "lessons": [
             {
                 "date": "2026-10-03",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Згонников Е.Ф.",
+                        "group": "СА-36",
+                        "room": "Общ1-3",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Згонников Е.Ф.",
+                        "group": "СА-36",
+                        "room": "Общ1-1",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Згонников Е.Ф.",
+                        "group": "СА-36",
+                        "room": "Общ1",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "______",
+                        "group": "СА-36",
+                        "room": "вак10",
+                        "additional": "вак10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "REMOVED"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-05",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "______",
+                        "group": "СА-36",
+                        "room": "вак10",
+                        "additional": "вак10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -105,7 +206,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-03",
+                "date": "2026-10-05",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
@@ -122,12 +223,308 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-06",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "______",
+                        "group": "СА-36",
+                        "room": "вак10",
+                        "additional": "вак10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             },
             {
-                "date": "2026-10-03",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "date": "2026-10-06",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "______",
+                        "group": "СА-36",
+                        "room": "вак10",
+                        "additional": "вак10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-06",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "______",
+                        "group": "СА-36",
+                        "room": "вак10",
+                        "additional": "вак10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-07",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "______",
+                        "group": "СА-36",
+                        "room": "вак10",
+                        "additional": "вак10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "______",
+                        "group": "СА-36",
+                        "room": "вак10",
+                        "additional": "вак10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "______",
+                        "group": "СА-36",
+                        "room": "вак10",
+                        "additional": "вак10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "______",
+                        "group": "СА-36",
+                        "room": "вак10",
+                        "additional": "вак10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "______",
+                        "group": "СА-36",
+                        "room": "вак10",
+                        "additional": "вак10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "______",
+                        "group": "СА-36",
+                        "room": "вак10",
+                        "additional": "вак10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-09",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "______",
+                        "group": "СА-36",
+                        "room": "вак10",
+                        "additional": "вак10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "______",
+                        "group": "СА-36",
+                        "room": "вак10",
+                        "additional": "вак10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "______",
+                        "group": "СА-36",
+                        "room": "вак10",
+                        "additional": "вак10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-10",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "______",
+                        "group": "СА-36",
+                        "room": "вак10",
+                        "additional": "вак10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "______",
+                        "group": "СА-36",
+                        "room": "вак10",
+                        "additional": "вак10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
                 "subject": "УП",
                 "otUnits": [
                     {

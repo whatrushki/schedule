@@ -2214,7 +2214,7 @@
                     {
                         "teacher": "Скляров А. В.",
                         "group": "ВКБ42",
-                        "room": "421",
+                        "room": "123",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2294,6 +2294,25 @@
         "lessons": [
             {
                 "date": "2026-10-05",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Методы и средства криптографической защиты информации",
+                "otUnits": [
+                    {
+                        "teacher": "Молодцова А. И.",
+                        "group": "ВКБ42",
+                        "room": "333",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-05",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
@@ -2302,8 +2321,8 @@
                     {
                         "teacher": "Скляров А. В.",
                         "group": "ВКБ42",
-                        "room": "490",
-                        "additional": "1",
+                        "room": "322",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2373,12 +2392,18 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-10-06",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
+                "date": "2026-10-07",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
                 "subject": "лаб Надежность и безопасность программного обеспечения",
                 "otUnits": [
                     {
@@ -2394,16 +2419,16 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-06",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
+                "date": "2026-10-07",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "пр Теория кодирования, сжатия и восстановления информации",
                 "otUnits": [
                     {
                         "teacher": "Молодцова А. И.",
                         "group": "ВКБ42",
-                        "room": "031",
+                        "room": "424",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2411,13 +2436,7 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-07",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
             {
                 "date": "2026-10-07",
                 "number": 4,
@@ -2659,8 +2678,8 @@
                     {
                         "teacher": "Скляров А. В.",
                         "group": "ВКБ42",
-                        "room": "035/1",
-                        "additional": "1",
+                        "room": "422",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2717,25 +2736,6 @@
                         "teacher": "Батурин А. С.",
                         "group": "ВКБ42",
                         "room": "490",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-09",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Методы и средства криптографической защиты информации",
-                "otUnits": [
-                    {
-                        "teacher": "Молодцова А. И.",
-                        "group": "ВКБ42",
-                        "room": "333",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2968,6 +2968,31 @@
                         "group": "ВКБ42",
                         "room": "Шаповалова9",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-19",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-19",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Защита в операционных системах",
+                "otUnits": [
+                    {
+                        "teacher": "Скляров А. В.",
+                        "group": "ВКБ42",
+                        "room": "322",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
