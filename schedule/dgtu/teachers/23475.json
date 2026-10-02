@@ -1329,7 +1329,7 @@
                     {
                         "teacher": "Лапшина Л. С.",
                         "group": "ЕФ21",
-                        "room": "290",
+                        "room": "483",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1367,8 +1367,8 @@
                     {
                         "teacher": "Лапшина Л. С.",
                         "group": "ЕВ13",
-                        "room": "204",
-                        "additional": "6",
+                        "room": "483",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1506,7 +1506,7 @@
                     {
                         "teacher": "Лапшина Л. С.",
                         "group": "АП13",
-                        "room": "484",
+                        "room": "483",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1521,6 +1521,44 @@
         "date": "2026-10-02",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-10-02",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Общая и неорганическая химия, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Лапшина Л. С.",
+                        "group": "ЕФ11",
+                        "room": "480б",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Общая и неорганическая химия, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Лапшина Л. С.",
+                        "group": "ЕФ11",
+                        "room": "506",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-10-02",
                 "number": 5,
@@ -1567,25 +1605,6 @@
         "lessons": [
             {
                 "date": "2026-10-03",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Химия, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Лапшина Л. С.",
-                        "group": "УНИ11",
-                        "room": "489",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-03",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -1595,25 +1614,6 @@
                         "teacher": "Лапшина Л. С.",
                         "group": "ЕФ11",
                         "room": "257",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-03",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Химия, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Лапшина Л. С.",
-                        "group": "УНИ11",
-                        "room": "290",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1769,25 +1769,6 @@
             },
             {
                 "date": "2026-10-06",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Наноматериалы и нанотехнологии в легкой промышленности",
-                "otUnits": [
-                    {
-                        "teacher": "Лапшина Л. С.",
-                        "group": "МКШ31",
-                        "room": "483",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-06",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -1829,8 +1810,16 @@
                 "number": 6,
                 "startTime": "17:45",
                 "endTime": "19:20",
-                "subject": "лаб Химия, п/г 1",
+                "subject": "лаб Наноматериалы и нанотехнологии в легкой промышленности",
                 "otUnits": [
+                    {
+                        "teacher": "Лапшина Л. С.",
+                        "group": "МКШ31",
+                        "room": "484",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Лапшина Л. С.",
                         "group": "УА11",
@@ -1971,6 +1960,44 @@
             },
             {
                 "date": "2026-10-08",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Общая и неорганическая химия, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Лапшина Л. С.",
+                        "group": "ЕФ11",
+                        "room": "485",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Общая и неорганическая химия, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Лапшина Л. С.",
+                        "group": "ЕФ11",
+                        "room": "484",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -2099,107 +2126,6 @@
                     {
                         "teacher": "Лапшина Л. С.",
                         "group": "ЕК11",
-                        "room": "484",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-09",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "лаб Общая и неорганическая химия, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Лапшина Л. С.",
-                        "group": "ЕФ11",
-                        "room": "485",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-10",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-10",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Химия, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Лапшина Л. С.",
-                        "group": "УНИ11",
-                        "room": "485",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-10",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Общая и неорганическая химия, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Лапшина Л. С.",
-                        "group": "ЕФ11",
-                        "room": "483",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-10",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лаб Общая и неорганическая химия, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Лапшина Л. С.",
-                        "group": "ЕФ11",
-                        "room": "483",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-10",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "лаб Общая и неорганическая химия, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Лапшина Л. С.",
-                        "group": "ЕФ11",
                         "room": "484",
                         "additional": "1",
                         "onlineUrl": null,
