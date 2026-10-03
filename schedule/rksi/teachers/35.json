@@ -1,76 +1,13 @@
 [
     {
-        "date": "2026-10-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-02",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Психология общения",
-                "otUnits": [
-                    {
-                        "teacher": "Золотовская М.Ю.",
-                        "group": "ИС-29",
-                        "room": "319",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Социальная психология",
-                "otUnits": [
-                    {
-                        "teacher": "Золотовская М.Ю.",
-                        "group": "ИКС-22",
-                        "room": "319",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Психология общения",
-                "otUnits": [
-                    {
-                        "teacher": "Золотовская М.Ю.",
-                        "group": "ИС-28",
-                        "room": "319",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-10-05",
-        "scheduleType": "COMMON",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
                 "date": "2026-10-05",
                 "number": 1,
                 "startTime": "08:00",
-                "endTime": "09:30",
+                "endTime": "08:50",
                 "subject": "Обществознание",
                 "otUnits": [
                     {
@@ -83,17 +20,17 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-05",
                 "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "Социальная психология",
                 "otUnits": [
                     {
-                        "teacher": "Золотовская Маргарита Юрьевна",
+                        "teacher": "Золотовская М.Ю.",
                         "group": "ИКС-22",
                         "room": "319",
                         "additional": "1",
@@ -102,17 +39,17 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-05",
                 "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
+                "startTime": "12:00",
+                "endTime": "12:50",
                 "subject": "Психология общения",
                 "otUnits": [
                     {
-                        "teacher": "Золотовская Маргарита Юрьевна",
+                        "teacher": "Золотовская М.Ю.",
                         "group": "ИС-29",
                         "room": "319",
                         "additional": "1",
@@ -121,7 +58,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-10-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-02",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Математика",
-                "otUnits": [
-                    {
-                        "teacher": "Марченко С.В.",
-                        "group": "ИБТ-13",
-                        "room": "42",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Информатика",
-                "otUnits": [
-                    {
-                        "teacher": "Швец Н.А.",
-                        "group": "ИБТ-13",
-                        "room": "45",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Доп.занятие",
-                "otUnits": [
-                    {
-                        "teacher": "Шабалта А.В.",
-                        "group": "ИБТ-13",
-                        "room": "31",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-10-03",
         "scheduleType": "COMMON",
         "lessons": [
@@ -154,13 +91,13 @@
     },
     {
         "date": "2026-10-05",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
                 "date": "2026-10-05",
                 "number": 1,
                 "startTime": "08:00",
-                "endTime": "09:30",
+                "endTime": "08:50",
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
@@ -178,8 +115,8 @@
             {
                 "date": "2026-10-05",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "Основы безопасности и защиты Родины",
                 "otUnits": [
                     {
@@ -197,8 +134,8 @@
             {
                 "date": "2026-10-05",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "Химия",
                 "otUnits": [
                     {
@@ -211,16 +148,6 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-05",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "CLASS_HOUR",
                 "state": "COMMON"
             }
         ]
@@ -517,13 +444,13 @@
     },
     {
         "date": "2026-10-10",
-        "scheduleType": "COMMON",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
                 "date": "2026-10-10",
                 "number": 1,
                 "startTime": "08:00",
-                "endTime": "09:30",
+                "endTime": "08:50",
                 "subject": "Математика",
                 "otUnits": [
                     {
@@ -541,8 +468,8 @@
             {
                 "date": "2026-10-10",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
@@ -568,8 +495,8 @@
             {
                 "date": "2026-10-10",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "Физика",
                 "otUnits": [
                     {

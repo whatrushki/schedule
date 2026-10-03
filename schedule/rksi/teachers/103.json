@@ -1,57 +1,13 @@
 [
     {
-        "date": "2026-10-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-02",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Основы безопасности и защиты Родины",
-                "otUnits": [
-                    {
-                        "teacher": "Смирнов Владимир Павлович",
-                        "group": "ИБА-11",
-                        "room": "33",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "REMOVED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Обществознание",
-                "otUnits": [
-                    {
-                        "teacher": "Смирнова Д.В.",
-                        "group": "РУП-13",
-                        "room": "118",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-10-05",
-        "scheduleType": "COMMON",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
                 "date": "2026-10-05",
                 "number": 1,
                 "startTime": "08:00",
-                "endTime": "09:30",
+                "endTime": "08:50",
                 "subject": "Основы безопасности и защиты Родины",
                 "otUnits": [
                     {
@@ -64,32 +20,32 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-05",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Основы безопасности и защиты Родины",
+                "startTime": "09:00",
+                "endTime": "09:50",
+                "subject": "Обществознание",
                 "otUnits": [
                     {
-                        "teacher": "Смирнов Владимир Павлович",
-                        "group": "ИБТ-13",
-                        "room": "17",
-                        "additional": "2",
+                        "teacher": "Смирнова Д.В.",
+                        "group": "РУП-14",
+                        "room": "213",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-05",
                 "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "Безопасность жизнедеятельности",
                 "otUnits": [
                     {
@@ -102,7 +58,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

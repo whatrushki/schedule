@@ -1,138 +1,18 @@
 [
     {
-        "date": "2026-10-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-02",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Корбан С.Н.",
-                        "group": "ИКС-14",
-                        "room": "с/з2",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Корбан Сергей Николаевич",
-                        "group": "ИКС-12",
-                        "room": "с/з2",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "REMOVED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Корбан С.Н.",
-                        "group": "ИС-29",
-                        "room": "с/з6",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Корбан С.Н.",
-                        "group": "ИС-34",
-                        "room": "с/з6",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-10-05",
-        "scheduleType": "COMMON",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
                 "date": "2026-10-05",
                 "number": 1,
                 "startTime": "08:00",
-                "endTime": "09:30",
+                "endTime": "08:50",
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Корбан Сергей Николаевич",
+                        "teacher": "Корбан С.Н.",
                         "group": "ИКС-14",
-                        "room": "с/з2",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-05",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Корбан Сергей Николаевич",
-                        "group": "ИС-28",
-                        "room": "с/з2",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-05",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Корбан Сергей Николаевич",
-                        "group": "ИС-45",
                         "room": "с/з3",
                         "additional": "1",
                         "onlineUrl": null,
@@ -140,7 +20,45 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 2,
+                "startTime": "09:00",
+                "endTime": "09:50",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Корбан С.Н.",
+                        "group": "ИС-28",
+                        "room": "с/з3",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 3,
+                "startTime": "10:00",
+                "endTime": "10:50",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Корбан С.Н.",
+                        "group": "ИС-45",
+                        "room": "с/з2",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },

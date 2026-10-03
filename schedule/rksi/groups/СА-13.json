@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-10-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-02",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Литература",
-                "otUnits": [
-                    {
-                        "teacher": "Рожченко Т.В.",
-                        "group": "СА-13",
-                        "room": "118",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Щербакова Э.Н.",
-                        "group": "СА-13",
-                        "room": "118",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Химия",
-                "otUnits": [
-                    {
-                        "teacher": "Кравченко И.Ю.",
-                        "group": "СА-13",
-                        "room": "411",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-03",
         "scheduleType": "COMMON",
         "lessons": [
@@ -114,7 +51,7 @@
                     {
                         "teacher": "Коникова Е.А.",
                         "group": "СА-13",
-                        "room": "306",
+                        "room": "411",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -127,13 +64,13 @@
     },
     {
         "date": "2026-10-05",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
                 "date": "2026-10-05",
                 "number": 1,
                 "startTime": "08:00",
-                "endTime": "09:30",
+                "endTime": "08:50",
                 "subject": "Биология",
                 "otUnits": [
                     {
@@ -151,50 +88,40 @@
             {
                 "date": "2026-10-05",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "Физика",
                 "otUnits": [
                     {
                         "teacher": "Барна Н.В.",
                         "group": "СА-13",
-                        "room": "326",
+                        "room": "122",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-05",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
                         "teacher": "Щербакова Э.Н.",
                         "group": "СА-13",
-                        "room": "с/з2",
+                        "room": "Общ1-1",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-05",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -248,17 +175,17 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Новосельцева Е.Ф.",
+                        "teacher": "Лебедева М.В.",
                         "group": "СА-13",
-                        "room": "209а",
+                        "room": "320",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Лебедева М.В.",
+                        "teacher": "Новосельцева Е.Ф.",
                         "group": "СА-13",
-                        "room": "320",
+                        "room": "209а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -503,8 +430,8 @@
             {
                 "date": "2026-10-10",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "Дискретная математика с элементами математической логики",
                 "otUnits": [
                     {
@@ -522,8 +449,8 @@
             {
                 "date": "2026-10-10",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "Информатика",
                 "otUnits": [
                     {
@@ -541,8 +468,8 @@
             {
                 "date": "2026-10-10",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "Информатика",
                 "otUnits": [
                     {

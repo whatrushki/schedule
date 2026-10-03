@@ -1,95 +1,5 @@
 [
     {
-        "date": "2026-10-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-02",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Защита информации в информационно-телекоммуникационных системах и сетях с использованием программных и программно-аппаратных средств защиты",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова А.В.",
-                        "group": "ИБТ-41",
-                        "room": "40",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "ИБТ-41",
-                        "room": "32",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Крылова О.В.",
-                        "group": "ИБТ-41",
-                        "room": "34",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Беспалова Н.В.",
-                        "group": "ИБТ-41",
-                        "room": "с/з1",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Беспалова Н.В.",
-                        "group": "ИБТ-41",
-                        "room": "с/з1",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-03",
         "scheduleType": "COMMON",
         "lessons": [
@@ -154,13 +64,13 @@
     },
     {
         "date": "2026-10-05",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
                 "date": "2026-10-05",
                 "number": 1,
                 "startTime": "08:00",
-                "endTime": "09:30",
+                "endTime": "08:50",
                 "subject": "Криптографическая защита информации",
                 "otUnits": [
                     {
@@ -178,8 +88,8 @@
             {
                 "date": "2026-10-05",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "Физическая защита линий связи информационно-телекоммуникационных систем и сетей",
                 "otUnits": [
                     {
@@ -192,16 +102,6 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-05",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "CLASS_HOUR",
                 "state": "COMMON"
             }
         ]
@@ -445,17 +345,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крылова О.В.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ИБТ-41",
-                        "room": "34",
+                        "room": "44",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Крылова О.В.",
                         "group": "ИБТ-41",
-                        "room": "44",
+                        "room": "34",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -468,13 +368,13 @@
     },
     {
         "date": "2026-10-10",
-        "scheduleType": "COMMON",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
                 "date": "2026-10-10",
                 "number": 1,
                 "startTime": "08:00",
-                "endTime": "09:30",
+                "endTime": "08:50",
                 "subject": "Физическая защита линий связи информационно-телекоммуникационных систем и сетей",
                 "otUnits": [
                     {
@@ -492,8 +392,8 @@
             {
                 "date": "2026-10-10",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "Криптографическая защита информации",
                 "otUnits": [
                     {
@@ -511,8 +411,8 @@
             {
                 "date": "2026-10-10",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "Защита информации в информационно-телекоммуникационных системах и сетях с использованием технических средств защиты",
                 "otUnits": [
                     {
@@ -530,8 +430,8 @@
             {
                 "date": "2026-10-10",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "Защита информации в информационно-телекоммуникационных системах и сетях с использованием технических средств защиты",
                 "otUnits": [
                     {

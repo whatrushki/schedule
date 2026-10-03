@@ -1,141 +1,59 @@
 [
     {
-        "date": "2026-10-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-02",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Применение программно- аппаратных средств защиты информации в инфокоммуникационных системах и сетях связи",
-                "otUnits": [
-                    {
-                        "teacher": "Бойнар И.Н.",
-                        "group": "ИКС-41",
-                        "room": "104",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "REMOVED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Планирование и организация работы структурного подразделения",
-                "otUnits": [
-                    {
-                        "teacher": "Згонникова Т.Ф.",
-                        "group": "ИКС-41",
-                        "room": "318",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Технология монтажа и настройки абонентского оборудования",
-                "otUnits": [
-                    {
-                        "teacher": "Ермолина Л.В.",
-                        "group": "ИКС-41",
-                        "room": "114а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Технология монтажа и настройки абонентского оборудования",
-                "otUnits": [
-                    {
-                        "teacher": "Ермолина Л.В.",
-                        "group": "ИКС-41",
-                        "room": "114а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            }
-        ]
-    },
-    {
         "date": "2026-10-05",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
                 "date": "2026-10-05",
                 "number": 1,
                 "startTime": "08:00",
-                "endTime": "09:30",
+                "endTime": "08:50",
                 "subject": "Применение программно- аппаратных средств защиты информации в инфокоммуникационных системах и сетях связи",
                 "otUnits": [
                     {
                         "teacher": "Бойнар И.Н.",
                         "group": "ИКС-41",
-                        "room": "306",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-05",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Чубарова А.Б.",
+                        "teacher": "Новосельцева Е.Ф.",
                         "group": "ИКС-41",
-                        "room": "106",
+                        "room": "216а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Новосельцева Е.Ф.",
+                        "teacher": "Чубарова А.Б.",
                         "group": "ИКС-41",
-                        "room": "209а",
+                        "room": "Библиотека",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-05",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "Монтаж и обслуживание оптических систем передачи транспортных сетей",
                 "otUnits": [
                     {
@@ -152,19 +70,9 @@
             },
             {
                 "date": "2026-10-05",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "CLASS_HOUR",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-05",
                 "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "Технология монтажа и настройки абонентского оборудования",
                 "otUnits": [
                     {

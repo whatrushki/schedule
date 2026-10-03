@@ -1,56 +1,56 @@
 [
     {
-        "date": "2026-10-02",
-        "scheduleType": "COMMON",
+        "date": "2026-10-05",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
-                "date": "2026-10-02",
+                "date": "2026-10-05",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "08:50",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Махаева П.А.",
+                        "group": "ТЭС-11",
+                        "room": "с/з2",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 2,
+                "startTime": "09:00",
+                "endTime": "09:50",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Махаева П.А.",
+                        "group": "СА-11",
+                        "room": "с/з2",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-05",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
                         "teacher": "Махаева П.А.",
-                        "group": "СА-43",
-                        "room": "с/з2",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Махаева П.А.",
-                        "group": "СА-33",
-                        "room": "с/з2",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Махаева П.А.",
-                        "group": "СА-41",
+                        "group": "ИКС-21",
                         "room": "с/з3",
                         "additional": "1",
                         "onlineUrl": null,
@@ -59,79 +59,16 @@
                 ],
                 "type": "COMMON",
                 "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-05",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-05",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Махаева Полина Анатольевна",
-                        "group": "ТЭС-11",
-                        "room": "с/з1",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-05",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Махаева Полина Анатольевна",
-                        "group": "СА-11",
-                        "room": "с/з1",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-05",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Махаева Полина Анатольевна",
-                        "group": "ИКС-21",
-                        "room": "с/з1",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             },
             {
                 "date": "2026-10-05",
                 "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Махаева Полина Анатольевна",
+                        "teacher": "Махаева П.А.",
                         "group": "ИКС-31",
                         "room": "с/з2",
                         "additional": "1",
@@ -140,26 +77,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-05",
                 "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
+                "startTime": "12:00",
+                "endTime": "12:50",
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Махаева Полина Анатольевна",
+                        "teacher": "Махаева П.А.",
                         "group": "СА-33",
-                        "room": "с/з1",
+                        "room": "с/з2",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

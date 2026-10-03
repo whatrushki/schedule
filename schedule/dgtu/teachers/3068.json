@@ -360,25 +360,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 0,
-                "startTime": "13:35",
-                "endTime": "14:15",
-                "subject": "Ликвидация академических задолженностей",
-                "otUnits": [
-                    {
-                        "teacher": "Корянова Ю. И.",
-                        "group": "",
-                        "room": "712",
-                        "additional": "26",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "UNKNOWN",
-                "state": "COMMON"
             }
         ]
     },
@@ -432,6 +413,25 @@
         "lessons": [
             {
                 "date": "2026-10-06",
+                "number": 0,
+                "startTime": "11:30",
+                "endTime": "12:00",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Корянова Ю. И.",
+                        "group": "",
+                        "room": "712",
+                        "additional": "26",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "UNKNOWN",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-06",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -448,24 +448,68 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-10-10",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-10-06",
-                "number": 0,
-                "startTime": "13:35",
-                "endTime": "14:15",
-                "subject": "Ликвидация академических задолженностей",
+                "date": "2026-10-10",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Технологическая и организационная документация в строительстве",
                 "otUnits": [
                     {
                         "teacher": "Корянова Ю. И.",
-                        "group": "",
-                        "room": "712",
+                        "group": "АМТОС11",
+                        "room": "401",
                         "additional": "26",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "UNKNOWN",
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Технологическая и организационная документация в строительстве",
+                "otUnits": [
+                    {
+                        "teacher": "Корянова Ю. И.",
+                        "group": "АМТОС11",
+                        "room": "401",
+                        "additional": "26",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Технологическая и организационная документация в строительстве",
+                "otUnits": [
+                    {
+                        "teacher": "Корянова Ю. И.",
+                        "group": "АМТОС11",
+                        "room": "401",
+                        "additional": "26",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
                 "state": "COMMON"
             }
         ]

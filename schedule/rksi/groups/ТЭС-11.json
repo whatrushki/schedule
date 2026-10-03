@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-10-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-02",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Основы работы с информацией",
-                "otUnits": [
-                    {
-                        "teacher": "Токарева Ю.А.",
-                        "group": "ТЭС-11",
-                        "room": "214",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Индивидуальный проект",
-                "otUnits": [
-                    {
-                        "teacher": "Бакулярова И.Н.",
-                        "group": "ТЭС-11",
-                        "room": "214",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Информатика",
-                "otUnits": [
-                    {
-                        "teacher": "Арутюнян М.А.",
-                        "group": "ТЭС-11",
-                        "room": "314",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-10-03",
         "scheduleType": "COMMON",
         "lessons": [
@@ -76,14 +13,14 @@
                     {
                         "teacher": "Иваненков П.П.",
                         "group": "ТЭС-11",
-                        "room": "404",
+                        "room": "418",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-03",
@@ -95,14 +32,14 @@
                     {
                         "teacher": "Иваненков П.П.",
                         "group": "ТЭС-11",
-                        "room": "404",
+                        "room": "318",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-03",
@@ -127,93 +64,83 @@
     },
     {
         "date": "2026-10-05",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
                 "date": "2026-10-05",
                 "number": 1,
                 "startTime": "08:00",
-                "endTime": "09:30",
+                "endTime": "08:50",
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
                         "teacher": "Махаева П.А.",
                         "group": "ТЭС-11",
-                        "room": "с/з1",
+                        "room": "с/з2",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-05",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "Химия",
                 "otUnits": [
                     {
                         "teacher": "Троилина В.С.",
                         "group": "ТЭС-11",
-                        "room": "103",
+                        "room": "114",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-05",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "Русский язык",
                 "otUnits": [
                     {
                         "teacher": "Смолянинова В.А.",
                         "group": "ТЭС-11",
-                        "room": "406",
+                        "room": "410",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-05",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-05",
                 "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "Информатика",
                 "otUnits": [
                     {
                         "teacher": "Арутюнян М.А.",
                         "group": "ТЭС-11",
-                        "room": "110",
+                        "room": "314",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -498,13 +425,13 @@
     },
     {
         "date": "2026-10-10",
-        "scheduleType": "COMMON",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
                 "date": "2026-10-10",
                 "number": 1,
                 "startTime": "08:00",
-                "endTime": "09:30",
+                "endTime": "08:50",
                 "subject": "Информатика",
                 "otUnits": [
                     {
@@ -522,8 +449,8 @@
             {
                 "date": "2026-10-10",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "Физика",
                 "otUnits": [
                     {
@@ -541,8 +468,8 @@
             {
                 "date": "2026-10-10",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "Физика",
                 "otUnits": [
                     {

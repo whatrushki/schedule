@@ -1,76 +1,5 @@
 [
     {
-        "date": "2026-10-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-02",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Основы программирования беспилотных летательных аппаратов",
-                "otUnits": [
-                    {
-                        "teacher": "Сулавко С.Н.",
-                        "group": "ИС-32",
-                        "room": "415",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Прыгунова Т.А.",
-                        "group": "ИС-32",
-                        "room": "320",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Лебедева М.В.",
-                        "group": "ИС-32",
-                        "room": "307",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Системное программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Кошкина А.А.",
-                        "group": "ИС-32",
-                        "room": "Общ1-3",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-10-03",
         "scheduleType": "COMMON",
         "lessons": [
@@ -103,7 +32,7 @@
                     {
                         "teacher": "Черевко А.Д.",
                         "group": "ИС-32",
-                        "room": "Общ1-4",
+                        "room": "Общ1-1",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -135,13 +64,13 @@
     },
     {
         "date": "2026-10-05",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "scheduleType": "COMMON",
         "lessons": [
             {
                 "date": "2026-10-05",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "Правовое обеспечение профессиональной деятельности",
                 "otUnits": [
                     {
@@ -154,65 +83,55 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-05",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "CLASS_HOUR",
                 "state": "COMMON"
             },
             {
                 "date": "2026-10-05",
                 "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "Разработка мобильных приложений",
                 "otUnits": [
                     {
                         "teacher": "Черевко А.Д.",
                         "group": "ИС-32",
-                        "room": "406",
+                        "room": "Общ1-3",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-05",
                 "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
+                "startTime": "12:00",
+                "endTime": "12:50",
                 "subject": "Системное программирование",
                 "otUnits": [
                     {
                         "teacher": "Кошкина А.А.",
                         "group": "ИС-32",
-                        "room": "306",
+                        "room": "Общ1-2",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-05",
                 "number": 6,
-                "startTime": "17:40",
-                "endTime": "19:10",
+                "startTime": "13:00",
+                "endTime": "13:50",
                 "subject": "Правовое обеспечение профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Куракова Г.В.",
+                        "teacher": "Куракова Г.В.,",
                         "group": "ИС-32",
                         "room": "404",
                         "additional": "1",
@@ -221,7 +140,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -445,17 +364,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Лебедева М.В.",
                         "group": "ИС-32",
-                        "room": "104",
+                        "room": "320",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Лебедева М.В.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "ИС-32",
-                        "room": "320",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -492,8 +411,8 @@
             {
                 "date": "2026-10-10",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "Разработка программных модулей",
                 "otUnits": [
                     {
@@ -511,8 +430,8 @@
             {
                 "date": "2026-10-10",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "12:00",
+                "endTime": "12:50",
                 "subject": "Разработка мобильных приложений",
                 "otUnits": [
                     {

@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-10-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-02",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Гвоздецкая Г.И.",
-                        "group": "СА-15",
-                        "room": "114а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Гвоздецкая Г.И.",
-                        "group": "СА-15",
-                        "room": "114",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Доп.занятие",
-                "otUnits": [
-                    {
-                        "teacher": "Путинцева Ю.М.",
-                        "group": "СА-15",
-                        "room": "316",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Доп.занятие",
-                "otUnits": [
-                    {
-                        "teacher": "Путинцева Ю.М.",
-                        "group": "СА-15",
-                        "room": "216",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-10-03",
         "scheduleType": "COMMON",
         "lessons": [
@@ -146,59 +64,59 @@
     },
     {
         "date": "2026-10-05",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
                 "date": "2026-10-05",
                 "number": 1,
                 "startTime": "08:00",
-                "endTime": "09:30",
+                "endTime": "08:50",
                 "subject": "Математика",
                 "otUnits": [
                     {
                         "teacher": "Путинцева Ю.М.",
                         "group": "СА-15",
-                        "room": "305",
+                        "room": "318",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-05",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "СА-15",
-                        "room": "315а",
+                        "room": "319",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Черноштан О.Н.",
                         "group": "СА-15",
-                        "room": "111",
+                        "room": "320",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-05",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "Физика",
                 "otUnits": [
                     {
@@ -211,16 +129,6 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-05",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "CLASS_HOUR",
                 "state": "COMMON"
             }
         ]
@@ -517,13 +425,13 @@
     },
     {
         "date": "2026-10-10",
-        "scheduleType": "COMMON",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
                 "date": "2026-10-10",
                 "number": 1,
                 "startTime": "08:00",
-                "endTime": "09:30",
+                "endTime": "08:50",
                 "subject": "История",
                 "otUnits": [
                     {
@@ -541,8 +449,8 @@
             {
                 "date": "2026-10-10",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "Литература",
                 "otUnits": [
                     {
@@ -560,8 +468,8 @@
             {
                 "date": "2026-10-10",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {

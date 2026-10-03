@@ -1,95 +1,5 @@
 [
     {
-        "date": "2026-10-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-02",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Стандартизация, сертификация и техническое документоведение",
-                "otUnits": [
-                    {
-                        "teacher": "Романенко Е.Л.",
-                        "group": "СА-27",
-                        "room": "418",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Прыгунова Т.А.",
-                        "group": "СА-27",
-                        "room": "320",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Лебедева М.В.",
-                        "group": "СА-27",
-                        "room": "307",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Операционные системы и среды",
-                "otUnits": [
-                    {
-                        "teacher": "Ляшенко П.А.",
-                        "group": "СА-27",
-                        "room": "110а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Дискретная математика с элементами математической логики",
-                "otUnits": [
-                    {
-                        "teacher": "Долгополая А.С.",
-                        "group": "СА-27",
-                        "room": "114",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-10-03",
         "scheduleType": "COMMON",
         "lessons": [
@@ -154,93 +64,83 @@
     },
     {
         "date": "2026-10-05",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "scheduleType": "COMMON",
         "lessons": [
             {
                 "date": "2026-10-05",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "Основы финансовой грамотности",
                 "otUnits": [
                     {
                         "teacher": "Котова Т.И.",
                         "group": "СА-27",
-                        "room": "314",
+                        "room": "Библиотека",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-05",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-05",
                 "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Элементы высшей математики",
+                "startTime": "11:00",
+                "endTime": "11:50",
+                "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Зимовейская В.А.",
+                        "teacher": "Щербакова Э.Н.",
                         "group": "СА-27",
-                        "room": "210",
+                        "room": "с/з3",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-05",
                 "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
+                "startTime": "12:00",
+                "endTime": "12:50",
                 "subject": "Основы финансовой грамотности",
                 "otUnits": [
                     {
                         "teacher": "Котова Т.И.",
                         "group": "СА-27",
-                        "room": "314",
+                        "room": "310",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-05",
                 "number": 6,
-                "startTime": "17:40",
-                "endTime": "19:10",
-                "subject": "Элементы высшей математики",
+                "startTime": "13:00",
+                "endTime": "13:50",
+                "subject": "Дискретная математика с элементами математической логики",
                 "otUnits": [
                     {
-                        "teacher": "Зимовейская В.А.",
+                        "teacher": "Долгополая А.С.",
                         "group": "СА-27",
-                        "room": "210",
+                        "room": "420",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -464,17 +364,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Лебедева М.В.",
                         "group": "СА-27",
-                        "room": "104",
+                        "room": "320",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Лебедева М.В.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "СА-27",
-                        "room": "320",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -549,8 +449,8 @@
             {
                 "date": "2026-10-10",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "Операционные системы и среды",
                 "otUnits": [
                     {
@@ -568,8 +468,8 @@
             {
                 "date": "2026-10-10",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "Операционные системы и среды",
                 "otUnits": [
                     {

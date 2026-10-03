@@ -1,18 +1,37 @@
 [
     {
-        "date": "2026-10-02",
-        "scheduleType": "COMMON",
+        "date": "2026-10-05",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
-                "date": "2026-10-02",
+                "date": "2026-10-05",
                 "number": 1,
                 "startTime": "08:00",
-                "endTime": "09:30",
+                "endTime": "08:50",
                 "subject": "Основы безопасности и защиты Родины",
                 "otUnits": [
                     {
                         "teacher": "Рыбальченко Т.Б.",
-                        "group": "ИКС-13",
+                        "group": "РУП-11",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-05",
+                "number": 3,
+                "startTime": "10:00",
+                "endTime": "10:50",
+                "subject": "Основы безопасности и защиты Родины",
+                "otUnits": [
+                    {
+                        "teacher": "Рыбальченко Т.Б.",
+                        "group": "ИКС-12",
                         "room": "210",
                         "additional": "1",
                         "onlineUrl": null,
@@ -21,69 +40,6 @@
                 ],
                 "type": "COMMON",
                 "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Основы безопасности и защиты Родины",
-                "otUnits": [
-                    {
-                        "teacher": "Рыбальченко Т.Б.",
-                        "group": "ИКС-11",
-                        "room": "305",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-05",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-05",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Основы безопасности и защиты Родины",
-                "otUnits": [
-                    {
-                        "teacher": "Рыбальченко Татьяна Борисовна",
-                        "group": "РУП-11",
-                        "room": "307",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-05",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Основы безопасности и защиты Родины",
-                "otUnits": [
-                    {
-                        "teacher": "Рыбальченко Татьяна Борисовна",
-                        "group": "ИКС-12",
-                        "room": "319",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },

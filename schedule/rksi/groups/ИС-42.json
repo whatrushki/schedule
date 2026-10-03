@@ -1,49 +1,5 @@
 [
     {
-        "date": "2026-10-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-02",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Математическое моделирование",
-                "otUnits": [
-                    {
-                        "teacher": "Арутюнян А.Э.",
-                        "group": "ИС-42",
-                        "room": "418",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Инструментальные средства разработки программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "Черевко А.Д.",
-                        "group": "ИС-42",
-                        "room": "Общ1-2",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-10-03",
         "scheduleType": "COMMON",
         "lessons": [
@@ -108,13 +64,13 @@
     },
     {
         "date": "2026-10-05",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "scheduleType": "COMMON",
         "lessons": [
             {
                 "date": "2026-10-05",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "Технология разработки и защиты баз данных",
                 "otUnits": [
                     {
@@ -131,32 +87,22 @@
             },
             {
                 "date": "2026-10-05",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "CLASS_HOUR",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-05",
                 "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "Информационная безопасность",
                 "otUnits": [
                     {
                         "teacher": "Бойнар И.Н.",
                         "group": "ИС-42",
-                        "room": "310",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -427,8 +373,8 @@
             {
                 "date": "2026-10-10",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "Web-программирование",
                 "otUnits": [
                     {
@@ -446,8 +392,8 @@
             {
                 "date": "2026-10-10",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "Web-программирование",
                 "otUnits": [
                     {
@@ -465,8 +411,8 @@
             {
                 "date": "2026-10-10",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "Web-программирование",
                 "otUnits": [
                     {
@@ -484,8 +430,8 @@
             {
                 "date": "2026-10-10",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "12:00",
+                "endTime": "12:50",
                 "subject": "Бизнес-аналитика",
                 "otUnits": [
                     {
