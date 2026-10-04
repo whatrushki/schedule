@@ -1196,7 +1196,7 @@
                     {
                         "teacher": "Князев С. Ю.",
                         "group": "УА11",
-                        "room": "374",
+                        "room": "305",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1211,6 +1211,25 @@
         "date": "2026-10-02",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-10-02",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Разработка документации проекта автоматизации",
+                "otUnits": [
+                    {
+                        "teacher": "Дудинов И. О.",
+                        "group": "УА11",
+                        "room": "406",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-10-02",
                 "number": 2,
@@ -1251,16 +1270,16 @@
             },
             {
                 "date": "2026-10-02",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Химия, п/г 1",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Высшая математика",
                 "otUnits": [
                     {
-                        "teacher": "Лапшина Л. С.",
+                        "teacher": "Князев С. Ю.",
                         "group": "УА11",
-                        "room": "489",
-                        "additional": "1",
+                        "room": "322",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1270,15 +1289,15 @@
             },
             {
                 "date": "2026-10-02",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "пр Высшая математика",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Химия, п/г 1",
                 "otUnits": [
                     {
-                        "teacher": "Князев С. Ю.",
+                        "teacher": "Лапшина Л. С.",
                         "group": "УА11",
-                        "room": "105",
+                        "room": "489",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1317,12 +1336,12 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лаб Инженерная и компьютерная графика",
+                "subject": "лек История  России",
                 "otUnits": [
                     {
-                        "teacher": "Метелькова Н. В.",
+                        "teacher": "Акулич Т. В.",
                         "group": "УА11",
-                        "room": "304",
+                        "room": "402",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -1336,13 +1355,21 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "пр Разработка документации проекта автоматизации",
+                "subject": "лаб Инженерная и компьютерная графика, п/г 1",
                 "otUnits": [
                     {
-                        "teacher": "Дудинов И. О.",
+                        "teacher": "Партко С. А.",
                         "group": "УА11",
-                        "room": "418",
-                        "additional": "8",
+                        "room": "445",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Метелькова Н. В.",
+                        "group": "УА11",
+                        "room": "021",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1361,25 +1388,6 @@
                         "teacher": "Шумилина А. Б.",
                         "group": "УА11",
                         "room": "420",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-03",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек История  России",
-                "otUnits": [
-                    {
-                        "teacher": "Акулич Т. В.",
-                        "group": "УА11",
-                        "room": "224",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -1677,6 +1685,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Новикова А. А.",
+                        "group": "УА11",
+                        "room": "478",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -1737,25 +1764,6 @@
                 "otUnits": [
                     {
                         "teacher": "Князев С. Ю.",
-                        "group": "УА11",
-                        "room": "478",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-10",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Химия",
-                "otUnits": [
-                    {
-                        "teacher": "Новикова А. А.",
                         "group": "УА11",
                         "room": "478",
                         "additional": "1",
