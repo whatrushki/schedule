@@ -1072,7 +1072,7 @@
                     {
                         "teacher": "Мануйлова Н. С.",
                         "group": "ВПМ11",
-                        "room": "403",
+                        "room": "433",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1211,8 +1211,8 @@
                     {
                         "teacher": "Сорокин Г. В.",
                         "group": "ВПМ11",
-                        "room": "460",
-                        "additional": "1",
+                        "room": "318",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1230,8 +1230,8 @@
                     {
                         "teacher": "Горбач С. Р.",
                         "group": "ВПМ11",
-                        "room": "143",
-                        "additional": "1",
+                        "room": "142",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1247,16 +1247,35 @@
         "lessons": [
             {
                 "date": "2026-10-03",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Русский язык как иностранный",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова М. В.",
+                        "group": "ВПМ11",
+                        "room": "273",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-03",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Иностранный язык (английский), п/г 2",
+                "subject": "пр Русский язык как иностранный",
                 "otUnits": [
                     {
-                        "teacher": "Сиволобова А. А.",
+                        "teacher": "Кузнецова М. В.",
                         "group": "ВПМ11",
-                        "room": "141",
-                        "additional": "8",
+                        "room": "273",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1395,12 +1414,12 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "пр Основы российской государственности",
+                "subject": "пр Линейная алгебра и аналитическая геометрия",
                 "otUnits": [
                     {
-                        "teacher": "Сорокин Г. В.",
+                        "teacher": "Коленникова Н. В.",
                         "group": "ВПМ11",
-                        "room": "419",
+                        "room": "130",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1445,6 +1464,44 @@
                         "teacher": "Горбунова Л. Н.",
                         "group": "ВПМ11",
                         "room": "384",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Иностранный язык (английский), п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Сиволобова А. А.",
+                        "group": "ВПМ11",
+                        "room": "406",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-07",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Сорокин Г. В.",
+                        "group": "ВПМ11",
+                        "room": "419",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1541,25 +1598,6 @@
         "date": "2026-10-09",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-10-09",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Линейная алгебра и аналитическая геометрия",
-                "otUnits": [
-                    {
-                        "teacher": "Коленникова Н. В.",
-                        "group": "ВПМ11",
-                        "room": "130",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-10-09",
                 "number": 2,
