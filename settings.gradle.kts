@@ -63,6 +63,7 @@ include(":libs:schedule:sfedu")
 include(":libs:schedule:rgups")
 include(":libs:schedule:rgups_tuapse")
 include(":libs:schedule:tvgu")
+include(":libs:schedule:archive")
 
 include(":tools:schedule-sync")
 include(":desktopApp")

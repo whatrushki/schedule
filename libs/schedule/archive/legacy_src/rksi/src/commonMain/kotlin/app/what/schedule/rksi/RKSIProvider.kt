@@ -1,0 +1,49 @@
+package app.what.schedule.rksi
+
+import app.what.schedule.core.cache.FileCache
+import app.what.schedule.core.cache.NoOpFileCache
+import app.what.schedule.core.clients.InstitutionProvider
+import app.what.schedule.core.clients.NewsClient
+import app.what.schedule.core.clients.ScheduleClient
+import app.what.schedule.core.models.InstitutionMetaDto
+import app.what.schedule.core.models.SourceTypeDto
+import io.ktor.client.HttpClient
+
+import app.what.schedule.rksi.parser.XlsxReader
+
+class RKSIProvider(
+    client: HttpClient,
+    fileCache: FileCache = NoOpFileCache(),
+    baseUrl: String = "https://rksi.ru",
+    xlsxReader: XlsxReader? = null,
+    log: ((String) -> Unit)? = null
+) : InstitutionProvider {
+
+    override val metadata: InstitutionMetaDto = InstitutionMetaDto(
+        id = "rksi",
+        name = "РКСИ",
+        fullName = "Ростовский-на-Дону Колледж Связи и Информатики",
+        description = "Ростовский-на-Дону Колледж Связи и Информатики",
+        sourceTypes = setOf(SourceTypeDto.PARSER, SourceTypeDto.EXCEL),
+        sourceUrl = "https://rksi.ru/mobile_schedule",
+        hasAccountService = true
+    )
+
+    override val scheduleClient: ScheduleClient = RKSIScheduleClient(
+        client = client,
+        baseUrl = baseUrl,
+        fileCache = fileCache,
+        xlsxReader = xlsxReader,
+        log = log
+    )
+
+    override val newsClient: NewsClient = RKSINewsClient(
+        client = client,
+        baseUrl = baseUrl
+    )
+
+    val accountClient: RKSIAccountClient = RKSIAccountClient(
+        client = client,
+        baseUrl = baseUrl
+    )
+}

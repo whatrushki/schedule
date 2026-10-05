@@ -1,0 +1,548 @@
+package app.what.schedule.rksi
+
+import app.what.schedule.core.cache.FileCache
+import app.what.schedule.core.cache.NoOpFileCache
+import app.what.schedule.core.clients.ScheduleClient
+import app.what.schedule.core.models.*
+import app.what.schedule.rksi.parser.RKSIGoogleDriveParser
+import app.what.schedule.rksi.parser.RKSIReplacementsParser
+import app.what.schedule.rksi.parser.XlsxReader
+import app.what.schedule.rksi.parser.files
+import app.what.schedule.rksi.parser.folders
+import com.fleeksoft.ksoup.Ksoup
+import io.ktor.client.HttpClient
+import io.ktor.client.request.get
+import io.ktor.client.statement.bodyAsText
+import io.ktor.client.statement.readRawBytes
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
+import kotlinx.coroutines.withTimeoutOrNull
+import kotlinx.datetime.Clock
+import kotlinx.datetime.DateTimeUnit
+import kotlinx.datetime.LocalDate
+import kotlinx.datetime.LocalTime
+import kotlinx.datetime.TimeZone
+import kotlinx.datetime.minus
+import kotlinx.datetime.toLocalDateTime
+
+private val WHITESPACE_REGEX = Regex("\\s+")
+private val BR_REGEX = Regex("<br\\s*/?>")
+private val DASH_REGEX = Regex("[-—–]")
+private val HTML_TAG_REGEX = Regex("<.*?>")
+
+object RKSILessonsSchedule {
+    val COMMON = listOf(
+        LessonTimeDto(1, LocalTime(8, 0), LocalTime(9, 30)),
+        LessonTimeDto(2, LocalTime(9, 40), LocalTime(11, 10)),
+        LessonTimeDto(3, LocalTime(11, 30), LocalTime(13, 0)),
+        LessonTimeDto(4, LocalTime(13, 10), LocalTime(14, 40)),
+        LessonTimeDto(5, LocalTime(15, 0), LocalTime(16, 30)),
+        LessonTimeDto(6, LocalTime(16, 40), LocalTime(18, 10)),
+        LessonTimeDto(7, LocalTime(18, 20), LocalTime(19, 50))
+    )
+
+    val SHORTENED = listOf(
+        LessonTimeDto(1, LocalTime(8, 0), LocalTime(8, 50)),
+        LessonTimeDto(2, LocalTime(9, 0), LocalTime(9, 50)),
+        LessonTimeDto(3, LocalTime(10, 0), LocalTime(10, 50)),
+        LessonTimeDto(4, LocalTime(11, 0), LocalTime(11, 50)),
+        LessonTimeDto(5, LocalTime(12, 0), LocalTime(12, 50)),
+        LessonTimeDto(6, LocalTime(13, 0), LocalTime(13, 50)),
+        LessonTimeDto(7, LocalTime(14, 0), LocalTime(14, 50))
+    )
+
+    val WITH_CLASS_HOUR = listOf(
+        LessonTimeDto(1, LocalTime(8, 0), LocalTime(9, 30)),
+        LessonTimeDto(2, LocalTime(9, 40), LocalTime(11, 10)),
+        LessonTimeDto(3, LocalTime(11, 30), LocalTime(13, 0)),
+        LessonTimeDto(0, LocalTime(13, 5), LocalTime(14, 5)),
+        LessonTimeDto(4, LocalTime(14, 10), LocalTime(15, 40)),
+        LessonTimeDto(5, LocalTime(16, 0), LocalTime(17, 30)),
+        LessonTimeDto(6, LocalTime(17, 40), LocalTime(19, 10))
+    )
+}
+
+class RKSIScheduleClient(
+    private val client: HttpClient,
+    private val baseUrl: String = "https://rksi.ru",
+    private val googleDriveParser: RKSIGoogleDriveParser = RKSIGoogleDriveParser(client),
+    private val fileCache: FileCache = NoOpFileCache(),
+    private val xlsxReader: XlsxReader? = null,
+    private val log: ((String) -> Unit)? = null
+) : ScheduleClient {
+
+    private val months = listOf(
+        "января", "февраля", "марта", "апреля", "мая", "июня",
+        "июля", "августа", "сентября", "октября", "ноября", "декабря"
+    )
+
+    private fun parseMonth(month: String): Int = months.indexOfFirst { it.startsWith(month.take(3), ignoreCase = true) } + 1
+
+    private fun parseTime(time: String): LocalTime {
+        val parts = time.split(":").map { it.trim().toInt() }
+        return LocalTime(parts[0], parts[1])
+    }
+
+    private fun normalizeName(name: String): String = name
+        .replace('\u00A0', ' ')  // non-breaking space
+        .replace(" ", "")
+        .replace("-", "")
+        .replace("—", "")
+        .replace("–", "")
+        .replace(".", "")
+        .replace("c", "с", ignoreCase = true)
+        .replace("a", "а", ignoreCase = true)
+        .replace("e", "е", ignoreCase = true)
+        .replace("o", "о", ignoreCase = true)
+        .replace("p", "р", ignoreCase = true)
+        .replace("x", "х", ignoreCase = true)
+        .trim()
+        .lowercase()
+
+    /**
+     * Извлекает фамилию и инициалы из имени преподавателя.
+     * "Смолянинова В.А." -> "смоляниновава"
+     * "Смолянинова Валентина Анатольевна" -> "смоляниновава"
+     * Returns null if parsing fails.
+     */
+    private fun extractSurnameAndInitials(name: String): String? {
+        val trimmed = name.trim().replace('\u00A0', ' ')
+        val parts = trimmed.split(WHITESPACE_REGEX).filter { it.isNotBlank() }
+        if (parts.isEmpty()) return null
+        val surname = normalizeName(parts[0])
+        if (parts.size == 1) return surname
+        val initials = parts.drop(1).mapNotNull { part ->
+            val clean = part.replace(".", "").trim()
+            if (clean.isNotEmpty()) normalizeName(clean.first().toString()) else null
+        }
+        return surname + initials.joinToString("")
+    }
+
+
+    private var cachedGroups: List<GroupDto>? = null
+    private var cachedTeachers: List<TeacherDto>? = null
+
+    override suspend fun getTeachers(): List<TeacherDto> {
+        cachedTeachers?.let { return it }
+
+        val mobileTeachers = try {
+            val response = client.get("$baseUrl/mobileschedule/teachers").bodyAsText()
+            Ksoup.parse(response).select("a[href*=\"teachers\"]")
+                .map { TeacherDto(id = it.attr("href").split("/").last(), name = it.text().trim()) }
+        } catch (e: Exception) {
+            log?.invoke("Ошибка получения преподавателей с мобильной версии: ${e.message}")
+            emptyList()
+        }
+
+        val activeNames = try {
+            val response = client.get("$baseUrl/schedule").bodyAsText()
+            Ksoup.parse(response).select("select[name=\"teacher\"] option")
+                .map { it.text().trim() }
+                .filter { it.isNotEmpty() && !it.startsWith("_") && it.any { char -> char.isLetter() } }
+        } catch (e: Exception) {
+            log?.invoke("Ошибка получения активных преподавателей: ${e.message}")
+            emptyList()
+        }
+
+        val result = if (activeNames.isNotEmpty()) {
+            val activeNormMap = activeNames.associateBy { normalizeName(it) }
+            // Карта инициалов для сопоставления коротких и полных имён
+            val activeInitialsMap = activeNames.groupBy { extractSurnameAndInitials(it) ?: normalizeName(it) }
+            val filtered = mobileTeachers.mapNotNull { teacher ->
+                // Прямое совпадение по нормализованному имени
+                val canonical = activeNormMap[normalizeName(teacher.name)]
+                if (canonical != null) {
+                    teacher.copy(name = canonical)
+                } else {
+                    // Пробуем сопоставить по фамилии + инициалам
+                    val teacherKey = extractSurnameAndInitials(teacher.name)
+                    if (teacherKey != null) {
+                        val matches = activeInitialsMap[teacherKey]
+                        if (matches != null && matches.isNotEmpty()) {
+                            // Предпочитаем короткую форму (с инициалами)
+                            val best = matches.minByOrNull { it.length } ?: matches.first()
+                            teacher.copy(name = best)
+                        } else null
+                    } else null
+                }
+            }
+            if (filtered.isNotEmpty()) {
+                // Дедупликация по фамилии+инициалам
+                filtered.distinctBy { extractSurnameAndInitials(it.name) ?: normalizeName(it.name) }.sortedBy { it.name }
+            } else {
+                mobileTeachers.distinctBy { it.name.trim() }.sortedBy { it.name }
+            }
+        } else {
+            mobileTeachers.distinctBy { it.name.trim() }.sortedBy { it.name }
+        }
+
+        if (result.isNotEmpty()) {
+            cachedTeachers = result
+        }
+        return result
+    }
+
+    override suspend fun getGroups(): List<GroupDto> {
+        cachedGroups?.let { return it }
+
+        val mobileGroups = try {
+            val response = client.get("$baseUrl/mobileschedule/groups").bodyAsText()
+            Ksoup.parse(response).select("a[href*=\"groups\"]")
+                .map { GroupDto(id = it.attr("href").split("/").last(), name = it.text().trim()) }
+        } catch (e: Exception) {
+            log?.invoke("Ошибка получения групп с мобильной версии: ${e.message}")
+            emptyList()
+        }
+
+        val activeNames = try {
+            val response = client.get("$baseUrl/schedule").bodyAsText()
+            Ksoup.parse(response).select("select[name=\"group\"] option")
+                .map { it.text().trim() }
+                .filter { it.isNotEmpty() && !it.startsWith("_") && it.any { char -> char.isLetterOrDigit() } }
+        } catch (e: Exception) {
+            log?.invoke("Ошибка получения активных групп: ${e.message}")
+            emptyList()
+        }
+
+        val result = if (activeNames.isNotEmpty()) {
+            val activeNormMap = activeNames.associateBy { normalizeName(it) }
+            val filtered = mobileGroups.mapNotNull { group ->
+                val canonical = activeNormMap[normalizeName(group.name)]
+                if (canonical != null) {
+                    group.copy(name = canonical)
+                } else null
+            }
+            if (filtered.isNotEmpty()) {
+                filtered.distinctBy { normalizeName(it.name) }.sortedBy { it.name }
+            } else {
+                mobileGroups.distinctBy { it.name.trim() }.sortedBy { it.name }
+            }
+        } else {
+            mobileGroups.distinctBy { it.name.trim() }.sortedBy { it.name }
+        }
+
+        if (result.isNotEmpty()) {
+            cachedGroups = result
+        }
+        return result
+    }
+
+    override suspend fun getGroupSchedule(group: String, showReplacements: Boolean): List<DayScheduleDto> =
+        fetchSchedule(group, isGroup = true, showReplacements = showReplacements)
+
+    override suspend fun getTeacherSchedule(teacher: String, showReplacements: Boolean): List<DayScheduleDto> =
+        fetchSchedule(teacher, isGroup = false, showReplacements = showReplacements)
+
+    private suspend fun fetchSchedule(
+        target: String,
+        isGroup: Boolean,
+        showReplacements: Boolean
+    ): List<DayScheduleDto> = coroutineScope {
+        log?.invoke("Запрос расписания РКСИ для ${if (isGroup) "группы" else "преподавателя"}: $target")
+
+        val targetId = if (target.all { it.isDigit() }) {
+            target
+        } else {
+            val cleanT = normalizeName(target)
+            if (isGroup) {
+                getGroups().firstOrNull { normalizeName(it.name) == cleanT }?.id ?: target
+            } else {
+                getTeachers().firstOrNull { normalizeName(it.name).contains(cleanT) || cleanT.contains(normalizeName(it.name)) }?.id ?: target
+            }
+        }
+
+        val url = "$baseUrl/mobileschedule/" + (if (isGroup) "groups/" else "teachers/") + targetId
+        val response = client.get(url).bodyAsText()
+        val document = Ksoup.parse(response)
+        val targetName = document.selectFirst("h3")?.text()?.trim()?.ifEmpty { null } ?: target
+        val dayElements = document.getElementsByClass("schedule_item")
+
+        // Запуск фоновой подгрузки замен из Google Drive (неблокирующий)
+        val replacementsDeferred: kotlinx.coroutines.Deferred<List<LessonDto>>? = if (showReplacements) {
+            async(Dispatchers.Default) {
+                try {
+                    withTimeoutOrNull(25000) {
+                        fetchReplacements(targetName, isGroup)
+                    } ?: emptyList()
+                } catch (e: Exception) {
+                    log?.invoke("Ошибка получения замен: ${e.message}")
+                    emptyList()
+                }
+            }
+        } else null
+
+        val today = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).date
+        val daySchedules = dayElements.map { dayElement ->
+            val titleText = dayElement.getElementsByClass("schedule_title").firstOrNull()?.text() ?: ""
+            val dateParts = titleText.split(",").firstOrNull()?.trim()?.split(" ") ?: emptyList()
+            val date = if (dateParts.size >= 2) {
+                val dayNum = dateParts[0].toIntOrNull() ?: today.dayOfMonth
+                val monthNum = parseMonth(dateParts[1]).takeIf { it in 1..12 } ?: today.monthNumber
+                try {
+                    LocalDate(today.year, monthNum, dayNum)
+                } catch (_: Exception) {
+                    today
+                }
+            } else {
+                today
+            }
+
+            var lessons = dayElement.getElementsByTag("p").mapNotNull { lessonRaw ->
+                if (lessonRaw.html().contains("href")) return@mapNotNull null
+                val content = lessonRaw.html().split(BR_REGEX)
+                if (content.size < 2) return@mapNotNull null
+
+                val timeParts = content[0].split(DASH_REGEX)
+                if (timeParts.size < 2) return@mapNotNull null
+                val startTime = try { parseTime(timeParts.first().trim()) } catch (_: Exception) { return@mapNotNull null }
+                val endTime = try { parseTime(timeParts.last().trim()) } catch (_: Exception) { return@mapNotNull null }
+                val subject = content[1].replace(HTML_TAG_REGEX, "").trim()
+
+                val thirdLine = content.getOrNull(2)?.split(", ")
+                val teacherOrGroup = thirdLine?.firstOrNull()?.replace(HTML_TAG_REGEX, "")?.trim() ?: ""
+                val audBuilding = thirdLine?.lastOrNull()?.split(" ")?.lastOrNull()?.split("/") ?: emptyList()
+
+                val aud = if (audBuilding.size > 1) audBuilding.dropLast(1).joinToString("/") else audBuilding.firstOrNull() ?: ""
+                val bld = audBuilding.lastOrNull() ?: "1"
+
+                val isClassHour = subject.contains("Классный", ignoreCase = true)
+                val isAdditional = "Доп." in subject
+
+                val otUnit = OneTimeUnitDto(
+                    teacher = if (isGroup) teacherOrGroup else targetName,
+                    group = if (isGroup) targetName else teacherOrGroup,
+                    room = aud,
+                    additional = bld
+                )
+
+                LessonDto(
+                    date = date,
+                    number = 0,
+                    startTime = startTime,
+                    endTime = endTime,
+                    subject = subject,
+                    otUnits = if (otUnit.teacher.isNotBlank() || otUnit.room.isNotBlank()) listOf(otUnit) else emptyList(),
+                    type = when {
+                        isClassHour -> LessonTypeDto.CLASS_HOUR
+                        isAdditional -> LessonTypeDto.PRACTICE
+                        else -> LessonTypeDto.COMMON
+                    }
+                )
+            }
+
+            // Определение типа сетки звонков
+            val scheduleType = when {
+                lessons.any { it.subject.contains("Классный", ignoreCase = true) || it.type == LessonTypeDto.CLASS_HOUR } -> LessonsScheduleTypeDto.WITH_CLASS_HOUR
+                lessons.any { it.startTime == LocalTime(8, 0) && it.endTime == LocalTime(8, 50) } -> LessonsScheduleTypeDto.SHORTENED
+                else -> LessonsScheduleTypeDto.COMMON
+            }
+
+            val timeSchedule = when (scheduleType) {
+                LessonsScheduleTypeDto.SHORTENED -> RKSILessonsSchedule.SHORTENED
+                LessonsScheduleTypeDto.WITH_CLASS_HOUR -> RKSILessonsSchedule.WITH_CLASS_HOUR
+                else -> RKSILessonsSchedule.COMMON
+            }
+
+            lessons = lessons.mapIndexed { index, lesson ->
+                val isClassHour = lesson.subject.contains("Классный", ignoreCase = true) || lesson.type == LessonTypeDto.CLASS_HOUR
+                if (isClassHour) {
+                    lesson.copy(number = 0, type = LessonTypeDto.CLASS_HOUR)
+                } else {
+                    val match = timeSchedule.firstOrNull { it.number != 0 && (it.start == lesson.startTime || it.end == lesson.endTime) }
+                        ?: RKSILessonsSchedule.COMMON.firstOrNull { it.number != 0 && (it.start == lesson.startTime || it.end == lesson.endTime) }
+                        ?: RKSILessonsSchedule.WITH_CLASS_HOUR.firstOrNull { it.number != 0 && (it.start == lesson.startTime || it.end == lesson.endTime) }
+                        ?: RKSILessonsSchedule.SHORTENED.firstOrNull { it.number != 0 && (it.start == lesson.startTime || it.end == lesson.endTime) }
+
+                    val number = match?.number ?: (index + 1)
+                    lesson.copy(number = number)
+                }
+            }
+
+            DayScheduleDto(
+                date = date,
+                scheduleType = scheduleType,
+                lessons = lessons
+            )
+        }
+
+        // Если замены подгрузились, накладываем их
+        val replacements = replacementsDeferred?.await() ?: emptyList()
+        val processedDaySchedules = if (replacements.isNotEmpty()) {
+            daySchedules.forEach { daySchedule ->
+                RKSITeacherSubjectCache.recordLessons(daySchedule.lessons)
+            }
+            daySchedules.map { daySchedule ->
+                val dayReplacements = replacements.filter { it.date == daySchedule.date }
+                if (dayReplacements.isNotEmpty()) {
+                    val hasClassHourInReplacements = dayReplacements.any {
+                        it.number == 0 || it.type == LessonTypeDto.CLASS_HOUR || it.subject.contains("Классный", ignoreCase = true)
+                    }
+                    val effectiveScheduleType = if (hasClassHourInReplacements) {
+                        LessonsScheduleTypeDto.WITH_CLASS_HOUR
+                    } else {
+                        daySchedule.scheduleType
+                    }
+                    val timeSchedule = when (effectiveScheduleType) {
+                        LessonsScheduleTypeDto.SHORTENED -> RKSILessonsSchedule.SHORTENED
+                        LessonsScheduleTypeDto.WITH_CLASS_HOUR -> RKSILessonsSchedule.WITH_CLASS_HOUR
+                        else -> RKSILessonsSchedule.COMMON
+                    }
+                    val merged = RKSIReplacementsParser.applyReplacements(
+                        daySchedule.lessons,
+                        dayReplacements,
+                        timeSchedule,
+                        subjectResolver = { teacher, group ->
+                            RKSITeacherSubjectCache.resolve(teacher, group)
+                        }
+                    )
+                    val hasClassHour = hasClassHourInReplacements || merged.any { it.type == LessonTypeDto.CLASS_HOUR || it.subject.contains("Классный", ignoreCase = true) }
+                    daySchedule.copy(
+                        lessons = merged.sortedWith(compareBy({ it.startTime }, { it.number })),
+                        scheduleType = if (hasClassHour) LessonsScheduleTypeDto.WITH_CLASS_HOUR else daySchedule.scheduleType
+                    )
+                } else {
+                    daySchedule.copy(
+                        lessons = daySchedule.lessons.groupBy { Triple(it.date, it.startTime, it.subject) }
+                            .map { (_, groupLessons) ->
+                                groupLessons.first().copy(
+                                    otUnits = groupLessons.flatMap { it.otUnits }.distinct()
+                                )
+                            }
+                            .sortedWith(compareBy({ it.startTime }, { it.number }))
+                    )
+                }
+            }
+        } else {
+            daySchedules.map { daySchedule ->
+                daySchedule.copy(
+                    lessons = daySchedule.lessons.groupBy { Triple(it.date, it.startTime, it.subject) }
+                        .map { (_, groupLessons) ->
+                            groupLessons.first().copy(
+                                otUnits = groupLessons.flatMap { it.otUnits }.distinct()
+                            )
+                        }
+                        .sortedWith(compareBy({ it.startTime }, { it.number }))
+                )
+            }
+        }
+
+        return@coroutineScope processedDaySchedules
+    }
+
+    private data class CachedReplacementSheet(
+        val date: LocalDate,
+        val columns: Int,
+        val sheets: Map<String, List<List<String>>>
+    )
+
+    private var cachedReplacementSheets: List<CachedReplacementSheet>? = null
+    private val replacementSheetsMutex = Mutex()
+
+    private suspend fun getReplacementSheets(): List<CachedReplacementSheet> {
+        cachedReplacementSheets?.let { return it }
+        return replacementSheetsMutex.withLock {
+            cachedReplacementSheets?.let { return it }
+
+            val folderId = resolveDriveFolderId()
+            val rootItems = googleDriveParser.getFolderContent(folderId)
+            val rootFiles = rootItems.files().onEach { it.additionalData["building"] = 1 }
+            val subFolderId = rootItems.folders().firstOrNull()?.id ?: "1bdHCozxsjzy7BVd76sBTTK_ckhZ78wbo"
+            val subItems = googleDriveParser.getFolderContent(subFolderId)
+            val subFiles = subItems.files().onEach { it.additionalData["building"] = 2 }
+            val allFiles = rootFiles + subFiles
+
+            val today = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).date
+            val relevantFiles = allFiles.filter { file ->
+                val parts = file.name.split(".").take(2).mapNotNull { it.toIntOrNull() }
+                if (parts.size == 2) {
+                    val fileDate = LocalDate(today.year, parts[1], parts[0])
+                    file.additionalData["date"] = fileDate
+                    fileDate >= today.minus(1, DateTimeUnit.DAY)
+                } else false
+            }
+
+            val reader = xlsxReader
+            if (reader == null) {
+                emptyList()
+            } else {
+                val loadedSheets = coroutineScope {
+                    relevantFiles.map { file ->
+                        async(Dispatchers.Default) {
+                            val date = file.additionalData["date"] as? LocalDate ?: return@async null
+                            val building = file.additionalData["building"] as? Int ?: 1
+                            val columns = if (building == 1) 2 else 1
+
+                            val cacheKey = "rksi_rep_b${building}_${date}.xlsx"
+                            val cachedBytes = fileCache.get(cacheKey)
+
+                            val bytes = if (cachedBytes != null) {
+                                cachedBytes
+                            } else {
+                                try {
+                                    val downloaded = client.get(file.getDownloadLink()).readRawBytes()
+                                    fileCache.put(cacheKey, downloaded, ttlMillis = 12 * 60 * 60 * 1000L)
+                                    downloaded
+                                } catch (e: Exception) {
+                                    log?.invoke("Ошибка скачивания планшетки $cacheKey: ${e.message}")
+                                    null
+                                }
+                            } ?: return@async null
+
+                            try {
+                                val sheets = reader.readSheets(bytes)
+                                CachedReplacementSheet(date, columns, sheets)
+                            } catch (e: Exception) {
+                                log?.invoke("Ошибка парсинга планшетки $cacheKey: ${e.message}")
+                                null
+                            }
+                        }
+                    }.awaitAll().filterNotNull()
+                }
+                cachedReplacementSheets = loadedSheets
+                loadedSheets
+            }
+        }
+    }
+
+    private suspend fun fetchReplacements(target: String, isGroup: Boolean): List<LessonDto> {
+        val sheets = getReplacementSheets()
+        if (sheets.isEmpty()) return emptyList()
+
+        val cleanTarget = normalizeName(target)
+        val predicate = { teacher: String, group: String ->
+            if (isGroup) {
+                val cleanGroup = normalizeName(group)
+                cleanGroup == cleanTarget
+            } else {
+                val cleanTeacher = normalizeName(teacher)
+                cleanTeacher.contains(cleanTarget) || cleanTarget.contains(cleanTeacher) ||
+                    (target.split(" ").firstOrNull()?.let { cleanTeacher.contains(normalizeName(it)) } == true)
+            }
+        }
+
+        return sheets.flatMap { sheet ->
+            RKSIReplacementsParser.parse(sheet.sheets, sheet.columns, sheet.date, predicate)
+        }
+    }
+
+    private var cachedDriveFolderId: String? = null
+
+    private suspend fun resolveDriveFolderId(): String {
+        cachedDriveFolderId?.let { return it }
+        val id = try {
+            val response = client.get("$baseUrl/schedule").bodyAsText()
+            val document = Ksoup.parse(response)
+            val tabletUrl = document.getElementsMatchingText("Планшетка").lastOrNull()?.attr("href")
+            tabletUrl?.split("/")?.lastOrNull()?.substringBefore("?")?.ifEmpty { null }
+                ?: "1kUYiSAafghhYR0ARyXwPW1HZPpHcFIag"
+        } catch (_: Exception) {
+            "1kUYiSAafghhYR0ARyXwPW1HZPpHcFIag"
+        }
+        cachedDriveFolderId = id
+        return id
+    }
+}
