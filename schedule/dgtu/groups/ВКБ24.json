@@ -1535,9 +1535,28 @@
         "lessons": [
             {
                 "date": "2026-10-06",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ВКБ24",
+                        "room": "109",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-06",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "пр Теория вероятностей и математическая статистика",
                 "otUnits": [
                     {
@@ -1689,13 +1708,13 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Математический анализ",
+                "subject": "пр Электроника и схемотехника",
                 "otUnits": [
                     {
-                        "teacher": "Ермилова О. В.",
+                        "teacher": "Приходько Г. И.",
                         "group": "ВКБ24",
-                        "room": "109",
-                        "additional": "8",
+                        "room": "143",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1784,18 +1803,51 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-10-12",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-10-10",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Электроника и схемотехника",
+                "date": "2026-10-12",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Теория вероятностей и математическая статистика",
                 "otUnits": [
                     {
-                        "teacher": "Приходько Г. И.",
+                        "teacher": "Рябых Г. Ю.",
                         "group": "ВКБ24",
-                        "room": "143",
+                        "room": "035/1",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Ершов И. В.",
+                        "group": "ВКБ24",
+                        "room": "436",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Холодова О. М.",
+                        "group": "ВКБ24",
+                        "room": "436",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

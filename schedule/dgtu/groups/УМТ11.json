@@ -1315,8 +1315,8 @@
                     {
                         "teacher": "Чеботарев Д. Г.",
                         "group": "УМТ11",
-                        "room": "438",
-                        "additional": "1",
+                        "room": "303",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1523,8 +1523,8 @@
                     {
                         "teacher": "Чеботарев Д. Г.",
                         "group": "УМТ11",
-                        "room": "327",
-                        "additional": "8",
+                        "room": "363",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1668,6 +1668,25 @@
         "lessons": [
             {
                 "date": "2026-10-09",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Потанина О. Ю.",
+                        "group": "УМТ11, УМТ11",
+                        "room": "424",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -1684,18 +1703,24 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-10-12",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-10-09",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Химия, п/г 2",
+                "date": "2026-10-12",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Основы проектной деятельности (Модуль для беспроводной передачи данных)",
                 "otUnits": [
                     {
-                        "teacher": "Жилина А. А.",
+                        "teacher": "Чеботарев Д. Г.",
                         "group": "УМТ11",
-                        "room": "484",
+                        "room": "363",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1705,16 +1730,35 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-09",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "пр Иностранный язык (английский)",
+                "date": "2026-10-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Высшая математика",
                 "otUnits": [
                     {
-                        "teacher": "Потанина О. Ю.",
+                        "teacher": "Богданец Д. А.",
                         "group": "УМТ11",
-                        "room": "424",
+                        "room": "323",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Эгильский Е. Э.",
+                        "group": "УМТ11",
+                        "room": "282",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
