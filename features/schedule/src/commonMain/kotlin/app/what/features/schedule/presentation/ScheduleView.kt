@@ -77,7 +77,7 @@ import app.what.foundation.ui.useSave
 import app.what.foundation.ui.useState
 import app.what.foundation.utils.Analytics
 import app.what.foundation.utils.DateTimeUtils
-import app.what.foundation.utils.freeze
+import app.what.foundation.ui.useInterval
 import app.what.schedule.features.schedule.domain.models.ScheduleEvent
 import app.what.schedule.features.schedule.domain.models.ScheduleState
 import app.what.schedule.features.schedule.presentation.components.BreakInfo
@@ -137,8 +137,8 @@ fun ScheduleView(
         }
         
         val (scheduleType, setScheduleType) = useState<LessonsScheduleType?>(null)
-        val currentDate = app.what.foundation.utils.currentLocalDate().freeze()
-        val currentTime = useChange(app.what.foundation.utils.currentLocalTime(), 60) {
+        val currentDate = app.what.foundation.utils.currentLocalDate()
+        val currentTime by useInterval(app.what.foundation.utils.currentLocalTime(), 60) {
             app.what.foundation.utils.currentLocalTime()
         }
         var showBreaks by useSave(false)
@@ -154,7 +154,7 @@ fun ScheduleView(
             data = this,
             listener = listener,
             currentTime = if (date == currentDate)
-                currentTime.value else null,
+                currentTime else null,
             viewType = when (state.value.selectedSearch) {
                 is ScheduleSearch.Teacher -> ViewType.TEACHER
                 else -> ViewType.STUDENT
@@ -407,7 +407,7 @@ fun ScheduleView(
                                     AnimatedEnter(showBreaks) {
                                         BreakInfo(
                                             (second.startTime.toSecondOfDay() - first.endTime.toSecondOfDay()) / 60,
-                                            currentTime.value in first.startTime..second.startTime && currentDate == first.date
+                                            currentTime in first.startTime..second.startTime && currentDate == first.date
                                         )
                                     }
                                 }

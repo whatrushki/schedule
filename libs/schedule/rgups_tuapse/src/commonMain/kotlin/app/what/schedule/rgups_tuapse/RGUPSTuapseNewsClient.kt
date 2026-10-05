@@ -62,6 +62,10 @@ class RGUPSTuapseNewsClient(
     override suspend fun getNewDetail(id: String): NewDetailDto {
         val url = if (id.startsWith("http")) id else "$baseUrl$id"
         val html = client.get(url).bodyAsText()
+        return parseNewsDetail(html, url, id)
+    }
+
+    internal fun parseNewsDetail(html: String, url: String, id: String = url): NewDetailDto {
         val doc = Ksoup.parse(html)
 
         var title = doc.selectFirst(".item-page h2, .page-header h2, h2")?.text()?.trim().orEmpty()

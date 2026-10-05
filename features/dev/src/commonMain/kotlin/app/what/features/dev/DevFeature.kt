@@ -32,9 +32,6 @@ import androidx.compose.ui.text.font.FontWeight
 import app.what.navigation.core.LocalNavController
 import app.what.foundation.ui.Gap
 import app.what.foundation.ui.SegmentTab
-import app.what.foundation.ui.useState
-import app.what.foundation.utils.freeze
-import app.what.schedule.features.dev.presentation.FeaturePane
 import app.what.schedule.features.dev.presentation.LogsPane
 import app.what.schedule.features.dev.presentation.NetworksPane
 import app.what.schedule.ui.theme.icons.WHATIcons
@@ -42,15 +39,21 @@ import app.what.schedule.ui.theme.icons.filled.Features
 import app.what.schedule.ui.theme.icons.filled.Logs
 import app.what.schedule.ui.theme.icons.filled.Network
 
+import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.History
+import app.what.schedule.features.dev.presentation.HealthCheckPane
+import app.what.schedule.features.dev.presentation.SessionTrackerPane
+
 enum class DevToolsTab(
     val title: String, val icon: ImageVector
 ) {
     LOGS("Логи", WHATIcons.Logs),
     NETWORK("Сеть", WHATIcons.Network),
-    FEATURES("Фичи", WHATIcons.Features);
+    HEALTH("Тесты", Icons.Default.CheckCircle),
+    SESSION("Сессии", Icons.Default.History);
     
     companion object {
-        fun all() = listOf(LOGS, NETWORK, FEATURES)
+        fun all() = listOf(LOGS, NETWORK, HEALTH, SESSION)
     }
 }
 
@@ -62,8 +65,6 @@ fun DevFeature(
     modifier = modifier.fillMaxSize().statusBarsPadding()
 ) {
     val devToolsTabs = DevToolsTab.all()
-        .dropLast(1)
-        .freeze()
     val pagerState = rememberPagerState { devToolsTabs.size }
     val scope = rememberCoroutineScope()
     
@@ -131,7 +132,8 @@ fun DevFeature(
         when (devToolsTabs.getOrNull(page) ?: DevToolsTab.LOGS) {
             DevToolsTab.LOGS -> LogsPane(Modifier.fillMaxSize())
             DevToolsTab.NETWORK -> NetworksPane(Modifier.fillMaxSize())
-            DevToolsTab.FEATURES -> FeaturePane(Modifier.fillMaxSize())
+            DevToolsTab.HEALTH -> HealthCheckPane(Modifier.fillMaxSize())
+            DevToolsTab.SESSION -> SessionTrackerPane(Modifier.fillMaxSize())
         }
     }
-}
+}

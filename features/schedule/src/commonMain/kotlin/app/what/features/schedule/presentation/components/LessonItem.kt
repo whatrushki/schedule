@@ -65,7 +65,6 @@ import app.what.foundation.ui.applyIf
 import app.what.foundation.ui.bclick
 import app.what.foundation.ui.capplyIf
 import app.what.foundation.ui.useState
-import app.what.foundation.utils.freeze
 import app.what.domain.models.Group
 import app.what.domain.models.Lesson
 import app.what.domain.models.LessonState
@@ -829,7 +828,7 @@ fun LessonPreview() = MaterialTheme(DynamicScheme(Color(0xFF682C78), true).toCol
             .background(colorScheme.background)
             .verticalScroll(rememberScrollState())
     ) {
-        val currentTime = LocalTime(10, 45).freeze() // During second lesson
+        val currentTime = LocalTime(10, 45) // During second lesson
         Gap(12)
         
         // Morning lessons with realistic times

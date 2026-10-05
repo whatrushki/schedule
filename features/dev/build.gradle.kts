@@ -27,6 +27,8 @@ kotlin {
             implementation(project(":data"))
             api(libs.compose.foundation)
             api(libs.foundation.navigation)
+            implementation(libs.foundation.healthcheck)
+            implementation(libs.foundation.session.tracker)
 
             implementation(compose.runtime)
             implementation(compose.foundation)
