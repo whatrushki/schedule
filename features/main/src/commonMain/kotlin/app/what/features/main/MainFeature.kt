@@ -55,11 +55,11 @@ import app.what.schedule.features.schedule.navigation.ScheduleProvider
 import app.what.schedule.features.schedule.navigation.scheduleRegistry
 import app.what.schedule.features.settings.navigation.SettingsProvider
 import app.what.schedule.features.settings.navigation.settingsRegistry
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.FrameBug
-import app.what.schedule.ui.theme.icons.filled.News
+import app.what.foundation.ui.icons.WHATIcons
+import app.what.foundation.ui.icons.filled.FrameBug
+import app.what.foundation.ui.icons.filled.News
 import kotlinx.coroutines.flow.drop
-import app.what.schedule.ui.theme.icons.filled.Person
+import app.what.foundation.ui.icons.filled.Person
 import app.what.foundation.utils.Analytics
 import app.what.foundation.utils.LogCat
 import app.what.foundation.utils.LogScope

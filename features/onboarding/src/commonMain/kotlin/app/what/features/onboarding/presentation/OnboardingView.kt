@@ -57,9 +57,9 @@ import app.what.schedule.data.remote.api.Institution
 import app.what.schedule.features.onboarding.domain.models.OnboardingEvent
 import app.what.schedule.features.onboarding.domain.models.OnboardingState
 import app.what.schedule.ui.components.PolicyView
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.Crown
-import app.what.schedule.ui.theme.icons.filled.Support
+import app.what.foundation.ui.icons.WHATIcons
+import app.what.foundation.ui.icons.filled.Crown
+import app.what.foundation.ui.icons.filled.Support
 import app.what.schedule.utils.Analytics
 import kotlinx.coroutines.launch
 import kotlin.math.absoluteValue

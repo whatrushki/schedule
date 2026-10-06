@@ -41,8 +41,8 @@ import app.what.foundation.utils.ShareData
 import app.what.foundation.utils.rememberShareManager
 import app.what.schedule.features.dev.presentation.components.Filter
 import app.what.schedule.features.dev.presentation.components.FilteredList
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.Warn
+import app.what.foundation.ui.icons.WHATIcons
+import app.what.foundation.ui.icons.filled.Warn
 import app.what.foundation.utils.currentTimeMillis
 import kotlinx.datetime.Instant
 import kotlinx.datetime.LocalDateTime

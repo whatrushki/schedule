@@ -34,11 +34,11 @@ import app.what.foundation.services.auto_update.UpdateInfo
 import app.what.foundation.ui.Gap
 import app.what.foundation.ui.animations.wiggle
 import app.what.foundation.ui.bclick
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.ApkInstall
-import app.what.schedule.ui.theme.icons.filled.Download
-import app.what.schedule.ui.theme.icons.filled.DownloadError
-import app.what.schedule.ui.theme.icons.filled.ReleaseAlert
+import app.what.foundation.ui.icons.WHATIcons
+import app.what.foundation.ui.icons.filled.ApkInstall
+import app.what.foundation.ui.icons.filled.Download
+import app.what.foundation.ui.icons.filled.DownloadError
+import app.what.foundation.ui.icons.filled.ReleaseAlert
 import org.koin.compose.koinInject
 
 

@@ -28,8 +28,8 @@ import app.what.navigation.core.ProvideGlobalDialog
 import app.what.schedule.data.local.settings.AppValues
 import app.what.schedule.features.dev.DevFeature
 import app.what.schedule.ui.theme.AppTheme
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.FrameBug
+import app.what.foundation.ui.icons.WHATIcons
+import app.what.foundation.ui.icons.filled.FrameBug
 import org.koin.compose.koinInject
 import java.io.File
 

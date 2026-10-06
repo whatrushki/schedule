@@ -34,10 +34,10 @@ import app.what.foundation.ui.Gap
 import app.what.foundation.ui.SegmentTab
 import app.what.schedule.features.dev.presentation.LogsPane
 import app.what.schedule.features.dev.presentation.NetworksPane
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.Features
-import app.what.schedule.ui.theme.icons.filled.Logs
-import app.what.schedule.ui.theme.icons.filled.Network
+import app.what.foundation.ui.icons.WHATIcons
+import app.what.foundation.ui.icons.filled.Features
+import app.what.foundation.ui.icons.filled.Logs
+import app.what.foundation.ui.icons.filled.Network
 
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.History
@@ -136,4 +136,4 @@ fun DevFeature(
             DevToolsTab.SESSION -> SessionTrackerPane(Modifier.fillMaxSize())
         }
     }
-}
+}

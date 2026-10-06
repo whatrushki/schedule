@@ -84,10 +84,10 @@ import app.what.schedule.features.newsDetail.presentation.components.NewDetailTi
 import app.what.schedule.features.newsDetail.presentation.components.NewsSharePane
 import app.what.schedule.ui.components.AsyncImageWithFallback
 import app.what.schedule.ui.components.Fallback
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.Features
-import app.what.schedule.ui.theme.icons.filled.Question
-import app.what.schedule.ui.theme.icons.filled.Quote
+import app.what.foundation.ui.icons.WHATIcons
+import app.what.foundation.ui.icons.filled.Features
+import app.what.foundation.ui.icons.filled.Question
+import app.what.foundation.ui.icons.filled.Quote
 import app.what.foundation.utils.Analytics
 import app.what.foundation.utils.DateTimeUtils
 import kotlinx.coroutines.launch

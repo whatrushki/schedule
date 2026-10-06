@@ -88,10 +88,10 @@ import app.what.features.account.components.InfoBlock
 import app.what.features.account.components.KeyValueList
 import app.what.features.account.components.NewItemView
 import app.what.schedule.ui.components.AsyncImageWithFallback
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.Features
-import app.what.schedule.ui.theme.icons.filled.Room
-import app.what.schedule.ui.theme.icons.filled.Run
+import app.what.foundation.ui.icons.WHATIcons
+import app.what.foundation.ui.icons.filled.Features
+import app.what.foundation.ui.icons.filled.Room
+import app.what.foundation.ui.icons.filled.Run
 import io.github.alexzhirkevich.qrose.rememberQrCodePainter
 import kotlinx.datetime.LocalDateTime
 

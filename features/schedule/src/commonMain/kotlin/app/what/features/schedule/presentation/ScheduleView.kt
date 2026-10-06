@@ -88,10 +88,10 @@ import app.what.schedule.features.schedule.presentation.components.SearchButton
 import app.what.schedule.features.schedule.presentation.components.ViewType
 import app.what.schedule.ui.components.Fallback
 import app.what.schedule.ui.components.ScheduleSearchPane
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.Network
-import app.what.schedule.ui.theme.icons.filled.Run
-import app.what.schedule.ui.theme.icons.filled.Warn
+import app.what.foundation.ui.icons.WHATIcons
+import app.what.foundation.ui.icons.filled.Network
+import app.what.foundation.ui.icons.filled.Run
+import app.what.foundation.ui.icons.filled.Warn
 import kotlinx.coroutines.launch
 import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDate

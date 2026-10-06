@@ -37,9 +37,9 @@ import app.what.foundation.ui.useState
 import app.what.schedule.features.insts.rksi.domain.models.RksiEvent
 import app.what.schedule.features.insts.rksi.domain.models.RksiState
 import app.what.schedule.ui.components.StyledTextField
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.Building
-import app.what.schedule.ui.theme.icons.filled.Features
+import app.what.foundation.ui.icons.WHATIcons
+import app.what.foundation.ui.icons.filled.Building
+import app.what.foundation.ui.icons.filled.Features
 
 @Composable
 internal fun RksiLoginScreen(

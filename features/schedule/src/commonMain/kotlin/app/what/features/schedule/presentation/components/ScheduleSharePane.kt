@@ -38,10 +38,10 @@ import app.what.domain.models.DaySchedule
 import app.what.domain.models.LessonState
 import app.what.domain.models.LessonType
 import app.what.domain.models.ScheduleSearch
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.Telegram
-import app.what.schedule.ui.theme.icons.filled.VK
-import app.what.schedule.ui.theme.icons.filled.Whatsapp
+import app.what.foundation.ui.icons.WHATIcons
+import app.what.foundation.ui.icons.filled.Telegram
+import app.what.foundation.ui.icons.filled.VK
+import app.what.foundation.ui.icons.filled.Whatsapp
 import app.what.foundation.utils.DateTimeUtils
 
 

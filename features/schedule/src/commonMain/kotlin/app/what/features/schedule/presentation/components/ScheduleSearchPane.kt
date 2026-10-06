@@ -46,10 +46,10 @@ import app.what.foundation.ui.components.SearchBox
 import app.what.foundation.ui.components.AnimatedIconTitle
 import app.what.foundation.ui.components.Fallback
 import app.what.domain.models.ScheduleSearch
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.Crown
-import app.what.schedule.ui.theme.icons.filled.Group
-import app.what.schedule.ui.theme.icons.filled.Person
+import app.what.foundation.ui.icons.WHATIcons
+import app.what.foundation.ui.icons.filled.Crown
+import app.what.foundation.ui.icons.filled.Group
+import app.what.foundation.ui.icons.filled.Person
 
 interface ScheduleSearchData {
     val scheduleSearches: List<ScheduleSearch>

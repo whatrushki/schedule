@@ -44,12 +44,12 @@ import app.what.foundation.ui.Show
 import app.what.foundation.ui.useState
 import app.what.schedule.ui.components.Fallback
 import app.what.schedule.ui.components.StyledTextField
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.Clear
-import app.what.schedule.ui.theme.icons.filled.Export
-import app.what.schedule.ui.theme.icons.filled.Pause
-import app.what.schedule.ui.theme.icons.filled.Question
-import app.what.schedule.ui.theme.icons.filled.Resume
+import app.what.foundation.ui.icons.WHATIcons
+import app.what.foundation.ui.icons.filled.Clear
+import app.what.foundation.ui.icons.filled.Export
+import app.what.foundation.ui.icons.filled.Pause
+import app.what.foundation.ui.icons.filled.Question
+import app.what.foundation.ui.icons.filled.Resume
 
 interface Filter<T> {
     fun clearFilters()

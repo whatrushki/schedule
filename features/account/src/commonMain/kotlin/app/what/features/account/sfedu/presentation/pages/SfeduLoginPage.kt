@@ -45,8 +45,8 @@ import app.what.foundation.ui.useState
 import app.what.schedule.features.insts.sfedu.domain.models.SfeduEvent
 import app.what.schedule.features.insts.sfedu.domain.models.SfeduState
 import app.what.schedule.ui.components.StyledTextField
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.Building
+import app.what.foundation.ui.icons.WHATIcons
+import app.what.foundation.ui.icons.filled.Building
 
 @Composable
 internal fun SfeduLoginScreen(

@@ -58,9 +58,9 @@ import app.what.domain.constants.AppConstants
 import app.what.schedule.data.local.settings.AppValues
 import app.what.schedule.features.settings.presentation.utils.rememberGithubStars
 import app.what.schedule.ui.components.AsyncImageWithFallback
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.ImageRoller
-import app.what.schedule.ui.theme.icons.filled.Telegram
+import app.what.foundation.ui.icons.WHATIcons
+import app.what.foundation.ui.icons.filled.ImageRoller
+import app.what.foundation.ui.icons.filled.Telegram
 import app.what.foundation.utils.Analytics
 import kotlin.math.cos
 import kotlin.math.sin

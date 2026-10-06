@@ -77,10 +77,10 @@ import app.what.schedule.features.settings.domain.models.SettingsEvent
 import app.what.schedule.features.settings.domain.models.SettingsState
 import app.what.schedule.features.settings.presentation.components.AboutAppContent
 import app.what.schedule.features.settings.presentation.components.asInstitutionChoice
-import app.what.schedule.ui.theme.icons.WHATIcons
-import app.what.schedule.ui.theme.icons.filled.Clear
-import app.what.schedule.ui.theme.icons.filled.Code
-import app.what.schedule.ui.theme.icons.filled.ImageRoller
+import app.what.foundation.ui.icons.WHATIcons
+import app.what.foundation.ui.icons.filled.Clear
+import app.what.foundation.ui.icons.filled.Code
+import app.what.foundation.ui.icons.filled.ImageRoller
 import kotlinx.coroutines.launch
 import org.koin.compose.koinInject
 
