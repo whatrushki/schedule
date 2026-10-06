@@ -1,30 +1,5 @@
 [
     {
-        "date": "2026-10-05",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-05",
-                "number": 2,
-                "startTime": "09:00",
-                "endTime": "09:50",
-                "subject": "Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Барна Н.В.",
-                        "group": "СА-13",
-                        "room": "122",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-10-06",
         "scheduleType": "COMMON",
         "lessons": [
@@ -45,7 +20,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-06",
@@ -55,16 +30,35 @@
                 "subject": "Физика",
                 "otUnits": [
                     {
-                        "teacher": "Барна Наталья Владимировна",
+                        "teacher": "Барна Н.В.",
                         "group": "СА-16",
-                        "room": "326",
+                        "room": "210",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-06",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Барна Н.В.",
+                        "group": "СА-12",
+                        "room": "114",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

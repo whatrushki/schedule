@@ -469,6 +469,25 @@
                 ],
                 "type": "LECTURE",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "пр. Основы учета и отчетности",
+                "otUnits": [
+                    {
+                        "teacher": "асс.Письменная О.С.",
+                        "group": "ЭКOZS-5201",
+                        "room": "502",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
             }
         ]
     },
@@ -478,59 +497,40 @@
         "lessons": [
             {
                 "date": "2026-10-16",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:00",
+                "subject": "пр. Основы учета и отчетности",
+                "otUnits": [
+                    {
+                        "teacher": "асс.Письменная О.С.",
+                        "group": "ЭКOZS-5201",
+                        "room": "422",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 2,
+                "startTime": "10:10",
+                "endTime": "11:40",
                 "subject": "л. Основы учета и отчетности",
                 "otUnits": [
                     {
                         "teacher": "доц.Белокур И.В.",
                         "group": "ЭКOZS-5201",
-                        "room": "429",
+                        "room": "602",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-16",
-                "number": 6,
-                "startTime": "17:10",
-                "endTime": "18:40",
-                "subject": "пр. Основы учета и отчетности",
-                "otUnits": [
-                    {
-                        "teacher": "асс.Письменная О.С.",
-                        "group": "ЭКOZS-5201",
-                        "room": "429",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-16",
-                "number": 7,
-                "startTime": "18:45",
-                "endTime": "20:15",
-                "subject": "пр. Основы учета и отчетности",
-                "otUnits": [
-                    {
-                        "teacher": "асс.Письменная О.С.",
-                        "group": "ЭКOZS-5201",
-                        "room": "429",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
@@ -809,37 +809,18 @@
                 "number": 6,
                 "startTime": "17:10",
                 "endTime": "18:40",
-                "subject": "пр. Философия",
+                "subject": "экз. Микроэкономика",
                 "otUnits": [
                     {
-                        "teacher": "асс.Котлярова Е.А.",
+                        "teacher": "доц.Резниченко С.Е.",
                         "group": "ЭКOZS-5201",
-                        "room": "523",
+                        "room": "429",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-21",
-                "number": 7,
-                "startTime": "18:45",
-                "endTime": "20:15",
-                "subject": "пр. Философия",
-                "otUnits": [
-                    {
-                        "teacher": "асс.Котлярова Е.А.",
-                        "group": "ЭКOZS-5201",
-                        "room": "523",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
+                "type": "COMMON",
                 "state": "COMMON"
             }
         ]
@@ -913,44 +894,6 @@
         "lessons": [
             {
                 "date": "2026-10-23",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "экз. Мировая экономика и международные экономические отношения",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Захарченко Е.С.",
-                        "group": "ЭКOZS-5201",
-                        "room": "602",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-23",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "экз. Мировая экономика и международные экономические отношения",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Захарченко Е.С.",
-                        "group": "ЭКOZS-5201",
-                        "room": "602",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-23",
                 "number": 3,
                 "startTime": "11:50",
                 "endTime": "13:20",
@@ -960,6 +903,44 @@
                         "teacher": "асс.Письменная О.С.",
                         "group": "ЭКOZS-5201",
                         "room": "554",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "пр. Философия",
+                "otUnits": [
+                    {
+                        "teacher": "асс.Котлярова Е.А.",
+                        "group": "ЭКOZS-5201",
+                        "room": "429",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "пр. Философия",
+                "otUnits": [
+                    {
+                        "teacher": "асс.Котлярова Е.А.",
+                        "group": "ЭКOZS-5201",
+                        "room": "429",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1020,34 +1001,15 @@
         "lessons": [
             {
                 "date": "2026-10-26",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "экз. Философия",
-                "otUnits": [
-                    {
-                        "teacher": "проф.Плотникова Т.В.",
-                        "group": "ЭКOZS-5201",
-                        "room": "604",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-26",
                 "number": 4,
                 "startTime": "13:50",
                 "endTime": "15:20",
-                "subject": "экз. Философия",
+                "subject": "экз. Мировая экономика и международные экономические отношения",
                 "otUnits": [
                     {
-                        "teacher": "проф.Плотникова Т.В.",
+                        "teacher": "доц.Захарченко Е.С.",
                         "group": "ЭКOZS-5201",
-                        "room": "604",
+                        "room": "431",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1061,18 +1023,18 @@
                 "number": 5,
                 "startTime": "15:30",
                 "endTime": "17:00",
-                "subject": "зач. Основы исследования экономики предприятия",
+                "subject": "экз. Мировая экономика и международные экономические отношения",
                 "otUnits": [
                     {
-                        "teacher": "ст.пр.Сутурина В.О.",
+                        "teacher": "доц.Захарченко Е.С.",
                         "group": "ЭКOZS-5201",
-                        "room": "523",
+                        "room": "431",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "CREDIT",
+                "type": "COMMON",
                 "state": "COMMON"
             }
         ]
@@ -1127,15 +1089,34 @@
         "lessons": [
             {
                 "date": "2026-10-28",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "зач. Основы исследования экономики предприятия",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Сутурина В.О.",
+                        "group": "ЭКOZS-5201",
+                        "room": "604",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CREDIT",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
                 "number": 5,
                 "startTime": "15:30",
                 "endTime": "17:00",
-                "subject": "экз. Микроэкономика",
+                "subject": "экз. Философия",
                 "otUnits": [
                     {
-                        "teacher": "доц.Резниченко С.Е.",
+                        "teacher": "проф.Плотникова Т.В.",
                         "group": "ЭКOZS-5201",
-                        "room": "523",
+                        "room": "424",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-10-05",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-05",
-                "number": 4,
-                "startTime": "11:00",
-                "endTime": "11:50",
-                "subject": "Системное программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Кошкина А.А.",
-                        "group": "ИС-37",
-                        "room": "Общ1-2",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-05",
-                "number": 5,
-                "startTime": "12:00",
-                "endTime": "12:50",
-                "subject": "Системное программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Кошкина А.А.",
-                        "group": "ИС-32",
-                        "room": "Общ1-2",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-05",
-                "number": 6,
-                "startTime": "13:00",
-                "endTime": "13:50",
-                "subject": "Системное программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Кошкина А.А.",
-                        "group": "ИС-36",
-                        "room": "Общ1-4",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-10-06",
         "scheduleType": "COMMON",
         "lessons": [
@@ -74,16 +11,16 @@
                 "subject": "Системное программирование",
                 "otUnits": [
                     {
-                        "teacher": "Кошкина Анастасия Алексеевна",
+                        "teacher": "Кошкина А.А.",
                         "group": "ИС-34",
-                        "room": "314",
+                        "room": "Общ1-1",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-06",
@@ -93,16 +30,16 @@
                 "subject": "Системное программирование",
                 "otUnits": [
                     {
-                        "teacher": "Кошкина Анастасия Алексеевна",
+                        "teacher": "Кошкина А.А.",
                         "group": "ИС-32",
-                        "room": "314",
+                        "room": "Общ1-2",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-06",
@@ -112,16 +49,16 @@
                 "subject": "Системное программирование",
                 "otUnits": [
                     {
-                        "teacher": "Кошкина Анастасия Алексеевна",
-                        "group": "ИС-33",
-                        "room": "314",
+                        "teacher": "Кошкина А.А.",
+                        "group": "ИС-31",
+                        "room": "122",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-06",
@@ -131,16 +68,24 @@
                 "subject": "Системное программирование",
                 "otUnits": [
                     {
-                        "teacher": "Кошкина Анастасия Алексеевна",
+                        "teacher": "Кошкина А.А.",
                         "group": "ИС-31",
-                        "room": "314",
+                        "room": "122",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Кошкина А.А.",
+                        "group": "ИС-33",
+                        "room": "122",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-06",
@@ -150,16 +95,43 @@
                 "subject": "Системное программирование",
                 "otUnits": [
                     {
-                        "teacher": "Кошкина Анастасия Алексеевна",
+                        "teacher": "Кошкина А.А.",
+                        "group": "ИС-33",
+                        "room": "122",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Кошкина А.А.",
                         "group": "ИС-35",
-                        "room": "325",
+                        "room": "122",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-06",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Системное программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Кошкина А.А.",
+                        "group": "ИС-33",
+                        "room": "122",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
