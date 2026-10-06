@@ -71,7 +71,6 @@ class NewsController(
                 news = if (rollback) emptyList() else viewState.news
             )
         }
-        
         loadJob = viewModelScope.launchSafe(
             debug = debugMode, onFailure = {
                 Auditor.err(newsTag, "Ошибка загрузки новостей", it)

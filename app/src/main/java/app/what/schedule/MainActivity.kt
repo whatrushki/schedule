@@ -74,10 +74,11 @@ open class MainActivity : ComponentActivity() {
             
             LaunchedEffect(Unit) {
                 navigator.c.addOnDestinationChangedListener { _, destination, _ ->
+                    val route = destination.route ?: "unknown"
                     val navTag = buildTag(LogScope.CORE, LogCat.NAV)
-                    Auditor.debug(navTag, "Навигация: ${destination.route}")
-                    Analytics.logScreenView(destination.route ?: "no route")
-                    crashlytics.setCustomKey("current_screen", destination.route ?: "unknown")
+                    Auditor.debug(navTag, "Навигация: $route")
+                    Analytics.logScreenView(route)
+                    crashlytics.setCustomKey("current_screen", route)
                 }
             }
 

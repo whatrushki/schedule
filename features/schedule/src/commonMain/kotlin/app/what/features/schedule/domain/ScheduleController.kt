@@ -194,8 +194,6 @@ class ScheduleController(
                 )
             }
         }
-        
-        // 2. Fetch latest schedule with replacements from network
         val data = apiRepository.getSchedule(
             effectiveSearch,
             useCache = false,
@@ -211,9 +209,15 @@ class ScheduleController(
                     "Расписание успешно получено, дней: ${data.schedules.size}"
                 )
             }
-            ScheduleResponse.Empty -> Auditor.debug(scheduleTag, "Расписание пустое")
-            ScheduleResponse.UpToDate -> Auditor.debug(scheduleTag, "Расписание актуально")
-            else -> Auditor.debug(scheduleTag, "Не удалось получить расписание")
+            ScheduleResponse.Empty -> {
+                Auditor.debug(scheduleTag, "Расписание пустое")
+            }
+            ScheduleResponse.UpToDate -> {
+                Auditor.debug(scheduleTag, "Расписание актуально")
+            }
+            is ScheduleResponse.Error -> {
+                Auditor.debug(scheduleTag, "Не удалось получить расписание: ${data.exception.message}")
+            }
         }
         
         updateState {

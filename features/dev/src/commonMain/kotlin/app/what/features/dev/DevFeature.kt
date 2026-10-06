@@ -40,20 +40,17 @@ import app.what.foundation.ui.icons.filled.Logs
 import app.what.foundation.ui.icons.filled.Network
 
 import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.History
 import app.what.schedule.features.dev.presentation.HealthCheckPane
-import app.what.schedule.features.dev.presentation.SessionTrackerPane
 
 enum class DevToolsTab(
     val title: String, val icon: ImageVector
 ) {
     LOGS("Логи", WHATIcons.Logs),
     NETWORK("Сеть", WHATIcons.Network),
-    HEALTH("Тесты", Icons.Default.CheckCircle),
-    SESSION("Сессии", Icons.Default.History);
+    HEALTH("Тесты", Icons.Default.CheckCircle);
     
     companion object {
-        fun all() = listOf(LOGS, NETWORK, HEALTH, SESSION)
+        fun all() = listOf(LOGS, NETWORK, HEALTH)
     }
 }
 
@@ -133,7 +130,6 @@ fun DevFeature(
             DevToolsTab.LOGS -> LogsPane(Modifier.fillMaxSize())
             DevToolsTab.NETWORK -> NetworksPane(Modifier.fillMaxSize())
             DevToolsTab.HEALTH -> HealthCheckPane(Modifier.fillMaxSize())
-            DevToolsTab.SESSION -> SessionTrackerPane(Modifier.fillMaxSize())
         }
     }
 }
