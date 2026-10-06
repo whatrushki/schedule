@@ -32,6 +32,8 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.analytics.analytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import io.ktor.client.HttpClient
+import io.ktor.client.engine.cio.CIO
+import io.ktor.client.plugins.HttpTimeout
 import org.koin.android.ext.android.getKoin
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -109,11 +111,20 @@ class ScheduleApp : Application(), Configuration.Provider {
             Auditor.debug(initTag, "Пользователь уже существует: ${appValues.userId.get()}")
         }
         
+        val imageHttpClient = HttpClient(CIO) {
+            followRedirects = true
+            install(HttpTimeout) {
+                requestTimeoutMillis = 30_000
+                connectTimeoutMillis = 15_000
+                socketTimeoutMillis = 30_000
+            }
+        }
+
         SingletonImageLoader.setSafe {
             ImageLoader.Builder(this)
                 .crossfade(true)
                 .components {
-                    add(KtorNetworkFetcherFactory({ koin.get<HttpClient>() }))
+                    add(KtorNetworkFetcherFactory({ imageHttpClient }))
                 }
                 .diskCache {
                     DiskCache.Builder()
