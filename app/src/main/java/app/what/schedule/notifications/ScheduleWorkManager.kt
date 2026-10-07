@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit
 
 object ScheduleWorkManager {
     private const val WORK_NAME = "schedule_replacements_check"
+    private const val ONE_TIME_WORK_NAME = "schedule_replacements_check_immediate"
 
     fun schedulePeriodicCheck(context: Context, periodHours: Int) {
         val tag = buildTag(LogScope.CORE, LogCat.INIT)
@@ -30,6 +31,11 @@ object ScheduleWorkManager {
                 hours, TimeUnit.HOURS
             )
                 .setConstraints(constraints)
+                .setBackoffCriteria(
+                    androidx.work.BackoffPolicy.EXPONENTIAL,
+                    15,
+                    TimeUnit.MINUTES
+                )
                 .build()
 
             WorkManager.getInstance(context).enqueueUniquePeriodicWork(
@@ -42,11 +48,35 @@ object ScheduleWorkManager {
         }
     }
 
+    fun triggerImmediateCheck(context: Context) {
+        val tag = buildTag(LogScope.CORE, LogCat.INIT)
+        try {
+            Auditor.info(tag, "ScheduleWorkManager: запуск немедленной разовой проверки замен")
+
+            val constraints = Constraints.Builder()
+                .setRequiredNetworkType(NetworkType.CONNECTED)
+                .build()
+
+            val workRequest = androidx.work.OneTimeWorkRequestBuilder<ScheduleCheckWorker>()
+                .setConstraints(constraints)
+                .build()
+
+            WorkManager.getInstance(context).enqueueUniqueWork(
+                ONE_TIME_WORK_NAME,
+                androidx.work.ExistingWorkPolicy.REPLACE,
+                workRequest
+            )
+        } catch (e: Throwable) {
+            Auditor.debug(tag, "ScheduleWorkManager: ошибка при запуске немедленной проверки: ${e.message}")
+        }
+    }
+
     fun cancelPeriodicCheck(context: Context) {
         val tag = buildTag(LogScope.CORE, LogCat.INIT)
         try {
             Auditor.info(tag, "ScheduleWorkManager: отмена фоновой проверки замен")
             WorkManager.getInstance(context).cancelUniqueWork(WORK_NAME)
+            WorkManager.getInstance(context).cancelUniqueWork(ONE_TIME_WORK_NAME)
         } catch (e: Throwable) {
             Auditor.debug(tag, "ScheduleWorkManager: ошибка при отмене проверки замен: ${e.message}")
         }

@@ -228,6 +228,7 @@ class ScheduleApp : Application(), Configuration.Provider {
                     if (repEnabled || uniEnabled) {
                         val hours = period?.hours ?: 3
                         ScheduleWorkManager.schedulePeriodicCheck(this@ScheduleApp, hours)
+                        ScheduleWorkManager.triggerImmediateCheck(this@ScheduleApp)
                     } else {
                         ScheduleWorkManager.cancelPeriodicCheck(this@ScheduleApp)
                     }
