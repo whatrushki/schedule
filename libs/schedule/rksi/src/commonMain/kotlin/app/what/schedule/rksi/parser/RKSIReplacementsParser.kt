@@ -1,6 +1,10 @@
 package app.what.schedule.rksi.parser
 
-import app.what.schedule.core.models.*
+import app.what.schedule.core.models.LessonDto
+import app.what.schedule.core.models.LessonStateDto
+import app.what.schedule.core.models.LessonTimeDto
+import app.what.schedule.core.models.LessonTypeDto
+import app.what.schedule.core.models.OneTimeUnitDto
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
 
@@ -115,15 +119,129 @@ object RKSIReplacementsParser {
         timeSchedule: List<LessonTimeDto>,
         subjectResolver: ((teacher: String, group: String) -> String?)? = null
     ): List<LessonDto> {
-        val scrapedBase = baseLessons.map { it.toScrapedLesson() }
-        val scrapedRep = replacements.map { it.toScrapedLesson() }
-        val slots = timeSchedule.map { it.toTimeSlot() }
-        val merged = app.what.foundation.scraper.engine.ReconciliationEngine.applyReplacements(
-            scrapedBase,
-            scrapedRep,
-            slots,
-            subjectResolver
-        )
-        return merged.map { it.toLessonDto() }
+        val cleanBaseLessons = baseLessons.groupBy { Triple(it.date, it.startTime, it.subject) }
+            .map { (_, groupLessons) ->
+                groupLessons.first().copy(
+                    otUnits = groupLessons.flatMap { it.otUnits }.distinct()
+                )
+            }
+
+        if (replacements.isEmpty()) {
+            return cleanBaseLessons.sortedWith(compareBy({ it.startTime }, { it.number }))
+        }
+
+        val cleanReplacements = replacements.groupBy { it.date to it.number }
+            .map { (_, groupLessons) ->
+                groupLessons.first().copy(
+                    otUnits = groupLessons.flatMap { it.otUnits }.distinct()
+                )
+            }
+
+        val minTime = LocalTime(0, 0)
+        val unionSchedule = mutableMapOf<Int, Pair<LessonDto?, LessonDto?>>()
+        cleanReplacements.forEach { unionSchedule[it.number] = it to null }
+        cleanBaseLessons.forEach { unionSchedule[it.number] = unionSchedule[it.number]?.first to it }
+
+        return unionSchedule.mapNotNull { (_, pair) ->
+            val replacement = pair.first
+            val lesson = pair.second
+
+            if (replacement == null && lesson != null) {
+                // Пары нет в планшетке замен, хотя для группы были замены в этот день -> пара отменена
+                lesson.copy(state = LessonStateDto.REMOVED)
+            } else if (replacement != null && lesson == null) {
+                // Добавленная пара
+                val lessonTime = timeSchedule.firstOrNull { it.number == replacement.number }
+                val repTeacher = replacement.otUnits.firstOrNull()?.teacher.orEmpty().trim()
+                val repGroup = replacement.otUnits.firstOrNull()?.group.orEmpty().trim()
+                val resolvedSubject = if (repTeacher.isNotEmpty()) subjectResolver?.invoke(repTeacher, repGroup) else null
+
+                val isClassHour = replacement.number == 0 ||
+                    replacement.subject.contains("Классный", ignoreCase = true) ||
+                    replacement.type == LessonTypeDto.CLASS_HOUR
+
+                val subject = when {
+                    isClassHour -> "Классный час"
+                    replacement.subject.isNotBlank() -> replacement.subject
+                    !resolvedSubject.isNullOrBlank() -> resolvedSubject
+                    else -> "Предмет не указан"
+                }
+
+                val classHourStart = LocalTime(13, 5)
+                val classHourEnd = LocalTime(14, 5)
+                val start = lessonTime?.start
+                    ?: if (isClassHour) classHourStart else replacement.startTime.takeIf { it != minTime } ?: minTime
+                val end = lessonTime?.end
+                    ?: if (isClassHour) classHourEnd else replacement.endTime.takeIf { it != minTime } ?: minTime
+
+                replacement.copy(
+                    number = if (isClassHour) 0 else replacement.number,
+                    state = LessonStateDto.ADDED,
+                    startTime = start,
+                    endTime = end,
+                    subject = subject,
+                    type = if (isClassHour) LessonTypeDto.CLASS_HOUR else replacement.type
+                )
+            } else if (replacement != null && lesson != null) {
+                val isClassHour = replacement.number == 0 ||
+                    replacement.subject.contains("Классный", ignoreCase = true) ||
+                    replacement.type == LessonTypeDto.CLASS_HOUR ||
+                    lesson.number == 0 ||
+                    lesson.type == LessonTypeDto.CLASS_HOUR ||
+                    lesson.subject.contains("Классный", ignoreCase = true)
+
+                val classHourStart = LocalTime(13, 5)
+                val classHourEnd = LocalTime(14, 5)
+
+                if (lesson.equalsWithReplacement(replacement)) {
+                    // Преподаватель и аудитория совпадают с базовым расписанием -> пара НЕ изменена
+                    if (isClassHour) {
+                        val start = lesson.startTime.takeIf { it != minTime } ?: classHourStart
+                        val end = lesson.endTime.takeIf { it != minTime } ?: classHourEnd
+                        lesson.copy(number = 0, type = LessonTypeDto.CLASS_HOUR, startTime = start, endTime = end)
+                    } else {
+                        lesson
+                    }
+                } else {
+                    // Преподаватель или аудитория изменились -> пара изменена
+                    val lessonTime = timeSchedule.firstOrNull { it.number == replacement.number }
+                    val repTeacher = replacement.otUnits.firstOrNull()?.teacher.orEmpty().trim()
+                    val repGroup = replacement.otUnits.firstOrNull()?.group.orEmpty().trim()
+                    val sameTeacher = lesson.otUnits.any { isSameTeacher(it.teacher, repTeacher) }
+
+                    val subject = when {
+                        isClassHour -> "Классный час"
+                        replacement.subject.isNotBlank() -> replacement.subject
+                        sameTeacher -> lesson.subject.ifEmpty { "Предмет не указан" }
+                        else -> {
+                            val resolved = if (repTeacher.isNotEmpty()) subjectResolver?.invoke(repTeacher, repGroup) else null
+                            if (!resolved.isNullOrBlank()) resolved else "Предмет не указан"
+                        }
+                    }
+
+                    val targetType = when {
+                        isClassHour -> LessonTypeDto.CLASS_HOUR
+                        sameTeacher -> lesson.type
+                        else -> LessonTypeDto.COMMON
+                    }
+
+                    val start = lesson.startTime.takeIf { it != minTime }
+                        ?: (lessonTime?.start ?: if (isClassHour) classHourStart else replacement.startTime.takeIf { it != minTime } ?: minTime)
+                    val end = lesson.endTime.takeIf { it != minTime }
+                        ?: (lessonTime?.end ?: if (isClassHour) classHourEnd else replacement.endTime.takeIf { it != minTime } ?: minTime)
+
+                    replacement.copy(
+                        number = if (isClassHour) 0 else replacement.number,
+                        state = LessonStateDto.CHANGED,
+                        startTime = start,
+                        endTime = end,
+                        subject = subject,
+                        type = targetType
+                    )
+                }
+            } else {
+                null
+            }
+        }.sortedWith(compareBy({ it.startTime }, { it.number }))
     }
 }
