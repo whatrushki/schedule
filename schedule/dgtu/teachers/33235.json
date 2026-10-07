@@ -1442,7 +1442,7 @@
                     {
                         "teacher": "Стоякина Е. А.",
                         "group": "ЛПП12",
-                        "room": "528",
+                        "room": "531",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -1499,8 +1499,8 @@
                     {
                         "teacher": "Стоякина Е. А.",
                         "group": "ЛПП24",
-                        "room": "518",
-                        "additional": "8",
+                        "room": "262",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1535,6 +1535,25 @@
             },
             {
                 "date": "2026-10-08",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Практический курс второго иностранного языка (немецкий), п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Стоякина Е. А.",
+                        "group": "ЛПП24",
+                        "room": "211",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -1560,25 +1579,6 @@
         "lessons": [
             {
                 "date": "2026-10-09",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Практический курс второго иностранного языка (немецкий), п/г 1",
-                "otUnits": [
-                    {
-                        "teacher": "Стоякина Е. А.",
-                        "group": "ЛПП24",
-                        "room": "211",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-09",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -1589,6 +1589,25 @@
                         "group": "ЛПП21",
                         "room": "444",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Практический курс первого иностранного языка (английский), п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Стоякина Е. А.",
+                        "group": "ЛПП21",
+                        "room": "010",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1677,24 +1696,74 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-10-12",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-10-10",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
+                "date": "2026-10-12",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "пр Практический курс первого иностранного языка (английский), п/г 1",
                 "otUnits": [
                     {
                         "teacher": "Стоякина Е. А.",
                         "group": "ЛПП21",
-                        "room": "010",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Практический курс первого иностранного языка (английский), п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Стоякина Е. А.",
+                        "group": "ЛПП21",
+                        "room": "527",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-16",
+                "number": 0,
+                "startTime": "12:00",
+                "endTime": "14:00",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Стоякина Е. А.",
+                        "group": "",
+                        "room": "324",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "UNKNOWN",
                 "state": "COMMON"
             }
         ]
