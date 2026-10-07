@@ -77,6 +77,10 @@ jobs:
           fi
 
       - name: Run Schedule Sync CLI
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GPR_USER: ${{ github.actor }}
+          GPR_KEY: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p build/schedule_out/schedule
           ARGS="--target ${{ steps.determine_target.outputs.target }} --out ${GITHUB_WORKSPACE}/build/schedule_out/schedule"

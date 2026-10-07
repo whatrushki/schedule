@@ -26,7 +26,7 @@ kotlin {
         commonMain.dependencies {
             implementation(project(":domain"))
             api(libs.compose.foundation)
-            implementation(project(":libs:schedule:core"))
+            api(project(":libs:schedule:core"))
             implementation(project(":libs:schedule:rksi"))
             implementation(project(":libs:schedule:dgtu"))
             implementation(project(":libs:schedule:iubip"))

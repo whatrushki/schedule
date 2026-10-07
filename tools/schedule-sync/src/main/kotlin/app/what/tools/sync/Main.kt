@@ -45,6 +45,8 @@ import java.io.File
 data class InstitutionMeta(
     val lastSync: String,
     val institution: String,
+    val status: String = "SUCCESS",
+    val errorMessage: String? = null,
     val groupCount: Int,
     val teacherCount: Int
 )
@@ -173,12 +175,12 @@ suspend fun syncRksi(client: HttpClient, rootDir: File, failOnError: Boolean = f
                             delay(20)
                             val schedule = rksiClient.getGroupSchedule(group.name, showReplacements = true)
                             if (schedule.isNotEmpty()) {
-                                val safeName = group.name.replace("/", "_").replace("\\", "_")
-                                File(groupsDir, "$safeName.json").writeText(json.encodeToString(schedule))
+                                val safeId = sanitizeFileName(group.id.ifEmpty { group.name })
+                                File(groupsDir, "$safeId.json").writeText(json.encodeToString(schedule))
                                 synchronized(groupsDir) { groupCount++ }
                             }
                         }.onFailure {
-                            println("  [RKSI] Failed schedule for ${group.name}: ${it.message}")
+                            println("  [RKSI] Failed schedule for ${group.name} (${group.id}): ${it.message}")
                         }
                     }
                 }
@@ -194,7 +196,7 @@ suspend fun syncRksi(client: HttpClient, rootDir: File, failOnError: Boolean = f
                             delay(20)
                             val schedule = rksiClient.getTeacherSchedule(teacher.id, showReplacements = true)
                             if (schedule.isNotEmpty()) {
-                                val safeId = teacher.id.ifEmpty { teacher.name }.replace("/", "_").replace("\\", "_")
+                                val safeId = sanitizeFileName(teacher.id.ifEmpty { teacher.name })
                                 File(teachersDir, "$safeId.json").writeText(json.encodeToString(schedule))
                                 synchronized(teachersDir) { teacherCount++ }
                             }
@@ -209,6 +211,7 @@ suspend fun syncRksi(client: HttpClient, rootDir: File, failOnError: Boolean = f
         val meta = InstitutionMeta(
             lastSync = nowStr,
             institution = "rksi",
+            status = "SUCCESS",
             groupCount = groups.size,
             teacherCount = teachers.size
         )
@@ -217,6 +220,15 @@ suspend fun syncRksi(client: HttpClient, rootDir: File, failOnError: Boolean = f
     }.onFailure {
         println("  [RKSI] Error syncing: ${it.message}")
         it.printStackTrace()
+        val errorMeta = InstitutionMeta(
+            lastSync = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString(),
+            institution = "rksi",
+            status = "FAILED",
+            errorMessage = it.message ?: "Unknown error",
+            groupCount = 0,
+            teacherCount = 0
+        )
+        File(dir, "meta.json").writeText(json.encodeToString(errorMeta))
         if (failOnError) throw it
     }
 }
@@ -265,12 +277,12 @@ suspend fun syncDgtu(client: HttpClient, rootDir: File, failOnError: Boolean = f
                             delay(20)
                             val schedule = dgtuClient.getGroupSchedule(group.name)
                             if (schedule.isNotEmpty()) {
-                                val safeName = group.name.replace("/", "_").replace("\\", "_")
-                                File(groupsDir, "$safeName.json").writeText(json.encodeToString(schedule))
+                                val safeId = sanitizeFileName(group.id.ifEmpty { group.name })
+                                File(groupsDir, "$safeId.json").writeText(json.encodeToString(schedule))
                                 synchronized(groupsDir) { groupCount++ }
                             }
                         }.onFailure {
-                            println("  [DGTU] Failed group schedule for ${group.name}: ${it.message}")
+                            println("  [DGTU] Failed group schedule for ${group.name} (${group.id}): ${it.message}")
                         }
                     }
                 }
@@ -286,7 +298,7 @@ suspend fun syncDgtu(client: HttpClient, rootDir: File, failOnError: Boolean = f
                             delay(20)
                             val schedule = dgtuClient.getTeacherSchedule(teacher.id)
                             if (schedule.isNotEmpty()) {
-                                val safeId = teacher.id.ifEmpty { teacher.name }.replace("/", "_").replace("\\", "_")
+                                val safeId = sanitizeFileName(teacher.id.ifEmpty { teacher.name })
                                 File(teachersDir, "$safeId.json").writeText(json.encodeToString(schedule))
                                 synchronized(teachersDir) { teacherCount++ }
                             }
@@ -301,6 +313,7 @@ suspend fun syncDgtu(client: HttpClient, rootDir: File, failOnError: Boolean = f
         val meta = InstitutionMeta(
             lastSync = nowStr,
             institution = "dgtu",
+            status = "SUCCESS",
             groupCount = groups.size,
             teacherCount = teachers.size
         )
@@ -309,6 +322,15 @@ suspend fun syncDgtu(client: HttpClient, rootDir: File, failOnError: Boolean = f
     }.onFailure {
         println("  [DGTU] Error syncing: ${it.message}")
         it.printStackTrace()
+        val errorMeta = InstitutionMeta(
+            lastSync = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString(),
+            institution = "dgtu",
+            status = "FAILED",
+            errorMessage = it.message ?: "Unknown error",
+            groupCount = 0,
+            teacherCount = 0
+        )
+        File(dir, "meta.json").writeText(json.encodeToString(errorMeta))
         if (failOnError) throw it
     }
 }
@@ -348,8 +370,8 @@ suspend fun syncIubip(client: HttpClient, rootDir: File, failOnError: Boolean = 
                                 synchronized(schedules) {
                                     schedules[group.name] = schedule
                                 }
-                                val safeName = group.name.replace("/", "_").replace("\\", "_")
-                                File(groupsDir, "$safeName.json").writeText(json.encodeToString(schedule))
+                                val safeId = sanitizeFileName(group.id.ifEmpty { group.name })
+                                File(groupsDir, "$safeId.json").writeText(json.encodeToString(schedule))
                             }
                         }
                     }
@@ -360,7 +382,7 @@ suspend fun syncIubip(client: HttpClient, rootDir: File, failOnError: Boolean = 
         // Extract teacher schedules from all parsed group schedules in memory
         var teacherCount = 0
         teachers.forEach { teacher ->
-            val safeId = teacher.id.ifEmpty { teacher.name }.replace("/", "_").replace("\\", "_")
+            val safeId = sanitizeFileName(teacher.id.ifEmpty { teacher.name })
             val allDays = mutableMapOf<LocalDate, MutableList<app.what.schedule.core.models.LessonDto>>()
             schedules.values.forEach { days ->
                 days.forEach { day ->
@@ -390,6 +412,7 @@ suspend fun syncIubip(client: HttpClient, rootDir: File, failOnError: Boolean = 
         val meta = InstitutionMeta(
             lastSync = nowStr,
             institution = "iubip",
+            status = "SUCCESS",
             groupCount = groups.size,
             teacherCount = teachers.size
         )
@@ -398,6 +421,15 @@ suspend fun syncIubip(client: HttpClient, rootDir: File, failOnError: Boolean = 
     }.onFailure {
         println("  [IUBIP] Error syncing: ${it.message}")
         it.printStackTrace()
+        val errorMeta = InstitutionMeta(
+            lastSync = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString(),
+            institution = "iubip",
+            status = "FAILED",
+            errorMessage = it.message ?: "Unknown error",
+            groupCount = 0,
+            teacherCount = 0
+        )
+        File(dir, "meta.json").writeText(json.encodeToString(errorMeta))
         if (failOnError) throw it
     }
 }
@@ -435,8 +467,8 @@ suspend fun syncRinh(client: HttpClient, rootDir: File, failOnError: Boolean = f
                             delay(30)
                             val schedule = rinhClient.getGroupSchedule(group.name)
                             if (schedule.isNotEmpty()) {
-                                val safeName = group.name.replace("/", "_").replace("\\", "_")
-                                File(groupsDir, "$safeName.json").writeText(json.encodeToString(schedule))
+                                val safeId = sanitizeFileName(group.id.ifEmpty { group.name })
+                                File(groupsDir, "$safeId.json").writeText(json.encodeToString(schedule))
                                 synchronized(groupsDir) { groupCount++ }
                             }
                         }
@@ -454,7 +486,7 @@ suspend fun syncRinh(client: HttpClient, rootDir: File, failOnError: Boolean = f
                             delay(30)
                             val schedule = rinhClient.getTeacherSchedule(teacher.name)
                             if (schedule.isNotEmpty()) {
-                                val safeId = teacher.id.ifEmpty { teacher.name }.replace("/", "_").replace("\\", "_")
+                                val safeId = sanitizeFileName(teacher.id.ifEmpty { teacher.name })
                                 File(teachersDir, "$safeId.json").writeText(json.encodeToString(schedule))
                                 synchronized(teachersDir) { teacherCount++ }
                             }
@@ -467,6 +499,7 @@ suspend fun syncRinh(client: HttpClient, rootDir: File, failOnError: Boolean = f
         val meta = InstitutionMeta(
             lastSync = nowStr,
             institution = "rinh",
+            status = "SUCCESS",
             groupCount = groups.size,
             teacherCount = teachers.size
         )
@@ -475,6 +508,15 @@ suspend fun syncRinh(client: HttpClient, rootDir: File, failOnError: Boolean = f
     }.onFailure {
         println("  [RINH] Error syncing: ${it.message}")
         it.printStackTrace()
+        val errorMeta = InstitutionMeta(
+            lastSync = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString(),
+            institution = "rinh",
+            status = "FAILED",
+            errorMessage = it.message ?: "Unknown error",
+            groupCount = 0,
+            teacherCount = 0
+        )
+        File(dir, "meta.json").writeText(json.encodeToString(errorMeta))
         if (failOnError) throw it
     }
 }
@@ -512,8 +554,8 @@ suspend fun syncSfedu(client: HttpClient, rootDir: File, failOnError: Boolean = 
                             delay(30)
                             val schedule = sfeduClient.getGroupSchedule(group.id)
                             if (schedule.isNotEmpty()) {
-                                val safeName = group.name.replace("/", "_").replace("\\", "_")
-                                File(groupsDir, "$safeName.json").writeText(json.encodeToString(schedule))
+                                val safeId = sanitizeFileName(group.id.ifEmpty { group.name })
+                                File(groupsDir, "$safeId.json").writeText(json.encodeToString(schedule))
                                 synchronized(groupsDir) { groupCount++ }
                             }
                         }
@@ -531,7 +573,7 @@ suspend fun syncSfedu(client: HttpClient, rootDir: File, failOnError: Boolean = 
                             delay(30)
                             val schedule = sfeduClient.getTeacherSchedule(teacher.id)
                             if (schedule.isNotEmpty()) {
-                                val safeId = teacher.id.ifEmpty { teacher.name }.replace("/", "_").replace("\\", "_")
+                                val safeId = sanitizeFileName(teacher.id.ifEmpty { teacher.name })
                                 File(teachersDir, "$safeId.json").writeText(json.encodeToString(schedule))
                                 synchronized(teachersDir) { teacherCount++ }
                             }
@@ -544,6 +586,7 @@ suspend fun syncSfedu(client: HttpClient, rootDir: File, failOnError: Boolean = 
         val meta = InstitutionMeta(
             lastSync = nowStr,
             institution = "sfedu",
+            status = "SUCCESS",
             groupCount = groups.size,
             teacherCount = teachers.size
         )
@@ -552,6 +595,15 @@ suspend fun syncSfedu(client: HttpClient, rootDir: File, failOnError: Boolean = 
     }.onFailure {
         println("  [SFEDU] Error syncing: ${it.message}")
         it.printStackTrace()
+        val errorMeta = InstitutionMeta(
+            lastSync = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString(),
+            institution = "sfedu",
+            status = "FAILED",
+            errorMessage = it.message ?: "Unknown error",
+            groupCount = 0,
+            teacherCount = 0
+        )
+        File(dir, "meta.json").writeText(json.encodeToString(errorMeta))
         if (failOnError) throw it
     }
 }
@@ -587,8 +639,8 @@ suspend fun syncRgups(client: HttpClient, rootDir: File, failOnError: Boolean = 
                             delay(30)
                             val schedule = rgupsClient.getGroupSchedule(group.id)
                             if (schedule.isNotEmpty()) {
-                                val safeName = group.name.replace("/", "_").replace("\\", "_")
-                                File(groupsDir, "$safeName.json").writeText(json.encodeToString(schedule))
+                                val safeId = sanitizeFileName(group.id.ifEmpty { group.name })
+                                File(groupsDir, "$safeId.json").writeText(json.encodeToString(schedule))
                                 synchronized(groupsDir) { groupCount++ }
 
                                 synchronized(teacherSchedules) {
@@ -623,7 +675,7 @@ suspend fun syncRgups(client: HttpClient, rootDir: File, failOnError: Boolean = 
         }
 
         println("  [RGUPS] Aggregated ${teacherSchedules.size} teachers from all group schedules")
-        val teachersList = teacherSchedules.keys.sorted().map { TeacherDto(id = it, name = it) }
+        val teachersList = teacherSchedules.keys.sorted().map { TeacherDto(id = sanitizeFileName(it), name = it) }
         File(dir, "teachers.json").writeText(json.encodeToString(teachersList))
 
         var teacherCount = 0
@@ -651,7 +703,7 @@ suspend fun syncRgups(client: HttpClient, rootDir: File, failOnError: Boolean = 
                 )
             }.sortedBy { it.date }
 
-            val safeTeacherId = teacherName.replace("/", "_").replace("\\", "_")
+            val safeTeacherId = sanitizeFileName(teacherName)
             File(teachersDir, "$safeTeacherId.json").writeText(json.encodeToString(teacherDays))
             teacherCount++
         }
@@ -659,6 +711,7 @@ suspend fun syncRgups(client: HttpClient, rootDir: File, failOnError: Boolean = 
         val meta = InstitutionMeta(
             lastSync = nowStr,
             institution = "rgups",
+            status = "SUCCESS",
             groupCount = groups.size,
             teacherCount = teachersList.size
         )
@@ -667,6 +720,15 @@ suspend fun syncRgups(client: HttpClient, rootDir: File, failOnError: Boolean = 
     }.onFailure {
         println("  [RGUPS] Error syncing: ${it.message}")
         it.printStackTrace()
+        val errorMeta = InstitutionMeta(
+            lastSync = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString(),
+            institution = "rgups",
+            status = "FAILED",
+            errorMessage = it.message ?: "Unknown error",
+            groupCount = 0,
+            teacherCount = 0
+        )
+        File(dir, "meta.json").writeText(json.encodeToString(errorMeta))
         if (failOnError) throw it
     }
 }
@@ -703,8 +765,8 @@ suspend fun syncRgupsTuapse(client: HttpClient, rootDir: File, failOnError: Bool
                         runCatching {
                             val schedule = tuapseClient.getGroupSchedule(group.id)
                             if (schedule.isNotEmpty()) {
-                                val safeName = group.name.replace("/", "_").replace("\\", "_")
-                                File(groupsDir, "$safeName.json").writeText(json.encodeToString(schedule))
+                                val safeId = sanitizeFileName(group.id.ifEmpty { group.name })
+                                File(groupsDir, "$safeId.json").writeText(json.encodeToString(schedule))
                                 synchronized(groupsDir) { groupCount++ }
                             }
                         }
@@ -720,7 +782,7 @@ suspend fun syncRgupsTuapse(client: HttpClient, rootDir: File, failOnError: Bool
                         runCatching {
                             val schedule = tuapseClient.getTeacherSchedule(teacher.id)
                             if (schedule.isNotEmpty()) {
-                                val safeId = teacher.id.ifEmpty { teacher.name }.replace("/", "_").replace("\\", "_")
+                                val safeId = sanitizeFileName(teacher.id.ifEmpty { teacher.name })
                                 File(teachersDir, "$safeId.json").writeText(json.encodeToString(schedule))
                                 synchronized(teachersDir) { teacherCount++ }
                             }
@@ -733,6 +795,7 @@ suspend fun syncRgupsTuapse(client: HttpClient, rootDir: File, failOnError: Bool
         val meta = InstitutionMeta(
             lastSync = nowStr,
             institution = "rgups_tuapse",
+            status = "SUCCESS",
             groupCount = groups.size,
             teacherCount = teachers.size
         )
@@ -741,6 +804,15 @@ suspend fun syncRgupsTuapse(client: HttpClient, rootDir: File, failOnError: Bool
     }.onFailure {
         println("  [Tuapse] Error syncing: ${it.message}")
         it.printStackTrace()
+        val errorMeta = InstitutionMeta(
+            lastSync = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString(),
+            institution = "rgups_tuapse",
+            status = "FAILED",
+            errorMessage = it.message ?: "Unknown error",
+            groupCount = 0,
+            teacherCount = 0
+        )
+        File(dir, "meta.json").writeText(json.encodeToString(errorMeta))
         if (failOnError) throw it
     }
 }
@@ -784,8 +856,8 @@ suspend fun syncTvgu(client: HttpClient, rootDir: File, failOnError: Boolean = f
                             delay(30)
                             val schedule = tvguClient.getGroupSchedule(group.name)
                             if (schedule.isNotEmpty()) {
-                                val safeName = sanitizeFileName(group.name)
-                                File(groupsDir, "$safeName.json").writeText(json.encodeToString(schedule))
+                                val safeId = sanitizeFileName(group.id.ifEmpty { group.name })
+                                File(groupsDir, "$safeId.json").writeText(json.encodeToString(schedule))
                                 synchronized(groupsDir) { groupCount++ }
 
                                 synchronized(teacherSchedules) {
@@ -858,6 +930,7 @@ suspend fun syncTvgu(client: HttpClient, rootDir: File, failOnError: Boolean = f
         val meta = InstitutionMeta(
             lastSync = nowStr,
             institution = "tvgu",
+            status = "SUCCESS",
             groupCount = groups.size,
             teacherCount = teachersList.size
         )
@@ -866,6 +939,15 @@ suspend fun syncTvgu(client: HttpClient, rootDir: File, failOnError: Boolean = f
     }.onFailure {
         println("  [TvGU] Error syncing: ${it.message}")
         it.printStackTrace()
+        val errorMeta = InstitutionMeta(
+            lastSync = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString(),
+            institution = "tvgu",
+            status = "FAILED",
+            errorMessage = it.message ?: "Unknown error",
+            groupCount = 0,
+            teacherCount = 0
+        )
+        File(dir, "meta.json").writeText(json.encodeToString(errorMeta))
         if (failOnError) throw it
     }
 }

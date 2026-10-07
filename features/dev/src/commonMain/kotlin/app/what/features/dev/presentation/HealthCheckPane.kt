@@ -163,7 +163,40 @@ fun HealthCheckPane(
                     }
                 },
 
-                // --- 5. ЭКОСИСТЕМА И СЕРВИСЫ ДОСТАВКИ ---
+                // --- 5. ОБЛАЧНАЯ СИНХРОНИЗАЦИЯ (GH-PAGES) ---
+                object : HealthCheck {
+                    override val id: String = "cloud_schedule_sync_status"
+                    override val title: String = "Синхронизация расписания (GitHub Pages)"
+                    override val category: HealthCategory = HealthCategory.PROVIDER
+
+                    override suspend fun run(): HealthResult {
+                        return try {
+                            val currentInst = appValues.institution.get() ?: "rksi"
+                            val cloudClient = app.what.data.remote.CloudScheduleClient(currentInst, httpClient)
+                            val meta = cloudClient.getMeta()
+                            if (meta == null) {
+                                HealthResult.Warning(message = "Метаданные синхронизации для $currentInst не найдены в gh-pages")
+                            } else if (meta.status.equals("FAILED", ignoreCase = true)) {
+                                HealthResult.Failed(
+                                    message = "Синхронизация для $currentInst завершилась сбоем: ${meta.errorMessage ?: "Неизвестная ошибка"} (последняя попытка: ${meta.lastSync})",
+                                    error = Exception(meta.errorMessage)
+                                )
+                            } else if (!cloudClient.isSyncHealthy()) {
+                                HealthResult.Warning(
+                                    message = "Данные синхронизации устарели (последний синк: ${meta.lastSync}, групп: ${meta.groupCount}). Приложение переключилось на ручной парсер."
+                                )
+                            } else {
+                                HealthResult.Passed(
+                                    message = "Синхронизация активна (${meta.lastSync}), групп: ${meta.groupCount}, преподавателей: ${meta.teacherCount}"
+                                )
+                            }
+                        } catch (e: Exception) {
+                            HealthResult.Failed(message = "Сбой проверки облачной синхронизации: ${e.message}", error = e)
+                        }
+                    }
+                },
+
+                // --- 6. ЭКОСИСТЕМА И СЕРВИСЫ ДОСТАВКИ ---
                 EndpointAvailabilityCheck(
                     id = "check_delivery",
                     title = "Центр уведомлений (GitHub Raw delivery)",

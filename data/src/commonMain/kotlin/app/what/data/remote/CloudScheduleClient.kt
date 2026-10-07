@@ -13,6 +13,7 @@ import io.ktor.client.request.get
 import io.ktor.client.statement.bodyAsText
 import io.ktor.http.encodeURLPathPart
 import io.ktor.http.isSuccess
+import kotlinx.datetime.toInstant
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
@@ -20,9 +21,38 @@ import kotlinx.serialization.json.Json
 data class CloudInstitutionMeta(
     val lastSync: String? = null,
     val institution: String? = null,
+    val status: String = "SUCCESS",
+    val errorMessage: String? = null,
     val groupCount: Int = 0,
     val teacherCount: Int = 0
-)
+) {
+    /**
+     * Проверяет валидность и актуальность синхронизации.
+     * Если статус FAILED или данных нет — синхронизация считается нездоровой.
+     */
+    fun isHealthy(maxAgeHours: Long = 24): Boolean {
+        if (status.equals("FAILED", ignoreCase = true)) return false
+        if (groupCount == 0) return false
+        if (lastSync.isNullOrBlank()) return false
+
+        return try {
+            val now = kotlinx.datetime.Clock.System.now()
+            val syncInstant = try {
+                kotlinx.datetime.Instant.parse(lastSync)
+            } catch (_: Exception) {
+                val ldt = kotlinx.datetime.LocalDateTime.parse(lastSync)
+                val tz = kotlinx.datetime.TimeZone.currentSystemDefault()
+                with(kotlinx.datetime.TimeZone) {
+                    ldt.toInstant(tz)
+                }
+            }
+            val diff = now - syncInstant
+            diff.inWholeHours <= maxAgeHours
+        } catch (_: Exception) {
+            true
+        }
+    }
+}
 
 class CloudScheduleClient(
     val institutionId: String,
@@ -103,6 +133,13 @@ class CloudScheduleClient(
             is FetchResult.Success -> res.text
             else -> null
         }
+    }
+
+    suspend fun isSyncHealthy(): Boolean {
+        val meta = getMeta() ?: return false
+        // Для RKSI частые изменения/замены, порог актуальности 14 часов. Для других вузов 36 часов.
+        val maxAge = if (institutionId.equals("rksi", ignoreCase = true)) 14L else 36L
+        return meta.isHealthy(maxAge)
     }
 
     suspend fun getMeta(): CloudInstitutionMeta? {

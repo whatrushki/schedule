@@ -31,22 +31,29 @@ class AdaptedScheduleService(
         additional: AdditionalData
     ): ScheduleResponse {
         val forceLive = additional["forceLive"] == true
+        val cloud = cloudClient as? CloudScheduleClient
+        val isCloudHealthy = cloud?.isSyncHealthy() ?: (cloudClient != null)
+
         if (!forceLive && cloudClient != null) {
-            try {
-                val cloudSchedules = cloudClient.getGroupSchedule(group, showReplacements)
-                if (cloudSchedules.isNotEmpty()) {
-                    Auditor.debug(tag, "[AdaptedScheduleService] Loaded schedule for group $group from cloud source")
-                    return cloudSchedules.toDomainResponse()
+            if (isCloudHealthy) {
+                try {
+                    val cloudSchedules = cloudClient.getGroupSchedule(group, showReplacements)
+                    if (cloudSchedules.isNotEmpty()) {
+                        Auditor.debug(tag, "[AdaptedScheduleService] Loaded schedule for group $group from cloud source")
+                        return cloudSchedules.toDomainResponse()
+                    }
+                } catch (e: Exception) {
+                    Auditor.warn(tag, "[AdaptedScheduleService] Cloud schedule fetch failed for group $group, falling back to live parser: ${e.message}")
                 }
-            } catch (e: Exception) {
-                Auditor.warn(tag, "[AdaptedScheduleService] Cloud schedule fetch failed for group $group, falling back to live parser: ${e.message}")
+            } else {
+                Auditor.warn(tag, "[AdaptedScheduleService] Cloud sync is UNHEALTHY or outdated for group $group, skipping cloud and using live parser")
             }
         }
 
         return try {
             client.getGroupSchedule(group, showReplacements).toDomainResponse()
         } catch (e: Exception) {
-            if (forceLive && cloudClient != null) {
+            if (cloudClient != null) {
                 try {
                     val cloudSchedules = cloudClient.getGroupSchedule(group, showReplacements)
                     if (cloudSchedules.isNotEmpty()) {
@@ -65,22 +72,29 @@ class AdaptedScheduleService(
         additional: AdditionalData
     ): ScheduleResponse {
         val forceLive = additional["forceLive"] == true
+        val cloud = cloudClient as? CloudScheduleClient
+        val isCloudHealthy = cloud?.isSyncHealthy() ?: (cloudClient != null)
+
         if (!forceLive && cloudClient != null) {
-            try {
-                val cloudSchedules = cloudClient.getTeacherSchedule(teacher, showReplacements)
-                if (cloudSchedules.isNotEmpty()) {
-                    Auditor.debug(tag, "[AdaptedScheduleService] Loaded schedule for teacher $teacher from cloud source")
-                    return cloudSchedules.mergeTeacherLessons().toDomainResponse()
+            if (isCloudHealthy) {
+                try {
+                    val cloudSchedules = cloudClient.getTeacherSchedule(teacher, showReplacements)
+                    if (cloudSchedules.isNotEmpty()) {
+                        Auditor.debug(tag, "[AdaptedScheduleService] Loaded schedule for teacher $teacher from cloud source")
+                        return cloudSchedules.mergeTeacherLessons().toDomainResponse()
+                    }
+                } catch (e: Exception) {
+                    Auditor.warn(tag, "[AdaptedScheduleService] Cloud schedule fetch failed for teacher $teacher, falling back to live parser: ${e.message}")
                 }
-            } catch (e: Exception) {
-                Auditor.warn(tag, "[AdaptedScheduleService] Cloud schedule fetch failed for teacher $teacher, falling back to live parser: ${e.message}")
+            } else {
+                Auditor.warn(tag, "[AdaptedScheduleService] Cloud sync is UNHEALTHY or outdated for teacher $teacher, skipping cloud and using live parser")
             }
         }
 
         return try {
             client.getTeacherSchedule(teacher, showReplacements).mergeTeacherLessons().toDomainResponse()
         } catch (e: Exception) {
-            if (forceLive && cloudClient != null) {
+            if (cloudClient != null) {
                 try {
                     val cloudSchedules = cloudClient.getTeacherSchedule(teacher, showReplacements)
                     if (cloudSchedules.isNotEmpty()) {
