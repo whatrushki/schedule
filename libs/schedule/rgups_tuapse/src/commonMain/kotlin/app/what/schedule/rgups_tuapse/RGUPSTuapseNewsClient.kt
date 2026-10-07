@@ -14,16 +14,17 @@ import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
 
 class RGUPSTuapseNewsClient(
-    private val client: HttpClient,
+    private val client: HttpClient? = null,
     private val baseUrl: String = "https://rgups-tuapse.ru",
     private val log: ((String) -> Unit)? = null
 ) : NewsClient {
 
     override suspend fun getNews(page: Int): List<NewListItemDto> {
+        val httpClient = client ?: return emptyList()
         return try {
             val start = (page.coerceAtLeast(1) - 1) * 6
             val url = "$baseUrl/?start=$start"
-            val html = client.get(url).bodyAsText()
+            val html = httpClient.get(url).bodyAsText()
             val doc = Ksoup.parse(html)
 
             val items = doc.select(".blog-item, .com-content-category-blog__item")
@@ -60,8 +61,13 @@ class RGUPSTuapseNewsClient(
     }
 
     override suspend fun getNewDetail(id: String): NewDetailDto {
+        val httpClient = client ?: throw IllegalStateException("HttpClient is required for fetching network news")
         val url = if (id.startsWith("http")) id else "$baseUrl$id"
-        val html = client.get(url).bodyAsText()
+        val html = httpClient.get(url).bodyAsText()
+        return parseNewsDetail(html, url, id)
+    }
+
+    fun parseNewsDetail(html: String, url: String, id: String = url): NewDetailDto {
         val doc = Ksoup.parse(html)
 
         var title = doc.selectFirst(".item-page h2, .page-header h2, h2")?.text()?.trim().orEmpty()

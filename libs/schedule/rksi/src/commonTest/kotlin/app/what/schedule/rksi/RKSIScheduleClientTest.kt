@@ -298,7 +298,7 @@ class RKSIScheduleClientTest {
         val descTag = main.getElementsByTag("b").firstOrNull()
         assertEquals("В нашем колледже состоялось первое собрание.", descTag?.html()?.trim())
 
-        val client = RKSINewsClient(io.ktor.client.HttpClient())
+        val client = RKSINewsClient()
         // Verify class can be instantiated and formatImageUrl works
         assertEquals("Собрание амбассадоров", title)
     }

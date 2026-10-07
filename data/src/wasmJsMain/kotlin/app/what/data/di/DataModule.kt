@@ -22,6 +22,8 @@ import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.logging.Logger
 import io.ktor.client.plugins.logging.Logging
+import io.ktor.http.encodeURLPathPart
+import io.ktor.http.takeFrom
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -69,7 +71,6 @@ class WebInstitutionFactory(
         )
         return object : Institution by baseInst {
             override val scheduleService: ScheduleService = AdaptedScheduleService(cloudClient)
-            override val newsService: NewsService = object : NewsService {}
         }
     }
 }
@@ -132,6 +133,7 @@ val dataModule = module {
     }
 
     single {
+        val proxyBase = "https://schedule.whatrushki-tech.workers.dev/?url="
         HttpClient {
             install(Logging) {
                 logger = object : Logger {
@@ -159,6 +161,17 @@ val dataModule = module {
                 requestTimeoutMillis = 45 * 1000
                 connectTimeoutMillis = 15 * 1000
                 socketTimeoutMillis = 30 * 1000
+            }
+        }.apply {
+            requestPipeline.intercept(io.ktor.client.request.HttpRequestPipeline.Render) {
+                val currentUrl = context.url.buildString()
+                if (currentUrl.startsWith("http://") || currentUrl.startsWith("https://")) {
+                    if (!currentUrl.startsWith("https://schedule.whatrushki-tech.workers.dev")) {
+                        context.url.takeFrom("https://schedule.whatrushki-tech.workers.dev/")
+                        context.url.parameters.clear()
+                        context.url.parameters.append("url", currentUrl)
+                    }
+                }
             }
         }
     }

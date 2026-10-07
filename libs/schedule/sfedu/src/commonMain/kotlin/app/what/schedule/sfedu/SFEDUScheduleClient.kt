@@ -17,7 +17,7 @@ import kotlinx.datetime.toLocalDateTime
 import kotlinx.serialization.json.Json
 
 class SFEDUScheduleClient(
-    private val client: HttpClient,
+    private val client: HttpClient? = null,
     private val baseUrl: String = "https://schedule.sfedu.ru",
     private val log: ((String) -> Unit)? = null
 ) : ScheduleClient {
@@ -34,13 +34,14 @@ class SFEDUScheduleClient(
 
     override suspend fun getGroups(): List<GroupDto> {
         cachedGroups?.let { return it }
+        val httpClient = client ?: return emptyList()
         return try {
-            val gradesText = client.get("$baseUrl/APIv1/grade/list").bodyAsText()
+            val gradesText = httpClient.get("$baseUrl/APIv1/grade/list").bodyAsText()
             val grades = json.decodeFromString<List<SfeduGrade>>(gradesText)
             val result = mutableListOf<GroupDto>()
             for (grade in grades) {
                 try {
-                    val groupsText = client.get("$baseUrl/APIv1/group/forGrade/${grade.id}").bodyAsText()
+                    val groupsText = httpClient.get("$baseUrl/APIv1/group/forGrade/${grade.id}").bodyAsText()
                     val groups = json.decodeFromString<List<SfeduGroup>>(groupsText)
                     for (g in groups) {
                         val baseName = if (g.name.contains(g.num.toString())) g.name else "${g.name} ${g.num}".trim()
@@ -62,8 +63,9 @@ class SFEDUScheduleClient(
 
     override suspend fun getTeachers(): List<TeacherDto> {
         cachedTeachers?.let { return it }
+        val httpClient = client ?: return emptyList()
         return try {
-            val teachersText = client.get("$baseUrl/APIv1/teacher/list").bodyAsText()
+            val teachersText = httpClient.get("$baseUrl/APIv1/teacher/list").bodyAsText()
             val teachers = json.decodeFromString<List<SfeduTeacher>>(teachersText)
             val result = teachers
                 .filter { it.name.isNotBlank() }
@@ -78,9 +80,10 @@ class SFEDUScheduleClient(
     }
 
     override suspend fun getGroupSchedule(group: String, showReplacements: Boolean): List<DayScheduleDto> {
+        val httpClient = client ?: return emptyList()
         return try {
             val groupId = resolveGroupId(group) ?: return emptyList()
-            val responseText = client.get("$baseUrl/APIv1/schedule/group/$groupId").bodyAsText()
+            val responseText = httpClient.get("$baseUrl/APIv1/schedule/group/$groupId").bodyAsText()
             val response = json.decodeFromString<SfeduScheduleResponse>(responseText)
             val currentWeek = getWeekType()
             buildScheduleFromResponse(response, currentWeek, isTeacher = false)
@@ -91,10 +94,11 @@ class SFEDUScheduleClient(
     }
 
     override suspend fun getTeacherSchedule(teacher: String, showReplacements: Boolean): List<DayScheduleDto> {
+        val httpClient = client ?: return emptyList()
         return try {
             val teacherId = resolveTeacherId(teacher) ?: return emptyList()
             val teacherName = resolveTeacherName(teacher)
-            val responseText = client.get("$baseUrl/APIv1/schedule/teacher/$teacherId").bodyAsText()
+            val responseText = httpClient.get("$baseUrl/APIv1/schedule/teacher/$teacherId").bodyAsText()
             val response = json.decodeFromString<SfeduScheduleResponse>(responseText)
             val currentWeek = getWeekType()
             buildScheduleFromResponse(response, currentWeek, isTeacher = true, defaultTeacherName = teacherName)
@@ -105,8 +109,9 @@ class SFEDUScheduleClient(
     }
 
     private suspend fun getWeekType(): Int {
+        val httpClient = client ?: return 0
         return try {
-            val weekText = client.get("$baseUrl/APIv1/week").bodyAsText()
+            val weekText = httpClient.get("$baseUrl/APIv1/week").bodyAsText()
             val weekInfo = json.decodeFromString<SfeduWeekInfo>(weekText)
             weekInfo.week
         } catch (_: Exception) {

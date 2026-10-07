@@ -81,9 +81,7 @@ class MainFeature(
     
     val children: List<NavItem>
         get() = buildList {
-            if (app.what.foundation.utils.currentPlatform != app.what.foundation.utils.PlatformType.Wasm) {
-                add(navItem("Новости", WHATIcons.News, NewsProvider))
-            }
+            add(navItem("Новости", WHATIcons.News, NewsProvider))
             add(navItem("Расписание", Icons.Default.DateRange, ScheduleProvider()))
             add(navItem("Настройки", Icons.Default.Settings, SettingsProvider))
             if (controller.getState().hasProfilePage) {
@@ -119,7 +117,7 @@ class MainFeature(
 
         val screens = remember(isAccountAuthorized, state.value.hasProfilePage, enableProfileTab) {
             buildList {
-                if (!isAccountAuthorized && app.what.foundation.utils.currentPlatform != app.what.foundation.utils.PlatformType.Wasm) {
+                if (!isAccountAuthorized) {
                     add(navItem("Новости", WHATIcons.News, NewsProvider))
                 }
                 add(navItem("Расписание", Icons.Default.DateRange, ScheduleProvider()))

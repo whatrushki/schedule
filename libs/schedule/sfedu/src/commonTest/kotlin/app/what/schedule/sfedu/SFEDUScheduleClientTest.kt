@@ -16,7 +16,7 @@ class SFEDUScheduleClientTest {
 
     @Test
     fun testParseTimeslot() {
-        val client = SFEDUScheduleClient(HttpClient())
+        val client = SFEDUScheduleClient()
         val slot1 = client.parseTimeslot("(0,13:45:00,15:20:00,upper)")
         assertNotNull(slot1)
         assertEquals(0, slot1.dayOfWeek)

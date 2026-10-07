@@ -31,6 +31,7 @@ kotlin {
             implementation(project(":libs:schedule:sfedu"))
             implementation(project(":libs:schedule:rgups"))
             implementation(project(":libs:schedule:rgups_tuapse"))
+            implementation(project(":libs:schedule:tvgu"))
 
             implementation(compose.material3)
             implementation(compose.components.resources)

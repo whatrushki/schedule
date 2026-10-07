@@ -19,11 +19,11 @@ import kotlinx.datetime.toLocalDateTime
 
 
 class RKSINewsClient(
-    private val client: HttpClient,
+    private val client: HttpClient? = null,
     private val baseUrl: String = "https://rksi.ru"
 ) : NewsClient {
 
-    private fun formatImageUrl(url: String): String = when {
+    fun formatImageUrl(url: String): String = when {
         url.isEmpty() -> ""
         url.startsWith("http") -> url
         url.startsWith("//") -> "https:$url"
@@ -32,8 +32,9 @@ class RKSINewsClient(
     }
 
     override suspend fun getNews(page: Int): List<NewListItemDto> = try {
+        val httpClient = client ?: emptyList<NewListItemDto>().let { return it }
         val url = if (page <= 1) "$baseUrl/news" else "$baseUrl/news/$page"
-        val response = client.get(url).bodyAsText()
+        val response = httpClient.get(url).bodyAsText()
         val document = Ksoup.parse(response)
         val rawData = document.getElementsByClass("flexnews")
 
@@ -76,8 +77,9 @@ class RKSINewsClient(
     }
 
     override suspend fun getNewDetail(id: String): NewDetailDto = try {
+        val httpClient = client ?: throw IllegalStateException("HttpClient is required for fetching network news")
         val url = "$baseUrl/news/n_$id"
-        val response = client.get(url).bodyAsText()
+        val response = httpClient.get(url).bodyAsText()
         val document = Ksoup.parse(response)
 
         val titleRaw = document.getElementsByTag("h1").firstOrNull()?.text()?.trim() ?: ""
