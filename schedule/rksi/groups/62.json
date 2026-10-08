@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-10-07",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-07",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Основы алгоритмизации и программирования",
-                "otUnits": [
-                    {
-                        "teacher": "Костромина В.А.",
-                        "group": "ИС-25",
-                        "room": "420",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-07",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Основы алгоритмизации и программирования",
-                "otUnits": [
-                    {
-                        "teacher": "Костромина В.А.",
-                        "group": "ИС-25",
-                        "room": "420",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-07",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Операционные системы и среды",
-                "otUnits": [
-                    {
-                        "teacher": "Малая М.А.",
-                        "group": "ИС-25",
-                        "room": "422",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-07",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Информационные технологии",
-                "otUnits": [
-                    {
-                        "teacher": "Бурда Е.Г.",
-                        "group": "ИС-25",
-                        "room": "312",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-08",
         "scheduleType": "COMMON",
         "lessons": [
@@ -185,14 +103,14 @@
                     {
                         "teacher": "Арутюнян А.Э.",
                         "group": "ИС-25",
-                        "room": "406",
+                        "room": "216",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-09",
@@ -223,14 +141,14 @@
                     {
                         "teacher": "Арутюнян М.М.",
                         "group": "ИС-25",
-                        "room": "217",
+                        "room": "122",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -268,6 +186,440 @@
                         "teacher": "Арутюнян А.Э.",
                         "group": "ИС-25",
                         "room": "217",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-12",
+        "scheduleType": "WITH_CLASS_HOUR",
+        "lessons": [
+            {
+                "date": "2026-10-12",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Основы кибернетики и робототехники",
+                "otUnits": [
+                    {
+                        "teacher": "Сулавко С.Н.",
+                        "group": "ИС-25",
+                        "room": "415",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Основы кибернетики и робототехники",
+                "otUnits": [
+                    {
+                        "teacher": "Сулавко С.Н.",
+                        "group": "ИС-25",
+                        "room": "415",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Экономика отрасли",
+                "otUnits": [
+                    {
+                        "teacher": "Григорьева Л.Ф.",
+                        "group": "ИС-25",
+                        "room": "408",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-13",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-25",
+                        "room": "217",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-25",
+                        "room": "217",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Элементы высшей математики",
+                "otUnits": [
+                    {
+                        "teacher": "Болховитина О.И.",
+                        "group": "ИС-25",
+                        "room": "416",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Костромина В.А.",
+                        "group": "ИС-25",
+                        "room": "420",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-14",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-14",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Элементы высшей математики",
+                "otUnits": [
+                    {
+                        "teacher": "Болховитина О.И.",
+                        "group": "ИС-25",
+                        "room": "416",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Информационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "Бурда Е.Г.",
+                        "group": "ИС-25",
+                        "room": "312",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Щербакова Э.Н.",
+                        "group": "ИС-25",
+                        "room": "с/з1",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-15",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-15",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Чубарова А.Б.",
+                        "group": "ИС-25",
+                        "room": "106",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Лебедева М.В.",
+                        "group": "ИС-25",
+                        "room": "320",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Костромина В.А.",
+                        "group": "ИС-25",
+                        "room": "420",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Элементы высшей математики",
+                "otUnits": [
+                    {
+                        "teacher": "Болховитина О.И.",
+                        "group": "ИС-25",
+                        "room": "416",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Элементы высшей математики",
+                "otUnits": [
+                    {
+                        "teacher": "Болховитина О.И.",
+                        "group": "ИС-25",
+                        "room": "416",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-16",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Малая М.А.",
+                        "group": "ИС-25",
+                        "room": "422",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Психология общения",
+                "otUnits": [
+                    {
+                        "teacher": "Марышева О.В.",
+                        "group": "ИС-25",
+                        "room": "310",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Информационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "Бурда Е.Г.",
+                        "group": "ИС-25",
+                        "room": "312",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Малая М.А.",
+                        "group": "ИС-25",
+                        "room": "422",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-17",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-17",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Информационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "Бурда Е.Г.",
+                        "group": "ИС-25",
+                        "room": "312",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян А.Э.",
+                        "group": "ИС-25",
+                        "room": "404",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

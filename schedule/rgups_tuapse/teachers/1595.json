@@ -227,7 +227,7 @@
                 "number": 1,
                 "startTime": "08:20",
                 "endTime": "09:50",
-                "subject": "Автоматизированные системы управления сервиса на транспорте",
+                "subject": "Технология бронирования перевозок и услуг",
                 "otUnits": [
                     {
                         "teacher": "Маликова О.В.",
@@ -236,17 +236,9 @@
                         "additional": "",
                         "onlineUrl": null,
                         "subject": null
-                    },
-                    {
-                        "teacher": "Маликова О.В.",
-                        "group": "СТ-3-017",
-                        "room": "-",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": null
                     }
                 ],
-                "type": "LECTURE",
+                "type": "PRACTICE",
                 "state": "COMMON"
             },
             {
@@ -254,16 +246,8 @@
                 "number": 2,
                 "startTime": "10:05",
                 "endTime": "11:35",
-                "subject": "Организация сервиса в пунктах отправления и прибытия транспорта",
+                "subject": "Технология бронирования перевозок и услуг",
                 "otUnits": [
-                    {
-                        "teacher": "Маликова О.В.",
-                        "group": "СТ-3-016",
-                        "room": "-",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "Маликова О.В.",
                         "group": "СТ-3-017",
@@ -273,7 +257,7 @@
                         "subject": null
                     }
                 ],
-                "type": "LECTURE",
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
@@ -347,7 +331,7 @@
                 "number": 1,
                 "startTime": "08:20",
                 "endTime": "09:50",
-                "subject": "Технология бронирования перевозок и услуг",
+                "subject": "Автоматизированные системы управления сервиса на транспорте",
                 "otUnits": [
                     {
                         "teacher": "Маликова О.В.",
@@ -356,18 +340,7 @@
                         "additional": "",
                         "onlineUrl": null,
                         "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-15",
-                "number": 2,
-                "startTime": "10:05",
-                "endTime": "11:35",
-                "subject": "Технология бронирования перевозок и услуг",
-                "otUnits": [
+                    },
                     {
                         "teacher": "Маликова О.В.",
                         "group": "СТ-3-017",
@@ -377,7 +350,34 @@
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 2,
+                "startTime": "10:05",
+                "endTime": "11:35",
+                "subject": "Организация сервиса в пунктах отправления и прибытия транспорта",
+                "otUnits": [
+                    {
+                        "teacher": "Маликова О.В.",
+                        "group": "СТ-3-016",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Маликова О.В.",
+                        "group": "СТ-3-017",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]

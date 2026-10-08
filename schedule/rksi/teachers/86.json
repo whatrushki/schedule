@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-10-07",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-07",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Инженерная и компьютерная графика",
-                "otUnits": [
-                    {
-                        "teacher": "Пустоветова С.Ю.",
-                        "group": "ИБТ-13",
-                        "room": "21",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-07",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Инженерная и компьютерная графика",
-                "otUnits": [
-                    {
-                        "teacher": "Пустоветова С.Ю.",
-                        "group": "ИБТ-12",
-                        "room": "21",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-07",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Инженерная и компьютерная графика",
-                "otUnits": [
-                    {
-                        "teacher": "Пустоветова С.Ю.",
-                        "group": "ИБТ-11",
-                        "room": "21",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-10-08",
         "scheduleType": "COMMON",
         "lessons": [
@@ -109,7 +46,7 @@
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Основы электротехники",
+                "subject": "Инженерная компьютерная графика",
                 "otUnits": [
                     {
                         "teacher": "Пустоветова С.Ю.",
@@ -128,7 +65,7 @@
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Инженерная компьютерная графика",
+                "subject": "Основы электротехники",
                 "otUnits": [
                     {
                         "teacher": "Пустоветова С.Ю.",
@@ -147,7 +84,7 @@
                 "number": 6,
                 "startTime": "16:40",
                 "endTime": "18:10",
-                "subject": "Основы электротехники",
+                "subject": "Инженерная компьютерная графика",
                 "otUnits": [
                     {
                         "teacher": "Пустоветова С.Ю.",
@@ -169,9 +106,167 @@
         "lessons": [
             {
                 "date": "2026-10-09",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова С.Ю.",
+                        "group": "ИКС-13",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-09",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
+                "subject": "Инженерная компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова С.Ю.",
+                        "group": "СА-23",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Инженерная компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова С.Ю.",
+                        "group": "ИКС-21",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Основы электротехники",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова С.Ю.",
+                        "group": "СА-22",
+                        "room": "314",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-09",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Основы электротехники",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова С.Ю.",
+                        "group": "СА-22",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-12",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "group": "ИКС-11",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "group": "ИКС-13",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "group": "ИКС-14",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 4,
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Инженерная компьютерная графика",
                 "otUnits": [
                     {
@@ -185,9 +280,160 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-13",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "group": "ИБТ-11",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             },
             {
-                "date": "2026-10-09",
+                "date": "2026-10-13",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "group": "ИБТ-13",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "group": "ИБТ-12",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-14",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-14",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "group": "ИБТ-21",
+                        "room": "31",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "group": "ИБТ-22",
+                        "room": "20",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "group": "ИБТ-23",
+                        "room": "20",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-15",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-15",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "group": "ИКС-12",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -206,11 +452,11 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-09",
+                "date": "2026-10-15",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Основы электротехники",
+                "subject": "Инженерная компьютерная графика",
                 "otUnits": [
                     {
                         "teacher": "Пустоветова Светлана Юрьевна",
@@ -225,11 +471,131 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-09",
+                "date": "2026-10-15",
                 "number": 6,
                 "startTime": "16:40",
                 "endTime": "18:10",
                 "subject": "Инженерная компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "group": "СА-21",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Основы электротехники",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "group": "СА-22",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-16",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Инженерная компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "group": "ИКС-21",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Инженерная компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "group": "ИКС-21",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Основы электротехники",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "group": "СА-21",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Инженерная компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "group": "СА-21",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Основы электротехники",
                 "otUnits": [
                     {
                         "teacher": "Пустоветова Светлана Юрьевна",

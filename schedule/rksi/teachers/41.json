@@ -1,10 +1,29 @@
 [
     {
-        "date": "2026-10-07",
+        "date": "2026-10-09",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-07",
+                "date": "2026-10-09",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Администрирование сетевых операционных систем",
+                "otUnits": [
+                    {
+                        "teacher": "Казанин Н.А.",
+                        "group": "СА-31",
+                        "room": "312",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-09",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -23,7 +42,7 @@
                 "state": "CHANGED"
             },
             {
-                "date": "2026-10-07",
+                "date": "2026-10-09",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
@@ -44,14 +63,14 @@
         ]
     },
     {
-        "date": "2026-10-09",
+        "date": "2026-10-12",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-09",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
+                "date": "2026-10-12",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
                 "subject": "Администрирование сетевых операционных систем",
                 "otUnits": [
                     {
@@ -65,9 +84,15 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-10-14",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-10-09",
+                "date": "2026-10-14",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -86,7 +111,70 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-09",
+                "date": "2026-10-14",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Администрирование сетевых операционных систем",
+                "otUnits": [
+                    {
+                        "teacher": "Казанин Николай Александрович",
+                        "group": "СА-31",
+                        "room": "312",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-16",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Администрирование сетевых операционных систем",
+                "otUnits": [
+                    {
+                        "teacher": "Казанин Николай Александрович",
+                        "group": "СА-31",
+                        "room": "312",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Администрирование сетевых операционных систем",
+                "otUnits": [
+                    {
+                        "teacher": "Казанин Николай Александрович",
+                        "group": "СА-31",
+                        "room": "312",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",

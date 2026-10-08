@@ -308,7 +308,7 @@
                 "otUnits": [
                     {
                         "teacher": "Швидченко С. А.",
-                        "group": "МЛ12, МЛ13",
+                        "group": "МЛ13, МЛ12",
                         "room": "109",
                         "additional": "1",
                         "onlineUrl": null,
@@ -448,7 +448,7 @@
                     },
                     {
                         "teacher": "Швидченко С. А.",
-                        "group": "МЗЛ12, МЗРКИ11, МЗЛ11",
+                        "group": "МЗЛ11, МЗРКИ11, МЗЛ12",
                         "room": "330",
                         "additional": "1",
                         "onlineUrl": null,
@@ -467,7 +467,7 @@
                 "otUnits": [
                     {
                         "teacher": "Швидченко С. А.",
-                        "group": "МЗЛ12, МЗРКИ11, МЗЛ11",
+                        "group": "МЗЛ11, МЗРКИ11, МЗЛ12",
                         "room": "333",
                         "additional": "1",
                         "onlineUrl": null,
@@ -738,7 +738,7 @@
                 "otUnits": [
                     {
                         "teacher": "Швидченко С. А.",
-                        "group": "МЛ12, МЛ13",
+                        "group": "МЛ13, МЛ12",
                         "room": "358",
                         "additional": "1",
                         "onlineUrl": null,
@@ -1242,8 +1242,8 @@
                     {
                         "teacher": "Швидченко С. А.",
                         "group": "ЕБ11",
-                        "room": "302а",
-                        "additional": "6",
+                        "room": "702",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1279,7 +1279,7 @@
                 "otUnits": [
                     {
                         "teacher": "Швидченко С. А.",
-                        "group": "МЛ12, МЛ13",
+                        "group": "МЛ13, МЛ12",
                         "room": "358",
                         "additional": "1",
                         "onlineUrl": null,
@@ -1316,15 +1316,15 @@
         "lessons": [
             {
                 "date": "2026-10-09",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "лек Основы программирования",
                 "otUnits": [
                     {
                         "teacher": "Швидченко С. А.",
                         "group": "ЭМФ21",
-                        "room": "332",
+                        "room": "345а",
                         "additional": "10",
                         "onlineUrl": null,
                         "subject": null
@@ -1370,6 +1370,50 @@
                         "group": "ЕБ21",
                         "room": "506",
                         "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Информатика и информационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "Швидченко С. А.",
+                        "group": "ЕБ11",
+                        "room": "302а",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Информатика и информационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "Швидченко С. А.",
+                        "group": "ЕБ11",
+                        "room": "219а",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }

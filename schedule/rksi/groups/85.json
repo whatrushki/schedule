@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-10-07",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-07",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "История",
-                "otUnits": [
-                    {
-                        "teacher": "Пильгун И.С.",
-                        "group": "СА-13",
-                        "room": "305",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-07",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "История",
-                "otUnits": [
-                    {
-                        "teacher": "Пильгун И.С.",
-                        "group": "СА-13",
-                        "room": "305",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-07",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Основы безопасности и защиты Родины",
-                "otUnits": [
-                    {
-                        "teacher": "Коханова Л.Н.",
-                        "group": "СА-13",
-                        "room": "314",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-07",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Математика",
-                "otUnits": [
-                    {
-                        "teacher": "Небратенко Л.В.",
-                        "group": "СА-13",
-                        "room": "411",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-10-08",
         "scheduleType": "COMMON",
         "lessons": [
@@ -158,14 +76,14 @@
                     {
                         "teacher": "Рожченко Т.В.",
                         "group": "СА-13",
-                        "room": "316",
+                        "room": "114",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-09",
@@ -191,19 +109,19 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Физика",
+                "subject": "Дискретная математика с элементами математической логики",
                 "otUnits": [
                     {
-                        "teacher": "Барна Н.В.",
+                        "teacher": "Долгополая А.С.",
                         "group": "СА-13",
-                        "room": "415",
+                        "room": "319",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -260,6 +178,440 @@
                         "teacher": "Коникова Е.А.",
                         "group": "СА-13",
                         "room": "305",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-12",
+        "scheduleType": "WITH_CLASS_HOUR",
+        "lessons": [
+            {
+                "date": "2026-10-12",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Дискретная математика с элементами математической логики",
+                "otUnits": [
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "СА-13",
+                        "room": "320",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "География",
+                "otUnits": [
+                    {
+                        "teacher": "Видинеева Е.А.",
+                        "group": "СА-13",
+                        "room": "216",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "История",
+                "otUnits": [
+                    {
+                        "teacher": "Пильгун И.С.",
+                        "group": "СА-13",
+                        "room": "412",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-13",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Небратенко Л.В.",
+                        "group": "СА-13",
+                        "room": "410",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Небратенко Л.В.",
+                        "group": "СА-13",
+                        "room": "410",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Иностранный язык",
+                "otUnits": [
+                    {
+                        "teacher": "Лебедева М.В.",
+                        "group": "СА-13",
+                        "room": "320",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Новосельцева Е.Ф.",
+                        "group": "СА-13",
+                        "room": "209а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Барна Н.В.",
+                        "group": "СА-13",
+                        "room": "410",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-14",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-14",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Русский язык",
+                "otUnits": [
+                    {
+                        "teacher": "Рожченко Т.В.",
+                        "group": "СА-13",
+                        "room": "316",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Барна Н.В.",
+                        "group": "СА-13",
+                        "room": "422",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Наливайко Е.П.",
+                        "group": "СА-13",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Наливайко Е.П.",
+                        "group": "СА-13",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-15",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-15",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Литература",
+                "otUnits": [
+                    {
+                        "teacher": "Рожченко Т.В.",
+                        "group": "СА-13",
+                        "room": "316",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Биология",
+                "otUnits": [
+                    {
+                        "teacher": "Кравченко И.Ю.",
+                        "group": "СА-13",
+                        "room": "411",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Основы безопасности и защиты Родины",
+                "otUnits": [
+                    {
+                        "teacher": "Коханова Л.Н.",
+                        "group": "СА-13",
+                        "room": "404",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-16",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Литература",
+                "otUnits": [
+                    {
+                        "teacher": "Рожченко Т.В.",
+                        "group": "СА-13",
+                        "room": "114",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Щербакова Э.Н.",
+                        "group": "СА-13",
+                        "room": "с/з3",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Кравченко И.Ю.",
+                        "group": "СА-13",
+                        "room": "411",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-17",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-17",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Коникова Е.А.",
+                        "group": "СА-13",
+                        "room": "318",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Небратенко Л.В.",
+                        "group": "СА-13",
+                        "room": "305",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Коникова Е.А.",
+                        "group": "СА-13",
+                        "room": "318",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
