@@ -983,8 +983,8 @@
                     {
                         "teacher": "Климова Е. Н.",
                         "group": "ЕБ31",
-                        "room": "506",
-                        "additional": "6",
+                        "room": "525",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1088,6 +1088,25 @@
         "lessons": [
             {
                 "date": "2026-10-09",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Интеллектуальные информационные системы",
+                "otUnits": [
+                    {
+                        "teacher": "Климова Е. Н.",
+                        "group": "ВПИЭ41",
+                        "room": "355",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-09",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -1108,20 +1127,39 @@
         ]
     },
     {
-        "date": "2026-10-10",
+        "date": "2026-10-12",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-10",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
+                "date": "2026-10-12",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
                 "subject": "лаб Интеллектуальные информационные системы",
                 "otUnits": [
                     {
                         "teacher": "Климова Е. Н.",
                         "group": "ВПИЭ41",
-                        "room": "355",
+                        "room": "343",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "лек Интеллектуальные информационные системы",
+                "otUnits": [
+                    {
+                        "teacher": "Климова Е. Н.",
+                        "group": "ВПИЭ41",
+                        "room": "489",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1177,6 +1215,31 @@
         ]
     },
     {
+        "date": "2026-10-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-16",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "Пр. Модуль 1 «Введение в область искусственного интеллекта»",
+                "otUnits": [
+                    {
+                        "teacher": "Климова Е. Н.",
+                        "group": "ЦК26ИИ_01(7224)",
+                        "room": "Онлайн",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-21",
         "scheduleType": "COMMON",
         "lessons": [
@@ -1211,6 +1274,175 @@
                         "group": "ИЭ49",
                         "room": "123",
                         "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-23",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "Пр. Модуль 2 «Основы языка Python и его базовых библиотек»",
+                "otUnits": [
+                    {
+                        "teacher": "Климова Е. Н.",
+                        "group": "ЦК26ИИ_01(7225)",
+                        "room": "Онлайн",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-27",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-27",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Интеллектуальные информационные системы",
+                "otUnits": [
+                    {
+                        "teacher": "Климова Е. Н.",
+                        "group": "ИЭ49",
+                        "room": "111",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Интеллектуальные информационные системы",
+                "otUnits": [
+                    {
+                        "teacher": "Климова Е. Н.",
+                        "group": "ИЭ49",
+                        "room": "111",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-30",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "Пр. Модуль 2 «Основы языка Python и его базовых библиотек»",
+                "otUnits": [
+                    {
+                        "teacher": "Климова Е. Н.",
+                        "group": "ЦК26ИИ_01(7225)",
+                        "room": "Онлайн",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-06",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "Пр. Модуль 2 «Основы языка Python и его базовых библиотек»",
+                "otUnits": [
+                    {
+                        "teacher": "Климова Е. Н.",
+                        "group": "ЦК26ИИ_01(7225)",
+                        "room": "Онлайн",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-13",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "Пр. Модуль 2 «Основы языка Python и его базовых библиотек»",
+                "otUnits": [
+                    {
+                        "teacher": "Климова Е. Н.",
+                        "group": "ЦК26ИИ_01(7225)",
+                        "room": "Онлайн",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-20",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-20",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "Пр. Модуль 2 «Основы языка Python и его базовых библиотек»",
+                "otUnits": [
+                    {
+                        "teacher": "Климова Е. Н.",
+                        "group": "ЦК26ИИ_01(7225)",
+                        "room": "Онлайн",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
