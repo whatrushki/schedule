@@ -50,7 +50,7 @@
                 "otUnits": [
                     {
                         "teacher": "Скляров А. В.",
-                        "group": "ВКБ42, ВКБ41, ВКБ43",
+                        "group": "ВКБ41, ВКБ42, ВКБ43",
                         "room": "115",
                         "additional": "1",
                         "onlineUrl": null,
@@ -987,8 +987,8 @@
                 "otUnits": [
                     {
                         "teacher": "Скляров А. В.",
-                        "group": "ВКБ42",
-                        "room": "333",
+                        "group": "ВКБ41",
+                        "room": "498",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1044,8 +1044,8 @@
                 "otUnits": [
                     {
                         "teacher": "Скляров А. В.",
-                        "group": "ВКБ41",
-                        "room": "498",
+                        "group": "ВКБ42",
+                        "room": "336",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1094,7 +1094,7 @@
                 "otUnits": [
                     {
                         "teacher": "Скляров А. В.",
-                        "group": "ВКБ42, ВКБ41, ВКБ43",
+                        "group": "ВКБ41, ВКБ42, ВКБ43",
                         "room": "422",
                         "additional": "8",
                         "onlineUrl": null,
@@ -1150,6 +1150,25 @@
             },
             {
                 "date": "2026-10-10",
+                "number": 0,
+                "startTime": "13:00",
+                "endTime": "14:00",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Скляров А. В.",
+                        "group": "",
+                        "room": "415",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "UNKNOWN",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-10",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -1198,6 +1217,69 @@
                         "group": "ВКБ43",
                         "room": "458",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Основы построения защищенных баз данных",
+                "otUnits": [
+                    {
+                        "teacher": "Скляров А. В.",
+                        "group": "ВКБ41",
+                        "room": "021",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Защита в операционных системах",
+                "otUnits": [
+                    {
+                        "teacher": "Скляров А. В.",
+                        "group": "ВКБ43",
+                        "room": "231",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Основы построения защищенных баз данных",
+                "otUnits": [
+                    {
+                        "teacher": "Скляров А. В.",
+                        "group": "ВКБ43",
+                        "room": "304",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }

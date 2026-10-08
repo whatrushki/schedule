@@ -144,7 +144,7 @@
                 "otUnits": [
                     {
                         "teacher": "Гробер О. В.",
-                        "group": "ВПИЭ11, ВИИМ12, ВИИМ11",
+                        "group": "ВИИМ11, ВИИМ12, ВПИЭ11",
                         "room": "492",
                         "additional": "1",
                         "onlineUrl": null,
@@ -440,7 +440,7 @@
                 "otUnits": [
                     {
                         "teacher": "Гробер О. В.",
-                        "group": "ВПИЭ11, ВИИМ12, ВИИМ11",
+                        "group": "ВИИМ11, ВИИМ12, ВПИЭ11",
                         "room": "492",
                         "additional": "1",
                         "onlineUrl": null,
@@ -736,7 +736,7 @@
                 "otUnits": [
                     {
                         "teacher": "Гробер О. В.",
-                        "group": "ВИИМ12, ВИИМ11",
+                        "group": "ВИИМ11, ВИИМ12",
                         "room": "421",
                         "additional": "1",
                         "onlineUrl": null,
@@ -1070,7 +1070,7 @@
                 "otUnits": [
                     {
                         "teacher": "Гробер О. В.",
-                        "group": "ВИИМ12, ВИИМ11",
+                        "group": "ВИИМ11, ВИИМ12",
                         "room": "384",
                         "additional": "1",
                         "onlineUrl": null,
@@ -1271,15 +1271,15 @@
         "lessons": [
             {
                 "date": "2026-10-05",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
                 "subject": "пр Алгебра и аналитическая геометрия",
                 "otUnits": [
                     {
                         "teacher": "Гробер О. В.",
                         "group": "ВПИЭ12",
-                        "room": "410",
+                        "room": "388",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1423,7 +1423,7 @@
                 "otUnits": [
                     {
                         "teacher": "Гробер О. В.",
-                        "group": "ВИИМ12, ВИИМ11",
+                        "group": "ВИИМ11, ВИИМ12",
                         "room": "492",
                         "additional": "1",
                         "onlineUrl": null,
@@ -1550,7 +1550,7 @@
                     {
                         "teacher": "Гробер О. В.",
                         "group": "ВИИМ11",
-                        "room": "490",
+                        "room": "238",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1570,6 +1570,31 @@
                         "teacher": "Гробер О. В.",
                         "group": "ЕБ11",
                         "room": "353",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-12",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Гробер О. В.",
+                        "group": "ВПИЭ11, ВПИЭ12",
+                        "room": "238",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1725,6 +1750,88 @@
             },
             {
                 "date": "2026-10-23",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Гробер О. В.",
+                        "group": "ПСТДВ12, ПСТДВ11",
+                        "room": "315",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-30",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Гробер О. В.",
+                        "group": "ИГ11",
+                        "room": "410",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-30",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Гробер О. В.",
+                        "group": "ИГ11, ИТД11",
+                        "room": "315",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-30",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Гробер О. В.",
+                        "group": "ИТД11",
+                        "room": "119",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-30",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
