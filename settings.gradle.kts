@@ -23,7 +23,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven {
-            url = uri("https://artifactory-external.vkpartner.ru/artifactory/maven")
+            url = uri("https://nexus-external.rustore.ru/repository/maven-rustore-exposed")
         }
         maven {
             url = uri("https://maven.pkg.github.com/whatrushki/compose-foundation")
