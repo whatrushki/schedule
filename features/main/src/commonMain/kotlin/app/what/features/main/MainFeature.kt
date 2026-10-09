@@ -256,6 +256,7 @@ class MainFeature(
 
                         Box(Modifier.weight(1f).fillMaxHeight()) {
                             NavigationHost(
+                                modifier = Modifier.fillMaxSize(),
                                 navigator = navigator,
                                 start = ScheduleProvider(),
                                 registry = childrenRegistry
@@ -265,6 +266,7 @@ class MainFeature(
                 } else {
                     Box(Modifier.fillMaxSize()) {
                         NavigationHost(
+                            modifier = Modifier.fillMaxSize(),
                             navigator = navigator,
                             start = ScheduleProvider(),
                             registry = childrenRegistry

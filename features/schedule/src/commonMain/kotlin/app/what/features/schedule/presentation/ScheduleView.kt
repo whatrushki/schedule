@@ -105,6 +105,7 @@ fun ScheduleView(
 ) = AppPullToRefresh(
     isRefreshing = state.value.scheduleState == RemoteState.Loading,
     onRefresh = { listener(ScheduleEvent.OnRefresh) },
+    modifier = Modifier.fillMaxSize(),
 ) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -216,7 +217,10 @@ fun ScheduleView(
         Gap(16)
         
         Column(
-            Modifier.statusBarsPadding()
+            Modifier
+                .statusBarsPadding()
+                .fillMaxWidth()
+                .weight(1f)
         ) {
             Row(
                 Modifier
