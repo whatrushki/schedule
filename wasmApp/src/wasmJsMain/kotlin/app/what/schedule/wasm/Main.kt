@@ -22,6 +22,7 @@ import org.koin.core.context.startKoin
 import org.w3c.dom.HTMLInputElement
 import org.w3c.dom.events.Event
 import org.w3c.dom.events.KeyboardEvent
+import io.ktor.http.takeFrom
 
 private fun isMobileBrowser(): Boolean {
     val ua = window.navigator.userAgent.lowercase()
@@ -135,11 +136,33 @@ fun main() {
         modules(dataModule, mainFeatureModule)
     }
 
-    val koin = org.koin.mp.KoinPlatformTools.defaultContext().get()
+    val imageHttpClient = io.ktor.client.HttpClient {
+        install(io.ktor.client.plugins.HttpTimeout) {
+            requestTimeoutMillis = 8 * 1000
+            connectTimeoutMillis = 5 * 1000
+            socketTimeoutMillis = 5 * 1000
+        }
+    }.apply {
+        requestPipeline.intercept(io.ktor.client.request.HttpRequestPipeline.State) {
+            val currentUrl = context.url.buildString()
+            val host = try {
+                io.ktor.http.Url(currentUrl).host.lowercase()
+            } catch (_: Exception) { "" }
+            val isDirect = host.endsWith("github.com") || host.endsWith("githubusercontent.com") || host.endsWith("jsdelivr.net")
+            if (!isDirect && (currentUrl.startsWith("http://") || currentUrl.startsWith("https://"))) {
+                if (!currentUrl.startsWith("https://schedule.whatrushki-tech.workers.dev")) {
+                    context.url.takeFrom("https://schedule.whatrushki-tech.workers.dev/")
+                    context.url.parameters.clear()
+                    context.url.parameters.append("url", currentUrl)
+                }
+            }
+        }
+    }
+
     coil3.SingletonImageLoader.setSafe {
         coil3.ImageLoader.Builder(coil3.PlatformContext.INSTANCE)
             .components {
-                add(coil3.network.ktor3.KtorNetworkFetcherFactory({ koin.get<io.ktor.client.HttpClient>() }))
+                add(coil3.network.ktor3.KtorNetworkFetcherFactory({ imageHttpClient }))
             }
             .build()
     }

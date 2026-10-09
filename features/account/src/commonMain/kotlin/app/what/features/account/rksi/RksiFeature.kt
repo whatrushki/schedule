@@ -31,7 +31,7 @@ class RksiFeature : Feature<RksiController, RksiEvent>(), KoinComponent {
         val globalNav = rememberNavigator(2)
 
         NavigationHost(
-            Modifier,
+            modifier,
             start = if (state.value.isAuthorized) RKSIMainProvider else RKSIAuthProvider,
             navigator = nav,
         ) {

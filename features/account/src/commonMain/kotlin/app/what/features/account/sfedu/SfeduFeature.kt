@@ -31,7 +31,7 @@ class SfeduFeature : Feature<SfeduController, SfeduEvent>(), KoinComponent {
         val globalNav = rememberNavigator(2)
 
         NavigationHost(
-            Modifier,
+            modifier,
             start = if (state.value.isAuthorized) SFEDUMainProvider else SFEDUAuthProvider,
             navigator = nav,
         ) {

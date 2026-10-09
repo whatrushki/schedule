@@ -94,7 +94,18 @@ class MainFeature(
         newsRegistry()
         scheduleRegistry()
         devRegistry()
-        composable<AccountProvider> { controller.getState().ui?.content(Modifier) }
+        composable<AccountProvider> {
+            val mainState by controller.collectStates()
+            val ui = mainState.ui
+            if (ui != null) {
+                ui.content(Modifier.fillMaxSize())
+            } else {
+                app.what.schedule.ui.components.Fallback(
+                    text = "Профиль недоступен для выбранного учебного заведения",
+                    modifier = Modifier.fillMaxSize()
+                )
+            }
+        }
     }
     
     @Composable
@@ -159,11 +170,29 @@ class MainFeature(
                 val cachedJson = appValues.cachedReleaseNotes.get()
                 val cachedNotes = cachedJson?.let { app.what.domain.services.ReleaseNotes.fromJson(it) }
 
-                val releaseNotes = when {
-                    bundledNotes != null && bundledNotes.version == currentVersion -> bundledNotes
-                    cachedNotes != null && cachedNotes.version == currentVersion -> cachedNotes
-                    else -> bundledNotes ?: cachedNotes
+                // Пытаемся получить объединенные заметки через GitHubUpdateService с таймаутом
+                val fetchedMergedNotes = try {
+                    kotlinx.coroutines.withTimeoutOrNull(2500) {
+                        val gitHubService = getKoin().getOrNull<app.what.foundation.services.auto_update.GitHubUpdateService>()
+                            ?: app.what.foundation.services.auto_update.GitHubUpdateService(getKoin().get())
+                        gitHubService.fetchMergedReleaseNotes(
+                            owner = "whatrushki",
+                            repo = "schedule",
+                            fromVersion = lastSeen,
+                            toVersion = currentVersion
+                        )
+                    }
+                } catch (_: Exception) {
+                    null
                 }
+
+                val releaseNotes = fetchedMergedNotes
+                    ?: when {
+                        bundledNotes != null && cachedNotes != null -> bundledNotes.mergeWith(cachedNotes)
+                        bundledNotes != null && bundledNotes.version == currentVersion -> bundledNotes
+                        cachedNotes != null && cachedNotes.version == currentVersion -> cachedNotes
+                        else -> bundledNotes ?: cachedNotes
+                    }
 
                 if (releaseNotes != null) {
                     dialog.open(full = true) {

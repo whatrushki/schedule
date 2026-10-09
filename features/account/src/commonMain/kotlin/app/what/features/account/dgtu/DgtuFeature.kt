@@ -42,7 +42,7 @@ class DgtuFeature : Feature<DgtuController, DgtuEvent>(), KoinComponent {
         val globalNav = rememberNavigator(2)
         
         NavigationHost(
-            Modifier,
+            modifier,
             start = if (state.value.token != null) DGTUMainProvider
             else DGTUAuthProvider,
             navigator = nav,

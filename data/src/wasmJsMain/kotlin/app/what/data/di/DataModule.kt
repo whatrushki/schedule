@@ -57,17 +57,10 @@ class WebInstitutionFactory(
 
     override fun create(): Institution {
         val baseInst = base.create()
-        val customUrls = try {
-            val origin = kotlinx.browser.window.location.origin
-            val path = kotlinx.browser.window.location.pathname.trimEnd('/')
-            listOf("$origin$path/schedule/${metadata.id}")
-        } catch (_: Exception) {
-            emptyList()
-        }
         val cloudClient = CloudScheduleClient(
             institutionId = metadata.id,
             httpClient = httpClient,
-            customBaseUrls = customUrls
+            customBaseUrls = emptyList()
         )
         return object : Institution by baseInst {
             override val scheduleService: ScheduleService = AdaptedScheduleService(cloudClient)
@@ -158,9 +151,9 @@ val dataModule = module {
 
             install(HttpTimeout) {
                 this@HttpClient.expectSuccess = false
-                requestTimeoutMillis = 45 * 1000
-                connectTimeoutMillis = 15 * 1000
-                socketTimeoutMillis = 30 * 1000
+                requestTimeoutMillis = 15 * 1000
+                connectTimeoutMillis = 10 * 1000
+                socketTimeoutMillis = 15 * 1000
             }
         }.apply {
             requestPipeline.intercept(io.ktor.client.request.HttpRequestPipeline.State) {
@@ -173,6 +166,10 @@ val dataModule = module {
                 }
 
                 val currentUrl = context.url.buildString()
+                if (shouldBypassProxy(currentUrl)) {
+                    return@intercept
+                }
+
                 if (currentUrl.startsWith("http://") || currentUrl.startsWith("https://")) {
                     if (!currentUrl.startsWith("https://schedule.whatrushki-tech.workers.dev")) {
                         context.url.takeFrom("https://schedule.whatrushki-tech.workers.dev/")
@@ -183,4 +180,24 @@ val dataModule = module {
             }
         }
     }
+}
+
+private fun shouldBypassProxy(url: String): Boolean {
+    val host = try {
+        io.ktor.http.Url(url).host.lowercase()
+    } catch (_: Exception) {
+        return false
+    }
+    val originHost = try {
+        kotlinx.browser.window.location.hostname.lowercase()
+    } catch (_: Exception) {
+        ""
+    }
+    return (originHost.isNotEmpty() && host == originHost) ||
+            host.endsWith("github.com") ||
+            host.endsWith("githubusercontent.com") ||
+            host.endsWith("jsdelivr.net") ||
+            host.endsWith("github.io") ||
+            host == "localhost" ||
+            host == "127.0.0.1"
 }
