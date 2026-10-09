@@ -3,12 +3,13 @@ package app.what.schedule.desktop.updater
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import app.what.domain.services.AppUpdateManager
-import app.what.domain.services.DownloadState
-import app.what.domain.services.GitHubRelease
-import app.what.domain.services.UpdateConfig
-import app.what.domain.services.UpdateInfo
-import app.what.domain.services.UpdateResult
+import app.what.foundation.services.auto_update.AppUpdateManager
+import app.what.foundation.services.auto_update.DownloadState
+import app.what.foundation.services.auto_update.GitHubRelease
+import app.what.foundation.services.auto_update.ReleaseNotes
+import app.what.foundation.services.auto_update.UpdateConfig
+import app.what.foundation.services.auto_update.UpdateInfo
+import app.what.foundation.services.auto_update.UpdateResult
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
@@ -21,7 +22,7 @@ import java.net.URI
 
 class DesktopAppUpdateManager(
     private val httpClient: HttpClient,
-    private val config: UpdateConfig = UpdateConfig(),
+    private val config: UpdateConfig = UpdateConfig("whatrushki", "schedule", "1.1.0"),
     private val scope: CoroutineScope = CoroutineScope(Dispatchers.Default)
 ) : AppUpdateManager {
     override var updateInfo by mutableStateOf<UpdateInfo?>(null)
@@ -54,15 +55,20 @@ class DesktopAppUpdateManager(
                     it.name.endsWith(".deb") || it.name.endsWith(".zip") || it.name.endsWith(".exe")
                 }
                 val jsonAsset = latest.assets.firstOrNull { it.name == "release-notes.json" }
-                var parsedReleaseNotes: app.what.domain.services.ReleaseNotes? = null
+                var parsedReleaseNotes: ReleaseNotes? = null
                 if (jsonAsset != null) {
                     try {
                         val jsonString = httpClient.get(jsonAsset.browserDownloadUrl).body<String>()
-                        parsedReleaseNotes = kotlinx.serialization.json.Json {
-                            ignoreUnknownKeys = true
-                            coerceInputValues = true
-                        }.decodeFromString<app.what.domain.services.ReleaseNotes>(jsonString)
+                        parsedReleaseNotes = ReleaseNotes.fromJson(jsonString)
                     } catch (_: Exception) {}
+                }
+
+                val releaseBody = latest.body
+                if (parsedReleaseNotes == null && !releaseBody.isNullOrBlank()) {
+                    parsedReleaseNotes = ReleaseNotes(
+                        version = latest.tagName,
+                        changelog = ReleaseNotes.parseMarkdownChangelog(releaseBody)
+                    )
                 }
 
                 val info = UpdateInfo(

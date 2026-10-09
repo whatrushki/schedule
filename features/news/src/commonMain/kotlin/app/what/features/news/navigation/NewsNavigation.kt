@@ -10,6 +10,6 @@ import kotlinx.serialization.Serializable
 object NewsProvider : NavProvider()
 
 val newsRegistry: Registry = {
-    register(NewsFeature::class) { NewsFeature(it) }
+    register(::NewsFeature)
 }
 

@@ -7,6 +7,6 @@ import app.what.schedule.features.main.MainFeature
 
 
 val mainRegistry: Registry = {
-    register(MainFeature::class) { MainFeature(it) }
+    register(::MainFeature)
 }
 

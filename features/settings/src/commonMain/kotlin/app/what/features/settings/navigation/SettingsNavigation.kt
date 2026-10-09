@@ -10,6 +10,6 @@ import kotlinx.serialization.Serializable
 object SettingsProvider : NavProvider()
 
 val settingsRegistry: Registry = {
-    register(SettingsFeature::class) { SettingsFeature(it) }
+    register(::SettingsFeature)
 }
 

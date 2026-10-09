@@ -45,6 +45,7 @@ kotlin {
             kotlin.srcDir(generateAppVersion)
             dependencies {
                 api(libs.foundation.navigation)
+                api(libs.foundation.updater)
                 implementation(libs.kotlinx.serialization.json)
                 implementation(libs.kotlinx.datetime)
                 implementation(libs.koin.core)

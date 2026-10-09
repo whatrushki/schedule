@@ -1,77 +1,10 @@
 package app.what.domain.services
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
-
-sealed interface UpdateResult {
-    object NotAvailable : UpdateResult
-    object UpToDate : UpdateResult
-    data class Available(val updateInfo: UpdateInfo) : UpdateResult
-    data class Error(val message: String) : UpdateResult
-}
-
-data class UpdateInfo(
-    val version: String,
-    val fileSize: Long = 0L,
-    val downloadUrl: String = "",
-    val releaseNotes: String? = null,
-    val releaseNotesData: ReleaseNotes? = null,
-)
-
-sealed class DownloadState {
-    data object Idle : DownloadState()
-    data object Preparing : DownloadState()
-    data class Downloading(val progress: Int) : DownloadState()
-    data class Completed(val path: String? = null) : DownloadState()
-    data class Error(val message: String) : DownloadState()
-}
-
-interface AppUpdateManager {
-    val updateInfo: UpdateInfo?
-    val downloadState: DownloadState
-
-    /**
-     * Запускает проверку обновлений
-     */
-    suspend fun checkForUpdates(): UpdateResult
-
-    /**
-     * Основное действие пользователя: скачать / установить / обновить страницу
-     */
-    fun handleAction()
-
-    /**
-     * Отмена загрузки, если поддерживается
-     */
-    fun cancelDownload()
-
-    /**
-     * Очистка ресурсов
-     */
-    fun release()
-}
-
-data class UpdateConfig(
-    val githubOwner: String = "whatrushki",
-    val githubRepo: String = "schedule",
-    val currentVersion: String = "1.1.0"
-)
-
-@Serializable
-data class GitHubRelease(
-    @SerialName("tag_name") val tagName: String,
-    val name: String? = null,
-    val body: String? = null,
-    val assets: List<GitHubAsset> = emptyList(),
-    @SerialName("published_at") val publishedAt: String? = null,
-    val prerelease: Boolean = false,
-    val draft: Boolean = false
-)
-
-@Serializable
-data class GitHubAsset(
-    val name: String = "",
-    @SerialName("browser_download_url") val browserDownloadUrl: String = "",
-    val size: Long = 0L,
-    @SerialName("download_count") val downloadCount: Int = 0
-)
+public typealias UpdateResult = app.what.foundation.services.auto_update.UpdateResult
+public typealias UpdateInfo = app.what.foundation.services.auto_update.UpdateInfo
+public typealias DownloadState = app.what.foundation.services.auto_update.DownloadState
+public typealias AppUpdateManager = app.what.foundation.services.auto_update.AppUpdateManager
+public typealias UpdateConfig = app.what.foundation.services.auto_update.UpdateConfig
+public typealias GitHubRelease = app.what.foundation.services.auto_update.GitHubRelease
+public typealias GitHubAsset = app.what.foundation.services.auto_update.GitHubAsset
+public typealias DownloadProgress = app.what.foundation.services.auto_update.DownloadProgress

@@ -10,6 +10,6 @@ import kotlinx.serialization.Serializable
 object OnboardingProvider : NavProvider()
 
 val onboardingRegistry: Registry = {
-    register(OnboardingFeature::class) { OnboardingFeature(it) }
+    register(::OnboardingFeature)
 }
 

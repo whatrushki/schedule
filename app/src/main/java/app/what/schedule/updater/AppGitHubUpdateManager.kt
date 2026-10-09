@@ -105,26 +105,32 @@ class AppGitHubUpdateManager(
                 }
 
                 val jsonAsset = latestRelease.assets.firstOrNull { it.name == "release-notes.json" }
-                var parsedReleaseNotes: app.what.domain.services.ReleaseNotes? = null
+                var parsedReleaseNotes: app.what.foundation.services.auto_update.ReleaseNotes? = null
 
                 if (jsonAsset != null) {
                     try {
                         val jsonString = httpClient.get(jsonAsset.browserDownloadUrl).body<String>()
-                        parsedReleaseNotes = kotlinx.serialization.json.Json {
-                            ignoreUnknownKeys = true
-                            coerceInputValues = true
-                        }.decodeFromString<app.what.domain.services.ReleaseNotes>(jsonString)
+                        parsedReleaseNotes = app.what.foundation.services.auto_update.ReleaseNotes.fromJson(jsonString)
                         appValues?.cachedReleaseNotes?.set(jsonString)
                     } catch (e: Exception) {
                         Auditor.debug("updater", "Не удалось загрузить release-notes.json: ${e.message}")
                     }
                 }
 
+                val releaseBody = latestRelease.body
+                if (parsedReleaseNotes == null && !releaseBody.isNullOrBlank()) {
+                    parsedReleaseNotes = app.what.foundation.services.auto_update.ReleaseNotes(
+                        version = latestRelease.tagName,
+                        changelog = app.what.foundation.services.auto_update.ReleaseNotes.parseMarkdownChangelog(releaseBody)
+                    )
+                }
+
                 val info = UpdateInfo(
                     version = latestRelease.tagName,
                     fileSize = matchedAsset.size,
                     downloadUrl = matchedAsset.browserDownloadUrl,
-                    releaseNotes = latestRelease.body ?: ""
+                    releaseNotes = latestRelease.body ?: "",
+                    releaseNotesData = parsedReleaseNotes
                 )
                 updateInfo = info
                 checkIfAlreadyDownloaded(info)

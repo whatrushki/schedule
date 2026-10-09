@@ -17,6 +17,6 @@ data class NewsDetailProvider(
 ) : NavProvider()
 
 val newsDetailRegistry: Registry = {
-    register(NewsDetailFeature::class) { NewsDetailFeature(it) }
+    register(::NewsDetailFeature)
 }
 

@@ -113,9 +113,9 @@ object SettingUpdateComponent : UIComponent {
                                     val cachedJson = appValues.cachedReleaseNotes.get()
                                     val parsedNotes = cachedJson?.let { ReleaseNotes.fromJson(it) }
 
-                                    val notes = parsedNotes ?: ReleaseNotes(
+                                    val notes = info.releaseNotesData ?: parsedNotes ?: ReleaseNotes(
                                         version = info.version,
-                                        changelog = info.releaseNotes?.lines()?.filter { it.isNotBlank() } ?: emptyList()
+                                        changelog = info.releaseNotes?.let { ReleaseNotes.parseMarkdownChangelog(it) } ?: emptyList()
                                     )
                                     sheet.open {
                                         UpdateChangelogSheet(

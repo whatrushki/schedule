@@ -21,6 +21,6 @@ data class ScheduleProvider(
 }
 
 val scheduleRegistry: Registry = {
-    register(ScheduleFeature::class) { ScheduleFeature(it) }
+    register(::ScheduleFeature)
 }
 

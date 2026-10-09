@@ -53,7 +53,8 @@ fun UpdateChangelogSheet(
 ) {
     val downloadState = manager.downloadState
     val items = releaseNotes?.allChangelogItems()
-        ?: info.releaseNotes?.lines()?.filter { it.isNotBlank() }
+        ?: info.releaseNotesData?.allChangelogItems()
+        ?: info.releaseNotes?.let { ReleaseNotes.parseMarkdownChangelog(it) }
         ?: emptyList()
     val title = releaseNotes?.title ?: "Доступно обновление"
     val shortDesc = releaseNotes?.shortDescription
