@@ -295,7 +295,7 @@
                 "otUnits": [
                     {
                         "teacher": "Кивва В. Н.",
-                        "group": "ЕФ32, ЕФ31",
+                        "group": "ЕФ31, ЕФ32",
                         "room": "402",
                         "additional": "6",
                         "onlineUrl": null,
@@ -496,7 +496,7 @@
                 "otUnits": [
                     {
                         "teacher": "Кивва В. Н.",
-                        "group": "ЕФ32, ЕФ31",
+                        "group": "ЕФ31, ЕФ32",
                         "room": "402",
                         "additional": "6",
                         "onlineUrl": null,
@@ -546,7 +546,7 @@
                 "otUnits": [
                     {
                         "teacher": "Кивва В. Н.",
-                        "group": "ЕФ32, ЕФ31",
+                        "group": "ЕФ31, ЕФ32",
                         "room": "402",
                         "additional": "6",
                         "onlineUrl": null,
@@ -696,7 +696,7 @@
                 "otUnits": [
                     {
                         "teacher": "Кивва В. Н.",
-                        "group": "ЕФ32, ЕФ31",
+                        "group": "ЕФ31, ЕФ32",
                         "room": "402",
                         "additional": "6",
                         "onlineUrl": null,
@@ -712,6 +712,25 @@
         "date": "2026-10-07",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-10-07",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Пропедевтика внутренних болезней",
+                "otUnits": [
+                    {
+                        "teacher": "Кивва В. Н.",
+                        "group": "ЕФ32",
+                        "room": "302а",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-10-07",
                 "number": 6,
@@ -730,24 +749,38 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-10-07",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "пр Пропедевтика внутренних болезней",
+                "date": "2026-10-08",
+                "number": 0,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "Ликвидация академических задолженностей",
                 "otUnits": [
                     {
                         "teacher": "Кивва В. Н.",
-                        "group": "ЕФ32",
-                        "room": "302а",
+                        "group": "",
+                        "room": "501",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Кивва В. Н.",
+                        "group": "",
+                        "room": "403",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
+                "type": "UNKNOWN",
                 "state": "COMMON"
             }
         ]
@@ -783,9 +816,9 @@
         "lessons": [
             {
                 "date": "2026-10-10",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
                 "subject": "пр Пропедевтика внутренних болезней",
                 "otUnits": [
                     {

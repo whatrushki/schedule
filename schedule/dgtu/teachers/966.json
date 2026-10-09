@@ -1,5 +1,963 @@
 [
     {
+        "date": "2026-09-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-01",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Теория алгоритмов",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ32",
+                        "room": "219а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-01",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Теория алгоритмов",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-01",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31",
+                        "room": "416",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-02",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ32",
+                        "room": "538",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-02",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31, ВПМ32",
+                        "room": "115",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-03",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Теория вероятностей и математическая статистика",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПР21, ВПР22, ВПР23",
+                        "room": "490",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-03",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВКБ21, ВКБ22",
+                        "room": "467",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-09",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПР11, ВПР12, ВПР13",
+                        "room": "353",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-09",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВКБ21, ВКБ22",
+                        "room": "606",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-09",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Теория алгоритмов",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-09",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31, ВПМ32",
+                        "room": "115",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-09",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "лаб Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ32",
+                        "room": "109",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-10",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Теория вероятностей и математическая статистика",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПР21, ВПР22, ВПР23",
+                        "room": "490",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-10",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВКБ21, ВКБ22",
+                        "room": "223",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-10",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВМО11",
+                        "room": "458",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-10",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Теория алгоритмов",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31, ВПМ32",
+                        "room": "467",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-11",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВМО11, ВМО12, ВМО13",
+                        "room": "478",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-11",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВМО11",
+                        "room": "419",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-11",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Теория алгоритмов",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ32",
+                        "room": "419",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-11",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВМО11, ВМО12, ВМО13",
+                        "room": "384",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-11",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31",
+                        "room": "421",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-16",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПР11, ВПР12, ВПР13",
+                        "room": "432",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-16",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВКБ21, ВКБ22",
+                        "room": "319",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-16",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Теория алгоритмов",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31",
+                        "room": "262",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-16",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31, ВПМ32",
+                        "room": "115",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-16",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "лаб Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ32",
+                        "room": "109",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-17",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-17",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Теория вероятностей и математическая статистика",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПР21, ВПР22, ВПР23",
+                        "room": "490",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-17",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВКБ21, ВКБ22",
+                        "room": "402",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-17",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВМО11",
+                        "room": "458",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-17",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Теория алгоритмов",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31, ВПМ32",
+                        "room": "467",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-18",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-18",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВМО11, ВМО12, ВМО13",
+                        "room": "478",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-18",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВМО11",
+                        "room": "419",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-18",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Теория алгоритмов",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ32",
+                        "room": "419",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-18",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВМО11, ВМО12, ВМО13",
+                        "room": "224",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-18",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31",
+                        "room": "421",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-23",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Теория алгоритмов",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-28",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПР11, ВПР12, ВПР13",
+                        "room": "422",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31, ВПМ32",
+                        "room": "492",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ32",
+                        "room": "109",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-28",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Теория алгоритмов",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ32",
+                        "room": "330",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-09-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-09-30",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВКБ21, ВКБ22",
+                        "room": "305",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Теория алгоритмов",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31",
+                        "room": "351",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-01",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Теория вероятностей и математическая статистика",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПР21, ВПР22, ВПР23",
+                        "room": "224",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31",
+                        "room": "262",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВМО11",
+                        "room": "375",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-02",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВМО11",
+                        "room": "143",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-05",
         "scheduleType": "COMMON",
         "lessons": [
@@ -247,6 +1205,88 @@
                         "teacher": "Баранов И. В.",
                         "group": "ВПМ32",
                         "room": "343",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-12",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПР11, ВПР12, ВПР13",
+                        "room": "422",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31, ВПМ32",
+                        "room": "492",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ32",
+                        "room": "109",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Теория алгоритмов",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ32",
+                        "room": "330",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
