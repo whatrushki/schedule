@@ -1,4 +1,4 @@
-﻿package app.what.schedule.updater
+package app.what.schedule.updater
 
 import android.content.Context
 import android.content.Intent
@@ -36,6 +36,7 @@ class AppGitHubUpdateManager(
     private val context: Context,
     private val config: UpdateConfig,
     private val httpClient: HttpClient,
+    private val appValues: app.what.schedule.data.local.settings.AppValues? = null,
     private val scope: CoroutineScope = CoroutineScope(Dispatchers.Main)
 ) : AppUpdateManager {
 
@@ -101,6 +102,22 @@ class AppGitHubUpdateManager(
                     lastCheckTime = now
                     lastResult = err
                     return err
+                }
+
+                val jsonAsset = latestRelease.assets.firstOrNull { it.name == "release-notes.json" }
+                var parsedReleaseNotes: app.what.domain.services.ReleaseNotes? = null
+
+                if (jsonAsset != null) {
+                    try {
+                        val jsonString = httpClient.get(jsonAsset.browserDownloadUrl).body<String>()
+                        parsedReleaseNotes = kotlinx.serialization.json.Json {
+                            ignoreUnknownKeys = true
+                            coerceInputValues = true
+                        }.decodeFromString<app.what.domain.services.ReleaseNotes>(jsonString)
+                        appValues?.cachedReleaseNotes?.set(jsonString)
+                    } catch (e: Exception) {
+                        Auditor.debug("updater", "Не удалось загрузить release-notes.json: ${e.message}")
+                    }
                 }
 
                 val info = UpdateInfo(

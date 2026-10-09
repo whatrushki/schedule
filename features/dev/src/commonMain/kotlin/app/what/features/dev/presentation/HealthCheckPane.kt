@@ -134,7 +134,19 @@ fun HealthCheckPane(
                                 HealthResult.Warning(message = "Список групп пуст для текущего вуза ($currentInst)")
                             }
                         } catch (e: Exception) {
-                            HealthResult.Failed(message = "Ошибка парсинга групп: ${e.message}", error = e)
+                            val message = e.message.orEmpty()
+                            val isNetworkError = e is io.ktor.utils.io.errors.IOException ||
+                                    e is java.net.UnknownHostException ||
+                                    e is java.net.SocketTimeoutException ||
+                                    message.contains("Unable to resolve host", ignoreCase = true) ||
+                                    message.contains("ConnectException", ignoreCase = true) ||
+                                    message.contains("timeout", ignoreCase = true)
+
+                            if (isNetworkError) {
+                                HealthResult.Failed(message = "Нет подключения к сети (проверьте интернет)", error = e)
+                            } else {
+                                HealthResult.Failed(message = "Ошибка парсинга групп: $message", error = e)
+                            }
                         }
                     }
                 },
@@ -155,10 +167,22 @@ fun HealthCheckPane(
                                     durationMs = duration
                                 )
                             } else {
-                                HealthResult.Warning(message = "Лента новостей пуста или не поддерживается для текущего вуза")
+                                HealthResult.Passed(message = "Лента новостей не поддерживается для текущего вуза")
                             }
                         } catch (e: Exception) {
-                            HealthResult.Failed(message = "Ошибка парсинга новостей: ${e.message}", error = e)
+                            val message = e.message.orEmpty()
+                            val isNetworkError = e is io.ktor.utils.io.errors.IOException ||
+                                    e is java.net.UnknownHostException ||
+                                    e is java.net.SocketTimeoutException ||
+                                    message.contains("Unable to resolve host", ignoreCase = true) ||
+                                    message.contains("ConnectException", ignoreCase = true) ||
+                                    message.contains("timeout", ignoreCase = true)
+
+                            if (isNetworkError) {
+                                HealthResult.Failed(message = "Нет подключения к сети (проверьте интернет)", error = e)
+                            } else {
+                                HealthResult.Failed(message = "Ошибка парсинга новостей: $message", error = e)
+                            }
                         }
                     }
                 },

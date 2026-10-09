@@ -53,11 +53,24 @@ class DesktopAppUpdateManager(
                     it.name.endsWith(".jar") || it.name.endsWith(".msi") ||
                     it.name.endsWith(".deb") || it.name.endsWith(".zip") || it.name.endsWith(".exe")
                 }
+                val jsonAsset = latest.assets.firstOrNull { it.name == "release-notes.json" }
+                var parsedReleaseNotes: app.what.domain.services.ReleaseNotes? = null
+                if (jsonAsset != null) {
+                    try {
+                        val jsonString = httpClient.get(jsonAsset.browserDownloadUrl).body<String>()
+                        parsedReleaseNotes = kotlinx.serialization.json.Json {
+                            ignoreUnknownKeys = true
+                            coerceInputValues = true
+                        }.decodeFromString<app.what.domain.services.ReleaseNotes>(jsonString)
+                    } catch (_: Exception) {}
+                }
+
                 val info = UpdateInfo(
                     version = latest.tagName,
                     fileSize = asset?.size ?: 0L,
                     downloadUrl = asset?.browserDownloadUrl ?: "https://github.com/${config.githubOwner}/${config.githubRepo}/releases/tag/${latest.tagName}",
-                    releaseNotes = latest.body
+                    releaseNotes = latest.body,
+                    releaseNotesData = parsedReleaseNotes
                 )
                 updateInfo = info
                 UpdateResult.Available(info)

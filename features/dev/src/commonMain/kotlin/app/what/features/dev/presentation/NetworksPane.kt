@@ -75,26 +75,12 @@ import app.what.foundation.network.monitor.NetworkRequest
 import app.what.foundation.network.monitor.StatusCategory
 import app.what.foundation.utils.ShareData
 import app.what.foundation.utils.ShareManager
+import app.what.foundation.utils.currentTimeMillis
 import app.what.foundation.utils.rememberShareManager
 import app.what.schedule.features.dev.presentation.components.Filter
 import app.what.schedule.features.dev.presentation.components.FilteredList
-import io.ktor.client.plugins.api.SendingRequest
-import io.ktor.client.plugins.api.createClientPlugin
-import io.ktor.client.request.HttpSendPipeline
-import io.ktor.client.statement.bodyAsText
-import io.ktor.http.HttpHeaders
-import io.ktor.http.Url
 import io.ktor.http.decodeURLQueryComponent
-import io.ktor.http.content.OutgoingContent
-import io.ktor.util.AttributeKey
-import io.ktor.utils.io.ByteChannel
-import io.ktor.utils.io.readRemaining
-import kotlinx.coroutines.CoroutineName
-import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.launch
-import kotlinx.io.readString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.datetime.Instant
@@ -221,11 +207,12 @@ class NetworkFilter : Filter<NetworkRequest> {
                 if (!isSuccessCode) return false
             } else {
                 // Если ищем ошибку (is:error):
-                // Это либо код >= 400, либо нет кода (ошибка сети), либо поле error не пустое
+                // Это либо код >= 400, либо нет кода (ошибка сети), либо поле error не пустое, либо таймаут
                 val hasErrorCode = (value.statusCode ?: 0) >= 400
                 val hasNetworkError = value.error != null
+                val isStalled = value.isPending && (currentTimeMillis() - value.requestTime > 60_000)
                 
-                if (!hasErrorCode && !hasNetworkError) return false
+                if (!hasErrorCode && !hasNetworkError && !isStalled) return false
             }
         }
         
@@ -243,7 +230,8 @@ class NetworkFilter : Filter<NetworkRequest> {
 
 @Composable
 fun NetworkRequestItem(request: NetworkRequest, onClick: () -> Unit) {
-    val isPending = request.statusCode == null && request.error == null
+    val isPending = request.isPending
+    val isStalled = isPending && (currentTimeMillis() - request.requestTime > 60_000)
     
     Row(
         modifier = Modifier
@@ -287,7 +275,7 @@ fun NetworkRequestItem(request: NetworkRequest, onClick: () -> Unit) {
             horizontalAlignment = Alignment.End,
             modifier = Modifier.widthIn(min = 60.dp) // Минимальная ширина чтобы не скакало
         ) {
-            if (isPending) {
+            if (isPending && !isStalled) {
                 // Аккуратный лоадер
                 CircularProgressIndicator(
                     modifier = Modifier.size(16.dp),
@@ -296,7 +284,14 @@ fun NetworkRequestItem(request: NetworkRequest, onClick: () -> Unit) {
                 )
             } else {
                 // Статус код
-                if (request.error != null) {
+                if (isStalled) {
+                    Icon(
+                        imageVector = Icons.Default.Warning,
+                        contentDescription = "Timeout",
+                        tint = Color(0xFFF57C00),
+                        modifier = Modifier.size(16.dp)
+                    )
+                } else if (request.error != null) {
                     Icon(
                         imageVector = Icons.Default.Warning,
                         contentDescription = "Error",
@@ -396,7 +391,11 @@ fun NetworkRequestDialog(
                     // Компактный статус под заголовком
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         val statusText = when (val code = request.statusCode) {
-                            null -> "Loading..."
+                            null -> when {
+                                request.error != null -> "Failed (${request.error})"
+                                request.isPending && (currentTimeMillis() - request.requestTime > 60_000) -> "Timed out"
+                                else -> "Loading..."
+                            }
                             else -> "$code ${getStatusText(code)}"
                         }
                         Box(
@@ -530,9 +529,12 @@ fun OverviewTabContent(request: NetworkRequest) {
             InfoRow("Method", request.method)
             InfoRow(
                 "Status",
-                "${request.statusCode ?: "Pending"} ${
-                    if (request.statusCode != null) getStatusText(request.statusCode!!) else ""
-                }"
+                when {
+                    request.statusCode != null -> "${request.statusCode} ${getStatusText(request.statusCode!!)}"
+                    request.error != null -> "Failed (${request.error})"
+                    request.isPending && (currentTimeMillis() - request.requestTime > 60_000) -> "Timed out / Stalled"
+                    else -> "Pending"
+                }
             )
             InfoRow("Timestamp", formatFullDate(request.requestTime))
         }

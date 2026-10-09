@@ -25,6 +25,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import androidx.navigation.compose.composable
+import app.what.navigation.core.ProvideGlobalNavigation
 import app.what.foundation.core.Feature
 import app.what.foundation.services.AppLogger.Companion.Auditor
 import app.what.foundation.services.LocalNotificationService
@@ -147,6 +148,51 @@ class MainFeature(
                 }
             }
         }
+        val dialog = app.what.foundation.ui.controllers.rememberDialogController()
+
+        LaunchedEffect(Unit) {
+            val lastSeen = appValues.lastSeenVersion.get() ?: ""
+            val currentVersion = app.what.domain.constants.AppConstants.VERSION_NAME
+            val isFirstLaunch = appValues.isFirstLaunch.get() ?: true
+
+            if (!isFirstLaunch && lastSeen.isNotBlank() && lastSeen != currentVersion) {
+                val bundledNotes = app.what.features.onboarding.presentation.loadBundledReleaseNotes()
+                val cachedJson = appValues.cachedReleaseNotes.get()
+                val cachedNotes = cachedJson?.let { app.what.domain.services.ReleaseNotes.fromJson(it) }
+
+                val releaseNotes = when {
+                    bundledNotes != null && bundledNotes.version == currentVersion -> bundledNotes
+                    cachedNotes != null && cachedNotes.version == currentVersion -> cachedNotes
+                    else -> bundledNotes ?: cachedNotes
+                }
+
+                if (releaseNotes != null) {
+                    dialog.open(full = true) {
+                        app.what.features.onboarding.presentation.UpdateOnboardingContent(
+                            releaseNotes = releaseNotes,
+                            appValues = appValues,
+                            onDismiss = {
+                                appValues.lastSeenVersion.set(currentVersion)
+                                dialog.close()
+                            },
+                            onNavigate = { route ->
+                                appValues.lastSeenVersion.set(currentVersion)
+                                dialog.close()
+                                when (route.lowercase()) {
+                                    "profile" -> if (isAccountAuthorized) navigator.c.navigate(AccountProvider)
+                                    "settings" -> navigator.c.navigate(SettingsProvider)
+                                    else -> Unit
+                                }
+                            }
+                        )
+                    }
+                } else {
+                    appValues.lastSeenVersion.set(currentVersion)
+                }
+            } else if (lastSeen.isBlank()) {
+                appValues.lastSeenVersion.set(currentVersion)
+            }
+        }
         
         val notificationService = rememberAppNotificationService()
 
@@ -160,47 +206,19 @@ class MainFeature(
             ) {
                 val isLandscape = maxWidth > maxHeight && maxWidth >= 480.dp
                 val isWideScreen = isDesktop || maxWidth >= 760.dp || isLandscape
-                if (isWideScreen) {
-                    Row(
-                        Modifier
-                            .fillMaxSize()
-                            .displayCutoutPadding()
-                            .systemBarsPadding()
-                    ) {
-                        SideNavBar(
-                            navigator = navigator,
-                            screens = screens,
-                            modifier = Modifier.padding(start = 8.dp, end = 8.dp)
-                        ) {
-                            if (!devFeaturesEnabled!!) null
-                            else NavAction("Для разработчиков", WHATIcons.FrameBug) {
-                                Analytics.logDevPanelOpen()
-                                navigator.c.navigate(DevProvider)
-                            }
-                        }
 
-                        Box(Modifier.weight(1f).fillMaxHeight()) {
-                            NavigationHost(
-                                navigator = navigator,
-                                start = ScheduleProvider(),
-                                registry = childrenRegistry
-                            )
-                        }
-                    }
-                } else {
-                    Box(Modifier.fillMaxSize()) {
-                        NavigationHost(
-                            navigator = navigator,
-                            start = ScheduleProvider(),
-                            registry = childrenRegistry
-                        )
-
-                        AnimatedEnter(
-                            modifier = Modifier.align(Alignment.BottomCenter)
+                ProvideGlobalNavigation(isWideScreen = isWideScreen) {
+                    if (isWideScreen) {
+                        Row(
+                            Modifier
+                                .fillMaxSize()
+                                .displayCutoutPadding()
+                                .systemBarsPadding()
                         ) {
-                            BottomNavBar(
+                            SideNavBar(
                                 navigator = navigator,
                                 screens = screens,
+                                modifier = Modifier.padding(start = 8.dp, end = 8.dp)
                             ) {
                                 if (!devFeaturesEnabled!!) null
                                 else NavAction("Для разработчиков", WHATIcons.FrameBug) {
@@ -208,17 +226,48 @@ class MainFeature(
                                     navigator.c.navigate(DevProvider)
                                 }
                             }
+
+                            Box(Modifier.weight(1f).fillMaxHeight()) {
+                                NavigationHost(
+                                    navigator = navigator,
+                                    start = ScheduleProvider(),
+                                    registry = childrenRegistry
+                                )
+                            }
+                        }
+                    } else {
+                        Box(Modifier.fillMaxSize()) {
+                            NavigationHost(
+                                navigator = navigator,
+                                start = ScheduleProvider(),
+                                registry = childrenRegistry
+                            )
+
+                            AnimatedEnter(
+                                modifier = Modifier.align(Alignment.BottomCenter)
+                            ) {
+                                BottomNavBar(
+                                    navigator = navigator,
+                                    screens = screens,
+                                ) {
+                                    if (!devFeaturesEnabled!!) null
+                                    else NavAction("Для разработчиков", WHATIcons.FrameBug) {
+                                        Analytics.logDevPanelOpen()
+                                        navigator.c.navigate(DevProvider)
+                                    }
+                                }
+                            }
                         }
                     }
-                }
 
-                notificationService.content(
-                    Modifier
-                        .align(Alignment.TopCenter)
-                        .statusBarsPadding()
-                        .padding(top = 8.dp)
-                        .zIndex(99f)
-                )
+                    notificationService.content(
+                        Modifier
+                            .align(Alignment.TopCenter)
+                            .statusBarsPadding()
+                            .padding(top = 8.dp)
+                            .zIndex(99f)
+                    )
+                }
             }
         }
     }

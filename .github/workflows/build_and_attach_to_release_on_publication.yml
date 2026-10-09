@@ -124,12 +124,45 @@ jobs:
 
       - name: Build Android Targets (APK only)
         run: |
+          if [ -f "metadata/release-notes.json" ]; then
+            mkdir -p features/onboarding/src/commonMain/composeResources/files
+            cp metadata/release-notes.json features/onboarding/src/commonMain/composeResources/files/release-notes.json
+          fi
           ./gradlew assembleRelease --stacktrace || ./gradlew assembleDebug --stacktrace
           mkdir -p release_assets
           # Collect APKs (signed or unsigned)
           find app/build/outputs/apk -name "*.apk" -exec cp {} release_assets/schedule_android_${{ steps.get_version.outputs.version }}.apk \; || true
           # AAB upload is disabled until RuStore signing keys and certificates are configured:
           # find app/build/outputs/bundle -name "*.aab" -exec cp {} release_assets/schedule_android_${{ steps.get_version.outputs.version }}.aab \; || true
+
+      - name: Prepare Release Notes & Assets
+        id: release_notes
+        run: |
+          if [ -f "metadata/release-notes.json" ]; then
+            cp metadata/release-notes.json release_assets/release-notes.json
+            echo "✅ release-notes.json attached"
+            
+            # Сгенерировать текст для whats_new в RuStore (маркированный список)
+            RUSTORE_NOTES=$(node -e '
+              try {
+                const data = JSON.parse(require("fs").readFileSync("metadata/release-notes.json", "utf8"));
+                const items = data.changelog || [];
+                const res = items.map(i => "• " + i).join("\n");
+                console.log(res.slice(0, 480));
+              } catch(e) { console.log(""); }
+            ' 2>/dev/null || true)
+          fi
+
+          if [ -z "$RUSTORE_NOTES" ]; then
+            RUSTORE_NOTES="${{ github.event.release.name || github.event.release.tag_name || steps.get_version.outputs.version }} - Регулярное обновление расписания и исправление ошибок."
+          fi
+
+          # Сохраняем многострочный вывод в GITHUB_OUTPUT
+          {
+            echo "whats_new<<EOF"
+            echo "$RUSTORE_NOTES"
+            echo "EOF"
+          } >> $GITHUB_OUTPUT
 
       - name: Upload Android Artifacts to Release
         if: github.event_name == 'release' || startsWith(github.ref, 'refs/tags/v')
@@ -158,7 +191,7 @@ jobs:
           private_key: ${{ secrets.RUSTORE_PRIVATE_KEY }}
           application_id: 'app.what.schedule'
           file: ${{ steps.rustore_file.outputs.file }}
-          whats_new: ${{ github.event.release.name || github.event.release.tag_name || steps.get_version.outputs.version }} - Регулярное обновление расписания и исправление ошибок.
+          whats_new: ${{ steps.release_notes.outputs.whats_new }}
           publish_type: 'MANUAL'
           submit: 'true'
         env:

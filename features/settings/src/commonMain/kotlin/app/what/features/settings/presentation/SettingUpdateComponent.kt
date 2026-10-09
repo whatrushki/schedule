@@ -39,6 +39,9 @@ import app.what.foundation.ui.icons.filled.ApkInstall
 import app.what.foundation.ui.icons.filled.Download
 import app.what.foundation.ui.icons.filled.DownloadError
 import app.what.foundation.ui.icons.filled.ReleaseAlert
+import app.what.domain.services.ReleaseNotes
+import app.what.navigation.core.rememberSheetNavigator
+import app.what.schedule.data.local.settings.AppValues
 import org.koin.compose.koinInject
 
 
@@ -47,6 +50,7 @@ object SettingUpdateComponent : UIComponent {
     @Composable
     override fun content(modifier: Modifier) {
         val manager = koinInject<AppUpdateManager>()
+        val appValues = koinInject<AppValues>()
         val updateInfo = manager.updateInfo
         val downloadState = manager.downloadState
         
@@ -94,6 +98,36 @@ object SettingUpdateComponent : UIComponent {
                                 color = colorScheme.primary
                             )
                         }
+                    }
+
+                    if (!info.releaseNotes.isNullOrBlank() || !appValues.cachedReleaseNotes.get().isNullOrBlank()) {
+                        val sheet = rememberSheetNavigator()
+                        
+                        Text(
+                            text = "Посмотреть, что нового →",
+                            style = typography.labelMedium,
+                            fontWeight = FontWeight.Bold,
+                            color = colorScheme.primary,
+                            modifier = Modifier
+                                .bclick {
+                                    val cachedJson = appValues.cachedReleaseNotes.get()
+                                    val parsedNotes = cachedJson?.let { ReleaseNotes.fromJson(it) }
+
+                                    val notes = parsedNotes ?: ReleaseNotes(
+                                        version = info.version,
+                                        changelog = info.releaseNotes?.lines()?.filter { it.isNotBlank() } ?: emptyList()
+                                    )
+                                    sheet.open {
+                                        UpdateChangelogSheet(
+                                            info = info,
+                                            releaseNotes = notes,
+                                            manager = manager,
+                                            onClose = { sheet.clear() }
+                                        )
+                                    }
+                                }
+                                .padding(vertical = 4.dp)
+                        )
                     }
                 }
             }

@@ -251,6 +251,20 @@ class AppValues(
         "",
         String.serializer(),
     )
+
+    val lastSeenVersion = createValue(
+        "last_seen_version",
+        "",
+        String.serializer(),
+        "Последняя просмотренная версия", "Используется для показа списка изменений после обновления"
+    )
+
+    val cachedReleaseNotes = createValue(
+        "cached_release_notes",
+        "",
+        String.serializer(),
+        "Кэш списка изменений", "Содержимое последнего release-notes.json"
+    )
 }
 
 

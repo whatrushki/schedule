@@ -15,6 +15,7 @@ data class UpdateInfo(
     val fileSize: Long = 0L,
     val downloadUrl: String = "",
     val releaseNotes: String? = null,
+    val releaseNotesData: ReleaseNotes? = null,
 )
 
 sealed class DownloadState {

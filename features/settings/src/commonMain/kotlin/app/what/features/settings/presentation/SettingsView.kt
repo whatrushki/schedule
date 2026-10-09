@@ -55,6 +55,9 @@ import app.what.foundation.data.settings.types.asColorPalette
 import app.what.foundation.data.settings.types.asSheet
 import app.what.foundation.data.settings.types.asSingleChoice
 import app.what.foundation.data.settings.types.asSwitch
+import app.what.domain.services.ReleaseHighlight
+import app.what.domain.services.ReleaseNotes
+import app.what.features.onboarding.presentation.UpdateOnboardingContent
 import app.what.foundation.services.AppLogger.Companion.Auditor
 import app.what.foundation.services.AppNotification
 import app.what.foundation.services.Event
@@ -401,6 +404,68 @@ fun getSettingsList(
             "Для разработчиков", "отладка", WHATIcons.Code,
             isUnlocked = isDevUnlocked == true,
             content = listOf(
+                settingAction(
+                    title = "Показать демо Onboarding обновления",
+                    description = "Открыть экран 'Что нового' с примерами настроек и фич",
+                    onClick = {
+                        dialog.open(full = true) {
+                            UpdateOnboardingContent(
+                                releaseNotes = ReleaseNotes(
+                                    version = "3.2.0-demo",
+                                    title = "Что нового в WHAT Schedule",
+                                    shortDescription = "Демонстрация онбординга: наглядный обзор новых возможностей и моментальная настройка под себя.",
+                                    highlights = listOf(
+                                        ReleaseHighlight(
+                                            title = "Вечернее расписание на завтра",
+                                            description = "Теперь приложение автоматически переключает отображение на следующий день после окончания пар.",
+                                            tag = "NEW",
+                                            settingKey = "show_next_day_in_evening"
+                                        ),
+                                        ReleaseHighlight(
+                                            title = "Уведомления о парах",
+                                            description = "Получайте моментальные пуши об изменениях пар и напоминание о начале первой пары.",
+                                            tag = "NEW",
+                                            settings = listOf(
+                                                "enable_replacement_notifications",
+                                                "enable_first_lesson_notification"
+                                            )
+                                        ),
+                                        ReleaseHighlight(
+                                            title = "Оформление интерфейса",
+                                            description = "Настройте тему приложения и анимации под свои предпочтения.",
+                                            tag = "NEW",
+                                            settings = listOf(
+                                                "theme_type",
+                                                "use_animation"
+                                            )
+                                        )
+                                    ),
+                                    changelog = listOf(
+                                        "Оптимизирована скорость холодного запуска расписания",
+                                        "Улучшена стабильность работы офлайн-режима при отсутствии сети",
+                                        "Добавлена поддержка динамических цветов темы Material You",
+                                        "Исправлено отображение аудиторий с нестандартными литерами",
+                                        "Новые виджеты домашнего экрана с текущей парой и звонками",
+                                        "Снижено потребление оперативной памяти и батареи в фоне",
+                                        "Улучшен парсер расписания для редких типов занятий (факультативы)",
+                                        "Добавлен быстрый выбор даты через компактный выпадающий календарь",
+                                        "Исправлен сброс фильтра преподавателей при переключении недель",
+                                        "Добавлена вибрация и звуковой отклик при отметке заданий",
+                                        "Улучшена фоновая синхронизация заметок и избранных групп",
+                                        "Исправлено растягивание интерфейса в горизонтальной ориентации",
+                                        "Оптимизирована анимация горизонтального свайпа между днями",
+                                        "Обновлены сетевые таймауты для работы при нестабильном 3G/LTE",
+                                        "Исправлены вылеты при быстром переключении между профилями",
+                                        "Добавлена поддержка экспорта расписания в системный календарь (.ics)",
+                                        "Обновлены библиотеки зависимостей и Compose Runtime"
+                                    )
+                                ),
+                                appValues = app,
+                                onDismiss = { dialog.close() }
+                            )
+                        }
+                    }
+                ),
                 app.devSettingsUnlocked.asSwitch(),
                 app.isFirstLaunch.asSwitch(),
                 app.devPanelEnabled.asSwitch(),

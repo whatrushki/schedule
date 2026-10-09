@@ -25,6 +25,7 @@ kotlin {
         commonMain.dependencies {
             implementation(project(":domain"))
             implementation(project(":data"))
+            implementation(project(":features:onboarding"))
             api(libs.compose.foundation)
             api(libs.foundation.navigation)
 
