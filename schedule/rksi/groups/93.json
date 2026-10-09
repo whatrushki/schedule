@@ -70,7 +70,7 @@
                     {
                         "teacher": "Шульга К.А.",
                         "group": "СА-24",
-                        "room": "114",
+                        "room": "210а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -87,22 +87,41 @@
         "lessons": [
             {
                 "date": "2026-10-10",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Информационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "Трищук С.А.",
+                        "group": "СА-24",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-10",
                 "number": 3,
                 "startTime": "10:00",
                 "endTime": "10:50",
-                "subject": "Элементы высшей математики",
+                "subject": "Информационные технологии",
                 "otUnits": [
                     {
-                        "teacher": "Зимовейская В.А.",
+                        "teacher": "Трищук С.А.",
                         "group": "СА-24",
-                        "room": "114",
+                        "room": "213",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-10",
@@ -114,14 +133,14 @@
                     {
                         "teacher": "Токарева Ю.А.",
                         "group": "СА-24",
-                        "room": "210",
+                        "room": "110а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-10",
@@ -140,7 +159,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

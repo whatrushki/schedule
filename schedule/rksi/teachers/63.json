@@ -105,7 +105,7 @@
                     {
                         "teacher": "Ляшенко П.А.",
                         "group": "СА-25",
-                        "room": "414",
+                        "room": "418",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -124,7 +124,7 @@
                     {
                         "teacher": "Ляшенко П.А.",
                         "group": "ИС-29",
-                        "room": "414",
+                        "room": "418",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -156,7 +156,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-10",
@@ -175,45 +175,83 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-10",
                 "number": 3,
                 "startTime": "10:00",
                 "endTime": "10:50",
-                "subject": "Иностранный язык",
+                "subject": "Операционные системы и среды",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко Дарья Игоревна",
-                        "group": "ТД-12",
-                        "room": "20",
-                        "additional": "2",
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-27",
+                        "room": "214",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-10",
                 "number": 4,
                 "startTime": "11:00",
                 "endTime": "11:50",
-                "subject": "Иностранный язык в профессиональной деятельности",
+                "subject": "Операционные системы и среды",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко Дарья Игоревна",
-                        "group": "ТД-22",
-                        "room": "20",
-                        "additional": "2",
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-27",
+                        "room": "414",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 5,
+                "startTime": "12:00",
+                "endTime": "12:50",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-23",
+                        "room": "326",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 6,
+                "startTime": "13:00",
+                "endTime": "13:50",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "ИС-29",
+                        "room": "326",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

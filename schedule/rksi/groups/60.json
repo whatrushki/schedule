@@ -87,6 +87,25 @@
         "lessons": [
             {
                 "date": "2026-10-10",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-23",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-10",
                 "number": 2,
                 "startTime": "09:00",
                 "endTime": "09:50",
@@ -114,14 +133,14 @@
                     {
                         "teacher": "Марышева О.В.",
                         "group": "ИС-23",
-                        "room": "324",
+                        "room": "210",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-10",
@@ -133,14 +152,14 @@
                     {
                         "teacher": "Арутюнян А.Э.",
                         "group": "ИС-23",
-                        "room": "217",
+                        "room": "110",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

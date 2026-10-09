@@ -71,38 +71,38 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "08:50",
-                "subject": "Доп.занятие",
-                "otUnits": [
-                    {
-                        "teacher": "Гвоздецкая Галина Ивановна",
-                        "group": "ИКС-13",
-                        "room": "320",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-10",
-                "number": 2,
-                "startTime": "09:00",
-                "endTime": "09:50",
                 "subject": "Физика",
                 "otUnits": [
                     {
-                        "teacher": "Гвоздецкая Галина Ивановна",
-                        "group": "ИКС-12",
-                        "room": "320",
+                        "teacher": "Гвоздецкая Г.И.",
+                        "group": "ИКС-13",
+                        "room": "408",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 2,
+                "startTime": "09:00",
+                "endTime": "09:50",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Гвоздецкая Г.И",
+                        "group": "ИКС-12",
+                        "room": "408",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-10",
@@ -112,16 +112,16 @@
                 "subject": "Физика",
                 "otUnits": [
                     {
-                        "teacher": "Гвоздецкая Галина Ивановна",
+                        "teacher": "Гвоздецкая Г.И",
                         "group": "ИКС-13",
-                        "room": "320",
+                        "room": "408",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-10",
@@ -131,16 +131,16 @@
                 "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Гвоздецкая Галина Ивановна",
+                        "teacher": "Гвоздецкая Г.И",
                         "group": "ИКС-12",
-                        "room": "320",
+                        "room": "408",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },

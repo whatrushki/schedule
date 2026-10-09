@@ -71,10 +71,10 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "08:50",
-                "subject": "История",
+                "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Упорова Л.В.",
+                        "teacher": "Путинцева Ю.М.",
                         "group": "СА-15",
                         "room": "410",
                         "additional": "1",
@@ -83,7 +83,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-10",
@@ -95,14 +95,14 @@
                     {
                         "teacher": "Рожченко Т.В.",
                         "group": "СА-15",
-                        "room": "310",
+                        "room": "307",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-10",
@@ -122,6 +122,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 4,
+                "startTime": "11:00",
+                "endTime": "11:50",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Заводнов Н.А.",
+                        "group": "СА-15",
+                        "room": "216",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

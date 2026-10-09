@@ -83,7 +83,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-10",
@@ -102,7 +102,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-10",
@@ -121,7 +121,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 6,
+                "startTime": "13:00",
+                "endTime": "13:50",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.В.",
+                        "group": "ИБТ-11",
+                        "room": "214",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
@@ -248,17 +267,17 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Савченко А.А.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ИБТ-11",
-                        "room": "38",
+                        "room": "21",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Савченко А.А.",
                         "group": "ИБТ-11",
-                        "room": "21",
+                        "room": "38",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
