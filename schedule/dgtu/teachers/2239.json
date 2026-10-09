@@ -56,7 +56,7 @@
                 "otUnits": [
                     {
                         "teacher": "Савела С. В.",
-                        "group": "ДПК12, ДПО11, ДПП11, ДПП12",
+                        "group": "ДПК12, ДПП12, ДПП11, ДПО11",
                         "room": "367а",
                         "additional": "1",
                         "onlineUrl": null,
@@ -81,7 +81,7 @@
                 "otUnits": [
                     {
                         "teacher": "Савела С. В.",
-                        "group": "ДПК12, ДПО11, ДПП11, ДПП12",
+                        "group": "ДПК12, ДПП12, ДПП11, ДПО11",
                         "room": "605",
                         "additional": "2",
                         "onlineUrl": null,
@@ -284,6 +284,25 @@
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-24",
+                "number": 0,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Савела С. В.",
+                        "group": "",
+                        "room": "325",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "UNKNOWN",
                 "state": "COMMON"
             }
         ]
@@ -511,8 +530,8 @@
                     {
                         "teacher": "Савела С. В.",
                         "group": "ДП12",
-                        "room": "327",
-                        "additional": "8",
+                        "room": "019",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -580,8 +599,8 @@
                     {
                         "teacher": "Савела С. В.",
                         "group": "ДП11",
-                        "room": "",
-                        "additional": "Главный",
+                        "room": "447",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -599,8 +618,8 @@
                     {
                         "teacher": "Савела С. В.",
                         "group": "ДП11",
-                        "room": "",
-                        "additional": "Главный",
+                        "room": "447",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -611,26 +630,34 @@
         ]
     },
     {
-        "date": "2026-10-24",
+        "date": "2026-10-12",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-24",
-                "number": 0,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "Ликвидация академических задолженностей",
+                "date": "2026-10-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Иностранный язык (английский), п/г 1",
                 "otUnits": [
                     {
                         "teacher": "Савела С. В.",
-                        "group": "",
-                        "room": "325",
+                        "group": "ДП12",
+                        "room": "112",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Савела С. В.",
+                        "group": "ДП12",
+                        "room": "536",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "UNKNOWN",
+                "type": "COMMON",
                 "state": "COMMON"
             }
         ]

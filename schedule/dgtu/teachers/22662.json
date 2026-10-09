@@ -81,7 +81,7 @@
                 "otUnits": [
                     {
                         "teacher": "Корхова В. А.",
-                        "group": "ДП42, ДП41, ДП43",
+                        "group": "ДП41, ДП42, ДП43",
                         "room": "507",
                         "additional": "8",
                         "onlineUrl": null,
@@ -194,7 +194,7 @@
                 "otUnits": [
                     {
                         "teacher": "Корхова В. А.",
-                        "group": "ДПК32, ДПК34, ДПК31, ДПК33",
+                        "group": "ДПК32, ДПК34, ДПК33, ДПК31",
                         "room": "422",
                         "additional": "8",
                         "onlineUrl": null,
@@ -282,7 +282,7 @@
                 "otUnits": [
                     {
                         "teacher": "Корхова В. А.",
-                        "group": "ДПК32, ДПК34, ДПК31, ДПК33",
+                        "group": "ДПК32, ДПК34, ДПК33, ДПК31",
                         "room": "224",
                         "additional": "8",
                         "onlineUrl": null,
@@ -546,7 +546,7 @@
                 "otUnits": [
                     {
                         "teacher": "Корхова В. А.",
-                        "group": "ДП42, ДП41, ДП43",
+                        "group": "ДП41, ДП42, ДП43",
                         "room": "460",
                         "additional": "1",
                         "onlineUrl": null,
@@ -615,7 +615,7 @@
                 "otUnits": [
                     {
                         "teacher": "Корхова В. А.",
-                        "group": "ДПК32, ДПК34, ДПК31, ДПК33",
+                        "group": "ДПК32, ДПК34, ДПК33, ДПК31",
                         "room": "224",
                         "additional": "8",
                         "onlineUrl": null,
@@ -741,7 +741,7 @@
                 "otUnits": [
                     {
                         "teacher": "Корхова В. А.",
-                        "group": "ДПК32, ДПК34, ДПК31, ДПК33",
+                        "group": "ДПК32, ДПК34, ДПК33, ДПК31",
                         "room": "507",
                         "additional": "8",
                         "onlineUrl": null,
@@ -879,25 +879,6 @@
         "lessons": [
             {
                 "date": "2026-10-08",
-                "number": 0,
-                "startTime": "17:00",
-                "endTime": "17:45",
-                "subject": "Ликвидация академических задолженностей",
-                "otUnits": [
-                    {
-                        "teacher": "Корхова В. А.",
-                        "group": "",
-                        "room": "302а",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "UNKNOWN",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-08",
                 "number": 6,
                 "startTime": "17:45",
                 "endTime": "19:20",
@@ -913,6 +894,50 @@
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Дифференциальная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Корхова В. А.",
+                        "group": "ДП41, ДП42, ДП43",
+                        "room": "460",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 0,
+                "startTime": "12:00",
+                "endTime": "13:00",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Корхова В. А.",
+                        "group": "",
+                        "room": "302а",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "UNKNOWN",
                 "state": "COMMON"
             }
         ]
