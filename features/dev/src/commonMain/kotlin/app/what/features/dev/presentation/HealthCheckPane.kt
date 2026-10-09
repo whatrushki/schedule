@@ -136,8 +136,8 @@ fun HealthCheckPane(
                         } catch (e: Exception) {
                             val message = e.message.orEmpty()
                             val isNetworkError = e is io.ktor.utils.io.errors.IOException ||
-                                    e is java.net.UnknownHostException ||
-                                    e is java.net.SocketTimeoutException ||
+                                    message.contains("UnknownHost", ignoreCase = true) ||
+                                    message.contains("SocketTimeout", ignoreCase = true) ||
                                     message.contains("Unable to resolve host", ignoreCase = true) ||
                                     message.contains("ConnectException", ignoreCase = true) ||
                                     message.contains("timeout", ignoreCase = true)
@@ -172,8 +172,8 @@ fun HealthCheckPane(
                         } catch (e: Exception) {
                             val message = e.message.orEmpty()
                             val isNetworkError = e is io.ktor.utils.io.errors.IOException ||
-                                    e is java.net.UnknownHostException ||
-                                    e is java.net.SocketTimeoutException ||
+                                    message.contains("UnknownHost", ignoreCase = true) ||
+                                    message.contains("SocketTimeout", ignoreCase = true) ||
                                     message.contains("Unable to resolve host", ignoreCase = true) ||
                                     message.contains("ConnectException", ignoreCase = true) ||
                                     message.contains("timeout", ignoreCase = true)

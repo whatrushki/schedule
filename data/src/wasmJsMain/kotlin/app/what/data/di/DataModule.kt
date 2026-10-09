@@ -163,7 +163,15 @@ val dataModule = module {
                 socketTimeoutMillis = 30 * 1000
             }
         }.apply {
-            requestPipeline.intercept(io.ktor.client.request.HttpRequestPipeline.Render) {
+            requestPipeline.intercept(io.ktor.client.request.HttpRequestPipeline.State) {
+                val cookie = context.headers["Cookie"]
+                if (cookie != null) {
+                    context.headers.remove("Cookie")
+                    if (!context.headers.contains("X-Cookie")) {
+                        context.headers.append("X-Cookie", cookie)
+                    }
+                }
+
                 val currentUrl = context.url.buildString()
                 if (currentUrl.startsWith("http://") || currentUrl.startsWith("https://")) {
                     if (!currentUrl.startsWith("https://schedule.whatrushki-tech.workers.dev")) {

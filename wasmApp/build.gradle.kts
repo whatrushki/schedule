@@ -36,6 +36,7 @@ kotlin {
             implementation(compose.material3)
             implementation(compose.components.resources)
 
+            implementation(libs.bundles.coil)
             implementation(libs.bundles.ktor)
             implementation(libs.koin.core)
             implementation(libs.kotlinx.datetime)

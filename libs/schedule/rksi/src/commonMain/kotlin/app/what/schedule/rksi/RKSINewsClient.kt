@@ -265,6 +265,14 @@ class RKSIAccountClient(
         return sessionCookies.joinToString("; ")
     }
 
+    private fun io.ktor.client.request.HttpRequestBuilder.appendCookies() {
+        if (sessionCookies.isNotEmpty()) {
+            val cookies = cookieHeader()
+            headers.append("Cookie", cookies)
+            headers.append("X-Cookie", cookies)
+        }
+    }
+
     private fun formatImageUrl(url: String): String = when {
         url.isEmpty() -> ""
         url.startsWith("http") -> url
@@ -292,7 +300,10 @@ class RKSIAccountClient(
             headers.append("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64)")
             headers.append("Referer", "$baseUrl/account")
         }
-        val setCookies = response.headers.getAll("Set-Cookie") ?: emptyList()
+        val setCookies = response.headers.getAll("Set-Cookie")?.filter { it.isNotBlank() }?.ifEmpty { null }
+            ?: response.headers.getAll("X-Set-Cookie")?.filter { it.isNotBlank() }?.ifEmpty { null }
+            ?: response.headers["X-Set-Cookie"]?.split(";;")?.filter { it.isNotBlank() }
+            ?: emptyList()
         val parsedCookies = setCookies.map { it.split(";").first().trim() }.filter { it.isNotBlank() }
         if (parsedCookies.isNotEmpty()) {
             sessionCookies = parsedCookies
@@ -303,9 +314,7 @@ class RKSIAccountClient(
 
     suspend fun getProfile(): AccountProfileDto {
         val html = client.get("$baseUrl/account") {
-            if (sessionCookies.isNotEmpty()) {
-                headers.append("Cookie", cookieHeader())
-            }
+            appendCookies()
         }.bodyAsText()
 
         val doc = Ksoup.parse(html)
@@ -379,9 +388,7 @@ class RKSIAccountClient(
 
     suspend fun getEnquiries(): Pair<List<EnquiryItemDto>, List<EnquiryTypeDto>> {
         val html = client.get("$baseUrl/account/enquiry") {
-            if (sessionCookies.isNotEmpty()) {
-                headers.append("Cookie", cookieHeader())
-            }
+            appendCookies()
         }.bodyAsText()
 
         if (isSessionExpired(html)) {
@@ -440,9 +447,7 @@ class RKSIAccountClient(
                     }
                 }
             ) {
-                if (sessionCookies.isNotEmpty()) {
-                    headers.append("Cookie", cookieHeader())
-                }
+                appendCookies()
                 headers.append("Referer", "$baseUrl/account/enquiry/$typeId")
             }
             val responseText = response.bodyAsText()
@@ -459,9 +464,7 @@ class RKSIAccountClient(
 
     suspend fun getReAttestations(): List<ReAttestationItemDto> {
         val html = client.get("$baseUrl/account/reat") {
-            if (sessionCookies.isNotEmpty()) {
-                headers.append("Cookie", cookieHeader())
-            }
+            appendCookies()
         }.bodyAsText()
 
         if (isSessionExpired(html)) {
@@ -490,9 +493,7 @@ class RKSIAccountClient(
 
     suspend fun getPaymentQrConfig(): PaymentQrConfigDto {
         val html = client.get("$baseUrl/account/qr") {
-            if (sessionCookies.isNotEmpty()) {
-                headers.append("Cookie", cookieHeader())
-            }
+            appendCookies()
         }.bodyAsText()
 
         if (isSessionExpired(html)) {
@@ -522,9 +523,7 @@ class RKSIAccountClient(
             parameter("pay_target", targetId)
             parameter("pay_year", yearId)
             parameter("period", periodId)
-            if (sessionCookies.isNotEmpty()) {
-                headers.append("Cookie", cookieHeader())
-            }
+            appendCookies()
         }
         val bytes = response.body<ByteArray>()
         val textPreview = bytes.take(200).toByteArray().decodeToString()
@@ -536,9 +535,7 @@ class RKSIAccountClient(
 
     suspend fun getProfileSections(): List<ProfileSectionDto> {
         val html = client.get("$baseUrl/profile_editor") {
-            if (sessionCookies.isNotEmpty()) {
-                headers.append("Cookie", cookieHeader())
-            }
+            appendCookies()
         }.bodyAsText()
 
         if (isSessionExpired(html)) {
@@ -614,9 +611,7 @@ class RKSIAccountClient(
                     append("sendDatastudents", "Сохранить")
                 }
             ) {
-                if (sessionCookies.isNotEmpty()) {
-                    headers.append("Cookie", cookieHeader())
-                }
+                appendCookies()
                 headers.append("Referer", "$baseUrl/profile_editor")
             }
             val responseText = response.bodyAsText()
@@ -633,9 +628,7 @@ class RKSIAccountClient(
 
     suspend fun getSocialStatus(): List<SocialStatusOptionDto> {
         val html = client.get("$baseUrl/profile_editor/social_status") {
-            if (sessionCookies.isNotEmpty()) {
-                headers.append("Cookie", cookieHeader())
-            }
+            appendCookies()
         }.bodyAsText()
 
         if (isSessionExpired(html)) {
@@ -671,9 +664,7 @@ class RKSIAccountClient(
                     append("submit", "Сохранить")
                 }
             ) {
-                if (sessionCookies.isNotEmpty()) {
-                    headers.append("Cookie", cookieHeader())
-                }
+                appendCookies()
                 headers.append("Referer", "$baseUrl/profile_editor/social_status")
             }
             val responseText = response.bodyAsText()

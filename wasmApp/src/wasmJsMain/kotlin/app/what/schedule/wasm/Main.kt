@@ -129,9 +129,19 @@ private class WasmMobileTextInputService : PlatformTextInputService {
 }
 
 @OptIn(ExperimentalComposeUiApi::class)
+@Suppress("DEPRECATION", "DEPRECATION_ERROR")
 fun main() {
     startKoin {
         modules(dataModule, mainFeatureModule)
+    }
+
+    val koin = org.koin.mp.KoinPlatformTools.defaultContext().get()
+    coil3.SingletonImageLoader.setSafe {
+        coil3.ImageLoader.Builder(coil3.PlatformContext.INSTANCE)
+            .components {
+                add(coil3.network.ktor3.KtorNetworkFetcherFactory({ koin.get<io.ktor.client.HttpClient>() }))
+            }
+            .build()
     }
 
     val isMobile = isMobileBrowser()
