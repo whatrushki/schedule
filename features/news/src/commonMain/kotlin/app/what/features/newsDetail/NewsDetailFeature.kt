@@ -43,20 +43,22 @@ class NewsDetailFeature(
     }
     
     @Composable
-    override fun content(modifier: Modifier) = Column(
-        modifier.fillMaxSize()
-    ) {
-        val viewState by controller.collectStates()
-        
-        LaunchedEffect(Unit) {
-            listener(NewsDetailEvent.Init)
+    override fun content(modifier: Modifier) {
+        Column(
+            modifier.fillMaxSize()
+        ) {
+            val viewState by controller.collectStates()
+            
+            LaunchedEffect(Unit) {
+                listener(NewsDetailEvent.Init)
+            }
+            
+            val navigator = app.what.navigation.core.rememberNavigator()
+            NewsDetailView(
+                viewState,
+                listener,
+                onBack = if (showBack) { { navigator.parent?.c?.popBackStack() ?: navigator.c.popBackStack() } } else null
+            )
         }
-        
-        val navigator = app.what.navigation.core.rememberNavigator()
-        NewsDetailView(
-            viewState,
-            listener,
-            onBack = if (showBack) { { navigator.parent?.c?.popBackStack() ?: navigator.c.popBackStack() } } else null
-        )
     }
 }

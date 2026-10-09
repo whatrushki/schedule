@@ -26,9 +26,10 @@ class OnboardingFeature(
     override val controller: OnboardingController by inject()
     
     @Composable
-    override fun content(modifier: Modifier) = Column(
-        modifier.fillMaxSize()
-    ) {
+    override fun content(modifier: Modifier) {
+        Column(
+            modifier.fillMaxSize()
+        ) {
         val viewState by controller.collectStates()
         val viewAction by controller.collectActions()
         val navigator = rememberNavigator()
@@ -53,4 +54,5 @@ class OnboardingFeature(
             null -> Unit
         }
     }
+}
 }

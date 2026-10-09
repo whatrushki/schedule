@@ -28,15 +28,17 @@ class ScheduleFeature(
     }
     
     @Composable
-    override fun content(modifier: Modifier) = Column(
-        modifier.fillMaxSize()
-    ) {
-        val viewState = controller.collectStates()
-        
-        LaunchedEffect(Unit) {
-            listener(ScheduleEvent.Init)
+    override fun content(modifier: Modifier) {
+        Column(
+            modifier.fillMaxSize()
+        ) {
+            val viewState = controller.collectStates()
+            
+            LaunchedEffect(Unit) {
+                listener(ScheduleEvent.Init)
+            }
+            
+            ScheduleView(viewState, listener)
         }
-        
-        ScheduleView(viewState, listener)
     }
 }

@@ -25,7 +25,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import androidx.navigation.compose.composable
-import app.what.navigation.core.ProvideGlobalNavigation
 import app.what.foundation.core.Feature
 import app.what.foundation.services.AppLogger.Companion.Auditor
 import app.what.foundation.services.LocalNotificationService
@@ -207,18 +206,47 @@ class MainFeature(
                 val isLandscape = maxWidth > maxHeight && maxWidth >= 480.dp
                 val isWideScreen = isDesktop || maxWidth >= 760.dp || isLandscape
 
-                ProvideGlobalNavigation(isWideScreen = isWideScreen) {
-                    if (isWideScreen) {
-                        Row(
-                            Modifier
-                                .fillMaxSize()
-                                .displayCutoutPadding()
-                                .systemBarsPadding()
+                if (isWideScreen) {
+                    Row(
+                        Modifier
+                            .fillMaxSize()
+                            .displayCutoutPadding()
+                            .systemBarsPadding()
+                    ) {
+                        SideNavBar(
+                            navigator = navigator,
+                            screens = screens,
+                            modifier = Modifier.padding(start = 8.dp, end = 8.dp)
                         ) {
-                            SideNavBar(
+                            if (!devFeaturesEnabled!!) null
+                            else NavAction("Для разработчиков", WHATIcons.FrameBug) {
+                                Analytics.logDevPanelOpen()
+                                navigator.c.navigate(DevProvider)
+                            }
+                        }
+
+                        Box(Modifier.weight(1f).fillMaxHeight()) {
+                            NavigationHost(
+                                navigator = navigator,
+                                start = ScheduleProvider(),
+                                registry = childrenRegistry
+                            )
+                        }
+                    }
+                } else {
+                    Box(Modifier.fillMaxSize()) {
+                        NavigationHost(
+                            navigator = navigator,
+                            start = ScheduleProvider(),
+                            registry = childrenRegistry
+                        )
+
+                        AnimatedEnter(
+                            modifier = Modifier.align(Alignment.BottomCenter)
+                        ) {
+                            BottomNavBar(
                                 navigator = navigator,
                                 screens = screens,
-                                modifier = Modifier.padding(start = 8.dp, end = 8.dp)
                             ) {
                                 if (!devFeaturesEnabled!!) null
                                 else NavAction("Для разработчиков", WHATIcons.FrameBug) {
@@ -226,48 +254,17 @@ class MainFeature(
                                     navigator.c.navigate(DevProvider)
                                 }
                             }
-
-                            Box(Modifier.weight(1f).fillMaxHeight()) {
-                                NavigationHost(
-                                    navigator = navigator,
-                                    start = ScheduleProvider(),
-                                    registry = childrenRegistry
-                                )
-                            }
-                        }
-                    } else {
-                        Box(Modifier.fillMaxSize()) {
-                            NavigationHost(
-                                navigator = navigator,
-                                start = ScheduleProvider(),
-                                registry = childrenRegistry
-                            )
-
-                            AnimatedEnter(
-                                modifier = Modifier.align(Alignment.BottomCenter)
-                            ) {
-                                BottomNavBar(
-                                    navigator = navigator,
-                                    screens = screens,
-                                ) {
-                                    if (!devFeaturesEnabled!!) null
-                                    else NavAction("Для разработчиков", WHATIcons.FrameBug) {
-                                        Analytics.logDevPanelOpen()
-                                        navigator.c.navigate(DevProvider)
-                                    }
-                                }
-                            }
                         }
                     }
-
-                    notificationService.content(
-                        Modifier
-                            .align(Alignment.TopCenter)
-                            .statusBarsPadding()
-                            .padding(top = 8.dp)
-                            .zIndex(99f)
-                    )
                 }
+
+                notificationService.content(
+                    Modifier
+                        .align(Alignment.TopCenter)
+                        .statusBarsPadding()
+                        .padding(top = 8.dp)
+                        .zIndex(99f)
+                )
             }
         }
     }

@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #121218;
+    background-color: #0E0E0E;
 }
 
 #ComposeTarget {
@@ -26,11 +26,11 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #121218;
+    background-color: #0E0E0E;
     z-index: 9999;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
     user-select: none;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -45,50 +45,50 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
 }
 
 .loader-logo-wrapper {
-    animation: float 2.4s ease-in-out infinite;
+    animation: pulse 2.2s ease-in-out infinite;
 }
 
 .loader-logo {
     display: block;
     border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .loader-bar-wrapper {
-    width: 160px;
-    height: 3px;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 99px;
+    width: 140px;
+    height: 2px;
+    background: #222222;
+    border-radius: 4px;
     overflow: hidden;
     position: relative;
 }
 
 .loader-bar {
-    width: 45%;
+    width: 35%;
     height: 100%;
-    background: linear-gradient(90deg, #6366f1, #a855f7);
-    border-radius: 99px;
+    background: #FFFFFF;
+    border-radius: 4px;
     position: absolute;
-    animation: indeterminate 1.5s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+    animation: indeterminate 1.4s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
 }
 
 .loader-text {
     font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    color: #737373;
 }
 
-@keyframes float {
+@keyframes pulse {
     0%, 100% {
-        transform: translateY(0);
+        opacity: 0.85;
     }
     50% {
-        transform: translateY(-6px);
+        opacity: 1;
     }
 }
 

@@ -40,7 +40,7 @@ import app.what.foundation.ui.icons.filled.Download
 import app.what.foundation.ui.icons.filled.DownloadError
 import app.what.foundation.ui.icons.filled.ReleaseAlert
 import app.what.domain.services.ReleaseNotes
-import app.what.navigation.core.rememberSheetNavigator
+import app.what.foundation.ui.controllers.rememberSheetController
 import app.what.schedule.data.local.settings.AppValues
 import org.koin.compose.koinInject
 
@@ -101,7 +101,7 @@ object SettingUpdateComponent : UIComponent {
                     }
 
                     if (!info.releaseNotes.isNullOrBlank() || !appValues.cachedReleaseNotes.get().isNullOrBlank()) {
-                        val sheet = rememberSheetNavigator()
+                        val sheet = rememberSheetController()
                         
                         Text(
                             text = "Посмотреть, что нового →",
@@ -122,7 +122,7 @@ object SettingUpdateComponent : UIComponent {
                                             info = info,
                                             releaseNotes = notes,
                                             manager = manager,
-                                            onClose = { sheet.clear() }
+                                            onClose = { sheet.close() }
                                         )
                                     }
                                 }
