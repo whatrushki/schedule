@@ -113,9 +113,6 @@ fun ScheduleView(
             .fillMaxSize()
             .wrapContentWidth(Alignment.CenterHorizontally)
             .widthIn(max = 860.dp)
-            .capplyIf(state.value.scheduleState != RemoteState.Idle && !state.value.schedules.isEmpty()) {
-                verticalScroll(rememberScrollState())
-            }
     ) {
         val sheet = rememberSheetController()
         val dialog = rememberDialogController()
@@ -389,7 +386,10 @@ fun ScheduleView(
                         
                         Column(
                             verticalArrangement = Arrangement.spacedBy(if (showBreaks) 4.dp else 12.dp),
-                            modifier = Modifier.fillMaxHeight()
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .clip(shapes.medium)
+                                .verticalScroll(rememberScrollState())
                         ) {
                             if (lessons.isEmpty()) {
                                 Box(

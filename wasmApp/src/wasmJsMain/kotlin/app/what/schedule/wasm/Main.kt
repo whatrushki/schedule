@@ -22,6 +22,9 @@ import org.koin.core.context.startKoin
 import org.w3c.dom.HTMLInputElement
 import org.w3c.dom.events.Event
 import org.w3c.dom.events.KeyboardEvent
+import io.ktor.client.call.body
+import io.ktor.client.request.get
+import io.ktor.http.contentType
 import io.ktor.http.takeFrom
 
 private fun isMobileBrowser(): Boolean {
@@ -129,6 +132,43 @@ private class WasmMobileTextInputService : PlatformTextInputService {
     }
 }
 
+private class WasmNetworkFetcher(
+    private val url: String,
+    private val client: io.ktor.client.HttpClient,
+    private val options: coil3.request.Options
+) : coil3.fetch.Fetcher {
+    override suspend fun fetch(): coil3.fetch.FetchResult {
+        val response = client.get(url)
+        val bytes = response.body<ByteArray>()
+        if (bytes.isEmpty()) {
+            throw IllegalStateException("Empty response body for image: $url")
+        }
+        val buffer = okio.Buffer().write(bytes)
+        return coil3.fetch.SourceFetchResult(
+            source = coil3.decode.ImageSource(
+                source = buffer,
+                fileSystem = options.fileSystem
+            ),
+            mimeType = response.contentType()?.toString(),
+            dataSource = coil3.decode.DataSource.NETWORK
+        )
+    }
+
+    class Factory(
+        private val client: io.ktor.client.HttpClient
+    ) : coil3.fetch.Fetcher.Factory<coil3.Uri> {
+        override fun create(
+            data: coil3.Uri,
+            options: coil3.request.Options,
+            imageLoader: coil3.ImageLoader
+        ): coil3.fetch.Fetcher? {
+            val scheme = data.scheme
+            if (scheme != "http" && scheme != "https") return null
+            return WasmNetworkFetcher(data.toString(), client, options)
+        }
+    }
+}
+
 @OptIn(ExperimentalComposeUiApi::class)
 @Suppress("DEPRECATION", "DEPRECATION_ERROR")
 fun main() {
@@ -162,7 +202,7 @@ fun main() {
     coil3.SingletonImageLoader.setSafe {
         coil3.ImageLoader.Builder(coil3.PlatformContext.INSTANCE)
             .components {
-                add(coil3.network.ktor3.KtorNetworkFetcherFactory({ imageHttpClient }))
+                add(WasmNetworkFetcher.Factory(imageHttpClient))
             }
             .build()
     }

@@ -8,7 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.LaunchedEffect
 import app.what.foundation.services.AppLogger.Companion.Auditor
 import app.what.navigation.core.NavigationHost
-import app.what.navigation.core.ProvideGlobalDialog
+import app.what.compose.ProvideAppDialog
 import app.what.navigation.core.ProvideGlobalSheet
 import app.what.navigation.core.rememberHostNavigator
 import app.what.schedule.data.local.settings.AppValues
@@ -98,7 +98,7 @@ open class MainActivity : ComponentActivity() {
             
             ProvideGLobalAppValues(settings) {
                 AppTheme {
-                    ProvideGlobalDialog {
+                    ProvideAppDialog {
                         ProvideGlobalSheet {
                             NavigationHost(
                                 start = if (settings.isFirstLaunch.get() == true) OnboardingProvider

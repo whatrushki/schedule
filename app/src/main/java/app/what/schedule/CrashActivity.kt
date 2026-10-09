@@ -24,7 +24,7 @@ import app.what.foundation.services.crash.CrashScreen
 import app.what.foundation.ui.Show
 import app.what.foundation.ui.controllers.rememberDialogController
 import app.what.foundation.utils.ShareUtils
-import app.what.navigation.core.ProvideGlobalDialog
+import app.what.compose.ProvideAppDialog
 import app.what.schedule.data.local.settings.AppValues
 import app.what.schedule.features.dev.DevFeature
 import app.what.schedule.ui.theme.AppTheme
@@ -47,7 +47,7 @@ class CrashActivity : ComponentActivity() {
             }
             
             AppTheme(koinInject<AppValues>()) {
-                ProvideGlobalDialog {
+                ProvideAppDialog {
                     val dialog = rememberDialogController()
                     
                     Box {
