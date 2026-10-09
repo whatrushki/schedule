@@ -102,7 +102,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-10",
@@ -114,14 +114,14 @@
                     {
                         "teacher": "Наскалова О.В.",
                         "group": "ИБА-21",
-                        "room": "34",
+                        "room": "35",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-10",
@@ -141,6 +141,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "История",
+                "otUnits": [
+                    {
+                        "teacher": "Иванов Д.Н.",
+                        "group": "ИБА-21",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

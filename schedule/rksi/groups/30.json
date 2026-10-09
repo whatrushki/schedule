@@ -49,6 +49,25 @@
         "lessons": [
             {
                 "date": "2026-10-10",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Телекоммуникационные системы и сети",
+                "otUnits": [
+                    {
+                        "teacher": "Смолянинов К.А.",
+                        "group": "ИБТ-32",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-10",
                 "number": 6,
                 "startTime": "13:00",
                 "endTime": "13:50",
@@ -64,7 +83,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Растороцкий В.В.",
+                        "group": "ИБТ-32",
+                        "room": "с/з2",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             },
             {
                 "date": "2026-10-10",
@@ -83,7 +121,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

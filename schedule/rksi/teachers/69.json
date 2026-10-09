@@ -128,10 +128,18 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "08:50",
-                "subject": "Математика",
+                "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Марченко Светлана Викторовна",
+                        "teacher": "Марченко С.П.",
+                        "group": "БУ-11",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Марченко С.В.",
                         "group": "ИБТ-13",
                         "room": "42",
                         "additional": "2",
@@ -140,17 +148,25 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "REMOVED"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-10",
                 "number": 2,
                 "startTime": "09:00",
                 "endTime": "09:50",
-                "subject": "Математика",
+                "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Марченко Светлана Викторовна",
+                        "teacher": "Марченко С.П.",
+                        "group": "ИБТ-13",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Марченко С.В.",
                         "group": "ИБТ-12",
                         "room": "42",
                         "additional": "2",
@@ -159,17 +175,25 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "REMOVED"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-10",
                 "number": 3,
                 "startTime": "10:00",
                 "endTime": "10:50",
-                "subject": "Математика",
+                "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Марченко Светлана Викторовна",
+                        "teacher": "Марченко С.П.",
+                        "group": "ТД-12",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Марченко С.В.",
                         "group": "ИБТ-12",
                         "room": "42",
                         "additional": "2",
@@ -178,7 +202,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "REMOVED"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 4,
+                "startTime": "11:00",
+                "endTime": "11:50",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "ТД-22",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             },
             {
                 "date": "2026-10-10",
