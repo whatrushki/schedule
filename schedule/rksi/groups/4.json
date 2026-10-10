@@ -13,7 +13,7 @@
                     {
                         "teacher": "Ляшенко Д.И.",
                         "group": "БУ-11",
-                        "room": "20",
+                        "room": "24",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -21,14 +21,14 @@
                     {
                         "teacher": "Марченко С.П.",
                         "group": "БУ-11",
-                        "room": "13",
+                        "room": "33",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-10",
@@ -40,14 +40,14 @@
                     {
                         "teacher": "Гончарова Ю.В.",
                         "group": "БУ-11",
-                        "room": "24",
+                        "room": "43",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-10",
@@ -59,14 +59,14 @@
                     {
                         "teacher": "Хайлова Л.В.",
                         "group": "БУ-11",
-                        "room": "21",
+                        "room": "34",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-10",
@@ -78,14 +78,33 @@
                     {
                         "teacher": "Бережная А.В.",
                         "group": "БУ-11",
-                        "room": "33",
+                        "room": "20",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 5,
+                "startTime": "12:00",
+                "endTime": "12:50",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Шумина О.О.",
+                        "group": "БУ-11",
+                        "room": "110",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
@@ -93,6 +112,25 @@
         "date": "2026-10-12",
         "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
+            {
+                "date": "2026-10-12",
+                "number": 7,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Шумина О.О.",
+                        "group": "БУ-11",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-10-12",
                 "number": 1,
@@ -122,14 +160,14 @@
                     {
                         "teacher": "Селезень И.В.",
                         "group": "БУ-11",
-                        "room": "38",
+                        "room": "29",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -158,7 +196,7 @@
                 "subject": "Классный час",
                 "otUnits": [],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-12",
@@ -170,14 +208,14 @@
                     {
                         "teacher": "Доценко Л.А.",
                         "group": "БУ-11",
-                        "room": "13",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

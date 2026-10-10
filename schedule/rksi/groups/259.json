@@ -13,14 +13,14 @@
                     {
                         "teacher": "Лютова Л.К.",
                         "group": "БУ-22",
-                        "room": "36",
+                        "room": "24",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-10",
@@ -32,14 +32,33 @@
                     {
                         "teacher": "Гончарова Ю.В.",
                         "group": "БУ-22",
-                        "room": "24",
+                        "room": "43",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-10",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Основы финансовой грамотности",
+                "otUnits": [
+                    {
+                        "teacher": "Каверзнева Е.Ю.",
+                        "group": "БУ-22",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
@@ -49,13 +68,32 @@
         "lessons": [
             {
                 "date": "2026-10-12",
+                "number": 7,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Экономика организации",
+                "otUnits": [
+                    {
+                        "teacher": "Леонова И.Ю.",
+                        "group": "БУ-22",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-12",
                 "number": 0,
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
                 "otUnits": [],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-12",
@@ -67,14 +105,14 @@
                     {
                         "teacher": "Каверзнева Е.Ю.",
                         "group": "БУ-22",
-                        "room": "47",
+                        "room": "40",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",

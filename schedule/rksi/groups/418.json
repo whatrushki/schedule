@@ -106,6 +106,25 @@
         "lessons": [
             {
                 "date": "2026-10-12",
+                "number": 7,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Бодло О.О.",
+                        "group": "ТД-13",
+                        "room": "20",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-12",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
@@ -133,14 +152,14 @@
                     {
                         "teacher": "Дущенков Д.А.",
                         "group": "ТД-13",
-                        "room": "33",
+                        "room": "44",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -152,14 +171,14 @@
                     {
                         "teacher": "Дущенков Д.А.",
                         "group": "ТД-13",
-                        "room": "33",
+                        "room": "44",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -169,7 +188,7 @@
                 "subject": "Классный час",
                 "otUnits": [],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-12",
@@ -181,14 +200,14 @@
                     {
                         "teacher": "Доценко Л.А.",
                         "group": "ТД-13",
-                        "room": "13",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -305,17 +324,17 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.П.",
+                        "teacher": "Крылова О.В.",
                         "group": "ТД-13",
-                        "room": "13",
+                        "room": "42",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Крылова О.В.",
+                        "teacher": "Марченко С.П.",
                         "group": "ТД-13",
-                        "room": "42",
+                        "room": "13",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null

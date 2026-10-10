@@ -114,14 +114,14 @@
                     {
                         "teacher": "Пильгун И.С.",
                         "group": "ИКС-12",
-                        "room": "412",
+                        "room": "410",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -152,14 +152,14 @@
                     {
                         "teacher": "Гвоздецкая Г.И.",
                         "group": "ИКС-12",
-                        "room": "212",
+                        "room": "216",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -167,9 +167,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Пятибратов Д.В.",
+                        "group": "ИКС-12",
+                        "room": "307",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -204,17 +213,17 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Чубарова А.Б.",
                         "group": "ИКС-12",
-                        "room": "315а",
+                        "room": "106",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Чубарова А.Б.",
+                        "teacher": "Черноштан О.Н.",
                         "group": "ИКС-12",
-                        "room": "106",
+                        "room": "315а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

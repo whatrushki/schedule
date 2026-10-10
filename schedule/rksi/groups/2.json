@@ -68,6 +68,25 @@
         "lessons": [
             {
                 "date": "2026-10-12",
+                "number": 7,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Статистика",
+                "otUnits": [
+                    {
+                        "teacher": "Шумина О.О.",
+                        "group": "БД-21",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-12",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -76,14 +95,14 @@
                     {
                         "teacher": "Бодло А.О.",
                         "group": "БД-21",
-                        "room": "29",
+                        "room": "24",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -112,7 +131,7 @@
                 "subject": "Классный час",
                 "otUnits": [],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-12",
@@ -124,14 +143,14 @@
                     {
                         "teacher": "Рыбак Е.Ю.",
                         "group": "БД-21",
-                        "room": "24",
+                        "room": "47",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -143,14 +162,14 @@
                     {
                         "teacher": "Золотовская М.Ю.",
                         "group": "БД-21",
-                        "room": "29",
+                        "room": "33",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
