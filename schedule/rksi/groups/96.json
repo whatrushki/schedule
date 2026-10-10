@@ -53,9 +53,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Марышева О.В.",
+                        "group": "СА-27",
+                        "room": "316",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -74,7 +83,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-12",
@@ -94,6 +103,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:10",
+                "subject": "Дискретная математика с элементами математической логики",
+                "otUnits": [
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "СА-27",
+                        "room": "306",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

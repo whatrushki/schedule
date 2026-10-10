@@ -64,8 +64,27 @@
     },
     {
         "date": "2026-10-12",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
+            {
+                "date": "2026-10-12",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Котова Т.И.",
+                        "group": "ИС-44",
+                        "room": "216",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-10-12",
                 "number": 4,
@@ -74,16 +93,16 @@
                 "subject": "Основы финансовой грамотности",
                 "otUnits": [
                     {
-                        "teacher": "Котова Татьяна Ивановна",
+                        "teacher": "Котова Т.И.",
                         "group": "СА-19",
-                        "room": "103",
+                        "room": "114",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -93,16 +112,16 @@
                 "subject": "Основы финансовой грамотности",
                 "otUnits": [
                     {
-                        "teacher": "Котова Татьяна Ивановна",
+                        "teacher": "Котова Т.И.",
                         "group": "СА-26",
-                        "room": "103",
+                        "room": "114",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

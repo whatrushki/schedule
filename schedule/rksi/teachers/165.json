@@ -1,8 +1,54 @@
 [
     {
         "date": "2026-10-12",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
+            {
+                "date": "2026-10-12",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Шабранская П.Е.",
+                        "group": "ИКС-13",
+                        "room": "420",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Шабранская П.Е.",
+                        "group": "ИКС-33",
+                        "room": "122",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Шабранская П.Е.",
+                        "group": "СА-24",
+                        "room": "122",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-10-12",
                 "number": 5,
@@ -11,7 +57,7 @@
                 "subject": "Компьютерное моделирование",
                 "otUnits": [
                     {
-                        "teacher": "Шабранская Полина Евгеньевна",
+                        "teacher": "Шабранская П.Е.",
                         "group": "ИКС-23",
                         "room": "314",
                         "additional": "1",
@@ -20,7 +66,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -30,7 +76,7 @@
                 "subject": "Компьютерное моделирование",
                 "otUnits": [
                     {
-                        "teacher": "Шабранская Полина Евгеньевна",
+                        "teacher": "Шабранская П.Е.",
                         "group": "ИКС-23",
                         "room": "314",
                         "additional": "1",
@@ -39,7 +85,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

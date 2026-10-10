@@ -196,26 +196,26 @@
     },
     {
         "date": "2026-10-12",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-12",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Информатика",
+                "subject": "Математика",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Михаил Андраникович",
+                        "teacher": "Арутюнян М.А.",
                         "group": "ИКС-14",
-                        "room": "110",
+                        "room": "418",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -225,35 +225,135 @@
                 "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Михаил Андраникович",
+                        "teacher": "Арутюнян М.А.",
                         "group": "СА-16",
-                        "room": "110",
+                        "room": "418",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Математические методы решения типовых прикладных задач",
+                "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Михаил Андраникович",
-                        "group": "ИКС-24",
+                        "teacher": "Арутюнян М.М.",
+                        "group": "СА-35",
                         "room": "110",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Арутюнян М.А.",
+                        "group": "ИКС-24",
+                        "room": "412",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.А",
+                        "group": "ТЭС-12",
+                        "room": "118",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-26",
+                        "room": "217",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-37",
+                        "room": "217",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 4,
+                "startTime": "14:10",
+                "endTime": "15:40",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "СА-35",
+                        "room": "110",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:30",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "СА-35",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:10",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "СА-35",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-10-12",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-12",
@@ -11,16 +11,43 @@
                 "subject": "Экономика отрасли",
                 "otUnits": [
                     {
-                        "teacher": "Ревнивцева Оксана Александровна",
+                        "teacher": "Ревнивцева О.А.",
                         "group": "ИС-26",
-                        "room": "320",
+                        "room": "213",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Ревнивцева О.А.",
+                        "group": "РУП-15",
+                        "room": "318",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Ревнивцева О.А.",
+                        "group": "ИС-33",
+                        "room": "318",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-10-12",
@@ -30,16 +57,16 @@
                 "subject": "Экономика отрасли",
                 "otUnits": [
                     {
-                        "teacher": "Ревнивцева Оксана Александровна",
+                        "teacher": "Ревнивцева О.А.",
                         "group": "ИС-28",
-                        "room": "320",
+                        "room": "213",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -49,16 +76,16 @@
                 "subject": "Экономика отрасли",
                 "otUnits": [
                     {
-                        "teacher": "Ревнивцева Оксана Александровна",
+                        "teacher": "Ревнивцева О.А.",
                         "group": "ИС-24",
-                        "room": "320",
+                        "room": "412",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -68,16 +95,16 @@
                 "subject": "Экономика отрасли",
                 "otUnits": [
                     {
-                        "teacher": "Ревнивцева Оксана Александровна",
+                        "teacher": "Ревнивцева О.А.",
                         "group": "ИС-22",
-                        "room": "320",
+                        "room": "412",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

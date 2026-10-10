@@ -68,13 +68,32 @@
         "lessons": [
             {
                 "date": "2026-10-12",
+                "number": 7,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Социальная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Рыбак Е.Ю.",
+                        "group": "ИБТ-23",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-12",
                 "number": 0,
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
                 "otUnits": [],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-12",
@@ -86,14 +105,14 @@
                     {
                         "teacher": "Селезень И.В.",
                         "group": "ИБТ-23",
-                        "room": "38",
+                        "room": "29",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -105,14 +124,14 @@
                     {
                         "teacher": "Селезень И.В.",
                         "group": "ИБТ-23",
-                        "room": "38",
+                        "room": "29",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

@@ -64,7 +64,7 @@
     },
     {
         "date": "2026-10-12",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-12",
@@ -74,16 +74,24 @@
                 "subject": "География",
                 "otUnits": [
                     {
-                        "teacher": "Видинеева Екатерина Александровна",
+                        "teacher": "Видинеева Е.А.",
+                        "group": "РУП-15",
+                        "room": "422",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Видинеева Е.А.",
                         "group": "ТЭС-12",
-                        "room": "216",
+                        "room": "422",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -93,16 +101,16 @@
                 "subject": "География",
                 "otUnits": [
                     {
-                        "teacher": "Видинеева Екатерина Александровна",
+                        "teacher": "Видинеева Е.А.",
                         "group": "СА-13",
-                        "room": "216",
+                        "room": "412",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -112,16 +120,43 @@
                 "subject": "География",
                 "otUnits": [
                     {
-                        "teacher": "Видинеева Екатерина Александровна",
+                        "teacher": "Видинеева Е.А.",
                         "group": "СА-15",
-                        "room": "216",
+                        "room": "Акт.зал",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Видинеева Е.А.",
+                        "group": "ИС-29",
+                        "room": "411",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Видинеева Е.А.",
+                        "group": "ИКС-34",
+                        "room": "411",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             }
         ]
     },

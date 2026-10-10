@@ -68,13 +68,32 @@
         "lessons": [
             {
                 "date": "2026-10-12",
+                "number": 7,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.Г.",
+                        "group": "ТД-33",
+                        "room": "44",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-12",
                 "number": 0,
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
                 "otUnits": [],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-12",
@@ -86,14 +105,14 @@
                     {
                         "teacher": "Доценко Л.А.",
                         "group": "ТД-33",
-                        "room": "34",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -105,14 +124,14 @@
                     {
                         "teacher": "Доценко Л.А.",
                         "group": "ТД-33",
-                        "room": "34",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

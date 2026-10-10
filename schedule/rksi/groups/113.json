@@ -57,6 +57,25 @@
         "lessons": [
             {
                 "date": "2026-10-12",
+                "number": 7,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Товароведение",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова П.П.",
+                        "group": "ТД-22",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-12",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
@@ -65,14 +84,14 @@
                     {
                         "teacher": "Рыбак Е.Ю.",
                         "group": "ТД-22",
-                        "room": "32",
+                        "room": "47",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -82,7 +101,7 @@
                 "subject": "Классный час",
                 "otUnits": [],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-12",
@@ -94,14 +113,14 @@
                     {
                         "teacher": "Каверзнева Е.Ю.",
                         "group": "ТД-22",
-                        "room": "47",
+                        "room": "40",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -132,14 +151,14 @@
                     {
                         "teacher": "Каверзнева Е.Ю.",
                         "group": "ТД-22",
-                        "room": "47",
+                        "room": "40",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

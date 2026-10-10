@@ -95,14 +95,14 @@
                     {
                         "teacher": "Муравьева М.П.",
                         "group": "ТЭС-13",
-                        "room": "305",
+                        "room": "324",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -114,14 +114,14 @@
                     {
                         "teacher": "Троилина В.С.",
                         "group": "ТЭС-13",
-                        "room": "103",
+                        "room": "114",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -148,9 +148,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "ТЭС-13",
+                        "room": "305",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

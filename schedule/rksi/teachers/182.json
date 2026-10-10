@@ -121,7 +121,7 @@
     },
     {
         "date": "2026-10-12",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-12",
@@ -140,7 +140,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-12",
@@ -150,35 +150,54 @@
                 "subject": "Элементы высшей математики",
                 "otUnits": [
                     {
-                        "teacher": "Долгополая Анастасия Сергеевна",
+                        "teacher": "Долгополая А.С.",
                         "group": "СА-18",
-                        "room": "320",
+                        "room": "306",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Информатика",
+                "subject": "Дискретная математика с элементами математической логики",
                 "otUnits": [
                     {
-                        "teacher": "Долгополая Анастасия Сергеевна",
+                        "teacher": "Долгополая А.С.",
                         "group": "СА-17",
-                        "room": "216а",
+                        "room": "306",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "ТЭС-13",
+                        "room": "305",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-10-12",
@@ -188,16 +207,16 @@
                 "subject": "Элементы высшей математики",
                 "otUnits": [
                     {
-                        "teacher": "Долгополая Анастасия Сергеевна",
+                        "teacher": "Долгополая А.С.",
                         "group": "СА-18",
-                        "room": "406",
+                        "room": "306",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -207,16 +226,35 @@
                 "subject": "Дискретная математика с элементами математической логики",
                 "otUnits": [
                     {
-                        "teacher": "Долгополая Анастасия Сергеевна",
+                        "teacher": "Долгополая А.С.",
                         "group": "СА-21",
-                        "room": "406",
+                        "room": "306",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:10",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "СА-27",
+                        "room": "306",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

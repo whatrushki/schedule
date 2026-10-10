@@ -68,13 +68,51 @@
         "lessons": [
             {
                 "date": "2026-10-12",
+                "number": 7,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.Г.",
+                        "group": "ТД-21",
+                        "room": "44",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-12",
                 "number": 0,
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
                 "otUnits": [],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "REMOVED"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 4,
+                "startTime": "14:10",
+                "endTime": "15:40",
+                "subject": "Товароведение",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова П.П.",
+                        "group": "ТД-21",
+                        "room": "43",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             },
             {
                 "date": "2026-10-12",
@@ -86,14 +124,14 @@
                     {
                         "teacher": "Рыбак Е.Ю.",
                         "group": "ТД-21",
-                        "room": "28",
+                        "room": "47",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -128,17 +166,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.П.",
+                        "teacher": "Крылова О.В.",
                         "group": "ТД-21",
-                        "room": "13",
+                        "room": "33",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Крылова О.В.",
+                        "teacher": "Марченко С.П.",
                         "group": "ТД-21",
-                        "room": "33",
+                        "room": "13",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null

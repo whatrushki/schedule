@@ -8,10 +8,10 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Русский язык",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
-                        "teacher": "Чалая Светлана Анатольевна",
+                        "teacher": "Чалая С.А.",
                         "group": "БУ-11",
                         "room": "24",
                         "additional": "2",
@@ -20,7 +20,34 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Чалая С.А.",
+                        "group": "ИБА-31",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Чалая С.А.",
+                        "group": "БД-11",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

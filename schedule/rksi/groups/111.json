@@ -95,6 +95,25 @@
         "lessons": [
             {
                 "date": "2026-10-12",
+                "number": 7,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Мельникова С.М.",
+                        "group": "ТД-12",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-12",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
@@ -103,14 +122,14 @@
                     {
                         "teacher": "Мальцева И.Е.",
                         "group": "ТД-12",
-                        "room": "13",
+                        "room": "35",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -122,14 +141,14 @@
                     {
                         "teacher": "Мальцева И.Е.",
                         "group": "ТД-12",
-                        "room": "13",
+                        "room": "35",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -141,14 +160,14 @@
                     {
                         "teacher": "Мальцева И.Е.",
                         "group": "ТД-12",
-                        "room": "13",
+                        "room": "35",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -158,7 +177,7 @@
                 "subject": "Классный час",
                 "otUnits": [],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

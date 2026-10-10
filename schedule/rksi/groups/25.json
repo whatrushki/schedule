@@ -95,6 +95,25 @@
         "lessons": [
             {
                 "date": "2026-10-12",
+                "number": 7,
+                "startTime": "00:00",
+                "endTime": "00:00",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Шабалта А.В.",
+                        "group": "ИБТ-13",
+                        "room": "43",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-12",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
@@ -103,14 +122,14 @@
                     {
                         "teacher": "Наскалова О.В.",
                         "group": "ИБТ-13",
-                        "room": "35",
+                        "room": "36",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -122,14 +141,14 @@
                     {
                         "teacher": "Наскалова О.В.",
                         "group": "ИБТ-13",
-                        "room": "35",
+                        "room": "36",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -158,7 +177,7 @@
                 "subject": "Классный час",
                 "otUnits": [],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
@@ -464,17 +483,17 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.П.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ИБТ-13",
-                        "room": "17",
+                        "room": "38",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Марченко С.П.",
                         "group": "ИБТ-13",
-                        "room": "38",
+                        "room": "17",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
