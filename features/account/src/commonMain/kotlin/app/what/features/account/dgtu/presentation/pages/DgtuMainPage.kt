@@ -436,34 +436,44 @@ internal fun DGTUMainScreen(
             }
             
             if (state.value.news.isEmpty() && state.value.newsFetchState == RemoteState.Loading) {
-                Row(
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    modifier = Modifier.horizontalScroll(rememberScrollState())
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 12.dp)
+                        .clip(shapes.large)
                 ) {
-                    Gap(4)
-                    repeat(3) {
-                        Box(
-                            modifier = Modifier
-                                .width(220.dp)
-                                .height(130.dp)
-                                .clip(RoundedCornerShape(12.dp))
-                                .background(shimmer)
-                        )
-                    }
-                    Gap(4)
-                }
-            } else if (state.value.news.isNotEmpty()) {
-                Row(
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    modifier = Modifier.horizontalScroll(rememberScrollState())
-                ) {
-                    Gap(4)
-                    state.value.news.forEach {
-                        NewItemView(it) {
-                            listener(DgtuEvent.OnNewClicked(it.id))
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        modifier = Modifier.horizontalScroll(rememberScrollState())
+                    ) {
+                        repeat(3) {
+                            Box(
+                                modifier = Modifier
+                                    .width(220.dp)
+                                    .height(130.dp)
+                                    .clip(shapes.large)
+                                    .background(shimmer)
+                            )
                         }
                     }
-                    Gap(4)
+                }
+            } else if (state.value.news.isNotEmpty()) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 12.dp)
+                        .clip(shapes.large)
+                ) {
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        modifier = Modifier.horizontalScroll(rememberScrollState())
+                    ) {
+                        state.value.news.forEach {
+                            NewItemView(it) {
+                                listener(DgtuEvent.OnNewClicked(it.id))
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -30,90 +30,103 @@ import app.what.schedule.features.schedule.navigation.ScheduleProvider
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
+import app.what.foundation.services.AppLogger.Companion.Auditor
+
 class DgtuFeature : Feature<DgtuController, DgtuEvent>(), KoinComponent {
     override val controller: DgtuController by inject()
     
     @Composable
     override fun content(modifier: Modifier) {
-        val action = controller.collectActions()
-        val state = controller.collectStates()
-        val nav = rememberHostNavigator()
-        val midNav = rememberNavigator(1)
-        val globalNav = rememberNavigator(2)
-        
-        NavigationHost(
-            modifier,
-            start = if (state.value.token != null) DGTUMainProvider
-            else DGTUAuthProvider,
-            navigator = nav,
-        ) {
-            composable<DGTUAuthProvider> {
-                DGTULoginScreen(listener)
-            }
-            
-            composable<DGTUMainProvider> {
-                DGTUMainScreen(state, listener)
-            }
-            
-            composable<DGTUMailProvider> {
-                DgtuMailsPage(state, listener, onBack = { nav.c.popBackStack() })
-            }
-            
-            composable<DGTUZachBookProvider> {
-                DgtuZachBookPage(state, listener, onBack = { nav.c.popBackStack() })
-            }
-            
-            composable<DGTUMailDetailProvider> { backStackEntry ->
-                val route = backStackEntry.toRoute<DGTUMailDetailProvider>()
-                DgtuMailDetailPage(
-                    threadId = route.threadId,
-                    messageId = route.messageId,
-                    state = state,
-                    listener = listener,
-                    onBack = { nav.c.popBackStack() }
-                )
-            }
+        DgtuAccountContent(modifier, controller, listener)
+    }
+}
+
+@Composable
+fun DgtuAccountContent(
+    modifier: Modifier = Modifier,
+    controller: DgtuController = org.koin.compose.koinInject(),
+    listener: (DgtuEvent) -> Unit = { controller.obtainEvent(it) }
+) {
+    val action = controller.collectActions()
+    val state = controller.collectStates()
+    val nav = rememberHostNavigator()
+    val midNav = rememberNavigator(1)
+    val globalNav = rememberNavigator(2)
+    
+    Auditor.debug("DgtuFeature", "DgtuAccountContent composed: hasToken=${state.value.token != null}, modifier=$modifier")
+
+    NavigationHost(
+        modifier,
+        start = if (state.value.token != null) DGTUMainProvider
+        else DGTUAuthProvider,
+        navigator = nav,
+    ) {
+        composable<DGTUAuthProvider> {
+            DGTULoginScreen(listener)
         }
         
-        LaunchedEffect(action.value) {
-            val ac = action.value
-            ac ?: return@LaunchedEffect
+        composable<DGTUMainProvider> {
+            DGTUMainScreen(state, listener)
+        }
+        
+        composable<DGTUMailProvider> {
+            DgtuMailsPage(state, listener, onBack = { nav.c.popBackStack() })
+        }
+        
+        composable<DGTUZachBookProvider> {
+            DgtuZachBookPage(state, listener, onBack = { nav.c.popBackStack() })
+        }
+        
+        composable<DGTUMailDetailProvider> { backStackEntry ->
+            val route = backStackEntry.toRoute<DGTUMailDetailProvider>()
+            DgtuMailDetailPage(
+                threadId = route.threadId,
+                messageId = route.messageId,
+                state = state,
+                listener = listener,
+                onBack = { nav.c.popBackStack() }
+            )
+        }
+    }
+    
+    LaunchedEffect(action.value) {
+        val ac = action.value
+        ac ?: return@LaunchedEffect
+        
+        when (ac) {
+            is DgtuAction.OpenSchedule -> midNav.c.navigate(
+                ScheduleProvider(
+                    ac.search.name,
+                    ac.search.id,
+                    true
+                )
+            )
             
-            when (ac) {
-                is DgtuAction.OpenSchedule -> midNav.c.navigate(
-                    ScheduleProvider(
-                        ac.search.name,
-                        ac.search.id,
-                        true
-                    )
-                )
-                
-                is DgtuAction.OpenNews -> midNav.c.navigate(NewsProvider)
-                is DgtuAction.OpenNewDetail -> globalNav.c.navigate(
-                    NewsDetailProvider(ac.id, ac.url, ac.bannerUrl, ac.title, ac.description)
-                )
-                
-                DgtuAction.OpenAuth -> nav.c.navigate(DGTUAuthProvider) {
-                    popUpTo(0) { inclusive = true }
-                }
-                
-                DgtuAction.OpenMain -> nav.c.navigate(DGTUMainProvider) {
-                    popUpTo(0) { inclusive = true }
-                }
-                
-                DgtuAction.OpenCertificate -> nav.c.navigate(DGTUCertificateProvider)
-                DgtuAction.OpenEvent -> nav.c.navigate(DGTUEventProvider)
-                DgtuAction.OpenMail -> nav.c.navigate(DGTUMailProvider)
-                DgtuAction.OpenZachBook -> nav.c.navigate(DGTUZachBookProvider)
-                is DgtuAction.OpenMailDetail -> nav.c.navigate(
-                    DGTUMailDetailProvider(
-                        ac.threadId,
-                        ac.messageId
-                    )
-                )
+            is DgtuAction.OpenNews -> midNav.c.navigate(NewsProvider)
+            is DgtuAction.OpenNewDetail -> globalNav.c.navigate(
+                NewsDetailProvider(ac.id, ac.url, ac.bannerUrl, ac.title, ac.description)
+            )
+            
+            DgtuAction.OpenAuth -> nav.c.navigate(DGTUAuthProvider) {
+                popUpTo(0) { inclusive = true }
             }
             
-            controller.clearAction()
+            DgtuAction.OpenMain -> nav.c.navigate(DGTUMainProvider) {
+                popUpTo(0) { inclusive = true }
+            }
+            
+            DgtuAction.OpenCertificate -> nav.c.navigate(DGTUCertificateProvider)
+            DgtuAction.OpenEvent -> nav.c.navigate(DGTUEventProvider)
+            DgtuAction.OpenMail -> nav.c.navigate(DGTUMailProvider)
+            DgtuAction.OpenZachBook -> nav.c.navigate(DGTUZachBookProvider)
+            is DgtuAction.OpenMailDetail -> nav.c.navigate(
+                DGTUMailDetailProvider(
+                    ac.threadId,
+                    ac.messageId
+                )
+            )
         }
+        
+        controller.clearAction()
     }
 }

@@ -19,61 +19,74 @@ import app.what.schedule.features.schedule.navigation.ScheduleProvider
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
+import app.what.foundation.services.AppLogger.Companion.Auditor
+
 class SfeduFeature : Feature<SfeduController, SfeduEvent>(), KoinComponent {
     override val controller: SfeduController by inject()
 
     @Composable
     override fun content(modifier: Modifier) {
-        val action = controller.collectActions()
-        val state = controller.collectStates()
-        val nav = rememberHostNavigator()
-        val midNav = rememberNavigator(1)
-        val globalNav = rememberNavigator(2)
+        SfeduAccountContent(modifier, controller, listener)
+    }
+}
 
-        NavigationHost(
-            modifier,
-            start = if (state.value.isAuthorized) SFEDUMainProvider else SFEDUAuthProvider,
-            navigator = nav,
-        ) {
-            composable<SFEDUAuthProvider> {
-                SfeduLoginScreen(state, listener)
+@Composable
+fun SfeduAccountContent(
+    modifier: Modifier = Modifier,
+    controller: SfeduController = org.koin.compose.koinInject(),
+    listener: (SfeduEvent) -> Unit = { controller.obtainEvent(it) }
+) {
+    val action = controller.collectActions()
+    val state = controller.collectStates()
+    val nav = rememberHostNavigator()
+    val midNav = rememberNavigator(1)
+    val globalNav = rememberNavigator(2)
+
+    Auditor.debug("SfeduFeature", "SfeduAccountContent composed: isAuthorized=${state.value.isAuthorized}, modifier=$modifier")
+
+    NavigationHost(
+        modifier,
+        start = if (state.value.isAuthorized) SFEDUMainProvider else SFEDUAuthProvider,
+        navigator = nav,
+    ) {
+        composable<SFEDUAuthProvider> {
+            SfeduLoginScreen(state, listener)
+        }
+
+        composable<SFEDUMainProvider> {
+            SfeduMainScreen(state, listener)
+        }
+    }
+
+    LaunchedEffect(action.value) {
+        val ac = action.value ?: return@LaunchedEffect
+
+        when (ac) {
+            is SfeduAction.OpenSchedule -> midNav.c.navigate(
+                ScheduleProvider(
+                    ac.search.name,
+                    ac.search.id,
+                    true
+                )
+            )
+
+            is SfeduAction.OpenNews -> midNav.c.navigate(app.what.schedule.features.news.navigation.NewsProvider)
+
+            is SfeduAction.OpenNewDetail -> globalNav.c.navigate(
+                app.what.schedule.features.newsDetail.navigation.NewsDetailProvider(
+                    ac.id, ac.url, ac.bannerUrl, ac.title, ac.description
+                )
+            )
+
+            SfeduAction.OpenAuth -> nav.c.navigate(SFEDUAuthProvider) {
+                popUpTo(0) { inclusive = true }
             }
 
-            composable<SFEDUMainProvider> {
-                SfeduMainScreen(state, listener)
+            SfeduAction.OpenMain -> nav.c.navigate(SFEDUMainProvider) {
+                popUpTo(0) { inclusive = true }
             }
         }
 
-        LaunchedEffect(action.value) {
-            val ac = action.value ?: return@LaunchedEffect
-
-            when (ac) {
-                is SfeduAction.OpenSchedule -> midNav.c.navigate(
-                    ScheduleProvider(
-                        ac.search.name,
-                        ac.search.id,
-                        true
-                    )
-                )
-
-                is SfeduAction.OpenNews -> midNav.c.navigate(app.what.schedule.features.news.navigation.NewsProvider)
-
-                is SfeduAction.OpenNewDetail -> globalNav.c.navigate(
-                    app.what.schedule.features.newsDetail.navigation.NewsDetailProvider(
-                        ac.id, ac.url, ac.bannerUrl, ac.title, ac.description
-                    )
-                )
-
-                SfeduAction.OpenAuth -> nav.c.navigate(SFEDUAuthProvider) {
-                    popUpTo(0) { inclusive = true }
-                }
-
-                SfeduAction.OpenMain -> nav.c.navigate(SFEDUMainProvider) {
-                    popUpTo(0) { inclusive = true }
-                }
-            }
-
-            controller.clearAction()
-        }
+        controller.clearAction()
     }
 }

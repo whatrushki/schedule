@@ -213,14 +213,17 @@ class SFEDUScheduleClient(
                             val subject = curr.subjectname.ifBlank { curr.subjectabbr ?: lesson.info ?: "Занятие" }
                             val teacher = curr.teachername ?: defaultTeacherName
                             val room = curr.roomname ?: ""
-                            val groupName = if (isTeacher && lesson.uberid != null) {
-                                groupsByUberId[lesson.uberid]?.name ?: ""
-                            } else ""
+                            val groupName = when {
+                                isTeacher && lesson.uberid != null -> groupsByUberId[lesson.uberid]?.name ?: ""
+                                curr.subnum != null && (curricula.size > 1 || (lesson.subcount ?: 0) > 1) -> "${curr.subnum} подгруппа"
+                                else -> ""
+                            }
 
                             val otUnit = OneTimeUnitDto(
                                 teacher = teacher,
                                 group = groupName,
-                                room = room
+                                room = room,
+                                subject = subject
                             )
 
                             lessonsForDay.add(
@@ -247,7 +250,7 @@ class SFEDUScheduleClient(
                                 startTime = parsedSlot.startTime,
                                 endTime = parsedSlot.endTime,
                                 subject = lesson.info,
-                                otUnits = listOf(OneTimeUnitDto(teacher = defaultTeacherName, group = groupName, room = "")),
+                                otUnits = listOf(OneTimeUnitDto(teacher = defaultTeacherName, group = groupName, room = "", subject = lesson.info)),
                                 type = lessonType
                             )
                         )
@@ -256,9 +259,10 @@ class SFEDUScheduleClient(
 
                 if (lessonsForDay.isNotEmpty()) {
                     val combinedLessons = lessonsForDay
-                        .groupBy { it.number to it.subject }
+                        .groupBy { Triple(it.number, it.startTime, it.endTime) }
                         .map { (_, list) ->
-                            list.first().copy(otUnits = list.flatMap { it.otUnits }.distinct())
+                            val allUnits = list.flatMap { it.otUnits }.distinct()
+                            list.first().copy(otUnits = allUnits)
                         }
                         .sortedWith(compareBy({ it.startTime }, { it.number }))
 

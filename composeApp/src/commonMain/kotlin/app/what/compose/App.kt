@@ -28,9 +28,11 @@ fun App(
     val navigator = rememberHostNavigator()
     val settings = koinInject<AppValues>()
 
+    val navTag = app.what.foundation.utils.buildTag(app.what.foundation.utils.LogScope.CORE, app.what.foundation.utils.LogCat.NAV)
+
     LaunchedEffect(Unit) {
         navigator.c.addOnDestinationChangedListener { _, destination, _ ->
-            Auditor.debug("Nav", "Навигация: ${destination.route}")
+            Auditor.debug(navTag, "Root Nav: ${destination.route}")
             Analytics.logScreenView(destination.route ?: "no route")
         }
     }
@@ -43,12 +45,14 @@ fun App(
                         headerBanner()
                         NavigationHost(
                             modifier = Modifier.fillMaxSize(),
+                            navigator = navigator,
                             start = if (settings.isFirstLaunch.get() == true) OnboardingProvider
                             else MainProvider
                         ) {
-                            mainRegistry()
-                            newsDetailRegistry()
-                            onboardingRegistry()
+                            Auditor.debug(navTag, "Root NavigationHost registry executing: mainRegistry, newsDetailRegistry, onboardingRegistry")
+                            this.mainRegistry()
+                            this.newsDetailRegistry()
+                            this.onboardingRegistry()
                         }
                     }
                 }

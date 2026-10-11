@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import app.what.foundation.core.Feature
+import app.what.foundation.services.AppLogger.Companion.Auditor
 import app.what.navigation.core.NavComponent
 import app.what.schedule.features.settings.domain.SettingsController
 import app.what.schedule.features.settings.domain.models.SettingsEvent
@@ -23,7 +24,7 @@ class SettingsFeature(
     @Composable
     override fun content(modifier: Modifier) {
         val state by controller.collectStates()
-        
+        Auditor.debug("SettingsFeature", "SettingsFeature.content composed: showRestartMessage=${state.showRestartMessage}")
         SettingsView(state, listener)
     }
 }

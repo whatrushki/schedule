@@ -108,7 +108,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":composeApp"))
     implementation(project(":domain"))
     implementation(project(":data"))
     implementation(libs.compose.foundation)

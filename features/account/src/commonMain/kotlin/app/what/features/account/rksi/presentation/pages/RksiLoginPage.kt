@@ -46,6 +46,7 @@ internal fun RksiLoginScreen(
     state: State<RksiState>,
     listener: Listener<RksiEvent>
 ) {
+    app.what.foundation.services.AppLogger.Companion.Auditor.debug("RksiLoginScreen", "RksiLoginScreen composed! isLoggingIn=${state.value.isLoggingIn}")
     Column(
         modifier = Modifier
             .fillMaxSize()

@@ -52,6 +52,7 @@ fun NewItemView(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(140.dp)
+                .clip(shapes.large.copy(bottomStart = androidx.compose.foundation.shape.CornerSize(0.dp), bottomEnd = androidx.compose.foundation.shape.CornerSize(0.dp)))
         )
         
         Column(

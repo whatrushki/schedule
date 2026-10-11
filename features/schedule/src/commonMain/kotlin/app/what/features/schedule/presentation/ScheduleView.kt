@@ -114,6 +114,9 @@ fun ScheduleView(
             .wrapContentWidth(Alignment.CenterHorizontally)
             .widthIn(max = 860.dp)
     ) {
+        val curState = state.value
+        val navTag = app.what.foundation.utils.buildTag(app.what.foundation.utils.LogScope.CORE, app.what.foundation.utils.LogCat.NAV)
+        app.what.foundation.services.AppLogger.Companion.Auditor.debug(navTag, "ScheduleView composition: scheduleState=${curState.scheduleState}, schedulesCount=${curState.schedules.size}, selected=${curState.selectedSearch}")
         val sheet = rememberSheetController()
         val dialog = rememberDialogController()
         val appValues = rememberAppValues()
@@ -388,7 +391,8 @@ fun ScheduleView(
                             verticalArrangement = Arrangement.spacedBy(if (showBreaks) 4.dp else 12.dp),
                             modifier = Modifier
                                 .fillMaxSize()
-                                .clip(shapes.medium)
+                                .padding(horizontal = 12.dp)
+                                .clip(shapes.large)
                                 .verticalScroll(rememberScrollState())
                         ) {
                             if (lessons.isEmpty()) {

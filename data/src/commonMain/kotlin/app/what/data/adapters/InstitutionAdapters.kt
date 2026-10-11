@@ -19,8 +19,8 @@ import app.what.schedule.data.remote.api.NewsService
 import app.what.schedule.data.remote.api.ScheduleService
 
 class AdaptedScheduleService(
-    private val client: ScheduleClient,
-    private val cloudClient: ScheduleClient? = null
+    val client: ScheduleClient,
+    val cloudClient: ScheduleClient? = null
 ) : ScheduleService {
 
     private val tag = buildTag(LogScope.NETWORK, LogCat.NET)

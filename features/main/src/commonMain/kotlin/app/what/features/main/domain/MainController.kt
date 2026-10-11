@@ -7,6 +7,7 @@ import app.what.schedule.data.remote.api.InstitutionManager
 import app.what.schedule.features.main.domain.models.MainAction
 import app.what.schedule.features.main.domain.models.MainEvent
 import app.what.schedule.features.main.domain.models.MainState
+import app.what.foundation.services.AppLogger.Companion.Auditor
 import kotlinx.coroutines.launch
 
 class MainController(
@@ -25,7 +26,9 @@ class MainController(
     }
 
     private fun updateAccountFeature() {
-        val accountService = institutionManager.getSavedInstitution()?.accountFeature
+        val savedInst = institutionManager.getSavedInstitution()
+        val accountService = savedInst?.accountFeature
+        Auditor.debug("MainController", "updateAccountFeature: institution=${savedInst?.metadata?.name}, hasAccountFeature=${accountService != null}")
         updateState { copy(hasProfilePage = accountService != null, ui = accountService) }
     }
     

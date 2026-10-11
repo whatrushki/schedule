@@ -26,8 +26,10 @@ class RksiController(
         get() = institutionManager.getSavedInstitution()?.newsService
 
     init {
+        app.what.foundation.services.AppLogger.Companion.Auditor.debug("RksiController", "init started: checking savedCookies/login")
         val savedCookies = appValues.rksiCookies.get()
         if (!savedCookies.isNullOrBlank()) {
+            app.what.foundation.services.AppLogger.Companion.Auditor.debug("RksiController", "savedCookies present, authorizing")
             accountClient.sessionCookies = savedCookies.split(";;").filter { it.isNotBlank() }
             updateState { copy(isAuthorized = true) }
             loadProfile()
@@ -35,6 +37,7 @@ class RksiController(
         } else {
             val login = appValues.rksiLogin.get()
             val pass = appValues.rksiPassword.get()
+            app.what.foundation.services.AppLogger.Companion.Auditor.debug("RksiController", "savedCookies empty. login=$login, pass=${pass != null}")
             if (!login.isNullOrBlank() && !pass.isNullOrBlank()) {
                 viewModelScope.launchSafe(debug = debug) {
                     performLogin(login, pass)

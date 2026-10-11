@@ -57,13 +57,31 @@ class WebInstitutionFactory(
 
     override fun create(): Institution {
         val baseInst = base.create()
+        val customUrls = try {
+            val origin = kotlinx.browser.window.location.origin
+            val path = kotlinx.browser.window.location.pathname.trimEnd('/')
+            listOf("$origin$path/schedule/${metadata.id}")
+        } catch (_: Exception) {
+            emptyList()
+        }
         val cloudClient = CloudScheduleClient(
             institutionId = metadata.id,
             httpClient = httpClient,
-            customBaseUrls = emptyList()
+            customBaseUrls = customUrls
         )
+        val liveClient = (baseInst.scheduleService as? AdaptedScheduleService)?.client
         return object : Institution by baseInst {
-            override val scheduleService: ScheduleService = AdaptedScheduleService(cloudClient)
+            override val scheduleService: ScheduleService = if (liveClient != null) {
+                AdaptedScheduleService(
+                    client = liveClient,
+                    cloudClient = cloudClient
+                )
+            } else {
+                AdaptedScheduleService(
+                    client = cloudClient,
+                    cloudClient = cloudClient
+                )
+            }
         }
     }
 }
@@ -195,7 +213,6 @@ private fun shouldBypassProxy(url: String): Boolean {
     }
     return (originHost.isNotEmpty() && host == originHost) ||
             host.endsWith("github.com") ||
-            host.endsWith("githubusercontent.com") ||
             host.endsWith("jsdelivr.net") ||
             host.endsWith("github.io") ||
             host == "localhost" ||

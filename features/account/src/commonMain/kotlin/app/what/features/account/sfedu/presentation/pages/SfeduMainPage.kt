@@ -452,32 +452,42 @@ internal fun SfeduMainScreen(
             Gap(8)
             
             if (state.value.newsFetchState == RemoteState.Loading && state.value.news.isEmpty()) {
-                Row(
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                Box(
                     modifier = Modifier
-                        .horizontalScroll(rememberScrollState())
+                        .fillMaxWidth()
                         .padding(horizontal = 14.dp)
+                        .clip(shapes.large)
                 ) {
-                    repeat(3) {
-                        Box(
-                            modifier = Modifier
-                                .width(220.dp)
-                                .height(130.dp)
-                                .clip(RoundedCornerShape(12.dp))
-                                .background(shimmer)
-                        )
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        modifier = Modifier.horizontalScroll(rememberScrollState())
+                    ) {
+                        repeat(3) {
+                            Box(
+                                modifier = Modifier
+                                    .width(220.dp)
+                                    .height(130.dp)
+                                    .clip(shapes.large)
+                                    .background(shimmer)
+                            )
+                        }
                     }
                 }
             } else if (state.value.news.isNotEmpty()) {
-                Row(
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                Box(
                     modifier = Modifier
-                        .horizontalScroll(rememberScrollState())
+                        .fillMaxWidth()
                         .padding(horizontal = 14.dp)
+                        .clip(shapes.large)
                 ) {
-                    state.value.news.forEach { item ->
-                        NewItemView(item) {
-                            listener(SfeduEvent.OnNewClicked(item.id))
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        modifier = Modifier.horizontalScroll(rememberScrollState())
+                    ) {
+                        state.value.news.forEach { item ->
+                            NewItemView(item) {
+                                listener(SfeduEvent.OnNewClicked(item.id))
+                            }
                         }
                     }
                 }

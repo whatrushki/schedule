@@ -15,9 +15,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.Key
-import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
@@ -116,8 +114,6 @@ internal fun SfeduLoginScreen(
         Gap(24)
 
         val (token, setToken) = useState("")
-        val (name, setName) = useState("")
-        val (group, setGroup) = useState("")
 
         StyledTextField(
             token, setToken,
@@ -126,45 +122,11 @@ internal fun SfeduLoginScreen(
             placeholder = "Токен авторизации или HTML профиля",
             options = KeyboardOptions(
                 keyboardType = KeyboardType.Text,
-                imeAction = ImeAction.Next
-            ),
-            shape = shapes.medium,
-            leading = {
-                Icons.Default.Key.Show(colorScheme.secondary, 20)
-            }
-        )
-
-        Gap(12)
-
-        StyledTextField(
-            name, setName,
-            modifier = Modifier.fillMaxWidth(),
-            debounce = 500,
-            placeholder = "ФИО или имя (по желанию)",
-            options = KeyboardOptions(
-                keyboardType = KeyboardType.Text,
-                imeAction = ImeAction.Next
-            ),
-            shape = shapes.medium,
-            leading = {
-                Icons.Default.Person.Show(colorScheme.secondary, 20)
-            }
-        )
-
-        Gap(12)
-
-        StyledTextField(
-            group, setGroup,
-            modifier = Modifier.fillMaxWidth(),
-            debounce = 500,
-            placeholder = "Номер группы (по желанию, напр. 5 группа)",
-            options = KeyboardOptions(
-                keyboardType = KeyboardType.Text,
                 imeAction = ImeAction.Done
             ),
             shape = shapes.medium,
             leading = {
-                Icons.Default.Group.Show(colorScheme.secondary, 20)
+                Icons.Default.Key.Show(colorScheme.secondary, 20)
             }
         )
 
@@ -187,9 +149,7 @@ internal fun SfeduLoginScreen(
             onClick = {
                 listener(
                     SfeduEvent.TokenSubmitted(
-                        token = token.trim(),
-                        name = name.trim().ifBlank { null },
-                        group = group.trim().ifBlank { null }
+                        token = token.trim()
                     )
                 )
             }

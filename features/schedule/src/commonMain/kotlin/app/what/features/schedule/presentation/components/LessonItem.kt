@@ -169,9 +169,8 @@ private fun EventView(
     
     Box(
         modifier = modifier
-            .padding(horizontal = 12.dp)
             .fillMaxWidth()
-            .clip(shapes.medium)
+            .clip(shapes.large)
             .background(backgroundColor)
             .animateContentSize()
             .bclick(enabled = expandable) {
@@ -292,12 +291,11 @@ private fun CommonView(
     
     Box(
         modifier
-            .padding(horizontal = 12.dp)
             .fillMaxWidth()
             .applyIf(!expanded, elseBlock = {
                 height(IntrinsicSize.Min)
             }) { height(150.dp) }
-            .clip(shapes.medium)
+            .clip(shapes.large)
             .background(
                 if (data.state == LessonState.REMOVED) colorScheme.surfaceVariant
                 else colorScheme.surfaceContainer
@@ -795,7 +793,7 @@ private fun AdditionalInfo(
 
 @Composable
 fun BreakInfo(minutes: Int, active: Boolean = false) = Row(
-    Modifier.padding(horizontal = 32.dp),
+    Modifier.padding(horizontal = 20.dp),
     verticalAlignment = Alignment.CenterVertically
 ) {
     WHATIcons.Run.Show(

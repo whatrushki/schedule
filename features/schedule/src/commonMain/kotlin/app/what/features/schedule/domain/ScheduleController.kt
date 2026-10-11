@@ -28,22 +28,27 @@ class ScheduleController(
 ) : UIController<ScheduleState, ScheduleAction, ScheduleEvent>(
     ScheduleState()
 ) {
-    override fun obtainEvent(viewEvent: ScheduleEvent) = when (viewEvent) {
-        ScheduleEvent.Init -> {}
-        ScheduleEvent.UpdateSchedule -> syncSchedule(viewState.selectedSearch)
-        ScheduleEvent.OnCloudSync -> syncSchedule(
-            viewState.selectedSearch,
-            useCache = false,
-            cloudSync = true
-        )
-        
-        ScheduleEvent.OnRefresh -> syncSchedule(viewState.selectedSearch, useCache = false, forceLive = true)
-        ScheduleEvent.OnRefreshSearches -> updateSearches(showLoading = true, forceReload = true)
-        is ScheduleEvent.OnSearchClicked -> {
-            val isSameGroup = viewEvent.value == viewState.selectedSearch
-            syncSchedule(viewEvent.value, useCache = !isSameGroup, forceLive = isSameGroup)
+    private val scheduleTag = buildTag(LogScope.SCHEDULE, LogCat.STATE)
+
+    override fun obtainEvent(viewEvent: ScheduleEvent) {
+        Auditor.debug(scheduleTag, "obtainEvent: $viewEvent")
+        when (viewEvent) {
+            ScheduleEvent.Init -> {}
+            ScheduleEvent.UpdateSchedule -> syncSchedule(viewState.selectedSearch)
+            ScheduleEvent.OnCloudSync -> syncSchedule(
+                viewState.selectedSearch,
+                useCache = false,
+                cloudSync = true
+            )
+            
+            ScheduleEvent.OnRefresh -> syncSchedule(viewState.selectedSearch, useCache = false, forceLive = true)
+            ScheduleEvent.OnRefreshSearches -> updateSearches(showLoading = true, forceReload = true)
+            is ScheduleEvent.OnSearchClicked -> {
+                val isSameGroup = viewEvent.value == viewState.selectedSearch
+                syncSchedule(viewEvent.value, useCache = !isSameGroup, forceLive = isSameGroup)
+            }
+            is ScheduleEvent.OnSearchLongPressed -> toggleFavorites(viewEvent.value)
         }
-        is ScheduleEvent.OnSearchLongPressed -> toggleFavorites(viewEvent.value)
     }
     
     init {
@@ -70,6 +75,7 @@ class ScheduleController(
     
     private fun init() {
         val lastSearch = settings.lastSearch.get()
+        Auditor.debug(scheduleTag, "ScheduleController.init() called! lastSearch=$lastSearch")
         
         updateState {
             if (lastSearch == null) copy(scheduleState = RemoteState.Idle)

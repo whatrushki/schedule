@@ -41,6 +41,7 @@ import app.what.foundation.ui.Gap
 import app.what.foundation.ui.animations.rememberShimmer
 import app.what.schedule.features.newsDetail.presentation.components.NewDetailContentShimmer
 import app.what.schedule.features.newsDetail.presentation.components.NewDetailTitleShimmer
+import app.what.foundation.services.AppLogger.Companion.Auditor
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
@@ -53,6 +54,8 @@ class NewsFeature(
     override fun content(modifier: Modifier) {
         val viewState by controller.collectStates()
         val viewAction by controller.collectActions()
+        
+        Auditor.debug("NewsFeature", "NewsFeature.content composed: newsCount=${viewState.news.size}, state=${viewState.newsState}")
         
         LaunchedEffect(Unit) {
             listener(NewsEvent.Init)

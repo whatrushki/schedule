@@ -90,20 +90,44 @@ class MainFeature(
         }
     
     val childrenRegistry: Registry = {
-        settingsRegistry()
-        newsRegistry()
-        scheduleRegistry()
-        devRegistry()
+        val navTag = buildTag(LogScope.CORE, LogCat.NAV)
+        Auditor.debug(navTag, "childrenRegistry executing on NavGraphBuilder: registering settings, news, schedule, dev, account")
+        this.settingsRegistry()
+        this.newsRegistry()
+        this.scheduleRegistry()
+        this.devRegistry()
         composable<AccountProvider> {
+            val navTag = buildTag(LogScope.CORE, LogCat.NAV)
             val mainState by controller.collectStates()
             val ui = mainState.ui
-            if (ui != null) {
-                ui.content(Modifier.fillMaxSize())
-            } else {
-                app.what.schedule.ui.components.Fallback(
-                    text = "Профиль недоступен для выбранного учебного заведения",
-                    modifier = Modifier.fillMaxSize()
-                )
+            Auditor.debug(navTag, "AccountProvider composable entered: hasProfilePage=${mainState.hasProfilePage}, ui=$ui")
+            when (val account = ui) {
+                is app.what.schedule.features.insts.rksi.RksiFeature -> {
+                    Auditor.debug(navTag, "Rendering RksiFeature directly: invoking RksiAccountContent...")
+                    app.what.schedule.features.insts.rksi.RksiAccountContent(Modifier.fillMaxSize())
+                    Auditor.debug(navTag, "RksiAccountContent returned!")
+                }
+                is app.what.schedule.features.insts.dgtu.DgtuFeature -> {
+                    Auditor.debug(navTag, "Rendering DgtuFeature directly: invoking DgtuAccountContent...")
+                    app.what.schedule.features.insts.dgtu.DgtuAccountContent(Modifier.fillMaxSize())
+                    Auditor.debug(navTag, "DgtuAccountContent returned!")
+                }
+                is app.what.schedule.features.insts.sfedu.SfeduFeature -> {
+                    Auditor.debug(navTag, "Rendering SfeduFeature directly: invoking SfeduAccountContent...")
+                    app.what.schedule.features.insts.sfedu.SfeduAccountContent(Modifier.fillMaxSize())
+                    Auditor.debug(navTag, "SfeduAccountContent returned!")
+                }
+                null -> {
+                    Auditor.debug(navTag, "Rendering Fallback (ui is null) for AccountProvider")
+                    app.what.schedule.ui.components.Fallback(
+                        text = "Профиль недоступен для выбранного учебного заведения",
+                        modifier = Modifier.fillMaxSize()
+                    )
+                }
+                else -> {
+                    Auditor.debug(navTag, "Rendering generic UIComponent: ${account::class.simpleName}")
+                    account.content(Modifier.fillMaxSize())
+                }
             }
         }
     }
@@ -138,11 +162,12 @@ class MainFeature(
                 }
             }
         }
+        val navTag = remember { buildTag(LogScope.CORE, LogCat.NAV) }
+        Auditor.debug(navTag, "content composed: currentInstitution=$currentInstitution, isAccountAuthorized=$isAccountAuthorized, screensCount=${screens.size}")
 //        var showBottomNavBar by useState(true)
         
         LaunchedEffect(Unit) {
             navigator.c.addOnDestinationChangedListener { _, destination, _ ->
-                val navTag = buildTag(LogScope.CORE, LogCat.NAV)
                 Auditor.debug(navTag, "Навигация: ${destination.route}")
                 Analytics.logScreenView(destination.route ?: "no route")
             }
@@ -164,6 +189,7 @@ class MainFeature(
             val lastSeen = appValues.lastSeenVersion.get() ?: ""
             val currentVersion = app.what.domain.constants.AppConstants.VERSION_NAME
             val isFirstLaunch = appValues.isFirstLaunch.get() ?: true
+            Auditor.debug(navTag, "Onboarding check: isFirstLaunch=$isFirstLaunch, lastSeen=$lastSeen, currentVersion=$currentVersion")
 
             if (!isFirstLaunch && lastSeen.isNotBlank() && lastSeen != currentVersion) {
                 val bundledNotes = app.what.features.onboarding.presentation.loadBundledReleaseNotes()
@@ -194,6 +220,7 @@ class MainFeature(
                         else -> bundledNotes ?: cachedNotes
                     }
 
+                Auditor.debug(navTag, "releaseNotes resolved: ${releaseNotes != null}")
                 if (releaseNotes != null) {
                     dialog.open(full = true) {
                         app.what.features.onboarding.presentation.UpdateOnboardingContent(
@@ -234,6 +261,7 @@ class MainFeature(
             ) {
                 val isLandscape = maxWidth > maxHeight && maxWidth >= 480.dp
                 val isWideScreen = isDesktop || maxWidth >= 760.dp || isLandscape
+                Auditor.debug(navTag, "BoxWithConstraints: maxWidth=$maxWidth, maxHeight=$maxHeight, isLandscape=$isLandscape, isWideScreen=$isWideScreen")
 
                 if (isWideScreen) {
                     Row(
@@ -258,9 +286,10 @@ class MainFeature(
                             NavigationHost(
                                 modifier = Modifier.fillMaxSize(),
                                 navigator = navigator,
-                                start = ScheduleProvider(),
-                                registry = childrenRegistry
-                            )
+                                start = ScheduleProvider()
+                            ) {
+                                this.childrenRegistry()
+                            }
                         }
                     }
                 } else {
@@ -268,9 +297,10 @@ class MainFeature(
                         NavigationHost(
                             modifier = Modifier.fillMaxSize(),
                             navigator = navigator,
-                            start = ScheduleProvider(),
-                            registry = childrenRegistry
-                        )
+                            start = ScheduleProvider()
+                        ) {
+                            this.childrenRegistry()
+                        }
 
                         AnimatedEnter(
                             modifier = Modifier.align(Alignment.BottomCenter)
