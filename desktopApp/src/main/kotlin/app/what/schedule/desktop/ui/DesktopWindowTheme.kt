@@ -7,7 +7,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.awt.ComposeWindow
 import app.what.schedule.data.local.settings.AppValues
 import app.what.schedule.data.local.settings.ThemeType
-import app.what.schedule.ui.theme.getAppColorScheme
+import app.what.compose.theme.getAppColorScheme
 import com.sun.jna.Memory
 import com.sun.jna.Native
 import com.sun.jna.Pointer

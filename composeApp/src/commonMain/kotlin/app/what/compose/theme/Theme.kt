@@ -1,4 +1,4 @@
-package app.what.schedule.ui.theme
+package app.what.compose.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable

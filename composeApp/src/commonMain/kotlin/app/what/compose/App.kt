@@ -14,7 +14,7 @@ import app.what.schedule.features.main.navigation.mainRegistry
 import app.what.schedule.features.newsDetail.navigation.newsDetailRegistry
 import app.what.schedule.features.onboarding.navigation.OnboardingProvider
 import app.what.schedule.features.onboarding.navigation.onboardingRegistry
-import app.what.schedule.ui.theme.AppTheme
+import app.what.compose.theme.AppTheme
 import org.koin.compose.koinInject
 
 import androidx.compose.foundation.layout.Column
