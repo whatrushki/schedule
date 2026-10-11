@@ -1240,7 +1240,7 @@
                 "otUnits": [
                     {
                         "teacher": "Бессмертный И. В.",
-                        "group": "ДПО13, ДПО14",
+                        "group": "ДПО14, ДПО13",
                         "room": "407",
                         "additional": "2",
                         "onlineUrl": null,
@@ -1550,7 +1550,7 @@
                     {
                         "teacher": "Бессмертный И. В.",
                         "group": "ДПС41",
-                        "room": "538",
+                        "room": "519",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -1588,8 +1588,8 @@
                     {
                         "teacher": "Бессмертный И. В.",
                         "group": "ДПО12",
-                        "room": "319",
-                        "additional": "8",
+                        "room": "447",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1605,11 +1605,38 @@
         "lessons": [
             {
                 "date": "2026-10-13",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Общая психология",
+                "otUnits": [
+                    {
+                        "teacher": "Бессмертный И. В.",
+                        "group": "ДПО12",
+                        "room": "",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Современные программы и технологии воспитания обучающихся начальных классов",
+                "subject": "пр Общая психология",
                 "otUnits": [
+                    {
+                        "teacher": "Бессмертный И. В.",
+                        "group": "ДПО12",
+                        "room": "531",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Бессмертный И. В.",
                         "group": "УПНК-21",
@@ -1627,8 +1654,16 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лек Современные программы и технологии воспитания обучающихся начальных классов",
+                "subject": "лек Общая психология",
                 "otUnits": [
+                    {
+                        "teacher": "Бессмертный И. В.",
+                        "group": "ДПО13",
+                        "room": "219",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Бессмертный И. В.",
                         "group": "ПНК-31, УПНК-21",
@@ -1646,12 +1681,58 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "пр Современные программы и технологии воспитания обучающихся начальных классов",
+                "subject": "пр Общая психология",
                 "otUnits": [
+                    {
+                        "teacher": "Бессмертный И. В.",
+                        "group": "ДПО14",
+                        "room": "408",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Бессмертный И. В.",
                         "group": "ПНК-31",
                         "room": "420",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Общая психология",
+                "otUnits": [
+                    {
+                        "teacher": "Бессмертный И. В.",
+                        "group": "ДПО11",
+                        "room": "142",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Общая психология",
+                "otUnits": [
+                    {
+                        "teacher": "Бессмертный И. В.",
+                        "group": "ДПО11",
+                        "room": "418",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -1703,6 +1784,44 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Общая психология",
+                "otUnits": [
+                    {
+                        "teacher": "Бессмертный И. В.",
+                        "group": "ДПО14, ДПО13",
+                        "room": "412",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Общая психология",
+                "otUnits": [
+                    {
+                        "teacher": "Бессмертный И. В.",
+                        "group": "ДПО11",
+                        "room": "226",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -1715,13 +1834,78 @@
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "пр Современные программы и технологии воспитания обучающихся начальных классов",
+                "subject": "пр Общая психология",
                 "otUnits": [
+                    {
+                        "teacher": "Бессмертный И. В.",
+                        "group": "ДПО14",
+                        "room": "121",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Бессмертный И. В.",
                         "group": "ПНК-31",
                         "room": "319",
                         "additional": "23",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Психология стресса и стрессоустойчивого поведения",
+                "otUnits": [
+                    {
+                        "teacher": "Бессмертный И. В.",
+                        "group": "ДПС41",
+                        "room": "540",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Общая психология",
+                "otUnits": [
+                    {
+                        "teacher": "Бессмертный И. В.",
+                        "group": "ДПО14",
+                        "room": "161",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Общая психология",
+                "otUnits": [
+                    {
+                        "teacher": "Бессмертный И. В.",
+                        "group": "ДПО13",
+                        "room": "418",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1889,7 +2073,7 @@
                 "otUnits": [
                     {
                         "teacher": "Бессмертный И. В.",
-                        "group": "ПНК-31, УПНК-21",
+                        "group": "УПНК-21, ПНК-31",
                         "room": "420",
                         "additional": "8",
                         "onlineUrl": null,
