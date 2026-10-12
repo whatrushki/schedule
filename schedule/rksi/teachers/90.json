@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-10-12",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-12",
@@ -70,6 +70,33 @@
             },
             {
                 "date": "2026-10-12",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Растороцкий В.В.",
+                        "group": "ИБА-22",
+                        "room": "36",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Растороцкий В.В.",
+                        "group": "ИБА-33",
+                        "room": "36",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-12",
                 "number": 4,
                 "startTime": "14:10",
                 "endTime": "15:40",
@@ -105,33 +132,6 @@
                 ],
                 "type": "COMMON",
                 "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-12",
-                "number": 7,
-                "startTime": "18:20",
-                "endTime": "19:50",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Растороцкий В.В.",
-                        "group": "ИБА-22",
-                        "room": "36",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Растороцкий В.В.",
-                        "group": "ИБА-33",
-                        "room": "36",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
             }
         ]
     },
@@ -156,7 +156,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-13",
@@ -166,7 +166,7 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Растороцкий Владислав Владиславович",
+                        "teacher": "Растороцкий В.В.",
                         "group": "ИБТ-21",
                         "room": "с/з1",
                         "additional": "2",
@@ -175,7 +175,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-13",
@@ -194,7 +194,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

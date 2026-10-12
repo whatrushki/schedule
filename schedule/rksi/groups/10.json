@@ -5,25 +5,6 @@
         "lessons": [
             {
                 "date": "2026-10-12",
-                "number": 7,
-                "startTime": "00:00",
-                "endTime": "00:00",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Гузов А.В.",
-                        "group": "ИБА-13",
-                        "room": "21",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            },
-            {
-                "date": "2026-10-12",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
@@ -85,9 +66,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Гузов А.В.",
+                        "group": "ИБА-13",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "REMOVED"
+                "state": "CHANGED"
             }
         ]
     },
@@ -100,19 +90,19 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Основы безопасности и защиты Родины",
+                "subject": "Основы информационной безопасности",
                 "otUnits": [
                     {
-                        "teacher": "Смирнов В.П.",
+                        "teacher": "Кузнецова А.В.",
                         "group": "ИБА-13",
-                        "room": "34",
+                        "room": "31",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-13",
@@ -141,24 +131,24 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ИБА-13",
-                        "room": "41",
+                        "room": "42",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "ИБА-13",
-                        "room": "21",
+                        "room": "47",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-13",

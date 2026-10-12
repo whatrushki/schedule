@@ -5,22 +5,98 @@
         "lessons": [
             {
                 "date": "2026-10-13",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Иностранный язык",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "ТД-11",
+                        "room": "42",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Иностранный язык",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "ИБТ-11",
+                        "room": "42",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Иностранный язык",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "ИБА-13",
+                        "room": "42",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "ИБА-33",
+                        "room": "42",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-13",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Операционные системы и среды",
+                "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко П.А.",
-                        "group": "СА-24",
-                        "room": "412",
-                        "additional": "1",
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "ИБТ-32",
+                        "room": "42",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-13",
@@ -39,7 +115,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-13",
@@ -58,7 +134,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

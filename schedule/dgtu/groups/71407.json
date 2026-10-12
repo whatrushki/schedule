@@ -1953,7 +1953,7 @@
                 "otUnits": [
                     {
                         "teacher": "Токарев Г. Н.",
-                        "group": "ВПИ11",
+                        "group": "ВПИ11, ВПИ11",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
@@ -2001,12 +2001,12 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "лек Математический анализ",
+                "subject": "пр Дискретная математика",
                 "otUnits": [
                     {
-                        "teacher": "Фролова Н. В.",
+                        "teacher": "Паниотова В. Ю.",
                         "group": "ВПИ11",
-                        "room": "492",
+                        "room": "330",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2017,6 +2017,132 @@
             },
             {
                 "date": "2026-10-13",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Рябых Г. Ю.",
+                        "group": "ВПИ11",
+                        "room": "218а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Формирование базы знаний на основе модели искусственного интеллекта",
+                "otUnits": [
+                    {
+                        "teacher": "Зубарева Е. Г.",
+                        "group": "ВПИ11",
+                        "room": "333",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Дискретная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Пожарская Е. Д.",
+                        "group": "ВПИ11",
+                        "room": "305",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-14",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-14",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Фролова Н. В.",
+                        "group": "ВПИ11",
+                        "room": "374",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Колесникова О. В.",
+                        "group": "ВПИ11",
+                        "room": "383б",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-15",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-15",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Фролова Н. В.",
+                        "group": "ВПИ11",
+                        "room": "323",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -2037,75 +2163,6 @@
         ]
     },
     {
-        "date": "2026-10-14",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-14",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Математический анализ",
-                "otUnits": [
-                    {
-                        "teacher": "Фролова Н. В.",
-                        "group": "ВПИ11",
-                        "room": "492",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-14",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Математический анализ",
-                "otUnits": [
-                    {
-                        "teacher": "Фролова Н. В.",
-                        "group": "ВПИ11",
-                        "room": "480б",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-15",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-15",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Алгебра и аналитическая геометрия",
-                "otUnits": [
-                    {
-                        "teacher": "Рябых Г. Ю.",
-                        "group": "ВПИ11",
-                        "room": "039",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-16",
         "scheduleType": "COMMON",
         "lessons": [
@@ -2114,8 +2171,16 @@
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "лек История России",
+                "subject": "лек Алгебра и аналитическая геометрия",
                 "otUnits": [
+                    {
+                        "teacher": "Рябых Г. Ю.",
+                        "group": "ВПИ11",
+                        "room": "035/1",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Воскобойников С. Г.",
                         "group": "ВПИ11",
@@ -2130,15 +2195,34 @@
             },
             {
                 "date": "2026-10-16",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Формирование базы знаний на основе модели искусственного интеллекта",
+                "otUnits": [
+                    {
+                        "teacher": "Зубарева Е. Г.",
+                        "group": "ВПИ11",
+                        "room": "",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лек Алгебра и аналитическая геометрия",
+                "subject": "лек Информатика и программирование",
                 "otUnits": [
                     {
-                        "teacher": "Рябых Г. Ю.",
+                        "teacher": "Соболь Б. В.",
                         "group": "ВПИ11",
-                        "room": "427а",
+                        "room": "355",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2158,12 +2242,58 @@
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "пр История России",
+                "subject": "пр Иностранный язык (английский)",
                 "otUnits": [
+                    {
+                        "teacher": "Потанина О. Ю.",
+                        "group": "ВПИ11",
+                        "room": "447",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Воскобойников С. Г.",
                         "group": "ВПИ11",
                         "room": "310",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Иностранный язык (английский), п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Потанина О. Ю.",
+                        "group": "ВПИ11",
+                        "room": "193а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Фролова Н. В.",
+                        "group": "ВПИ11",
+                        "room": "035/1",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-10-12",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-12",
@@ -62,29 +62,10 @@
             },
             {
                 "date": "2026-10-12",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Технология составления бухгалтерской отчетности",
-                "otUnits": [
-                    {
-                        "teacher": "Хачадурова Е.В.",
-                        "group": "БУ-31",
-                        "room": "45",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-12",
-                "number": 7,
-                "startTime": "18:20",
-                "endTime": "19:50",
-                "subject": "Основы бухгалтерского учета",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
                 "otUnits": [
                     {
                         "teacher": "Хачадурова Е.В.",
@@ -103,8 +84,27 @@
                         "subject": null
                     }
                 ],
-                "type": "OTHER",
+                "type": "CLASS_HOUR",
                 "state": "ADDED"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 4,
+                "startTime": "14:10",
+                "endTime": "15:40",
+                "subject": "Технология составления бухгалтерской отчетности",
+                "otUnits": [
+                    {
+                        "teacher": "Хачадурова Е.В.",
+                        "group": "БУ-31",
+                        "room": "45",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },
@@ -117,10 +117,10 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Бухгалтерская технология проведения и оформления инвентаризации",
+                "subject": "Технология составления бухгалтерской отчетности",
                 "otUnits": [
                     {
-                        "teacher": "Хачадурова Елена Валерьевна",
+                        "teacher": "Хачадурова Е.В.",
                         "group": "БУ-31",
                         "room": "45",
                         "additional": "2",
@@ -129,17 +129,17 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-13",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Организация расчетов с бюджетом и внебюджетными фондами",
+                "subject": "Технология составления бухгалтерской отчетности",
                 "otUnits": [
                     {
-                        "teacher": "Хачадурова Елена Валерьевна",
+                        "teacher": "Хачадурова Е.В.",
                         "group": "БУ-31",
                         "room": "45",
                         "additional": "2",
@@ -148,7 +148,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

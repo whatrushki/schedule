@@ -1,44 +1,25 @@
 [
     {
-        "date": "2026-10-07",
+        "date": "2026-10-13",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-07",
-                "number": 2,
-                "startTime": "09:50",
-                "endTime": "11:25",
-                "subject": "Основы робототехники",
+                "date": "2026-10-13",
+                "number": 4,
+                "startTime": "13:45",
+                "endTime": "15:20",
+                "subject": "Методика обучения информатике",
                 "otUnits": [
                     {
                         "teacher": "Евланова Анна Георгиевна",
-                        "group": "Пед-РО",
-                        "room": "ЮГИНФО 112",
+                        "group": "ПедМИ",
+                        "room": "ЮГИНФО 206",
                         "additional": "",
                         "onlineUrl": null,
-                        "subject": "Основы робототехники"
+                        "subject": "Методика обучения информатике"
                     }
                 ],
                 "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-07",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Теория и методика обучения информатике",
-                "otUnits": [
-                    {
-                        "teacher": "Евланова Анна Георгиевна",
-                        "group": "ФИИТ-РО",
-                        "room": "ЮГИНФО 112",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": "Теория и методика обучения информатике"
-                    }
-                ],
-                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
@@ -49,6 +30,25 @@
         "lessons": [
             {
                 "date": "2026-10-14",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Методика обучения информатике",
+                "otUnits": [
+                    {
+                        "teacher": "Евланова Анна Георгиевна",
+                        "group": "ПедМИ",
+                        "room": "ЮГИНФО 206",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": "Методика обучения информатике"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
                 "number": 2,
                 "startTime": "09:50",
                 "endTime": "11:25",
@@ -83,6 +83,69 @@
                     }
                 ],
                 "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-21",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:35",
+                "subject": "Методика обучения информатике",
+                "otUnits": [
+                    {
+                        "teacher": "Евланова Анна Георгиевна",
+                        "group": "ПедМИ",
+                        "room": "ЮГИНФО 206",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": "Методика обучения информатике"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-21",
+                "number": 2,
+                "startTime": "09:50",
+                "endTime": "11:25",
+                "subject": "Основы робототехники",
+                "otUnits": [
+                    {
+                        "teacher": "Евланова Анна Георгиевна",
+                        "group": "Пед-РО",
+                        "room": "ЮГИНФО 112",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": "Основы робототехники"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-21",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Теория и методика обучения информатике",
+                "otUnits": [
+                    {
+                        "teacher": "Евланова Анна Георгиевна",
+                        "group": "ФИИТ-РО",
+                        "room": "ЮГИНФО 112",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": "Теория и методика обучения информатике"
+                    }
+                ],
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]

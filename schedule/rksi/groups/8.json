@@ -5,25 +5,6 @@
         "lessons": [
             {
                 "date": "2026-10-12",
-                "number": 7,
-                "startTime": "00:00",
-                "endTime": "00:00",
-                "subject": "Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "Савченко А.А.",
-                        "group": "ИБА-11",
-                        "room": "38",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            },
-            {
-                "date": "2026-10-12",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
@@ -85,9 +66,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Савченко А.А.",
+                        "group": "ИБА-11",
+                        "room": "38",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "REMOVED"
+                "state": "CHANGED"
             }
         ]
     },
@@ -204,17 +194,17 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Савченко А.А.",
+                        "teacher": "Крылова О.В.",
                         "group": "ИБА-11",
-                        "room": "38",
+                        "room": "42",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Крылова О.В.",
+                        "teacher": "Савченко А.А.",
                         "group": "ИБА-11",
-                        "room": "42",
+                        "room": "38",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null

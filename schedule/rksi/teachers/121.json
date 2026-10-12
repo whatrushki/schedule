@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-10-12",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-12",
@@ -24,10 +24,10 @@
             },
             {
                 "date": "2026-10-12",
-                "number": 7,
-                "startTime": "18:20",
-                "endTime": "19:50",
-                "subject": "Литература",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
                 "otUnits": [
                     {
                         "teacher": "Чалая С.А.",
@@ -46,7 +46,7 @@
                         "subject": null
                     }
                 ],
-                "type": "OTHER",
+                "type": "CLASS_HOUR",
                 "state": "ADDED"
             }
         ]
@@ -63,7 +63,7 @@
                 "subject": "Литература",
                 "otUnits": [
                     {
-                        "teacher": "Чалая Светлана Анатольевна",
+                        "teacher": "Чалая С.А.",
                         "group": "БУ-11",
                         "room": "24",
                         "additional": "2",
@@ -72,17 +72,17 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-13",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Русский язык",
+                "subject": "Литература",
                 "otUnits": [
                     {
-                        "teacher": "Чалая Светлана Анатольевна",
+                        "teacher": "Чалая С.А.",
                         "group": "ТД-13",
                         "room": "24",
                         "additional": "2",
@@ -91,7 +91,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-13",
@@ -101,7 +101,7 @@
                 "subject": "Литература",
                 "otUnits": [
                     {
-                        "teacher": "Чалая Светлана Анатольевна",
+                        "teacher": "Чалая С.А.",
                         "group": "ТД-13",
                         "room": "24",
                         "additional": "2",
@@ -110,7 +110,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

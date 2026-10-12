@@ -270,7 +270,7 @@
                 "otUnits": [
                     {
                         "teacher": "Хан Р. С.",
-                        "group": "УП21, УМФ21, УМТ21",
+                        "group": "УМТ21, УМФ21, УП21",
                         "room": "226",
                         "additional": "8",
                         "onlineUrl": null,
@@ -441,7 +441,7 @@
                 "otUnits": [
                     {
                         "teacher": "Хан Р. С.",
-                        "group": "УП21, УМФ21, УМТ21",
+                        "group": "УМТ21, УМФ21, УП21",
                         "room": "226",
                         "additional": "8",
                         "onlineUrl": null,
@@ -699,7 +699,7 @@
                 "otUnits": [
                     {
                         "teacher": "Хан Р. С.",
-                        "group": "УП21, УМФ21, УМТ21",
+                        "group": "УМТ21, УМФ21, УП21",
                         "room": "423",
                         "additional": "8",
                         "onlineUrl": null,
@@ -1090,25 +1090,6 @@
         "lessons": [
             {
                 "date": "2026-10-03",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Персональный имидж и карьерный менеджмент",
-                "otUnits": [
-                    {
-                        "teacher": "Хан Р. С.",
-                        "group": "УМТ21",
-                        "room": "015",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-03",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
@@ -1142,8 +1123,8 @@
                     {
                         "teacher": "Хан Р. С.",
                         "group": "ГС31",
-                        "room": "460",
-                        "additional": "1",
+                        "room": "407",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1161,8 +1142,8 @@
                     {
                         "teacher": "Хан Р. С.",
                         "group": "ГС41",
-                        "room": "529",
-                        "additional": "8",
+                        "room": "407",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1230,8 +1211,8 @@
                     {
                         "teacher": "Хан Р. С.",
                         "group": "ГС31",
-                        "room": "140",
-                        "additional": "1",
+                        "room": "405",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1280,34 +1261,28 @@
         ]
     },
     {
-        "date": "2026-10-08",
+        "date": "2026-10-09",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-08",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Персональный имидж и карьерный менеджмент",
+                "date": "2026-10-09",
+                "number": 0,
+                "startTime": "10:15",
+                "endTime": "11:00",
+                "subject": "Ликвидация академических задолженностей",
                 "otUnits": [
                     {
                         "teacher": "Хан Р. С.",
-                        "group": "УМТ21",
-                        "room": "410",
+                        "group": "",
+                        "room": "141",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
+                "type": "UNKNOWN",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-09",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
             {
                 "date": "2026-10-09",
                 "number": 2,
@@ -1318,8 +1293,8 @@
                     {
                         "teacher": "Хан Р. С.",
                         "group": "УП21",
-                        "room": "141",
-                        "additional": "8",
+                        "room": "407",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1336,9 +1311,53 @@
                 "otUnits": [
                     {
                         "teacher": "Хан Р. С.",
-                        "group": "УП21, УМФ21, УМТ21",
-                        "room": "305",
-                        "additional": "1",
+                        "group": "УМТ21, УМФ21, УП21",
+                        "room": "405",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-12",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Маркетинг в сфере рекламы и PR",
+                "otUnits": [
+                    {
+                        "teacher": "Хан Р. С.",
+                        "group": "ГС31",
+                        "room": "407",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Исследования и ситуационный анализ, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Хан Р. С.",
+                        "group": "ГС41",
+                        "room": "404",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1373,6 +1392,25 @@
             },
             {
                 "date": "2026-10-13",
+                "number": 0,
+                "startTime": "12:00",
+                "endTime": "13:00",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Хан Р. С.",
+                        "group": "",
+                        "room": "502",
+                        "additional": "22",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "UNKNOWN",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -1398,6 +1436,44 @@
         "lessons": [
             {
                 "date": "2026-10-14",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Маркетинг в сфере рекламы и PR",
+                "otUnits": [
+                    {
+                        "teacher": "Хан Р. С.",
+                        "group": "ГС31",
+                        "room": "142",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 0,
+                "startTime": "14:15",
+                "endTime": "15:20",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Хан Р. С.",
+                        "group": "",
+                        "room": "408",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "UNKNOWN",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
                 "number": 6,
                 "startTime": "17:45",
                 "endTime": "19:20",
@@ -1406,8 +1482,8 @@
                     {
                         "teacher": "Хан Р. С.",
                         "group": "Т26М-Т.МИ31-01(7054)",
-                        "room": "аудитория",
-                        "additional": "Главный",
+                        "room": "407",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1425,8 +1501,121 @@
                     {
                         "teacher": "Хан Р. С.",
                         "group": "Т26М-Т.МИ31-01(7054)",
-                        "room": "аудитория",
-                        "additional": "Главный",
+                        "room": "407",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-15",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-15",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Маркетинговые исследования и цифровой маркетинг",
+                "otUnits": [
+                    {
+                        "teacher": "Хан Р. С.",
+                        "group": "АМИПИ21",
+                        "room": "419",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Маркетинговые исследования и цифровой маркетинг",
+                "otUnits": [
+                    {
+                        "teacher": "Хан Р. С.",
+                        "group": "АМИПИ21",
+                        "room": "309",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-16",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Маркетинговые стратегии брендинга",
+                "otUnits": [
+                    {
+                        "teacher": "Хан Р. С.",
+                        "group": "МКБК21",
+                        "room": "141",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Маркетинговые стратегии брендинга",
+                "otUnits": [
+                    {
+                        "teacher": "Хан Р. С.",
+                        "group": "МКБК21",
+                        "room": "141",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-17",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-17",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Персональный имидж и карьерный менеджмент",
+                "otUnits": [
+                    {
+                        "teacher": "Хан Р. С.",
+                        "group": "УП21",
+                        "room": "404",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1452,6 +1641,138 @@
                         "group": "ИЭ29",
                         "room": "502",
                         "additional": "22",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Маркетинговые исследования и цифровой маркетинг",
+                "otUnits": [
+                    {
+                        "teacher": "Хан Р. С.",
+                        "group": "АМИПИ21",
+                        "room": "311А",
+                        "additional": "21",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-21",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": " Маркетинг",
+                "otUnits": [
+                    {
+                        "teacher": "Хан Р. С.",
+                        "group": "Т26М-Т.МИ31-01(7054)",
+                        "room": "407",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-21",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Маркетинговые стратегии брендинга",
+                "otUnits": [
+                    {
+                        "teacher": "Хан Р. С.",
+                        "group": "МКБК21",
+                        "room": "407",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-27",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-27",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Интегрированные маркетинговые коммуникации и маркетинговая аналитика",
+                "otUnits": [
+                    {
+                        "teacher": "Хан Р. С.",
+                        "group": "ИЭ29",
+                        "room": "502",
+                        "additional": "22",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Интегрированные маркетинговые коммуникации и маркетинговая аналитика",
+                "otUnits": [
+                    {
+                        "teacher": "Хан Р. С.",
+                        "group": "ИЭ29",
+                        "room": "502",
+                        "additional": "22",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-04",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-04",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": " Маркетинг",
+                "otUnits": [
+                    {
+                        "teacher": "Хан Р. С.",
+                        "group": "Т26М-Т.МИ31-01(7054)",
+                        "room": "407",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }

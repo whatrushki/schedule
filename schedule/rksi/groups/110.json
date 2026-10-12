@@ -5,25 +5,6 @@
         "lessons": [
             {
                 "date": "2026-10-12",
-                "number": 7,
-                "startTime": "00:00",
-                "endTime": "00:00",
-                "subject": "Безопасность жизнедеятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Павленко С.Е.",
-                        "group": "ТД-11",
-                        "room": "13",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            },
-            {
-                "date": "2026-10-12",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
@@ -85,9 +66,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Павленко С.Е.",
+                        "group": "ТД-11",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "REMOVED"
+                "state": "CHANGED"
             }
         ]
     },
@@ -103,24 +93,24 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Марченко С.П.",
                         "group": "ТД-11",
-                        "room": "21",
+                        "room": "33",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Марченко С.П.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ТД-11",
-                        "room": "13",
+                        "room": "42",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-13",
@@ -132,14 +122,14 @@
                     {
                         "teacher": "Хайлова Л.В.",
                         "group": "ТД-11",
-                        "room": "28",
+                        "room": "32",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-13",
@@ -158,7 +148,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

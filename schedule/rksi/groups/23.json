@@ -5,25 +5,6 @@
         "lessons": [
             {
                 "date": "2026-10-12",
-                "number": 7,
-                "startTime": "00:00",
-                "endTime": "00:00",
-                "subject": "Математика",
-                "otUnits": [
-                    {
-                        "teacher": "Марченко С.В.",
-                        "group": "ИБТ-11",
-                        "room": "42",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            },
-            {
-                "date": "2026-10-12",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
@@ -93,9 +74,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.В.",
+                        "group": "ИБТ-11",
+                        "room": "42",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "REMOVED"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -132,14 +122,14 @@
                     {
                         "teacher": "Пустоветова С.Ю.",
                         "group": "ИБТ-11",
-                        "room": "17",
+                        "room": "21",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-13",
@@ -159,14 +149,14 @@
                     {
                         "teacher": "Ляшенко Д.И.",
                         "group": "ИБТ-11",
-                        "room": "21",
+                        "room": "42",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-13",

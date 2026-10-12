@@ -5,25 +5,6 @@
         "lessons": [
             {
                 "date": "2026-10-12",
-                "number": 7,
-                "startTime": "00:00",
-                "endTime": "00:00",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Растороцкий В.В.",
-                        "group": "ИБА-33",
-                        "room": "36",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            },
-            {
-                "date": "2026-10-12",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
@@ -47,9 +28,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Растороцкий В.В.",
+                        "group": "ИБА-33",
+                        "room": "36",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "REMOVED"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-12",
@@ -124,14 +114,14 @@
                     {
                         "teacher": "Голенко Д.А.",
                         "group": "ИБА-33",
-                        "room": "45",
+                        "room": "30",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-13",
@@ -141,43 +131,43 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "ИБА-33",
-                        "room": "21",
+                        "room": "32",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ИБА-33",
-                        "room": "41",
+                        "room": "42",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-13",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "ФИЗКУЛЬТУРА",
+                "subject": "Эксплуатация компьютерных сетей",
                 "otUnits": [
                     {
-                        "teacher": "Растороцкий В.В.",
+                        "teacher": "Голенко Д.А.",
                         "group": "ИБА-33",
-                        "room": "с/з1",
+                        "room": "20",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-13",
@@ -189,14 +179,14 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБА-33",
-                        "room": "44",
+                        "room": "45",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

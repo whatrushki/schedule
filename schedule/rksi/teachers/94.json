@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-10-12",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-12",
@@ -43,6 +43,33 @@
             },
             {
                 "date": "2026-10-12",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Рыбак Е.Ю.",
+                        "group": "ИБТ-23",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Рыбак Е.Ю.",
+                        "group": "ИБТ-32",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-12",
                 "number": 4,
                 "startTime": "14:10",
                 "endTime": "15:40",
@@ -78,33 +105,6 @@
                 ],
                 "type": "COMMON",
                 "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-12",
-                "number": 7,
-                "startTime": "18:20",
-                "endTime": "19:50",
-                "subject": "Социальная психология",
-                "otUnits": [
-                    {
-                        "teacher": "Рыбак Е.Ю.",
-                        "group": "ИБТ-23",
-                        "room": "28",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Рыбак Е.Ю.",
-                        "group": "ИБТ-32",
-                        "room": "28",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
             }
         ]
     },
