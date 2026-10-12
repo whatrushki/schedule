@@ -1724,7 +1724,7 @@
                     {
                         "teacher": "Сорокина Д. Н.",
                         "group": "ТМС11",
-                        "room": "388",
+                        "room": "340",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1743,8 +1743,8 @@
                     {
                         "teacher": "Сорокина Д. Н.",
                         "group": "ТМС11",
-                        "room": "358",
-                        "additional": "1",
+                        "room": "703б",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1795,6 +1795,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Базы данных",
+                "otUnits": [
+                    {
+                        "teacher": "Сорокина Д. Н.",
+                        "group": "ВПИЭ31",
+                        "room": "489",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -1826,8 +1845,16 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лаб Цифровые коммуникационные технологии",
+                "subject": "лаб Информатика и информационно-коммуникационные технологии",
                 "otUnits": [
+                    {
+                        "teacher": "Сорокина Д. Н.",
+                        "group": "ТМТ11",
+                        "room": "362",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Сорокина Д. Н.",
                         "group": "ИТД11",
@@ -1868,6 +1895,69 @@
         ]
     },
     {
+        "date": "2026-10-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-16",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Информатика и информационно-коммуникационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "Сорокина Д. Н.",
+                        "group": "ТМП11",
+                        "room": "398",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Управление проектами",
+                "otUnits": [
+                    {
+                        "teacher": "Сорокина Д. Н.",
+                        "group": "МБС21",
+                        "room": "430",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Управление проектами",
+                "otUnits": [
+                    {
+                        "teacher": "Сорокина Д. Н.",
+                        "group": "МПМ21",
+                        "room": "367а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-17",
         "scheduleType": "COMMON",
         "lessons": [
@@ -1876,8 +1966,16 @@
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "лаб Цифровые коммуникационные технологии, п/г 1",
+                "subject": "лаб Информатика и информационно-коммуникационные технологии",
                 "otUnits": [
+                    {
+                        "teacher": "Сорокина Д. Н.",
+                        "group": "ТМС11",
+                        "room": "398",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Сорокина Д. Н.",
                         "group": "ИЭ16",
@@ -2002,6 +2100,44 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Управление проектами",
+                "otUnits": [
+                    {
+                        "teacher": "Сорокина Д. Н.",
+                        "group": "МБС21",
+                        "room": "363",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Управление проектами",
+                "otUnits": [
+                    {
+                        "teacher": "Сорокина Д. Н.",
+                        "group": "МБС21",
+                        "room": "363",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -2021,6 +2157,44 @@
                         "group": "ИЭ11, ИЭ16",
                         "room": "311",
                         "additional": "26",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Управление проектами",
+                "otUnits": [
+                    {
+                        "teacher": "Сорокина Д. Н.",
+                        "group": "МПМ21",
+                        "room": "367а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Управление проектами",
+                "otUnits": [
+                    {
+                        "teacher": "Сорокина Д. Н.",
+                        "group": "МПМ21",
+                        "room": "362",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }

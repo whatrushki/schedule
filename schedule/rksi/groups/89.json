@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-10-12",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-10-12",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Математика",
-                "otUnits": [
-                    {
-                        "teacher": "Джалагония М.Ш.",
-                        "group": "СА-17",
-                        "room": "323",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-12",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Литература",
-                "otUnits": [
-                    {
-                        "teacher": "Нефедова Е.М.",
-                        "group": "СА-17",
-                        "room": "401",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-12",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Информатика",
-                "otUnits": [
-                    {
-                        "teacher": "Долгополая А.С.",
-                        "group": "СА-17",
-                        "room": "306",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-12",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [
-                    {
-                        "teacher": "Зурова А.Е.",
-                        "group": "СА-17",
-                        "room": "422",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CLASS_HOUR",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-10-13",
         "scheduleType": "COMMON",
         "lessons": [
@@ -95,14 +13,14 @@
                     {
                         "teacher": "Марышева О.В.",
                         "group": "СА-17",
-                        "room": "210",
+                        "room": "404",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-13",
@@ -133,14 +51,14 @@
                     {
                         "teacher": "Нохрина Ю.В.",
                         "group": "СА-17",
-                        "room": "412",
+                        "room": "416",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
