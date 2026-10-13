@@ -87,22 +87,41 @@
         "lessons": [
             {
                 "date": "2026-10-14",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Крупицкая Н.А.",
+                        "group": "ИС-28",
+                        "room": "305",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-14",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Наталья Анатольевна",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "ИКС-14",
-                        "room": "111",
+                        "room": "305",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-14",
@@ -112,16 +131,16 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Наталья Анатольевна",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "РУП-16",
-                        "room": "111",
+                        "room": "320",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-14",
@@ -131,16 +150,16 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Наталья Анатольевна",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "ИКС-24",
-                        "room": "111",
+                        "room": "320",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

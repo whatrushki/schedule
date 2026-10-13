@@ -1413,44 +1413,6 @@
         "lessons": [
             {
                 "date": "2026-10-01",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Операционные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Язвинская Н. Н.",
-                        "group": "ВКБ33",
-                        "room": "333",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-01",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Вычислительные методы в алгебре и теории чисел",
-                "otUnits": [
-                    {
-                        "teacher": "Рухленко С. А.",
-                        "group": "ВКБ33",
-                        "room": "238",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-01",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -1467,88 +1429,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-10-01",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Вычислительные методы в алгебре и теории чисел",
-                "otUnits": [
-                    {
-                        "teacher": "Рухленко С. А.",
-                        "group": "ВКБ33",
-                        "room": "283",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-02",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Компьютерные сети",
-                "otUnits": [
-                    {
-                        "teacher": "Решетникова И. В.",
-                        "group": "ВКБ33",
-                        "room": "310",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лаб Компьютерные сети",
-                "otUnits": [
-                    {
-                        "teacher": "Решетникова И. В.",
-                        "group": "ВКБ33",
-                        "room": "333",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "лаб Аппаратные средства вычислительной техники",
-                "otUnits": [
-                    {
-                        "teacher": "Батурин А. С.",
-                        "group": "ВКБ33",
-                        "room": "333",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -1556,25 +1436,6 @@
         "date": "2026-10-03",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-10-03",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Теория информации",
-                "otUnits": [
-                    {
-                        "teacher": "Алферова И. А.",
-                        "group": "ВКБ33",
-                        "room": "313",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-10-03",
                 "number": 5,
@@ -2209,6 +2070,94 @@
         ]
     },
     {
+        "date": "2026-10-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-13",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Операционные системы",
+                "otUnits": [
+                    {
+                        "teacher": "Язвинская Н. Н.",
+                        "group": "ВКБ33",
+                        "room": "492",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Общая физическая подготовка",
+                "otUnits": [
+                    {
+                        "teacher": "Корбан А. Н.",
+                        "group": "ВКБ33",
+                        "room": "манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-14",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-14",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Языки программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Корниевский А. С.",
+                        "group": "ВКБ33",
+                        "room": "419",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Языки программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Романов А. М.",
+                        "group": "ВКБ33",
+                        "room": "510",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-15",
         "scheduleType": "COMMON",
         "lessons": [
@@ -2224,6 +2173,145 @@
                         "group": "ВКБ33",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Языки программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Косыченко Д. А.",
+                        "group": "ВКБ33",
+                        "room": "416",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Языки программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Молодцова А. И.",
+                        "group": "ВКБ33",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лаб Компьютерные сети",
+                "otUnits": [
+                    {
+                        "teacher": "Решетникова И. В.",
+                        "group": "ВКБ33",
+                        "room": "333",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Теория информации",
+                "otUnits": [
+                    {
+                        "teacher": "Трубников И. А.",
+                        "group": "ВКБ33",
+                        "room": "460",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-17",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-17",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Теория информации",
+                "otUnits": [
+                    {
+                        "teacher": "Трубников И. А.",
+                        "group": "ВКБ33",
+                        "room": "419",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Компьютерные сети",
+                "otUnits": [
+                    {
+                        "teacher": "Решетникова И. В.",
+                        "group": "ВКБ33",
+                        "room": "310",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Вычислительные методы в алгебре и теории чисел",
+                "otUnits": [
+                    {
+                        "teacher": "Рухленко С. А.",
+                        "group": "ВКБ33",
+                        "room": "035/1",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }

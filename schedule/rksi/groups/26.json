@@ -51,7 +51,7 @@
                     {
                         "teacher": "Селезень И.В.",
                         "group": "ИБТ-21",
-                        "room": "29",
+                        "room": "44",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -87,6 +87,25 @@
         "lessons": [
             {
                 "date": "2026-10-14",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Растороцкий В.В.",
+                        "group": "ИБТ-21",
+                        "room": "с/з1",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-14",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -109,12 +128,12 @@
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Электротехника",
+                "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Скороходов Г.Ю.",
+                        "teacher": "Селезень И.В.",
                         "group": "ИБТ-21",
-                        "room": "20",
+                        "room": "29",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -128,12 +147,12 @@
                 "number": 6,
                 "startTime": "16:40",
                 "endTime": "18:10",
-                "subject": "Электротехника",
+                "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Скороходов Г.Ю.",
+                        "teacher": "Селезень И.В.",
                         "group": "ИБТ-21",
-                        "room": "20",
+                        "room": "29",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -152,14 +171,14 @@
                     {
                         "teacher": "Скороходов Г.Ю.",
                         "group": "ИБТ-21",
-                        "room": "20",
+                        "room": "35",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
+                "state": "REMOVED"
             }
         ]
     },

@@ -49,25 +49,6 @@
         "lessons": [
             {
                 "date": "2026-10-13",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Теория вероятностей и математическая статистика",
-                "otUnits": [
-                    {
-                        "teacher": "Ермилова О. В.",
-                        "group": "ВКБ21",
-                        "room": "219",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-13",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -92,6 +73,44 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Богомоленко Д. В.",
+                        "group": "ВКБ21",
+                        "room": "458",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Электроника и схемотехника, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Девяткин А. К.",
+                        "group": "ВКБ21",
+                        "room": "467а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -104,13 +123,13 @@
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "лек Теория вероятностей и математическая статистика",
+                "subject": "лаб Основы информационной безопасности",
                 "otUnits": [
                     {
-                        "teacher": "Артамонова Е. А.",
+                        "teacher": "Молодцова А. И.",
                         "group": "ВКБ21",
-                        "room": "606",
-                        "additional": "8",
+                        "room": "218а",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -139,16 +158,41 @@
             },
             {
                 "date": "2026-10-14",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Математический анализ",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Философия",
                 "otUnits": [
                     {
-                        "teacher": "Баранов И. В.",
+                        "teacher": "Тазаян А. Б.",
                         "group": "ВКБ21",
-                        "room": "305",
+                        "room": "313",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-15",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-15",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Хлебунов С. А.",
+                        "group": "ВКБ21",
+                        "room": "208",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -167,13 +211,114 @@
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "пр Математический анализ",
+                "subject": "пр Общая физическая подготовка",
                 "otUnits": [
                     {
-                        "teacher": "Богомоленко Д. В.",
+                        "teacher": "Корбан А. Н.",
                         "group": "ВКБ21",
-                        "room": "507",
+                        "room": "манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Электроника и схемотехника",
+                "otUnits": [
+                    {
+                        "teacher": "Приходько Г. И.",
+                        "group": "ВКБ21",
+                        "room": "220в",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Языки программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Позднышева Е. Е.",
+                        "group": "ВКБ21",
+                        "room": "282",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-17",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-17",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Теория вероятностей и математическая статистика",
+                "otUnits": [
+                    {
+                        "teacher": "Артамонова Е. А.",
+                        "group": "ВКБ21",
+                        "room": "402",
                         "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Языки программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Позднышева Е. Е.",
+                        "group": "ВКБ21",
+                        "room": "282",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Безопасность жизнедеятельности, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Хлебунов С. А.",
+                        "group": "ВКБ21",
+                        "room": "449",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }

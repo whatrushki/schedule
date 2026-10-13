@@ -49,6 +49,33 @@
         "lessons": [
             {
                 "date": "2026-10-14",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Ефремова О.П.",
+                        "group": "ИС-28",
+                        "room": "320",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Крупицкая Н.А.",
+                        "group": "ИС-28",
+                        "room": "305",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-14",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -121,7 +148,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
