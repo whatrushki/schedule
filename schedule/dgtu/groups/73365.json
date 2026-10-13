@@ -946,6 +946,25 @@
         "lessons": [
             {
                 "date": "2026-10-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Иностранный язык (английский), п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Котляренко Ю. Ю.",
+                        "group": "ДОЗП12",
+                        "room": "319",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -953,7 +972,7 @@
                 "otUnits": [
                     {
                         "teacher": "Гвоздикова А. А.",
-                        "group": "ДОЗП12",
+                        "group": "ДОЗП12, ДОЗП12",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
@@ -1006,20 +1025,37 @@
                 "number": 7,
                 "startTime": "19:30",
                 "endTime": "21:05",
-                "subject": "пр Иностранный язык (английский)",
+                "subject": "пр Иностранный язык (английский), п/г 2",
                 "otUnits": [
-                    {
-                        "teacher": "Котляренко Ю. Ю.",
-                        "group": "ДОЗП12",
-                        "room": "319",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "Кашурина И. А.",
                         "group": "ДОЗП12",
-                        "room": "322",
+                        "room": "542",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-13",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Меркулов М. М.",
+                        "group": "ДОЗП12",
+                        "room": "527",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -1064,21 +1100,40 @@
         ]
     },
     {
-        "date": "2026-10-19",
+        "date": "2026-10-15",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-19",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр История России",
+                "date": "2026-10-15",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Введение в общую психологию и антропология",
                 "otUnits": [
                     {
-                        "teacher": "Топчий И. В.",
+                        "teacher": "Ермоленко Е. А.",
                         "group": "ДОЗП12",
-                        "room": "402",
-                        "additional": "2",
+                        "room": "606",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Введение в общую психологию и антропология",
+                "otUnits": [
+                    {
+                        "teacher": "Ермоленко Е. А.",
+                        "group": "ДОЗП12",
+                        "room": "606",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
