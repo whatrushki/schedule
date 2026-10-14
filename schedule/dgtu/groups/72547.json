@@ -1135,25 +1135,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-10-06",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лаб Дизайн книги",
-                "otUnits": [
-                    {
-                        "teacher": "Дейнека С. В.",
-                        "group": "МКД42",
-                        "room": "319а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -1301,25 +1282,6 @@
                         "group": "МКД42",
                         "room": "024",
                         "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-08",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лаб Спецграфика",
-                "otUnits": [
-                    {
-                        "teacher": "Шепилова В. А.",
-                        "group": "МКД42",
-                        "room": "319а",
-                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1482,8 +1444,16 @@
                 "number": 7,
                 "startTime": "19:30",
                 "endTime": "21:05",
-                "subject": "лаб Дизайн книги",
+                "subject": "лаб Дизайн книги, п/г 1",
                 "otUnits": [
+                    {
+                        "teacher": "Плотникова М. Г.",
+                        "group": "МКД42",
+                        "room": "319а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Дейнека С. В.",
                         "group": "МКД42",
@@ -1507,12 +1477,20 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лаб Спецграфика",
+                "subject": "лаб Спецграфика, п/г 1",
                 "otUnits": [
                     {
                         "teacher": "Турикова А. В.",
                         "group": "МКД42",
-                        "room": "320",
+                        "room": "319а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Шепилова В. А.",
+                        "group": "МКД42",
+                        "room": "319а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1567,29 +1545,10 @@
         "lessons": [
             {
                 "date": "2026-10-15",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Спецграфика",
-                "otUnits": [
-                    {
-                        "teacher": "Шепилова В. А.",
-                        "group": "МКД42",
-                        "room": "319",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-15",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лаб Дизайн книги",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "лаб Проектирование в дизайне",
                 "otUnits": [
                     {
                         "teacher": "Плотникова М. Г.",
@@ -1602,18 +1561,269 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-19",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-19",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лаб Проектирование объектов графического дизайна, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Лыжова А. Ю.",
+                        "group": "МКД42",
+                        "room": "112",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Лыжова А. Ю.",
+                        "group": "МКД42",
+                        "room": "112",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             },
             {
-                "date": "2026-10-15",
+                "date": "2026-10-19",
                 "number": 7,
                 "startTime": "19:30",
                 "endTime": "21:05",
-                "subject": "лаб Проектирование в дизайне",
+                "subject": "лаб Проектирование объектов графического дизайна, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Лыжова А. Ю.",
+                        "group": "МКД42",
+                        "room": "112",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Лыжова А. Ю.",
+                        "group": "МКД42",
+                        "room": "112",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-20",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-20",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Проектирование в дизайне, п/г 1",
                 "otUnits": [
                     {
                         "teacher": "Плотникова М. Г.",
                         "group": "МКД42",
+                        "room": "320",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Дейнека С. В.",
+                        "group": "МКД42",
+                        "room": "023",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Проектирование в дизайне, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Плотникова М. Г.",
+                        "group": "МКД42",
+                        "room": "320",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Дейнека С. В.",
+                        "group": "МКД42",
+                        "room": "023",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лаб Проектирование в дизайне, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Плотникова М. Г.",
+                        "group": "МКД42",
+                        "room": "320",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Дейнека С. В.",
+                        "group": "МКД42",
                         "room": "112",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "лаб Дизайн книги, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Плотникова М. Г.",
+                        "group": "МКД42",
+                        "room": "319а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Дейнека С. В.",
+                        "group": "МКД42",
+                        "room": "319а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-21",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Дизайн упаковки",
+                "otUnits": [
+                    {
+                        "teacher": "Пугач В. А.",
+                        "group": "МКД42",
+                        "room": "112",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-21",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек История дизайна",
+                "otUnits": [
+                    {
+                        "teacher": "Пугач В. А.",
+                        "group": "МКД42",
+                        "room": "112",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-22",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-22",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Спецграфика, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Турикова А. В.",
+                        "group": "МКД42",
+                        "room": "319а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Шепилова В. А.",
+                        "group": "МКД42",
+                        "room": "319а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Концептуальное искусство и дизайн",
+                "otUnits": [
+                    {
+                        "teacher": "Голованова М. М.",
+                        "group": "МКД42",
+                        "room": "024",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null

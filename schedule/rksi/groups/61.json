@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-10-13",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-13",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Доп.занятие",
-                "otUnits": [
-                    {
-                        "teacher": "Павлова В.А.",
-                        "group": "ИС-24",
-                        "room": "312",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-13",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Доп.занятие",
-                "otUnits": [
-                    {
-                        "teacher": "Павлова В.А.",
-                        "group": "ИС-24",
-                        "room": "314",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-13",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Основы алгоритмизации и программирования",
-                "otUnits": [
-                    {
-                        "teacher": "Костромина В.А.",
-                        "group": "ИС-24",
-                        "room": "420",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-13",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Операционные системы и среды",
-                "otUnits": [
-                    {
-                        "teacher": "Кротенко Е.М.",
-                        "group": "ИС-24",
-                        "room": "220",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-14",
         "scheduleType": "COMMON",
         "lessons": [
@@ -226,41 +144,60 @@
         "lessons": [
             {
                 "date": "2026-10-15",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Костромина В.А.",
+                        "group": "ИС-24",
+                        "room": "420",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-15",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "ФИЗКУЛЬТУРА",
+                "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
-                        "teacher": "Щербакова Э.Н.",
+                        "teacher": "Костромина В.А.",
                         "group": "ИС-24",
-                        "room": "с/з3",
+                        "room": "420",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-15",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Основы кибернетики и робототехники",
+                "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
-                        "teacher": "Сулавко С.Н.",
+                        "teacher": "Костромина В.А.",
                         "group": "ИС-24",
-                        "room": "122",
+                        "room": "420",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-15",
@@ -280,14 +217,14 @@
                     {
                         "teacher": "Новосельцева Е.Ф.",
                         "group": "ИС-24",
-                        "room": "209а",
+                        "room": "Библиотека",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-15",
@@ -306,7 +243,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
