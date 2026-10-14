@@ -12,7 +12,7 @@
                 "otUnits": [
                     {
                         "teacher": "Шкиль Т. В.",
-                        "group": "УЗМР21, УЗНЭ21, УЗП21, УЗЭМ21",
+                        "group": "УЗЭМ21, УЗМР21, УЗНЭ21, УЗП21",
                         "room": "421",
                         "additional": "1",
                         "onlineUrl": null,
@@ -31,7 +31,7 @@
                 "otUnits": [
                     {
                         "teacher": "Шкиль Т. В.",
-                        "group": "УЗМР21, УЗНЭ21, УЗП21, УЗЭМ21",
+                        "group": "УЗЭМ21, УЗМР21, УЗНЭ21, УЗП21",
                         "room": "421",
                         "additional": "1",
                         "onlineUrl": null,
@@ -402,7 +402,7 @@
                 "otUnits": [
                     {
                         "teacher": "Шкиль Т. В.",
-                        "group": "ВПИЭ11, ВПР11, ВПР12, ВПР13",
+                        "group": "ВПР13, ВПИЭ11, ВПР11, ВПР12",
                         "room": "384",
                         "additional": "1",
                         "onlineUrl": null,
@@ -679,7 +679,7 @@
                 "otUnits": [
                     {
                         "teacher": "Шкиль Т. В.",
-                        "group": "ВПИЭ11, ВПР11, ВПР12, ВПР13",
+                        "group": "ВПР13, ВПИЭ11, ВПР11, ВПР12",
                         "room": "384",
                         "additional": "1",
                         "onlineUrl": null,
@@ -830,7 +830,7 @@
                 "otUnits": [
                     {
                         "teacher": "Шкиль Т. В.",
-                        "group": "ВПИЭ11, ВПР11, ВПР12, ВПР13, ВПИЭ12",
+                        "group": "ВПР13, ВПР11, ВПИЭ11, ВПР12, ВПИЭ12",
                         "room": "384",
                         "additional": "1",
                         "onlineUrl": null,
@@ -962,7 +962,7 @@
                 "otUnits": [
                     {
                         "teacher": "Шкиль Т. В.",
-                        "group": "ВПИЭ11, ВПР11, ВПР12, ВПР13",
+                        "group": "ВПР13, ВПИЭ11, ВПР11, ВПР12",
                         "room": "384",
                         "additional": "1",
                         "onlineUrl": null,
@@ -1100,6 +1100,25 @@
             },
             {
                 "date": "2026-09-30",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Шкиль Т. В.",
+                        "group": "ВПР13, ВПР11, ВПИЭ11, ВПИЭ12, ВПР12",
+                        "room": "384",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
@@ -1109,6 +1128,50 @@
                         "teacher": "Шкиль Т. В.",
                         "group": "ВПР12",
                         "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-01",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Физика, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Шкиль Т. В.",
+                        "group": "УМР21",
+                        "room": "436",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-01",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Шкиль Т. В.",
+                        "group": "ВПР13",
+                        "room": "436",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1133,6 +1196,107 @@
                     {
                         "teacher": "Шкиль Т. В.",
                         "group": "УТС21",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Шкиль Т. В.",
+                        "group": "УМР21, УМР22, УТС21",
+                        "room": "421",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Шкиль Т. В.",
+                        "group": "ВПИЭ11",
+                        "room": "427",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-02",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Шкиль Т. В.",
+                        "group": "УМР21",
+                        "room": "427",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-03",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Шкиль Т. В.",
+                        "group": "ВПР11",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Шкиль Т. В.",
+                        "group": "ВПР12",
                         "room": "438",
                         "additional": "1",
                         "onlineUrl": null,
@@ -1258,7 +1422,7 @@
                 "otUnits": [
                     {
                         "teacher": "Шкиль Т. В.",
-                        "group": "ВПИЭ11, ВПР11, ВПР12, ВПР13, ВПИЭ12",
+                        "group": "ВПР13, ВПР11, ВПИЭ11, ВПИЭ12, ВПР12",
                         "room": "384",
                         "additional": "1",
                         "onlineUrl": null,
@@ -1503,6 +1667,25 @@
         "lessons": [
             {
                 "date": "2026-10-14",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Шкиль Т. В.",
+                        "group": "ВПР11",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -1510,8 +1693,27 @@
                 "otUnits": [
                     {
                         "teacher": "Шкиль Т. В.",
-                        "group": "ВПИЭ11, ВПР11, ВПР12, ВПР13, ВПИЭ12",
+                        "group": "ВПР13, ВПР11, ВПИЭ11, ВПР12, ВПИЭ12",
                         "room": "384",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Физика, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Шкиль Т. В.",
+                        "group": "ВПР12",
+                        "room": "438",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1599,6 +1801,25 @@
                     {
                         "teacher": "Шкиль Т. В.",
                         "group": "УТС21",
+                        "room": "427",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Шкиль Т. В.",
+                        "group": "УМР21",
                         "room": "427",
                         "additional": "1",
                         "onlineUrl": null,
@@ -1787,7 +2008,7 @@
                 "otUnits": [
                     {
                         "teacher": "Шкиль Т. В.",
-                        "group": "ВПИЭ11, ВПР11, ВПР12, ВПР13, ВПИЭ12",
+                        "group": "ВПР13, ВПР11, ВПР12, ВПИЭ11, ВПИЭ12",
                         "room": "384",
                         "additional": "1",
                         "onlineUrl": null,

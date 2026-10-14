@@ -150,7 +150,7 @@
                 "otUnits": [
                     {
                         "teacher": "Агафонов А. М.",
-                        "group": "ТЗМ11, ТЗМ12, ТЗКТ11",
+                        "group": "ТЗКТ11, ТЗМ11, ТЗМ12",
                         "room": "492",
                         "additional": "1",
                         "onlineUrl": null,
@@ -169,7 +169,7 @@
                 "otUnits": [
                     {
                         "teacher": "Агафонов А. М.",
-                        "group": "ТЗМ11, ТЗМ12, ТЗКТ11",
+                        "group": "ТЗКТ11, ТЗМ11, ТЗМ12",
                         "room": "492",
                         "additional": "1",
                         "onlineUrl": null,
@@ -227,7 +227,7 @@
                     },
                     {
                         "teacher": "Агафонов А. М.",
-                        "group": "СЗИТ11, СЗР11, СЗЭ11",
+                        "group": "СЗЭ11, СЗР11, СЗИТ11",
                         "room": "313",
                         "additional": "1",
                         "onlineUrl": null,
@@ -246,7 +246,7 @@
                 "otUnits": [
                     {
                         "teacher": "Агафонов А. М.",
-                        "group": "СЗИТ11, СЗР11, СЗЭ11",
+                        "group": "СЗЭ11, СЗР11, СЗИТ11",
                         "room": "313",
                         "additional": "1",
                         "onlineUrl": null,
@@ -648,6 +648,25 @@
             },
             {
                 "date": "2026-09-30",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Физическая и коллоидная химия",
+                "otUnits": [
+                    {
+                        "teacher": "Агафонов А. М.",
+                        "group": "ЕФ21",
+                        "room": "305",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-30",
                 "number": 6,
                 "startTime": "17:45",
                 "endTime": "19:20",
@@ -655,8 +674,33 @@
                 "otUnits": [
                     {
                         "teacher": "Агафонов А. М.",
-                        "group": "ЕФ32, ЕФ31",
+                        "group": "ЕФ31, ЕФ32",
                         "room": "478",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-01",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Токсикологическая химия",
+                "otUnits": [
+                    {
+                        "teacher": "Агафонов А. М.",
+                        "group": "ЕФ41",
+                        "room": "484",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -683,6 +727,50 @@
                         "group": "МНН21",
                         "room": "489",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-03",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Методы фармакопейного анализа",
+                "otUnits": [
+                    {
+                        "teacher": "Агафонов А. М.",
+                        "group": "ЕФ31",
+                        "room": "406",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-03",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Методы фармакопейного анализа",
+                "otUnits": [
+                    {
+                        "teacher": "Агафонов А. М.",
+                        "group": "ЕФ32",
+                        "room": "502",
+                        "additional": "6",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1003,6 +1091,44 @@
                         "group": "ЕФ21",
                         "room": "305",
                         "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Введение в биотехнологию",
+                "otUnits": [
+                    {
+                        "teacher": "Агафонов А. М.",
+                        "group": "ЕИ41",
+                        "room": "406",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Методы фармакопейного анализа",
+                "otUnits": [
+                    {
+                        "teacher": "Агафонов А. М.",
+                        "group": "ЕФ31, ЕФ32",
+                        "room": "478",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
