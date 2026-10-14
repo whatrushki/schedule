@@ -1755,7 +1755,7 @@
                 "otUnits": [
                     {
                         "teacher": "Токарев Г. Н.",
-                        "group": "ВИС12",
+                        "group": "ВИС12, ВИС12",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
@@ -1776,12 +1776,31 @@
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "пр Математический анализ",
+                "subject": "пр Иностранный язык (английский), п/г 1",
                 "otUnits": [
                     {
-                        "teacher": "Рытикова М. А.",
+                        "teacher": "Олексива В. В.",
                         "group": "ВИС12",
-                        "room": "384",
+                        "room": "407",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Коленникова Н. В.",
+                        "group": "ВИС12",
+                        "room": "220в",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1816,25 +1835,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-10-13",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Алгебра и аналитическая геометрия",
-                "otUnits": [
-                    {
-                        "teacher": "Коленникова Н. В.",
-                        "group": "ВИС12",
-                        "room": "319",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -1842,6 +1842,63 @@
         "date": "2026-10-14",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-10-14",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Формирование базы знаний на основе модели искусственного интеллекта",
+                "otUnits": [
+                    {
+                        "teacher": "Зубарева Е. Г.",
+                        "group": "ВИС12",
+                        "room": "355",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Пожарский Д. А.",
+                        "group": "ВИС12",
+                        "room": "384",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-14",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Рытикова М. А.",
+                        "group": "ВИС12",
+                        "room": "394",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-10-14",
                 "number": 4,
@@ -1872,13 +1929,51 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "лек Математический анализ",
+                "subject": "пр Математический анализ",
                 "otUnits": [
                     {
-                        "teacher": "Пожарский Д. А.",
+                        "teacher": "Рытикова М. А.",
                         "group": "ВИС12",
-                        "room": "384",
+                        "room": "319",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Дискретная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Пожарская Е. Д.",
+                        "group": "ВИС12",
+                        "room": "343",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Колесникова О. В.",
+                        "group": "ВИС12",
+                        "room": "",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1892,25 +1987,6 @@
         "date": "2026-10-16",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-10-16",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Алгебра и аналитическая геометрия",
-                "otUnits": [
-                    {
-                        "teacher": "Ермилова О. В.",
-                        "group": "ВИС12",
-                        "room": "421",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-10-16",
                 "number": 2,
@@ -1932,11 +2008,38 @@
             },
             {
                 "date": "2026-10-16",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Дискретная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Пожарская Е. Д.",
+                        "group": "ВИС12",
+                        "room": "305",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "пр История России",
+                "subject": "лек Информатика и программирование",
                 "otUnits": [
+                    {
+                        "teacher": "Соболь Б. В.",
+                        "group": "ВИС12",
+                        "room": "305",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Топчий И. В.",
                         "group": "ВИС12",
@@ -1957,16 +2060,35 @@
         "lessons": [
             {
                 "date": "2026-10-17",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Иностранный язык (английский), п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Олексива В. В.",
+                        "group": "ВИС12",
+                        "room": "476а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "пр Математический анализ",
+                "subject": "лек Алгебра и аналитическая геометрия",
                 "otUnits": [
                     {
-                        "teacher": "Рытикова М. А.",
+                        "teacher": "Ермилова О. В.",
                         "group": "ВИС12",
-                        "room": "410",
-                        "additional": "8",
+                        "room": "105",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
