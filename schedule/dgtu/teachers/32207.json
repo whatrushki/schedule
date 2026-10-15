@@ -413,28 +413,9 @@
         "lessons": [
             {
                 "date": "2026-10-12",
-                "number": 0,
-                "startTime": "17:00",
-                "endTime": "18:35",
-                "subject": "Ликвидация академических задолженностей",
-                "otUnits": [
-                    {
-                        "teacher": "Котляренко Ю. Ю.",
-                        "group": "",
-                        "room": "325",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "UNKNOWN",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-12",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
                 "subject": "пр Иностранный язык (английский), п/г 1",
                 "otUnits": [
                     {
@@ -451,10 +432,10 @@
             },
             {
                 "date": "2026-10-12",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "пр Иностранный язык (английский)",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Иностранный язык (английский), п/г 1",
                 "otUnits": [
                     {
                         "teacher": "Котляренко Ю. Ю.",
@@ -466,6 +447,25 @@
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-12",
+                "number": 0,
+                "startTime": "17:00",
+                "endTime": "18:35",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Котляренко Ю. Ю.",
+                        "group": "",
+                        "room": "325",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "UNKNOWN",
                 "state": "COMMON"
             }
         ]
@@ -541,6 +541,56 @@
                     }
                 ],
                 "type": "UNKNOWN",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-20",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-20",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Иностранный язык(французский)",
+                "otUnits": [
+                    {
+                        "teacher": "Котляренко Ю. Ю.",
+                        "group": "МКНХТ11",
+                        "room": "318",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-22",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-22",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Иностранный язык(французский)",
+                "otUnits": [
+                    {
+                        "teacher": "Котляренко Ю. Ю.",
+                        "group": "МКНХТ11",
+                        "room": "317",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
                 "state": "COMMON"
             }
         ]
