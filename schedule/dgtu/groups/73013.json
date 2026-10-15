@@ -1576,7 +1576,7 @@
                 "otUnits": [
                     {
                         "teacher": "Корбан А. Н.",
-                        "group": "ВПР21, ВПР21",
+                        "group": "ВПР21",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
@@ -1611,6 +1611,25 @@
         "date": "2026-10-17",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-10-17",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Разработка пользовательского интерфейса",
+                "otUnits": [
+                    {
+                        "teacher": "Чугунный К. А.",
+                        "group": "ВПР21",
+                        "room": "492",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-10-17",
                 "number": 2,
@@ -1648,6 +1667,58 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Разработка пользовательского интерфейса",
+                "otUnits": [
+                    {
+                        "teacher": "Чугунный К. А.",
+                        "group": "ВПР21",
+                        "room": "392",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-19",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-19",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Безопасность жизнедеятельности, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Темирканов А. Р.",
+                        "group": "ВПР21",
+                        "room": "",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Павликов А. В.",
+                        "group": "ВПР21",
+                        "room": "",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -1673,25 +1744,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-10-21",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Теория вероятностей и математическая статистика",
-                "otUnits": [
-                    {
-                        "teacher": "Золотов Н. Б.",
-                        "group": "ВПР21",
-                        "room": "327",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -1701,15 +1753,15 @@
         "lessons": [
             {
                 "date": "2026-10-22",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Теория вероятностей и математическая статистика",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Безопасность жизнедеятельности",
                 "otUnits": [
                     {
-                        "teacher": "Баранов И. В.",
+                        "teacher": "Темирканов А. Р.",
                         "group": "ВПР21",
-                        "room": "224",
+                        "room": "208",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -1746,9 +1798,169 @@
         ]
     },
     {
+        "date": "2026-10-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-29",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Безопасность жизнедеятельности, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Темирканов А. Р.",
+                        "group": "ВПР21",
+                        "room": "",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Павликов А. В.",
+                        "group": "ВПР21",
+                        "room": "",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-30",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Темирканов А. Р.",
+                        "group": "ВПР21",
+                        "room": "208",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-31",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-31",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Темирканов А. Р.",
+                        "group": "ВПР21",
+                        "room": "331",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-05",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Темирканов А. Р.",
+                        "group": "ВПР21",
+                        "room": "219",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-09",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Безопасность жизнедеятельности, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Темирканов А. Р.",
+                        "group": "ВПР21",
+                        "room": "",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Павликов А. В.",
+                        "group": "ВПР21",
+                        "room": "",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-11",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-11-11",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Темирканов А. Р.",
+                        "group": "ВПР21",
+                        "room": "208",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-11-11",
                 "number": 2,
@@ -1761,6 +1973,56 @@
                         "group": "ВПР21",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-14",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-14",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Темирканов А. Р.",
+                        "group": "ВПР21",
+                        "room": "331",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-17",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-17",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Темирканов А. Р.",
+                        "group": "ВПР21",
+                        "room": "219",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1796,9 +2058,61 @@
         ]
     },
     {
+        "date": "2026-11-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-21",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Темирканов А. Р.",
+                        "group": "ВПР21",
+                        "room": "224",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-25",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-11-25",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Безопасность жизнедеятельности, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Темирканов А. Р.",
+                        "group": "ВПР21",
+                        "room": "",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Павликов А. В.",
+                        "group": "ВПР21",
+                        "room": "",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-11-25",
                 "number": 2,
@@ -1811,6 +2125,31 @@
                         "group": "ВПР21",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-28",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Темирканов А. Р.",
+                        "group": "ВПР21",
+                        "room": "208",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1846,6 +2185,31 @@
         ]
     },
     {
+        "date": "2026-12-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-08",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Темирканов А. Р.",
+                        "group": "ВПР21",
+                        "room": "331",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-12-09",
         "scheduleType": "COMMON",
         "lessons": [
@@ -1860,6 +2224,64 @@
                         "teacher": "Корбан А. Н.",
                         "group": "ВПР21",
                         "room": "манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-10",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Темирканов А. Р.",
+                        "group": "ВПР21",
+                        "room": "208",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Безопасность жизнедеятельности, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Темирканов А. Р.",
+                        "group": "ВПР21",
+                        "room": "",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Павликов А. В.",
+                        "group": "ВПР21",
+                        "room": "",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
@@ -1886,6 +2308,31 @@
                         "group": "ВПР21",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-28",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "эк Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Темирканов А. Р.",
+                        "group": "ВПР21",
+                        "room": "208",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
