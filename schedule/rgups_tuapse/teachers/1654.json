@@ -198,7 +198,7 @@
                 "otUnits": [
                     {
                         "teacher": "Паршуткин С.А.",
-                        "group": "СТ-2-018",
+                        "group": "СТ-2-019",
                         "room": "-",
                         "additional": "",
                         "onlineUrl": null,
@@ -206,7 +206,7 @@
                     },
                     {
                         "teacher": "Паршуткин С.А.",
-                        "group": "СТ-2-019",
+                        "group": "СТ-2-018",
                         "room": "-",
                         "additional": "",
                         "onlineUrl": null,
@@ -243,6 +243,25 @@
         "lessons": [
             {
                 "date": "2026-10-20",
+                "number": 1,
+                "startTime": "08:20",
+                "endTime": "09:50",
+                "subject": "Электротехника и электроника",
+                "otUnits": [
+                    {
+                        "teacher": "Паршуткин С.А.",
+                        "group": "ПМ-2-024",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
                 "number": 2,
                 "startTime": "10:05",
                 "endTime": "11:35",
@@ -269,7 +288,7 @@
                 "otUnits": [
                     {
                         "teacher": "Паршуткин С.А.",
-                        "group": "СТ-1-020",
+                        "group": "СТ-1-021",
                         "room": "-",
                         "additional": "",
                         "onlineUrl": null,
@@ -277,7 +296,7 @@
                     },
                     {
                         "teacher": "Паршуткин С.А.",
-                        "group": "СТ-1-021",
+                        "group": "СТ-1-020",
                         "room": "-",
                         "additional": "",
                         "onlineUrl": null,
@@ -373,6 +392,39 @@
                     }
                 ],
                 "type": "OTHER",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-23",
+                "number": 3,
+                "startTime": "12:05",
+                "endTime": "13:35",
+                "subject": "Основы безопасности и защиты Родины",
+                "otUnits": [
+                    {
+                        "teacher": "Паршуткин С.А.",
+                        "group": "СТ-1-021",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Паршуткин С.А.",
+                        "group": "СТ-1-020",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]

@@ -68,13 +68,32 @@
         "lessons": [
             {
                 "date": "2026-10-16",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Малая М.А.",
+                        "group": "ИС-25",
+                        "room": "422",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-16",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
                 "subject": "Операционные системы и среды",
                 "otUnits": [
                     {
-                        "teacher": "Малая Мария Анатольевна",
+                        "teacher": "Малая М.А.",
                         "group": "ИС-25",
                         "room": "422",
                         "additional": "1",
@@ -83,7 +102,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-16",
@@ -93,7 +112,7 @@
                 "subject": "Операционные системы и среды",
                 "otUnits": [
                     {
-                        "teacher": "Малая Мария Анатольевна",
+                        "teacher": "Малая М.А.",
                         "group": "ИС-21",
                         "room": "422",
                         "additional": "1",
@@ -102,7 +121,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-16",
@@ -121,7 +140,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-16",
@@ -140,7 +159,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     }

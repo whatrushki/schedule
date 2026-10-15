@@ -1120,14 +1120,6 @@
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
-                    },
-                    {
-                        "teacher": "",
-                        "group": "МКМ11",
-                        "room": "602",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -2025,6 +2017,25 @@
         "lessons": [
             {
                 "date": "2026-10-17",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "Компьютерный социально-психологический мониторинг",
+                "otUnits": [
+                    {
+                        "teacher": "",
+                        "group": "МКМ11",
+                        "room": "410",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -2077,8 +2088,8 @@
                     {
                         "teacher": "Дубовер Д. А.",
                         "group": "МКМ11",
-                        "room": "704",
-                        "additional": "2",
+                        "room": "410",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }

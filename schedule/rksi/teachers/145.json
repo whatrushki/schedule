@@ -87,22 +87,60 @@
         "lessons": [
             {
                 "date": "2026-10-16",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Операционные системы",
+                "otUnits": [
+                    {
+                        "teacher": "Рыбалка В.В.",
+                        "group": "ИБА-31",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Операционные системы",
+                "otUnits": [
+                    {
+                        "teacher": "Рыбалка В.В.",
+                        "group": "ИБА-31",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-16",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Технические средства информатизации",
+                "subject": "Операционные системы",
                 "otUnits": [
                     {
-                        "teacher": "Рыбалка Виктория Владимировна",
+                        "teacher": "Рыбалка В.В.",
                         "group": "ИБА-31",
-                        "room": "36",
+                        "room": "44",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-16",
@@ -121,7 +159,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-16",
@@ -140,7 +178,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-16",
@@ -159,7 +197,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     }

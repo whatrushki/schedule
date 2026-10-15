@@ -97,12 +97,18 @@
                 ],
                 "type": "COMMON",
                 "state": "CHANGED"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-10-16",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-10-15",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
+                "date": "2026-10-16",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
                 "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
@@ -116,13 +122,45 @@
                 ],
                 "type": "OTHER",
                 "state": "ADDED"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-16",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
+            {
+                "date": "2026-10-16",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Костромина В.А.",
+                        "group": "ИС-23",
+                        "room": "420",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Костромина В.А.",
+                        "group": "ИС-23",
+                        "room": "420",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-10-16",
                 "number": 4,
@@ -131,7 +169,7 @@
                 "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
-                        "teacher": "Костромина Виктория Александровна",
+                        "teacher": "Костромина В.А.",
                         "group": "ИС-23",
                         "room": "420",
                         "additional": "1",
@@ -140,7 +178,45 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Костромина В.А.",
+                        "group": "ИС-24",
+                        "room": "420",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Костромина В.А.",
+                        "group": "ИС-24",
+                        "room": "420",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     }

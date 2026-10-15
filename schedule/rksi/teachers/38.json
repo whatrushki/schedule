@@ -49,13 +49,51 @@
         "lessons": [
             {
                 "date": "2026-10-16",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "История России",
+                "otUnits": [
+                    {
+                        "teacher": "Иванов Д.Н.",
+                        "group": "ИБА-23",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Теория электрических цепей",
+                "otUnits": [
+                    {
+                        "teacher": "Иванов В.С.",
+                        "group": "ИКС-24",
+                        "room": "324",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-16",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
                 "subject": "Теория электрических цепей",
                 "otUnits": [
                     {
-                        "teacher": "Иванов Виталий Сергеевич",
+                        "teacher": "Иванов В.С.",
                         "group": "ИКС-24",
                         "room": "324",
                         "additional": "1",
@@ -64,7 +102,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-16",
@@ -74,7 +112,7 @@
                 "subject": "Основы электротехники",
                 "otUnits": [
                     {
-                        "teacher": "Иванов Виталий Сергеевич",
+                        "teacher": "Иванов В.С.",
                         "group": "СА-23",
                         "room": "324",
                         "additional": "1",
@@ -83,7 +121,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-16",
@@ -93,7 +131,7 @@
                 "subject": "Теория электрических цепей",
                 "otUnits": [
                     {
-                        "teacher": "Иванов Виталий Сергеевич",
+                        "teacher": "Иванов В.С.",
                         "group": "ИКС-23",
                         "room": "324",
                         "additional": "1",
@@ -102,7 +140,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     }

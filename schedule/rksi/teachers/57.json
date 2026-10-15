@@ -13,7 +13,7 @@
                     {
                         "teacher": "Куракова Г.В.",
                         "group": "ИБА-33",
-                        "room": "35",
+                        "room": "36",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -32,7 +32,7 @@
                     {
                         "teacher": "Куракова Г.В.",
                         "group": "ИБА-32",
-                        "room": "35",
+                        "room": "36",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -51,7 +51,7 @@
                     {
                         "teacher": "Куракова Г.В.",
                         "group": "ИБА-33",
-                        "room": "35",
+                        "room": "36",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -68,13 +68,51 @@
         "lessons": [
             {
                 "date": "2026-10-16",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Основы философии",
+                "otUnits": [
+                    {
+                        "teacher": "Куракова Г.В.",
+                        "group": "ИБА-32",
+                        "room": "404",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Основы философии",
+                "otUnits": [
+                    {
+                        "teacher": "Куракова Г.В.",
+                        "group": "ИБА-32",
+                        "room": "404",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-16",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
                 "subject": "Основы философии",
                 "otUnits": [
                     {
-                        "teacher": "Куракова Галина Владимировна",
+                        "teacher": "Куракова Г.В.",
                         "group": "ИКС-52",
                         "room": "404",
                         "additional": "1",
@@ -83,7 +121,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-16",
@@ -93,7 +131,7 @@
                 "subject": "Основы философии",
                 "otUnits": [
                     {
-                        "teacher": "Куракова Галина Владимировна",
+                        "teacher": "Куракова Г.В.",
                         "group": "ИКС-52",
                         "room": "404",
                         "additional": "1",
@@ -102,7 +140,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-16",
@@ -112,7 +150,7 @@
                 "subject": "Основы философии",
                 "otUnits": [
                     {
-                        "teacher": "Куракова Галина Владимировна",
+                        "teacher": "Куракова Г.В.",
                         "group": "СА-41",
                         "room": "404",
                         "additional": "1",
@@ -121,7 +159,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     }
