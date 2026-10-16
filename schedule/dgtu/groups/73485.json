@@ -970,16 +970,35 @@
             },
             {
                 "date": "2026-09-14",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Основы ИЗО",
+                "otUnits": [
+                    {
+                        "teacher": "Григорьева М. Е.",
+                        "group": "МКД12",
+                        "room": "319а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-14",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лаб История мировой культуры",
+                "subject": "пр Основы ИЗО",
                 "otUnits": [
                     {
-                        "teacher": "Захарова Н. Ю.",
+                        "teacher": "Григорьева М. Е.",
                         "group": "МКД12",
-                        "room": "112",
-                        "additional": "8",
+                        "room": "319а",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1163,44 +1182,6 @@
         "date": "2026-09-18",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-09-18",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Основы ИЗО",
-                "otUnits": [
-                    {
-                        "teacher": "Григорьева М. Е.",
-                        "group": "МКД12",
-                        "room": "319а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Основы ИЗО",
-                "otUnits": [
-                    {
-                        "teacher": "Григорьева М. Е.",
-                        "group": "МКД12",
-                        "room": "319а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-09-18",
                 "number": 3,
@@ -1786,13 +1767,13 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лаб История мировой культуры",
+                "subject": "пр Основы ИЗО",
                 "otUnits": [
                     {
-                        "teacher": "Захарова Н. Ю.",
+                        "teacher": "Григорьева М. Е.",
                         "group": "МКД12",
-                        "room": "112",
-                        "additional": "8",
+                        "room": "319а",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1962,25 +1943,6 @@
                         "teacher": "Гармаш С. А.",
                         "group": "МКД12",
                         "room": "319а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-02",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Основы ИЗО",
-                "otUnits": [
-                    {
-                        "teacher": "Григорьева М. Е.",
-                        "group": "МКД12",
-                        "room": "320",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2257,7 +2219,7 @@
                     {
                         "teacher": "Григорьева М. Е.",
                         "group": "МКД12",
-                        "room": "320",
+                        "room": "319",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2276,7 +2238,7 @@
                     {
                         "teacher": "Григорьева М. Е.",
                         "group": "МКД12",
-                        "room": "320",
+                        "room": "319",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2383,7 +2345,7 @@
                     {
                         "teacher": "Глушко А. А.",
                         "group": "МКД12",
-                        "room": "801",
+                        "room": "405",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -2421,7 +2383,7 @@
                     {
                         "teacher": "Панеш Б. Н.",
                         "group": "МКД12",
-                        "room": "510",
+                        "room": "405",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -2566,8 +2528,8 @@
                     {
                         "teacher": "Григорьева М. Е.",
                         "group": "МКД12",
-                        "room": "+",
-                        "additional": "Главный",
+                        "room": "319а",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2585,8 +2547,8 @@
                     {
                         "teacher": "Григорьева М. Е.",
                         "group": "МКД12",
-                        "room": "+",
-                        "additional": "Главный",
+                        "room": "319а",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2830,9 +2792,110 @@
         ]
     },
     {
+        "date": "2026-10-19",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-19",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Основы инклюзивной культуры и дефектологических знаний",
+                "otUnits": [
+                    {
+                        "teacher": "Сироткин О. Е.",
+                        "group": "МКД12",
+                        "room": "432",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Грищенко Ю. А.",
+                        "group": "МКД12",
+                        "room": "358",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Дизайн. Коллаборация. Цифровые технологии",
+                "otUnits": [
+                    {
+                        "teacher": "Торопова Т. В.",
+                        "group": "МКД12",
+                        "room": "112",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Дизайн. Коллаборация. Цифровые технологии",
+                "otUnits": [
+                    {
+                        "teacher": "Торопова Т. В.",
+                        "group": "МКД12",
+                        "room": "112",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-20",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-10-20",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Цветоведение и колористика",
+                "otUnits": [
+                    {
+                        "teacher": "Гармаш С. А.",
+                        "group": "МКД12",
+                        "room": "319а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-10-20",
                 "number": 2,
@@ -2845,6 +2908,391 @@
                         "group": "МКД12",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Основы инклюзивной культуры и дефектологических знаний",
+                "otUnits": [
+                    {
+                        "teacher": "Сироткин О. Е.",
+                        "group": "МКД12",
+                        "room": "327",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Щекатунов О. В.",
+                        "group": "МКД12",
+                        "room": "808",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-21",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Грищенко Ю. А.",
+                        "group": "МКД12",
+                        "room": "408",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-21",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Грищенко Ю. А.",
+                        "group": "МКД12",
+                        "room": "408",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-21",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек История России",
+                "otUnits": [
+                    {
+                        "teacher": "Рудая О. И.",
+                        "group": "МКД12",
+                        "room": "310",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-21",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр История мировой культуры",
+                "otUnits": [
+                    {
+                        "teacher": "Захарова Н. Ю.",
+                        "group": "МКД12",
+                        "room": "405",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-22",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-22",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Медиаграмотность",
+                "otUnits": [
+                    {
+                        "teacher": "Дубовер Д. А.",
+                        "group": "МКД12",
+                        "room": "384",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы ИЗО",
+                "otUnits": [
+                    {
+                        "teacher": "Григорьева М. Е.",
+                        "group": "МКД12",
+                        "room": "319а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Основы ИЗО",
+                "otUnits": [
+                    {
+                        "teacher": "Григорьева М. Е.",
+                        "group": "МКД12",
+                        "room": "319а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Демчук Е. А.",
+                        "group": "МКД12",
+                        "room": "810",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Пропедевтика в дизайне",
+                "otUnits": [
+                    {
+                        "teacher": "Шепилова В. А.",
+                        "group": "МКД12",
+                        "room": "016",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-23",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Пропедевтика в дизайне",
+                "otUnits": [
+                    {
+                        "teacher": "Шепилова В. А.",
+                        "group": "МКД12",
+                        "room": "016",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек История мировой культуры",
+                "otUnits": [
+                    {
+                        "teacher": "Захарова Н. Ю.",
+                        "group": "МКД12",
+                        "room": "801",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Козлова Е. А.",
+                        "group": "МКД12",
+                        "room": "327",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Козлова Е. А.",
+                        "group": "МКД12",
+                        "room": "327",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-24",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-24",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Психология командной работы и лидерства",
+                "otUnits": [
+                    {
+                        "teacher": "Глушко А. А.",
+                        "group": "МКД12",
+                        "room": "405",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-24",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Козлова Е. А.",
+                        "group": "МКД12",
+                        "room": "331",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-24",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Медиаграмотность",
+                "otUnits": [
+                    {
+                        "teacher": "Панеш Б. Н.",
+                        "group": "МКД12",
+                        "room": "801",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-24",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Медиаграмотность",
+                "otUnits": [
+                    {
+                        "teacher": "Панеш Б. Н.",
+                        "group": "МКД12",
+                        "room": "801",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
