@@ -16,10 +16,10 @@ object ScheduleWorkManager {
     private const val WORK_NAME = "schedule_replacements_check"
     private const val ONE_TIME_WORK_NAME = "schedule_replacements_check_immediate"
 
-    fun schedulePeriodicCheck(context: Context, periodHours: Int) {
+    fun schedulePeriodicCheck(context: Context, periodHours: Int, forceUpdate: Boolean = false) {
         val tag = buildTag(LogScope.CORE, LogCat.INIT)
         try {
-            Auditor.info(tag, "ScheduleWorkManager: планирование проверки замен каждые $periodHours ч.")
+            Auditor.info(tag, "ScheduleWorkManager: планирование проверки замен каждые $periodHours ч. (forceUpdate=$forceUpdate)")
 
             val constraints = Constraints.Builder()
                 .setRequiredNetworkType(NetworkType.CONNECTED)
@@ -40,7 +40,7 @@ object ScheduleWorkManager {
 
             WorkManager.getInstance(context).enqueueUniquePeriodicWork(
                 WORK_NAME,
-                ExistingPeriodicWorkPolicy.UPDATE,
+                if (forceUpdate) ExistingPeriodicWorkPolicy.UPDATE else ExistingPeriodicWorkPolicy.KEEP,
                 workRequest
             )
         } catch (e: Throwable) {

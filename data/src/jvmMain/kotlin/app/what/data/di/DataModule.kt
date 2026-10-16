@@ -176,4 +176,14 @@ val dataModule = module {
             }
         }
     }
+
+    single<app.what.data.managers.PlatformFileStorageCleaner> { app.what.data.managers.NoOpPlatformFileStorageCleaner() }
+    single<app.what.data.managers.CacheStorageManager> {
+        app.what.data.managers.CacheStorageManagerImpl(
+            scheduleRepository = get(),
+            appValues = get(),
+            platformCleaner = get(),
+            storage = getOrNull<KeyValueStorage>()
+        )
+    }
 }

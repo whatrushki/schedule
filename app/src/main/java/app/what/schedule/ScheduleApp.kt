@@ -207,6 +207,7 @@ class ScheduleApp : Application(), Configuration.Provider {
         NotificationHelper.createNotificationChannel(this)
 
         // Планирование / отмена периодической проверки замен и уведомлений универа в фоне
+        var isFirstCollection = true
         appScope.launch {
             combine(
                 appValues.enableReplacementNotifications.observe(),
@@ -214,10 +215,14 @@ class ScheduleApp : Application(), Configuration.Provider {
                 appValues.replacementNotificationsPeriod.observe()
             ) { repEnabled, uniEnabled, period -> Triple(repEnabled == true, uniEnabled == true, period) }
                 .collect { (repEnabled, uniEnabled, period) ->
+                    val isFirst = isFirstCollection
+                    isFirstCollection = false
                     if (repEnabled || uniEnabled) {
                         val hours = period?.hours ?: 3
-                        ScheduleWorkManager.schedulePeriodicCheck(this@ScheduleApp, hours)
-                        ScheduleWorkManager.triggerImmediateCheck(this@ScheduleApp)
+                        ScheduleWorkManager.schedulePeriodicCheck(this@ScheduleApp, hours, forceUpdate = !isFirst)
+                        if (!isFirst) {
+                            ScheduleWorkManager.triggerImmediateCheck(this@ScheduleApp)
+                        }
                     } else {
                         ScheduleWorkManager.cancelPeriodicCheck(this@ScheduleApp)
                     }
@@ -254,6 +259,7 @@ class ScheduleApp : Application(), Configuration.Provider {
 
 val appModule = module {
     singleOf(::AppUtils)
+    single<app.what.data.managers.PlatformFileStorageCleaner> { app.what.schedule.utils.AndroidPlatformFileStorageCleaner(androidContext()) }
     
     single<AppUpdateManager> {
         val context = androidContext()

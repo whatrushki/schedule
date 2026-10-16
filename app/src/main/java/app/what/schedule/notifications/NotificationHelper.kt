@@ -11,15 +11,25 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
+import app.what.domain.models.ScheduleSearch
 import app.what.schedule.MainActivity
+import app.what.schedule.ScheduleActivity
 import app.what.schedule.R
 
 object NotificationHelper {
     const val CHANNEL_ID = "schedule_replacements"
     const val CHANNEL_UNIVERSITY_ID = "university_notifications"
-    const val CHANNEL_FIRST_LESSON_ID = "first_lesson_notification"
-    private const val NOTIFICATION_ID = 2001
+    const val CHANNEL_FIRST_LESSON_ID = "first_lesson_notifications"
     const val NOTIFICATION_FIRST_LESSON_ID = 4001
+
+    const val EXTRA_TARGET_SCREEN = "extra_target_screen"
+    const val EXTRA_SEARCH_ID = "extra_search_id"
+    const val EXTRA_SEARCH_NAME = "extra_search_name"
+    const val EXTRA_SEARCH_TYPE = "extra_search_type"
+    const val EXTRA_INSTITUTION_ID = "extra_institution_id"
+
+    const val SCREEN_SCHEDULE = "screen_schedule"
+    const val SCREEN_NOTIFICATIONS = "screen_notifications"
 
     fun createNotificationChannel(context: Context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -55,12 +65,20 @@ object NotificationHelper {
         }
     }
 
+    private fun getLaunchIntent(context: Context): Intent {
+        val pmIntent = context.packageManager.getLaunchIntentForPackage(context.packageName)
+        return (pmIntent ?: Intent(context, ScheduleActivity::class.java)).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+        }
+    }
+
     fun showReplacementsNotification(
         context: Context,
         title: String,
         content: String,
         details: List<String> = emptyList(),
-        notificationId: Int = NOTIFICATION_ID
+        search: ScheduleSearch? = null,
+        notificationId: Int = NOTIFICATION_FIRST_LESSON_ID - 1000
     ) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (ContextCompat.checkSelfPermission(
@@ -72,12 +90,18 @@ object NotificationHelper {
             }
         }
 
-        val intent = Intent(context, MainActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+        val intent = getLaunchIntent(context).apply {
+            putExtra(EXTRA_TARGET_SCREEN, SCREEN_SCHEDULE)
+            if (search != null) {
+                putExtra(EXTRA_SEARCH_ID, search.id)
+                putExtra(EXTRA_SEARCH_NAME, search.name)
+                putExtra(EXTRA_SEARCH_TYPE, if (search is ScheduleSearch.Teacher) "teacher" else "group")
+                putExtra(EXTRA_INSTITUTION_ID, search.institutionId)
+            }
         }
         val pendingIntent = PendingIntent.getActivity(
             context,
-            0,
+            notificationId,
             intent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
@@ -122,12 +146,12 @@ object NotificationHelper {
             }
         }
 
-        val intent = Intent(context, MainActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+        val intent = getLaunchIntent(context).apply {
+            putExtra(EXTRA_TARGET_SCREEN, SCREEN_NOTIFICATIONS)
         }
         val pendingIntent = PendingIntent.getActivity(
             context,
-            1,
+            notificationId,
             intent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
@@ -164,12 +188,12 @@ object NotificationHelper {
             }
         }
 
-        val intent = Intent(context, MainActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+        val intent = getLaunchIntent(context).apply {
+            putExtra(EXTRA_TARGET_SCREEN, SCREEN_SCHEDULE)
         }
         val pendingIntent = PendingIntent.getActivity(
             context,
-            2,
+            notificationId,
             intent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )

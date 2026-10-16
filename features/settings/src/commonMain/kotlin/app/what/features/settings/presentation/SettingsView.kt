@@ -1,6 +1,8 @@
 package app.what.schedule.features.settings.presentation
 
 import app.what.foundation.ui.PlatformBackHandler
+import app.what.features.settings.presentation.components.StorageUsageSheet
+import app.what.foundation.ui.controllers.rememberSheetController
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -19,13 +21,11 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.rounded.Info
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.shapes
 import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
@@ -47,7 +47,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import app.what.domain.repositories.ScheduleRepository
 import app.what.foundation.core.Listener
 import app.what.foundation.core.UIComponent
 import app.what.foundation.data.settings.dependsOn
@@ -55,10 +54,6 @@ import app.what.foundation.data.settings.types.asColorPalette
 import app.what.foundation.data.settings.types.asSheet
 import app.what.foundation.data.settings.types.asSingleChoice
 import app.what.foundation.data.settings.types.asSwitch
-import app.what.foundation.services.AppLogger.Companion.Auditor
-import app.what.foundation.services.AppNotification
-import app.what.foundation.services.Event
-import app.what.foundation.services.LocalNotificationService
 import app.what.foundation.ui.Gap
 import app.what.foundation.ui.Show
 import app.what.foundation.ui.animations.AnimatedEnter
@@ -105,17 +100,17 @@ fun SettingsView(
 ) {
     val appValues: AppValues = koinInject()
     val appUtils: AppUtils = koinInject()
-    val scheduleRepository: ScheduleRepository = koinInject()
-    val notificationService = LocalNotificationService.current
     val scope = rememberCoroutineScope()
     val pagerState = rememberPagerState { 2 }
+    val sheet = rememberSheetController()
     
     var activeCategoryTitle by rememberSaveable { mutableStateOf<String?>(null) }
     var subScreen by remember { mutableStateOf<SubScreenState?>(null) }
-    var showClearCacheDialog by remember { mutableStateOf(false) }
 
     val rootComponents = getSettingsList(appValues, appUtils) {
-        showClearCacheDialog = true
+        sheet.open {
+            StorageUsageSheet(onClose = { sheet.close() })
+        }
     }
 
     // Восстановление под-экрана после поворота или смены темы
@@ -157,42 +152,6 @@ fun SettingsView(
             activeCategoryTitle = null
             subScreen = null
         }
-    }
-
-    if (showClearCacheDialog) {
-        AlertDialog(
-            onDismissRequest = { showClearCacheDialog = false },
-            title = { Text("Очистить кэш расписания?") },
-            text = { Text("Все сохранённые данные расписания будут удалены. При следующем переходе к группе они загрузятся заново.") },
-            confirmButton = {
-                TextButton(
-                    onClick = {
-                        showClearCacheDialog = false
-                        scope.launch {
-                            try {
-                                scheduleRepository.clearScheduleCache()
-                                notificationService?.notify(
-                                    AppNotification(
-                                        title = "Кэш очищен",
-                                        message = "Кэш расписания успешно удалён",
-                                        urgency = Event.Urgency.LOW
-                                    )
-                                )
-                            } catch (e: Exception) {
-                                Auditor.debug("Settings", "Ошибка очистки кэша: ${e.message}")
-                            }
-                        }
-                    }
-                ) {
-                    Text("Очистить", color = colorScheme.error)
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { showClearCacheDialog = false }) {
-                    Text("Отмена")
-                }
-            }
-        )
     }
     
     CompositionLocalProvider(LocalSettingsNavigator provides navigateToSubScreen) {
@@ -333,6 +292,9 @@ fun getSettingsList(
                 },
                 app.showCancelledLessons.asSwitch {
                     Analytics.logSettingChanged(app.showCancelledLessons.key, it.toString())
+                },
+                app.showBreaks.asSwitch {
+                    Analytics.logSettingChanged(app.showBreaks.key, it.toString())
                 }
             )
         ),
@@ -383,9 +345,9 @@ fun getSettingsList(
             "Данные и память", "кэш, приватность", WHATIcons.Clear,
             content = listOf(
                 settingAction(
-                    title = "Очистить кэш расписания",
-                    description = "Удалить сохранённые локально расписания",
-                    isDestructive = true,
+                    title = "Управление памятью",
+                    description = "Очистка кэша изображений, расписания и данных",
+                    isDestructive = false,
                     onClick = onClearCacheClick
                 ),
                 app.isAnalyticsEnabled.asSwitch {

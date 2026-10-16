@@ -30,7 +30,7 @@ data class CloudInstitutionMeta(
      * Проверяет валидность и актуальность синхронизации.
      * Если статус FAILED или данных нет — синхронизация считается нездоровой.
      */
-    fun isHealthy(maxAgeHours: Long = 24): Boolean {
+    fun isHealthy(maxAgeHours: Long = 3): Boolean {
         if (status.equals("FAILED", ignoreCase = true)) return false
         if (groupCount == 0) return false
         if (lastSync.isNullOrBlank()) return false
@@ -47,9 +47,9 @@ data class CloudInstitutionMeta(
                 }
             }
             val diff = now - syncInstant
-            diff.inWholeHours <= maxAgeHours
+            diff.inWholeHours < maxAgeHours
         } catch (_: Exception) {
-            true
+            false
         }
     }
 }
@@ -137,8 +137,8 @@ class CloudScheduleClient(
 
     suspend fun isSyncHealthy(): Boolean {
         val meta = getMeta() ?: return false
-        // Для RKSI частые изменения/замены, порог актуальности 14 часов. Для других вузов 36 часов.
-        val maxAge = if (institutionId.equals("rksi", ignoreCase = true)) 14L else 36L
+        // Если воркер синхронизации gh-pages не запускался 3 часа — считаем облачный кеш устаревшим
+        val maxAge = 3L
         return meta.isHealthy(maxAge)
     }
 

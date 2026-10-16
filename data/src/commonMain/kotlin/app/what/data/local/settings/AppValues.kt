@@ -139,6 +139,11 @@ class AppValues(
         "Расписание на завтра вечером", "После 18:00 открывать следующий учебный день"
     )
 
+    val showBreaks = createValue(
+        "show_breaks", false, Boolean.serializer(),
+        "Показывать перерывы", "Отображать время перемен между занятиями"
+    )
+
     val enableProfileTab = createValue(
         "enable_profile_tab", true, Boolean.serializer(),
         "Вкладка профиля", "Отображать вкладку профиля в панели навигации"

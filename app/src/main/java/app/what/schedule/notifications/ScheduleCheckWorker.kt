@@ -130,6 +130,7 @@ class ScheduleCheckWorker(
                         title = formatted.title,
                         content = formatted.summary,
                         details = formatted.details,
+                        search = search,
                         notificationId = notificationId
                     )
 

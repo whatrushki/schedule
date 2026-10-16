@@ -25,9 +25,15 @@ import app.what.schedule.utils.LogScope
 import android.content.res.Configuration
 import app.what.schedule.launcher.AppIconManager
 import app.what.schedule.utils.buildTag
+import android.content.Intent
+import app.what.domain.models.ScheduleSearch
+import app.what.schedule.notifications.NotificationHelper
+import app.what.schedule.features.schedule.domain.ScheduleController
+import app.what.schedule.features.schedule.domain.models.ScheduleEvent
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import org.koin.android.ext.android.inject
 import org.koin.compose.koinInject
+import org.koin.java.KoinJavaComponent.getKoin
 
 open class MainActivity : ComponentActivity() {
     private val crashlytics = FirebaseCrashlytics.getInstance()
@@ -62,6 +68,7 @@ open class MainActivity : ComponentActivity() {
         val uiTag = buildTag(LogScope.UI, LogCat.INIT)
         Auditor.info(uiTag, "MainActivity создана")
         AppIconManager.updateIcon(this, appValues)
+        handleNotificationIntent(intent)
         
         enableEdgeToEdge()
         setContent {
@@ -118,6 +125,46 @@ open class MainActivity : ComponentActivity() {
     override fun onResume() {
         super.onResume()
         AppIconManager.updateIcon(this, appValues)
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        handleNotificationIntent(intent)
+    }
+
+    private fun handleNotificationIntent(intent: Intent?) {
+        intent ?: return
+        val targetScreen = intent.getStringExtra(NotificationHelper.EXTRA_TARGET_SCREEN) ?: return
+        val uiTag = buildTag(LogScope.UI, LogCat.NAV)
+        Auditor.info(uiTag, "MainActivity handleNotificationIntent: targetScreen=$targetScreen")
+
+        when (targetScreen) {
+            NotificationHelper.SCREEN_SCHEDULE -> {
+                val searchId = intent.getStringExtra(NotificationHelper.EXTRA_SEARCH_ID)
+                val searchName = intent.getStringExtra(NotificationHelper.EXTRA_SEARCH_NAME)
+                val searchType = intent.getStringExtra(NotificationHelper.EXTRA_SEARCH_TYPE)
+                val institutionId = intent.getStringExtra(NotificationHelper.EXTRA_INSTITUTION_ID)
+
+                if (institutionId != null) {
+                    appValues.institution.set(institutionId)
+                }
+                if (searchId != null && searchName != null) {
+                    val search = if (searchType == "teacher") {
+                        ScheduleSearch.Teacher(name = searchName, id = searchId, institutionId = institutionId)
+                    } else {
+                        ScheduleSearch.Group(name = searchName, id = searchId, institutionId = institutionId)
+                    }
+                    appValues.lastSearch.set(search)
+                    try {
+                        val scheduleController: ScheduleController? = getKoin().getOrNull()
+                        scheduleController?.obtainEvent(ScheduleEvent.OnSearchClicked(search))
+                    } catch (e: Exception) {
+                        Auditor.warn(uiTag, "Не удалось уведомить ScheduleController: ${e.message}")
+                    }
+                }
+            }
+        }
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {

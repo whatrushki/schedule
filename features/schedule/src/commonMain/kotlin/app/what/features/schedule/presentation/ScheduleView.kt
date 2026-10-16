@@ -142,7 +142,8 @@ fun ScheduleView(
         val currentTime by useInterval(app.what.foundation.utils.currentLocalTime(), 60) {
             app.what.foundation.utils.currentLocalTime()
         }
-        var showBreaks by useSave(false)
+        val showBreaksPreference by appValues.showBreaks.collect()
+        val showBreaks = showBreaksPreference == true
         val scope = rememberCoroutineScope()
         val weeks = remember(state.value.schedules) {
             state.value.schedules.groupBy { it.date.getWeekNumber() }
@@ -243,7 +244,7 @@ fun ScheduleView(
                     StyledIconButton(
                         WHATIcons.Run,
                         active = if (showBreaks) ActiveState.ACTIVE else ActiveState.DISABLED
-                    ) { showBreaks = !showBreaks }
+                    ) { appValues.showBreaks.set(!showBreaks) }
                 }
                 
                 AnimatedEnter(state.value.schedules.isNotEmpty()) {
