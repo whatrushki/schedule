@@ -91,6 +91,12 @@ val dataModule = module {
 
     single<KeyValueStorage> { WasmKeyValueStorage() }
     single { AppValues(get<KeyValueStorage>()) } bind PreferenceStorage::class
+    single<app.what.data.network.traffic.NetworkTypeProvider> {
+        app.what.data.network.traffic.DefaultNetworkTypeProvider()
+    }
+    single<app.what.data.network.traffic.NetworkTrafficManager> {
+        app.what.data.network.traffic.NetworkTrafficManagerImpl(get(), get())
+    }
 
     singleOf(::GoogleDriveParser)
     single<FileCache> { InMemoryFileCache() }
@@ -155,6 +161,13 @@ val dataModule = module {
             }
 
             install(app.what.foundation.network.monitor.NetworkMonitorPlugin)
+
+            val trafficManager = get<app.what.data.network.traffic.NetworkTrafficManager>()
+            val networkTypeProvider = get<app.what.data.network.traffic.NetworkTypeProvider>()
+            install(app.what.data.network.traffic.TrafficTrackerPlugin) {
+                this.trafficManager = trafficManager
+                this.networkTypeProvider = networkTypeProvider
+            }
 
             install(ContentNegotiation) {
                 json(Json {

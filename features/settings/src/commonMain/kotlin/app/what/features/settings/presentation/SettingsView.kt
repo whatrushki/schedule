@@ -1,6 +1,7 @@
 package app.what.schedule.features.settings.presentation
 
 import app.what.foundation.ui.PlatformBackHandler
+import app.what.features.settings.presentation.components.NetworkUsageSheet
 import app.what.features.settings.presentation.components.StorageUsageSheet
 import app.what.foundation.ui.controllers.rememberSheetController
 import androidx.compose.animation.animateContentSize
@@ -107,11 +108,20 @@ fun SettingsView(
     var activeCategoryTitle by rememberSaveable { mutableStateOf<String?>(null) }
     var subScreen by remember { mutableStateOf<SubScreenState?>(null) }
 
-    val rootComponents = getSettingsList(appValues, appUtils) {
-        sheet.open {
-            StorageUsageSheet(onClose = { sheet.close() })
+    val rootComponents = getSettingsList(
+        app = appValues,
+        utils = appUtils,
+        onStorageUsageClick = {
+            sheet.open {
+                StorageUsageSheet(onClose = { sheet.close() })
+            }
+        },
+        onNetworkUsageClick = {
+            sheet.open {
+                NetworkUsageSheet(onClose = { sheet.close() })
+            }
         }
-    }
+    )
 
     // Восстановление под-экрана после поворота или смены темы
     if (pagerState.currentPage != 0 && subScreen == null) {
@@ -268,7 +278,8 @@ private fun SettingsHeader(
 fun getSettingsList(
     app: AppValues,
     utils: AppUtils,
-    onClearCacheClick: () -> Unit
+    onStorageUsageClick: () -> Unit,
+    onNetworkUsageClick: () -> Unit
 ): List<UIComponent> {
     val dialog = rememberDialogController()
     val isDevUnlocked by app.devSettingsUnlocked.collect()
@@ -342,13 +353,19 @@ fun getSettingsList(
         ),
         
         category(
-            "Данные и память", "кэш, приватность", WHATIcons.Clear,
+            "Данные и память", "память, сеть, приватность", WHATIcons.Clear,
             content = listOf(
                 settingAction(
-                    title = "Управление памятью",
-                    description = "Очистка кэша изображений, расписания и данных",
+                    title = "Использование памяти",
+                    description = "Круговой график и выборочная очистка кэша",
                     isDestructive = false,
-                    onClick = onClearCacheClick
+                    onClick = onStorageUsageClick
+                ),
+                settingAction(
+                    title = "Использование трафика",
+                    description = "Статистика сети, Wi-Fi и мобильных данных",
+                    isDestructive = false,
+                    onClick = onNetworkUsageClick
                 ),
                 app.isAnalyticsEnabled.asSwitch {
                     Analytics.setAnalyticsCollectionEnabled(it)

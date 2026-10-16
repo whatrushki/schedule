@@ -53,6 +53,12 @@ val dataModule = module {
     }
     single<PreferenceEncryptor> { AndroidPreferenceEncryptor() }
     single { AppValues(get<KeyValueStorage>(), get<PreferenceEncryptor>()) } bind PreferenceStorage::class
+    single<app.what.data.network.traffic.NetworkTypeProvider> {
+        app.what.data.network.traffic.AndroidNetworkTypeProvider(androidContext())
+    }
+    single<app.what.data.network.traffic.NetworkTrafficManager> {
+        app.what.data.network.traffic.NetworkTrafficManagerImpl(get(), get())
+    }
     singleOf(::GoogleDriveParser)
     singleOf(::FileManager)
     single<FileCache> { AndroidFileCache(androidContext()) }
@@ -114,6 +120,13 @@ val dataModule = module {
             }
             
             install(app.what.foundation.network.monitor.NetworkMonitorPlugin)
+            
+            val trafficManager = get<app.what.data.network.traffic.NetworkTrafficManager>()
+            val networkTypeProvider = get<app.what.data.network.traffic.NetworkTypeProvider>()
+            install(app.what.data.network.traffic.TrafficTrackerPlugin) {
+                this.trafficManager = trafficManager
+                this.networkTypeProvider = networkTypeProvider
+            }
             
             install(ContentNegotiation) {
                 json(Json {
