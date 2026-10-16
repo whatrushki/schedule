@@ -49,22 +49,41 @@
         "lessons": [
             {
                 "date": "2026-10-17",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Тодорова А.В.",
+                        "group": "СА-42",
+                        "room": "110а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-17",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Тодорова Анастасия Владимировна",
+                        "teacher": "Тодорова А.В.",
                         "group": "СА-42",
-                        "room": "110",
+                        "room": "110а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-17",
@@ -74,16 +93,16 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Тодорова Анастасия Владимировна",
+                        "teacher": "Тодорова А.В.",
                         "group": "СА-42",
-                        "room": "110",
+                        "room": "110а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-17",
@@ -93,16 +112,16 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Тодорова Анастасия Владимировна",
+                        "teacher": "Тодорова А.В.",
                         "group": "СА-42",
-                        "room": "110",
+                        "room": "401",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-17",
@@ -121,7 +140,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
