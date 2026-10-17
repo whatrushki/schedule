@@ -1,10 +1,29 @@
 [
     {
-        "date": "2026-10-12",
+        "date": "2026-09-01",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-12",
+                "date": "2026-09-01",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Эстетика градостроительства",
+                "otUnits": [
+                    {
+                        "teacher": "Ибрагимова В. О.",
+                        "group": "ШОЗГР51д",
+                        "room": "ст.пр.Ибрагимова В.О.",
+                        "additional": "ДО",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-09-01",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -12,27 +31,33 @@
                 "otUnits": [
                     {
                         "teacher": "Ибрагимова В. О.",
-                        "group": "ШГР51",
-                        "room": "602",
-                        "additional": "24",
+                        "group": "ШОЗГР51д",
+                        "room": "ст.пр.Ибрагимова В.О.",
+                        "additional": "ДО",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-10-05",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-10-12",
+                "date": "2026-10-05",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лек Эстетика градостроительства",
+                "subject": "пр Эстетика градостроительства",
                 "otUnits": [
                     {
                         "teacher": "Ибрагимова В. О.",
                         "group": "ШГР51",
-                        "room": "904",
+                        "room": "603",
                         "additional": "24",
                         "onlineUrl": null,
                         "subject": null
@@ -42,7 +67,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-12",
+                "date": "2026-10-05",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
@@ -61,7 +86,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-12",
+                "date": "2026-10-05",
                 "number": 6,
                 "startTime": "17:45",
                 "endTime": "19:20",
@@ -82,21 +107,21 @@
         ]
     },
     {
-        "date": "2026-10-13",
+        "date": "2026-10-06",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-13",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Эстетика градостроительства",
+                "date": "2026-10-06",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Архитектурно-градостроительное проектирование",
                 "otUnits": [
                     {
                         "teacher": "Ибрагимова В. О.",
-                        "group": "ШОЗГР51д",
-                        "room": "ст.пр.Ибрагимова В.О.",
-                        "additional": "ДО",
+                        "group": "ШГР41",
+                        "room": "601",
+                        "additional": "24",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -105,17 +130,99 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-13",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Эстетика градостроительства",
+                "date": "2026-10-06",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Архитектурно-градостроительное проектирование",
                 "otUnits": [
                     {
                         "teacher": "Ибрагимова В. О.",
-                        "group": "ШОЗГР51д",
-                        "room": "ст.пр.Ибрагимова В.О.",
-                        "additional": "ДО",
+                        "group": "ШГР41",
+                        "room": "601",
+                        "additional": "24",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-08",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Архитектурно-градостроительное проектирование",
+                "otUnits": [
+                    {
+                        "teacher": "Ибрагимова В. О.",
+                        "group": "ШГР51",
+                        "room": "905",
+                        "additional": "24",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Архитектурно-градостроительное проектирование",
+                "otUnits": [
+                    {
+                        "teacher": "Ибрагимова В. О.",
+                        "group": "ШГР51",
+                        "room": "905",
+                        "additional": "24",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Архитектурно-градостроительное проектирование",
+                "otUnits": [
+                    {
+                        "teacher": "Ибрагимова В. О.",
+                        "group": "ШГР41",
+                        "room": "602",
+                        "additional": "24",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-08",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Архитектурно-градостроительное проектирование",
+                "otUnits": [
+                    {
+                        "teacher": "Ибрагимова В. О.",
+                        "group": "ШГР41",
+                        "room": "602",
+                        "additional": "24",
                         "onlineUrl": null,
                         "subject": null
                     }
