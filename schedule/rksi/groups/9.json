@@ -71,29 +71,10 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Основы информационной безопасности",
+                "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Кузнецова А.В.",
-                        "group": "ИБА-12",
-                        "room": "31",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-19",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Биология",
-                "otUnits": [
-                    {
-                        "teacher": "Хайлова Л.В.",
+                        "teacher": "Карпова О.В.",
                         "group": "ИБА-12",
                         "room": "20",
                         "additional": "2",
@@ -102,7 +83,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Растороцкий В.В.",
+                        "group": "ИБА-12",
+                        "room": "с/з2",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -129,9 +129,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Степанец В.В.",
+                        "group": "ИБА-12",
+                        "room": "35",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -229,17 +238,17 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.П.",
+                        "teacher": "Савченко А.А.",
                         "group": "ИБА-12",
-                        "room": "13",
+                        "room": "38",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Савченко А.А.",
+                        "teacher": "Марченко С.П.",
                         "group": "ИБА-12",
-                        "room": "38",
+                        "room": "13",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null

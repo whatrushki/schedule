@@ -1349,20 +1349,20 @@
         ]
     },
     {
-        "date": "2026-10-13",
+        "date": "2026-10-12",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-13",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
+                "date": "2026-10-12",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "лек Физика",
                 "otUnits": [
                     {
                         "teacher": "Джужук И. И.",
                         "group": "РУПО-12",
-                        "room": "202",
+                        "room": "106",
                         "additional": "15",
                         "onlineUrl": null,
                         "subject": null
@@ -1370,7 +1370,13 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-10-13",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
                 "date": "2026-10-13",
                 "number": 3,
@@ -1789,6 +1795,25 @@
             },
             {
                 "date": "2026-10-27",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "РУПО-13",
+                        "room": "204",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -1842,6 +1867,25 @@
                         "teacher": "Джужук И. И.",
                         "group": "СЭ-11",
                         "room": "105",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "РУПО-12",
+                        "room": "111",
                         "additional": "15",
                         "onlineUrl": null,
                         "subject": null
@@ -1941,8 +1985,33 @@
                 "otUnits": [
                     {
                         "teacher": "Джужук И. И.",
-                        "group": "РУПО-12",
+                        "group": "РУПО-13",
                         "room": "112",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-02",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "СЭ-11",
+                        "room": "8",
                         "additional": "15",
                         "onlineUrl": null,
                         "subject": null
@@ -1952,35 +2021,388 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-30",
+                "date": "2026-11-02",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "РУПО-13",
+                        "room": "105",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "РУПО-11",
+                        "room": "111",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "СЭ-11",
+                        "room": "2",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-04",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-04",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "СЭ-12",
+                        "room": "2",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-04",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "РУПО-12",
+                        "room": "206",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-04",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "ТГ-11",
+                        "room": "3",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-06",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "РУПО-12",
+                        "room": "201",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-06",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "РУПО-13",
+                        "room": "2",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-10",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "РУПО-12",
+                        "room": "202",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "РУПО-13",
+                        "room": "204",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "ТГ-11",
+                        "room": "201",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-11",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "ТГ-11",
+                        "room": "3",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "СЭ-11",
+                        "room": "105",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "РУПО-12",
+                        "room": "111",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "РУПО-11",
+                        "room": "2",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "РУПО-11",
+                        "room": "2",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-13",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "ТГ-11",
+                        "room": "8",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Джужук И. И.",
+                        "group": "СЭ-12",
+                        "room": "106",
+                        "additional": "15",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
                 "subject": "пр Физика",
                 "otUnits": [
                     {
                         "teacher": "Джужук И. И.",
                         "group": "РУПО-13",
                         "room": "112",
-                        "additional": "15",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-30",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Джужук И. И.",
-                        "group": "РУПО-13",
-                        "room": "4а",
                         "additional": "15",
                         "onlineUrl": null,
                         "subject": null

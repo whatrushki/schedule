@@ -64,8 +64,27 @@
     },
     {
         "date": "2026-10-19",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
+            {
+                "date": "2026-10-19",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Хачикян Л.Г.",
+                        "group": "ИБА-34",
+                        "room": "32",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-10-19",
                 "number": 4,
@@ -74,16 +93,16 @@
                 "subject": "Базы данных",
                 "otUnits": [
                     {
-                        "teacher": "_______",
+                        "teacher": "Кротенко Е.М.",
                         "group": "ИБА-34",
-                        "room": "Вак1",
-                        "additional": "Вак1",
+                        "room": "220",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -93,16 +112,16 @@
                 "subject": "Базы данных",
                 "otUnits": [
                     {
-                        "teacher": "_______",
+                        "teacher": "Кротенко Е.М.",
                         "group": "ИБА-34",
-                        "room": "Вак1",
-                        "additional": "Вак1",
+                        "room": "220",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -112,16 +131,16 @@
                 "subject": "Базы данных",
                 "otUnits": [
                     {
-                        "teacher": "_______",
+                        "teacher": "Кротенко Е.М.",
                         "group": "ИБА-34",
-                        "room": "Вак1",
-                        "additional": "Вак1",
+                        "room": "220",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

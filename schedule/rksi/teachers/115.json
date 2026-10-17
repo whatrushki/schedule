@@ -83,7 +83,7 @@
     },
     {
         "date": "2026-10-19",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-19",
@@ -93,16 +93,16 @@
                 "subject": "Обществознание",
                 "otUnits": [
                     {
-                        "teacher": "Упорова Лариса Викторовна",
+                        "teacher": "Упорова Л.В.",
                         "group": "БД-11",
-                        "room": "32",
+                        "room": "13",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -112,16 +112,16 @@
                 "subject": "Обществознание",
                 "otUnits": [
                     {
-                        "teacher": "Упорова Лариса Викторовна",
+                        "teacher": "Упорова Л.В.",
                         "group": "БД-11",
-                        "room": "32",
+                        "room": "13",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -131,16 +131,43 @@
                 "subject": "История России",
                 "otUnits": [
                     {
-                        "teacher": "Упорова Лариса Викторовна",
+                        "teacher": "Упорова Л.В.",
                         "group": "БУ-22",
-                        "room": "32",
+                        "room": "13",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Упорова Л.В.",
+                        "group": "СА-14",
+                        "room": "410",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Упорова Л.В.",
+                        "group": "СА-26",
+                        "room": "410",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             }
         ]
     },

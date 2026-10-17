@@ -76,14 +76,14 @@
                     {
                         "teacher": "Доценко Л.А.",
                         "group": "ТД-32",
-                        "room": "36",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -110,9 +110,37 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова П.П.",
+                        "group": "ТД-32",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 4,
+                "startTime": "14:10",
+                "endTime": "15:40",
+                "subject": "Организация и управление коммерческой деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова П.П.",
+                        "group": "ТД-32",
+                        "room": "38",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

@@ -102,7 +102,7 @@
     },
     {
         "date": "2026-10-19",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-19",
@@ -112,16 +112,16 @@
                 "subject": "Компьютерное моделирование",
                 "otUnits": [
                     {
-                        "teacher": "Тодорова Анастасия Владимировна",
+                        "teacher": "Тодорова А.В.",
                         "group": "ИКС-24",
-                        "room": "110",
+                        "room": "110а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -131,16 +131,43 @@
                 "subject": "Компьютерное моделирование",
                 "otUnits": [
                     {
-                        "teacher": "Тодорова Анастасия Владимировна",
+                        "teacher": "Тодорова А.В.",
                         "group": "ИКС-24",
-                        "room": "110",
+                        "room": "110а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Тодорова А.В,",
+                        "group": "СА-12",
+                        "room": "110а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Тодорова А.В,",
+                        "group": "СА-42",
+                        "room": "110а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-10-19",
@@ -150,16 +177,16 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Тодорова Анастасия Владимировна",
+                        "teacher": "Тодорова А.В.",
                         "group": "СА-42",
-                        "room": "121",
+                        "room": "110а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -169,16 +196,16 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Тодорова Анастасия Владимировна",
+                        "teacher": "Тодорова А.В.",
                         "group": "СА-42",
-                        "room": "121",
+                        "room": "110а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -188,16 +215,16 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Тодорова Анастасия Владимировна",
+                        "teacher": "Тодорова А.В.",
                         "group": "СА-42",
-                        "room": "121",
+                        "room": "110а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

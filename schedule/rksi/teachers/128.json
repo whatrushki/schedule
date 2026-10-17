@@ -1,17 +1,17 @@
 [
     {
         "date": "2026-10-19",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-19",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Рынок ценных бумаг",
+                "subject": "Организация безналичных расчетов",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Елена Николаевна",
+                        "teacher": "Шумина Е.Н.",
                         "group": "БД-31",
                         "room": "40",
                         "additional": "2",
@@ -20,7 +20,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -30,7 +30,7 @@
                 "subject": "Организация безналичных расчетов",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Елена Николаевна",
+                        "teacher": "Шумина Е.Н.",
                         "group": "БД-31",
                         "room": "40",
                         "additional": "2",
@@ -39,7 +39,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -49,7 +49,7 @@
                 "subject": "Экономика и управление",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Елена Николаевна",
+                        "teacher": "Шумина Е.Н.",
                         "group": "ИБТ-21",
                         "room": "40",
                         "additional": "2",
@@ -58,17 +58,52 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Шумина О.О.",
+                        "group": "БД-21",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Шумина О.О.",
+                        "group": "БУ-11",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-10-19",
                 "number": 4,
                 "startTime": "14:10",
                 "endTime": "15:40",
-                "subject": "Экономика и управление",
+                "subject": "Статистика",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Елена Николаевна",
+                        "teacher": "Шумина О.О.",
+                        "group": "БУ-22",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Шумина Е.Н.",
                         "group": "ИБТ-21",
                         "room": "40",
                         "additional": "2",
@@ -77,17 +112,25 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:30",
-                "subject": "Финансовая грамотность",
+                "subject": "Статистика",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Елена Николаевна",
+                        "teacher": "Шумина О.О.",
+                        "group": "БУ-21",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Шумина Е.Н.",
                         "group": "БД-21",
                         "room": "40",
                         "additional": "2",
@@ -96,7 +139,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:10",
+                "subject": "Статистика",
+                "otUnits": [
+                    {
+                        "teacher": "Шумина О.О.",
+                        "group": "БУ-22",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

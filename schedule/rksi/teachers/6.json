@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-10-19",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-19",
@@ -11,16 +11,16 @@
                 "subject": "Индивидуальный проект",
                 "otUnits": [
                     {
-                        "teacher": "Бакулярова Ирина Николаевна",
+                        "teacher": "Бакулярова И.Н.",
                         "group": "ТЭС-12",
-                        "room": "213",
+                        "room": "212",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -30,16 +30,43 @@
                 "subject": "Индивидуальный проект",
                 "otUnits": [
                     {
-                        "teacher": "Бакулярова Ирина Николаевна",
+                        "teacher": "Бакулярова И.Н.",
                         "group": "РУП-16",
-                        "room": "212",
+                        "room": "110",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Бакулярова И.Н.",
+                        "group": "ТЭС-11",
+                        "room": "114",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Бакулярова И.Н.",
+                        "group": "ИС-36",
+                        "room": "114",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             }
         ]
     },

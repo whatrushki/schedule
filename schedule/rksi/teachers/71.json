@@ -45,7 +45,7 @@
     },
     {
         "date": "2026-10-19",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-19",
@@ -55,16 +55,43 @@
                 "subject": "Психология общения",
                 "otUnits": [
                     {
-                        "teacher": "Марышева Оксана Викторовна",
+                        "teacher": "Марышева О.В.",
                         "group": "ИС-25",
-                        "room": "320",
+                        "room": "Акт.зал",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Марышева О.В.",
+                        "group": "ИС-46",
+                        "room": "316",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Марышева О.В.",
+                        "group": "СА-27",
+                        "room": "316",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-10-19",
@@ -74,16 +101,16 @@
                 "subject": "Психология общения",
                 "otUnits": [
                     {
-                        "teacher": "Марышева Оксана Викторовна",
+                        "teacher": "Марышева О.В.",
                         "group": "ИС-27",
-                        "room": "320",
+                        "room": "Акт.зал",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -93,16 +120,16 @@
                 "subject": "Психология общения",
                 "otUnits": [
                     {
-                        "teacher": "Марышева Оксана Викторовна",
+                        "teacher": "Марышева О.В.",
                         "group": "ИС-26",
-                        "room": "320",
+                        "room": "410",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -112,16 +139,16 @@
                 "subject": "История России",
                 "otUnits": [
                     {
-                        "teacher": "Марышева Оксана Викторовна",
+                        "teacher": "Марышева О.В.",
                         "group": "СА-19",
-                        "room": "320",
+                        "room": "410",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

@@ -102,7 +102,7 @@
     },
     {
         "date": "2026-10-19",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-19",
@@ -112,16 +112,16 @@
                 "subject": "Физика",
                 "otUnits": [
                     {
-                        "teacher": "Нохрина Юлия Валерьевна",
+                        "teacher": "Нохрина Ю.В.",
                         "group": "БУ-11",
-                        "room": "34",
+                        "room": "42",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -131,16 +131,35 @@
                 "subject": "Физика",
                 "otUnits": [
                     {
-                        "teacher": "Нохрина Юлия Валерьевна",
+                        "teacher": "Нохрина Ю.В.",
                         "group": "ТД-13",
-                        "room": "34",
+                        "room": "42",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Нохрина Ю.В.",
+                        "group": "ИКС-14",
+                        "room": "212",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-10-19",
@@ -150,16 +169,16 @@
                 "subject": "Электроника и схемотехника",
                 "otUnits": [
                     {
-                        "teacher": "Нохрина Юлия Валерьевна",
+                        "teacher": "Нохрина Ю.В.",
                         "group": "ИБА-22",
-                        "room": "34",
+                        "room": "42",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -169,16 +188,16 @@
                 "subject": "Электроника и схемотехника",
                 "otUnits": [
                     {
-                        "teacher": "Нохрина Юлия Валерьевна",
+                        "teacher": "Нохрина Ю.В.",
                         "group": "ИБА-23",
-                        "room": "34",
+                        "room": "42",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

@@ -1266,16 +1266,8 @@
                 "number": 7,
                 "startTime": "19:30",
                 "endTime": "21:05",
-                "subject": "Компьютерный социально-психологический мониторинг",
+                "subject": "Компьютерный социально-психологический мониторинг (https://donstu.scan-edu.ru/auth/login/?module_id=4)",
                 "otUnits": [
-                    {
-                        "teacher": "",
-                        "group": "УМФ31",
-                        "room": "> профиль ",
-                        "additional": "Онлайн (тестирование проходит в личном кабинете ",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "",
                         "group": "УМФ31",
@@ -1637,7 +1629,7 @@
                 "otUnits": [
                     {
                         "teacher": "Хильчевская И. В.",
-                        "group": "УМФ31, УМФ31",
+                        "group": "УМФ31",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
@@ -1663,8 +1655,8 @@
                     {
                         "teacher": "Кряжкова Е. В.",
                         "group": "УМФ31",
-                        "room": "491",
-                        "additional": "1",
+                        "room": "",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1772,6 +1764,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "015",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -1854,6 +1865,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-21",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "476а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -1861,6 +1891,25 @@
         "date": "2026-10-22",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-10-22",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-10-22",
                 "number": 2,
@@ -1908,9 +1957,91 @@
                 "otUnits": [
                     {
                         "teacher": "Хильчевская И. В.",
-                        "group": "УМФ31",
+                        "group": "УМФ31, УМФ31",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-23",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Демонстрационный физический эксперимент",
+                "otUnits": [
+                    {
+                        "teacher": "Колпачева Н. А.",
+                        "group": "УМФ31",
+                        "room": "427a",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Физические основы измерений",
+                "otUnits": [
+                    {
+                        "teacher": "Пруцакова Н. В.",
+                        "group": "УМФ31",
+                        "room": "427",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "436",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1924,6 +2055,44 @@
         "date": "2026-10-24",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-10-24",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "507",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-24",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-10-24",
                 "number": 3,
@@ -1965,9 +2134,236 @@
         ]
     },
     {
+        "date": "2026-10-26",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-26",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Физические основы измерений",
+                "otUnits": [
+                    {
+                        "teacher": "Пруцакова Н. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Демонстрационный физический эксперимент",
+                "otUnits": [
+                    {
+                        "teacher": "Колпачева Н. А.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Демонстрационный физический эксперимент",
+                "otUnits": [
+                    {
+                        "teacher": "Колпачева Н. А.",
+                        "group": "УМФ31",
+                        "room": "410",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-27",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-27",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "427",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-28",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Физические основы измерений",
+                "otUnits": [
+                    {
+                        "teacher": "Пруцакова Н. В.",
+                        "group": "УМФ31",
+                        "room": "436",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "427",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "413",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-29",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-10-29",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "413",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-10-29",
                 "number": 4,
@@ -1977,9 +2373,217 @@
                 "otUnits": [
                     {
                         "teacher": "Хильчевская И. В.",
-                        "group": "УМФ31",
+                        "group": "УМФ31, УМФ31",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-30",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-30",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-30",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "805",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-31",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-31",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-31",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-31",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-02",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Демонстрационный физический эксперимент",
+                "otUnits": [
+                    {
+                        "teacher": "Колпачева Н. А.",
+                        "group": "УМФ31",
+                        "room": "413",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Демонстрационный физический эксперимент",
+                "otUnits": [
+                    {
+                        "teacher": "Колпачева Н. А.",
+                        "group": "УМФ31",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Физические основы измерений",
+                "otUnits": [
+                    {
+                        "teacher": "Пруцакова Н. В.",
+                        "group": "УМФ31",
+                        "room": "433",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1995,6 +2599,63 @@
         "lessons": [
             {
                 "date": "2026-11-05",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "427а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "413",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "427а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -2002,9 +2663,255 @@
                 "otUnits": [
                     {
                         "teacher": "Хильчевская И. В.",
-                        "group": "УМФ31",
+                        "group": "УМФ31, УМФ31",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Физические основы измерений",
+                "otUnits": [
+                    {
+                        "teacher": "Пруцакова Н. В.",
+                        "group": "УМФ31",
+                        "room": "427",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-07",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-07",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-07",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-07",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-09",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Физические основы измерений",
+                "otUnits": [
+                    {
+                        "teacher": "Пруцакова Н. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "433",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Демонстрационный физический эксперимент",
+                "otUnits": [
+                    {
+                        "teacher": "Колпачева Н. А.",
+                        "group": "УМФ31",
+                        "room": "410",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-11",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "421",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Физические основы измерений",
+                "otUnits": [
+                    {
+                        "teacher": "Пруцакова Н. В.",
+                        "group": "УМФ31",
+                        "room": "436",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "427",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "413",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2020,6 +2927,63 @@
         "lessons": [
             {
                 "date": "2026-11-12",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "449",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "413",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -2027,9 +2991,242 @@
                 "otUnits": [
                     {
                         "teacher": "Хильчевская И. В.",
-                        "group": "УМФ31",
+                        "group": "УМФ31, УМФ31",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "470",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-13",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-14",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-14",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-16",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-16",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Демонстрационный физический эксперимент",
+                "otUnits": [
+                    {
+                        "teacher": "Колпачева Н. А.",
+                        "group": "УМФ31",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-18",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-18",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-18",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-18",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-18",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "438",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2045,6 +3242,44 @@
         "lessons": [
             {
                 "date": "2026-11-19",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "413",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-19",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "427а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-19",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -2052,9 +3287,198 @@
                 "otUnits": [
                     {
                         "teacher": "Хильчевская И. В.",
-                        "group": "УМФ31",
+                        "group": "УМФ31, УМФ31",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-21",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-21",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-23",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "433",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-23",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Демонстрационный физический эксперимент",
+                "otUnits": [
+                    {
+                        "teacher": "Колпачева Н. А.",
+                        "group": "УМФ31",
+                        "room": "410",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-25",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "427",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "261",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "427",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "413",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Физические основы измерений",
+                "otUnits": [
+                    {
+                        "teacher": "Пруцакова Н. В.",
+                        "group": "УМФ31",
+                        "room": "374",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2070,6 +3494,63 @@
         "lessons": [
             {
                 "date": "2026-11-26",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "319",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "413",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -2077,9 +3558,223 @@
                 "otUnits": [
                     {
                         "teacher": "Хильчевская И. В.",
-                        "group": "УМФ31",
+                        "group": "УМФ31, УМФ31",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-27",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-27",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-27",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-28",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-28",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-30",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Демонстрационный физический эксперимент",
+                "otUnits": [
+                    {
+                        "teacher": "Колпачева Н. А.",
+                        "group": "УМФ31",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-02",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "438",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2095,6 +3790,44 @@
         "lessons": [
             {
                 "date": "2026-12-03",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "413",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-03",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "427а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-03",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -2102,9 +3835,160 @@
                 "otUnits": [
                     {
                         "teacher": "Хильчевская И. В.",
-                        "group": "УМФ31",
+                        "group": "УМФ31, УМФ31",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-05",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-07",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Физические основы измерений",
+                "otUnits": [
+                    {
+                        "teacher": "Пруцакова Н. В.",
+                        "group": "УМФ31",
+                        "room": "427",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "433",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Демонстрационный физический эксперимент",
+                "otUnits": [
+                    {
+                        "teacher": "Колпачева Н. А.",
+                        "group": "УМФ31",
+                        "room": "410",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-09",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "427",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "413",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2120,6 +4004,44 @@
         "lessons": [
             {
                 "date": "2026-12-10",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "413",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -2127,9 +4049,261 @@
                 "otUnits": [
                     {
                         "teacher": "Хильчевская И. В.",
-                        "group": "УМФ31",
+                        "group": "УМФ31, УМФ31",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-11",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-11",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-11",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "035/1",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-12",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-12",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-14",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-14",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Демонстрационный физический эксперимент",
+                "otUnits": [
+                    {
+                        "teacher": "Колпачева Н. А.",
+                        "group": "УМФ31",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-16",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-16",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-16",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-16",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "438",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2145,6 +4319,44 @@
         "lessons": [
             {
                 "date": "2026-12-17",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "413",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-17",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "427а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-17",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -2152,9 +4364,203 @@
                 "otUnits": [
                     {
                         "teacher": "Хильчевская И. В.",
-                        "group": "УМФ31",
+                        "group": "УМФ31, УМФ31",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-19",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-19",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-19",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Физические основы получения информации",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-21",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "зчО Возрастная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Кряжкова Е. В.",
+                        "group": "УМФ31",
+                        "room": "261",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-22",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-22",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "зч Демонстрационный физический эксперимент",
+                "otUnits": [
+                    {
+                        "teacher": "Колпачева Н. А.",
+                        "group": "УМФ31",
+                        "room": "436",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-24",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-24",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "эк Кружковая работа",
+                "otUnits": [
+                    {
+                        "teacher": "Бажин И. В.",
+                        "group": "УМФ31",
+                        "room": "460",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-25",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-25",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "зч Физические основы измерений",
+                "otUnits": [
+                    {
+                        "teacher": "Пруцакова Н. В.",
+                        "group": "УМФ31",
+                        "room": "427",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-26",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-26",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "эк Методика преподавания физики",
+                "otUnits": [
+                    {
+                        "teacher": "Россинская С. А.",
+                        "group": "УМФ31",
+                        "room": "413",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-30",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "эк Теоретическая физика: Квантовая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Чебанова Е. В.",
+                        "group": "УМФ31",
+                        "room": "407",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }

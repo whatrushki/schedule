@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-10-19",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-19",
@@ -13,14 +13,14 @@
                     {
                         "teacher": "Самохвалова Д.Ю.",
                         "group": "РУП-16",
-                        "room": "416",
+                        "room": "408",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -32,14 +32,41 @@
                     {
                         "teacher": "Самохвалова Д.Ю.",
                         "group": "ТЭС-13",
-                        "room": "418",
+                        "room": "408",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Самохвалова Д.Ю.",
+                        "group": "ИКС-24",
+                        "room": "416",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Самохвалова Д.Ю.",
+                        "group": "СА-36",
+                        "room": "416",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             }
         ]
     }

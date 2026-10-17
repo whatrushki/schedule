@@ -72,9 +72,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Упорова Л.В.",
+                        "group": "СА-26",
+                        "room": "410",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -84,43 +93,43 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Новосельцева Е.Ф.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "СА-26",
-                        "room": "209а",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Новосельцева Е.Ф.",
                         "group": "СА-26",
-                        "room": "111",
+                        "room": "Библиотека",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:30",
-                "subject": "Основы электротехники",
+                "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Скороходов Г.Ю.",
+                        "teacher": "Щербакова Э.Н.",
                         "group": "СА-26",
-                        "room": "303",
+                        "room": "с/з3",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -132,14 +141,14 @@
                     {
                         "teacher": "Котова Т.И.",
                         "group": "СА-26",
-                        "room": "314",
+                        "room": "318",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

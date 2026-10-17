@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-10-19",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-19",
@@ -11,7 +11,7 @@
                 "subject": "Технология разработки и защиты баз данных",
                 "otUnits": [
                     {
-                        "teacher": "Кротенко Елена Михайловна",
+                        "teacher": "Кротенко Е.М.",
                         "group": "ИС-44",
                         "room": "220",
                         "additional": "1",
@@ -20,7 +20,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -30,7 +30,7 @@
                 "subject": "Технология разработки и защиты баз данных",
                 "otUnits": [
                     {
-                        "teacher": "Кротенко Елена Михайловна",
+                        "teacher": "Кротенко Е.М.",
                         "group": "ИС-41",
                         "room": "220",
                         "additional": "1",
@@ -39,7 +39,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -49,7 +49,7 @@
                 "subject": "Технология разработки и защиты баз данных",
                 "otUnits": [
                     {
-                        "teacher": "Кротенко Елена Михайловна",
+                        "teacher": "Кротенко Е.М.",
                         "group": "ИС-42",
                         "room": "220",
                         "additional": "1",
@@ -58,7 +58,34 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Кротенко Е.М.",
+                        "group": "ИС-24",
+                        "room": "220",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Кротенко Е.М.",
+                        "group": "ИС-38",
+                        "room": "220",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-10-19",
@@ -68,8 +95,16 @@
                 "subject": "Базы данных",
                 "otUnits": [
                     {
-                        "teacher": "Кротенко Елена Михайловна",
+                        "teacher": "Кротенко Е.М.",
                         "group": "ИБА-32",
+                        "room": "220",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Кротенко Е.М.",
+                        "group": "ИБА-34",
                         "room": "220",
                         "additional": "1",
                         "onlineUrl": null,
@@ -77,7 +112,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -87,8 +122,16 @@
                 "subject": "Базы данных",
                 "otUnits": [
                     {
-                        "teacher": "Кротенко Елена Михайловна",
+                        "teacher": "Кротенко Е.М.",
                         "group": "ИБА-32",
+                        "room": "220",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Кротенко Е.М.",
+                        "group": "ИБА-34",
                         "room": "220",
                         "additional": "1",
                         "onlineUrl": null,
@@ -96,7 +139,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -106,8 +149,16 @@
                 "subject": "Базы данных",
                 "otUnits": [
                     {
-                        "teacher": "Кротенко Елена Михайловна",
+                        "teacher": "Кротенко Е.М.",
                         "group": "ИБА-32",
+                        "room": "220",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Кротенко Е.М.",
+                        "group": "ИБА-34",
                         "room": "220",
                         "additional": "1",
                         "onlineUrl": null,
@@ -115,7 +166,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

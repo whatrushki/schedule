@@ -1449,16 +1449,8 @@
                 "number": 7,
                 "startTime": "19:30",
                 "endTime": "21:05",
-                "subject": "Компьютерный социально-психологический мониторинг",
+                "subject": "Компьютерный социально-психологический мониторинг (https://donstu.scan-edu.ru/auth/login/?module_id=4)",
                 "otUnits": [
-                    {
-                        "teacher": "",
-                        "group": "МКМ32",
-                        "room": "> профиль ",
-                        "additional": "Онлайн (тестирование проходит в личном кабинете ",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "",
                         "group": "МКМ32",
@@ -1932,25 +1924,6 @@
         "lessons": [
             {
                 "date": "2026-10-19",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Основы драматургии",
-                "otUnits": [
-                    {
-                        "teacher": "Берко Ю. С.",
-                        "group": "МКМ32",
-                        "room": "704",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-19",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -1961,6 +1934,25 @@
                         "group": "МКМ32",
                         "room": "374",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Основы драматургии",
+                "otUnits": [
+                    {
+                        "teacher": "Берко Ю. С.",
+                        "group": "МКМ32",
+                        "room": "808",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1979,12 +1971,12 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Современный культурный процесс",
+                "subject": "лаб Медиадизайн",
                 "otUnits": [
                     {
-                        "teacher": "Лычева А. С.",
+                        "teacher": "Еременко С. А.",
                         "group": "МКМ32",
-                        "room": "407",
+                        "room": "703б",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -1998,12 +1990,12 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лаб Медиадизайн",
+                "subject": "пр Современный культурный процесс",
                 "otUnits": [
                     {
-                        "teacher": "Еременко С. А.",
+                        "teacher": "Лычева А. С.",
                         "group": "МКМ32",
-                        "room": "805",
+                        "room": "704",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -2229,6 +2221,94 @@
         ]
     },
     {
+        "date": "2026-10-26",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-26",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Медиаменеджмент и медиамаркетинг",
+                "otUnits": [
+                    {
+                        "teacher": "Трандафилова К. Е.",
+                        "group": "МКМ32",
+                        "room": "424",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Проектная деятельность",
+                "otUnits": [
+                    {
+                        "teacher": "Трандафилова К. Е.",
+                        "group": "МКМ32",
+                        "room": "407",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-27",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-27",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Основы драматургии",
+                "otUnits": [
+                    {
+                        "teacher": "Берко Ю. С.",
+                        "group": "МКМ32",
+                        "room": "801",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Медиаменеджмент и медиамаркетинг",
+                "otUnits": [
+                    {
+                        "teacher": "Верченко Ю. К.",
+                        "group": "МКМ32",
+                        "room": "801",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -2244,6 +2324,176 @@
                         "group": "МКМ32",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Основы драматургии",
+                "otUnits": [
+                    {
+                        "teacher": "Берко Ю. С.",
+                        "group": "МКМ32",
+                        "room": "303",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Мультимедийная журналистика",
+                "otUnits": [
+                    {
+                        "teacher": "Давыдова М. А.",
+                        "group": "МКМ32",
+                        "room": "606",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-29",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Музыкальные парадоксы: от барокко до рока",
+                "otUnits": [
+                    {
+                        "teacher": "Гринева М. И.",
+                        "group": "МКМ32",
+                        "room": "808",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Медиадизайн",
+                "otUnits": [
+                    {
+                        "teacher": "Еременко С. А.",
+                        "group": "МКМ32",
+                        "room": "806",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-30",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Профильный курс по медиапроизводству",
+                "otUnits": [
+                    {
+                        "teacher": "Клименко И. А.",
+                        "group": "МКМ32",
+                        "room": "801",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-30",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Профильный курс по медиапроизводству",
+                "otUnits": [
+                    {
+                        "teacher": "Клименко И. А.",
+                        "group": "МКМ32",
+                        "room": "810",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-31",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-31",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Мультимедийная журналистика",
+                "otUnits": [
+                    {
+                        "teacher": "Давыдова М. А.",
+                        "group": "МКМ32",
+                        "room": "808",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-31",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лаб Производство периодических изданий",
+                "otUnits": [
+                    {
+                        "teacher": "Панеш Б. Н.",
+                        "group": "МКМ32",
+                        "room": "810",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }

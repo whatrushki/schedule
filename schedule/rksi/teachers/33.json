@@ -169,7 +169,7 @@
     },
     {
         "date": "2026-10-19",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-19",
@@ -179,16 +179,32 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Згонников Евгений Федорович",
+                        "teacher": "Згонников Е.Ф.",
                         "group": "СА-34",
-                        "room": "Общ№1-1",
-                        "additional": "Общ№1-1",
+                        "room": "Общ1-3",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Згонников Е.Ф.",
+                        "group": "СА-36",
+                        "room": "Общ1-4",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Згонникова Т.Ф.",
+                        "group": "ТД-32",
+                        "room": "29",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -198,16 +214,32 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Згонников Евгений Федорович",
+                        "teacher": "Згонников Е.Ф.",
                         "group": "СА-34",
-                        "room": "Общ№1-1",
-                        "additional": "Общ№1-1",
+                        "room": "Общ1-3",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Згонников Е.Ф.",
+                        "group": "СА-36",
+                        "room": "Общ1-4",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Згонникова Т.Ф.",
+                        "group": "ТД-31",
+                        "room": "29",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -217,16 +249,51 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Згонников Евгений Федорович",
+                        "teacher": "Згонников Е.Ф.",
                         "group": "СА-34",
-                        "room": "Общ№1-1",
-                        "additional": "Общ№1-1",
+                        "room": "Общ1-4",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Згонников Е.Ф.",
+                        "group": "СА-36",
+                        "room": "Общ1-1",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Згонникова Т.Ф.",
+                        "group": "ТД-32",
+                        "room": "29",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Згонникова Т.Ф.",
+                        "group": "ТД-31",
+                        "room": "29",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-10-19",
@@ -236,16 +303,24 @@
                 "subject": "Монтаж и эксплуатация систем видеонаблюдения и систем безопасности",
                 "otUnits": [
                     {
-                        "teacher": "Згонников Евгений Федорович",
+                        "teacher": "Згонников Е.Ф.",
                         "group": "ИКС-32",
-                        "room": "216",
+                        "room": "Общ1-1",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Згонникова Т.Ф.",
+                        "group": "ТД-31",
+                        "room": "29",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -255,16 +330,24 @@
                 "subject": "Монтаж и эксплуатация систем видеонаблюдения и систем безопасности",
                 "otUnits": [
                     {
-                        "teacher": "Згонников Евгений Федорович",
+                        "teacher": "Згонников Е.Ф.",
                         "group": "ИКС-32",
-                        "room": "216",
+                        "room": "Общ1-1",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Згонникова Т.Ф.",
+                        "group": "ТД-33",
+                        "room": "29",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -274,16 +357,16 @@
                 "subject": "Монтаж и эксплуатация систем видеонаблюдения и систем безопасности",
                 "otUnits": [
                     {
-                        "teacher": "Згонников Евгений Федорович",
+                        "teacher": "Згонников Е.Ф.,",
                         "group": "ИКС-32",
-                        "room": "216",
+                        "room": "Общ1-1",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

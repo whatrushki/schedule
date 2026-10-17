@@ -1,8 +1,92 @@
 [
     {
         "date": "2026-10-19",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
+            {
+                "date": "2026-10-19",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Организация безналичных расчетов",
+                "otUnits": [
+                    {
+                        "teacher": "Шумина Е.Н.",
+                        "group": "БД-31",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Организация безналичных расчетов",
+                "otUnits": [
+                    {
+                        "teacher": "Шумина Е.Н.",
+                        "group": "БД-31",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Экономика и управление",
+                "otUnits": [
+                    {
+                        "teacher": "Шумина Е.Н.",
+                        "group": "ИБТ-21",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Шумина О.О.",
+                        "group": "БД-21",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Шумина О.О.",
+                        "group": "БУ-11",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-10-19",
                 "number": 4,
@@ -11,16 +95,24 @@
                 "subject": "Статистика",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Ольга Олеговна",
+                        "teacher": "Шумина О.О.",
                         "group": "БУ-22",
                         "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Шумина Е.Н.",
+                        "group": "ИБТ-21",
+                        "room": "40",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -30,16 +122,24 @@
                 "subject": "Статистика",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Ольга Олеговна",
+                        "teacher": "Шумина О.О.",
                         "group": "БУ-21",
                         "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Шумина Е.Н.",
+                        "group": "БД-21",
+                        "room": "40",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -49,7 +149,7 @@
                 "subject": "Статистика",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Ольга Олеговна",
+                        "teacher": "Шумина О.О.",
                         "group": "БУ-22",
                         "room": "17",
                         "additional": "2",
@@ -58,7 +158,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

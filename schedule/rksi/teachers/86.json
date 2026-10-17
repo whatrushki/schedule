@@ -1,8 +1,27 @@
 [
     {
         "date": "2026-10-19",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
+            {
+                "date": "2026-10-19",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова С.Ю.",
+                        "group": "ИКС-32",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-10-19",
                 "number": 4,
@@ -11,16 +30,16 @@
                 "subject": "Инженерная и компьютерная графика",
                 "otUnits": [
                     {
-                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "teacher": "Пустоветова С.Ю.",
                         "group": "ИБТ-23",
-                        "room": "43",
+                        "room": "20",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -30,16 +49,16 @@
                 "subject": "Инженерная и компьютерная графика",
                 "otUnits": [
                     {
-                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "teacher": "Пустоветова С.Ю.",
                         "group": "ИБТ-21",
-                        "room": "43",
+                        "room": "20",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -49,16 +68,16 @@
                 "subject": "Инженерная и компьютерная графика",
                 "otUnits": [
                     {
-                        "teacher": "Пустоветова Светлана Юрьевна",
+                        "teacher": "Пустоветова С.Ю.",
                         "group": "ИБТ-22",
-                        "room": "43",
+                        "room": "20",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

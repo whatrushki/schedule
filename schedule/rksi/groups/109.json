@@ -8,7 +8,7 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Эксплуатация объектов сетевой инфраструктуры",
+                "subject": "Администрирование сетевых операционных систем",
                 "otUnits": [
                     {
                         "teacher": "Савчук И.С.",
@@ -27,7 +27,7 @@
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Эксплуатация объектов сетевой инфраструктуры",
+                "subject": "Администрирование сетевых операционных систем",
                 "otUnits": [
                     {
                         "teacher": "Савчук И.С.",
@@ -45,45 +45,64 @@
     },
     {
         "date": "2026-10-19",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-19",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Эксплуатация объектов сетевой инфраструктуры",
+                "subject": "Администрирование сетевых операционных систем",
                 "otUnits": [
                     {
-                        "teacher": "____",
+                        "teacher": "Савчук И.С.",
                         "group": "СА-46",
-                        "room": "Вак1",
-                        "additional": "Вак1",
+                        "room": "110",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Эксплуатация объектов сетевой инфраструктуры",
+                "subject": "Администрирование сетевых операционных систем",
                 "otUnits": [
                     {
-                        "teacher": "____",
+                        "teacher": "Савчук И.С.",
                         "group": "СА-46",
-                        "room": "Вак1",
-                        "additional": "Вак1",
+                        "room": "325",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Барна Н.В.",
+                        "group": "СА-46",
+                        "room": "210а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-10-19",
@@ -95,14 +114,14 @@
                     {
                         "teacher": "Заводнов Н.А.",
                         "group": "СА-46",
-                        "room": "109",
+                        "room": "110",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -114,14 +133,14 @@
                     {
                         "teacher": "Заводнов Н.А.",
                         "group": "СА-46",
-                        "room": "109",
+                        "room": "110",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -219,17 +238,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Ефремова О.П.",
                         "group": "СА-46",
-                        "room": "315а",
+                        "room": "111",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ефремова О.П.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "СА-46",
-                        "room": "111",
+                        "room": "315а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

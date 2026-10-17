@@ -51,7 +51,7 @@
                     {
                         "teacher": "Гвоздецкая Г.И.",
                         "group": "ИКС-12",
-                        "room": "408",
+                        "room": "320",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -95,14 +95,14 @@
                     {
                         "teacher": "Шабранская П.Е.",
                         "group": "ИКС-12",
-                        "room": "110",
+                        "room": "314",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -114,14 +114,14 @@
                     {
                         "teacher": "Пильгун И.С.",
                         "group": "ИКС-12",
-                        "room": "410",
+                        "room": "412",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -133,14 +133,14 @@
                     {
                         "teacher": "Рыбальченко Т.Б.",
                         "group": "ИКС-12",
-                        "room": "319",
+                        "room": "210",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -148,9 +148,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Пятибратов Д.В.",
+                        "group": "ИКС-12",
+                        "room": "307",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

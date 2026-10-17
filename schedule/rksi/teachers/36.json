@@ -121,7 +121,7 @@
     },
     {
         "date": "2026-10-19",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-19",
@@ -131,16 +131,16 @@
                 "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Зурова Алина Евгеньевна",
+                        "teacher": "Зурова А.Е.",
                         "group": "ИКС-21",
-                        "room": "118",
+                        "room": "212",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -150,16 +150,43 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Зурова Алина Евгеньевна",
+                        "teacher": "Зурова А.Е.",
                         "group": "СА-37",
-                        "room": "Общ№1-2",
-                        "additional": "Общ№1-2",
+                        "room": "401",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "СА-13",
+                        "room": "Акт.зал",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "СА-17",
+                        "room": "Акт.зал",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-10-19",
@@ -169,16 +196,16 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Зурова Алина Евгеньевна",
+                        "teacher": "Зурова А.Е.",
                         "group": "СА-37",
-                        "room": "Общ№1-2",
-                        "additional": "Общ№1-2",
+                        "room": "401",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -188,16 +215,16 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Зурова Алина Евгеньевна",
+                        "teacher": "Зурова А.Е.",
                         "group": "СА-37",
-                        "room": "Общ№1-2",
-                        "additional": "Общ№1-2",
+                        "room": "325",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-19",
@@ -207,16 +234,16 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Зурова Алина Евгеньевна",
+                        "teacher": "Зурова А.Е.",
                         "group": "СА-37",
-                        "room": "Общ№1-2",
-                        "additional": "Общ№1-2",
+                        "room": "325",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -827,7 +854,7 @@
                 "otUnits": [
                     {
                         "teacher": "Зурова Алина Евгеньевна",
-                        "group": "ИКС-23",
+                        "group": "ИКС-22",
                         "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
@@ -835,7 +862,7 @@
                     },
                     {
                         "teacher": "Зурова Алина Евгеньевна",
-                        "group": "ИКС-22",
+                        "group": "ИКС-23",
                         "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
@@ -854,7 +881,7 @@
                 "otUnits": [
                     {
                         "teacher": "Зурова Алина Евгеньевна",
-                        "group": "ИКС-22",
+                        "group": "ИКС-23",
                         "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
@@ -862,7 +889,7 @@
                     },
                     {
                         "teacher": "Зурова Алина Евгеньевна",
-                        "group": "ИКС-23",
+                        "group": "ИКС-22",
                         "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
