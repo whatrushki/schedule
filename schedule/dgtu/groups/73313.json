@@ -1716,25 +1716,6 @@
             },
             {
                 "date": "2026-10-12",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Инженерная и компьютерная графика",
-                "otUnits": [
-                    {
-                        "teacher": "Фисунова Е. И.",
-                        "group": "АПМ11",
-                        "room": "238",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-12",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
@@ -1760,6 +1741,25 @@
         "lessons": [
             {
                 "date": "2026-10-13",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "351",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -1767,7 +1767,7 @@
                 "otUnits": [
                     {
                         "teacher": "Иванова А. А.",
-                        "group": "АПМ11",
+                        "group": "АПМ11, АПМ11",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
@@ -1782,12 +1782,12 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "пр Высшая математика",
+                "subject": "лек Инженерная и компьютерная графика",
                 "otUnits": [
                     {
-                        "teacher": "Ворович Е. И.",
+                        "teacher": "Фисунова Е. И.",
                         "group": "АПМ11",
-                        "room": "407",
+                        "room": "374",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1804,15 +1804,15 @@
         "lessons": [
             {
                 "date": "2026-10-14",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Высшая математика",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Основы проектной деятельности (IT в машиностроении)",
                 "otUnits": [
                     {
-                        "teacher": "Ворович Е. И.",
+                        "teacher": "Токарев П. В.",
                         "group": "АПМ11",
-                        "room": "262",
+                        "room": "167",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1823,15 +1823,15 @@
             },
             {
                 "date": "2026-10-14",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Высшая математика",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Химия",
                 "otUnits": [
                     {
-                        "teacher": "Ворович Е. И.",
+                        "teacher": "Задошенко Е. Г.",
                         "group": "АПМ11",
-                        "room": "283",
+                        "room": "478",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1848,16 +1848,16 @@
         "lessons": [
             {
                 "date": "2026-10-15",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек История России",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Высшая математика",
                 "otUnits": [
                     {
-                        "teacher": "Булыгин Ю. А.",
+                        "teacher": "Ворович Е. И.",
                         "group": "АПМ11",
-                        "room": "538",
-                        "additional": "8",
+                        "room": "480б",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1867,15 +1867,59 @@
             },
             {
                 "date": "2026-10-15",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "219",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-16",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "лек Высшая математика",
                 "otUnits": [
                     {
                         "teacher": "Ворович Е. И.",
                         "group": "АПМ11",
-                        "room": "460",
+                        "room": "412",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-16",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "193б",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1892,15 +1936,91 @@
         "lessons": [
             {
                 "date": "2026-10-17",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "424",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "283",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
+                "subject": "лаб Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е. И.",
+                        "group": "АПМ11",
+                        "room": "193б",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е. И.",
+                        "group": "АПМ11",
+                        "room": "027",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
                 "subject": "пр История России",
                 "otUnits": [
                     {
                         "teacher": "Кальниченко В. Н.",
                         "group": "АПМ11",
-                        "room": "445",
+                        "room": "353",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1915,6 +2035,44 @@
         "date": "2026-10-19",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-10-19",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Перетятько В. Ю.",
+                        "group": "АПМ11",
+                        "room": "484",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е.И.",
+                        "group": "АПМ11",
+                        "room": "238",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-10-19",
                 "number": 5,
@@ -1933,6 +2091,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-19",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Захарчук О. Е.",
+                        "group": "АПМ11",
+                        "room": "224",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -1942,6 +2119,44 @@
         "lessons": [
             {
                 "date": "2026-10-20",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Перетятько В. Ю.",
+                        "group": "АПМ11",
+                        "room": "484",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Кальниченко В. Н.",
+                        "group": "АПМ11",
+                        "room": "303",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -1949,9 +2164,91 @@
                 "otUnits": [
                     {
                         "teacher": "Иванова А. А.",
-                        "group": "АПМ11",
+                        "group": "АПМ11, АПМ11",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е.И.",
+                        "group": "АПМ11",
+                        "room": "490",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-21",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "407",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-21",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е. И.",
+                        "group": "АПМ11",
+                        "room": "408",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-21",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "211",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1967,6 +2264,44 @@
         "lessons": [
             {
                 "date": "2026-10-22",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "219а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "211",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -1976,6 +2311,44 @@
                         "teacher": "Ворович Е. И.",
                         "group": "АПМ11",
                         "room": "305",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "219а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Гузенко А. И.",
+                        "group": "АПМ11",
+                        "room": "302б",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
@@ -2002,6 +2375,44 @@
                         "group": "АПМ11",
                         "room": "165",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Задошенко Е. Г.",
+                        "group": "АПМ11",
+                        "room": "478",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "606",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2052,6 +2463,126 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-24",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "219а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-24",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "384",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-26",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-26",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "165",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Перетятько В. Ю.",
+                        "group": "АПМ11",
+                        "room": "484",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е. И.",
+                        "group": "АПМ11",
+                        "room": "238",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Основы проектной деятельности (IT в машиностроении)",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев П. В.",
+                        "group": "АПМ11",
+                        "room": "323",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -2061,6 +2592,44 @@
         "lessons": [
             {
                 "date": "2026-10-27",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "419",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "338",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -2068,9 +2637,476 @@
                 "otUnits": [
                     {
                         "teacher": "Иванова А. А.",
-                        "group": "АПМ11",
+                        "group": "АПМ11, АПМ11",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "407",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "035/1",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-28",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Кальниченко В. Н.",
+                        "group": "АПМ11",
+                        "room": "303",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Задошенко Е. Г.",
+                        "group": "АПМ11",
+                        "room": "478",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "262",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "283",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "407",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-29",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Основы проектной деятельности (IT в машиностроении)",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев П. В.",
+                        "group": "АПМ11",
+                        "room": "323",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек История России",
+                "otUnits": [
+                    {
+                        "teacher": "Булыгин Ю. А.",
+                        "group": "АПМ11",
+                        "room": "538",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е.И.",
+                        "group": "АПМ11",
+                        "room": "336",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "460",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "219а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-30",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "406",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-30",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "419",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-31",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-31",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Задошенко Е. Г.",
+                        "group": "АПМ11",
+                        "room": "353",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-31",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Кальниченко В. Н.",
+                        "group": "АПМ11",
+                        "room": "445",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-31",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е.И.",
+                        "group": "АПМ11",
+                        "room": "340",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-31",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "422",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-02",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "211",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Перетятько В. Ю.",
+                        "group": "АПМ11",
+                        "room": "484",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е.И.",
+                        "group": "АПМ11",
+                        "room": "238",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек История России",
+                "otUnits": [
+                    {
+                        "teacher": "Булыгин Ю. А.",
+                        "group": "АПМ11",
+                        "room": "538",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Захарчук О. Е.",
+                        "group": "АПМ11",
+                        "room": "305",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2086,6 +3122,44 @@
         "lessons": [
             {
                 "date": "2026-11-03",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Перетятько В. Ю.",
+                        "group": "АПМ11",
+                        "room": "484",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-03",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "211",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-03",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -2093,9 +3167,299 @@
                 "otUnits": [
                     {
                         "teacher": "Иванова А. А.",
-                        "group": "АПМ11",
+                        "group": "АПМ11, АПМ11",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-03",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е.И.",
+                        "group": "АПМ11",
+                        "room": "490",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-03",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "219а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-05",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "305",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Основы проектной деятельности (IT в машиностроении)",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев П. В.",
+                        "group": "АПМ11",
+                        "room": "323",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Гузенко А. И.",
+                        "group": "АПМ11",
+                        "room": "302б",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "419",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-06",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Кальниченко В. Н.",
+                        "group": "АПМ11",
+                        "room": "165",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-06",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Задошенко Е. Г.",
+                        "group": "АПМ11",
+                        "room": "478",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-06",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "017",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-07",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "445",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-07",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "460",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-09",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Перетятько В. Ю.",
+                        "group": "АПМ11",
+                        "room": "484",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "211",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Основы проектной деятельности (IT в машиностроении)",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев П. В.",
+                        "group": "АПМ11",
+                        "room": "193б",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2111,6 +3475,25 @@
         "lessons": [
             {
                 "date": "2026-11-10",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "211",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -2118,9 +3501,476 @@
                 "otUnits": [
                     {
                         "teacher": "Иванова А. А.",
-                        "group": "АПМ11",
+                        "group": "АПМ11, АПМ11",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "407",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Задошенко Е. Г.",
+                        "group": "АПМ11",
+                        "room": "322",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-11",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "219а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Задошенко Е. Г.",
+                        "group": "АПМ11",
+                        "room": "478",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "262",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "283",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "465а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек История России",
+                "otUnits": [
+                    {
+                        "teacher": "Булыгин Ю. А.",
+                        "group": "АПМ11",
+                        "room": "538",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е.И.",
+                        "group": "АПМ11",
+                        "room": "336",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "460",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-13",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "406",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "419",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "211",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Основы проектной деятельности (IT в машиностроении)",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев П. В.",
+                        "group": "АПМ11",
+                        "room": "323",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-14",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-14",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "398",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "219а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Кальниченко В. Н.",
+                        "group": "АПМ11",
+                        "room": "445",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е.И.",
+                        "group": "АПМ11",
+                        "room": "340",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "606",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-16",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Перетятько В. Ю.",
+                        "group": "АПМ11",
+                        "room": "484",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-16",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "021",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-16",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек История России",
+                "otUnits": [
+                    {
+                        "teacher": "Булыгин Ю. А.",
+                        "group": "АПМ11",
+                        "room": "538",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-16",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Захарчук О. Е.",
+                        "group": "АПМ11",
+                        "room": "305",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2136,6 +3986,44 @@
         "lessons": [
             {
                 "date": "2026-11-17",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Перетятько В. Ю.",
+                        "group": "АПМ11",
+                        "room": "484",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-17",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "211",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-17",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -2143,9 +4031,324 @@
                 "otUnits": [
                     {
                         "teacher": "Иванова А. А.",
-                        "group": "АПМ11",
+                        "group": "АПМ11, АПМ11",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-18",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-18",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "407",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-18",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы проектной деятельности (IT в машиностроении)",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев П. В.",
+                        "group": "АПМ11",
+                        "room": "323",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-19",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-19",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "305",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-19",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Основы проектной деятельности (IT в машиностроении)",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев П. В.",
+                        "group": "АПМ11",
+                        "room": "323",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-19",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Гузенко А. И.",
+                        "group": "АПМ11",
+                        "room": "302б",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-19",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек История России",
+                "otUnits": [
+                    {
+                        "teacher": "Булыгин Ю. А.",
+                        "group": "АПМ11",
+                        "room": "353",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-20",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-20",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Кальниченко В. Н.",
+                        "group": "АПМ11",
+                        "room": "165",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-20",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Задошенко Е. Г.",
+                        "group": "АПМ11",
+                        "room": "478",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-21",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "219а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-21",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "445",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-21",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "460",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-23",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-23",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Перетятько В. Ю.",
+                        "group": "АПМ11",
+                        "room": "484",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-23",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "219а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-23",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Основы проектной деятельности (IT в машиностроении)",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев П. В.",
+                        "group": "АПМ11",
+                        "room": "323",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2168,9 +4371,362 @@
                 "otUnits": [
                     {
                         "teacher": "Иванова А. А.",
-                        "group": "АПМ11",
+                        "group": "АПМ11, АПМ11",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-24",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "407",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-25",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "319",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Задошенко Е. Г.",
+                        "group": "АПМ11",
+                        "room": "478",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "262",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "283",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-26",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-26",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "606",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е.И.",
+                        "group": "АПМ11",
+                        "room": "336",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "460",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "422",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-27",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-27",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "406",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-27",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы проектной деятельности (IT в машиностроении)",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев П. В.",
+                        "group": "АПМ11",
+                        "room": "323",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-28",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Кальниченко В. Н.",
+                        "group": "АПМ11",
+                        "room": "445",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-28",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е.И.",
+                        "group": "АПМ11",
+                        "room": "340",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-30",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Перетятько В. Ю.",
+                        "group": "АПМ11",
+                        "room": "484",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "460",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "356",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Захарчук О. Е.",
+                        "group": "АПМ11",
+                        "room": "305",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2186,6 +4742,44 @@
         "lessons": [
             {
                 "date": "2026-12-01",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Перетятько В. Ю.",
+                        "group": "АПМ11",
+                        "room": "484",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-01",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "211",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-01",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -2193,9 +4787,267 @@
                 "otUnits": [
                     {
                         "teacher": "Иванова А. А.",
-                        "group": "АПМ11",
+                        "group": "АПМ11, АПМ11",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-01",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Задошенко Е. Г.",
+                        "group": "АПМ11",
+                        "room": "478",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-02",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "407",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы проектной деятельности (IT в машиностроении)",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев П. В.",
+                        "group": "АПМ11",
+                        "room": "323",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-03",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "305",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-03",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "219а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-03",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Гузенко А. И.",
+                        "group": "АПМ11",
+                        "room": "302б",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-04",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-04",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Кальниченко В. Н.",
+                        "group": "АПМ11",
+                        "room": "165",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-04",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Задошенко Е. Г.",
+                        "group": "АПМ11",
+                        "room": "478",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-05",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "445",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "460",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-07",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "219а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Основы проектной деятельности (IT в машиностроении)",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев П. В.",
+                        "group": "АПМ11",
+                        "room": "323",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2218,9 +5070,280 @@
                 "otUnits": [
                     {
                         "teacher": "Иванова А. А.",
-                        "group": "АПМ11",
+                        "group": "АПМ11, АПМ11",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "407",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-09",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Задошенко Е. Г.",
+                        "group": "АПМ11",
+                        "room": "478",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "262",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "283",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "035/1",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-10",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е.И.",
+                        "group": "АПМ11",
+                        "room": "336",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "460",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "422",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-11",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "406",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-11",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "211",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы проектной деятельности (IT в машиностроении)",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев П. В.",
+                        "group": "АПМ11",
+                        "room": "323",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-12",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Кальниченко В. Н.",
+                        "group": "АПМ11",
+                        "room": "445",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-12",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е.И.",
+                        "group": "АПМ11",
+                        "room": "340",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2236,6 +5359,25 @@
         "lessons": [
             {
                 "date": "2026-12-15",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "211",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-15",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -2243,9 +5385,423 @@
                 "otUnits": [
                     {
                         "teacher": "Иванова А. А.",
-                        "group": "АПМ11",
+                        "group": "АПМ11, АПМ11",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-16",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "407",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-16",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "219а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-17",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-17",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "351",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-17",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "305",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-17",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е. И.",
+                        "group": "АПМ11",
+                        "room": "303",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-17",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Гузенко А. И.",
+                        "group": "АПМ11",
+                        "room": "302б",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-18",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-18",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Кальниченко В. Н.",
+                        "group": "АПМ11",
+                        "room": "165",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-18",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Задошенко Е. Г.",
+                        "group": "АПМ11",
+                        "room": "478",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-19",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-19",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "445",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-19",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ворович Е. И.",
+                        "group": "АПМ11",
+                        "room": "460",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-21",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "зч Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Захарчук О. Е.",
+                        "group": "АПМ11",
+                        "room": "224",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-22",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-22",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "зчО Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Фисунова Е. И.",
+                        "group": "АПМ11",
+                        "room": "340",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-23",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "зч Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Будянский А. В.",
+                        "group": "АПМ11",
+                        "room": "305",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-24",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-24",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "зч История России",
+                "otUnits": [
+                    {
+                        "teacher": "Булыгин Ю. А.",
+                        "group": "АПМ11",
+                        "room": "353",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-26",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-26",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "зчО Основы проектной деятельности (IT в машиностроении)",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев П. В.",
+                        "group": "АПМ11",
+                        "room": "035/1",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-28",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "зчО Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Малахова Н. Н.",
+                        "group": "АПМ11",
+                        "room": "353",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-29",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "зч Права человека",
+                "otUnits": [
+                    {
+                        "teacher": "Анциферова Н. А.",
+                        "group": "АПМ11",
+                        "room": "319",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-30",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "зч Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Задошенко Е. Г.",
+                        "group": "АПМ11",
+                        "room": "478",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
