@@ -1,19 +1,38 @@
 [
     {
-        "date": "2026-09-04",
+        "date": "2026-10-23",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-04",
+                "date": "2026-10-23",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
-                "subject": "лаб Ветеринарная фармакология. Токсикология",
+                "subject": "пр Фармакология",
                 "otUnits": [
                     {
                         "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕВ33",
-                        "room": "202",
+                        "group": "ЕФ32",
+                        "room": "205",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Фармакология",
+                "otUnits": [
+                    {
+                        "teacher": "Долгоносов Н. Ю.",
+                        "group": "ЕФ31",
+                        "room": "501",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
@@ -25,21 +44,21 @@
         ]
     },
     {
-        "date": "2026-09-05",
+        "date": "2026-10-24",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-05",
+                "date": "2026-10-24",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "пр Клиническая фармакология",
+                "subject": "пр Фармакология",
                 "otUnits": [
                     {
                         "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕФ51",
-                        "room": "301",
-                        "additional": "6",
+                        "group": "ЕФ31",
+                        "room": "",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -48,7 +67,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-05",
+                "date": "2026-10-24",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -57,7 +76,7 @@
                     {
                         "teacher": "Долгоносов Н. Ю.",
                         "group": "ЕВ31",
-                        "room": "202",
+                        "room": "502",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
@@ -67,16 +86,16 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-05",
+                "date": "2026-10-24",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "пр Фармакология",
+                "subject": "лаб Ветеринарная фармакология. Токсикология",
                 "otUnits": [
                     {
                         "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕФ32",
-                        "room": "501",
+                        "group": "ЕВ33",
+                        "room": "502",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
@@ -86,7 +105,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-05",
+                "date": "2026-10-24",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -94,76 +113,7 @@
                 "otUnits": [
                     {
                         "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕФ31",
-                        "room": "301",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-11",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-11",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Ветеринарная фармакология. Токсикология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕВ33",
-                        "room": "202",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-11",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Фармакология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
                         "group": "ЕФ32",
-                        "room": "518",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-12",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-12",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Фармакология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕФ31",
                         "room": "205",
                         "additional": "6",
                         "onlineUrl": null,
@@ -174,29 +124,10 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-12",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Ветеринарная фармакология. Токсикология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕВ31",
-                        "room": "202",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-12",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
+                "date": "2026-10-24",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
                 "subject": "пр Фармакология",
                 "otUnits": [
                     {
@@ -210,168 +141,23 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-09-12",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Клиническая фармакология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕФ51",
-                        "room": "301",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
     {
-        "date": "2026-09-18",
+        "date": "2026-10-27",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-18",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Ветеринарная фармакология. Токсикология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕВ33",
-                        "room": "202",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-18",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
+                "date": "2026-10-27",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
                 "subject": "пр Фармакология",
                 "otUnits": [
                     {
                         "teacher": "Долгоносов Н. Ю.",
                         "group": "ЕФ32",
-                        "room": "518",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-19",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Фармакология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕФ31",
-                        "room": "205",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Ветеринарная фармакология. Токсикология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕВ31",
-                        "room": "202",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Фармакология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕФ32",
-                        "room": "501",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-19",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Клиническая фармакология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕФ51",
-                        "room": "301",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-23",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Фармакология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕФ31",
                         "room": "505",
                         "additional": "6",
                         "onlineUrl": null,
@@ -384,20 +170,20 @@
         ]
     },
     {
-        "date": "2026-09-25",
+        "date": "2026-10-30",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-25",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Фармакология",
+                "date": "2026-10-30",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Ветеринарная фармакология. Токсикология",
                 "otUnits": [
                     {
                         "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕФ31",
-                        "room": "301",
+                        "group": "ЕВ31",
+                        "room": "502",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
@@ -409,30 +195,11 @@
         ]
     },
     {
-        "date": "2026-09-26",
+        "date": "2026-10-31",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-26",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Ветеринарная фармакология. Токсикология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕВ31",
-                        "room": "202",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-09-26",
+                "date": "2026-10-31",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -449,78 +216,9 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-02",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Фармакология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕФ31",
-                        "room": "205",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-03",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-03",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Ветеринарная фармакология. Токсикология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕВ31",
-                        "room": "402",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             },
             {
-                "date": "2026-10-03",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Ветеринарная фармакология. Токсикология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕВ33",
-                        "room": "502",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-03",
+                "date": "2026-10-31",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -529,56 +227,6 @@
                     {
                         "teacher": "Долгоносов Н. Ю.",
                         "group": "ЕФ32",
-                        "room": "402",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-08",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-08",
-                "number": 0,
-                "startTime": "15:00",
-                "endTime": "18:00",
-                "subject": "Ликвидация академических задолженностей",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "",
-                        "room": "403",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "UNKNOWN",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-09",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-09",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Фармакология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕФ31",
                         "room": "501",
                         "additional": "6",
                         "onlineUrl": null,
@@ -589,186 +237,16 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-09",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
+                "date": "2026-10-31",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
                 "subject": "пр Фармакология",
                 "otUnits": [
                     {
                         "teacher": "Долгоносов Н. Ю.",
                         "group": "ЕФ31",
                         "room": "501",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-10",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-10",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Ветеринарная фармакология. Токсикология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕВ33",
-                        "room": "502",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-10",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Ветеринарная фармакология. Токсикология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕВ31",
-                        "room": "507",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-10",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Фармакология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕФ32",
-                        "room": "305",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-10",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "пр Фармакология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕФ32",
-                        "room": "039",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-16",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-16",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Ветеринарная фармакология. Токсикология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕВ31",
-                        "room": "502",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-16",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Фармакология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕФ31",
-                        "room": "501",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-17",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-17",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Фармакология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕФ32",
-                        "room": "",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-17",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Ветеринарная фармакология. Токсикология",
-                "otUnits": [
-                    {
-                        "teacher": "Долгоносов Н. Ю.",
-                        "group": "ЕВ33",
-                        "room": "502",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
