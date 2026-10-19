@@ -83,7 +83,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-20",
@@ -95,14 +95,14 @@
                     {
                         "teacher": "Черевко А.Д.",
                         "group": "ИС-31",
-                        "room": "306",
+                        "room": "312",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-20",
@@ -114,14 +114,14 @@
                     {
                         "teacher": "Трифанкова А.А.",
                         "group": "ИС-31",
-                        "room": "420",
+                        "room": "306",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-20",
@@ -141,6 +141,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Разработка мобильных приложений",
+                "otUnits": [
+                    {
+                        "teacher": "Черевко А.Д.",
+                        "group": "ИС-31",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
