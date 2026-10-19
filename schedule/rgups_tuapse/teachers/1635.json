@@ -1,112 +1,5 @@
 [
     {
-        "date": "2026-10-16",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-16",
-                "number": 1,
-                "startTime": "08:20",
-                "endTime": "09:50",
-                "subject": "Основы бережливого производства",
-                "otUnits": [
-                    {
-                        "teacher": "Токарев В.Ю.",
-                        "group": "ПМ-2-023",
-                        "room": "-",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-16",
-                "number": 2,
-                "startTime": "10:05",
-                "endTime": "11:35",
-                "subject": "Основы бережливого производства",
-                "otUnits": [
-                    {
-                        "teacher": "Токарев В.Ю.",
-                        "group": "ПМ-2-024",
-                        "room": "-",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-16",
-                "number": 3,
-                "startTime": "12:05",
-                "endTime": "13:35",
-                "subject": "Основы финансовой грамотности",
-                "otUnits": [
-                    {
-                        "teacher": "Токарев В.Ю.",
-                        "group": "ЭК-2-006",
-                        "room": "-",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-17",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-17",
-                "number": 1,
-                "startTime": "08:20",
-                "endTime": "09:50",
-                "subject": "Основы финансовой грамотности",
-                "otUnits": [
-                    {
-                        "teacher": "Токарев В.Ю.",
-                        "group": "ПМ-2-023",
-                        "room": "-",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-17",
-                "number": 2,
-                "startTime": "10:05",
-                "endTime": "11:35",
-                "subject": "Основы финансовой грамотности",
-                "otUnits": [
-                    {
-                        "teacher": "Токарев В.Ю.",
-                        "group": "ПМ-2-024",
-                        "room": "-",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-23",
         "scheduleType": "COMMON",
         "lessons": [
@@ -119,7 +12,7 @@
                 "otUnits": [
                     {
                         "teacher": "Токарев В.Ю.",
-                        "group": "ЭК-2-006",
+                        "group": "ПМ-2-024",
                         "room": "-",
                         "additional": "",
                         "onlineUrl": null,
@@ -127,7 +20,7 @@
                     },
                     {
                         "teacher": "Токарев В.Ю.",
-                        "group": "ПМ-2-024",
+                        "group": "ЭК-2-006",
                         "room": "-",
                         "additional": "",
                         "onlineUrl": null,
@@ -217,6 +110,69 @@
                     }
                 ],
                 "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-30",
+                "number": 1,
+                "startTime": "08:20",
+                "endTime": "09:50",
+                "subject": "Основы бережливого производства",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев В.Ю.",
+                        "group": "ПМ-2-023",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-30",
+                "number": 2,
+                "startTime": "10:05",
+                "endTime": "11:35",
+                "subject": "Основы бережливого производства",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев В.Ю.",
+                        "group": "ПМ-2-024",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-30",
+                "number": 3,
+                "startTime": "12:05",
+                "endTime": "13:35",
+                "subject": "Основы финансовой грамотности",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев В.Ю.",
+                        "group": "ЭК-2-006",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
