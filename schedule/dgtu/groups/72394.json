@@ -2440,7 +2440,7 @@
                     {
                         "teacher": "Ганжур М. А.",
                         "group": "ВПИЭ41",
-                        "room": "492",
+                        "room": "416",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2484,7 +2484,7 @@
                     {
                         "teacher": "Будянский А. В.",
                         "group": "ВПИЭ41",
-                        "room": "388",
+                        "room": "031",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2503,7 +2503,7 @@
                     {
                         "teacher": "Кузнецова И. С.",
                         "group": "ВПИЭ41",
-                        "room": "105",
+                        "room": "031",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2522,7 +2522,7 @@
                     {
                         "teacher": "Кузнецова И. С.",
                         "group": "ВПИЭ41",
-                        "room": "105",
+                        "room": "140",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2596,8 +2596,16 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лек Военная кафедра (КДВ оф.запаса чт)",
+                "subject": "лаб Информационное обеспечение интеллектуального анализа данных",
                 "otUnits": [
+                    {
+                        "teacher": "Жолобова Е. А.",
+                        "group": "ВПИЭ41",
+                        "room": "383б",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Полковник7",
                         "group": "ВПИЭ41",
@@ -2759,7 +2767,7 @@
                     {
                         "teacher": "Жолобова Е. А.",
                         "group": "ВПИЭ41",
-                        "room": "313",
+                        "room": "292",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2814,6 +2822,25 @@
             },
             {
                 "date": "2026-10-26",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лаб Проектирование информационных систем",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова И. С.",
+                        "group": "ВПИЭ41",
+                        "room": "492",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-26",
                 "number": 7,
                 "startTime": "19:30",
                 "endTime": "21:05",
@@ -2822,7 +2849,7 @@
                     {
                         "teacher": "Климова Е. Н.",
                         "group": "ВПИЭ41",
-                        "room": "489",
+                        "room": "477",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2886,25 +2913,6 @@
                         "teacher": "Ганжур М. А.",
                         "group": "ВПИЭ41",
                         "room": "336",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-27",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "лек Спецкурс для объектов профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ганжур М. А.",
-                        "group": "ВПИЭ41",
-                        "room": "492",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3172,69 +3180,6 @@
         ]
     },
     {
-        "date": "2026-11-03",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-03",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Компьютерные информационные системы бухгалтерского и управленческого учета",
-                "otUnits": [
-                    {
-                        "teacher": "Будянский А. В.",
-                        "group": "ВПИЭ41",
-                        "room": "388",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-03",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Проектирование информационных систем",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова И. С.",
-                        "group": "ВПИЭ41",
-                        "room": "467",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-03",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Проектирование информационных систем",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова И. С.",
-                        "group": "ВПИЭ41",
-                        "room": "105",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-05",
         "scheduleType": "COMMON",
         "lessons": [
@@ -3393,245 +3338,6 @@
                         "group": "ВПИЭ41",
                         "room": "Шаповалова8",
                         "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Интеллектуальные информационные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Климова Е. Н.",
-                        "group": "ВПИЭ41",
-                        "room": "467",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Спецкурс для объектов профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ганжур М. А.",
-                        "group": "ВПИЭ41",
-                        "room": "477",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-07",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-07",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Информационное обеспечение интеллектуального анализа данных",
-                "otUnits": [
-                    {
-                        "teacher": "Жолобова Е. А.",
-                        "group": "ВПИЭ41",
-                        "room": "313",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-07",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Информационное обеспечение интеллектуального анализа данных",
-                "otUnits": [
-                    {
-                        "teacher": "Жолобова Е. А.",
-                        "group": "ВПИЭ41",
-                        "room": "367а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-09",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-09",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Интеллектуальные информационные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Климова Е. Н.",
-                        "group": "ВПИЭ41",
-                        "room": "343",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-09",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Спецкурс для объектов профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ганжур М. А.",
-                        "group": "ВПИЭ41",
-                        "room": "477",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-09",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "лек Интеллектуальные информационные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Климова Е. Н.",
-                        "group": "ВПИЭ41",
-                        "room": "489",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-10",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-10",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Компьютерные информационные системы бухгалтерского и управленческого учета",
-                "otUnits": [
-                    {
-                        "teacher": "Будянский А. В.",
-                        "group": "ВПИЭ41",
-                        "room": "330",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-10",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Проектирование информационных систем",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова И. С.",
-                        "group": "ВПИЭ41",
-                        "room": "492",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-11",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-11",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Компьютерные информационные системы бухгалтерского и управленческого учета",
-                "otUnits": [
-                    {
-                        "teacher": "Будянский А. В.",
-                        "group": "ВПИЭ41",
-                        "room": "218а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-11",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "лаб Компьютерные информационные системы бухгалтерского и управленческого учета",
-                "otUnits": [
-                    {
-                        "teacher": "Будянский А. В.",
-                        "group": "ВПИЭ41",
-                        "room": "317",
-                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3810,113 +3516,6 @@
         ]
     },
     {
-        "date": "2026-11-14",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-14",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Спецкурс для объектов профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ганжур М. А.",
-                        "group": "ВПИЭ41",
-                        "room": "215",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-14",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Информационное обеспечение интеллектуального анализа данных",
-                "otUnits": [
-                    {
-                        "teacher": "Жолобова Е. А.",
-                        "group": "ВПИЭ41",
-                        "room": "367а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-17",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-17",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Компьютерные информационные системы бухгалтерского и управленческого учета",
-                "otUnits": [
-                    {
-                        "teacher": "Будянский А. В.",
-                        "group": "ВПИЭ41",
-                        "room": "388",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-17",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Проектирование информационных систем",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова И. С.",
-                        "group": "ВПИЭ41",
-                        "room": "305",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-17",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Проектирование информационных систем",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова И. С.",
-                        "group": "ВПИЭ41",
-                        "room": "105",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-19",
         "scheduleType": "COMMON",
         "lessons": [
@@ -4075,245 +3674,6 @@
                         "group": "ВПИЭ41",
                         "room": "Шаповалова8",
                         "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-20",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-20",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Спецкурс для объектов профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ганжур М. А.",
-                        "group": "ВПИЭ41",
-                        "room": "477",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-20",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Интеллектуальные информационные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Климова Е. Н.",
-                        "group": "ВПИЭ41",
-                        "room": "467",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-21",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Информационное обеспечение интеллектуального анализа данных",
-                "otUnits": [
-                    {
-                        "teacher": "Жолобова Е. А.",
-                        "group": "ВПИЭ41",
-                        "room": "313",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-21",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Информационное обеспечение интеллектуального анализа данных",
-                "otUnits": [
-                    {
-                        "teacher": "Жолобова Е. А.",
-                        "group": "ВПИЭ41",
-                        "room": "367а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-23",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Интеллектуальные информационные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Климова Е. Н.",
-                        "group": "ВПИЭ41",
-                        "room": "343",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-23",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Спецкурс для объектов профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ганжур М. А.",
-                        "group": "ВПИЭ41",
-                        "room": "477",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-23",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "лек Интеллектуальные информационные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Климова Е. Н.",
-                        "group": "ВПИЭ41",
-                        "room": "489",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-24",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Компьютерные информационные системы бухгалтерского и управленческого учета",
-                "otUnits": [
-                    {
-                        "teacher": "Будянский А. В.",
-                        "group": "ВПИЭ41",
-                        "room": "467",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-24",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Проектирование информационных систем",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова И. С.",
-                        "group": "ВПИЭ41",
-                        "room": "492",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-25",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Компьютерные информационные системы бухгалтерского и управленческого учета",
-                "otUnits": [
-                    {
-                        "teacher": "Будянский А. В.",
-                        "group": "ВПИЭ41",
-                        "room": "218а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "лаб Компьютерные информационные системы бухгалтерского и управленческого учета",
-                "otUnits": [
-                    {
-                        "teacher": "Будянский А. В.",
-                        "group": "ВПИЭ41",
-                        "room": "317",
-                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4492,113 +3852,6 @@
         ]
     },
     {
-        "date": "2026-11-28",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-28",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Информационное обеспечение интеллектуального анализа данных",
-                "otUnits": [
-                    {
-                        "teacher": "Жолобова Е. А.",
-                        "group": "ВПИЭ41",
-                        "room": "367а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-28",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Спецкурс для объектов профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ганжур М. А.",
-                        "group": "ВПИЭ41",
-                        "room": "492",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-01",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-01",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Компьютерные информационные системы бухгалтерского и управленческого учета",
-                "otUnits": [
-                    {
-                        "teacher": "Будянский А. В.",
-                        "group": "ВПИЭ41",
-                        "room": "388",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-01",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Проектирование информационных систем",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова И. С.",
-                        "group": "ВПИЭ41",
-                        "room": "467",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-01",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Проектирование информационных систем",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова И. С.",
-                        "group": "ВПИЭ41",
-                        "room": "105",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-12-03",
         "scheduleType": "COMMON",
         "lessons": [
@@ -4757,245 +4010,6 @@
                         "group": "ВПИЭ41",
                         "room": "Шаповалова8",
                         "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-04",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-04",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Спецкурс для объектов профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ганжур М. А.",
-                        "group": "ВПИЭ41",
-                        "room": "477",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-04",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Интеллектуальные информационные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Климова Е. Н.",
-                        "group": "ВПИЭ41",
-                        "room": "467",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-05",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-05",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Информационное обеспечение интеллектуального анализа данных",
-                "otUnits": [
-                    {
-                        "teacher": "Жолобова Е. А.",
-                        "group": "ВПИЭ41",
-                        "room": "313",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-05",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Информационное обеспечение интеллектуального анализа данных",
-                "otUnits": [
-                    {
-                        "teacher": "Жолобова Е. А.",
-                        "group": "ВПИЭ41",
-                        "room": "388",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-07",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-07",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Интеллектуальные информационные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Климова Е. Н.",
-                        "group": "ВПИЭ41",
-                        "room": "343",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-07",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Спецкурс для объектов профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ганжур М. А.",
-                        "group": "ВПИЭ41",
-                        "room": "477",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-07",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "лек Интеллектуальные информационные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Климова Е. Н.",
-                        "group": "ВПИЭ41",
-                        "room": "489",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-08",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-08",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Компьютерные информационные системы бухгалтерского и управленческого учета",
-                "otUnits": [
-                    {
-                        "teacher": "Будянский А. В.",
-                        "group": "ВПИЭ41",
-                        "room": "467",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-08",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Проектирование информационных систем",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова И. С.",
-                        "group": "ВПИЭ41",
-                        "room": "492",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-09",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-09",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Спецкурс для объектов профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ганжур М. А.",
-                        "group": "ВПИЭ41",
-                        "room": "416",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-09",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Компьютерные информационные системы бухгалтерского и управленческого учета",
-                "otUnits": [
-                    {
-                        "teacher": "Будянский А. В.",
-                        "group": "ВПИЭ41",
-                        "room": "218а",
-                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -5174,75 +4188,6 @@
         ]
     },
     {
-        "date": "2026-12-12",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-12",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Информационное обеспечение интеллектуального анализа данных",
-                "otUnits": [
-                    {
-                        "teacher": "Жолобова Е. А.",
-                        "group": "ВПИЭ41",
-                        "room": "367а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-15",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-15",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Проектирование информационных систем",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова И. С.",
-                        "group": "ВПИЭ41",
-                        "room": "467",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-15",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Проектирование информационных систем",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова И. С.",
-                        "group": "ВПИЭ41",
-                        "room": "105",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-12-17",
         "scheduleType": "COMMON",
         "lessons": [
@@ -5411,125 +4356,6 @@
         ]
     },
     {
-        "date": "2026-12-18",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-18",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Спецкурс для объектов профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ганжур М. А.",
-                        "group": "ВПИЭ41",
-                        "room": "477",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-18",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Интеллектуальные информационные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Климова Е. Н.",
-                        "group": "ВПИЭ41",
-                        "room": "467",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-19",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Информационное обеспечение интеллектуального анализа данных",
-                "otUnits": [
-                    {
-                        "teacher": "Жолобова Е. А.",
-                        "group": "ВПИЭ41",
-                        "room": "388",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-22",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "зч Спецкурс для объектов профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ганжур М. А.",
-                        "group": "ВПИЭ41",
-                        "room": "431",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-23",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "зч Информационное обеспечение интеллектуального анализа данных",
-                "otUnits": [
-                    {
-                        "teacher": "Жолобова Е. А.",
-                        "group": "ВПИЭ41",
-                        "room": "367а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-12-24",
         "scheduleType": "COMMON",
         "lessons": [
@@ -5688,81 +4514,6 @@
                         "group": "ВПИЭ41",
                         "room": "Шаповалова8",
                         "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-25",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "эк Интеллектуальные информационные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Климова Е. Н.",
-                        "group": "ВПИЭ41",
-                        "room": "303",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-28",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-28",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "эк Компьютерные информационные системы бухгалтерского и управленческого учета",
-                "otUnits": [
-                    {
-                        "teacher": "Будянский А. В.",
-                        "group": "ВПИЭ41",
-                        "room": "330",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-30",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-30",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "эк Проектирование информационных систем",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова И. С.",
-                        "group": "ВПИЭ41",
-                        "room": "367а",
-                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
