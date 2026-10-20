@@ -2155,11 +2155,19 @@
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "пр Физическая культура и спорт",
+                "subject": "лек Деловая коммуникация",
                 "otUnits": [
                     {
+                        "teacher": "Захарчук О. Е.",
+                        "group": "ДСО11",
+                        "room": "224",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
                         "teacher": "Михайлюк Н. В.",
-                        "group": "ДСО11, ДСО11",
+                        "group": "ДСО11",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
@@ -2217,7 +2225,7 @@
                     {
                         "teacher": "Романова Е. А.",
                         "group": "ДСО11",
-                        "room": "535",
+                        "room": "317",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -2261,7 +2269,7 @@
                     {
                         "teacher": "Филатова Н. В.",
                         "group": "ДСО11",
-                        "room": "327",
+                        "room": "227",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -2272,9 +2280,9 @@
             },
             {
                 "date": "2026-10-20",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "пр Основы здорового образа жизни",
                 "otUnits": [
                     {
@@ -2282,6 +2290,44 @@
                         "group": "ДСО11",
                         "room": "803",
                         "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Возрастная психофизиология",
+                "otUnits": [
+                    {
+                        "teacher": "Мелещенко Е. А.",
+                        "group": "ДСО11",
+                        "room": "123",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Эгильский Е. Э.",
+                        "group": "ДСО11",
+                        "room": "227",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2515,7 +2561,7 @@
                     {
                         "teacher": "Лунина Е. Б.",
                         "group": "ДСО11",
-                        "room": "424",
+                        "room": "606",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -2545,25 +2591,6 @@
             },
             {
                 "date": "2026-10-22",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Возрастная психофизиология",
-                "otUnits": [
-                    {
-                        "teacher": "Мелещенко Е. А.",
-                        "group": "ДСО11",
-                        "room": "424",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-22",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -2572,7 +2599,7 @@
                     {
                         "teacher": "Гузенко А. И.",
                         "group": "ДСО11",
-                        "room": "231",
+                        "room": "418",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -2608,6 +2635,25 @@
         "lessons": [
             {
                 "date": "2026-10-23",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Общая психология",
+                "otUnits": [
+                    {
+                        "teacher": "Лобода Т. В.",
+                        "group": "ДСО11",
+                        "room": "122",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -2627,25 +2673,6 @@
             },
             {
                 "date": "2026-10-23",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек История России",
-                "otUnits": [
-                    {
-                        "teacher": "Русакова А. А.",
-                        "group": "ДСО11",
-                        "room": "406",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-23",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -2654,26 +2681,7 @@
                     {
                         "teacher": "Эгильский Е. Э.",
                         "group": "ДСО11",
-                        "room": "302",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-23",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Деловая коммуникация.",
-                "otUnits": [
-                    {
-                        "teacher": "Захарчук О. Е.",
-                        "group": "ДСО11",
-                        "room": "224",
+                        "room": "606",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -2688,25 +2696,6 @@
         "date": "2026-10-24",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-10-24",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Основы здорового образа жизни",
-                "otUnits": [
-                    {
-                        "teacher": "Платонова И. Ю.",
-                        "group": "ДСО11",
-                        "room": "808",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-10-24",
                 "number": 2,
@@ -2779,28 +2768,17 @@
                 "otUnits": [
                     {
                         "teacher": "Михайлюк Н. В.",
-                        "group": "ДСО11, ДСО11",
+                        "group": "ДСО11",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-26",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Инклюзия - зона доступа",
-                "otUnits": [
+                    },
                     {
-                        "teacher": "Романова Е. А.",
+                        "teacher": "Михайлюк Н. В.",
                         "group": "ДСО11",
-                        "room": "808",
-                        "additional": "2",
+                        "room": "+",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2818,8 +2796,8 @@
                     {
                         "teacher": "Платонова И. Ю.",
                         "group": "ДСО11",
-                        "room": "",
-                        "additional": "8",
+                        "room": "+",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2873,44 +2851,6 @@
         "lessons": [
             {
                 "date": "2026-10-27",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Деловая коммуникация.",
-                "otUnits": [
-                    {
-                        "teacher": "Захарчук О. Е.",
-                        "group": "ДСО11",
-                        "room": "322",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-27",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Возрастная психофизиология",
-                "otUnits": [
-                    {
-                        "teacher": "Мелещенко Е. А.",
-                        "group": "ДСО11",
-                        "room": "424",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-27",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -2927,44 +2867,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-10-27",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр История России",
-                "otUnits": [
-                    {
-                        "teacher": "Филатова Н. В.",
-                        "group": "ДСО11",
-                        "room": "319а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-27",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Возрастная психофизиология",
-                "otUnits": [
-                    {
-                        "teacher": "Мелещенко Е. А.",
-                        "group": "ДСО11",
-                        "room": "808",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -2972,25 +2874,6 @@
         "date": "2026-10-28",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-10-28",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр История России",
-                "otUnits": [
-                    {
-                        "teacher": "Филатова Н. В.",
-                        "group": "ДСО11",
-                        "room": "021",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-10-28",
                 "number": 2,
@@ -3003,25 +2886,6 @@
                         "group": "ДСО11",
                         "room": "292",
                         "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-28",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек История России",
-                "otUnits": [
-                    {
-                        "teacher": "Русакова А. А.",
-                        "group": "ДСО11",
-                        "room": "432",
-                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3059,50 +2923,6 @@
                         "teacher": "Платонова И. Ю.",
                         "group": "ДСО11",
                         "room": "525",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-29",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-29",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр История России",
-                "otUnits": [
-                    {
-                        "teacher": "Филатова Н. В.",
-                        "group": "ДСО11",
-                        "room": "023",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-29",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Основы российской государственности",
-                "otUnits": [
-                    {
-                        "teacher": "Эгильский Е. Э.",
-                        "group": "ДСО11",
-                        "room": "021",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3208,356 +3028,9 @@
                 "otUnits": [
                     {
                         "teacher": "Михайлюк Н. В.",
-                        "group": "ДСО11, ДСО11",
+                        "group": "ДСО11",
                         "room": "манеж",
                         "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Возрастная психофизиология",
-                "otUnits": [
-                    {
-                        "teacher": "Мелещенко Е. А.",
-                        "group": "ДСО11",
-                        "room": "424",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Возрастная психофизиология",
-                "otUnits": [
-                    {
-                        "teacher": "Мелещенко Е. А.",
-                        "group": "ДСО11",
-                        "room": "219",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Основы российской государственности",
-                "otUnits": [
-                    {
-                        "teacher": "Эгильский Е. Э.",
-                        "group": "ДСО11",
-                        "room": "219",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-03",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-03",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Основы здорового образа жизни",
-                "otUnits": [
-                    {
-                        "teacher": "Платонова И. Ю.",
-                        "group": "ДСО11",
-                        "room": "432",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-03",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Основы российской государственности",
-                "otUnits": [
-                    {
-                        "teacher": "Эгильский Е. Э.",
-                        "group": "ДСО11",
-                        "room": "226",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-05",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-05",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр История России",
-                "otUnits": [
-                    {
-                        "teacher": "Филатова Н. В.",
-                        "group": "ДСО11",
-                        "room": "605",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-05",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Инклюзия - зона доступа",
-                "otUnits": [
-                    {
-                        "teacher": "Романова Е. А.",
-                        "group": "ДСО11",
-                        "room": "021",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-05",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Деловая коммуникация",
-                "otUnits": [
-                    {
-                        "teacher": "Гузенко А. И.",
-                        "group": "ДСО11",
-                        "room": "321",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Основы здорового образа жизни",
-                "otUnits": [
-                    {
-                        "teacher": "Платонова И. Ю.",
-                        "group": "ДСО11",
-                        "room": "",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Возрастная психофизиология",
-                "otUnits": [
-                    {
-                        "teacher": "Мелещенко Е. А.",
-                        "group": "ДСО11",
-                        "room": "808",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Общая психология",
-                "otUnits": [
-                    {
-                        "teacher": "Лунина Е. Б.",
-                        "group": "ДСО11",
-                        "room": "606",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Основы здорового образа жизни",
-                "otUnits": [
-                    {
-                        "teacher": "Платонова И. Ю.",
-                        "group": "ДСО11",
-                        "room": "302",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Деловая коммуникация.",
-                "otUnits": [
-                    {
-                        "teacher": "Захарчук О. Е.",
-                        "group": "ДСО11",
-                        "room": "322",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-07",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-07",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Основы российской государственности",
-                "otUnits": [
-                    {
-                        "teacher": "Эгильский Е. Э.",
-                        "group": "ДСО11",
-                        "room": "602",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-07",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Общая психология",
-                "otUnits": [
-                    {
-                        "teacher": "Лобода Т. В.",
-                        "group": "ДСО11",
-                        "room": "303",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-07",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Общая психология",
-                "otUnits": [
-                    {
-                        "teacher": "Лобода Т. В.",
-                        "group": "ДСО11",
-                        "room": "227",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-07",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Инклюзия - зона доступа",
-                "otUnits": [
-                    {
-                        "teacher": "Романова Е. А.",
-                        "group": "ДСО11",
-                        "room": "024",
-                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3580,375 +3053,9 @@
                 "otUnits": [
                     {
                         "teacher": "Михайлюк Н. В.",
-                        "group": "ДСО11, ДСО11",
+                        "group": "ДСО11",
                         "room": "манеж",
                         "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-09",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Инклюзия - зона доступа",
-                "otUnits": [
-                    {
-                        "teacher": "Романова Е. А.",
-                        "group": "ДСО11",
-                        "room": "808",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-09",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр История России",
-                "otUnits": [
-                    {
-                        "teacher": "Филатова Н. В.",
-                        "group": "ДСО11",
-                        "room": "524",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-09",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Инклюзия - зона доступа",
-                "otUnits": [
-                    {
-                        "teacher": "Романова Е. А.",
-                        "group": "ДСО11",
-                        "room": "540",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-10",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-10",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Деловая коммуникация.",
-                "otUnits": [
-                    {
-                        "teacher": "Захарчук О. Е.",
-                        "group": "ДСО11",
-                        "room": "322",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-10",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Основы российской государственности",
-                "otUnits": [
-                    {
-                        "teacher": "Эгильский Е. Э.",
-                        "group": "ДСО11",
-                        "room": "403",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-10",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Основы здорового образа жизни",
-                "otUnits": [
-                    {
-                        "teacher": "Платонова И. Ю.",
-                        "group": "ДСО11",
-                        "room": "552",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-10",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Инклюзия - зона доступа",
-                "otUnits": [
-                    {
-                        "teacher": "Романова Е. А.",
-                        "group": "ДСО11",
-                        "room": "528",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-10",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр История России",
-                "otUnits": [
-                    {
-                        "teacher": "Филатова Н. В.",
-                        "group": "ДСО11",
-                        "room": "015",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-11",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-11",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Основы здорового образа жизни",
-                "otUnits": [
-                    {
-                        "teacher": "Платонова И. Ю.",
-                        "group": "ДСО11",
-                        "room": "392",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-11",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Общая психология",
-                "otUnits": [
-                    {
-                        "teacher": "Лунина Е. Б.",
-                        "group": "ДСО11",
-                        "room": "424",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-11",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Возрастная психофизиология",
-                "otUnits": [
-                    {
-                        "teacher": "Мелещенко Е. А.",
-                        "group": "ДСО11",
-                        "room": "606",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-13",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-13",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Возрастная психофизиология",
-                "otUnits": [
-                    {
-                        "teacher": "Мелещенко Е. А.",
-                        "group": "ДСО11",
-                        "room": "171",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-13",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек История России",
-                "otUnits": [
-                    {
-                        "teacher": "Русакова А. А.",
-                        "group": "ДСО11",
-                        "room": "412",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-13",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Основы российской государственности",
-                "otUnits": [
-                    {
-                        "teacher": "Эгильский Е. Э.",
-                        "group": "ДСО11",
-                        "room": "226",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-13",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Основы российской государственности",
-                "otUnits": [
-                    {
-                        "teacher": "Эгильский Е. Э.",
-                        "group": "ДСО11",
-                        "room": "406",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-13",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Общая психология",
-                "otUnits": [
-                    {
-                        "teacher": "Лобода Т. В.",
-                        "group": "ДСО11",
-                        "room": "317",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-14",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-14",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Возрастная психофизиология",
-                "otUnits": [
-                    {
-                        "teacher": "Мелещенко Е. А.",
-                        "group": "ДСО11",
-                        "room": "433",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-14",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Основы здорового образа жизни",
-                "otUnits": [
-                    {
-                        "teacher": "Платонова И. Ю.",
-                        "group": "ДСО11",
-                        "room": "322",
-                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3971,85 +3078,9 @@
                 "otUnits": [
                     {
                         "teacher": "Михайлюк Н. В.",
-                        "group": "ДСО11, ДСО11",
+                        "group": "ДСО11",
                         "room": "манеж",
                         "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Основы здорового образа жизни",
-                "otUnits": [
-                    {
-                        "teacher": "Платонова И. Ю.",
-                        "group": "ДСО11",
-                        "room": "526",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Инклюзия - зона доступа",
-                "otUnits": [
-                    {
-                        "teacher": "Романова Е. А.",
-                        "group": "ДСО11",
-                        "room": "024",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Возрастная психофизиология",
-                "otUnits": [
-                    {
-                        "teacher": "Мелещенко Е. А.",
-                        "group": "ДСО11",
-                        "room": "317",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Основы российской государственности",
-                "otUnits": [
-                    {
-                        "teacher": "Эгильский Е. Э.",
-                        "group": "ДСО11",
-                        "room": "227",
-                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4260,214 +3291,6 @@
                         "group": "ДСО11",
                         "room": "304",
                         "additional": "11",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-19",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Возрастная психофизиология",
-                "otUnits": [
-                    {
-                        "teacher": "Мелещенко Е. А.",
-                        "group": "ДСО11",
-                        "room": "021",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-19",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Основы российской государственности",
-                "otUnits": [
-                    {
-                        "teacher": "Эгильский Е. Э.",
-                        "group": "ДСО11",
-                        "room": "529",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-19",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Основы российской государственности",
-                "otUnits": [
-                    {
-                        "teacher": "Эгильский Е. Э.",
-                        "group": "ДСО11",
-                        "room": "226",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-19",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Деловая коммуникация",
-                "otUnits": [
-                    {
-                        "teacher": "Гузенко А. И.",
-                        "group": "ДСО11",
-                        "room": "321",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-20",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-20",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр История России",
-                "otUnits": [
-                    {
-                        "teacher": "Филатова Н. В.",
-                        "group": "ДСО11",
-                        "room": "015",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-20",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Общая психология",
-                "otUnits": [
-                    {
-                        "teacher": "Лунина Е. Б.",
-                        "group": "ДСО11",
-                        "room": "424",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-20",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Деловая коммуникация.",
-                "otUnits": [
-                    {
-                        "teacher": "Захарчук О. Е.",
-                        "group": "ДСО11",
-                        "room": "224",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-21",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Основы здорового образа жизни",
-                "otUnits": [
-                    {
-                        "teacher": "Платонова И. Ю.",
-                        "group": "ДСО11",
-                        "room": "528",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-21",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Общая психология",
-                "otUnits": [
-                    {
-                        "teacher": "Лобода Т. В.",
-                        "group": "ДСО11",
-                        "room": "431",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-21",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр История России",
-                "otUnits": [
-                    {
-                        "teacher": "Филатова Н. В.",
-                        "group": "ДСО11",
-                        "room": "507",
-                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4888,181 +3711,6 @@
                         "group": "ДСО11",
                         "room": "304",
                         "additional": "11",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-21",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "зч Возрастная психофизиология",
-                "otUnits": [
-                    {
-                        "teacher": "Мелещенко Е. А.",
-                        "group": "ДСО11",
-                        "room": "424",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-22",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "зч Деловая коммуникация",
-                "otUnits": [
-                    {
-                        "teacher": "Захарчук О. Е.",
-                        "group": "ДСО11",
-                        "room": "226",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-23",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-23",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "зчО Инклюзия - зона доступа",
-                "otUnits": [
-                    {
-                        "teacher": "Романова Е. А.",
-                        "group": "ДСО11",
-                        "room": "547",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-24",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "зч История России",
-                "otUnits": [
-                    {
-                        "teacher": "Русакова А. А.",
-                        "group": "ДСО11",
-                        "room": "432",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-28",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-28",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "зч Основы здорового образа жизни",
-                "otUnits": [
-                    {
-                        "teacher": "Платонова И. Ю.",
-                        "group": "ДСО11",
-                        "room": "432",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-29",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-29",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "зчО Основы российской государственности",
-                "otUnits": [
-                    {
-                        "teacher": "Эгильский Е. Э.",
-                        "group": "ДСО11",
-                        "room": "406",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-30",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-30",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "эк Общая психология",
-                "otUnits": [
-                    {
-                        "teacher": "Лунина Е. Б.",
-                        "group": "ДСО11",
-                        "room": "317",
-                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
