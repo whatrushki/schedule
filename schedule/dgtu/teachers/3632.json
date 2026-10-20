@@ -1,14 +1,77 @@
 [
     {
-        "date": "2026-10-12",
+        "date": "2026-10-20",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-12",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
+                "date": "2026-10-20",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Эпизоотология и инфекционные болезни",
+                "otUnits": [
+                    {
+                        "teacher": "Карташов С. Н.",
+                        "group": "ЕВ43",
+                        "room": "305",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
                 "subject": "лаб Оперативная хирургия с топографической анатомией",
+                "otUnits": [
+                    {
+                        "teacher": "Карташов С. Н.",
+                        "group": "ЕВ33",
+                        "room": "302б",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-21",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Эндокринология",
+                "otUnits": [
+                    {
+                        "teacher": "Карташов С. Н.",
+                        "group": "ЕВ53",
+                        "room": "205",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-21",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Общая патология",
                 "otUnits": [
                     {
                         "teacher": "Карташов С. Н.",
@@ -25,20 +88,20 @@
         ]
     },
     {
-        "date": "2026-10-13",
+        "date": "2026-10-22",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-13",
+                "date": "2026-10-22",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "лаб Общая патология",
+                "subject": "лек Неврология",
                 "otUnits": [
                     {
                         "teacher": "Карташов С. Н.",
-                        "group": "ЕВ33",
-                        "room": "305",
+                        "group": "ЕВ53",
+                        "room": "502",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
@@ -46,19 +109,70 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-14",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
             {
-                "date": "2026-10-14",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Неврология",
+                "date": "2026-10-22",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Онкология",
+                "otUnits": [
+                    {
+                        "teacher": "Карташов С. Н.",
+                        "group": "ЕВ53",
+                        "room": "502",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Экономика и организация ветеринарного дела",
+                "otUnits": [
+                    {
+                        "teacher": "Карташов С. Н.",
+                        "group": "ЕВ53",
+                        "room": "302а",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Эпизоотология и инфекционные болезни",
+                "otUnits": [
+                    {
+                        "teacher": "Карташов С. Н.",
+                        "group": "ЕВ53",
+                        "room": "205",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Онкология",
                 "otUnits": [
                     {
                         "teacher": "Карташов С. Н.",
@@ -75,15 +189,40 @@
         ]
     },
     {
-        "date": "2026-10-15",
+        "date": "2026-10-23",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-15",
+                "date": "2026-10-23",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Эндокринология",
+                "otUnits": [
+                    {
+                        "teacher": "Карташов С. Н.",
+                        "group": "ЕВ53",
+                        "room": "206",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-24",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-24",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "лаб Эпизоотология и инфекционные болезни",
+                "subject": "лаб Неврология",
                 "otUnits": [
                     {
                         "teacher": "Карташов С. Н.",
@@ -98,15 +237,103 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-15",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Онкология",
+                "date": "2026-10-24",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Общая патология",
+                "otUnits": [
+                    {
+                        "teacher": "Карташов С. Н.",
+                        "group": "ЕВ33",
+                        "room": "205",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-26",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-26",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Онкология",
                 "otUnits": [
                     {
                         "teacher": "Карташов С. Н.",
                         "group": "ЕВ53",
+                        "room": "402",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Оперативная хирургия с топографической анатомией",
+                "otUnits": [
+                    {
+                        "teacher": "Карташов С. Н.",
+                        "group": "ЕВ33",
+                        "room": "205",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Общая патология",
+                "otUnits": [
+                    {
+                        "teacher": "Карташов С. Н.",
+                        "group": "ЕВ33",
+                        "room": "206",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-27",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-27",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Эпизоотология и инфекционные болезни",
+                "otUnits": [
+                    {
+                        "teacher": "Карташов С. Н.",
+                        "group": "ЕВ43",
                         "room": "305",
                         "additional": "6",
                         "onlineUrl": null,
@@ -119,21 +346,78 @@
         ]
     },
     {
-        "date": "2026-10-16",
+        "date": "2026-10-28",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-16",
+                "date": "2026-10-28",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "лаб Экономика и организация ветеринарного дела",
+                "subject": "лаб Общая патология",
+                "otUnits": [
+                    {
+                        "teacher": "Карташов С. Н.",
+                        "group": "ЕВ33",
+                        "room": "403",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Эпизоотология и инфекционные болезни",
                 "otUnits": [
                     {
                         "teacher": "Карташов С. Н.",
                         "group": "ЕВ53",
-                        "room": "303",
-                        "additional": "8",
+                        "room": "703а",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Эндокринология",
+                "otUnits": [
+                    {
+                        "teacher": "Карташов С. Н.",
+                        "group": "ЕВ53",
+                        "room": "501",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Неврология",
+                "otUnits": [
+                    {
+                        "teacher": "Карташов С. Н.",
+                        "group": "ЕВ53",
+                        "room": "206",
+                        "additional": "6",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -144,11 +428,11 @@
         ]
     },
     {
-        "date": "2026-10-17",
+        "date": "2026-10-29",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-17",
+                "date": "2026-10-29",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
@@ -167,16 +451,35 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-17",
+                "date": "2026-10-29",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "лаб Эпизоотология и инфекционные болезни",
+                "subject": "лаб Оперативная хирургия с топографической анатомией",
                 "otUnits": [
                     {
                         "teacher": "Карташов С. Н.",
-                        "group": "ЕВ43",
-                        "room": "302а",
+                        "group": "ЕВ33",
+                        "room": "193",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Экономика и организация ветеринарного дела",
+                "otUnits": [
+                    {
+                        "teacher": "Карташов С. Н.",
+                        "group": "ЕВ53",
+                        "room": "403",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
@@ -186,17 +489,42 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-17",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Онкология",
+                "date": "2026-10-29",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Онкология",
                 "otUnits": [
                     {
                         "teacher": "Карташов С. Н.",
                         "group": "ЕВ53",
-                        "room": "206",
+                        "room": "305",
                         "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-31",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-31",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Эндокринология",
+                "otUnits": [
+                    {
+                        "teacher": "Карташов С. Н.",
+                        "group": "ЕВ53",
+                        "room": "704",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
