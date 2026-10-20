@@ -87,6 +87,25 @@
         "lessons": [
             {
                 "date": "2026-11-06",
+                "number": 3,
+                "startTime": "11:50",
+                "endTime": "13:20",
+                "subject": "л. Стандартизация учетных процессов",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Моложавенко И.С.",
+                        "group": "ЭКOZS-447",
+                        "room": "603",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-06",
                 "number": 4,
                 "startTime": "13:50",
                 "endTime": "15:20",
@@ -95,7 +114,7 @@
                     {
                         "teacher": "доц.Моложавенко И.С.",
                         "group": "ЭКOZS-447",
-                        "room": "602",
+                        "room": "603",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -109,10 +128,29 @@
                 "number": 5,
                 "startTime": "15:30",
                 "endTime": "17:00",
-                "subject": "л. Стандартизация учетных процессов",
+                "subject": "л. Бухгалтерский управленческий учет",
                 "otUnits": [
                     {
-                        "teacher": "доц.Моложавенко И.С.",
+                        "teacher": "доц.Чухрова О.В.",
+                        "group": "ЭКOZS-447",
+                        "room": "602",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-06",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "л. Бухгалтерский управленческий учет",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Чухрова О.В.",
                         "group": "ЭКOZS-447",
                         "room": "602",
                         "additional": "1",
@@ -209,50 +247,6 @@
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-10",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-10",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "л. Бухгалтерский управленческий учет",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Чухрова О.В.",
-                        "group": "ЭКOZS-447",
-                        "room": "602",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-10",
-                "number": 6,
-                "startTime": "17:10",
-                "endTime": "18:40",
-                "subject": "л. Бухгалтерский управленческий учет",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Чухрова О.В.",
-                        "group": "ЭКOZS-447",
-                        "room": "602",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]
@@ -598,7 +592,7 @@
                     {
                         "teacher": "асс.Бочаров П.Б.",
                         "group": "ЭКOZS-447",
-                        "room": "554",
+                        "room": "255",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -617,7 +611,7 @@
                     {
                         "teacher": "асс.Бочаров П.Б.",
                         "group": "ЭКOZS-447",
-                        "room": "554",
+                        "room": "255",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1145,7 +1139,26 @@
                     {
                         "teacher": "ст.пр.Федоренко И.С.",
                         "group": "ЭКOZS-447",
-                        "room": "516",
+                        "room": "502",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 8,
+                "startTime": "20:20",
+                "endTime": "21:50",
+                "subject": "экз. Проектная деятельность",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Федоренко И.С.",
+                        "group": "ЭКOZS-447",
+                        "room": "502",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1184,20 +1197,20 @@
                 "number": 6,
                 "startTime": "17:10",
                 "endTime": "18:40",
-                "subject": "экз. Курсовая работа",
+                "subject": "экз. Бухгалтерский управленческий учет",
                 "otUnits": [
                     {
-                        "teacher": "в соответствии с нагрузкой",
+                        "teacher": "доц.Чухрова О.В.",
                         "group": "ЭКOZS-447",
-                        "room": "515",
+                        "room": "516",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "доц.Чухрова О.В.",
+                        "teacher": "в соответствии с нагрузкой",
                         "group": "ЭКOZS-447",
-                        "room": "515",
+                        "room": "516",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1222,7 +1235,26 @@
                     {
                         "teacher": "доц.Чесноков С.В.",
                         "group": "ЭКOZS-447",
-                        "room": "503",
+                        "room": "555",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CREDIT",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-12",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "зач. Консолидированная финансовая отчетность",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Чесноков С.В.",
+                        "group": "ЭКOZS-447",
+                        "room": "555",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1239,21 +1271,59 @@
         "lessons": [
             {
                 "date": "2026-12-14",
-                "number": 7,
-                "startTime": "18:45",
-                "endTime": "20:15",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
                 "subject": "зач. Компьютеризация бухгалтерской деятельности",
                 "otUnits": [
                     {
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭКOZS-447",
-                        "room": "503",
+                        "room": "455",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "CREDIT",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "зач. Компьютеризация бухгалтерской деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Кузнецов И.А.",
+                        "group": "ЭКOZS-447",
+                        "room": "455",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CREDIT",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
+                "number": 7,
+                "startTime": "18:45",
+                "endTime": "20:15",
+                "subject": "экз. Анализ финансовой отчетности",
+                "otUnits": [
+                    {
+                        "teacher": "проф.Холодов О.А.",
+                        "group": "ЭКOZS-447",
+                        "room": "555",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
                 "state": "COMMON"
             },
             {
@@ -1266,7 +1336,7 @@
                     {
                         "teacher": "проф.Холодов О.А.",
                         "group": "ЭКOZS-447",
-                        "room": "515",
+                        "room": "555",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

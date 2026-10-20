@@ -87,6 +87,25 @@
         "lessons": [
             {
                 "date": "2026-11-06",
+                "number": 3,
+                "startTime": "11:50",
+                "endTime": "13:20",
+                "subject": "пр. Проектная деятельность",
+                "otUnits": [
+                    {
+                        "teacher": "асс.Письменная О.С.",
+                        "group": "ЭКOZS-448",
+                        "room": "554",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-06",
                 "number": 4,
                 "startTime": "13:50",
                 "endTime": "15:20",
@@ -109,18 +128,37 @@
                 "number": 5,
                 "startTime": "15:30",
                 "endTime": "17:00",
-                "subject": "пр. Проектная деятельность",
+                "subject": "л. Бухгалтерский управленческий учет",
                 "otUnits": [
                     {
-                        "teacher": "асс.Письменная О.С.",
+                        "teacher": "доц.Чухрова О.В.",
                         "group": "ЭКOZS-448",
-                        "room": "255",
+                        "room": "602",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-06",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "л. Бухгалтерский управленческий учет",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Чухрова О.В.",
+                        "group": "ЭКOZS-448",
+                        "room": "602",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]
@@ -209,50 +247,6 @@
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-10",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-10",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "л. Бухгалтерский управленческий учет",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Чухрова О.В.",
-                        "group": "ЭКOZS-448",
-                        "room": "602",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-10",
-                "number": 6,
-                "startTime": "17:10",
-                "endTime": "18:40",
-                "subject": "л. Бухгалтерский управленческий учет",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Чухрова О.В.",
-                        "group": "ЭКOZS-448",
-                        "room": "602",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]
@@ -1068,15 +1062,23 @@
         "lessons": [
             {
                 "date": "2026-12-08",
-                "number": 8,
-                "startTime": "20:20",
-                "endTime": "21:50",
-                "subject": "экз. Налоговый учет и отчетность",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "экз. Курсовая работа",
                 "otUnits": [
                     {
-                        "teacher": "доц.Нестеренко Н.А.",
+                        "teacher": "в соответствии с нагрузкой",
                         "group": "ЭКOZS-448",
-                        "room": "503",
+                        "room": "255",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Чухрова О.В.",
+                        "group": "ЭКOZS-448",
+                        "room": "255",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1096,70 +1098,56 @@
                 "number": 5,
                 "startTime": "15:30",
                 "endTime": "17:00",
-                "subject": "зач. Учетное обеспечение бизнес-планирования",
+                "subject": "экз. Проектная деятельность",
                 "otUnits": [
                     {
-                        "teacher": "доц.Омельченко И.А.",
+                        "teacher": "асс.Письменная О.С.",
                         "group": "ЭКOZS-448",
-                        "room": "554",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CREDIT",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-10",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-10",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "зач. Психология личностного роста",
-                "otUnits": [
-                    {
-                        "teacher": "ст.пр.Кузнецова А.С.",
-                        "group": "ЭКOZS-448",
-                        "room": "255",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CREDIT",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-10",
-                "number": 6,
-                "startTime": "17:10",
-                "endTime": "18:40",
-                "subject": "экз. Бухгалтерский управленческий учет",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Чухрова О.В.",
-                        "group": "ЭКOZS-448",
-                        "room": "515",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "в соответствии с нагрузкой",
-                        "group": "ЭКOZS-448",
-                        "room": "515",
+                        "room": "555",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "экз. Проектная деятельность",
+                "otUnits": [
+                    {
+                        "teacher": "асс.Письменная О.С.",
+                        "group": "ЭКOZS-448",
+                        "room": "555",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 7,
+                "startTime": "18:45",
+                "endTime": "20:15",
+                "subject": "зач. Учетное обеспечение бизнес-планирования",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Омельченко И.А.",
+                        "group": "ЭКOZS-448",
+                        "room": "515",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CREDIT",
                 "state": "COMMON"
             }
         ]
@@ -1170,13 +1158,13 @@
         "lessons": [
             {
                 "date": "2026-12-11",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "экз. Проектная деятельность",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "экз. Налоговый учет и отчетность",
                 "otUnits": [
                     {
-                        "teacher": "асс.Письменная О.С.",
+                        "teacher": "доц.Нестеренко Н.А.",
                         "group": "ЭКOZS-448",
                         "room": "520",
                         "additional": "1",
@@ -1185,6 +1173,44 @@
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-11",
+                "number": 7,
+                "startTime": "18:45",
+                "endTime": "20:15",
+                "subject": "зач. Психология личностного роста",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Кузнецова А.С.",
+                        "group": "ЭКOZS-448",
+                        "room": "515",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CREDIT",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-11",
+                "number": 8,
+                "startTime": "20:20",
+                "endTime": "21:50",
+                "subject": "зач. Психология личностного роста",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Кузнецова А.С.",
+                        "group": "ЭКOZS-448",
+                        "room": "515",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CREDIT",
                 "state": "COMMON"
             }
         ]
@@ -1195,6 +1221,25 @@
         "lessons": [
             {
                 "date": "2026-12-12",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "зач. Консолидированная финансовая отчетность",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Чесноков С.В.",
+                        "group": "ЭКOZS-448",
+                        "room": "555",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CREDIT",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-12",
                 "number": 6,
                 "startTime": "17:10",
                 "endTime": "18:40",
@@ -1203,7 +1248,7 @@
                     {
                         "teacher": "доц.Чесноков С.В.",
                         "group": "ЭКOZS-448",
-                        "room": "503",
+                        "room": "555",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1222,7 +1267,7 @@
                     {
                         "teacher": "доц.Чесноков С.В.",
                         "group": "ЭКOZS-448",
-                        "room": "503",
+                        "room": "515",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1242,18 +1287,18 @@
                 "number": 5,
                 "startTime": "15:30",
                 "endTime": "17:00",
-                "subject": "экз. Анализ финансовой отчетности",
+                "subject": "зач. Компьютеризация бухгалтерской деятельности",
                 "otUnits": [
                     {
-                        "teacher": "проф.Холодов О.А.",
+                        "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭКOZS-448",
-                        "room": "255",
+                        "room": "455",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
+                "type": "CREDIT",
                 "state": "COMMON"
             },
             {
@@ -1266,13 +1311,51 @@
                     {
                         "teacher": "доц.Кузнецов И.А.",
                         "group": "ЭКOZS-448",
-                        "room": "501",
+                        "room": "455",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "CREDIT",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
+                "number": 7,
+                "startTime": "18:45",
+                "endTime": "20:15",
+                "subject": "экз. Анализ финансовой отчетности",
+                "otUnits": [
+                    {
+                        "teacher": "проф.Холодов О.А.",
+                        "group": "ЭКOZS-448",
+                        "room": "555",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
+                "number": 8,
+                "startTime": "20:20",
+                "endTime": "21:50",
+                "subject": "экз. Анализ финансовой отчетности",
+                "otUnits": [
+                    {
+                        "teacher": "проф.Холодов О.А.",
+                        "group": "ЭКOZS-448",
+                        "room": "555",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
                 "state": "COMMON"
             }
         ]
