@@ -1503,8 +1503,8 @@
                     {
                         "teacher": "Кузнецова М. В.",
                         "group": "ВИ12",
-                        "room": "273",
-                        "additional": "1",
+                        "room": "",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1522,8 +1522,8 @@
                     {
                         "teacher": "Кузнецова М. В.",
                         "group": "ВИ12",
-                        "room": "273",
-                        "additional": "1",
+                        "room": "",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1991,7 +1991,7 @@
                 "otUnits": [
                     {
                         "teacher": "Корбан А. Н.",
-                        "group": "ВИ12",
+                        "group": "ВИ12, ВИ12",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
@@ -2023,20 +2023,64 @@
         ]
     },
     {
+        "date": "2026-10-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-13",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Иностранный язык (английский), п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Рец Д. С.",
+                        "group": "ВИ12",
+                        "room": "449",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-13",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Иностранный язык (английский), п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Рец Д. С.",
+                        "group": "ВИ12",
+                        "room": "701",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-14",
         "scheduleType": "COMMON",
         "lessons": [
             {
                 "date": "2026-10-14",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Дискретная математика",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Физика",
                 "otUnits": [
                     {
-                        "teacher": "Богданец Д. А.",
+                        "teacher": "Егорова С. И.",
                         "group": "ВИ12",
-                        "room": "123",
+                        "room": "384",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2050,13 +2094,13 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лек Математический анализ",
+                "subject": "лек Дискретная математика",
                 "otUnits": [
                     {
                         "teacher": "Артамонова Е. А.",
                         "group": "ВИ12",
-                        "room": "423",
-                        "additional": "8",
+                        "room": "238",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2066,16 +2110,16 @@
             },
             {
                 "date": "2026-10-14",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Физика",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Математический анализ",
                 "otUnits": [
                     {
-                        "teacher": "Егорова С. И.",
+                        "teacher": "Артамонова Е. А.",
                         "group": "ВИ12",
-                        "room": "322",
-                        "additional": "8",
+                        "room": "492",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2091,11 +2135,38 @@
         "lessons": [
             {
                 "date": "2026-10-15",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Реализация проекта в области информационной безопасности с использованием технологии компьютерного зрения",
+                "otUnits": [
+                    {
+                        "teacher": "Романов А. М.",
+                        "group": "ВИ12",
+                        "room": "351",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр История России",
+                "subject": "лаб Информатика и программирование",
                 "otUnits": [
+                    {
+                        "teacher": "Шабельник А. Е.",
+                        "group": "ВИ12",
+                        "room": "317",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Овчаренко Д. Л.",
                         "group": "ВИ12",
@@ -2113,12 +2184,31 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лек Дискретная математика",
+                "subject": "пр Иностранный язык (английский), п/г 1",
                 "otUnits": [
                     {
-                        "teacher": "Артамонова Е. А.",
+                        "teacher": "Потанина О. Ю.",
                         "group": "ВИ12",
-                        "room": "238",
+                        "room": "448",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-15",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Реализация проекта в области информационной безопасности с использованием технологии компьютерного зрения",
+                "otUnits": [
+                    {
+                        "teacher": "Романов А. М.",
+                        "group": "ВИ12",
+                        "room": "358",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2135,15 +2225,53 @@
         "lessons": [
             {
                 "date": "2026-10-17",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Дискретная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Богданец Д. А.",
+                        "group": "ВИ12",
+                        "room": "017",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
                 "subject": "пр Математический анализ",
                 "otUnits": [
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИ12",
-                        "room": "319",
+                        "room": "142",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-17",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Иностранный язык (английский), п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Потанина О. Ю.",
+                        "group": "ВИ12",
+                        "room": "444",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2160,6 +2288,25 @@
         "lessons": [
             {
                 "date": "2026-10-19",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Потанина О. Ю.",
+                        "group": "ВИ12",
+                        "room": "218а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-19",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -2168,7 +2315,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИ12",
-                        "room": "467",
+                        "room": "413",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2186,7 +2333,7 @@
                 "otUnits": [
                     {
                         "teacher": "Корбан А. Н.",
-                        "group": "ВИ12",
+                        "group": "ВИ12, ВИ12",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
@@ -2203,14 +2350,6 @@
                 "endTime": "15:50",
                 "subject": "лаб Физика",
                 "otUnits": [
-                    {
-                        "teacher": "Николаенко А. В.",
-                        "group": "ВИ12",
-                        "room": "438",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "Егорова С. И.",
                         "group": "ВИ12",
@@ -2239,8 +2378,8 @@
                     {
                         "teacher": "Овчаренко Д. Л.",
                         "group": "ВИ12",
-                        "room": "015",
-                        "additional": "8",
+                        "room": "405",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2285,6 +2424,44 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Бурякова О. С.",
+                        "group": "ВИ12",
+                        "room": "490",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-20",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Иностранный язык (русский язык как иностранный)",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова М. В.",
+                        "group": "ВИ12",
+                        "room": "444",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -2292,6 +2469,25 @@
         "date": "2026-10-21",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-10-21",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Николаенко А. В.",
+                        "group": "ВИ12",
+                        "room": "143",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-10-21",
                 "number": 2,
@@ -2302,7 +2498,7 @@
                     {
                         "teacher": "Богданец Д. А.",
                         "group": "ВИ12",
-                        "room": "353",
+                        "room": "436",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2340,7 +2536,7 @@
                     {
                         "teacher": "Артамонова Е. А.",
                         "group": "ВИ12",
-                        "room": "374",
+                        "room": "384",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2359,7 +2555,7 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВИ12",
-                        "room": "292",
+                        "room": "130",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2384,7 +2580,45 @@
                     {
                         "teacher": "Егорова С. И.",
                         "group": "ВИ12",
-                        "room": "427",
+                        "room": "433",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Реализация проекта в области информационной безопасности с использованием технологии компьютерного зрения",
+                "otUnits": [
+                    {
+                        "teacher": "Романов А. М.",
+                        "group": "ВИ12",
+                        "room": "433",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Рец Д. С.",
+                        "group": "ВИ12",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2411,6 +2645,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Артамонова Е. А.",
+                        "group": "ВИ12",
+                        "room": "492",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -2418,6 +2671,44 @@
         "date": "2026-10-23",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-10-23",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Шабельник А. Е.",
+                        "group": "ВИ12",
+                        "room": "319",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Потанина О. Ю.",
+                        "group": "ВИ12",
+                        "room": "433",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-10-23",
                 "number": 3,
@@ -2428,8 +2719,128 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИ12",
-                        "room": "406",
-                        "additional": "6",
+                        "room": "433",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Бедоидзе М. В.",
+                        "group": "ВИ12",
+                        "room": "317",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Иностранный язык (русский язык как иностранный)",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова М. В.",
+                        "group": "ВИ12",
+                        "room": "444",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-24",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-24",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Бедоидзе М. В.",
+                        "group": "ВИ12",
+                        "room": "363",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-24",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ВИ12",
+                        "room": "436",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-24",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Иностранный язык (русский язык как иностранный)",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова М. В.",
+                        "group": "ВИ12",
+                        "room": "322",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-24",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Егорова С. И.",
+                        "group": "ВИ12",
+                        "room": "317",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2445,6 +2856,44 @@
         "lessons": [
             {
                 "date": "2026-10-26",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Егорова С. И.",
+                        "group": "ВИ12",
+                        "room": "413",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Бурякова О. С.",
+                        "group": "ВИ12",
+                        "room": "319",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-26",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -2452,9 +2901,337 @@
                 "otUnits": [
                     {
                         "teacher": "Корбан А. Н.",
-                        "group": "ВИ12",
+                        "group": "ВИ12, ВИ12",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Егорова С. И.",
+                        "group": "ВИ12",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-27",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-27",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Иностранный язык (русский язык как иностранный)",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова М. В.",
+                        "group": "ВИ12",
+                        "room": "444",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Бедоидзе М. В.",
+                        "group": "ВИ12",
+                        "room": "467",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Потанина О. Ю.",
+                        "group": "ВИ12",
+                        "room": "408",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Дискретная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Артамонова Е. А.",
+                        "group": "ВИ12",
+                        "room": "238",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-28",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Дискретная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Богданец Д. А.",
+                        "group": "ВИ12",
+                        "room": "123",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Реализация проекта в области информационной безопасности с использованием технологии компьютерного зрения",
+                "otUnits": [
+                    {
+                        "teacher": "Романов А. М.",
+                        "group": "ВИ12",
+                        "room": "470",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Артамонова Е. А.",
+                        "group": "ВИ12",
+                        "room": "423",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Егорова С. И.",
+                        "group": "ВИ12",
+                        "room": "322",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-29",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Потанина О. Ю.",
+                        "group": "ВИ12",
+                        "room": "408",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Овчаренко Д. Л.",
+                        "group": "ВИ12",
+                        "room": "310",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Дискретная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Артамонова Е. А.",
+                        "group": "ВИ12",
+                        "room": "238",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Шабельник А. Е.",
+                        "group": "ВИ12",
+                        "room": "317",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-31",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-31",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Николаенко А. В.",
+                        "group": "ВИ12",
+                        "room": "413",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-31",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ВИ12",
+                        "room": "319",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-31",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Артамонова Е. А.",
+                        "group": "ВИ12",
+                        "room": "492",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }

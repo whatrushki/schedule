@@ -756,8 +756,8 @@
                     {
                         "teacher": "Жукова Т. Н.",
                         "group": "УМФ21",
-                        "room": "801",
-                        "additional": "2",
+                        "room": "",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -817,15 +817,34 @@
         "lessons": [
             {
                 "date": "2026-10-22",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Теория функций комплексного переменного",
+                "otUnits": [
+                    {
+                        "teacher": "Жукова Т. Н.",
+                        "group": "ЭМФ21",
+                        "room": "324",
+                        "additional": "10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
                 "subject": "пр Теория функций комплексного переменного",
                 "otUnits": [
                     {
                         "teacher": "Жукова Т. Н.",
                         "group": "ЭМФ21",
-                        "room": "342",
+                        "room": "324",
                         "additional": "10",
                         "onlineUrl": null,
                         "subject": null
@@ -842,6 +861,31 @@
         "lessons": [
             {
                 "date": "2026-10-23",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Теория функций комплексного переменного",
+                "otUnits": [
+                    {
+                        "teacher": "Жукова Т. Н.",
+                        "group": "УМФ21",
+                        "room": "447",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-27",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-27",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -849,9 +893,9 @@
                 "otUnits": [
                     {
                         "teacher": "Жукова Т. Н.",
-                        "group": "ЭМФ21",
-                        "room": "344",
-                        "additional": "10",
+                        "group": "УМФ21",
+                        "room": "038",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -906,6 +950,31 @@
         ]
     },
     {
+        "date": "2026-10-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-29",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Теория функций комплексного переменного",
+                "otUnits": [
+                    {
+                        "teacher": "Жукова Т. Н.",
+                        "group": "УМФ21",
+                        "room": "801",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -940,6 +1009,25 @@
                         "group": "ЭМФ31",
                         "room": "343",
                         "additional": "10",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-30",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Теория функций комплексного переменного",
+                "otUnits": [
+                    {
+                        "teacher": "Жукова Т. Н.",
+                        "group": "УМФ21",
+                        "room": "801",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
