@@ -442,8 +442,8 @@
                     {
                         "teacher": "Курочкина В. А.",
                         "group": "БТТ12",
-                        "room": "273",
-                        "additional": "1",
+                        "room": "",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1096,20 +1096,39 @@
         ]
     },
     {
-        "date": "2026-10-21",
+        "date": "2026-10-19",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-21",
+                "date": "2026-10-19",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Инженерная и компьютерная графика, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Курочкина В. А.",
+                        "group": "ТМ12",
+                        "room": "446",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-19",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
+                "subject": "лаб Инженерная и компьютерная графика, п/г 2",
                 "otUnits": [
                     {
                         "teacher": "Курочкина В. А.",
                         "group": "ТМ11",
-                        "room": "261",
+                        "room": "408",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1129,12 +1148,12 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лаб Инженерная и компьютерная графика, п/г 2",
+                "subject": "лаб Инженерная и компьютерная графика",
                 "otUnits": [
                     {
                         "teacher": "Курочкина В. А.",
                         "group": "ТКТ11",
-                        "room": "330",
+                        "room": "447",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1151,15 +1170,34 @@
         "lessons": [
             {
                 "date": "2026-10-23",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Курочкина В. А.",
+                        "group": "БПБ12",
+                        "room": "211",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
+                "subject": "пр Инженерная и компьютерная графика",
                 "otUnits": [
                     {
                         "teacher": "Курочкина В. А.",
                         "group": "ТМП11",
-                        "room": "356",
+                        "room": "438",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1201,25 +1239,6 @@
         "lessons": [
             {
                 "date": "2026-10-26",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТМ12",
-                        "room": "330",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-26",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -1229,25 +1248,6 @@
                         "teacher": "Курочкина В. А.",
                         "group": "ТМ11",
                         "room": "467а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-26",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТМ11",
-                        "room": "261",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1280,25 +1280,19 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-29",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
             {
-                "date": "2026-10-29",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
+                "date": "2026-10-28",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Инженерная и компьютерная графика",
                 "otUnits": [
                     {
                         "teacher": "Курочкина В. А.",
-                        "group": "ТМП11",
-                        "room": "122",
-                        "additional": "1",
+                        "group": "БПБ12",
+                        "room": "+",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1309,20 +1303,39 @@
         ]
     },
     {
-        "date": "2026-10-30",
+        "date": "2026-10-29",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-30",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
+                "date": "2026-10-29",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Инженерная и компьютерная графика",
                 "otUnits": [
                     {
                         "teacher": "Курочкина В. А.",
-                        "group": "ТМ11",
-                        "room": "193",
+                        "group": "БПБ12",
+                        "room": "340",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Курочкина В. А.",
+                        "group": "ТМП11",
+                        "room": "122",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1342,506 +1355,12 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лаб Инженерная и компьютерная графика, п/г 2",
+                "subject": "лаб Инженерная и компьютерная графика",
                 "otUnits": [
                     {
                         "teacher": "Курочкина В. А.",
                         "group": "ТКТ11",
                         "room": "105",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТКТ11",
-                        "room": "138",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-07",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-07",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТМП11",
-                        "room": "467а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-11",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-11",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТМ12",
-                        "room": "261",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-12",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-12",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТМП11",
-                        "room": "467а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-13",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-13",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТМ11",
-                        "room": "113",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-18",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-18",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТМП11",
-                        "room": "261",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-20",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-20",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТКТ11",
-                        "room": "138",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-24",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-24",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТМ12",
-                        "room": "261",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-25",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лаб Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТКТ11",
-                        "room": "138",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-26",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТМП11",
-                        "room": "261",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-27",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-27",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТМ11",
-                        "room": "261",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-02",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТКТ11",
-                        "room": "467а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-07",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-07",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТМ12",
-                        "room": "467а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-09",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-09",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТМП11",
-                        "room": "467а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-12",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-12",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТКТ11",
-                        "room": "467а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-14",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-14",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "УТС11",
-                        "room": "138",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-16",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-16",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТМ11",
-                        "room": "261",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-17",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-17",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТМ12",
-                        "room": "261",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-17",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "УТС11",
-                        "room": "138",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-18",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-18",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Инженерная и компьютерная графика, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Курочкина В. А.",
-                        "group": "ТКТ11",
-                        "room": "138",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
