@@ -20,7 +20,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-22",
@@ -30,16 +30,16 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Турянский Игорь Павлович",
+                        "teacher": "Турянский И.П.",
                         "group": "ИС-36",
-                        "room": "с/з2",
+                        "room": "с/з3",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-22",
@@ -49,16 +49,24 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Турянский Игорь Павлович",
+                        "teacher": "Турянский И.П.",
+                        "group": "СА-22",
+                        "room": "с/з2",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Турянский И.П.",
                         "group": "ИС-38",
-                        "room": "с/з4",
+                        "room": "с/з6",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-22",
@@ -68,16 +76,43 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Турянский Игорь Павлович",
+                        "teacher": "Турянский И.П.",
+                        "group": "ИКС-13",
+                        "room": "с/з4",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Турянский И.П.",
                         "group": "ИС-37",
-                        "room": "с/з3",
+                        "room": "с/з5",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-22",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Турянский И.П.",
+                        "group": "ИС-21",
+                        "room": "с/з3",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
