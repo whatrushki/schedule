@@ -68,6 +68,25 @@
         "lessons": [
             {
                 "date": "2026-10-23",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Технология монтажа и настройки абонентского оборудования",
+                "otUnits": [
+                    {
+                        "teacher": "Якубенко С.Я.",
+                        "group": "ИКС-42",
+                        "room": "216а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-23",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
@@ -95,22 +114,14 @@
                     {
                         "teacher": "Новосельцева Е.Ф.",
                         "group": "ИКС-42",
-                        "room": "209а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Чубарова А.Б.",
-                        "group": "ИКС-42",
-                        "room": "106",
+                        "room": "320",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

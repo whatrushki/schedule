@@ -5,22 +5,68 @@
         "lessons": [
             {
                 "date": "2026-10-23",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.А.",
+                        "group": "СА-15",
+                        "room": "420",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.А.",
+                        "group": "ИКС-14",
+                        "room": "420",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-23",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
                 "subject": "Численные методы",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Андроник Эдварди",
+                        "teacher": "Арутюнян А.Э.",
                         "group": "ИС-26",
-                        "room": "406",
+                        "room": "216",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Арутюнян М.А.",
+                        "group": "ИКС-14",
+                        "room": "420",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-23",
@@ -30,73 +76,105 @@
                 "subject": "Численные методы",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Андроник Эдварди",
+                        "teacher": "Арутюнян А.Э.",
                         "group": "ИС-21",
-                        "room": "406",
+                        "room": "216",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "СА-33",
+                        "room": "220",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-23",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Численные методы",
+                "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Андроник Эдварди",
+                        "teacher": "Арутюнян М.М.",
+                        "group": "СА-33",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Арутюнян А.Э.",
                         "group": "ИС-25",
-                        "room": "406",
+                        "room": "216",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-23",
                 "number": 6,
                 "startTime": "16:40",
                 "endTime": "18:10",
-                "subject": "Численные методы",
+                "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Андроник Эдварди",
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-23",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Арутюнян А.Э.",
                         "group": "ИС-24",
-                        "room": "406",
+                        "room": "216",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-23",
                 "number": 7,
                 "startTime": "18:20",
                 "endTime": "19:50",
-                "subject": "Численные методы",
+                "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Андроник Эдварди",
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-25",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Арутюнян А.Э.",
                         "group": "ИС-28",
-                        "room": "406",
+                        "room": "216",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

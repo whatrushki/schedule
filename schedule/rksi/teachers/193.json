@@ -49,14 +49,41 @@
         "lessons": [
             {
                 "date": "2026-10-23",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Теоретические основы конвергенции логических, интеллектуальных сетей и инфокоммуникационных технолог",
+                "otUnits": [
+                    {
+                        "teacher": "Файзуллин А.О.",
+                        "group": "ИКС-51",
+                        "room": "210а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-23",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
                 "subject": "Теоретические основы конвергенции логических, интеллектуальных сетей и инфокоммуникационных технолог",
                 "otUnits": [
                     {
-                        "teacher": "Файзуллин Артём Олегович",
+                        "teacher": "Файзуллин А.О.",
                         "group": "ИКС-52",
+                        "room": "210",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Файзуллин А.О.",
+                        "group": "ИКС-51",
                         "room": "210а",
                         "additional": "1",
                         "onlineUrl": null,
@@ -64,7 +91,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-23",
@@ -74,7 +101,7 @@
                 "subject": "Теоретические основы конвергенции логических, интеллектуальных сетей и инфокоммуникационных технолог",
                 "otUnits": [
                     {
-                        "teacher": "Файзуллин Артём Олегович",
+                        "teacher": "Файзуллин А.О.",
                         "group": "ИКС-51",
                         "room": "210а",
                         "additional": "1",
@@ -83,7 +110,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Теоретические основы конвергенции логических, интеллектуальных сетей и инфокоммуникационных технолог",
+                "otUnits": [
+                    {
+                        "teacher": "Файзуллин А.О.",
+                        "group": "ИКС-52",
+                        "room": "210а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
