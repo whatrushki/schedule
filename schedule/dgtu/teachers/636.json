@@ -467,7 +467,7 @@
                 "otUnits": [
                     {
                         "teacher": "Ковалева В. В.",
-                        "group": "ТМП21, ТМТ21",
+                        "group": "ТМТ21, ТМП21",
                         "room": "219",
                         "additional": "1",
                         "onlineUrl": null,
@@ -862,7 +862,7 @@
                 "otUnits": [
                     {
                         "teacher": "Ковалева В. В.",
-                        "group": "ТМП21, ТМТ21",
+                        "group": "ТМТ21, ТМП21",
                         "room": "282",
                         "additional": "1",
                         "onlineUrl": null,
@@ -1285,7 +1285,7 @@
                 "otUnits": [
                     {
                         "teacher": "Ковалева В. В.",
-                        "group": "ТМП21, ТМТ21",
+                        "group": "ТМТ21, ТМП21",
                         "room": "367а",
                         "additional": "1",
                         "onlineUrl": null,
@@ -2525,7 +2525,7 @@
                 "otUnits": [
                     {
                         "teacher": "Ковалева В. В.",
-                        "group": "ТМП21, ТМТ21",
+                        "group": "ТМТ21, ТМП21",
                         "room": "219",
                         "additional": "8",
                         "onlineUrl": null,
@@ -3353,58 +3353,6 @@
         ]
     },
     {
-        "date": "2026-10-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-22",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Материаловедение",
-                "otUnits": [
-                    {
-                        "teacher": "Ковалева В. В.",
-                        "group": "ИПБТ21",
-                        "room": "219а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-22",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Технология конструкционных материалов",
-                "otUnits": [
-                    {
-                        "teacher": "Ковалева В. В.",
-                        "group": "ИПБК31",
-                        "room": "211",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Ковалева В. В.",
-                        "group": "ИПБК31(6654)",
-                        "room": "211",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-23",
         "scheduleType": "COMMON",
         "lessons": [
@@ -3429,19 +3377,30 @@
             },
             {
                 "date": "2026-10-23",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Методы научного исследования",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Материаловедение",
                 "otUnits": [
                     {
                         "teacher": "Ковалева В. В.",
-                        "group": "ТМП21, ТМТ21",
-                        "room": "292",
+                        "group": "ИПБТ21",
+                        "room": "219а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
-                    },
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Технология конструкционных материалов",
+                "otUnits": [
                     {
                         "teacher": "Ковалева В. В.",
                         "group": "ИПБТ31",
@@ -3467,16 +3426,8 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лаб Методы структурного анализа материалов, п/г 1",
+                "subject": "пр Технология конструкционных материалов",
                 "otUnits": [
-                    {
-                        "teacher": "Ковалева В. В.",
-                        "group": "ТМТ31",
-                        "room": "408",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "Ковалева В. В.",
                         "group": "ИПБП31",
@@ -3674,25 +3625,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-10-27",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Методы структурного анализа материалов",
-                "otUnits": [
-                    {
-                        "teacher": "Ковалева В. В.",
-                        "group": "ТМТ31",
-                        "room": "507",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -3700,25 +3632,6 @@
         "date": "2026-10-28",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-10-28",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Физическая химия, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Ковалева В. В.",
-                        "group": "ТМТ21",
-                        "room": "105",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-10-28",
                 "number": 2,
@@ -3885,25 +3798,6 @@
         "lessons": [
             {
                 "date": "2026-10-30",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Методы структурного анализа материалов",
-                "otUnits": [
-                    {
-                        "teacher": "Ковалева В. В.",
-                        "group": "ТМТ31",
-                        "room": "367а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-30",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -3942,6 +3836,232 @@
             },
             {
                 "date": "2026-10-30",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Ковалева В. В.",
+                        "group": "ЭА21",
+                        "room": "257а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-02",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Ковалева В. В.",
+                        "group": "УМР22",
+                        "room": "215",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Ковалева В. В.",
+                        "group": "УА22",
+                        "room": "446",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-03",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Физическая химия, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Ковалева В. В.",
+                        "group": "ТМТ21",
+                        "room": "408",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-03",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Ковалева В. В.",
+                        "group": "УА21",
+                        "room": "215",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-03",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Методы структурного анализа материалов",
+                "otUnits": [
+                    {
+                        "teacher": "Ковалева В. В.",
+                        "group": "ТМТ31",
+                        "room": "257",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-06",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Методы структурного анализа материалов, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Ковалева В. В.",
+                        "group": "ТМТ31",
+                        "room": "408",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-07",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Ковалева В. В.",
+                        "group": "ЭТМ21",
+                        "room": "219",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-07",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Ковалева В. В.",
+                        "group": "ЭА21",
+                        "room": "220в",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-10",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Ковалева В. В.",
+                        "group": "ЭТМ21",
+                        "room": "223",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-13",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
