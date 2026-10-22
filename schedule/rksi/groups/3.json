@@ -46,7 +46,7 @@
                 "number": 6,
                 "startTime": "16:40",
                 "endTime": "18:10",
-                "subject": "Предмет не указан",
+                "subject": "Доп.занятие",
                 "otUnits": [
                     {
                         "teacher": "Доценко Л.А.",
@@ -65,7 +65,7 @@
                 "number": 7,
                 "startTime": "18:20",
                 "endTime": "19:50",
-                "subject": "Предмет не указан",
+                "subject": "Доп.занятие",
                 "otUnits": [
                     {
                         "teacher": "Доценко Л.А.",
@@ -102,45 +102,45 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-23",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Учет и отчетность расчетов по налогам и сборам в кредитных организациях",
+                "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Е.Н.",
+                        "teacher": "Марченко С.П.",
                         "group": "БД-31",
-                        "room": "40",
+                        "room": "34",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-23",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Организация безналичных расчетов",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Е.Н.",
+                        "teacher": "Растороцкий В.В.",
                         "group": "БД-31",
-                        "room": "40",
+                        "room": "с/з1",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-23",
@@ -152,7 +152,7 @@
                     {
                         "teacher": "Марченко С.П.",
                         "group": "БД-31",
-                        "room": "13",
+                        "room": "33",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -167,7 +167,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-23",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Крылова О.В.",
+                        "group": "БД-31",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
