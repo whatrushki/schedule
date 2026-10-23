@@ -1,14 +1,14 @@
 [
     {
-        "date": "2026-10-22",
+        "date": "2026-10-23",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-22",
+                "date": "2026-10-23",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Социальная психология",
+                "subject": "Безопасность жизнедеятельности",
                 "otUnits": [
                     {
                         "teacher": "Павленко С.Е.",
@@ -25,18 +25,37 @@
         ]
     },
     {
-        "date": "2026-10-23",
+        "date": "2026-10-26",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-23",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "date": "2026-10-26",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
                 "subject": "Социальная психология",
                 "otUnits": [
                     {
-                        "teacher": "Павленко С.Е.",
+                        "teacher": "Павленко Светлана Евгеньевна",
+                        "group": "ИБТ-21",
+                        "room": "43",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:30",
+                "subject": "Социальная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Павленко Светлана Евгеньевна",
                         "group": "ИБТ-21",
                         "room": "13",
                         "additional": "2",
@@ -45,7 +64,32 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-29",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Павленко Светлана Евгеньевна",
+                        "group": "ИБТ-21",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     }

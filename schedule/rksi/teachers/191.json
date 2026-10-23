@@ -1,10 +1,35 @@
 [
     {
-        "date": "2026-10-19",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "date": "2026-10-27",
+        "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-19",
+                "date": "2026-10-27",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Основы безопасности и защиты Родины",
+                "otUnits": [
+                    {
+                        "teacher": "Самохвалова Д.Ю.",
+                        "group": "ТЭС-13",
+                        "room": "103",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-30",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
@@ -13,60 +38,14 @@
                     {
                         "teacher": "Самохвалова Д.Ю.",
                         "group": "РУП-16",
-                        "room": "408",
+                        "room": "214",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-19",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Основы безопасности и защиты Родины",
-                "otUnits": [
-                    {
-                        "teacher": "Самохвалова Д.Ю.",
-                        "group": "ТЭС-13",
-                        "room": "408",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-19",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [
-                    {
-                        "teacher": "Самохвалова Д.Ю.",
-                        "group": "ИКС-24",
-                        "room": "416",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Самохвалова Д.Ю.",
-                        "group": "СА-36",
-                        "room": "416",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CLASS_HOUR",
-                "state": "ADDED"
+                "state": "COMMON"
             }
         ]
     }
