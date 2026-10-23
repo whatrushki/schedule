@@ -1979,6 +1979,25 @@
         "lessons": [
             {
                 "date": "2026-10-22",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31",
+                        "room": "143",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -1988,14 +2007,6 @@
                         "teacher": "Корбан А. Н.",
                         "group": "ВПМ31",
                         "room": "манеж",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Корбан А. Н.",
-                        "group": "ВПМ31",
-                        "room": "+",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
@@ -2052,26 +2063,7 @@
                     {
                         "teacher": "Михалев А. И.",
                         "group": "ВПМ31",
-                        "room": "289",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-22",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "лек Численные методы",
-                "otUnits": [
-                    {
-                        "teacher": "Баранов И. В.",
-                        "group": "ВПМ31",
-                        "room": "143",
+                        "room": "283",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2375,25 +2367,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-10-29",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Методы оптимизации",
-                "otUnits": [
-                    {
-                        "teacher": "Азимова Н. Н.",
-                        "group": "ВПМ31",
-                        "room": "403",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -2524,6 +2497,31 @@
         ]
     },
     {
+        "date": "2026-11-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-02",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31",
+                        "room": "445",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-05",
         "scheduleType": "COMMON",
         "lessons": [
@@ -2539,6 +2537,126 @@
                         "group": "ВПМ31",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Программные технологии математического моделирования",
+                "otUnits": [
+                    {
+                        "teacher": "Короткова А. С.",
+                        "group": "ВПМ31",
+                        "room": "498",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Теория алгоритмов",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31",
+                        "room": "427",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "лек Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ31",
+                        "room": "143",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-07",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Исследование операций и теория игр",
+                "otUnits": [
+                    {
+                        "teacher": "Нурутдинова И. Н.",
+                        "group": "ВПМ31",
+                        "room": "446",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-07",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Исследование операций и теория игр",
+                "otUnits": [
+                    {
+                        "teacher": "Нурутдинова И. Н.",
+                        "group": "ВПМ31",
+                        "room": "282",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-07",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Методы оптимизации",
+                "otUnits": [
+                    {
+                        "teacher": "Богданец Д. А.",
+                        "group": "ВПМ31",
+                        "room": "408",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }

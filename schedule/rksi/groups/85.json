@@ -68,6 +68,25 @@
         "lessons": [
             {
                 "date": "2026-10-24",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Дискретная математика с элементами математической логики",
+                "otUnits": [
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "СА-13",
+                        "room": "414",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-24",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -76,14 +95,14 @@
                     {
                         "teacher": "Долгополая А.С.",
                         "group": "СА-13",
-                        "room": "416",
+                        "room": "414",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-24",
@@ -95,14 +114,14 @@
                     {
                         "teacher": "Коникова Е.А.",
                         "group": "СА-13",
-                        "room": "305",
+                        "room": "325",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-24",
@@ -114,14 +133,14 @@
                     {
                         "teacher": "Коникова Е.А.",
                         "group": "СА-13",
-                        "room": "305",
+                        "room": "325",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

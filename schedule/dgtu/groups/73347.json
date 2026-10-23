@@ -2330,7 +2330,7 @@
                     {
                         "teacher": "Поркшеян В. М.",
                         "group": "ВПМ11",
-                        "room": "436",
+                        "room": "467",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2349,8 +2349,8 @@
                     {
                         "teacher": "Поркшеян В. М.",
                         "group": "ВПМ11",
-                        "room": "+",
-                        "additional": "Главный",
+                        "room": "330",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2431,27 +2431,8 @@
                     {
                         "teacher": "Золотов Н. Б.",
                         "group": "ВПМ11",
-                        "room": "218а",
+                        "room": "282",
                         "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-23",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Основы российской государственности",
-                "otUnits": [
-                    {
-                        "teacher": "Сорокин Г. В.",
-                        "group": "ВПМ11",
-                        "room": "024",
-                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2547,25 +2528,6 @@
         "date": "2026-10-26",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-10-26",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек История России",
-                "otUnits": [
-                    {
-                        "teacher": "Горбунова Л. Н.",
-                        "group": "ВПМ11",
-                        "room": "310",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-10-26",
                 "number": 2,
@@ -2729,44 +2691,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-10-28",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Линейная алгебра и аналитическая геометрия",
-                "otUnits": [
-                    {
-                        "teacher": "Коленникова Н. В.",
-                        "group": "ВПМ11",
-                        "room": "499",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-28",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Иностранный язык (английский)",
-                "otUnits": [
-                    {
-                        "teacher": "Мануйлова Н. С.",
-                        "group": "ВПМ11",
-                        "room": "+",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -2817,13 +2741,13 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лек Математический анализ",
+                "subject": "лек История России",
                 "otUnits": [
                     {
-                        "teacher": "Поркшеян В. М.",
+                        "teacher": "Горбунова Л. Н.",
                         "group": "ВПМ11",
-                        "room": "492",
-                        "additional": "1",
+                        "room": "423",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2984,6 +2908,25 @@
         "lessons": [
             {
                 "date": "2026-11-02",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Захарчук О. Е.",
+                        "group": "ВПМ11",
+                        "room": "224",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -2994,6 +2937,239 @@
                         "group": "ВПМ11",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Математическое моделирование физических процессов",
+                "otUnits": [
+                    {
+                        "teacher": "Золотов Н. Б.",
+                        "group": "ВПМ11",
+                        "room": "485",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-03",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Дискретная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Артамонова Е. А.",
+                        "group": "ВПМ11",
+                        "room": "416",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-03",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Линейная алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Коленникова Н. В.",
+                        "group": "ВПМ11",
+                        "room": "130",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-03",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Сорокин Г. В.",
+                        "group": "ВПМ11",
+                        "room": "507",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-05",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Поркшеян В. М.",
+                        "group": "ВПМ11",
+                        "room": "467",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Поркшеян В. М.",
+                        "group": "ВПМ11",
+                        "room": "223",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Линейная алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Коленникова Н. В.",
+                        "group": "ВПМ11",
+                        "room": "467",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-06",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Поркшеян В. М.",
+                        "group": "ВПМ11",
+                        "room": "282",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-06",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Горбунова Л. Н.",
+                        "group": "ВПМ11",
+                        "room": "402",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-07",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Математическое моделирование физических процессов",
+                "otUnits": [
+                    {
+                        "teacher": "Золотов Н. Б.",
+                        "group": "ВПМ11",
+                        "room": "485",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-07",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Дискретная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Артамонова Е. А.",
+                        "group": "ВПМ11",
+                        "room": "292",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
