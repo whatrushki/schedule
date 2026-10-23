@@ -46,7 +46,7 @@
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "ФИЗКУЛЬТУРА",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
                         "teacher": "Растороцкий В.В.",
@@ -114,6 +114,25 @@
         "lessons": [
             {
                 "date": "2026-10-24",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Кассовые операции банка",
+                "otUnits": [
+                    {
+                        "teacher": "Каверзнева Е.Ю.",
+                        "group": "БД-31",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-24",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -122,14 +141,14 @@
                     {
                         "teacher": "Каверзнева Е.Ю.",
                         "group": "БД-31",
-                        "room": "47",
+                        "room": "40",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-24",
@@ -141,33 +160,33 @@
                     {
                         "teacher": "Каверзнева Е.Ю.",
                         "group": "БД-31",
-                        "room": "47",
+                        "room": "40",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-24",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Кассовые операции банка",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
-                        "teacher": "Каверзнева Е.Ю.",
+                        "teacher": "Растороцкий В.В.",
                         "group": "БД-31",
-                        "room": "47",
+                        "room": "с/з1",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

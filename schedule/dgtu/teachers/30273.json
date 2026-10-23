@@ -1,10 +1,35 @@
 [
     {
-        "date": "2026-09-01",
+        "date": "2026-10-20",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-01",
+                "date": "2026-10-20",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Жданова М. М.",
+                        "group": "ВИ21",
+                        "room": "424",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-21",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -12,8 +37,8 @@
                 "otUnits": [
                     {
                         "teacher": "Жданова М. М.",
-                        "group": "ВИ21",
-                        "room": "492",
+                        "group": "ВИ23",
+                        "room": "218а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -23,382 +48,26 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-01",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Программирование",
+                "date": "2026-10-21",
+                "number": 0,
+                "startTime": "14:30",
+                "endTime": "15:30",
+                "subject": "Ликвидация академических задолженностей",
                 "otUnits": [
                     {
                         "teacher": "Жданова М. М.",
-                        "group": "ВИ23",
-                        "room": "416",
+                        "group": "",
+                        "room": "149",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
+                "type": "UNKNOWN",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-02",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
             {
-                "date": "2026-09-02",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ21, ВИ22, ВИ23",
-                        "room": "492",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-04",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-04",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ22",
-                        "room": "105",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-07",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-07",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ22",
-                        "room": "319",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-08",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-08",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ23",
-                        "room": "416",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-09",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-09",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ21, ВИ22, ВИ23",
-                        "room": "492",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-11",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-11",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ21",
-                        "room": "392",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-14",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-14",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ22",
-                        "room": "388",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-15",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-15",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ23",
-                        "room": "416",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-16",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-16",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ21, ВИ22, ВИ23",
-                        "room": "492",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-18",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-18",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ21",
-                        "room": "392",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-21",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ22",
-                        "room": "319",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-22",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-22",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ23",
-                        "room": "394",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-28",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-28",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ22",
-                        "room": "317",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-09-30",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-09-30",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ23",
-                        "room": "460",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-01",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-01",
+                "date": "2026-10-21",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
@@ -407,7 +76,7 @@
                     {
                         "teacher": "Жданова М. М.",
                         "group": "ВИ21, ВИ22, ВИ23",
-                        "room": "208",
+                        "room": "226",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -419,61 +88,11 @@
         ]
     },
     {
-        "date": "2026-10-02",
+        "date": "2026-10-22",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-02",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ21",
-                        "room": "021",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-05",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-05",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ23",
-                        "room": "394",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-07",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-07",
+                "date": "2026-10-22",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
@@ -482,7 +101,7 @@
                     {
                         "teacher": "Жданова М. М.",
                         "group": "ВИ21",
-                        "room": "394",
+                        "room": "398",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -492,197 +111,22 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-07",
-                "number": 3,
+                "date": "2026-10-22",
+                "number": 0,
                 "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Программирование",
+                "endTime": "13:30",
+                "subject": "Ликвидация академических задолженностей",
                 "otUnits": [
                     {
                         "teacher": "Жданова М. М.",
-                        "group": "ВИ22",
-                        "room": "362",
+                        "group": "",
+                        "room": "149",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-09",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-09",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ21, ВИ22, ВИ23",
-                        "room": "305",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-10",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-10",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "Пр. Специалист по ИС на основе отечественного ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ЦК26СИС_ОПО_02(7223)",
-                        "room": "Онлайн",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-12",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-12",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ22",
-                        "room": "317",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-13",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-13",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ21",
-                        "room": "394",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-15",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-15",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ21, ВИ22, ВИ23",
-                        "room": "208",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-16",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-16",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ВИ23",
-                        "room": "394",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-17",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-17",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "Пр. Специалист по ИС на основе отечественного ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ЦК26СИС_ОПО_02(7223)",
-                        "room": "Онлайн",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
+                "type": "UNKNOWN",
                 "state": "COMMON"
             }
         ]
@@ -713,6 +157,125 @@
         ]
     },
     {
+        "date": "2026-10-26",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-26",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Жданова М. М.",
+                        "group": "ВИ22",
+                        "room": "317",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-28",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Жданова М. М.",
+                        "group": "ВИ22",
+                        "room": "394",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-29",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Жданова М. М.",
+                        "group": "ВИ21, ВИ22, ВИ23",
+                        "room": "394",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Жданова М. М.",
+                        "group": "ВИ22",
+                        "room": "416",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-30",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Жданова М. М.",
+                        "group": "ВИ21",
+                        "room": "416",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-31",
         "scheduleType": "COMMON",
         "lessons": [
@@ -722,219 +285,6 @@
                 "startTime": "17:45",
                 "endTime": "19:20",
                 "subject": "Пр. Специалист по ИС на основе отечественного ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ЦК26СИС_ОПО_02(7223)",
-                        "room": "Онлайн",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-07",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-07",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "Пр. Специалист по ИС на основе отечественного ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ЦК26СИС_ОПО_02(7223)",
-                        "room": "Онлайн",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-14",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-14",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "Пр. Специалист по ИС на основе отечественного ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ЦК26СИС_ОПО_02(7223)",
-                        "room": "Онлайн",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-21",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-21",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "Пр. Специалист по ИС на основе отечественного ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ЦК26СИС_ОПО_02(7223)",
-                        "room": "Онлайн",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-28",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-28",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "Пр. Специалист по ИС на основе отечественного ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ЦК26СИС_ОПО_02(7223)",
-                        "room": "Онлайн",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-05",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-05",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "Пр. Специалист по ИС на основе отечественного ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ЦК26СИС_ОПО_02(7223)",
-                        "room": "Онлайн",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-05",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "Пр. Специалист по ИС на основе отечественного ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ЦК26СИС_ОПО_02(7223)",
-                        "room": "Онлайн",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-12",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-12",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "Пр. Специалист по ИС на основе отечественного ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ЦК26СИС_ОПО_02(7223)",
-                        "room": "Онлайн",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-12",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "Пр. Специалист по ИС на основе отечественного ПО",
-                "otUnits": [
-                    {
-                        "teacher": "Жданова М. М.",
-                        "group": "ЦК26СИС_ОПО_02(7223)",
-                        "room": "Онлайн",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-14",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-14",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": " Специалист по ИС на основе отечественного ПО",
                 "otUnits": [
                     {
                         "teacher": "Жданова М. М.",
