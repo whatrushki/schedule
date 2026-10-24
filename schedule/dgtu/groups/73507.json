@@ -2634,6 +2634,25 @@
         "lessons": [
             {
                 "date": "2026-10-22",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Партко С. А.",
+                        "group": "УНЭ11",
+                        "room": "138",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-22",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -2779,25 +2798,6 @@
         "lessons": [
             {
                 "date": "2026-10-24",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Инженерная и компьютерная графика",
-                "otUnits": [
-                    {
-                        "teacher": "Партко С. А.",
-                        "group": "УНЭ11",
-                        "room": "140",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-24",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -2806,8 +2806,8 @@
                     {
                         "teacher": "Гукасян Л. С.",
                         "group": "УНЭ11",
-                        "room": "+",
-                        "additional": "Главный",
+                        "room": "319а",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2820,13 +2820,13 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лек Философия",
+                "subject": "пр Высшая математика",
                 "otUnits": [
                     {
-                        "teacher": "Орленко О. А.",
+                        "teacher": "Гукасян Л. С.",
                         "group": "УНЭ11",
-                        "room": "016",
-                        "additional": "8",
+                        "room": "438",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2877,44 +2877,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-10-26",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Инженерная и компьютерная графика",
-                "otUnits": [
-                    {
-                        "teacher": "Хомич И. М.",
-                        "group": "УНЭ11",
-                        "room": "408",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-26",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Деловая коммуникация",
-                "otUnits": [
-                    {
-                        "teacher": "Захарчук О. Е.",
-                        "group": "УНЭ11",
-                        "room": "490",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -2946,12 +2908,12 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Инженерная и компьютерная графика",
+                "subject": "пр История России",
                 "otUnits": [
                     {
-                        "teacher": "Партко С. А.",
+                        "teacher": "Кальниченко В. Н.",
                         "group": "УНЭ11",
-                        "room": "403",
+                        "room": "303",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -3009,12 +2971,12 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "лаб Химия",
+                "subject": "пр Высшая математика",
                 "otUnits": [
                     {
-                        "teacher": "Лапшина Л. С.",
+                        "teacher": "Гукасян Л. С.",
                         "group": "УНЭ11",
-                        "room": "485",
+                        "room": "448",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3028,12 +2990,20 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "пр Высшая математика",
+                "subject": "лаб Химия, п/г 1",
                 "otUnits": [
                     {
-                        "teacher": "Гукасян Л. С.",
+                        "teacher": "Лапшина Л. С.",
                         "group": "УНЭ11",
-                        "room": "143",
+                        "room": "319",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Перетятько В. Ю.",
+                        "group": "УНЭ11",
+                        "room": "489",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3184,7 +3154,7 @@
                     {
                         "teacher": "Орленко О. А.",
                         "group": "УНЭ11",
-                        "room": "+",
+                        "room": "Кафедра",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
@@ -3249,19 +3219,44 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-02",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Основы проектной деятельности (Проект математической модели и ее численной реализации на основе алгоритмов прикладной математики)",
+                "otUnits": [
+                    {
+                        "teacher": "Ибадов Р. Р.",
+                        "group": "УНЭ11",
+                        "room": "427а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             },
             {
-                "date": "2026-10-31",
+                "date": "2026-11-02",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
-                "subject": "пр История России",
+                "subject": "пр Высшая математика",
                 "otUnits": [
                     {
-                        "teacher": "Кальниченко В. Н.",
+                        "teacher": "Гукасян Л. С.",
                         "group": "УНЭ11",
-                        "room": "303",
-                        "additional": "2",
+                        "room": "477",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3277,6 +3272,25 @@
         "lessons": [
             {
                 "date": "2026-11-03",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Философия",
+                "otUnits": [
+                    {
+                        "teacher": "Орленко О. А.",
+                        "group": "УНЭ11",
+                        "room": "226",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-03",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -3287,6 +3301,132 @@
                         "group": "УНЭ11",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-05",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Гукасян Л. С.",
+                        "group": "УНЭ11",
+                        "room": "223",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Новикова А. А.",
+                        "group": "УНЭ11",
+                        "room": "313",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Основы российской государственности",
+                "otUnits": [
+                    {
+                        "teacher": "Сорокин Г. В.",
+                        "group": "УНЭ11",
+                        "room": "402",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-06",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Философия",
+                "otUnits": [
+                    {
+                        "teacher": "Орленко О. А.",
+                        "group": "УНЭ11",
+                        "room": "483",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-06",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Гукасян Л. С.",
+                        "group": "УНЭ11",
+                        "room": "238",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-06",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Русский язык как иностранный",
+                "otUnits": [
+                    {
+                        "teacher": "Кривкова В. К.",
+                        "group": "УНЭ11",
+                        "room": "304",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
