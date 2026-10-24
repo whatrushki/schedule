@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-10-26",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-26",
@@ -11,16 +11,16 @@
                 "subject": "Информационная безопасность",
                 "otUnits": [
                     {
-                        "teacher": "Бойнар Ирина Николаевна",
+                        "teacher": "Бойнар И.Н.",
                         "group": "ИС-42",
-                        "room": "303",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -30,16 +30,16 @@
                 "subject": "Информационная безопасность",
                 "otUnits": [
                     {
-                        "teacher": "Бойнар Ирина Николаевна",
+                        "teacher": "Бойнар И.Н.",
                         "group": "ИС-44",
-                        "room": "303",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -49,16 +49,43 @@
                 "subject": "Информационная безопасность",
                 "otUnits": [
                     {
-                        "teacher": "Бойнар Ирина Николаевна",
+                        "teacher": "Бойнар И.Н.",
                         "group": "ИС-45",
-                        "room": "303",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Бойнар И.Н.",
+                        "group": "РУП-13",
+                        "room": "324",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Бойнар И.Н.",
+                        "group": "СА-25",
+                        "room": "324",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-10-26",
@@ -68,24 +95,24 @@
                 "subject": "Применение программно- аппаратных средств защиты информации в инфокоммуникационных системах и сетях связи",
                 "otUnits": [
                     {
-                        "teacher": "Бойнар Ирина Николаевна",
-                        "group": "ИКС-43",
-                        "room": "210а",
+                        "teacher": "Бойнар И.Н.",
+                        "group": "ИКС-42",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Бойнар Ирина Николаевна",
-                        "group": "ИКС-42",
-                        "room": "210а",
+                        "teacher": "Бойнар И.Н.",
+                        "group": "ИКС-43",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -95,24 +122,24 @@
                 "subject": "Применение программно- аппаратных средств защиты информации в инфокоммуникационных системах и сетях связи",
                 "otUnits": [
                     {
-                        "teacher": "Бойнар Ирина Николаевна",
-                        "group": "ИКС-43",
-                        "room": "109",
+                        "teacher": "Бойнар И.Н.",
+                        "group": "ИКС-42",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Бойнар Ирина Николаевна",
-                        "group": "ИКС-42",
-                        "room": "109",
+                        "teacher": "Бойнар И.Н.",
+                        "group": "ИКС-43",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -122,16 +149,16 @@
                 "subject": "Применение программно- аппаратных средств защиты информации в инфокоммуникационных системах и сетях связи",
                 "otUnits": [
                     {
-                        "teacher": "Бойнар Ирина Николаевна",
+                        "teacher": "Бойнар И.Н.",
                         "group": "ИКС-42",
-                        "room": "109",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

@@ -31,7 +31,7 @@
                 "otUnits": [
                     {
                         "teacher": "Черевко Анна Дмитриевна",
-                        "group": "ИС-38",
+                        "group": "ИС-32",
                         "room": "422",
                         "additional": "1",
                         "onlineUrl": null,
@@ -39,7 +39,7 @@
                     },
                     {
                         "teacher": "Черевко Анна Дмитриевна",
-                        "group": "ИС-32",
+                        "group": "ИС-38",
                         "room": "422",
                         "additional": "1",
                         "onlineUrl": null,
@@ -95,22 +95,41 @@
         "lessons": [
             {
                 "date": "2026-10-26",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Разработка мобильных приложений",
+                "otUnits": [
+                    {
+                        "teacher": "Черевко А.Д.",
+                        "group": "ИС-32",
+                        "room": "Общ1-3",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-26",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
                 "subject": "Инструментальные средства разработки программного обеспечения",
                 "otUnits": [
                     {
-                        "teacher": "Черевко Анна Дмитриевна",
+                        "teacher": "Черевко А.Д.",
                         "group": "ИС-42",
-                        "room": "418",
+                        "room": "Общ1-3",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -120,16 +139,24 @@
                 "subject": "Разработка мобильных приложений",
                 "otUnits": [
                     {
-                        "teacher": "Черевко Анна Дмитриевна",
+                        "teacher": "Черевко А.Д.",
+                        "group": "ИС-32",
+                        "room": "Общ1-3",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Черевко А.Д.",
                         "group": "ИС-36",
-                        "room": "415",
+                        "room": "Общ1-4",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -139,24 +166,24 @@
                 "subject": "Разработка мобильных приложений",
                 "otUnits": [
                     {
-                        "teacher": "Черевко Анна Дмитриевна",
-                        "group": "ИС-36",
-                        "room": "109",
+                        "teacher": "Черевко А.Д.",
+                        "group": "ИС-31",
+                        "room": "Общ1-1",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Черевко Анна Дмитриевна",
-                        "group": "ИС-31",
-                        "room": "109",
+                        "teacher": "Черевко А.Д.",
+                        "group": "ИС-36",
+                        "room": "Общ1-2",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -166,24 +193,24 @@
                 "subject": "Разработка мобильных приложений",
                 "otUnits": [
                     {
-                        "teacher": "Черевко Анна Дмитриевна",
+                        "teacher": "Черевко А.Д.",
                         "group": "ИС-31",
-                        "room": "414",
+                        "room": "Общ1-4",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Черевко Анна Дмитриевна",
+                        "teacher": "Черевко А.Д.",
                         "group": "ИС-36",
-                        "room": "414",
+                        "room": "Общ1-1",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -193,16 +220,16 @@
                 "subject": "Разработка мобильных приложений",
                 "otUnits": [
                     {
-                        "teacher": "Черевко Анна Дмитриевна",
+                        "teacher": "Черевко А.Д.",
                         "group": "ИС-31",
-                        "room": "418",
+                        "room": "325",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -555,7 +582,7 @@
                 "otUnits": [
                     {
                         "teacher": "Черевко Анна Дмитриевна",
-                        "group": "ИС-32",
+                        "group": "ИС-38",
                         "room": "422",
                         "additional": "1",
                         "onlineUrl": null,
@@ -563,7 +590,7 @@
                     },
                     {
                         "teacher": "Черевко Анна Дмитриевна",
-                        "group": "ИС-38",
+                        "group": "ИС-32",
                         "room": "422",
                         "additional": "1",
                         "onlineUrl": null,
@@ -918,7 +945,7 @@
                 "otUnits": [
                     {
                         "teacher": "Черевко Анна Дмитриевна",
-                        "group": "ИС-31",
+                        "group": "ИС-36",
                         "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
@@ -926,7 +953,7 @@
                     },
                     {
                         "teacher": "Черевко Анна Дмитриевна",
-                        "group": "ИС-36",
+                        "group": "ИС-31",
                         "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
@@ -945,7 +972,7 @@
                 "otUnits": [
                     {
                         "teacher": "Черевко Анна Дмитриевна",
-                        "group": "ИС-36",
+                        "group": "ИС-31",
                         "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
@@ -953,7 +980,7 @@
                     },
                     {
                         "teacher": "Черевко Анна Дмитриевна",
-                        "group": "ИС-31",
+                        "group": "ИС-36",
                         "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
@@ -1136,7 +1163,7 @@
                 "otUnits": [
                     {
                         "teacher": "Черевко Анна Дмитриевна",
-                        "group": "ИС-38",
+                        "group": "ИС-32",
                         "room": "422",
                         "additional": "1",
                         "onlineUrl": null,
@@ -1144,7 +1171,7 @@
                     },
                     {
                         "teacher": "Черевко Анна Дмитриевна",
-                        "group": "ИС-32",
+                        "group": "ИС-38",
                         "room": "422",
                         "additional": "1",
                         "onlineUrl": null,

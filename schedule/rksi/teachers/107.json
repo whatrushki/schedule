@@ -1,8 +1,35 @@
 [
     {
         "date": "2026-10-26",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
+            {
+                "date": "2026-10-26",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Степанец В.В.",
+                        "group": "ИБА-12",
+                        "room": "35",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Степанец В.В.",
+                        "group": "ИБА-42",
+                        "room": "35",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-10-26",
                 "number": 4,
@@ -11,16 +38,16 @@
                 "subject": "Элементы высшей математики",
                 "otUnits": [
                     {
-                        "teacher": "Степанец Владимир Владимирович",
+                        "teacher": "Степанец В.В.",
                         "group": "ИС-22",
-                        "room": "305",
+                        "room": "114",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -30,16 +57,16 @@
                 "subject": "Элементы высшей математики",
                 "otUnits": [
                     {
-                        "teacher": "Степанец Владимир Владимирович",
+                        "teacher": "Степанец В.В.",
                         "group": "ИС-22",
-                        "room": "305",
+                        "room": "114",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -49,16 +76,16 @@
                 "subject": "Элементы высшей математики",
                 "otUnits": [
                     {
-                        "teacher": "Степанец Владимир Владимирович",
+                        "teacher": "Степанец В.В.",
                         "group": "СА-26",
-                        "room": "305",
+                        "room": "114",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

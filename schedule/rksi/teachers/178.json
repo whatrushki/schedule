@@ -148,7 +148,7 @@
     },
     {
         "date": "2026-10-26",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-26",
@@ -158,35 +158,35 @@
                 "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Михаил Андраникович",
+                        "teacher": "Арутюнян М.А.",
                         "group": "ИКС-14",
-                        "room": "110",
+                        "room": "306",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Информатика",
+                "subject": "Дискретная математика с элементами математической логики",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Михаил Андраникович",
+                        "teacher": "Арутюнян М.А.",
                         "group": "СА-16",
-                        "room": "110",
+                        "room": "306",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -196,16 +196,51 @@
                 "subject": "Математические методы решения типовых прикладных задач",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Михаил Андраникович",
+                        "teacher": "Арутюнян М.А.",
                         "group": "ИКС-24",
-                        "room": "110",
+                        "room": "306",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.А",
+                        "group": "ТЭС-12",
+                        "room": "118",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-26",
+                        "room": "Акт.зал",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-37",
+                        "room": "Акт.зал",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             }
         ]
     },

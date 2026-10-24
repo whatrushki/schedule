@@ -49,6 +49,25 @@
         "lessons": [
             {
                 "date": "2026-10-26",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Щербакова Э.Н.",
+                        "group": "ИС-26",
+                        "room": "с/з5",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-26",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
@@ -57,14 +76,14 @@
                     {
                         "teacher": "Ревнивцева О.А.",
                         "group": "ИС-26",
-                        "room": "320",
+                        "room": "305",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -72,9 +91,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-26",
+                        "room": "Акт.зал",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -112,7 +140,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
@@ -827,17 +855,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Ефремова О.П.",
                         "group": "ИС-26",
-                        "room": "104",
+                        "room": "315а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ефремова О.П.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "ИС-26",
-                        "room": "315а",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

@@ -49,13 +49,41 @@
         "lessons": [
             {
                 "date": "2026-10-26",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-27",
+                        "room": "415",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-26",
                 "number": 0,
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Марышева О.В.",
+                        "group": "СА-27",
+                        "room": "316",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -67,14 +95,14 @@
                     {
                         "teacher": "Ляшенко П.А.",
                         "group": "СА-27",
-                        "room": "110",
+                        "room": "122",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -93,7 +121,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
@@ -374,17 +402,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Лебедева М.В.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "СА-27",
-                        "room": "320",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Лебедева М.В.",
                         "group": "СА-27",
-                        "room": "104",
+                        "room": "320",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -827,17 +855,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Лебедева М.В.",
                         "group": "СА-27",
-                        "room": "104",
+                        "room": "320",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Лебедева М.В.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "СА-27",
-                        "room": "320",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

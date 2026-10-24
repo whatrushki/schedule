@@ -64,7 +64,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-26",
@@ -83,7 +83,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-26",
@@ -91,9 +91,56 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Смолянинова В.А",
+                        "group": "ИС-43",
+                        "room": "406",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 4,
+                "startTime": "14:10",
+                "endTime": "15:40",
+                "subject": "Инструментальные средства разработки программного обеспечения",
+                "otUnits": [
+                    {
+                        "teacher": "Павлова В.А.",
+                        "group": "ИС-43",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:30",
+                "subject": "Инструментальные средства разработки программного обеспечения",
+                "otUnits": [
+                    {
+                        "teacher": "Павлова В.А.",
+                        "group": "ИС-43",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
@@ -166,17 +213,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ужегова Е.А.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "ИС-43",
-                        "room": "307",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Ужегова Е.А.",
                         "group": "ИС-43",
-                        "room": "104",
+                        "room": "307",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

@@ -53,28 +53,37 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Золотовская М.Ю.",
+                        "group": "ИС-35",
+                        "room": "319",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
                 "number": 4,
                 "startTime": "14:10",
                 "endTime": "15:40",
-                "subject": "Системное программирование",
+                "subject": "Разработка программных модулей",
                 "otUnits": [
                     {
-                        "teacher": "Кошкина А.А.",
+                        "teacher": "Зинько Е.С.",
                         "group": "ИС-35",
-                        "room": "420",
+                        "room": "415",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -84,43 +93,43 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
+                        "teacher": "Черноштан О.Н.",
+                        "group": "ИС-35",
+                        "room": "320",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
                         "teacher": "Лебедева М.В.",
                         "group": "ИС-35",
                         "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
-                    },
-                    {
-                        "teacher": "Черноштан О.Н.",
-                        "group": "ИС-35",
-                        "room": "315а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
                 "number": 6,
                 "startTime": "17:40",
                 "endTime": "19:10",
-                "subject": "Системное программирование",
+                "subject": "Разработка программных модулей",
                 "otUnits": [
                     {
-                        "teacher": "Кошкина А.А.",
+                        "teacher": "Зинько Е.С.",
                         "group": "ИС-35",
-                        "room": "420",
+                        "room": "415",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -461,17 +470,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Лебедева М.В.",
                         "group": "ИС-35",
-                        "room": "111",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Лебедева М.В.",
+                        "teacher": "Черноштан О.Н.",
                         "group": "ИС-35",
-                        "room": "104",
+                        "room": "111",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

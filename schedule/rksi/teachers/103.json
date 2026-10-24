@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-10-26",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-26",
@@ -11,16 +11,16 @@
                 "subject": "Основы безопасности и защиты Родины",
                 "otUnits": [
                     {
-                        "teacher": "Смирнов Владимир Павлович",
+                        "teacher": "Смирнов В.П.",
                         "group": "ИБА-12",
-                        "room": "36",
+                        "room": "13",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -30,16 +30,43 @@
                 "subject": "Основы безопасности и защиты Родины",
                 "otUnits": [
                     {
-                        "teacher": "Смирнов Владимир Павлович",
+                        "teacher": "Смирнов В.П.",
                         "group": "ИБТ-11",
-                        "room": "36",
+                        "room": "13",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Смирнова Д.В.",
+                        "group": "ИКС-42",
+                        "room": "320",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Смирнова Д.В.",
+                        "group": "СА-33",
+                        "room": "320",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             }
         ]
     },

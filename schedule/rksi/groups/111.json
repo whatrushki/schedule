@@ -84,14 +84,14 @@
                     {
                         "teacher": "Мальцева И.Е.",
                         "group": "ТД-12",
-                        "room": "13",
+                        "room": "33",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -103,14 +103,14 @@
                     {
                         "teacher": "Мальцева И.Е.",
                         "group": "ТД-12",
-                        "room": "13",
+                        "room": "33",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -122,14 +122,14 @@
                     {
                         "teacher": "Мальцева И.Е.",
                         "group": "ТД-12",
-                        "room": "13",
+                        "room": "33",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
@@ -137,9 +137,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Мельникова С.М.",
+                        "group": "ТД-12",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -917,17 +926,17 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.П.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ТД-12",
-                        "room": "13",
+                        "room": "20",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Марченко С.П.",
                         "group": "ТД-12",
-                        "room": "20",
+                        "room": "13",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null

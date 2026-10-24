@@ -140,17 +140,17 @@
     },
     {
         "date": "2026-10-26",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-26",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "УП",
+                "subject": "Технология монтажа и настройки абонентского оборудования",
                 "otUnits": [
                     {
-                        "teacher": "Ермолина Людмила Владимировна",
+                        "teacher": "Ермолина Л.В.",
                         "group": "ИКС-41",
                         "room": "114а",
                         "additional": "1",
@@ -159,17 +159,17 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "УП",
+                "subject": "Технология монтажа и настройки абонентского оборудования",
                 "otUnits": [
                     {
-                        "teacher": "Ермолина Людмила Владимировна",
+                        "teacher": "Ермолина Л.В.",
                         "group": "ИКС-41",
                         "room": "114а",
                         "additional": "1",
@@ -178,18 +178,18 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-26",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Монтаж и обслуживание оптических систем передачи транспортных сетей",
+                "subject": "Технология монтажа и настройки абонентского оборудования",
                 "otUnits": [
                     {
-                        "teacher": "Ермолина Людмила Владимировна",
-                        "group": "ИКС-42",
+                        "teacher": "Ермолина Л.В.",
+                        "group": "ИКС-41",
                         "room": "114а",
                         "additional": "1",
                         "onlineUrl": null,
@@ -197,7 +197,34 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Ермолина Л.В,",
+                        "group": "ИКС-41",
+                        "room": "114а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Ермолина Л.В,",
+                        "group": "СА-37",
+                        "room": "114а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             }
         ]
     },

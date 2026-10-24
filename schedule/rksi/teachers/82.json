@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-10-26",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-10-26",
@@ -11,16 +11,43 @@
                 "subject": "Социальная психология",
                 "otUnits": [
                     {
-                        "teacher": "Павленко Светлана Евгеньевна",
+                        "teacher": "Павленко С.Е.",
                         "group": "ИБТ-21",
-                        "room": "43",
+                        "room": "32",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-26",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Павленко С.Е.",
+                        "group": "ИБТ-21",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Павленко С.Е.",
+                        "group": "ТД-11",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-10-26",
@@ -30,7 +57,7 @@
                 "subject": "Социальная психология",
                 "otUnits": [
                     {
-                        "teacher": "Павленко Светлана Евгеньевна",
+                        "teacher": "Павленко С.Е.",
                         "group": "ИБТ-21",
                         "room": "13",
                         "additional": "2",
@@ -39,7 +66,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
