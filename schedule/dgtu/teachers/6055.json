@@ -604,21 +604,21 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лаб Безопасность жизнедеятельности, п/г 2",
+                "subject": "лаб Безопасность жизнедеятельности",
                 "otUnits": [
-                    {
-                        "teacher": "Павликов А. В.",
-                        "group": "ВКБ21",
-                        "room": "231",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "Павликов А. В.",
                         "group": "ВПР23",
                         "room": "143",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Павликов А. В.",
+                        "group": "ВКБ21",
+                        "room": "231",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1431,7 +1431,7 @@
                     {
                         "teacher": "Павликов А. В.",
                         "group": "ВПР21",
-                        "room": "+",
+                        "room": "Кафедра",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
@@ -1502,7 +1502,7 @@
                     {
                         "teacher": "Павликов А. В.",
                         "group": "АБ21",
-                        "room": "519",
+                        "room": "219",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -1564,16 +1564,8 @@
                 "otUnits": [
                     {
                         "teacher": "Павликов А. В.",
-                        "group": "ВКБ22",
-                        "room": "+",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Павликов А. В.",
-                        "group": "УМФ21",
-                        "room": "519",
+                        "group": "ВКБ22, УМФ21",
+                        "room": "218",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -1592,8 +1584,8 @@
                     {
                         "teacher": "Павликов А. В.",
                         "group": "ВПМ22",
-                        "room": "+",
-                        "additional": "Главный",
+                        "room": "217",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1611,8 +1603,33 @@
                     {
                         "teacher": "Павликов А. В.",
                         "group": "ВПМ21",
-                        "room": "+",
-                        "additional": "Главный",
+                        "room": "217",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-23",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Безопасность жизнедеятельности, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Павликов А. В.",
+                        "group": "АБ21",
+                        "room": "219",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1636,8 +1653,8 @@
                     {
                         "teacher": "Павликов А. В.",
                         "group": "ВПМ21",
-                        "room": "+",
-                        "additional": "Главный",
+                        "room": "010",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1666,16 +1683,16 @@
             },
             {
                 "date": "2026-10-24",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "лаб Безопасность жизнедеятельности, п/г 2",
                 "otUnits": [
                     {
                         "teacher": "Павликов А. В.",
                         "group": "ВКБ24",
-                        "room": "+",
-                        "additional": "Главный",
+                        "room": "171",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1691,44 +1708,6 @@
         "lessons": [
             {
                 "date": "2026-10-26",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Безопасность жизнедеятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Павликов А. В.",
-                        "group": "ВПР22",
-                        "room": "+",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-26",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Безопасность жизнедеятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Павликов А. В.",
-                        "group": "ВПИЭ21",
-                        "room": "+",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-26",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
@@ -1737,7 +1716,7 @@
                     {
                         "teacher": "Павликов А. В.",
                         "group": "ВКБ21",
-                        "room": "+",
+                        "room": "Кафедра",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
@@ -1762,7 +1741,7 @@
                     {
                         "teacher": "Павликов А. В.",
                         "group": "БПБ31",
-                        "room": "218",
+                        "room": "231",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -1776,12 +1755,12 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Безопасность жизнедеятельности",
+                "subject": "лаб Безопасность жизнедеятельности, п/г 1",
                 "otUnits": [
                     {
                         "teacher": "Павликов А. В.",
-                        "group": "УМФ21",
-                        "room": "322",
+                        "group": "ВПР22",
+                        "room": "224",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -1800,7 +1779,7 @@
                     {
                         "teacher": "Павликов А. В.",
                         "group": "ВПИЭ21",
-                        "room": "322",
+                        "room": "142",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -1838,8 +1817,8 @@
                     {
                         "teacher": "Павликов А. В.",
                         "group": "ВИС22",
-                        "room": "+",
-                        "additional": "Главный",
+                        "room": "542",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1863,8 +1842,8 @@
                     {
                         "teacher": "Павликов А. В.",
                         "group": "ВПР21",
-                        "room": "+",
-                        "additional": "Главный",
+                        "room": "219",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1882,8 +1861,8 @@
                     {
                         "teacher": "Павликов А. В.",
                         "group": "ВПМ22",
-                        "room": "+",
-                        "additional": "Главный",
+                        "room": "218",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1901,8 +1880,8 @@
                     {
                         "teacher": "Павликов А. В.",
                         "group": "ВКБ23",
-                        "room": "+",
-                        "additional": "Главный",
+                        "room": "219",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1918,25 +1897,6 @@
         "lessons": [
             {
                 "date": "2026-10-30",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Безопасность жизнедеятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Павликов А. В.",
-                        "group": "ВПИЭ21",
-                        "room": "+",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-30",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -1945,8 +1905,8 @@
                     {
                         "teacher": "Павликов А. В.",
                         "group": "ВПМ21",
-                        "room": "+",
-                        "additional": "Главный",
+                        "room": "224",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1964,8 +1924,102 @@
                     {
                         "teacher": "Павликов А. В.",
                         "group": "БТБ32",
-                        "room": "227",
+                        "room": "530",
                         "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-02",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Безопасность жизнедеятельности, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Павликов А. В.",
+                        "group": "ВПР21",
+                        "room": "Кафедра",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Безопасность жизнедеятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Павликов А. В.",
+                        "group": "ВПИЭ21",
+                        "room": "141",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-05",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Безопасность жизнедеятельности, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Павликов А. В.",
+                        "group": "ВКБ22",
+                        "room": "218",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-07",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Безопасность жизнедеятельности, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Павликов А. В.",
+                        "group": "ВКБ24",
+                        "room": "171",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }

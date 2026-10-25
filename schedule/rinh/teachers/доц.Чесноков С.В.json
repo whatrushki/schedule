@@ -1,49 +1,5 @@
 [
     {
-        "date": "2026-10-17",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-17",
-                "number": 3,
-                "startTime": "11:50",
-                "endTime": "13:20",
-                "subject": "л. Бухгалтерский учет",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Чесноков С.В.",
-                        "group": "ТД-231",
-                        "room": "451",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-17",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "пр. Бухгалтерский учет",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Чесноков С.В.",
-                        "group": "ТД-231",
-                        "room": "451",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-24",
         "scheduleType": "COMMON",
         "lessons": [
@@ -182,6 +138,14 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Чесноков С.В.",
+                        "group": "ЭКOZS-447",
+                        "room": "602",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Чесноков С.В.",
                         "group": "ЭКOZS-448",
                         "room": "602",
                         "additional": "1",
@@ -191,14 +155,6 @@
                     {
                         "teacher": "доц.Чесноков С.В.",
                         "group": "ЭКOZS-449",
-                        "room": "602",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "доц.Чесноков С.В.",
-                        "group": "ЭКOZS-447",
                         "room": "602",
                         "additional": "1",
                         "onlineUrl": null,
@@ -217,7 +173,7 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Чесноков С.В.",
-                        "group": "ЭКOZS-448",
+                        "group": "ЭКOZS-449",
                         "room": "602",
                         "additional": "1",
                         "onlineUrl": null,
@@ -233,7 +189,7 @@
                     },
                     {
                         "teacher": "доц.Чесноков С.В.",
-                        "group": "ЭКOZS-449",
+                        "group": "ЭКOZS-448",
                         "room": "602",
                         "additional": "1",
                         "onlineUrl": null,
@@ -410,6 +366,50 @@
         ]
     },
     {
+        "date": "2026-11-19",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-19",
+                "number": 7,
+                "startTime": "18:45",
+                "endTime": "20:15",
+                "subject": "пр. Консолидированная финансовая отчетность",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Чесноков С.В.",
+                        "group": "ЭКOZS-449",
+                        "room": "516",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-19",
+                "number": 8,
+                "startTime": "20:20",
+                "endTime": "21:50",
+                "subject": "пр. Консолидированная финансовая отчетность",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Чесноков С.В.",
+                        "group": "ЭКOZS-449",
+                        "room": "516",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-21",
         "scheduleType": "COMMON",
         "lessons": [
@@ -442,7 +442,7 @@
                     {
                         "teacher": "доц.Чесноков С.В.",
                         "group": "ЭКOZ-457",
-                        "room": "255",
+                        "room": "554",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -461,7 +461,7 @@
                     {
                         "teacher": "доц.Чесноков С.В.",
                         "group": "ЭКOZ-457",
-                        "room": "255",
+                        "room": "554",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -507,18 +507,24 @@
                 ],
                 "type": "PRACTICE",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-11-26",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-11-21",
-                "number": 7,
-                "startTime": "18:45",
-                "endTime": "20:15",
+                "date": "2026-11-26",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
                 "subject": "пр. Консолидированная финансовая отчетность",
                 "otUnits": [
                     {
                         "teacher": "доц.Чесноков С.В.",
-                        "group": "ЭКOZS-449",
-                        "room": "516",
+                        "group": "ЭКOZ-457",
+                        "room": "520",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -528,16 +534,35 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-11-21",
-                "number": 8,
-                "startTime": "20:20",
-                "endTime": "21:50",
+                "date": "2026-11-26",
+                "number": 7,
+                "startTime": "18:45",
+                "endTime": "20:15",
                 "subject": "пр. Консолидированная финансовая отчетность",
                 "otUnits": [
                     {
                         "teacher": "доц.Чесноков С.В.",
-                        "group": "ЭКOZS-449",
-                        "room": "516",
+                        "group": "ЭКOZ-457",
+                        "room": "520",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 8,
+                "startTime": "20:20",
+                "endTime": "21:50",
+                "subject": "пр. Практикум по формированию учетной политики коммерческих организаций",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Чесноков С.В.",
+                        "group": "ЭКOZ-457",
+                        "room": "520",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -620,63 +645,6 @@
                         "teacher": "доц.Чесноков С.В.",
                         "group": "ТД-231",
                         "room": "451",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-28",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "пр. Консолидированная финансовая отчетность",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Чесноков С.В.",
-                        "group": "ЭКOZ-457",
-                        "room": "503",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-28",
-                "number": 6,
-                "startTime": "17:10",
-                "endTime": "18:40",
-                "subject": "пр. Консолидированная финансовая отчетность",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Чесноков С.В.",
-                        "group": "ЭКOZ-457",
-                        "room": "503",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-28",
-                "number": 7,
-                "startTime": "18:45",
-                "endTime": "20:15",
-                "subject": "пр. Практикум по формированию учетной политики коммерческих организаций",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Чесноков С.В.",
-                        "group": "ЭКOZ-457",
-                        "room": "503",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -814,31 +782,6 @@
         ]
     },
     {
-        "date": "2026-12-11",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-11",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "зач. Консолидированная финансовая отчетность",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Чесноков С.В.",
-                        "group": "ЭКOZS-449",
-                        "room": "516",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CREDIT",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-12-12",
         "scheduleType": "COMMON",
         "lessons": [
@@ -908,8 +851,24 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Чесноков С.В.",
+                        "group": "ЭКOZS-449",
+                        "room": "555",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Чесноков С.В.",
                         "group": "ЭКOZS-447",
-                        "room": "503",
+                        "room": "555",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Чесноков С.В.",
+                        "group": "ЭКOZS-448",
+                        "room": "555",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -927,8 +886,24 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Чесноков С.В.",
+                        "group": "ЭКOZS-449",
+                        "room": "555",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Чесноков С.В.",
+                        "group": "ЭКOZS-447",
+                        "room": "555",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Чесноков С.В.",
                         "group": "ЭКOZS-448",
-                        "room": "503",
+                        "room": "555",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -947,7 +922,7 @@
                     {
                         "teacher": "доц.Чесноков С.В.",
                         "group": "ЭКOZS-448",
-                        "room": "503",
+                        "room": "515",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
