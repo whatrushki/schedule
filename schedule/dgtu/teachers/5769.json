@@ -220,7 +220,7 @@
                 "otUnits": [
                     {
                         "teacher": "Девяткин А. К.",
-                        "group": "ВИБ21, ВИБ22",
+                        "group": "ВИБ22, ВИБ21",
                         "room": "218",
                         "additional": "21",
                         "onlineUrl": null,
@@ -592,7 +592,7 @@
                 "otUnits": [
                     {
                         "teacher": "Девяткин А. К.",
-                        "group": "ВИБ21, ВИБ22",
+                        "group": "ВИБ22, ВИБ21",
                         "room": "214",
                         "additional": "21",
                         "onlineUrl": null,
@@ -1197,7 +1197,7 @@
                 "otUnits": [
                     {
                         "teacher": "Девяткин А. К.",
-                        "group": "ВИБ21, ВИБ22",
+                        "group": "ВИБ22, ВИБ21",
                         "room": "212",
                         "additional": "21",
                         "onlineUrl": null,
@@ -1904,7 +1904,7 @@
                     {
                         "teacher": "Девяткин А. К.",
                         "group": "АОЗТК31",
-                        "room": "319",
+                        "room": "290",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2036,8 +2036,8 @@
                     {
                         "teacher": "Девяткин А. К.",
                         "group": "ВКБ22",
-                        "room": "498",
-                        "additional": "1",
+                        "room": "605",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2107,6 +2107,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 0,
+                "startTime": "14:00",
+                "endTime": "15:00",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Девяткин А. К.",
+                        "group": "",
+                        "room": "213",
+                        "additional": "21",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "UNKNOWN",
+                "state": "COMMON"
             }
         ]
     },
@@ -2124,8 +2143,8 @@
                     {
                         "teacher": "Девяткин А. К.",
                         "group": "ВКБ24",
-                        "room": "333",
-                        "additional": "1",
+                        "room": "605",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2143,7 +2162,7 @@
                     {
                         "teacher": "Девяткин А. К.",
                         "group": "ВКБ24",
-                        "room": "498",
+                        "room": "476а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2151,24 +2170,18 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-31",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
             {
-                "date": "2026-10-31",
+                "date": "2026-10-30",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лаб Электротехника, электроника и электропривод",
+                "subject": "лаб Электроника и схемотехника, п/г 2",
                 "otUnits": [
                     {
                         "teacher": "Девяткин А. К.",
-                        "group": "АОЗТК31",
-                        "room": "267",
+                        "group": "ВКБ21",
+                        "room": "021",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2195,31 +2208,6 @@
                         "group": "ШП31",
                         "room": "213",
                         "additional": "21",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-03",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-03",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Электроника и схемотехника, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Девяткин А. К.",
-                        "group": "ВКБ23",
-                        "room": "449",
-                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2369,6 +2357,31 @@
         ]
     },
     {
+        "date": "2026-11-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-07",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Электроника и схемотехника, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Девяткин А. К.",
+                        "group": "ВКБ23",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-09",
         "scheduleType": "COMMON",
         "lessons": [
@@ -2403,6 +2416,50 @@
                         "group": "ШП31",
                         "room": "213",
                         "additional": "21",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Электроника и схемотехника, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Девяткин А. К.",
+                        "group": "ВКБ21",
+                        "room": "358",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-11",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Электроника и схемотехника, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Девяткин А. К.",
+                        "group": "ВКБ22",
+                        "room": "605",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2466,6 +2523,31 @@
                         "group": "КСС21",
                         "room": "213",
                         "additional": "21",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-13",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Электроника и схемотехника, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Девяткин А. К.",
+                        "group": "ВКБ24",
+                        "room": "292",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2545,6 +2627,31 @@
         ]
     },
     {
+        "date": "2026-11-25",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-25",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Электроника и схемотехника, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Девяткин А. К.",
+                        "group": "ВКБ22",
+                        "room": "605",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-26",
         "scheduleType": "COMMON",
         "lessons": [
@@ -2598,6 +2705,31 @@
                         "group": "КСС21",
                         "room": "213",
                         "additional": "21",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-27",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-27",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Электроника и схемотехника, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Девяткин А. К.",
+                        "group": "ВКБ24",
+                        "room": "605",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2730,6 +2862,31 @@
                         "group": "КСС21",
                         "room": "213",
                         "additional": "21",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-11",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Электроника и схемотехника, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Девяткин А. К.",
+                        "group": "ВКБ24",
+                        "room": "605",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
