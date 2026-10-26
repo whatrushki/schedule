@@ -149,6 +149,25 @@
         "lessons": [
             {
                 "date": "2026-10-27",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Инструментальные средства разработки программного обеспечения",
+                "otUnits": [
+                    {
+                        "teacher": "Болгов Д.Р.",
+                        "group": "ИС-44",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-27",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -157,14 +176,14 @@
                     {
                         "teacher": "Болгов Д.Р.",
                         "group": "ИС-44",
-                        "room": "325",
+                        "room": "213",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-27",
@@ -176,14 +195,14 @@
                     {
                         "teacher": "Болгов Д.Р.",
                         "group": "ИС-44",
-                        "room": "325",
+                        "room": "213",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-27",
@@ -195,7 +214,7 @@
                     {
                         "teacher": "Лебедева М.В.",
                         "group": "ИС-44",
-                        "room": "320",
+                        "room": "213",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -210,7 +229,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-27",
@@ -229,7 +248,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

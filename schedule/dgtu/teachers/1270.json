@@ -125,7 +125,7 @@
                 "otUnits": [
                     {
                         "teacher": "Болдырихин Н. В.",
-                        "group": "ВКБ31, ВКБ32",
+                        "group": "ВКБ32, ВКБ31",
                         "room": "423",
                         "additional": "8",
                         "onlineUrl": null,
@@ -560,7 +560,7 @@
                 "otUnits": [
                     {
                         "teacher": "Болдырихин Н. В.",
-                        "group": "ВКБ31, ВКБ32",
+                        "group": "ВКБ32, ВКБ31",
                         "room": "470",
                         "additional": "1",
                         "onlineUrl": null,
@@ -585,7 +585,7 @@
                 "otUnits": [
                     {
                         "teacher": "Болдырихин Н. В.",
-                        "group": "ВКБ53, ВКБ51, ВКБ52",
+                        "group": "ВКБ53, ВКБ52, ВКБ51",
                         "room": "490",
                         "additional": "1",
                         "onlineUrl": null,
@@ -673,7 +673,7 @@
                 "otUnits": [
                     {
                         "teacher": "Болдырихин Н. В.",
-                        "group": "ВКБ31, ВКБ32",
+                        "group": "ВКБ32, ВКБ31",
                         "room": "304",
                         "additional": "8",
                         "onlineUrl": null,
@@ -931,7 +931,7 @@
                 "otUnits": [
                     {
                         "teacher": "Болдырихин Н. В.",
-                        "group": "ВКБ31, ВКБ32",
+                        "group": "ВКБ32, ВКБ31",
                         "room": "105",
                         "additional": "1",
                         "onlineUrl": null,
@@ -956,7 +956,7 @@
                 "otUnits": [
                     {
                         "teacher": "Болдырихин Н. В.",
-                        "group": "ВКБ53, ВКБ51, ВКБ52",
+                        "group": "ВКБ53, ВКБ52, ВКБ51",
                         "room": "490",
                         "additional": "1",
                         "onlineUrl": null,
@@ -1044,7 +1044,7 @@
                 "otUnits": [
                     {
                         "teacher": "Болдырихин Н. В.",
-                        "group": "ВКБ31, ВКБ32",
+                        "group": "ВКБ32, ВКБ31",
                         "room": "304",
                         "additional": "8",
                         "onlineUrl": null,
@@ -1176,7 +1176,7 @@
                 "otUnits": [
                     {
                         "teacher": "Болдырихин Н. В.",
-                        "group": "ВКБ31, ВКБ33, ВКБ34, ВКБ32",
+                        "group": "ВКБ32, ВКБ33, ВКБ31, ВКБ34",
                         "room": "384",
                         "additional": "1",
                         "onlineUrl": null,
@@ -1301,34 +1301,15 @@
         "lessons": [
             {
                 "date": "2026-10-26",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
                 "subject": "лек Программные и программно-аппаратные средства защиты информации",
                 "otUnits": [
                     {
                         "teacher": "Болдырихин Н. В.",
-                        "group": "ВКБ53, ВКБ51, ВКБ52",
-                        "room": "490",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-26",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Программные и программно-аппаратные средства защиты информации",
-                "otUnits": [
-                    {
-                        "teacher": "Болдырихин Н. В.",
-                        "group": "ВКБ51",
-                        "room": "384",
+                        "group": "ВКБ53, ВКБ52, ВКБ51",
+                        "room": "223",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1441,7 +1422,7 @@
                     {
                         "teacher": "Болдырихин Н. В.",
                         "group": "ВКБ52",
-                        "room": "177",
+                        "room": "490",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1528,7 +1509,7 @@
                 "otUnits": [
                     {
                         "teacher": "Болдырихин Н. В.",
-                        "group": "ВКБ31, ВКБ33, ВКБ34, ВКБ32",
+                        "group": "ВКБ32, ВКБ33, ВКБ31, ВКБ34",
                         "room": "384",
                         "additional": "1",
                         "onlineUrl": null,
@@ -1610,6 +1591,31 @@
         ]
     },
     {
+        "date": "2026-11-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-09",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Программные и программно-аппаратные средства защиты информации",
+                "otUnits": [
+                    {
+                        "teacher": "Болдырихин Н. В.",
+                        "group": "ВКБ53, ВКБ52, ВКБ51",
+                        "room": "282",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-12",
         "scheduleType": "COMMON",
         "lessons": [
@@ -1669,6 +1675,25 @@
                         "group": "ВИК42",
                         "room": "Онлайн (ссылка)",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Программные и программно-аппаратные средства защиты информации",
+                "otUnits": [
+                    {
+                        "teacher": "Болдырихин Н. В.",
+                        "group": "ВКБ52",
+                        "room": "447",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1738,6 +1763,31 @@
                         "group": "ВИК42",
                         "room": "Онлайн (ссылка)",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-23",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Программные и программно-аппаратные средства защиты информации",
+                "otUnits": [
+                    {
+                        "teacher": "Болдырихин Н. В.",
+                        "group": "ВКБ53, ВКБ52, ВКБ51",
+                        "room": "282",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1832,6 +1882,50 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-11-27",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Программные и программно-аппаратные средства защиты информации",
+                "otUnits": [
+                    {
+                        "teacher": "Болдырихин Н. В.",
+                        "group": "ВКБ52",
+                        "room": "447",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-28",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Программные и программно-аппаратные средства защиты информации",
+                "otUnits": [
+                    {
+                        "teacher": "Болдырихин Н. В.",
+                        "group": "ВКБ52",
+                        "room": "490",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -1895,6 +1989,56 @@
                         "group": "ВИК42",
                         "room": "Онлайн (ссылка)",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-07",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Программные и программно-аппаратные средства защиты информации",
+                "otUnits": [
+                    {
+                        "teacher": "Болдырихин Н. В.",
+                        "group": "ВКБ53, ВКБ52, ВКБ51",
+                        "room": "282",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-11",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Программные и программно-аппаратные средства защиты информации",
+                "otUnits": [
+                    {
+                        "teacher": "Болдырихин Н. В.",
+                        "group": "ВКБ52",
+                        "room": "447",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
