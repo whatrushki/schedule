@@ -103,6 +103,44 @@
         "lessons": [
             {
                 "date": "2026-10-28",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Попова А.Ю.",
+                        "group": "СА-27",
+                        "room": "121",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Попова А.Ю.",
+                        "group": "СА-27",
+                        "room": "121",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-28",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
@@ -118,7 +156,7 @@
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-28",
@@ -137,7 +175,7 @@
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

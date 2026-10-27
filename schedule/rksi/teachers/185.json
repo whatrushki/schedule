@@ -141,28 +141,9 @@
         "lessons": [
             {
                 "date": "2026-10-28",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Основы алгоритмизации и программирования",
-                "otUnits": [
-                    {
-                        "teacher": "Зинько Е.С.",
-                        "group": "ИС-29",
-                        "room": "406",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-28",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
                 "subject": "Разработка программных модулей",
                 "otUnits": [
                     {
@@ -174,8 +155,46 @@
                         "subject": null
                     }
                 ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Зинько Е.С.",
+                        "group": "ИС-29",
+                        "room": "220",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Разработка программных модулей",
+                "otUnits": [
+                    {
+                        "teacher": "Зинько Е.С.",
+                        "group": "ИС-36",
+                        "room": "220",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-28",
@@ -187,14 +206,22 @@
                     {
                         "teacher": "Зинько Е.С.",
                         "group": "ИС-35",
-                        "room": "401",
+                        "room": "220",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Зинько Е.С.",
+                        "group": "ИС-37",
+                        "room": "220",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
