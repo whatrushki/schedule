@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-10-26",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-10-26",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [
-                    {
-                        "teacher": "Швец Н.А.",
-                        "group": "ИБТ-31",
-                        "room": "47",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CLASS_HOUR",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-26",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Организационное и правовое обеспечение информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "Асташевская А.В.",
-                        "group": "ИБТ-31",
-                        "room": "21",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-26",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
-                "subject": "Организационное и правовое обеспечение информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "Асташевская А.В.",
-                        "group": "ИБТ-31",
-                        "room": "21",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-27",
         "scheduleType": "COMMON",
         "lessons": [
@@ -76,14 +13,14 @@
                     {
                         "teacher": "Студенникова Д.А.",
                         "group": "ИБТ-31",
-                        "room": "314",
+                        "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-27",
@@ -95,14 +32,14 @@
                     {
                         "teacher": "Студенникова Д.А.",
                         "group": "ИБТ-31",
-                        "room": "314",
+                        "room": "214",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-27",
@@ -114,14 +51,14 @@
                     {
                         "teacher": "Студенникова Д.А.",
                         "group": "ИБТ-31",
-                        "room": "314",
+                        "room": "214",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-27",
@@ -141,6 +78,63 @@
                 ],
                 "type": "COMMON",
                 "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Электроника и схемотехника",
+                "otUnits": [
+                    {
+                        "teacher": "Студенникова Д.А.",
+                        "group": "ИБТ-31",
+                        "room": "314",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Электроника и схемотехника",
+                "otUnits": [
+                    {
+                        "teacher": "Студенникова Д.А.",
+                        "group": "ИБТ-31",
+                        "room": "314",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Электроника и схемотехника",
+                "otUnits": [
+                    {
+                        "teacher": "Студенникова Д.А.",
+                        "group": "ИБТ-31",
+                        "room": "314",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

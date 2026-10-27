@@ -922,6 +922,25 @@
         "lessons": [
             {
                 "date": "2026-10-26",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Теоретические основы семейного образования",
+                "otUnits": [
+                    {
+                        "teacher": "Базалий Р. В.",
+                        "group": "ДОЗСО21",
+                        "room": "015",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-26",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
@@ -930,7 +949,7 @@
                     {
                         "teacher": "Базалий Р. В.",
                         "group": "ДОЗСО21",
-                        "room": "530",
+                        "room": "518",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -955,7 +974,7 @@
                     {
                         "teacher": "Манохина Н. Н.",
                         "group": "ДОЗСО21",
-                        "room": "412",
+                        "room": "015",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -967,20 +986,39 @@
         ]
     },
     {
-        "date": "2026-10-28",
+        "date": "2026-10-29",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-28",
+                "date": "2026-10-29",
                 "number": 6,
                 "startTime": "17:45",
                 "endTime": "19:20",
-                "subject": "лек Теоретические основы семейного образования",
+                "subject": "лек Основы государственной политики в сфере межэтнических и межконфессиональных отношений",
                 "otUnits": [
                     {
-                        "teacher": "Базалий Р. В.",
+                        "teacher": "Илларионова А. Ю.",
                         "group": "ДОЗСО21",
-                        "room": "109",
+                        "room": "518",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Основы государственной политики в сфере межэтнических и межконфессиональных отношений",
+                "otUnits": [
+                    {
+                        "teacher": "Илларионова А. Ю.",
+                        "group": "ДОЗСО21",
+                        "room": "304",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -1005,33 +1043,8 @@
                     {
                         "teacher": "Ковалев В. В.",
                         "group": "ДОЗСО21",
-                        "room": "424",
+                        "room": "021",
                         "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-31",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-31",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Основы государственной политики в сфере межэтнических и межконфессиональных отношений",
-                "otUnits": [
-                    {
-                        "teacher": "Илларионова А. Ю.",
-                        "group": "ДОЗСО21",
-                        "room": "803",
-                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1092,6 +1105,75 @@
         ]
     },
     {
+        "date": "2026-11-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-12",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Основы государственной политики в сфере межэтнических и межконфессиональных отношений",
+                "otUnits": [
+                    {
+                        "teacher": "Илларионова А. Ю.",
+                        "group": "ДОЗСО21",
+                        "room": "518",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Основы государственной политики в сфере межэтнических и межконфессиональных отношений",
+                "otUnits": [
+                    {
+                        "teacher": "Илларионова А. Ю.",
+                        "group": "ДОЗСО21",
+                        "room": "304",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-13",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Нормативно-правовые основы профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Ковалев В. В.",
+                        "group": "ДОЗСО21",
+                        "room": "021",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-18",
         "scheduleType": "COMMON",
         "lessons": [
@@ -1107,6 +1189,56 @@
                         "group": "ДОЗСО21",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-28",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Основы государственной политики в сфере межэтнических и межконфессиональных отношений",
+                "otUnits": [
+                    {
+                        "teacher": "Илларионова А. Ю.",
+                        "group": "ДОЗСО21",
+                        "room": "803",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Основы государственной политики в сфере межэтнических и межконфессиональных отношений",
+                "otUnits": [
+                    {
+                        "teacher": "Илларионова А. Ю.",
+                        "group": "ДОЗСО21",
+                        "room": "803",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
