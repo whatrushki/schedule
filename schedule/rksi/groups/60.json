@@ -87,22 +87,41 @@
         "lessons": [
             {
                 "date": "2026-10-28",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян А.Э.",
+                        "group": "ИС-23",
+                        "room": "122",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-28",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Основы алгоритмизации и программирования",
+                "subject": "Численные методы",
                 "otUnits": [
                     {
-                        "teacher": "Костромина В.А.",
+                        "teacher": "Арутюнян А.Э.",
                         "group": "ИС-23",
-                        "room": "420",
+                        "room": "122",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-28",
@@ -114,7 +133,7 @@
                     {
                         "teacher": "Чубарова А.Б.",
                         "group": "ИС-23",
-                        "room": "106",
+                        "room": "320",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -129,7 +148,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-28",
@@ -148,7 +167,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
