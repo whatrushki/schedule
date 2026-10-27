@@ -42,6 +42,14 @@
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
+                    },
+                    {
+                        "teacher": "доц.Богославцева Л.В.",
+                        "group": "ФК-823",
+                        "room": "532",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -54,6 +62,14 @@
                 "endTime": "20:15",
                 "subject": "л. Бюджетирование в государственном секторе и бизнесе",
                 "otUnits": [
+                    {
+                        "teacher": "доц.Богославцева Л.В.",
+                        "group": "ФК-823",
+                        "room": "532",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "доц.Богославцева Л.В.",
                         "group": "ФК-823",
@@ -207,6 +223,14 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Богославцева Л.В.",
+                        "group": "ЭКOZS-548",
+                        "room": "532",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Богославцева Л.В.",
                         "group": "ЭКOZS-543",
                         "room": "532",
                         "additional": "1",
@@ -216,14 +240,6 @@
                     {
                         "teacher": "доц.Богославцева Л.В.",
                         "group": "ЭКOZS-542",
-                        "room": "532",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "доц.Богославцева Л.В.",
-                        "group": "ЭКOZS-548",
                         "room": "532",
                         "additional": "1",
                         "onlineUrl": null,
@@ -242,7 +258,7 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Богославцева Л.В.",
-                        "group": "ЭКOZS-542",
+                        "group": "ЭКOZS-543",
                         "room": "532",
                         "additional": "1",
                         "onlineUrl": null,
@@ -258,7 +274,7 @@
                     },
                     {
                         "teacher": "доц.Богославцева Л.В.",
-                        "group": "ЭКOZS-543",
+                        "group": "ЭКOZS-542",
                         "room": "532",
                         "additional": "1",
                         "onlineUrl": null,
@@ -276,9 +292,28 @@
         "lessons": [
             {
                 "date": "2026-11-18",
-                "number": 7,
-                "startTime": "18:45",
-                "endTime": "20:15",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "пр. Расходы бюджета",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Богославцева Л.В.",
+                        "group": "ЭКOZS-542",
+                        "room": "212а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-18",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
                 "subject": "л. Расходы бюджета",
                 "otUnits": [
                     {
@@ -291,7 +326,7 @@
                     },
                     {
                         "teacher": "доц.Богославцева Л.В.",
-                        "group": "ЭКOZS-543",
+                        "group": "ЭКOZS-542",
                         "room": "429",
                         "additional": "1",
                         "onlineUrl": null,
@@ -299,7 +334,7 @@
                     },
                     {
                         "teacher": "доц.Богославцева Л.В.",
-                        "group": "ЭКOZS-542",
+                        "group": "ЭКOZS-543",
                         "room": "429",
                         "additional": "1",
                         "onlineUrl": null,
@@ -311,14 +346,14 @@
             },
             {
                 "date": "2026-11-18",
-                "number": 8,
-                "startTime": "20:20",
-                "endTime": "21:50",
+                "number": 7,
+                "startTime": "18:45",
+                "endTime": "20:15",
                 "subject": "пр. Расходы бюджета",
                 "otUnits": [
                     {
                         "teacher": "доц.Богославцева Л.В.",
-                        "group": "ЭКOZS-542",
+                        "group": "ЭКOZS-548",
                         "room": "532",
                         "additional": "1",
                         "onlineUrl": null,
@@ -413,6 +448,50 @@
         ]
     },
     {
+        "date": "2026-11-20",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-20",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "пр. Расходы бюджета",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Богославцева Л.В.",
+                        "group": "ЭКOZS-543",
+                        "room": "417",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-20",
+                "number": 7,
+                "startTime": "18:45",
+                "endTime": "20:15",
+                "subject": "пр. Расходы бюджета",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Богославцева Л.В.",
+                        "group": "ЭКOZS-548",
+                        "room": "532",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-23",
         "scheduleType": "COMMON",
         "lessons": [
@@ -426,7 +505,7 @@
                     {
                         "teacher": "доц.Богославцева Л.В.",
                         "group": "ЭКOZ-542",
-                        "room": "537",
+                        "room": "203",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -465,6 +544,25 @@
                         "teacher": "доц.Богославцева Л.В.",
                         "group": "ЭКOZS-542",
                         "room": "209",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-23",
+                "number": 8,
+                "startTime": "20:20",
+                "endTime": "21:50",
+                "subject": "пр. Расходы бюджета",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Богославцева Л.В.",
+                        "group": "ЭКOZS-548",
+                        "room": "532",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -545,6 +643,50 @@
         ]
     },
     {
+        "date": "2026-11-27",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-27",
+                "number": 7,
+                "startTime": "18:45",
+                "endTime": "20:15",
+                "subject": "пр. Расходы бюджета",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Богославцева Л.В.",
+                        "group": "ЭКOZS-543",
+                        "room": "417",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-27",
+                "number": 8,
+                "startTime": "20:20",
+                "endTime": "21:50",
+                "subject": "пр. Расходы бюджета",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Богославцева Л.В.",
+                        "group": "ЭКOZS-543",
+                        "room": "417",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -578,6 +720,50 @@
                         "teacher": "доц.Богославцева Л.В.",
                         "group": "ЭКOZS-542",
                         "room": "532",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 7,
+                "startTime": "18:45",
+                "endTime": "20:15",
+                "subject": "экз. Расходы бюджета",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Богославцева Л.В.",
+                        "group": "ЭКOZS-548",
+                        "room": "532",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-02",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "экз. Расходы бюджета",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Богославцева Л.В.",
+                        "group": "ЭКOZS-543",
+                        "room": "422",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
