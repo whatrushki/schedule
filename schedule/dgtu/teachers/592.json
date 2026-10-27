@@ -1234,8 +1234,8 @@
                     {
                         "teacher": "Муратов Д. К.",
                         "group": "Т26САПР2-3m-01(6885)",
-                        "room": "213",
-                        "additional": "11",
+                        "room": "Онлайн",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1253,8 +1253,8 @@
                     {
                         "teacher": "Муратов Д. К.",
                         "group": "Т26САПР2-3m-01(6885)",
-                        "room": "213",
-                        "additional": "11",
+                        "room": "Онлайн",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1272,8 +1272,8 @@
                     {
                         "teacher": "Муратов Д. К.",
                         "group": "Т26CAD-3m-01(6886)",
-                        "room": "213",
-                        "additional": "11",
+                        "room": "Онлайн",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1291,8 +1291,8 @@
                     {
                         "teacher": "Муратов Д. К.",
                         "group": "Т26CAD-3m-01(6886)",
-                        "room": "213",
-                        "additional": "11",
+                        "room": "Онлайн",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1308,6 +1308,31 @@
         "lessons": [
             {
                 "date": "2026-10-28",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "Лек. Модуль 1. Системы автоматизированного проектирования (CAD-системы)",
+                "otUnits": [
+                    {
+                        "teacher": "Муратов Д. К.",
+                        "group": "ЦК26ЦТИП_01(7208)",
+                        "room": "Онлайн",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-29",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-29",
                 "number": 6,
                 "startTime": "17:45",
                 "endTime": "19:20",
@@ -1326,11 +1351,11 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-28",
+                "date": "2026-10-29",
                 "number": 7,
                 "startTime": "19:30",
                 "endTime": "21:05",
-                "subject": "Лек. Модуль 1. Системы автоматизированного проектирования (CAD-системы)",
+                "subject": "Пр. Модуль 1. Системы автоматизированного проектирования (CAD-системы)",
                 "otUnits": [
                     {
                         "teacher": "Муратов Д. К.",
@@ -1418,31 +1443,6 @@
                         "teacher": "Муратов Д. К.",
                         "group": "Т26Q1-ООП-el(7046)",
                         "room": "аудитория",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-02",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "Пр. Модуль 1. Системы автоматизированного проектирования (CAD-системы)",
-                "otUnits": [
-                    {
-                        "teacher": "Муратов Д. К.",
-                        "group": "ЦК26ЦТИП_01(7208)",
-                        "room": "Онлайн",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
