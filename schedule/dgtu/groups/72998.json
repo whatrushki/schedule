@@ -2391,7 +2391,7 @@
                     {
                         "teacher": "Панасенко Н. Д.",
                         "group": "ВИИМ22",
-                        "room": "109",
+                        "room": "218а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2416,7 +2416,7 @@
                     {
                         "teacher": "Ганжур М. А.",
                         "group": "ВИИМ22",
-                        "room": "215",
+                        "room": "143",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2743,8 +2743,8 @@
                     {
                         "teacher": "Панасенко Н. Д.",
                         "group": "ВИИМ22",
-                        "room": "374",
-                        "additional": "1",
+                        "room": "402",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2808,7 +2808,7 @@
                     {
                         "teacher": "Ганжур М. А.",
                         "group": "ВИИМ22",
-                        "room": "374",
+                        "room": "123",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2852,7 +2852,7 @@
                     {
                         "teacher": "Сидорякина В. В.",
                         "group": "ВИИМ22",
-                        "room": "257",
+                        "room": "392",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2871,7 +2871,7 @@
                     {
                         "teacher": "Панасенко Н. Д.",
                         "group": "ВИИМ22",
-                        "room": "394",
+                        "room": "218а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2896,7 +2896,7 @@
                     {
                         "teacher": "Ганжур М. А.",
                         "group": "ВИИМ22",
-                        "room": "215",
+                        "room": "143",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3102,15 +3102,15 @@
         "lessons": [
             {
                 "date": "2026-11-24",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Безопасность жизнедеятельности",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Программирование",
                 "otUnits": [
                     {
-                        "teacher": "Хлебунов С. А.",
+                        "teacher": "Панасенко Н. Д.",
                         "group": "ВИИМ22",
-                        "room": "318",
+                        "room": "402",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3121,16 +3121,16 @@
             },
             {
                 "date": "2026-11-24",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Программирование",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Безопасность жизнедеятельности",
                 "otUnits": [
                     {
-                        "teacher": "Панасенко Н. Д.",
+                        "teacher": "Хлебунов С. А.",
                         "group": "ВИИМ22",
-                        "room": "374",
-                        "additional": "1",
+                        "room": "219",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3143,12 +3143,39 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лаб Программирование",
+                "subject": "лаб Безопасность жизнедеятельности, п/г 1",
                 "otUnits": [
                     {
-                        "teacher": "Панасенко Н. Д.",
+                        "teacher": "Упырь А. В.",
                         "group": "ВИИМ22",
-                        "room": "421",
+                        "room": "217",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Хлебунов С. А.",
+                        "group": "ВИИМ22",
+                        "room": "231",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-24",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Операционные системы",
+                "otUnits": [
+                    {
+                        "teacher": "Ганжур М. А.",
+                        "group": "ВИИМ22",
+                        "room": "123",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3175,6 +3202,44 @@
                         "group": "ВИИМ22",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Теория вероятностей и математическая статистика",
+                "otUnits": [
+                    {
+                        "teacher": "Сидорякина В. В.",
+                        "group": "ВИИМ22",
+                        "room": "392",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лаб Программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Панасенко Н. Д.",
+                        "group": "ВИИМ22",
+                        "room": "109",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3217,8 +3282,8 @@
                     {
                         "teacher": "Мисюра В. В.",
                         "group": "ВИИМ22",
-                        "room": "478",
-                        "additional": "1",
+                        "room": "402",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3232,33 +3297,6 @@
         "date": "2026-11-28",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-11-28",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Безопасность жизнедеятельности, п/г 1",
-                "otUnits": [
-                    {
-                        "teacher": "Упырь А. В.",
-                        "group": "ВИИМ22",
-                        "room": "518",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Хлебунов С. А.",
-                        "group": "ВИИМ22",
-                        "room": "426",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-11-28",
                 "number": 2,
@@ -3431,15 +3469,15 @@
         "lessons": [
             {
                 "date": "2026-12-08",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Безопасность жизнедеятельности",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Программирование",
                 "otUnits": [
                     {
-                        "teacher": "Хлебунов С. А.",
+                        "teacher": "Панасенко Н. Д.",
                         "group": "ВИИМ22",
-                        "room": "318",
+                        "room": "402",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3450,15 +3488,34 @@
             },
             {
                 "date": "2026-12-08",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Программирование",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Безопасность жизнедеятельности",
                 "otUnits": [
                     {
-                        "teacher": "Панасенко Н. Д.",
+                        "teacher": "Хлебунов С. А.",
                         "group": "ВИИМ22",
-                        "room": "374",
+                        "room": "219",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Операционные системы",
+                "otUnits": [
+                    {
+                        "teacher": "Ганжур М. А.",
+                        "group": "ВИИМ22",
+                        "room": "123",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3485,6 +3542,25 @@
                         "group": "ВИИМ22",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Теория вероятностей и математическая статистика",
+                "otUnits": [
+                    {
+                        "teacher": "Сидорякина В. В.",
+                        "group": "ВИИМ22",
+                        "room": "392",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3527,8 +3603,8 @@
                     {
                         "teacher": "Мисюра В. В.",
                         "group": "ВИИМ22",
-                        "room": "478",
-                        "additional": "1",
+                        "room": "402",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
