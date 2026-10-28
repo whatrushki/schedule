@@ -17,14 +17,6 @@
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
-                    },
-                    {
-                        "teacher": "доц.Наумов С.А.",
-                        "group": "МЕН-824",
-                        "room": "407",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -37,14 +29,6 @@
                 "endTime": "17:00",
                 "subject": "л. Экономика и управление производством",
                 "otUnits": [
-                    {
-                        "teacher": "доц.Наумов С.А.",
-                        "group": "МЕН-824",
-                        "room": "407",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "доц.Наумов С.А.",
                         "group": "МЕН-824",
@@ -200,14 +184,6 @@
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
-                    },
-                    {
-                        "teacher": "доц.Наумов С.А.",
-                        "group": "МЕН-824",
-                        "room": "412",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -220,14 +196,6 @@
                 "endTime": "13:20",
                 "subject": "пр. Экономика и управление инновациями",
                 "otUnits": [
-                    {
-                        "teacher": "доц.Наумов С.А.",
-                        "group": "МЕН-824",
-                        "room": "412",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "доц.Наумов С.А.",
                         "group": "МЕН-824",
@@ -498,6 +466,66 @@
                     }
                 ],
                 "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-14",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-14",
+                "number": 2,
+                "startTime": "10:10",
+                "endTime": "11:40",
+                "subject": "л. Экономика, организация и управление на предприятии",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Наумов С.А.",
+                        "group": "УПOZS-142",
+                        "room": "312",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Наумов С.А.",
+                        "group": "УПOZS-141",
+                        "room": "312",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 3,
+                "startTime": "11:50",
+                "endTime": "13:20",
+                "subject": "л. Экономика, организация и управление на предприятии",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Наумов С.А.",
+                        "group": "УПOZS-141",
+                        "room": "312",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Наумов С.А.",
+                        "group": "УПOZS-142",
+                        "room": "312",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]
@@ -895,6 +923,39 @@
                     }
                 ],
                 "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-07",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "зач. Экономика, организация и управление на предприятии",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Наумов С.А.",
+                        "group": "УПOZS-142",
+                        "room": "307",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Наумов С.А.",
+                        "group": "УПOZS-141",
+                        "room": "307",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CREDIT",
                 "state": "COMMON"
             }
         ]

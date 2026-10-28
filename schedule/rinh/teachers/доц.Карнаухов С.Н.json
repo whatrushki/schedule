@@ -98,14 +98,6 @@
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
-                    },
-                    {
-                        "teacher": "доц.Карнаухов С.Н.",
-                        "group": "ЭК-812",
-                        "room": "406",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
                     }
                 ],
                 "type": "LABORATORY",
@@ -118,14 +110,6 @@
                 "endTime": "17:00",
                 "subject": "лаб. Information Technology and Software in Project Management (Информационные технологии и программные средства в управлении проектами)",
                 "otUnits": [
-                    {
-                        "teacher": "доц.Карнаухов С.Н.",
-                        "group": "ЭК-812",
-                        "room": "406",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "ЭК-812",
@@ -278,14 +262,6 @@
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
-                    },
-                    {
-                        "teacher": "доц.Карнаухов С.Н.",
-                        "group": "ПРИ-821",
-                        "room": "303",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
                     }
                 ],
                 "type": "PRACTICE",
@@ -298,14 +274,6 @@
                 "endTime": "21:50",
                 "subject": "пр. Программная инженерия: управление разработкой",
                 "otUnits": [
-                    {
-                        "teacher": "доц.Карнаухов С.Н.",
-                        "group": "ПРИ-821",
-                        "room": "303",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "ПРИ-821",
@@ -338,14 +306,6 @@
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
-                    },
-                    {
-                        "teacher": "доц.Карнаухов С.Н.",
-                        "group": "ЭК-812",
-                        "room": "255",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
                     }
                 ],
                 "type": "LECTURE",
@@ -358,14 +318,6 @@
                 "endTime": "18:40",
                 "subject": "л. Information Technology and Software in Project Management (Информационные технологии и программные средства в управлении проектами)",
                 "otUnits": [
-                    {
-                        "teacher": "доц.Карнаухов С.Н.",
-                        "group": "ЭК-812",
-                        "room": "255",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "ЭК-812",
@@ -467,14 +419,6 @@
                 "endTime": "18:40",
                 "subject": "лаб. Инструментальные методы и технологии управления проектами",
                 "otUnits": [
-                    {
-                        "teacher": "доц.Карнаухов С.Н.",
-                        "group": "ИБOZ-8101",
-                        "room": "212а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "ИБOZ-8101",
@@ -717,6 +661,47 @@
         ]
     },
     {
+        "date": "2026-11-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-09",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "л. Основы цифровых технологий",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "ТУРZ-1101",
+                        "room": "209",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "ЭБZ-1101",
+                        "room": "209",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "ЭБZS-1101",
+                        "room": "209",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-10",
         "scheduleType": "COMMON",
         "lessons": [
@@ -925,6 +910,50 @@
                     }
                 ],
                 "type": "LABORATORY",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-13",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "л. Информационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "СЕРZ-1101",
+                        "room": "204",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "л. Информационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "СЕРZ-1101",
+                        "room": "204",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]
@@ -1299,6 +1328,31 @@
         ]
     },
     {
+        "date": "2026-11-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-21",
+                "number": 2,
+                "startTime": "10:10",
+                "endTime": "11:40",
+                "subject": "л. Информационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "СЕРZ-1101",
+                        "room": "206а",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-24",
         "scheduleType": "COMMON",
         "lessons": [
@@ -1381,6 +1435,25 @@
                     }
                 ],
                 "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-24",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "лаб. Информационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "СЕРZ-1101",
+                        "room": "308а",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
                 "state": "COMMON"
             }
         ]
@@ -1512,6 +1585,50 @@
         ]
     },
     {
+        "date": "2026-11-27",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-27",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "лаб. Информационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "СЕРZ-1101",
+                        "room": "204",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-27",
+                "number": 7,
+                "startTime": "18:45",
+                "endTime": "20:15",
+                "subject": "лаб. Информационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "СЕРZ-1101",
+                        "room": "204",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -1583,6 +1700,41 @@
                         "teacher": "доц.Карнаухов С.Н.",
                         "group": "МЕН-113",
                         "room": "308а",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-28",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "лаб. Основы цифровых технологий",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "ЭБZ-1101",
+                        "room": "309",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "ЭБZS-1101",
+                        "room": "309",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "ТУРZ-1101",
+                        "room": "309",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -1712,6 +1864,76 @@
                     }
                 ],
                 "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "лаб. Основы цифровых технологий",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "ЭБZS-1101",
+                        "room": "309",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "ТУРZ-1101",
+                        "room": "309",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "ЭБZ-1101",
+                        "room": "309",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "лаб. Основы цифровых технологий",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "ТУРZ-1101",
+                        "room": "309",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "ЭБZ-1101",
+                        "room": "309",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Карнаухов С.Н.",
+                        "group": "ЭБZS-1101",
+                        "room": "309",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LABORATORY",
                 "state": "COMMON"
             }
         ]

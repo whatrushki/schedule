@@ -173,6 +173,33 @@
                 ],
                 "type": "LECTURE",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "пр. Методика обучения русскому языку и русскому языку как иностранному",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Дроздова О.А.",
+                        "group": "ПОZ-7301",
+                        "room": "410",
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Дроздова О.А.",
+                        "group": "ПОZS-7301",
+                        "room": "410",
+                        "additional": "4",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
             }
         ]
     },
@@ -334,55 +361,7 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Дроздова О.А.",
-                        "group": "ТОР-813",
-                        "room": "403",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "доц.Дроздова О.А.",
                         "group": "ТУР-811",
-                        "room": "403",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "доц.Дроздова О.А.",
-                        "group": "ТУР-811",
-                        "room": "403",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "доц.Дроздова О.А.",
-                        "group": "МЕН-813",
-                        "room": "403",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "доц.Дроздова О.А.",
-                        "group": "ТОР-813",
-                        "room": "403",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "доц.Дроздова О.А.",
-                        "group": "ФК-811",
-                        "room": "403",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "доц.Дроздова О.А.",
-                        "group": "ФК-811",
                         "room": "403",
                         "additional": "1",
                         "onlineUrl": null,
@@ -398,6 +377,14 @@
                     },
                     {
                         "teacher": "доц.Дроздова О.А.",
+                        "group": "ТОР-813",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Дроздова О.А.",
                         "group": "МЕН-813",
                         "room": "403",
                         "additional": "1",
@@ -406,7 +393,7 @@
                     },
                     {
                         "teacher": "доц.Дроздова О.А.",
-                        "group": "ЭК-811",
+                        "group": "ФК-811",
                         "room": "403",
                         "additional": "1",
                         "onlineUrl": null,
@@ -425,62 +412,6 @@
                 "otUnits": [
                     {
                         "teacher": "доц.Дроздова О.А.",
-                        "group": "ТОР-813",
-                        "room": "403",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "доц.Дроздова О.А.",
-                        "group": "ЭК-811",
-                        "room": "403",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "доц.Дроздова О.А.",
-                        "group": "МЕН-813",
-                        "room": "403",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "доц.Дроздова О.А.",
-                        "group": "МЕН-813",
-                        "room": "403",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "доц.Дроздова О.А.",
-                        "group": "ТОР-813",
-                        "room": "403",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "доц.Дроздова О.А.",
-                        "group": "ТУР-811",
-                        "room": "403",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "доц.Дроздова О.А.",
-                        "group": "ЭК-811",
-                        "room": "403",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "доц.Дроздова О.А.",
                         "group": "ТУР-811",
                         "room": "403",
                         "additional": "1",
@@ -497,7 +428,23 @@
                     },
                     {
                         "teacher": "доц.Дроздова О.А.",
-                        "group": "ФК-811",
+                        "group": "МЕН-813",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Дроздова О.А.",
+                        "group": "ЭК-811",
+                        "room": "403",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "доц.Дроздова О.А.",
+                        "group": "ТОР-813",
                         "room": "403",
                         "additional": "1",
                         "onlineUrl": null,

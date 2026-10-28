@@ -1,30 +1,5 @@
 [
     {
-        "date": "2026-10-27",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-27",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Основы безопасности и защиты Родины",
-                "otUnits": [
-                    {
-                        "teacher": "Рыбальченко Т.Б.",
-                        "group": "ИКС-12",
-                        "room": "220",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-10-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -80,16 +55,35 @@
                 "subject": "Основы безопасности и защиты Родины",
                 "otUnits": [
                     {
-                        "teacher": "Рыбальченко Татьяна Борисовна",
+                        "teacher": "Рыбальченко Т.Б.",
                         "group": "РУП-11",
-                        "room": "213",
+                        "room": "210",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Основы безопасности и защиты Родины",
+                "otUnits": [
+                    {
+                        "teacher": "Рыбальченко Т.Б.",
+                        "group": "РУП-13",
+                        "room": "214",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
