@@ -1201,8 +1201,8 @@
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УТС31",
-                        "room": "",
-                        "additional": "Главный",
+                        "room": "261",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1221,12 +1221,12 @@
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "лаб Программируемые логические контроллеры, п/г 1",
+                "subject": "лаб Программируемые логические контроллеры",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УА41",
-                        "room": "140",
+                        "room": "424",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1300,25 +1300,6 @@
         "lessons": [
             {
                 "date": "2026-10-20",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Основы микропроцессорной техники",
-                "otUnits": [
-                    {
-                        "teacher": "Поздняков А. Г.",
-                        "group": "УТС31",
-                        "room": "441",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-20",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
@@ -1371,7 +1352,7 @@
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УА41",
-                        "room": "140",
+                        "room": "476а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1391,12 +1372,12 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Проектирование электронных устройств",
+                "subject": "пр Аналоговая и цифровая электроника",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
-                        "group": "УА41",
-                        "room": "115",
+                        "group": "УА31",
+                        "room": "465а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1410,12 +1391,12 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лаб Исполнительные устройства систем управления, п/г 2",
+                "subject": "лаб Вычислительные машины системы и сети",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
-                        "group": "УА41",
-                        "room": "140",
+                        "group": "УА31",
+                        "room": "105",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1432,16 +1413,73 @@
         "lessons": [
             {
                 "date": "2026-10-27",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Основы микропроцессорной техники",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Схемотехника",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
-                        "group": "УТС31",
-                        "room": "319а",
+                        "group": "УА31",
+                        "room": "447",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Основы промышленных сетей",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "МИСБ21",
+                        "room": "213/1",
+                        "additional": "11",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Проектирование электронных устройств",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УА41",
+                        "room": "223",
+                        "additional": "11",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Проектирование  электронных устройств",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УА41",
+                        "room": "223",
+                        "additional": "11",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1457,16 +1495,16 @@
         "lessons": [
             {
                 "date": "2026-10-28",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
                 "subject": "лаб Исполнительные устройства систем управления, п/г 2",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УА41",
-                        "room": "140",
-                        "additional": "1",
+                        "room": "212",
+                        "additional": "11",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1476,16 +1514,60 @@
             },
             {
                 "date": "2026-10-28",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Проектирование  электронных устройств",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лаб Исполнительные устройства систем управления, п/г 2",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УА41",
-                        "room": "257а",
-                        "additional": "1",
+                        "room": "213",
+                        "additional": "11",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "лаб Программируемые логические контроллеры",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УА41",
+                        "room": "204",
+                        "additional": "11",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-10-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-30",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Основы микропроцессорной техники",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УТС31",
+                        "room": "107",
+                        "additional": "11",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1504,32 +1586,13 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лаб Программируемые логические контроллеры, п/г 1",
-                "otUnits": [
-                    {
-                        "teacher": "Поздняков А. Г.",
-                        "group": "УА41",
-                        "room": "356",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-31",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
                 "subject": "лаб Вычислительные машины системы и сети",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УТС31",
-                        "room": "336",
-                        "additional": "1",
+                        "room": "208",
+                        "additional": "11",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1545,15 +1608,15 @@
         "lessons": [
             {
                 "date": "2026-11-02",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Программируемые логические контроллеры, п/г 1",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Программируемые логические контроллеры",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УА41",
-                        "room": "140",
+                        "room": "424",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1561,19 +1624,32 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-05",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
             {
-                "date": "2026-11-05",
+                "date": "2026-11-02",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лаб Исполнительные устройства систем управления, п/г 2",
+                "subject": "лаб Вычислительные машины системы и сети",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УТС31",
+                        "room": "115",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Проектирование электронных устройств",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
@@ -1595,15 +1671,15 @@
         "lessons": [
             {
                 "date": "2026-11-07",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Вычислительные машины системы и сети",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Исполнительные устройства систем управления, п/г 2",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
-                        "group": "УТС31",
-                        "room": "138",
+                        "group": "УА41",
+                        "room": "476а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1623,12 +1699,12 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Проектирование электронных устройств",
+                "subject": "пр Аналоговая и цифровая электроника",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
-                        "group": "УА41",
-                        "room": "115",
+                        "group": "УА31",
+                        "room": "465а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1642,31 +1718,12 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лаб Исполнительные устройства систем управления, п/г 2",
+                "subject": "лаб Вычислительные машины системы и сети",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
-                        "group": "УА41",
-                        "room": "140",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-09",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лаб Основы микропроцессорной техники",
-                "otUnits": [
-                    {
-                        "teacher": "Поздняков А. Г.",
-                        "group": "УТС31",
-                        "room": "140",
+                        "group": "УА31",
+                        "room": "105",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1678,59 +1735,147 @@
         ]
     },
     {
-        "date": "2026-11-12",
+        "date": "2026-11-10",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-12",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
+                "date": "2026-11-10",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Схемотехника",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УА31",
+                        "room": "447",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Проектирование электронных устройств",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УА41",
+                        "room": "223",
+                        "additional": "11",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
                 "subject": "пр Проектирование  электронных устройств",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УА41",
-                        "room": "140",
-                        "additional": "1",
+                        "room": "223",
+                        "additional": "11",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-11-11",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-11-12",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Вычислительные машины системы и сети",
-                "otUnits": [
-                    {
-                        "teacher": "Поздняков А. Г.",
-                        "group": "УТС31",
-                        "room": "319а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-12",
+                "date": "2026-11-11",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лаб Программируемые логические контроллеры, п/г 1",
+                "subject": "лаб Исполнительные устройства систем управления, п/г 2",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УА41",
-                        "room": "140",
-                        "additional": "1",
+                        "room": "212",
+                        "additional": "11",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лаб Исполнительные устройства систем управления, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УА41",
+                        "room": "213",
+                        "additional": "11",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "лаб Программируемые логические контроллеры",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УА41",
+                        "room": "204",
+                        "additional": "11",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-13",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Основы микропроцессорной техники",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УТС31",
+                        "room": "107",
+                        "additional": "11",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1749,57 +1894,13 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лаб Исполнительные устройства систем управления, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Поздняков А. Г.",
-                        "group": "УА41",
-                        "room": "140",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-16",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-16",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
                 "subject": "лаб Вычислительные машины системы и сети",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УТС31",
-                        "room": "356",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Программируемые логические контроллеры, п/г 1",
-                "otUnits": [
-                    {
-                        "teacher": "Поздняков А. Г.",
-                        "group": "УА41",
-                        "room": "140",
-                        "additional": "1",
+                        "room": "208",
+                        "additional": "11",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1818,12 +1919,12 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Проектирование электронных устройств",
+                "subject": "пр Аналоговая и цифровая электроника",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
-                        "group": "УА41",
-                        "room": "115",
+                        "group": "УА31",
+                        "room": "465а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1837,31 +1938,12 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лаб Исполнительные устройства систем управления, п/г 2",
+                "subject": "лаб Вычислительные машины системы и сети",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
-                        "group": "УА41",
-                        "room": "140",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-23",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Проектирование  электронных устройств",
-                "otUnits": [
-                    {
-                        "teacher": "Поздняков А. Г.",
-                        "group": "УА41",
-                        "room": "140",
+                        "group": "УА31",
+                        "room": "105",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1881,12 +1963,12 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "лаб Основы микропроцессорной техники",
+                "subject": "лаб Схемотехника",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
-                        "group": "УТС31",
-                        "room": "476а",
+                        "group": "УА31",
+                        "room": "447",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1897,16 +1979,98 @@
             },
             {
                 "date": "2026-11-24",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лаб Программируемые логические контроллеры, п/г 1",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Проектирование электронных устройств",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УА41",
-                        "room": "140",
-                        "additional": "1",
+                        "room": "204",
+                        "additional": "11",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-24",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Проектирование  электронных устройств",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УА41",
+                        "room": "204",
+                        "additional": "11",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-25",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Исполнительные устройства систем управления, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УА41",
+                        "room": "212",
+                        "additional": "11",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лаб Исполнительные устройства систем управления, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УА41",
+                        "room": "213",
+                        "additional": "11",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "лаб Программируемые логические контроллеры",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УА41",
+                        "room": "204",
+                        "additional": "11",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1922,16 +2086,16 @@
         "lessons": [
             {
                 "date": "2026-11-27",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Вычислительные машины системы и сети",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Основы микропроцессорной техники",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УТС31",
-                        "room": "105",
-                        "additional": "1",
+                        "room": "107",
+                        "additional": "11",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1947,66 +2111,16 @@
         "lessons": [
             {
                 "date": "2026-11-28",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Исполнительные устройства систем управления, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Поздняков А. Г.",
-                        "group": "УА41",
-                        "room": "140",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-02",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-02",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Программируемые логические контроллеры, п/г 1",
-                "otUnits": [
-                    {
-                        "teacher": "Поздняков А. Г.",
-                        "group": "УА41",
-                        "room": "140",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-05",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-05",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "лаб Вычислительные машины системы и сети",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УТС31",
-                        "room": "140",
-                        "additional": "1",
+                        "room": "208",
+                        "additional": "11",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2025,12 +2139,12 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Проектирование электронных устройств",
+                "subject": "пр Аналоговая и цифровая электроника",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
-                        "group": "УА41",
-                        "room": "115",
+                        "group": "УА31",
+                        "room": "465а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2044,12 +2158,12 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лаб Исполнительные устройства систем управления, п/г 2",
+                "subject": "лаб Вычислительные машины системы и сети",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
-                        "group": "УА41",
-                        "room": "140",
+                        "group": "УА31",
+                        "room": "105",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2069,13 +2183,51 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
+                "subject": "лаб Схемотехника",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УА31",
+                        "room": "447",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Проектирование электронных устройств",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УА41",
+                        "room": "204",
+                        "additional": "11",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
                 "subject": "пр Проектирование  электронных устройств",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УА41",
-                        "room": "356",
-                        "additional": "1",
+                        "room": "204",
+                        "additional": "11",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2091,16 +2243,54 @@
         "lessons": [
             {
                 "date": "2026-12-09",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
                 "subject": "лаб Исполнительные устройства систем управления, п/г 2",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УА41",
-                        "room": "140",
-                        "additional": "1",
+                        "room": "212",
+                        "additional": "11",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лаб Исполнительные устройства систем управления, п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УА41",
+                        "room": "213",
+                        "additional": "11",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "лаб Программируемые логические контроллеры",
+                "otUnits": [
+                    {
+                        "teacher": "Поздняков А. Г.",
+                        "group": "УА41",
+                        "room": "204",
+                        "additional": "11",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2116,16 +2306,16 @@
         "lessons": [
             {
                 "date": "2026-12-11",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Вычислительные машины системы и сети",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Основы микропроцессорной техники",
                 "otUnits": [
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УТС31",
-                        "room": "257",
-                        "additional": "1",
+                        "room": "107",
+                        "additional": "11",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2141,75 +2331,6 @@
         "lessons": [
             {
                 "date": "2026-12-12",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Основы микропроцессорной техники",
-                "otUnits": [
-                    {
-                        "teacher": "Поздняков А. Г.",
-                        "group": "УТС31",
-                        "room": "265",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-12",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Программируемые логические контроллеры, п/г 1",
-                "otUnits": [
-                    {
-                        "teacher": "Поздняков А. Г.",
-                        "group": "УА41",
-                        "room": "140",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-14",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-14",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Программируемые логические контроллеры, п/г 1",
-                "otUnits": [
-                    {
-                        "teacher": "Поздняков А. Г.",
-                        "group": "УА41",
-                        "room": "140",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-17",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-17",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -2218,8 +2339,8 @@
                     {
                         "teacher": "Поздняков А. Г.",
                         "group": "УТС31",
-                        "room": "115",
-                        "additional": "1",
+                        "room": "208",
+                        "additional": "11",
                         "onlineUrl": null,
                         "subject": null
                     }
