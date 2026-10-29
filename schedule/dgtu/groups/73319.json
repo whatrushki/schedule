@@ -2791,8 +2791,8 @@
                     {
                         "teacher": "Перетятько В. Ю.",
                         "group": "БТБ12",
-                        "room": "480б",
-                        "additional": "1",
+                        "room": "430а",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2810,7 +2810,7 @@
                     {
                         "teacher": "Олексива В. В.",
                         "group": "БТБ12",
-                        "room": "213",
+                        "room": "489",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2835,7 +2835,7 @@
                     {
                         "teacher": "Волокитин Г. И.",
                         "group": "БТБ12",
-                        "room": "313",
+                        "room": "223",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2892,7 +2892,7 @@
                     {
                         "teacher": "Андрющенко С. А.",
                         "group": "БТБ12",
-                        "room": "498",
+                        "room": "351",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3200,6 +3200,25 @@
         "lessons": [
             {
                 "date": "2026-11-05",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Воскобойников С. Г.",
+                        "group": "БТБ12",
+                        "room": "402",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -3327,6 +3346,31 @@
         ]
     },
     {
+        "date": "2026-11-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-09",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Воскобойников С. Г.",
+                        "group": "БТБ12",
+                        "room": "806",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-10",
         "scheduleType": "COMMON",
         "lessons": [
@@ -3342,6 +3386,151 @@
                         "group": "БТБ12",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Перетятько В. Ю.",
+                        "group": "БТБ12",
+                        "room": "430а",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Олексива В. В.",
+                        "group": "БТБ12",
+                        "room": "489",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-11",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Волокитин Г. И.",
+                        "group": "БТБ12",
+                        "room": "223",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Обеспечение экологической безопасности урбоэкосистем",
+                "otUnits": [
+                    {
+                        "teacher": "Андреева Е. С.",
+                        "group": "БТБ12",
+                        "room": "218",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Обеспечение экологической безопасности урбоэкосистем",
+                "otUnits": [
+                    {
+                        "teacher": "Андреева Е. С.",
+                        "group": "БТБ12",
+                        "room": "218",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Информатика и информационно-коммуникационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "Андрющенко С. А.",
+                        "group": "БТБ12",
+                        "room": "351",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек История России",
+                "otUnits": [
+                    {
+                        "teacher": "Воскобойников С. Г.",
+                        "group": "БТБ12",
+                        "room": "292",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3555,6 +3744,31 @@
         ]
     },
     {
+        "date": "2026-11-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-23",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Воскобойников С. Г.",
+                        "group": "БТБ12",
+                        "room": "806",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-24",
         "scheduleType": "COMMON",
         "lessons": [
@@ -3570,6 +3784,151 @@
                         "group": "БТБ12",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-24",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Перетятько В. Ю.",
+                        "group": "БТБ12",
+                        "room": "430а",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-24",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Олексива В. В.",
+                        "group": "БТБ12",
+                        "room": "489",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-25",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Волокитин Г. И.",
+                        "group": "БТБ12",
+                        "room": "223",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Обеспечение экологической безопасности урбоэкосистем",
+                "otUnits": [
+                    {
+                        "teacher": "Андреева Е. С.",
+                        "group": "БТБ12",
+                        "room": "218",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Обеспечение экологической безопасности урбоэкосистем",
+                "otUnits": [
+                    {
+                        "teacher": "Андреева Е. С.",
+                        "group": "БТБ12",
+                        "room": "218",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Информатика и информационно-коммуникационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "Андрющенко С. А.",
+                        "group": "БТБ12",
+                        "room": "498",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-26",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-26",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек История России",
+                "otUnits": [
+                    {
+                        "teacher": "Воскобойников С. Г.",
+                        "group": "БТБ12",
+                        "room": "292",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3783,6 +4142,31 @@
         ]
     },
     {
+        "date": "2026-12-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-07",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Воскобойников С. Г.",
+                        "group": "БТБ12",
+                        "room": "806",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-12-08",
         "scheduleType": "COMMON",
         "lessons": [
@@ -3798,6 +4182,151 @@
                         "group": "БТБ12",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Перетятько В. Ю.",
+                        "group": "БТБ12",
+                        "room": "430а",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Олексива В. В.",
+                        "group": "БТБ12",
+                        "room": "489",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-09",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Волокитин Г. И.",
+                        "group": "БТБ12",
+                        "room": "223",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Обеспечение экологической безопасности урбоэкосистем",
+                "otUnits": [
+                    {
+                        "teacher": "Андреева Е. С.",
+                        "group": "БТБ12",
+                        "room": "218",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Обеспечение экологической безопасности урбоэкосистем",
+                "otUnits": [
+                    {
+                        "teacher": "Андреева Е. С.",
+                        "group": "БТБ12",
+                        "room": "218",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Информатика и информационно-коммуникационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "Андрющенко С. А.",
+                        "group": "БТБ12",
+                        "room": "498",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-10",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек История России",
+                "otUnits": [
+                    {
+                        "teacher": "Воскобойников С. Г.",
+                        "group": "БТБ12",
+                        "room": "292",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }

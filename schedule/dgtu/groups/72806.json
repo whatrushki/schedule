@@ -3014,6 +3014,25 @@
             },
             {
                 "date": "2026-10-26",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Теоретическая грамматика",
+                "otUnits": [
+                    {
+                        "teacher": "Якименко В. А.",
+                        "group": "ЛЛ33",
+                        "room": "219",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-26",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -3022,7 +3041,7 @@
                     {
                         "teacher": "Иванова Ю. И.",
                         "group": "ЛЛ33",
-                        "room": "141",
+                        "room": "219",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3037,25 +3056,6 @@
         "date": "2026-10-27",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-10-27",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Практический курс английского языка",
-                "otUnits": [
-                    {
-                        "teacher": "Бекташ Н. И.",
-                        "group": "ЛЛ33",
-                        "room": "430а",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-10-27",
                 "number": 2,
@@ -3077,13 +3077,59 @@
             },
             {
                 "date": "2026-10-27",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Практический курс английского языка, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "319",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Новикова С. А.",
+                        "group": "ЛЛ33",
+                        "room": "430",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Теория и практика межкультурной коммуникации",
+                "otUnits": [
+                    {
+                        "teacher": "Рябцева И. Г.",
+                        "group": "ЛЛ33",
+                        "room": "410",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-27",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
-                "subject": "лек Современные образовательные технологии профессиональной деятельности",
+                "subject": "лек Лингвострановедение",
                 "otUnits": [
                     {
-                        "teacher": "Зелинская М. Г.",
+                        "teacher": "Рябцева И. Г.",
                         "group": "ЛЛ33",
                         "room": "423",
                         "additional": "8",
@@ -3118,6 +3164,71 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Теория и практика межкультурной коммуникации",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "171",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Практический курс второго иностранного языка, испанский, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "383б",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Карбышева Д. Ю.",
+                        "group": "ЛЛ33",
+                        "room": "398",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-28",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Практический курс второго иностранного языка, французский",
+                "otUnits": [
+                    {
+                        "teacher": "Погорельская Л. Р.",
+                        "group": "ЛЛ33",
+                        "room": "402",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -3127,15 +3238,69 @@
         "lessons": [
             {
                 "date": "2026-10-29",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Практический курс английского языка",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Практический курс второго иностранного языка, испанский, п/г 1",
                 "otUnits": [
                     {
-                        "teacher": "Бекташ Н. И.",
+                        "teacher": "Тютюнник М. А.",
                         "group": "ЛЛ33",
-                        "room": "430а",
+                        "room": "123",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Карбышева Д. Ю.",
+                        "group": "ЛЛ33",
+                        "room": "206",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Практический курс второго иностранного языка, испанский, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "518",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Карбышева Д. Ю.",
+                        "group": "ЛЛ33",
+                        "room": "383б",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-29",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Практический курс второго иностранного языка, французский",
+                "otUnits": [
+                    {
+                        "teacher": "Погорельская Л. Р.",
+                        "group": "ЛЛ33",
+                        "room": "109",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3146,15 +3311,23 @@
             },
             {
                 "date": "2026-10-29",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Практический курс второго иностранного языка, испанский",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Практический курс английского языка, п/г 1",
                 "otUnits": [
                     {
-                        "teacher": "Тютюнник М. А.",
+                        "teacher": "Бекташ Н. И.",
                         "group": "ЛЛ33",
-                        "room": "526",
+                        "room": "426",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Новикова С. А.",
+                        "group": "ЛЛ33",
+                        "room": "535",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3190,6 +3363,52 @@
             },
             {
                 "date": "2026-10-30",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Практический курс английского языка, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "161",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Новикова С. А.",
+                        "group": "ЛЛ33",
+                        "room": "257а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-30",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Практический курс второго иностранного языка, французский",
+                "otUnits": [
+                    {
+                        "teacher": "Погорельская Л. Р.",
+                        "group": "ЛЛ33",
+                        "room": "410",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-30",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
@@ -3198,7 +3417,7 @@
                     {
                         "teacher": "Ходыка А. И.",
                         "group": "ЛЛ33",
-                        "room": "010",
+                        "room": "430",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3223,7 +3442,7 @@
                     {
                         "teacher": "Тютюнник М. А.",
                         "group": "ЛЛ33",
-                        "room": "010",
+                        "room": "426",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3250,7 +3469,7 @@
                     {
                         "teacher": "Евтушенко С. В.",
                         "group": "ЛЛ33",
-                        "room": "219",
+                        "room": "231",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3258,7 +3477,7 @@
                     {
                         "teacher": "Евтушенко С. В.",
                         "group": "ЛЛ33",
-                        "room": "219",
+                        "room": "231",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3277,7 +3496,7 @@
                     {
                         "teacher": "Иванова Ю. И.",
                         "group": "ЛЛ33",
-                        "room": "217",
+                        "room": "231",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3662,7 +3881,7 @@
                     {
                         "teacher": "Евтушенко С. В.",
                         "group": "ЛЛ33",
-                        "room": "402",
+                        "room": "203",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -3670,8 +3889,161 @@
                     {
                         "teacher": "Евтушенко С. В.",
                         "group": "ЛЛ33",
-                        "room": "402",
+                        "room": "203",
                         "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-09",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Практический курс английского языка",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "403",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Теоретическая грамматика",
+                "otUnits": [
+                    {
+                        "teacher": "Якименко В. А.",
+                        "group": "ЛЛ33",
+                        "room": "219",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр История языка",
+                "otUnits": [
+                    {
+                        "teacher": "Иванова Ю. И.",
+                        "group": "ЛЛ33",
+                        "room": "219",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-10",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Теория и практика межкультурной коммуникации",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "477",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Практический курс английского языка, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "319",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Новикова С. А.",
+                        "group": "ЛЛ33",
+                        "room": "430",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Теория и практика межкультурной коммуникации",
+                "otUnits": [
+                    {
+                        "teacher": "Рябцева И. Г.",
+                        "group": "ЛЛ33",
+                        "room": "410",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Лингвострановедение",
+                "otUnits": [
+                    {
+                        "teacher": "Рябцева И. Г.",
+                        "group": "ЛЛ33",
+                        "room": "423",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3697,6 +4069,319 @@
                         "group": "ЛЛ33",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Теория и практика межкультурной коммуникации",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "171",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Практический курс второго иностранного языка, испанский, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "383б",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Карбышева Д. Ю.",
+                        "group": "ЛЛ33",
+                        "room": "398",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Практический курс второго иностранного языка, французский",
+                "otUnits": [
+                    {
+                        "teacher": "Погорельская Л. Р.",
+                        "group": "ЛЛ33",
+                        "room": "402",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-12",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Практический курс второго иностранного языка, испанский, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "123",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Карбышева Д. Ю.",
+                        "group": "ЛЛ33",
+                        "room": "206",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Практический курс второго иностранного языка, испанский, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "518",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Карбышева Д. Ю.",
+                        "group": "ЛЛ33",
+                        "room": "383б",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Практический курс второго иностранного языка, французский",
+                "otUnits": [
+                    {
+                        "teacher": "Погорельская Л. Р.",
+                        "group": "ЛЛ33",
+                        "room": "109",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Практический курс английского языка, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "426",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Новикова С. А.",
+                        "group": "ЛЛ33",
+                        "room": "535",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-13",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Практический курс второго иностранного языка, испанский",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "422",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Практический курс второго иностранного языка, французский",
+                "otUnits": [
+                    {
+                        "teacher": "Погорельская Л. Р.",
+                        "group": "ЛЛ33",
+                        "room": "410",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Теоретическая грамматика",
+                "otUnits": [
+                    {
+                        "teacher": "Ходыка А. И.",
+                        "group": "ЛЛ33",
+                        "room": "430",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-14",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-14",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Практический курс второго иностранного языка, испанский, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "426",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Карбышева Д. Ю.",
+                        "group": "ЛЛ33",
+                        "room": "535",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр История языка, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Евтушенко С. В.",
+                        "group": "ЛЛ33",
+                        "room": "231",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Евтушенко С. В.",
+                        "group": "ЛЛ33",
+                        "room": "231",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр История языка",
+                "otUnits": [
+                    {
+                        "teacher": "Иванова Ю. И.",
+                        "group": "ЛЛ33",
+                        "room": "231",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3732,6 +4417,159 @@
         ]
     },
     {
+        "date": "2026-11-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-23",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Практический курс английского языка",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "403",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-23",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Теоретическая грамматика",
+                "otUnits": [
+                    {
+                        "teacher": "Якименко В. А.",
+                        "group": "ЛЛ33",
+                        "room": "219",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-23",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр История языка",
+                "otUnits": [
+                    {
+                        "teacher": "Иванова Ю. И.",
+                        "group": "ЛЛ33",
+                        "room": "219",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-24",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-24",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Теория и практика межкультурной коммуникации",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "477",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-24",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Практический курс английского языка, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "319",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Новикова С. А.",
+                        "group": "ЛЛ33",
+                        "room": "430",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-24",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Теория и практика межкультурной коммуникации",
+                "otUnits": [
+                    {
+                        "teacher": "Рябцева И. Г.",
+                        "group": "ЛЛ33",
+                        "room": "410",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-24",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Лингвострановедение",
+                "otUnits": [
+                    {
+                        "teacher": "Рябцева И. Г.",
+                        "group": "ЛЛ33",
+                        "room": "423",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-25",
         "scheduleType": "COMMON",
         "lessons": [
@@ -3747,6 +4585,319 @@
                         "group": "ЛЛ33",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Теория и практика межкультурной коммуникации",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "171",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Практический курс второго иностранного языка, испанский, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "383б",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Карбышева Д. Ю.",
+                        "group": "ЛЛ33",
+                        "room": "421",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Практический курс второго иностранного языка, французский",
+                "otUnits": [
+                    {
+                        "teacher": "Погорельская Л. Р.",
+                        "group": "ЛЛ33",
+                        "room": "402",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-26",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-26",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Практический курс второго иностранного языка, испанский, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "123",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Карбышева Д. Ю.",
+                        "group": "ЛЛ33",
+                        "room": "206",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Практический курс второго иностранного языка, испанский, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "518",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Карбышева Д. Ю.",
+                        "group": "ЛЛ33",
+                        "room": "383б",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Практический курс второго иностранного языка, французский",
+                "otUnits": [
+                    {
+                        "teacher": "Погорельская Л. Р.",
+                        "group": "ЛЛ33",
+                        "room": "109",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Практический курс английского языка, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "021",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Новикова С. А.",
+                        "group": "ЛЛ33",
+                        "room": "327",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-27",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-27",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Практический курс второго иностранного языка, испанский",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "422",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-27",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Практический курс второго иностранного языка, французский",
+                "otUnits": [
+                    {
+                        "teacher": "Погорельская Л. Р.",
+                        "group": "ЛЛ33",
+                        "room": "410",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-27",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Теоретическая грамматика",
+                "otUnits": [
+                    {
+                        "teacher": "Ходыка А. И.",
+                        "group": "ЛЛ33",
+                        "room": "430",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-28",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Практический курс второго иностранного языка, испанский, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "426",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Карбышева Д. Ю.",
+                        "group": "ЛЛ33",
+                        "room": "535",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-28",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр История языка, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Евтушенко С. В.",
+                        "group": "ЛЛ33",
+                        "room": "231",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Евтушенко С. В.",
+                        "group": "ЛЛ33",
+                        "room": "231",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-28",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр История языка",
+                "otUnits": [
+                    {
+                        "teacher": "Иванова Ю. И.",
+                        "group": "ЛЛ33",
+                        "room": "231",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3782,6 +4933,140 @@
         ]
     },
     {
+        "date": "2026-12-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-07",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Практический курс английского языка",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "403",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Теоретическая грамматика",
+                "otUnits": [
+                    {
+                        "teacher": "Якименко В. А.",
+                        "group": "ЛЛ33",
+                        "room": "219",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-08",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Теория и практика межкультурной коммуникации",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "477",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Практический курс английского языка, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "319",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Новикова С. А.",
+                        "group": "ЛЛ33",
+                        "room": "430",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Теория и практика межкультурной коммуникации",
+                "otUnits": [
+                    {
+                        "teacher": "Рябцева И. Г.",
+                        "group": "ЛЛ33",
+                        "room": "410",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Лингвострановедение",
+                "otUnits": [
+                    {
+                        "teacher": "Рябцева И. Г.",
+                        "group": "ЛЛ33",
+                        "room": "423",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-12-09",
         "scheduleType": "COMMON",
         "lessons": [
@@ -3797,6 +5082,300 @@
                         "group": "ЛЛ33",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Теория и практика межкультурной коммуникации",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "171",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Практический курс второго иностранного языка, испанский, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "383б",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Карбышева Д. Ю.",
+                        "group": "ЛЛ33",
+                        "room": "421",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Практический курс второго иностранного языка, французский",
+                "otUnits": [
+                    {
+                        "teacher": "Погорельская Л. Р.",
+                        "group": "ЛЛ33",
+                        "room": "402",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-10",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Практический курс второго иностранного языка, испанский, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "123",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Карбышева Д. Ю.",
+                        "group": "ЛЛ33",
+                        "room": "206",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Практический курс второго иностранного языка, испанский, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "518",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Карбышева Д. Ю.",
+                        "group": "ЛЛ33",
+                        "room": "383б",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Практический курс второго иностранного языка, французский",
+                "otUnits": [
+                    {
+                        "teacher": "Погорельская Л. Р.",
+                        "group": "ЛЛ33",
+                        "room": "109",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Практический курс английского языка, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Бекташ Н. И.",
+                        "group": "ЛЛ33",
+                        "room": "021",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Новикова С. А.",
+                        "group": "ЛЛ33",
+                        "room": "327",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-11",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Практический курс второго иностранного языка, испанский",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "422",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-11",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Практический курс второго иностранного языка, французский",
+                "otUnits": [
+                    {
+                        "teacher": "Погорельская Л. Р.",
+                        "group": "ЛЛ33",
+                        "room": "410",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-11",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Теоретическая грамматика",
+                "otUnits": [
+                    {
+                        "teacher": "Ходыка А. И.",
+                        "group": "ЛЛ33",
+                        "room": "430",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Практический курс второго иностранного языка, испанский, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Тютюнник М. А.",
+                        "group": "ЛЛ33",
+                        "room": "426",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Карбышева Д. Ю.",
+                        "group": "ЛЛ33",
+                        "room": "535",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-12",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр История языка, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Евтушенко С. В.",
+                        "group": "ЛЛ33",
+                        "room": "231",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Евтушенко С. В.",
+                        "group": "ЛЛ33",
+                        "room": "231",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
