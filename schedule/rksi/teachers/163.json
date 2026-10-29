@@ -140,7 +140,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-30",
@@ -159,26 +159,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-30",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Логистика",
+                "subject": "Интернет-маркетинг",
                 "otUnits": [
                     {
-                        "teacher": "Доценко Лиана Александровна",
+                        "teacher": "Доценко Л.А.",
                         "group": "ТД-33",
-                        "room": "44",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-30",
@@ -188,16 +188,16 @@
                 "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Доценко Лиана Александровна",
+                        "teacher": "Доценко Л.А.",
                         "group": "ТД-12",
-                        "room": "31",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
+                "type": "COMMON",
+                "state": "CHANGED"
             }
         ]
     },
@@ -271,14 +271,6 @@
                 "otUnits": [
                     {
                         "teacher": "Доценко Лиана Александровна",
-                        "group": "ТД-13",
-                        "room": "34",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Доценко Лиана Александровна",
                         "group": "БУ-11",
                         "room": "34",
                         "additional": "2",
@@ -288,6 +280,14 @@
                     {
                         "teacher": "Доценко Лиана Александровна",
                         "group": "БД-11",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Доценко Лиана Александровна",
+                        "group": "ТД-13",
                         "room": "34",
                         "additional": "2",
                         "onlineUrl": null,
