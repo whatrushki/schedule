@@ -2703,11 +2703,19 @@
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
-                "subject": "лаб Безопасность жизнедеятельности",
+                "subject": "лаб Безопасность жизнедеятельности, п/г 1",
                 "otUnits": [
                     {
                         "teacher": "Хлебунов С. А.",
-                        "group": "ВКБ21, ВКБ21",
+                        "group": "ВКБ21",
+                        "room": "231",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Павликов А. В.",
+                        "group": "ВКБ21",
                         "room": "231",
                         "additional": "8",
                         "onlineUrl": null,
@@ -2733,7 +2741,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ21",
-                        "room": "130",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2974,10 +2982,10 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лаб Электроника и схемотехника, п/г 2",
+                "subject": "лаб Электроника и схемотехника, п/г 1",
                 "otUnits": [
                     {
-                        "teacher": "Девяткин А. К.",
+                        "teacher": "Приходько Г. И.",
                         "group": "ВКБ21",
                         "room": "021",
                         "additional": "1",
@@ -2985,7 +2993,7 @@
                         "subject": null
                     },
                     {
-                        "teacher": "Приходько Г. И.",
+                        "teacher": "Девяткин А. К.",
                         "group": "ВКБ21",
                         "room": "021",
                         "additional": "1",
@@ -3069,8 +3077,8 @@
                     {
                         "teacher": "Молодцова А. И.",
                         "group": "ВКБ21",
-                        "room": "218а",
-                        "additional": "1",
+                        "room": "430а",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3258,7 +3266,7 @@
                     {
                         "teacher": "Позднышева Е. Е.",
                         "group": "ВКБ21",
-                        "room": "485",
+                        "room": "489",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3344,33 +3352,6 @@
         "lessons": [
             {
                 "date": "2026-11-09",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Электроника и схемотехника, п/г 2",
-                "otUnits": [
-                    {
-                        "teacher": "Девяткин А. К.",
-                        "group": "ВКБ21",
-                        "room": "358",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Приходько Г. И.",
-                        "group": "ВКБ21",
-                        "room": "358",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-09",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -3379,8 +3360,8 @@
                     {
                         "teacher": "Тазаян А. Б.",
                         "group": "ВКБ21",
-                        "room": "319",
-                        "additional": "1",
+                        "room": "322",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3393,13 +3374,21 @@
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
-                "subject": "лаб Безопасность жизнедеятельности",
+                "subject": "лаб Безопасность жизнедеятельности, п/г 1",
                 "otUnits": [
+                    {
+                        "teacher": "Хлебунов С. А.",
+                        "group": "ВКБ21",
+                        "room": "231",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Павликов А. В.",
                         "group": "ВКБ21",
-                        "room": "Кафедра",
-                        "additional": "Главный",
+                        "room": "231",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3423,7 +3412,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ21",
-                        "room": "130",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3519,16 +3508,8 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "лек Электроника и схемотехника",
+                "subject": "пр Общая физическая подготовка",
                 "otUnits": [
-                    {
-                        "teacher": "Приходько Г. И.",
-                        "group": "ВКБ21",
-                        "room": "384",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "Корбан А. Н.",
                         "group": "ВКБ21",
@@ -3625,25 +3606,6 @@
             },
             {
                 "date": "2026-11-12",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Безопасность жизнедеятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Хлебунов С. А.",
-                        "group": "ВКБ21",
-                        "room": "Кафедра",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-12",
                 "number": 6,
                 "startTime": "17:45",
                 "endTime": "19:20",
@@ -3678,6 +3640,33 @@
                         "teacher": "Богомоленко Д. В.",
                         "group": "ВКБ21",
                         "room": "433",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Электроника и схемотехника, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Приходько Г. И.",
+                        "group": "ВКБ21",
+                        "room": "021",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Девяткин А. К.",
+                        "group": "ВКБ21",
+                        "room": "021",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3748,6 +3737,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Электроника и схемотехника",
+                "otUnits": [
+                    {
+                        "teacher": "Приходько Г. И.",
+                        "group": "ВКБ21",
+                        "room": "384",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -3790,8 +3798,8 @@
                     {
                         "teacher": "Тазаян А. Б.",
                         "group": "ВКБ21",
-                        "room": "319",
-                        "additional": "1",
+                        "room": "322",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3804,32 +3812,21 @@
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
-                "subject": "лаб Безопасность жизнедеятельности",
+                "subject": "лаб Безопасность жизнедеятельности, п/г 1",
                 "otUnits": [
+                    {
+                        "teacher": "Хлебунов С. А.",
+                        "group": "ВКБ21",
+                        "room": "231",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Павликов А. В.",
                         "group": "ВКБ21",
-                        "room": "Кафедра",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-23",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лаб Электроника и схемотехника",
-                "otUnits": [
-                    {
-                        "teacher": "Приходько Г. И.",
-                        "group": "ВКБ21",
-                        "room": "406",
-                        "additional": "2",
+                        "room": "231",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3853,7 +3850,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ21",
-                        "room": "130",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4044,25 +4041,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-11-26",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Безопасность жизнедеятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Хлебунов С. А.",
-                        "group": "ВКБ21",
-                        "room": "Кафедра",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -4081,6 +4059,33 @@
                         "teacher": "Богомоленко Д. В.",
                         "group": "ВКБ21",
                         "room": "433",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-27",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Электроника и схемотехника, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Приходько Г. И.",
+                        "group": "ВКБ21",
+                        "room": "021",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Девяткин А. К.",
+                        "group": "ВКБ21",
+                        "room": "021",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4193,27 +4198,8 @@
                     {
                         "teacher": "Тазаян А. Б.",
                         "group": "ВКБ21",
-                        "room": "319",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-07",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лаб Электроника и схемотехника",
-                "otUnits": [
-                    {
-                        "teacher": "Приходько Г. И.",
-                        "group": "ВКБ21",
-                        "room": "406",
-                        "additional": "2",
+                        "room": "322",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4237,7 +4223,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ21",
-                        "room": "130",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4446,6 +4432,33 @@
                         "teacher": "Богомоленко Д. В.",
                         "group": "ВКБ21",
                         "room": "433",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-11",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Электроника и схемотехника, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Приходько Г. И.",
+                        "group": "ВКБ21",
+                        "room": "021",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Девяткин А. К.",
+                        "group": "ВКБ21",
+                        "room": "021",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
