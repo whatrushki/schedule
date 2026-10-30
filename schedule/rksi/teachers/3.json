@@ -168,22 +168,68 @@
         "lessons": [
             {
                 "date": "2026-10-31",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.А.",
+                        "group": "ИКС-14",
+                        "room": "418",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-31",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Дискретная математика с элементами математической логики",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.А.",
+                        "group": "СА-16",
+                        "room": "418",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-31",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Численные методы",
+                "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Андроник Эдварди",
+                        "teacher": "Арутюнян М.А.",
+                        "group": "ТЭС-13",
+                        "room": "418",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Арутюнян А.Э.",
                         "group": "ИС-28",
-                        "room": "404",
+                        "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-31",
@@ -193,16 +239,16 @@
                 "subject": "Численные методы",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Андроник Эдварди",
+                        "teacher": "Арутюнян А.Э.",
                         "group": "ИС-22",
-                        "room": "404",
+                        "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-31",
@@ -212,16 +258,16 @@
                 "subject": "Численные методы",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Андроник Эдварди",
+                        "teacher": "Арутюнян А.Э.",
                         "group": "ИС-23",
-                        "room": "404",
+                        "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-31",
@@ -231,16 +277,16 @@
                 "subject": "Численные методы",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Андроник Эдварди",
+                        "teacher": "Арутюнян А.Э.",
                         "group": "ИС-27",
-                        "room": "404",
+                        "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-31",
@@ -250,16 +296,16 @@
                 "subject": "Численные методы",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян Андроник Эдварди",
+                        "teacher": "Арутюнян А.Э.",
                         "group": "ИС-25",
-                        "room": "404",
+                        "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

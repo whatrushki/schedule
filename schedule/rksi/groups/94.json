@@ -87,6 +87,25 @@
         "lessons": [
             {
                 "date": "2026-10-31",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-25",
+                        "room": "414",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-10-31",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -95,14 +114,14 @@
                     {
                         "teacher": "Муравьева М.П.",
                         "group": "СА-25",
-                        "room": "326",
+                        "room": "306",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-31",
@@ -121,7 +140,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
@@ -374,17 +393,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Ужегова Е.А.",
                         "group": "СА-25",
-                        "room": "111",
+                        "room": "307",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ужегова Е.А.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "СА-25",
-                        "room": "307",
+                        "room": "111",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

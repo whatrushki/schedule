@@ -73,7 +73,7 @@
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Иностранный язык",
+                "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
                         "teacher": "Марченко С.П.",
@@ -136,10 +136,18 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Математика",
+                "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Марченко Светлана Викторовна",
+                        "teacher": "Марченко С.П.",
+                        "group": "ТД-12",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Марченко С.В.",
                         "group": "ИБТ-13",
                         "room": "42",
                         "additional": "2",
@@ -148,17 +156,25 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-31",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Математика",
+                "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Марченко Светлана Викторовна",
+                        "teacher": "Марченко С.П.",
+                        "group": "ИБТ-13",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Марченко С.В.",
                         "group": "ИБТ-12",
                         "room": "42",
                         "additional": "2",
@@ -167,17 +183,25 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-10-31",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Математика",
+                "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Марченко Светлана Викторовна",
+                        "teacher": "Марченко С.П.",
+                        "group": "БУ-11",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Марченко С.В.",
                         "group": "ИБТ-11",
                         "room": "42",
                         "additional": "2",
@@ -186,7 +210,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-10-31",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "ТД-22",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
