@@ -1909,7 +1909,7 @@
                 "otUnits": [
                     {
                         "teacher": "Токарев Г. Н.",
-                        "group": "ВИС11, ВИС11",
+                        "group": "ВИС11",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
@@ -2284,7 +2284,7 @@
                 "otUnits": [
                     {
                         "teacher": "Токарев Г. Н.",
-                        "group": "ВИС11, ВИС11",
+                        "group": "ВИС11",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
@@ -2716,7 +2716,7 @@
                 "otUnits": [
                     {
                         "teacher": "Токарев Г. Н.",
-                        "group": "ВИС11, ВИС11",
+                        "group": "ВИС11",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
@@ -2842,7 +2842,7 @@
                 "otUnits": [
                     {
                         "teacher": "Лемешко Г. Ф.",
-                        "group": "ВИС11, ВИС11",
+                        "group": "ВИС11",
                         "room": "438",
                         "additional": "1",
                         "onlineUrl": null,
@@ -2982,7 +2982,7 @@
                     {
                         "teacher": "Колесникова О. В.",
                         "group": "ВИС11",
-                        "room": "105",
+                        "room": "356",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3045,7 +3045,7 @@
                     {
                         "teacher": "Зубарева Е. Г.",
                         "group": "ВИС11",
-                        "room": "436",
+                        "room": "343",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3064,7 +3064,7 @@
                     {
                         "teacher": "Пожарская Е. Д.",
                         "group": "ВИС11",
-                        "room": "338",
+                        "room": "374",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3083,7 +3083,7 @@
                     {
                         "teacher": "Зубарева Е. Г.",
                         "group": "ВИС11",
-                        "room": "219а",
+                        "room": "388",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3125,6 +3125,25 @@
         "lessons": [
             {
                 "date": "2026-11-02",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Топчий И. В.",
+                        "group": "ВИС11",
+                        "room": "353",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -3132,7 +3151,7 @@
                 "otUnits": [
                     {
                         "teacher": "Токарев Г. Н.",
-                        "group": "ВИС11, ВИС11",
+                        "group": "ВИС11",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
@@ -3214,7 +3233,7 @@
                 "otUnits": [
                     {
                         "teacher": "Лемешко Г. Ф.",
-                        "group": "ВИС11, ВИС11",
+                        "group": "ВИС11",
                         "room": "408",
                         "additional": "1",
                         "onlineUrl": null,
@@ -3234,7 +3253,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИС11",
-                        "room": "367а",
+                        "room": "358",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3251,66 +3270,9 @@
         "lessons": [
             {
                 "date": "2026-11-05",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Лемешко Г. Ф.",
-                        "group": "ВИС11",
-                        "room": "410",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-05",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр История России",
-                "otUnits": [
-                    {
-                        "teacher": "Топчий И. В.",
-                        "group": "ВИС11",
-                        "room": "353",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-05",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лек Математический анализ",
-                "otUnits": [
-                    {
-                        "teacher": "Пожарский Д. А.",
-                        "group": "ВИС11",
-                        "room": "374",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-05",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
                 "subject": "лек Математический анализ",
                 "otUnits": [
                     {
@@ -3349,7 +3311,7 @@
                     {
                         "teacher": "Николаенко А. В.",
                         "group": "ВИС11",
-                        "room": "402",
+                        "room": "383б",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3370,25 +3332,6 @@
                         "group": "ВИС11",
                         "room": "424",
                         "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Дискретная математика",
-                "otUnits": [
-                    {
-                        "teacher": "Пожарская Е. Д.",
-                        "group": "ВИС11",
-                        "room": "374",
-                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3493,7 +3436,7 @@
                 "otUnits": [
                     {
                         "teacher": "Токарев Г. Н.",
-                        "group": "ВИС11, ВИС11",
+                        "group": "ВИС11",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
@@ -3619,7 +3562,7 @@
                 "otUnits": [
                     {
                         "teacher": "Лемешко Г. Ф.",
-                        "group": "ВИС11, ВИС11",
+                        "group": "ВИС11",
                         "room": "438",
                         "additional": "1",
                         "onlineUrl": null,
@@ -3822,7 +3765,7 @@
                     {
                         "teacher": "Зубарева Е. Г.",
                         "group": "ВИС11",
-                        "room": "436",
+                        "room": "343",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3841,7 +3784,7 @@
                     {
                         "teacher": "Пожарская Е. Д.",
                         "group": "ВИС11",
-                        "room": "338",
+                        "room": "374",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3860,7 +3803,7 @@
                     {
                         "teacher": "Зубарева Е. Г.",
                         "group": "ВИС11",
-                        "room": "219а",
+                        "room": "388",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3902,6 +3845,25 @@
         "lessons": [
             {
                 "date": "2026-11-16",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Топчий И. В.",
+                        "group": "ВИС11",
+                        "room": "353",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-16",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -3912,6 +3874,220 @@
                         "group": "ВИС11",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-16",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Животкова И. А.",
+                        "group": "ВИС11",
+                        "room": "445",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-16",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Колесникова О. В.",
+                        "group": "ВИС11",
+                        "room": "Кафедра",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-17",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-17",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Животкова И. А.",
+                        "group": "ВИС11",
+                        "room": "433",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-17",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Лемешко Г. Ф.",
+                        "group": "ВИС11",
+                        "room": "408",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-17",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ВИС11",
+                        "room": "358",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-19",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-19",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Пожарский Д. А.",
+                        "group": "ВИС11",
+                        "room": "374",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-20",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-20",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Пожарский Д. А.",
+                        "group": "ВИС11",
+                        "room": "424",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-21",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Формирование базы знаний на основе модели искусственного интеллекта",
+                "otUnits": [
+                    {
+                        "teacher": "Зубарева Е. Г.",
+                        "group": "ВИС11",
+                        "room": "362",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-21",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ВИС11",
+                        "room": "374",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-21",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Николаенко А. В.",
+                        "group": "ВИС11",
+                        "room": "317",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3953,7 +4129,7 @@
                 "otUnits": [
                     {
                         "teacher": "Токарев Г. Н.",
-                        "group": "ВИС11, ВИС11",
+                        "group": "ВИС11",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
@@ -4079,8 +4255,8 @@
                 "otUnits": [
                     {
                         "teacher": "Лемешко Г. Ф.",
-                        "group": "ВИС11, ВИС11",
-                        "room": "433",
+                        "group": "ВИС11",
+                        "room": "438",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4282,7 +4458,7 @@
                     {
                         "teacher": "Зубарева Е. Г.",
                         "group": "ВИС11",
-                        "room": "436",
+                        "room": "343",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4301,7 +4477,7 @@
                     {
                         "teacher": "Пожарская Е. Д.",
                         "group": "ВИС11",
-                        "room": "323",
+                        "room": "374",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4320,7 +4496,7 @@
                     {
                         "teacher": "Зубарева Е. Г.",
                         "group": "ВИС11",
-                        "room": "138",
+                        "room": "388",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4362,6 +4538,25 @@
         "lessons": [
             {
                 "date": "2026-11-30",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Топчий И. В.",
+                        "group": "ВИС11",
+                        "room": "353",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -4372,6 +4567,220 @@
                         "group": "ВИС11",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Животкова И. А.",
+                        "group": "ВИС11",
+                        "room": "445",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Колесникова О. В.",
+                        "group": "ВИС11",
+                        "room": "Кафедра",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-01",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Животкова И. А.",
+                        "group": "ВИС11",
+                        "room": "433",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-01",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Лемешко Г. Ф.",
+                        "group": "ВИС11",
+                        "room": "408",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-01",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ВИС11",
+                        "room": "358",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-03",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Пожарский Д. А.",
+                        "group": "ВИС11",
+                        "room": "374",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-04",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-04",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Пожарский Д. А.",
+                        "group": "ВИС11",
+                        "room": "424",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-05",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Формирование базы знаний на основе модели искусственного интеллекта",
+                "otUnits": [
+                    {
+                        "teacher": "Зубарева Е. Г.",
+                        "group": "ВИС11",
+                        "room": "362",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ВИС11",
+                        "room": "374",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Николаенко А. В.",
+                        "group": "ВИС11",
+                        "room": "317",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4413,7 +4822,7 @@
                 "otUnits": [
                     {
                         "teacher": "Токарев Г. Н.",
-                        "group": "ВИС11, ВИС11",
+                        "group": "ВИС11",
                         "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
@@ -4539,8 +4948,8 @@
                 "otUnits": [
                     {
                         "teacher": "Лемешко Г. Ф.",
-                        "group": "ВИС11, ВИС11",
-                        "room": "433",
+                        "group": "ВИС11",
+                        "room": "438",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4723,7 +5132,7 @@
                     {
                         "teacher": "Зубарева Е. Г.",
                         "group": "ВИС11",
-                        "room": "436",
+                        "room": "343",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4742,7 +5151,7 @@
                     {
                         "teacher": "Пожарская Е. Д.",
                         "group": "ВИС11",
-                        "room": "323",
+                        "room": "374",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4784,6 +5193,25 @@
         "lessons": [
             {
                 "date": "2026-12-14",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр История России",
+                "otUnits": [
+                    {
+                        "teacher": "Топчий И. В.",
+                        "group": "ВИС11",
+                        "room": "353",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -4794,6 +5222,201 @@
                         "group": "ВИС11",
                         "room": "манеж",
                         "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Животкова И. А.",
+                        "group": "ВИС11",
+                        "room": "445",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Информатика и программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Колесникова О. В.",
+                        "group": "ВИС11",
+                        "room": "Кафедра",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-15",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-15",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Животкова И. А.",
+                        "group": "ВИС11",
+                        "room": "433",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-15",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ВИС11",
+                        "room": "358",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-17",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-17",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Пожарский Д. А.",
+                        "group": "ВИС11",
+                        "room": "374",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-18",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-18",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Пожарский Д. А.",
+                        "group": "ВИС11",
+                        "room": "424",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-19",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-19",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Формирование базы знаний на основе модели искусственного интеллекта",
+                "otUnits": [
+                    {
+                        "teacher": "Зубарева Е. Г.",
+                        "group": "ВИС11",
+                        "room": "362",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-19",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ВИС11",
+                        "room": "374",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-19",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Николаенко А. В.",
+                        "group": "ВИС11",
+                        "room": "317",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
