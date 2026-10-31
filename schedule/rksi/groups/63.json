@@ -1,76 +1,5 @@
 [
     {
-        "date": "2026-10-30",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-30",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Прыгунова Т.А.",
-                        "group": "ИС-26",
-                        "room": "104",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Ефремова О.П.",
-                        "group": "ИС-26",
-                        "room": "320",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-30",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Основы алгоритмизации и программирования",
-                "otUnits": [
-                    {
-                        "teacher": "Манакова О.П.",
-                        "group": "ИС-26",
-                        "room": "322",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-30",
-                "number": 7,
-                "startTime": "18:20",
-                "endTime": "19:50",
-                "subject": "Информационные технологии",
-                "otUnits": [
-                    {
-                        "teacher": "Бурда Е.Г.",
-                        "group": "ИС-26",
-                        "room": "312",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-31",
         "scheduleType": "COMMON",
         "lessons": [
@@ -91,7 +20,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-10-31",
@@ -111,6 +40,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-10-31",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Манакова О.П.",
+                        "group": "ИС-26",
+                        "room": "420",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
@@ -464,17 +412,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ефремова О.П.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "ИС-26",
-                        "room": "315а",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Ефремова О.П.",
                         "group": "ИС-26",
-                        "room": "104",
+                        "room": "315а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
