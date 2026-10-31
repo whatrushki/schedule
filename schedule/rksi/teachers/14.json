@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-11-02",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-02",
@@ -11,7 +11,7 @@
                 "subject": "Компьютерное моделирование",
                 "otUnits": [
                     {
-                        "teacher": "Тодорова Анастасия Владимировна",
+                        "teacher": "Тодорова А.В.",
                         "group": "ИКС-24",
                         "room": "110",
                         "additional": "1",
@@ -20,17 +20,25 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-02",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Компьютерное моделирование",
+                "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Тодорова Анастасия Владимировна",
+                        "teacher": "Тодорова А.В.",
+                        "group": "СА-42",
+                        "room": "110",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Тодорова А.В.",
                         "group": "ИКС-24",
                         "room": "110",
                         "additional": "1",
@@ -39,7 +47,34 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Тодорова А.В,",
+                        "group": "СА-12",
+                        "room": "110а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Тодорова А.В,",
+                        "group": "СА-42",
+                        "room": "110а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-11-02",
@@ -49,16 +84,16 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Тодорова Анастасия Владимировна",
+                        "teacher": "Тодорова А.В.",
                         "group": "СА-42",
-                        "room": "121",
+                        "room": "110",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-02",
@@ -68,16 +103,16 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Тодорова Анастасия Владимировна",
+                        "teacher": "Тодорова А.В.",
                         "group": "СА-42",
-                        "room": "121",
+                        "room": "110",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-02",
@@ -87,16 +122,16 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Тодорова Анастасия Владимировна",
+                        "teacher": "Тодорова А.В.",
                         "group": "СА-42",
-                        "room": "121",
+                        "room": "110",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -107,8 +142,8 @@
             {
                 "date": "2026-11-03",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "УП",
                 "otUnits": [
                     {
@@ -126,8 +161,8 @@
             {
                 "date": "2026-11-03",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "УП",
                 "otUnits": [
                     {
@@ -145,8 +180,8 @@
             {
                 "date": "2026-11-03",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "УП",
                 "otUnits": [
                     {
@@ -164,8 +199,8 @@
             {
                 "date": "2026-11-03",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "12:00",
+                "endTime": "12:50",
                 "subject": "УП",
                 "otUnits": [
                     {

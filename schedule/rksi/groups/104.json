@@ -68,19 +68,30 @@
         "lessons": [
             {
                 "date": "2026-11-02",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Основы философии",
+                "otUnits": [
+                    {
+                        "teacher": "Куракова Г.В.",
+                        "group": "СА-41",
+                        "room": "404",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-02",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
-                    {
-                        "teacher": "Ужегова Е.А.",
-                        "group": "СА-41",
-                        "room": "307",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "Лебедева М.В.",
                         "group": "СА-41",
@@ -88,10 +99,18 @@
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
+                    },
+                    {
+                        "teacher": "Ужегова Е.А.",
+                        "group": "СА-41",
+                        "room": "307",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-02",
@@ -118,9 +137,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Коханова Л.Н.",
+                        "group": "СА-41",
+                        "room": "312",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-02",
@@ -140,6 +168,33 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:30",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Лебедева М.В.",
+                        "group": "СА-41",
+                        "room": "210",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Ужегова Е.А.",
+                        "group": "СА-41",
+                        "room": "307",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
@@ -150,8 +205,8 @@
             {
                 "date": "2026-11-03",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "12:00",
+                "endTime": "12:50",
                 "subject": "Экономика отрасли",
                 "otUnits": [
                     {
@@ -169,8 +224,8 @@
             {
                 "date": "2026-11-03",
                 "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
+                "startTime": "13:00",
+                "endTime": "13:50",
                 "subject": "Экономика отрасли",
                 "otUnits": [
                     {

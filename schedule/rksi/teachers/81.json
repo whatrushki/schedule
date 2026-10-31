@@ -83,7 +83,7 @@
     },
     {
         "date": "2026-11-02",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-02",
@@ -93,7 +93,7 @@
                 "subject": "Физика",
                 "otUnits": [
                     {
-                        "teacher": "Нохрина Юлия Валерьевна",
+                        "teacher": "Нохрина Ю.В.",
                         "group": "БУ-11",
                         "room": "34",
                         "additional": "2",
@@ -102,7 +102,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-02",
@@ -112,7 +112,7 @@
                 "subject": "Физика",
                 "otUnits": [
                     {
-                        "teacher": "Нохрина Юлия Валерьевна",
+                        "teacher": "Нохрина Ю.В.",
                         "group": "ТД-13",
                         "room": "34",
                         "additional": "2",
@@ -121,7 +121,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Нохрина Ю.В.",
+                        "group": "ИКС-14",
+                        "room": "212",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-11-02",
@@ -131,7 +150,7 @@
                 "subject": "Электроника и схемотехника",
                 "otUnits": [
                     {
-                        "teacher": "Нохрина Юлия Валерьевна",
+                        "teacher": "Нохрина Ю.В.",
                         "group": "ИБА-22",
                         "room": "34",
                         "additional": "2",
@@ -140,7 +159,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-02",
@@ -150,7 +169,7 @@
                 "subject": "Электроника и схемотехника",
                 "otUnits": [
                     {
-                        "teacher": "Нохрина Юлия Валерьевна",
+                        "teacher": "Нохрина Ю.В.",
                         "group": "ИБА-23",
                         "room": "34",
                         "additional": "2",
@@ -159,7 +178,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -170,8 +189,8 @@
             {
                 "date": "2026-11-03",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "Физика",
                 "otUnits": [
                     {
@@ -189,8 +208,8 @@
             {
                 "date": "2026-11-03",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "Физика",
                 "otUnits": [
                     {
@@ -208,8 +227,8 @@
             {
                 "date": "2026-11-03",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "Доп.занятие",
                 "otUnits": [
                     {

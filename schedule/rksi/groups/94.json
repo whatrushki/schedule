@@ -68,13 +68,41 @@
         "lessons": [
             {
                 "date": "2026-11-02",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Информационные технологии",
+                "otUnits": [
+                    {
+                        "teacher": "Трищук С.А.",
+                        "group": "СА-25",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-02",
                 "number": 0,
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Бойнар И.Н.",
+                        "group": "СА-25",
+                        "room": "324",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-02",
@@ -86,14 +114,14 @@
                     {
                         "teacher": "Пятибратов Д.В.",
                         "group": "СА-25",
-                        "room": "114",
+                        "room": "305",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-02",
@@ -113,6 +141,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:10",
+                "subject": "Стандартизация, сертификация и техническое документоведение",
+                "otUnits": [
+                    {
+                        "teacher": "Романенко Е.Л.",
+                        "group": "СА-25",
+                        "room": "418",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
@@ -123,8 +170,8 @@
             {
                 "date": "2026-11-03",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
@@ -142,8 +189,8 @@
             {
                 "date": "2026-11-03",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "Элементы высшей математики",
                 "otUnits": [
                     {
@@ -161,8 +208,8 @@
             {
                 "date": "2026-11-03",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "Элементы высшей математики",
                 "otUnits": [
                     {
@@ -180,8 +227,8 @@
             {
                 "date": "2026-11-03",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "12:00",
+                "endTime": "12:50",
                 "subject": "История России",
                 "otUnits": [
                     {
@@ -311,17 +358,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Ужегова Е.А.",
                         "group": "СА-25",
-                        "room": "111",
+                        "room": "307",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ужегова Е.А.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "СА-25",
-                        "room": "307",
+                        "room": "111",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

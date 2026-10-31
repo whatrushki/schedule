@@ -125,13 +125,32 @@
         "lessons": [
             {
                 "date": "2026-11-02",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Криптографические средства защиты информации",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова А.В.",
+                        "group": "ИБА-42",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-02",
                 "number": 0,
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
                 "otUnits": [],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-02",
@@ -143,14 +162,14 @@
                     {
                         "teacher": "Кузнецова А.В.",
                         "group": "ИБА-42",
-                        "room": "31",
+                        "room": "21",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-02",
@@ -162,14 +181,14 @@
                     {
                         "teacher": "Кузнецова А.В.",
                         "group": "ИБА-42",
-                        "room": "31",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-02",
@@ -181,14 +200,14 @@
                     {
                         "teacher": "Кузнецова А.В.",
                         "group": "ИБА-42",
-                        "room": "31",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -199,8 +218,8 @@
             {
                 "date": "2026-11-03",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "Криптографические средства защиты информации",
                 "otUnits": [
                     {
@@ -218,8 +237,8 @@
             {
                 "date": "2026-11-03",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {

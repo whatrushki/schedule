@@ -68,13 +68,41 @@
         "lessons": [
             {
                 "date": "2026-11-02",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Махаева П.А.",
+                        "group": "ИКС-31",
+                        "room": "с/з4",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-02",
                 "number": 0,
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Коханова Л.Н.",
+                        "group": "ИКС-31",
+                        "room": "312",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-02",
@@ -84,16 +112,16 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Махаева П.А.",
+                        "teacher": "Махаева П.А.,",
                         "group": "ИКС-31",
-                        "room": "с/з2",
+                        "room": "с/з3",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-02",
@@ -142,8 +170,8 @@
             {
                 "date": "2026-11-03",
                 "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
+                "startTime": "13:00",
+                "endTime": "13:50",
                 "subject": "Монтаж и эксплуатация направляющих систем",
                 "otUnits": [
                     {
@@ -161,8 +189,8 @@
             {
                 "date": "2026-11-03",
                 "number": 7,
-                "startTime": "18:20",
-                "endTime": "19:50",
+                "startTime": "14:00",
+                "endTime": "14:50",
                 "subject": "Монтаж и эксплуатация систем видеонаблюдения и систем безопасности",
                 "otUnits": [
                     {
@@ -336,17 +364,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Новосельцева Е.Ф.",
+                        "teacher": "Чубарова А.Б.",
                         "group": "ИКС-31",
-                        "room": "209а",
+                        "room": "106",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Чубарова А.Б.",
+                        "teacher": "Новосельцева Е.Ф.",
                         "group": "ИКС-31",
-                        "room": "106",
+                        "room": "209а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

@@ -168,30 +168,57 @@
         "lessons": [
             {
                 "date": "2026-11-02",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Разработка программных модулей",
+                "otUnits": [
+                    {
+                        "teacher": "Черевко А.Д.",
+                        "group": "ИС-34",
+                        "room": "Общ1-1",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Черевко А.Д.",
+                        "group": "ИС-35",
+                        "room": "Общ1-2",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-02",
                 "number": 4,
                 "startTime": "14:10",
                 "endTime": "15:40",
                 "subject": "Разработка мобильных приложений",
                 "otUnits": [
                     {
-                        "teacher": "Черевко Анна Дмитриевна",
+                        "teacher": "Черевко А.Д.",
                         "group": "ИС-38",
-                        "room": "406",
+                        "room": "Общ1-1",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Черевко Анна Дмитриевна",
+                        "teacher": "Черевко А.Д.",
                         "group": "ИС-32",
-                        "room": "406",
+                        "room": "Общ1-2",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-02",
@@ -201,16 +228,16 @@
                 "subject": "Разработка мобильных приложений",
                 "otUnits": [
                     {
-                        "teacher": "Черевко Анна Дмитриевна",
+                        "teacher": "Черевко А.Д.",
                         "group": "ИС-36",
-                        "room": "217",
+                        "room": "Общ1-3",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-02",
@@ -220,16 +247,16 @@
                 "subject": "Разработка программных модулей",
                 "otUnits": [
                     {
-                        "teacher": "Черевко Анна Дмитриевна",
+                        "teacher": "Черевко А.Д.",
                         "group": "ИС-34",
-                        "room": "217",
+                        "room": "Общ1-2",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -240,8 +267,8 @@
             {
                 "date": "2026-11-03",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
+                "startTime": "09:00",
+                "endTime": "09:50",
                 "subject": "Инструментальные средства разработки программного обеспечения",
                 "otUnits": [
                     {
@@ -259,8 +286,8 @@
             {
                 "date": "2026-11-03",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "startTime": "10:00",
+                "endTime": "10:50",
                 "subject": "Разработка мобильных приложений",
                 "otUnits": [
                     {
@@ -278,8 +305,8 @@
             {
                 "date": "2026-11-03",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "Разработка мобильных приложений",
                 "otUnits": [
                     {
@@ -297,8 +324,8 @@
             {
                 "date": "2026-11-03",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "12:00",
+                "endTime": "12:50",
                 "subject": "Разработка мобильных приложений",
                 "otUnits": [
                     {
@@ -456,7 +483,7 @@
                 "otUnits": [
                     {
                         "teacher": "Черевко Анна Дмитриевна",
-                        "group": "ИС-36",
+                        "group": "ИС-31",
                         "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
@@ -464,7 +491,7 @@
                     },
                     {
                         "teacher": "Черевко Анна Дмитриевна",
-                        "group": "ИС-31",
+                        "group": "ИС-36",
                         "room": "217",
                         "additional": "1",
                         "onlineUrl": null,

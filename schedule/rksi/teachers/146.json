@@ -110,7 +110,7 @@
     },
     {
         "date": "2026-11-02",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-02",
@@ -120,7 +120,15 @@
                 "subject": "Информационные технологии",
                 "otUnits": [
                     {
-                        "teacher": "Трищук Софья Артемовна",
+                        "teacher": "Трищук С.А.",
+                        "group": "СА-25",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Трищук С.А.",
                         "group": "СА-24",
                         "room": "213",
                         "additional": "1",
@@ -129,7 +137,34 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Трищук С.А.",
+                        "group": "СА-19",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Трищук С.А.",
+                        "group": "СА-35",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-11-02",
@@ -139,7 +174,7 @@
                 "subject": "Информационные технологии",
                 "otUnits": [
                     {
-                        "teacher": "Трищук Софья Артемовна",
+                        "teacher": "Трищук С.А.",
                         "group": "СА-21",
                         "room": "213",
                         "additional": "1",
@@ -148,7 +183,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-02",
@@ -158,7 +193,7 @@
                 "subject": "Информационные технологии",
                 "otUnits": [
                     {
-                        "teacher": "Трищук Софья Артемовна",
+                        "teacher": "Трищук С.А.",
                         "group": "СА-22",
                         "room": "213",
                         "additional": "1",
@@ -167,7 +202,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-02",
@@ -177,7 +212,7 @@
                 "subject": "Информационные технологии",
                 "otUnits": [
                     {
-                        "teacher": "Трищук Софья Артемовна",
+                        "teacher": "Трищук С.А.",
                         "group": "СА-24",
                         "room": "213",
                         "additional": "1",
@@ -186,7 +221,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
