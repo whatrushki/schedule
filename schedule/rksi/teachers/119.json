@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-11-02",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-02",
@@ -59,6 +59,25 @@
                 ],
                 "type": "COMMON",
                 "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Хачадурова Е.В.",
+                        "group": "БУ-31",
+                        "room": "45",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-11-02",

@@ -121,7 +121,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-03",
@@ -140,7 +140,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-03",
@@ -171,7 +171,7 @@
                     {
                         "teacher": "Чубарова А.Б.",
                         "group": "ИС-41",
-                        "room": "106",
+                        "room": "319",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -186,7 +186,45 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-03",
+                "number": 5,
+                "startTime": "12:00",
+                "endTime": "12:50",
+                "subject": "Технология разработки и защиты баз данных",
+                "otUnits": [
+                    {
+                        "teacher": "Кротенко Е.М.",
+                        "group": "ИС-41",
+                        "room": "220",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-03",
+                "number": 6,
+                "startTime": "13:00",
+                "endTime": "13:50",
+                "subject": "Технология разработки и защиты баз данных",
+                "otUnits": [
+                    {
+                        "teacher": "Кротенко Е.М.",
+                        "group": "ИС-41",
+                        "room": "220",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-11-02",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-02",
@@ -59,6 +59,25 @@
                 ],
                 "type": "COMMON",
                 "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова А.В",
+                        "group": "ИБА-21",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-11-02",
@@ -140,7 +159,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-03",
@@ -159,26 +178,34 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-03",
                 "number": 4,
                 "startTime": "11:00",
                 "endTime": "11:50",
-                "subject": "Защита информации в информационно-телекоммуникационных системах и сетях с использованием программных и программно-аппаратных средств защиты",
+                "subject": "Криптографические средства защиты информации",
                 "otUnits": [
                     {
-                        "teacher": "Кузнецова Ангелина Вячеславовна",
-                        "group": "ИБТ-41",
-                        "room": "31",
-                        "additional": "2",
+                        "teacher": "Кузнецова А.В.",
+                        "group": "ИБА-42",
+                        "room": "212",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Кузнецова А.В.",
+                        "group": "ИБА-43",
+                        "room": "212",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-03",
@@ -188,16 +215,24 @@
                 "subject": "Защита информации в информационно-телекоммуникационных системах и сетях с использованием программных и программно-аппаратных средств защиты",
                 "otUnits": [
                     {
-                        "teacher": "Кузнецова Ангелина Вячеславовна",
+                        "teacher": "Кузнецова А.В.",
+                        "group": "ИБТ-41",
+                        "room": "212",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Кузнецова А.В.",
                         "group": "ИБТ-42",
-                        "room": "31",
-                        "additional": "2",
+                        "room": "212",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

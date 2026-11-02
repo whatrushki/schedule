@@ -46,7 +46,7 @@
                 "number": 4,
                 "startTime": "14:10",
                 "endTime": "15:40",
-                "subject": "Предмет не указан",
+                "subject": "Организация, принципы построения и функционирования компьютерных сетей",
                 "otUnits": [
                     {
                         "teacher": "Савчук И.С.",
@@ -65,7 +65,7 @@
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:30",
-                "subject": "Предмет не указан",
+                "subject": "Организация, принципы построения и функционирования компьютерных сетей",
                 "otUnits": [
                     {
                         "teacher": "Савчук И.С.",
@@ -84,7 +84,7 @@
                 "number": 6,
                 "startTime": "17:40",
                 "endTime": "19:10",
-                "subject": "Предмет не указан",
+                "subject": "Организация, принципы построения и функционирования компьютерных сетей",
                 "otUnits": [
                     {
                         "teacher": "Савчук И.С.",
@@ -106,6 +106,25 @@
         "lessons": [
             {
                 "date": "2026-11-03",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "СА-37",
+                        "room": "418",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-03",
                 "number": 2,
                 "startTime": "09:00",
                 "endTime": "09:50",
@@ -114,14 +133,22 @@
                     {
                         "teacher": "Долгополая А.С.",
                         "group": "СА-37",
-                        "room": "216а",
+                        "room": "418",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Хачикян Л.Г.",
+                        "group": "СА-37",
+                        "room": "220",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-03",
@@ -133,14 +160,14 @@
                     {
                         "teacher": "Долгополая А.С.",
                         "group": "СА-37",
-                        "room": "216а",
+                        "room": "220",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -219,17 +246,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Лебедева М.В.",
+                        "teacher": "Черноштан О.Н.",
                         "group": "СА-37",
-                        "room": "103",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Лебедева М.В.",
                         "group": "СА-37",
-                        "room": "104",
+                        "room": "103",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

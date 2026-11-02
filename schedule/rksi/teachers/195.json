@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-11-02",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-02",
@@ -59,6 +59,25 @@
                 ],
                 "type": "PRACTICE",
                 "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-02",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Шабалта А.В.",
+                        "group": "ИБТ-13",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-11-02",
@@ -140,7 +159,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-03",
@@ -159,7 +178,7 @@
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-03",
@@ -178,7 +197,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-03",
@@ -189,15 +208,23 @@
                 "otUnits": [
                     {
                         "teacher": "Шабалта А.В.",
+                        "group": "ИБТ-41",
+                        "room": "212",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Шабалта А.В.",
                         "group": "ИБТ-42",
-                        "room": "44",
-                        "additional": "2",
+                        "room": "212",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-03",
@@ -208,15 +235,23 @@
                 "otUnits": [
                     {
                         "teacher": "Шабалта А.В.",
+                        "group": "ИБТ-41",
+                        "room": "212",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Шабалта А.В.",
                         "group": "ИБТ-42",
-                        "room": "44",
-                        "additional": "2",
+                        "room": "212",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -620,7 +655,7 @@
                 "otUnits": [
                     {
                         "teacher": "Шабалта А.В.",
-                        "group": "ИБА-34",
+                        "group": "ИБА-33",
                         "room": "43",
                         "additional": "2",
                         "onlineUrl": null,
@@ -628,7 +663,7 @@
                     },
                     {
                         "teacher": "Шабалта А.В.",
-                        "group": "ИБА-33",
+                        "group": "ИБА-34",
                         "room": "43",
                         "additional": "2",
                         "onlineUrl": null,

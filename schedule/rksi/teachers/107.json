@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-11-02",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-02",
@@ -62,9 +62,28 @@
             },
             {
                 "date": "2026-11-02",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Степанец В.В.",
+                        "group": "ИБА-12",
+                        "room": "35",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-02",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Математика",
                 "otUnits": [
                     {

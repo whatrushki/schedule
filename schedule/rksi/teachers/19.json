@@ -102,7 +102,7 @@
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-03",
@@ -112,8 +112,16 @@
                 "subject": "Монтаж и эксплуатация направляющих систем",
                 "otUnits": [
                     {
-                        "teacher": "Голиченко Павел Сергеевич",
+                        "teacher": "Голиченко П.С.",
                         "group": "ИКС-32",
+                        "room": "118",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Голиченко П.С.",
+                        "group": "ИКС-33",
                         "room": "118",
                         "additional": "1",
                         "onlineUrl": null,
@@ -121,7 +129,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-03",
@@ -131,7 +139,7 @@
                 "subject": "Монтаж и эксплуатация направляющих систем",
                 "otUnits": [
                     {
-                        "teacher": "Голиченко Павел Сергеевич",
+                        "teacher": "Голиченко П.С.",
                         "group": "ИКС-33",
                         "room": "118",
                         "additional": "1",
@@ -140,7 +148,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-03",
@@ -150,7 +158,15 @@
                 "subject": "Монтаж и эксплуатация направляющих систем",
                 "otUnits": [
                     {
-                        "teacher": "Голиченко Павел Сергеевич",
+                        "teacher": "Голиченко П.С.",
+                        "group": "ИКС-33",
+                        "room": "118",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Голиченко П.С.",
                         "group": "ИКС-31",
                         "room": "118",
                         "additional": "1",
@@ -159,7 +175,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-03",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Голиченко П.С.",
+                        "group": "ИКС-51",
+                        "room": "118",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

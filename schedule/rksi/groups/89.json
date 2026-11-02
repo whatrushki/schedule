@@ -46,12 +46,12 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Информатика",
+                "subject": "Математика",
                 "otUnits": [
                     {
-                        "teacher": "Долгополая А.С.",
+                        "teacher": "Джалагония М.Ш.",
                         "group": "СА-17",
-                        "room": "325",
+                        "room": "323",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -109,19 +109,19 @@
                 "number": 2,
                 "startTime": "09:00",
                 "endTime": "09:50",
-                "subject": "Литература",
+                "subject": "Индивидуальный проект",
                 "otUnits": [
                     {
-                        "teacher": "Нефедова Е.М.",
+                        "teacher": "Григорьева Л.Ф.",
                         "group": "СА-17",
-                        "room": "326",
+                        "room": "306",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-03",
@@ -133,14 +133,33 @@
                     {
                         "teacher": "Нохрина Ю.В.",
                         "group": "СА-17",
-                        "room": "324",
+                        "room": "210",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-03",
+                "number": 4,
+                "startTime": "11:00",
+                "endTime": "11:50",
+                "subject": "Основы безопасности и защиты Родины",
+                "otUnits": [
+                    {
+                        "teacher": "Фищук А.И.",
+                        "group": "СА-17",
+                        "room": "318",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

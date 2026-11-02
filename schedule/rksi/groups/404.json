@@ -106,60 +106,79 @@
         "lessons": [
             {
                 "date": "2026-11-03",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Голубев А.А.",
+                        "group": "РУП-15",
+                        "room": "316",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-03",
                 "number": 2,
                 "startTime": "09:00",
                 "endTime": "09:50",
-                "subject": "Химия",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
-                        "teacher": "Мугутдинова Н.Ш.",
+                        "teacher": "Голубев А.А.",
                         "group": "РУП-15",
-                        "room": "416",
+                        "room": "316",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-03",
                 "number": 3,
                 "startTime": "10:00",
                 "endTime": "10:50",
-                "subject": "Основы безопасности и защиты Родины",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
-                        "teacher": "Фищук А.И.",
+                        "teacher": "Голубев А.А.",
                         "group": "РУП-15",
-                        "room": "318",
+                        "room": "316",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-03",
                 "number": 4,
                 "startTime": "11:00",
                 "endTime": "11:50",
-                "subject": "Литература",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
-                        "teacher": "Рожченко Т.В.",
+                        "teacher": "Голубев А.А.",
                         "group": "РУП-15",
-                        "room": "412",
+                        "room": "316",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -276,17 +295,17 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Ефремова О.П.",
+                        "teacher": "Ужегова Е.А.",
                         "group": "РУП-15",
-                        "room": "315а",
+                        "room": "307",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ужегова Е.А.",
+                        "teacher": "Ефремова О.П.",
                         "group": "РУП-15",
-                        "room": "307",
+                        "room": "315а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
