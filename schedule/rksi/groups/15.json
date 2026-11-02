@@ -1,97 +1,5 @@
 [
     {
-        "date": "2026-11-02",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-11-02",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Гузов А.В.",
-                        "group": "ИБА-24",
-                        "room": "с/з1",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "CLASS_HOUR",
-                "state": "REMOVED"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "История",
-                "otUnits": [
-                    {
-                        "teacher": "Ерёменко О.А.",
-                        "group": "ИБА-24",
-                        "room": "28",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
-                "subject": "Информатика",
-                "otUnits": [
-                    {
-                        "teacher": "Дущенков Д.А.",
-                        "group": "ИБА-24",
-                        "room": "20",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 6,
-                "startTime": "17:40",
-                "endTime": "19:10",
-                "subject": "Информатика",
-                "otUnits": [
-                    {
-                        "teacher": "Дущенков Д.А.",
-                        "group": "ИБА-24",
-                        "room": "20",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-03",
         "scheduleType": "COMMON",
         "lessons": [
@@ -124,14 +32,33 @@
                     {
                         "teacher": "Наскалова О.В.",
                         "group": "ИБА-24",
-                        "room": "24",
+                        "room": "35",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-03",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Социальная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Рыбак Е.Ю.",
+                        "group": "ИБА-24",
+                        "room": "Буфет",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             },
             {
                 "date": "2026-11-03",
@@ -143,14 +70,14 @@
                     {
                         "teacher": "Наскалова О.В.",
                         "group": "ИБА-24",
-                        "room": "24",
+                        "room": "35",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -330,17 +257,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Савченко А.А.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ИБА-24",
-                        "room": "38",
+                        "room": "44",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Савченко А.А.",
                         "group": "ИБА-24",
-                        "room": "44",
+                        "room": "38",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null

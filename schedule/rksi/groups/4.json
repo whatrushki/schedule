@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-11-02",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-11-02",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Химия",
-                "otUnits": [
-                    {
-                        "teacher": "Мугутдинова Н.Ш.",
-                        "group": "БУ-11",
-                        "room": "33",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Нохрина Ю.В.",
-                        "group": "БУ-11",
-                        "room": "34",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Русский язык",
-                "otUnits": [
-                    {
-                        "teacher": "Чалая С.А.",
-                        "group": "БУ-11",
-                        "room": "24",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [
-                    {
-                        "teacher": "Шумина О.О.",
-                        "group": "БУ-11",
-                        "room": "17",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CLASS_HOUR",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-03",
         "scheduleType": "SHORTENED",
         "lessons": [
@@ -114,14 +32,14 @@
                     {
                         "teacher": "Бодло А.О.",
                         "group": "БУ-11",
-                        "room": "42",
+                        "room": "34",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-03",
@@ -133,14 +51,33 @@
                     {
                         "teacher": "Марышева О.В.",
                         "group": "БУ-11",
-                        "room": "45",
+                        "room": "44",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-03",
+                "number": 4,
+                "startTime": "11:00",
+                "endTime": "11:50",
+                "subject": "Литература",
+                "otUnits": [
+                    {
+                        "teacher": "Чалая С.А.",
+                        "group": "БУ-11",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

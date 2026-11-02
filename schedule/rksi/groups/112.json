@@ -1,78 +1,5 @@
 [
     {
-        "date": "2026-11-02",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-11-02",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "CLASS_HOUR",
-                "state": "REMOVED"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Товароведение",
-                "otUnits": [
-                    {
-                        "teacher": "Таппасханова П.П.",
-                        "group": "ТД-21",
-                        "room": "общж.",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
-                "subject": "Основы финансовой грамотности",
-                "otUnits": [
-                    {
-                        "teacher": "Каверзнева Е.Ю.",
-                        "group": "ТД-21",
-                        "room": "47",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 6,
-                "startTime": "17:40",
-                "endTime": "19:10",
-                "subject": "Правовое обеспечение профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Хачикян Л.Г.",
-                        "group": "ТД-21",
-                        "room": "32",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-03",
         "scheduleType": "COMMON",
         "lessons": [
@@ -97,13 +24,32 @@
             },
             {
                 "date": "2026-11-03",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Товароведение",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова П.П.",
+                        "group": "ТД-21",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-03",
                 "number": 5,
                 "startTime": "12:00",
                 "endTime": "12:50",
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крылова О.В.",
+                        "teacher": "Марченко С.П.",
                         "group": "ТД-21",
                         "room": "33",
                         "additional": "2",
@@ -111,16 +57,16 @@
                         "subject": null
                     },
                     {
-                        "teacher": "Марченко С.П.",
+                        "teacher": "Крылова О.В.",
                         "group": "ТД-21",
-                        "room": "13",
+                        "room": "42",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

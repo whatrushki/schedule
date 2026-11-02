@@ -1,29 +1,29 @@
 [
     {
-        "date": "2026-11-02",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "date": "2026-11-03",
+        "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-02",
+                "date": "2026-11-03",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "ФИЗКУЛЬТУРА",
+                "subject": "Маркетинговые исследования",
                 "otUnits": [
                     {
-                        "teacher": "Растороцкий В.В.",
+                        "teacher": "Згонникова Т.Ф.",
                         "group": "ТД-31",
-                        "room": "с/з1",
+                        "room": "29",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
-                "state": "COMMON"
+                "type": "OTHER",
+                "state": "ADDED"
             },
             {
-                "date": "2026-11-02",
+                "date": "2026-11-03",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -38,20 +38,20 @@
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
-                "state": "COMMON"
+                "type": "OTHER",
+                "state": "ADDED"
             },
             {
-                "date": "2026-11-02",
+                "date": "2026-11-03",
                 "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Логистика",
+                "startTime": "10:00",
+                "endTime": "10:50",
+                "subject": "Организация и управление коммерческой деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Доценко Л.А.",
+                        "teacher": "Шумина О.О.",
                         "group": "ТД-31",
-                        "room": "32",
+                        "room": "17",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -61,77 +61,23 @@
                 "state": "CHANGED"
             },
             {
-                "date": "2026-11-02",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [],
-                "type": "CLASS_HOUR",
-                "state": "REMOVED"
-            },
-            {
-                "date": "2026-11-02",
+                "date": "2026-11-03",
                 "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Интернет-маркетинг",
+                "startTime": "11:00",
+                "endTime": "11:50",
+                "subject": "Организация и управление коммерческой деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Згонникова Т.Ф.",
+                        "teacher": "Шумина О.О.",
                         "group": "ТД-31",
-                        "room": "29",
+                        "room": "17",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-03",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-03",
-                "number": 3,
-                "startTime": "10:00",
-                "endTime": "10:50",
-                "subject": "Доп.занятие",
-                "otUnits": [
-                    {
-                        "teacher": "Таппасханова П.П.",
-                        "group": "ТД-31",
-                        "room": "27",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-03",
-                "number": 4,
-                "startTime": "11:00",
-                "endTime": "11:50",
-                "subject": "Доп.занятие",
-                "otUnits": [
-                    {
-                        "teacher": "Таппасханова П.П.",
-                        "group": "ТД-31",
-                        "room": "27",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

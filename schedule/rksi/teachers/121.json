@@ -1,18 +1,18 @@
 [
     {
-        "date": "2026-11-02",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "date": "2026-11-03",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
-                "date": "2026-11-02",
+                "date": "2026-11-03",
                 "number": 1,
                 "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Русский язык",
+                "endTime": "08:50",
+                "subject": "Литература",
                 "otUnits": [
                     {
                         "teacher": "Чалая С.А.",
-                        "group": "ТД-13",
+                        "group": "БД-11",
                         "room": "24",
                         "additional": "2",
                         "onlineUrl": null,
@@ -23,10 +23,29 @@
                 "state": "CHANGED"
             },
             {
-                "date": "2026-11-02",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "date": "2026-11-03",
+                "number": 2,
+                "startTime": "09:00",
+                "endTime": "09:50",
+                "subject": "Литература",
+                "otUnits": [
+                    {
+                        "teacher": "Чалая С.А.",
+                        "group": "БД-11",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-03",
+                "number": 4,
+                "startTime": "11:00",
+                "endTime": "11:50",
                 "subject": "Литература",
                 "otUnits": [
                     {
@@ -38,71 +57,8 @@
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [
-                    {
-                        "teacher": "Чалая С.А.",
-                        "group": "БД-11",
-                        "room": "24",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CLASS_HOUR",
+                "type": "OTHER",
                 "state": "ADDED"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-03",
-        "scheduleType": "SHORTENED",
-        "lessons": [
-            {
-                "date": "2026-11-03",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "08:50",
-                "subject": "Русский язык",
-                "otUnits": [
-                    {
-                        "teacher": "Чалая Светлана Анатольевна",
-                        "group": "БД-11",
-                        "room": "24",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-03",
-                "number": 2,
-                "startTime": "09:00",
-                "endTime": "09:50",
-                "subject": "Литература",
-                "otUnits": [
-                    {
-                        "teacher": "Чалая Светлана Анатольевна",
-                        "group": "БД-11",
-                        "room": "24",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },

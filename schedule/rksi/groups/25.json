@@ -1,106 +1,5 @@
 [
     {
-        "date": "2026-11-02",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-11-02",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Гузов А.В.",
-                        "group": "ИБТ-13",
-                        "room": "с/з2",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "История России",
-                "otUnits": [
-                    {
-                        "teacher": "Упорова Л.В. + Смирнов",
-                        "group": "ИБТ-13",
-                        "room": "13",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Химия",
-                "otUnits": [
-                    {
-                        "teacher": "Мугутдинова Н.Ш.",
-                        "group": "ИБТ-13",
-                        "room": "33",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [
-                    {
-                        "teacher": "Шабалта А.В.",
-                        "group": "ИБТ-13",
-                        "room": "33",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CLASS_HOUR",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-02",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Биология",
-                "otUnits": [
-                    {
-                        "teacher": "Хайлова Л.В.",
-                        "group": "ИБТ-13",
-                        "room": "столовая",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-03",
         "scheduleType": "SHORTENED",
         "lessons": [
@@ -114,14 +13,14 @@
                     {
                         "teacher": "Пильгун И.С.",
                         "group": "ИБТ-13",
-                        "room": "29",
+                        "room": "28",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-03",
@@ -152,14 +51,14 @@
                     {
                         "teacher": "Наскалова О.В.",
                         "group": "ИБТ-13",
-                        "room": "24",
+                        "room": "34",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-03",
@@ -178,7 +77,7 @@
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
@@ -421,17 +320,17 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Марченко С.П.",
                         "group": "ИБТ-13",
-                        "room": "20",
+                        "room": "13",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Марченко С.П.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ИБТ-13",
-                        "room": "13",
+                        "room": "20",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
