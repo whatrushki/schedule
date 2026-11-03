@@ -139,6 +139,25 @@
         "lessons": [
             {
                 "date": "2026-11-05",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Разработка программных модулей",
+                "otUnits": [
+                    {
+                        "teacher": "Зинько Е.С.",
+                        "group": "ИС-36",
+                        "room": "420",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-05",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -147,14 +166,14 @@
                     {
                         "teacher": "Турянский И.П.",
                         "group": "ИС-36",
-                        "room": "с/з2",
+                        "room": "с/з3",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-05",
@@ -166,14 +185,14 @@
                     {
                         "teacher": "Черевко А.Д.",
                         "group": "ИС-36",
-                        "room": "217",
+                        "room": "Общ1-4",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-05",
@@ -185,14 +204,14 @@
                     {
                         "teacher": "Черевко А.Д.",
                         "group": "ИС-36",
-                        "room": "217",
+                        "room": "Общ1-3",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

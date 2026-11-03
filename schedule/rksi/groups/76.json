@@ -158,6 +158,25 @@
         "lessons": [
             {
                 "date": "2026-11-05",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Инструментальные средства разработки программного обеспечения",
+                "otUnits": [
+                    {
+                        "teacher": "Павлова В.А.",
+                        "group": "ИС-43",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-05",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -166,14 +185,14 @@
                     {
                         "teacher": "Гузов А.В.",
                         "group": "ИС-43",
-                        "room": "с/з4",
+                        "room": "с/з2",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-05",
@@ -202,16 +221,16 @@
                 "subject": "Инструментальные средства разработки программного обеспечения",
                 "otUnits": [
                     {
-                        "teacher": "Павлова В.А.",
+                        "teacher": "Павлова В.А",
                         "group": "ИС-43",
-                        "room": "210а",
+                        "room": "420",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

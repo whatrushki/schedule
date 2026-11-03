@@ -70,7 +70,7 @@
                     {
                         "teacher": "Згонникова Т.Ф.",
                         "group": "ИКС-41",
-                        "room": "Общ1-3",
+                        "room": "216а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -150,6 +150,25 @@
         "lessons": [
             {
                 "date": "2026-11-05",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Технология монтажа и настройки абонентского оборудования",
+                "otUnits": [
+                    {
+                        "teacher": "Ермолина Л.В.",
+                        "group": "ИКС-41",
+                        "room": "114а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-05",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -158,14 +177,14 @@
                     {
                         "teacher": "Бойнар И.Н.",
                         "group": "ИКС-41",
-                        "room": "303",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-05",
@@ -177,14 +196,14 @@
                     {
                         "teacher": "Бойнар И.Н.",
                         "group": "ИКС-41",
-                        "room": "303",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-05",
@@ -222,7 +241,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

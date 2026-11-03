@@ -112,22 +112,41 @@
         "lessons": [
             {
                 "date": "2026-11-05",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Социальная психология",
+                "otUnits": [
+                    {
+                        "teacher": "Марышева О.В.",
+                        "group": "ИКС-23",
+                        "room": "Акт.зал",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-05",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
                 "subject": "История",
                 "otUnits": [
                     {
-                        "teacher": "Марышева Оксана Викторовна",
+                        "teacher": "Марышева О.В.",
                         "group": "СА-17",
-                        "room": "216",
+                        "room": "404",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-05",
@@ -137,16 +156,16 @@
                 "subject": "Социальная психология",
                 "otUnits": [
                     {
-                        "teacher": "Марышева Оксана Викторовна",
+                        "teacher": "Марышева О.В.",
                         "group": "ИКС-21",
-                        "room": "214",
+                        "room": "318",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-05",
@@ -156,16 +175,16 @@
                 "subject": "Психология общения",
                 "otUnits": [
                     {
-                        "teacher": "Марышева Оксана Викторовна",
+                        "teacher": "Марышева О.В.",
                         "group": "ИС-26",
-                        "room": "214",
+                        "room": "318",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

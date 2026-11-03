@@ -1,10 +1,10 @@
 [
     {
-        "date": "2026-10-26",
+        "date": "2026-11-02",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-26",
+                "date": "2026-11-02",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
@@ -31,7 +31,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-26",
+                "date": "2026-11-02",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -40,7 +40,7 @@
                     {
                         "teacher": "Налимова А. В.",
                         "group": "ИСТСЭ11",
-                        "room": "220",
+                        "room": "210",
                         "additional": "23",
                         "onlineUrl": null,
                         "subject": null
@@ -50,7 +50,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-26",
+                "date": "2026-11-02",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -67,16 +67,41 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-11-03",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-10-26",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Деловая коммуникация",
+                "date": "2026-11-03",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Инженерная и компьютерная графика",
                 "otUnits": [
                     {
-                        "teacher": "Колесник Д. М.",
+                        "teacher": "Бандура Ю. Н.",
+                        "group": "ИСТСЭ11",
+                        "room": "412",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-03",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова И. С.",
                         "group": "ИСТСЭ11",
                         "room": "407",
                         "additional": "25",
@@ -86,63 +111,19 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-10-28",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-28",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Физическая культура и спорт",
-                "otUnits": [
-                    {
-                        "teacher": "Чабовский С. Ю.",
-                        "group": "ИСТСЭ11",
-                        "room": "120",
-                        "additional": "25",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             },
             {
-                "date": "2026-10-28",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Высшая математика",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова И. С.",
-                        "group": "ИСТСЭ11",
-                        "room": "210",
-                        "additional": "26",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-28",
+                "date": "2026-11-03",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лаб Экология",
+                "subject": "пр История России",
                 "otUnits": [
                     {
-                        "teacher": "Соколова Г. Н.",
+                        "teacher": "Агарков А. А.",
                         "group": "ИСТСЭ11",
-                        "room": "413",
-                        "additional": "26",
+                        "room": "112",
+                        "additional": "25",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -151,17 +132,17 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-28",
+                "date": "2026-11-03",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "пр Высшая математика",
+                "subject": "лек История России",
                 "otUnits": [
                     {
-                        "teacher": "Кузнецова И. С.",
+                        "teacher": "Давыдова Е. П.",
                         "group": "ИСТСЭ11",
-                        "room": "111",
-                        "additional": "25",
+                        "room": "208",
+                        "additional": "21",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -172,14 +153,33 @@
         ]
     },
     {
-        "date": "2026-10-29",
+        "date": "2026-11-05",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-29",
+                "date": "2026-11-05",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
+                "subject": "лек Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Енина О. Н.",
+                        "group": "ИСТСЭ11",
+                        "room": "208",
+                        "additional": "21",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "лаб Информатика, п/г 1",
                 "otUnits": [
                     {
@@ -201,53 +201,15 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-10-29",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Экология",
-                "otUnits": [
-                    {
-                        "teacher": "Соколова Г. Н.",
-                        "group": "ИСТСЭ11",
-                        "room": "413",
-                        "additional": "26",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-10-29",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Экология",
-                "otUnits": [
-                    {
-                        "teacher": "Соколова Г. Н.",
-                        "group": "ИСТСЭ11",
-                        "room": "414",
-                        "additional": "26",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
     {
-        "date": "2026-10-30",
+        "date": "2026-11-06",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-30",
+                "date": "2026-11-06",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
@@ -266,7 +228,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-30",
+                "date": "2026-11-06",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -285,7 +247,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-30",
+                "date": "2026-11-06",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -312,7 +274,340 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-30",
+                "date": "2026-11-06",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова И. С.",
+                        "group": "ИСТСЭ11",
+                        "room": "611",
+                        "additional": "26",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-09",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Инженерная и компьютерная графика, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Бандура Ю. Н.",
+                        "group": "ИСТСЭ11",
+                        "room": "408",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Щербань Е. М.",
+                        "group": "ИСТСЭ11",
+                        "room": "408",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы проектной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Налимова А. В.",
+                        "group": "ИСТСЭ11",
+                        "room": "220",
+                        "additional": "23",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Бандура Ю. Н.",
+                        "group": "ИСТСЭ11",
+                        "room": "413",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Деловая коммуникация",
+                "otUnits": [
+                    {
+                        "teacher": "Колесник Д. М.",
+                        "group": "ИСТСЭ11",
+                        "room": "119",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-11",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Физическая культура и спорт",
+                "otUnits": [
+                    {
+                        "teacher": "Чабовский С. Ю.",
+                        "group": "ИСТСЭ11",
+                        "room": "120",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова И. С.",
+                        "group": "ИСТСЭ11",
+                        "room": "210",
+                        "additional": "26",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Экология",
+                "otUnits": [
+                    {
+                        "teacher": "Соколова Г. Н.",
+                        "group": "ИСТСЭ11",
+                        "room": "413",
+                        "additional": "26",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова И. С.",
+                        "group": "ИСТСЭ11",
+                        "room": "111",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Информатика, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова И. С.",
+                        "group": "ИСТСЭ11",
+                        "room": "306",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Полякова К. А.",
+                        "group": "ИСТСЭ11",
+                        "room": "307",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Экология",
+                "otUnits": [
+                    {
+                        "teacher": "Соколова Г. Н.",
+                        "group": "ИСТСЭ11",
+                        "room": "413",
+                        "additional": "26",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Экология",
+                "otUnits": [
+                    {
+                        "teacher": "Соколова Г. Н.",
+                        "group": "ИСТСЭ11",
+                        "room": "414",
+                        "additional": "26",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-13",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-13",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова И. С.",
+                        "group": "ИСТСЭ11",
+                        "room": "215",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Мицкая М. Н.",
+                        "group": "ИСТСЭ11",
+                        "room": "606",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Химия, п/г 1",
+                "otUnits": [
+                    {
+                        "teacher": "Мицкая М. Н.",
+                        "group": "ИСТСЭ11",
+                        "room": "522",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Астахова Л. М.",
+                        "group": "ИСТСЭ11",
+                        "room": "524",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -333,11 +628,11 @@
         ]
     },
     {
-        "date": "2026-10-31",
+        "date": "2026-11-14",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-31",
+                "date": "2026-11-14",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
@@ -356,7 +651,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-31",
+                "date": "2026-11-14",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -375,7 +670,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-31",
+                "date": "2026-11-14",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -394,7 +689,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-31",
+                "date": "2026-11-14",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
