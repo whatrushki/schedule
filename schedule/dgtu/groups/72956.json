@@ -3005,16 +3005,35 @@
         "lessons": [
             {
                 "date": "2026-11-10",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Russian as a foreign language",
+                "otUnits": [
+                    {
+                        "teacher": "Белозёрова А. В.",
+                        "group": "WIAS23",
+                        "room": "510",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лаб Programming",
+                "subject": "пр Russian as a foreign language",
                 "otUnits": [
                     {
-                        "teacher": "Горбанев А. Н.",
+                        "teacher": "Белозёрова А. В.",
                         "group": "WIAS23",
-                        "room": "384",
-                        "additional": "1",
+                        "room": "605",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3170,50 +3189,6 @@
         ]
     },
     {
-        "date": "2026-11-13",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-13",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Russian as a foreign language",
-                "otUnits": [
-                    {
-                        "teacher": "Белозёрова А. В.",
-                        "group": "WIAS23",
-                        "room": "303",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-13",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Russian as a foreign language",
-                "otUnits": [
-                    {
-                        "teacher": "Белозёрова А. В.",
-                        "group": "WIAS23",
-                        "room": "023",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-14",
         "scheduleType": "COMMON",
         "lessons": [
@@ -3241,12 +3216,31 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
+                "subject": "лаб Programming",
+                "otUnits": [
+                    {
+                        "teacher": "Горбанев А. Н.",
+                        "group": "WIAS23",
+                        "room": "498",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "лек Health and safety",
                 "otUnits": [
                     {
                         "teacher": "Мозговой А. В.",
                         "group": "WIAS23",
-                        "room": "537",
+                        "room": "303",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
