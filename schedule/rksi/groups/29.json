@@ -131,21 +131,32 @@
         "lessons": [
             {
                 "date": "2026-11-05",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Организационное и правовое обеспечение информационной безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Асташевская А.В.",
+                        "group": "ИБТ-31",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-05",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "ИБТ-31",
-                        "room": "31",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Крылова О.В.",
+                        "teacher": "Крылова О.В. + Ляшенко Д.И.",
                         "group": "ИБТ-31",
                         "room": "13",
                         "additional": "2",
@@ -154,7 +165,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-05",
