@@ -434,11 +434,11 @@
         ]
     },
     {
-        "date": "2026-11-27",
+        "date": "2026-11-25",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-27",
+                "date": "2026-11-25",
                 "number": 5,
                 "startTime": "15:30",
                 "endTime": "17:00",
@@ -447,7 +447,7 @@
                     {
                         "teacher": "доц.Бохан А.П.",
                         "group": "ЮРOZ-652",
-                        "room": "103",
+                        "room": "203",
                         "additional": "3",
                         "onlineUrl": null,
                         "subject": null
@@ -457,7 +457,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-11-27",
+                "date": "2026-11-25",
                 "number": 6,
                 "startTime": "17:10",
                 "endTime": "18:40",
@@ -466,13 +466,38 @@
                     {
                         "teacher": "доц.Бохан А.П.",
                         "group": "ЮРOZ-652",
-                        "room": "103",
+                        "room": "203",
                         "additional": "3",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-27",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-27",
+                "number": 6,
+                "startTime": "17:10",
+                "endTime": "18:40",
+                "subject": "зач. Киберпреступность и информационная безопасность",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Серегина Е.В.",
+                        "group": "ЮРOZ-652",
+                        "room": "208а",
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CREDIT",
                 "state": "COMMON"
             },
             {
@@ -492,31 +517,6 @@
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-28",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-28",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "зач. Киберпреступность и информационная безопасность",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Серегина Е.В.",
-                        "group": "ЮРOZ-652",
-                        "room": "203",
-                        "additional": "3",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CREDIT",
                 "state": "COMMON"
             }
         ]

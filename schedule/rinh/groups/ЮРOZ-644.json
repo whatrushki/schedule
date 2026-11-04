@@ -1,49 +1,5 @@
 [
     {
-        "date": "2026-11-05",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-05",
-                "number": 4,
-                "startTime": "13:50",
-                "endTime": "15:20",
-                "subject": "л. Международное частное право",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Алимова О.В.",
-                        "group": "ЮРOZ-644",
-                        "room": "301",
-                        "additional": "3",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-05",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "л. Международное частное право",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Алимова О.В.",
-                        "group": "ЮРOZ-644",
-                        "room": "301",
-                        "additional": "3",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-06",
         "scheduleType": "COMMON",
         "lessons": [
@@ -90,10 +46,10 @@
                 "number": 7,
                 "startTime": "18:45",
                 "endTime": "20:15",
-                "subject": "л. Уголовное право",
+                "subject": "л. Международное частное право",
                 "otUnits": [
                     {
-                        "teacher": "доц.Бохан А.П.",
+                        "teacher": "доц.Алимова О.В.",
                         "group": "ЮРOZ-644",
                         "room": "301",
                         "additional": "3",
@@ -109,10 +65,10 @@
                 "number": 8,
                 "startTime": "20:20",
                 "endTime": "21:50",
-                "subject": "л. Уголовное право",
+                "subject": "л. Международное частное право",
                 "otUnits": [
                     {
-                        "teacher": "доц.Бохан А.П.",
+                        "teacher": "доц.Алимова О.В.",
                         "group": "ЮРOZ-644",
                         "room": "301",
                         "additional": "3",
@@ -292,6 +248,25 @@
                 ],
                 "type": "LECTURE",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
+                "number": 8,
+                "startTime": "20:20",
+                "endTime": "21:50",
+                "subject": "пр. Налоговое право",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Казаченков С.Д.",
+                        "group": "ЮРOZ-644",
+                        "room": "402",
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
             }
         ]
     },
@@ -299,6 +274,25 @@
         "date": "2026-11-11",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-11-11",
+                "number": 5,
+                "startTime": "15:30",
+                "endTime": "17:00",
+                "subject": "пр. Семейное право",
+                "otUnits": [
+                    {
+                        "teacher": "ст.пр.Гаража В.В.",
+                        "group": "ЮРOZ-644",
+                        "room": "206",
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-11-11",
                 "number": 6,
@@ -309,7 +303,7 @@
                     {
                         "teacher": "ст.пр.Гаража В.В.",
                         "group": "ЮРOZ-644",
-                        "room": "403",
+                        "room": "206",
                         "additional": "3",
                         "onlineUrl": null,
                         "subject": null
@@ -323,18 +317,37 @@
                 "number": 7,
                 "startTime": "18:45",
                 "endTime": "20:15",
-                "subject": "пр. Семейное право",
+                "subject": "л. Уголовное право",
                 "otUnits": [
                     {
-                        "teacher": "ст.пр.Гаража В.В.",
+                        "teacher": "доц.Бохан А.П.",
                         "group": "ЮРOZ-644",
-                        "room": "403",
+                        "room": "301",
                         "additional": "3",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 8,
+                "startTime": "20:20",
+                "endTime": "21:50",
+                "subject": "л. Уголовное право",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Бохан А.П.",
+                        "group": "ЮРOZ-644",
+                        "room": "301",
+                        "additional": "3",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]
@@ -806,7 +819,7 @@
                     {
                         "teacher": "ст.пр.Казаченков С.Д.",
                         "group": "ЮРOZ-644",
-                        "room": "403",
+                        "room": "205",
                         "additional": "3",
                         "onlineUrl": null,
                         "subject": null
@@ -820,18 +833,18 @@
                 "number": 8,
                 "startTime": "20:20",
                 "endTime": "21:50",
-                "subject": "пр. Налоговое право",
+                "subject": "зач. Уголовное право",
                 "otUnits": [
                     {
-                        "teacher": "ст.пр.Казаченков С.Д.",
+                        "teacher": "доц.Бохан А.П.",
                         "group": "ЮРOZ-644",
-                        "room": "403",
+                        "room": "205",
                         "additional": "3",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
+                "type": "CREDIT",
                 "state": "COMMON"
             }
         ]
@@ -932,25 +945,6 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-30",
-                "number": 7,
-                "startTime": "18:45",
-                "endTime": "20:15",
-                "subject": "зач. Уголовное право",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Бохан А.П.",
-                        "group": "ЮРOZ-644",
-                        "room": "305",
-                        "additional": "3",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CREDIT",
                 "state": "COMMON"
             }
         ]
