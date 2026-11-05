@@ -175,6 +175,25 @@
         "lessons": [
             {
                 "date": "2026-11-12",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "л. Основы маркетинга",
+                "otUnits": [
+                    {
+                        "teacher": "доц.Дадаян Н.А.",
+                        "group": "РСОZS-2204",
+                        "room": "605",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
                 "number": 5,
                 "startTime": "15:30",
                 "endTime": "17:00",
@@ -290,7 +309,7 @@
                     {
                         "teacher": "проф.Толстик Н.В.",
                         "group": "РСОZS-2204",
-                        "room": "655",
+                        "room": "535",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -309,7 +328,7 @@
                     {
                         "teacher": "проф.Толстик Н.В.",
                         "group": "РСОZS-2204",
-                        "room": "655",
+                        "room": "535",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -362,25 +381,6 @@
         "date": "2026-11-18",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-11-18",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "л. Основы маркетинга",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Дадаян Н.А.",
-                        "group": "РСОZS-2204",
-                        "room": "603",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-11-18",
                 "number": 6,
@@ -529,20 +529,20 @@
         ]
     },
     {
-        "date": "2026-11-23",
+        "date": "2026-11-21",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-23",
-                "number": 6,
-                "startTime": "17:10",
-                "endTime": "18:40",
+                "date": "2026-11-21",
+                "number": 2,
+                "startTime": "10:10",
+                "endTime": "11:40",
                 "subject": "пр. Математика",
                 "otUnits": [
                     {
                         "teacher": "проф.Сахарова Л.В.",
                         "group": "РСОZS-2204",
-                        "room": "255",
+                        "room": "339",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -551,6 +551,31 @@
                 "type": "PRACTICE",
                 "state": "COMMON"
             },
+            {
+                "date": "2026-11-21",
+                "number": 3,
+                "startTime": "11:50",
+                "endTime": "13:20",
+                "subject": "пр. Математика",
+                "otUnits": [
+                    {
+                        "teacher": "проф.Сахарова Л.В.",
+                        "group": "РСОZS-2204",
+                        "room": "339",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-23",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
                 "date": "2026-11-23",
                 "number": 7,
@@ -600,10 +625,10 @@
                 "number": 5,
                 "startTime": "15:30",
                 "endTime": "17:00",
-                "subject": "пр. Философия",
+                "subject": "пр. Психология массовых коммуникаций",
                 "otUnits": [
                     {
-                        "teacher": "асс.Котлярова Е.А.",
+                        "teacher": "проф.Самыгин С.И.",
                         "group": "РСОZS-2204",
                         "room": "324",
                         "additional": "1",
@@ -619,12 +644,12 @@
                 "number": 6,
                 "startTime": "17:10",
                 "endTime": "18:40",
-                "subject": "пр. Психология массовых коммуникаций",
+                "subject": "пр. Философия",
                 "otUnits": [
                     {
-                        "teacher": "проф.Самыгин С.И.",
+                        "teacher": "асс.Котлярова Е.А.",
                         "group": "РСОZS-2204",
-                        "room": "338",
+                        "room": "255",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -688,10 +713,10 @@
                 "number": 6,
                 "startTime": "17:10",
                 "endTime": "18:40",
-                "subject": "экз. Психология массовых коммуникаций",
+                "subject": "пр. Математика",
                 "otUnits": [
                     {
-                        "teacher": "проф.Самыгин С.И.",
+                        "teacher": "проф.Сахарова Л.В.",
                         "group": "РСОZS-2204",
                         "room": "255",
                         "additional": "1",
@@ -699,7 +724,7 @@
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
+                "type": "PRACTICE",
                 "state": "COMMON"
             },
             {
@@ -707,6 +732,25 @@
                 "number": 7,
                 "startTime": "18:45",
                 "endTime": "20:15",
+                "subject": "пр. Анализ данных",
+                "otUnits": [
+                    {
+                        "teacher": "проф.Толстик Н.В.",
+                        "group": "РСОZS-2204",
+                        "room": "451",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 8,
+                "startTime": "20:20",
+                "endTime": "21:50",
                 "subject": "пр. Основы маркетинга",
                 "otUnits": [
                     {
@@ -732,10 +776,10 @@
                 "number": 4,
                 "startTime": "13:50",
                 "endTime": "15:20",
-                "subject": "пр. Анализ данных",
+                "subject": "экз. Психология массовых коммуникаций",
                 "otUnits": [
                     {
-                        "teacher": "проф.Толстик Н.В.",
+                        "teacher": "проф.Самыгин С.И.",
                         "group": "РСОZS-2204",
                         "room": "655",
                         "additional": "1",
@@ -743,7 +787,7 @@
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
+                "type": "COMMON",
                 "state": "COMMON"
             },
             {
@@ -792,40 +836,40 @@
         "lessons": [
             {
                 "date": "2026-11-28",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:00",
-                "subject": "пр. Математика",
+                "number": 2,
+                "startTime": "10:10",
+                "endTime": "11:40",
+                "subject": "зач. Правоведение",
                 "otUnits": [
                     {
-                        "teacher": "проф.Сахарова Л.В.",
+                        "teacher": "доц.Кузьменко О.В.",
                         "group": "РСОZS-2204",
-                        "room": "255",
+                        "room": "602",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
+                "type": "CREDIT",
                 "state": "COMMON"
             },
             {
                 "date": "2026-11-28",
-                "number": 2,
-                "startTime": "10:10",
-                "endTime": "11:40",
-                "subject": "пр. Математика",
+                "number": 3,
+                "startTime": "11:50",
+                "endTime": "13:20",
+                "subject": "зач. Правоведение",
                 "otUnits": [
                     {
-                        "teacher": "проф.Сахарова Л.В.",
+                        "teacher": "доц.Кузьменко О.В.",
                         "group": "РСОZS-2204",
-                        "room": "255",
+                        "room": "602",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
+                "type": "CREDIT",
                 "state": "COMMON"
             }
         ]
@@ -945,7 +989,7 @@
                     {
                         "teacher": "проф.Сахарова Л.В.",
                         "group": "РСОZS-2204",
-                        "room": "334",
+                        "room": "451",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -960,25 +1004,6 @@
         "date": "2026-12-02",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-12-02",
-                "number": 5,
-                "startTime": "15:30",
-                "endTime": "17:00",
-                "subject": "зач. Правоведение",
-                "otUnits": [
-                    {
-                        "teacher": "доц.Кузьменко О.В.",
-                        "group": "РСОZS-2204",
-                        "room": "324",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CREDIT",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-12-02",
                 "number": 6,
