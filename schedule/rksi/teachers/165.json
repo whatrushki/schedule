@@ -5,6 +5,25 @@
         "lessons": [
             {
                 "date": "2026-11-05",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Шабранская П.Е.",
+                        "group": "ИКС-12",
+                        "room": "310",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-05",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
@@ -93,16 +112,16 @@
                 "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Шабранская Полина Евгеньевна",
+                        "teacher": "Шабранская П.Е.",
                         "group": "ИКС-13",
-                        "room": "325",
+                        "room": "110",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-06",
@@ -112,16 +131,16 @@
                 "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Шабранская Полина Евгеньевна",
+                        "teacher": "Шабранская П.Е.",
                         "group": "ИКС-12",
-                        "room": "325",
+                        "room": "110",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-06",
@@ -131,16 +150,35 @@
                 "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Шабранская Полина Евгеньевна",
+                        "teacher": "Шабранская П.Е.",
                         "group": "ИКС-11",
-                        "room": "217",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-06",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Шабранская П.Е.",
+                        "group": "ИКС-11",
+                        "room": "418",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     }

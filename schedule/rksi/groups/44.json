@@ -106,6 +106,25 @@
         "lessons": [
             {
                 "date": "2026-11-06",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Технология монтажа и настройки абонентского оборудования",
+                "otUnits": [
+                    {
+                        "teacher": "Ермолина Л.В.",
+                        "group": "ИКС-41",
+                        "room": "114а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-06",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -147,19 +166,19 @@
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Монтаж и обслуживание оптических систем передачи транспортных сетей",
+                "subject": "Планирование и организация работы структурного подразделения",
                 "otUnits": [
                     {
-                        "teacher": "Ермолина Л.В.",
+                        "teacher": "Згонникова Т.Ф.",
                         "group": "ИКС-41",
-                        "room": "114а",
+                        "room": "216а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-06",
@@ -178,7 +197,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

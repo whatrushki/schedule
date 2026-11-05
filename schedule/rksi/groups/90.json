@@ -87,6 +87,25 @@
         "lessons": [
             {
                 "date": "2026-11-06",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Основы электротехники",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова С.Ю.",
+                        "group": "СА-21",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-06",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
@@ -114,14 +133,14 @@
                     {
                         "teacher": "Долгополая А.С.",
                         "group": "СА-21",
-                        "room": "411",
+                        "room": "318",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-06",
@@ -133,14 +152,14 @@
                     {
                         "teacher": "Каверзнева Е.Ю.",
                         "group": "СА-21",
-                        "room": "404",
+                        "room": "316",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
