@@ -8,7 +8,7 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "УП",
+                "subject": "Организационное и правовое обеспечение информационной безопасности",
                 "otUnits": [
                     {
                         "teacher": "Асташевская А.В.",
@@ -87,13 +87,51 @@
         "lessons": [
             {
                 "date": "2026-11-06",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
                 "subject": "Телекоммуникационные системы и сети",
                 "otUnits": [
                     {
-                        "teacher": "Гунько Д.Д.",
+                        "teacher": "Смолянинов К.А.",
+                        "group": "ИБТ-31",
+                        "room": "210",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-06",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Телекоммуникационные системы и сети",
+                "otUnits": [
+                    {
+                        "teacher": "Смолянинов К.А.",
+                        "group": "ИБТ-31",
+                        "room": "210",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-06",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Электроника и схемотехника",
+                "otUnits": [
+                    {
+                        "teacher": "Нохрина Ю.В.",
                         "group": "ИБТ-31",
                         "room": "214",
                         "additional": "1",
@@ -102,17 +140,17 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-06",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Телекоммуникационные системы и сети",
+                "subject": "Электроника и схемотехника",
                 "otUnits": [
                     {
-                        "teacher": "Гунько Д.Д.",
+                        "teacher": "Нохрина Ю.В.",
                         "group": "ИБТ-31",
                         "room": "214",
                         "additional": "1",
@@ -121,7 +159,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-06",
@@ -140,7 +178,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-06",
@@ -159,7 +197,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

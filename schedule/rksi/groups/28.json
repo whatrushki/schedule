@@ -87,22 +87,41 @@
         "lessons": [
             {
                 "date": "2026-11-06",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова А.В",
+                        "group": "ИБТ-23",
+                        "room": "31",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-06",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Основы алгоритмизации и программирования",
+                "subject": "Индивидуальный проект",
                 "otUnits": [
                     {
-                        "teacher": "Дущенков Д.А.",
+                        "teacher": "Бережная А.В. + Дущенков Д.А.",
                         "group": "ИБТ-23",
-                        "room": "33",
+                        "room": "29",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-06",
@@ -112,16 +131,16 @@
                 "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Селезень И.В.",
+                        "teacher": "Селезень И.В. + Дущенков Д.А.",
                         "group": "ИБТ-23",
-                        "room": "32",
+                        "room": "29",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-06",
@@ -133,14 +152,14 @@
                     {
                         "teacher": "Лютова Л.К.",
                         "group": "ИБТ-23",
-                        "room": "29",
+                        "room": "42",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-06",
@@ -159,7 +178,7 @@
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
