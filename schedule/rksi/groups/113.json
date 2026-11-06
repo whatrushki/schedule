@@ -20,7 +20,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "REMOVED"
+                "state": "COMMON"
             },
             {
                 "date": "2026-11-06",
@@ -70,14 +70,14 @@
                     {
                         "teacher": "Григорьева Л.Ф.",
                         "group": "ТД-22",
-                        "room": "47",
+                        "room": "36",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
+                "state": "COMMON"
             }
         ]
     },
@@ -112,24 +112,35 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.П.",
+                        "teacher": "Марченко С.П. + Ляшенко Д.И.",
                         "group": "ТД-22",
-                        "room": "13",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "ТД-22",
-                        "room": "20",
+                        "room": "33",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-07",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Основы финансовой грамотности",
+                "otUnits": [
+                    {
+                        "teacher": "Каверзнева Е.Ю.",
+                        "group": "ТД-22",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

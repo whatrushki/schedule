@@ -106,6 +106,25 @@
         "lessons": [
             {
                 "date": "2026-11-07",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Системное программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Кошкина А.А.",
+                        "group": "ИС-37",
+                        "room": "Общ1-1",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-07",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -115,6 +134,14 @@
                         "teacher": "Кошкина А.А.",
                         "group": "ИС-36",
                         "room": "Общ1-3",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Кошкина А.А.",
+                        "group": "ИС-37",
+                        "room": "Общ1-4",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -150,16 +177,16 @@
                 "subject": "Системное программирование",
                 "otUnits": [
                     {
-                        "teacher": "Кошкина Анастасия Алексеевна",
+                        "teacher": "Кошкина А.А.",
                         "group": "ИС-31",
-                        "room": "325",
+                        "room": "Общ1-3",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "REMOVED"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-07",
