@@ -1,5 +1,30 @@
 [
     {
+        "date": "2026-11-04",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-04",
+                "number": 6,
+                "startTime": "17:40",
+                "endTime": "19:15",
+                "subject": "Веб-программирование",
+                "otUnits": [
+                    {
+                        "teacher": "Майер Светлана Федоровна",
+                        "group": "ПедМИ",
+                        "room": "Онлайн",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": "Веб-программирование"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-05",
         "scheduleType": "COMMON",
         "lessons": [
@@ -73,7 +98,7 @@
                 "number": 5,
                 "startTime": "15:50",
                 "endTime": "17:25",
-                "subject": "Introduction to the Project Activity (Введение в проектную  деятельность)",
+                "subject": "Programming Fundamentals (Программирование)",
                 "otUnits": [
                     {
                         "teacher": "Майер Светлана Федоровна",
@@ -81,32 +106,7 @@
                         "room": "ЮГИНФО 111",
                         "additional": "",
                         "onlineUrl": null,
-                        "subject": "Introduction to the Project Activity (Введение в проектную  деятельность)"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-11",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-11",
-                "number": 6,
-                "startTime": "17:40",
-                "endTime": "19:15",
-                "subject": "Веб-программирование",
-                "otUnits": [
-                    {
-                        "teacher": "Майер Светлана Федоровна",
-                        "group": "ПедМИ",
-                        "room": "Онлайн",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": "Веб-программирование"
+                        "subject": "Programming Fundamentals (Программирование)"
                     }
                 ],
                 "type": "LECTURE",
@@ -188,7 +188,7 @@
                 "number": 5,
                 "startTime": "15:50",
                 "endTime": "17:25",
-                "subject": "Programming Fundamentals (Программирование)",
+                "subject": "Introduction to the Project Activity (Введение в проектную  деятельность)",
                 "otUnits": [
                     {
                         "teacher": "Майер Светлана Федоровна",
@@ -196,10 +196,10 @@
                         "room": "ЮГИНФО 111",
                         "additional": "",
                         "onlineUrl": null,
-                        "subject": "Programming Fundamentals (Программирование)"
+                        "subject": "Introduction to the Project Activity (Введение в проектную  деятельность)"
                     }
                 ],
-                "type": "LECTURE",
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
