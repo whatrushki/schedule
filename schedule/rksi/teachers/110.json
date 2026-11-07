@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-11-09",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-09",
@@ -11,16 +11,16 @@
                 "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Таппасханова Полина Петровна",
+                        "teacher": "Таппасханова П.П.",
                         "group": "ТД-31",
-                        "room": "28",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -30,16 +30,16 @@
                 "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Таппасханова Полина Петровна",
+                        "teacher": "Таппасханова П.П.",
                         "group": "ТД-31",
-                        "room": "30",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -58,7 +58,34 @@
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "REMOVED"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова П.П.",
+                        "group": "ТД-22",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Таппасханова П.П.",
+                        "group": "ТД-32",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-11-09",
@@ -77,7 +104,7 @@
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

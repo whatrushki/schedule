@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Гузов А.В.",
-                        "group": "ИКС-52",
-                        "room": "с/з2",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Гузов А.В.",
-                        "group": "РУП-14",
-                        "room": "с/з3",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Гузов А.В.",
-                        "group": "СА-44",
-                        "room": "с/з5",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-07",
         "scheduleType": "COMMON",
         "lessons": [
@@ -146,7 +83,7 @@
     },
     {
         "date": "2026-11-09",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-09",
@@ -156,7 +93,7 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Гузов Алексей Валентинович",
+                        "teacher": "Гузов А.В.",
                         "group": "ТД-13",
                         "room": "с/з2",
                         "additional": "2",
@@ -165,7 +102,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -175,7 +112,7 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Гузов Алексей Валентинович",
+                        "teacher": "Гузов А.В.",
                         "group": "ИБА-13",
                         "room": "с/з2",
                         "additional": "2",
@@ -184,7 +121,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -194,8 +131,16 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Гузов Алексей Валентинович",
+                        "teacher": "Гузов А.В.",
                         "group": "ИБТ-13",
+                        "room": "с/з2",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Гузов А.В.",
+                        "group": "ИБА-24",
                         "room": "с/з2",
                         "additional": "2",
                         "onlineUrl": null,
@@ -203,7 +148,34 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Гузов А.В.",
+                        "group": "ИКС-23",
+                        "room": "Акт.зал",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Гузов А.В.",
+                        "group": "ИБА-13",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-11-09",
@@ -213,7 +185,7 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Гузов Алексей Валентинович",
+                        "teacher": "Гузов А.В.",
                         "group": "ИБТ-22",
                         "room": "с/з2",
                         "additional": "2",
@@ -222,7 +194,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

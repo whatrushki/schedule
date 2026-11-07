@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Разработка и администрирование удаленных баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "Кротенко Е.М.",
-                        "group": "ИБТ-42",
-                        "room": "220",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Разработка и администрирование удаленных баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "Кротенко Е.М.",
-                        "group": "ИБТ-42",
-                        "room": "220",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Разработка и администрирование удаленных баз данных",
-                "otUnits": [
-                    {
-                        "teacher": "Кротенко Е.М.",
-                        "group": "ИБТ-42",
-                        "room": "220",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-07",
         "scheduleType": "COMMON",
         "lessons": [
@@ -83,7 +20,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "REMOVED"
+                "state": "COMMON"
             },
             {
                 "date": "2026-11-07",
@@ -154,9 +91,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Мугутдинова Н.Ш.",
+                        "group": "ИБТ-42",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -330,17 +276,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.П.",
+                        "teacher": "Савченко А.А.",
                         "group": "ИБТ-42",
-                        "room": "13",
+                        "room": "38",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Савченко А.А.",
+                        "teacher": "Марченко С.П.",
                         "group": "ИБТ-42",
-                        "room": "38",
+                        "room": "13",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null

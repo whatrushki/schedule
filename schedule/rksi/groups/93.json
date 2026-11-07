@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Основы электротехники",
-                "otUnits": [
-                    {
-                        "teacher": "Студенникова Д.А.",
-                        "group": "СА-24",
-                        "room": "213",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Щербакова Э.Н.",
-                        "group": "СА-24",
-                        "room": "с/з3",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Основы финансовой грамотности",
-                "otUnits": [
-                    {
-                        "teacher": "Каверзнева Е.Ю.",
-                        "group": "СА-24",
-                        "room": "316",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 7,
-                "startTime": "18:20",
-                "endTime": "19:50",
-                "subject": "Инженерная компьютерная графика",
-                "otUnits": [
-                    {
-                        "teacher": "Шульга К.А.",
-                        "group": "СА-24",
-                        "room": "210",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-07",
         "scheduleType": "COMMON",
         "lessons": [
@@ -173,9 +91,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Шабранская П.Е.",
+                        "group": "СА-24",
+                        "room": "122",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -185,7 +112,7 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Лебедева М.В.",
+                        "teacher": "Лебедева М.В.,",
                         "group": "СА-24",
                         "room": "104",
                         "additional": "1",
@@ -193,16 +120,16 @@
                         "subject": null
                     },
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Черноштан О.Н.,",
                         "group": "СА-24",
-                        "room": "315а",
+                        "room": "114",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",

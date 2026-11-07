@@ -1,51 +1,7 @@
 [
     {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Психология общения",
-                "otUnits": [
-                    {
-                        "teacher": "Золотовская Маргарита Юрьевна",
-                        "group": "ИС-28",
-                        "room": "319",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Психология общения",
-                "otUnits": [
-                    {
-                        "teacher": "Золотовская Маргарита Юрьевна",
-                        "group": "ИС-22",
-                        "room": "319",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-09",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-09",
@@ -55,7 +11,7 @@
                 "subject": "Социальная психология",
                 "otUnits": [
                     {
-                        "teacher": "Золотовская Маргарита Юрьевна",
+                        "teacher": "Золотовская М.Ю.",
                         "group": "БД-21",
                         "room": "24",
                         "additional": "2",
@@ -64,7 +20,34 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Золотовская М.Ю.",
+                        "group": "ИС-35",
+                        "room": "319",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Золотовская М.Ю.",
+                        "group": "ИС-45",
+                        "room": "319",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             }
         ]
     },

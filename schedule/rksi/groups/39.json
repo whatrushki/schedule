@@ -1,95 +1,5 @@
 [
     {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Инженерная компьютерная графика",
-                "otUnits": [
-                    {
-                        "teacher": "Шульга К.А.",
-                        "group": "ИКС-23",
-                        "room": "210",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Инженерная компьютерная графика",
-                "otUnits": [
-                    {
-                        "teacher": "Шульга К.А.",
-                        "group": "ИКС-23",
-                        "room": "210а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Крупицкая Н.А.",
-                        "group": "ИКС-23",
-                        "room": "411",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Черноштан О.Н.",
-                        "group": "ИКС-23",
-                        "room": "305",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Основы электронной и вычислительной техники",
-                "otUnits": [
-                    {
-                        "teacher": "Пузыревский И.А.",
-                        "group": "ИКС-23",
-                        "room": "314",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-07",
         "scheduleType": "COMMON",
         "lessons": [
@@ -181,9 +91,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Гузов А.В.",
+                        "group": "ИКС-23",
+                        "room": "Акт.зал",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -483,17 +402,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Черноштан О.Н.",
                         "group": "ИКС-23",
-                        "room": "111",
+                        "room": "318",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "ИКС-23",
-                        "room": "318",
+                        "room": "111",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

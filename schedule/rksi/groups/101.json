@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "УП",
-                "otUnits": [
-                    {
-                        "teacher": "Казанин Н.А.",
-                        "group": "СА-35",
-                        "room": "312",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "УП",
-                "otUnits": [
-                    {
-                        "teacher": "Казанин Н.А.",
-                        "group": "СА-35",
-                        "room": "312",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "УП",
-                "otUnits": [
-                    {
-                        "teacher": "Казанин Н.А.",
-                        "group": "СА-35",
-                        "room": "312",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "УП",
-                "otUnits": [
-                    {
-                        "teacher": "Казанин Н.А.",
-                        "group": "СА-35",
-                        "room": "306",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-07",
         "scheduleType": "COMMON",
         "lessons": [
@@ -146,64 +64,83 @@
     },
     {
         "date": "2026-11-09",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-09",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "УП",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
-                        "teacher": "_",
+                        "teacher": "Казанин Н.А.",
                         "group": "СА-35",
-                        "room": "вак9",
-                        "additional": "вак9",
+                        "room": "312",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "УП",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
-                        "teacher": "_",
+                        "teacher": "Казанин Н.А.",
                         "group": "СА-35",
-                        "room": "вак9",
-                        "additional": "вак9",
+                        "room": "312",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "УП",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
-                        "teacher": "_",
+                        "teacher": "Казанин Н.А.",
                         "group": "СА-35",
-                        "room": "вак9",
-                        "additional": "вак9",
+                        "room": "312",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Трищук С.А.",
+                        "group": "СА-35",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             }
         ]
     },

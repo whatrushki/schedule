@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Организация, принципы построения и функционирования компьютерных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Файзуллин А.О.",
-                        "group": "СА-37",
-                        "room": "210а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Организация, принципы построения и функционирования компьютерных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Файзуллин А.О.",
-                        "group": "СА-37",
-                        "room": "210а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 7,
-                "startTime": "18:20",
-                "endTime": "19:50",
-                "subject": "Организация, принципы построения и функционирования компьютерных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Файзуллин А.О.",
-                        "group": "СА-37",
-                        "room": "210а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-07",
         "scheduleType": "COMMON",
         "lessons": [
@@ -146,64 +83,83 @@
     },
     {
         "date": "2026-11-09",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
+            {
+                "date": "2026-11-09",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Ермолина Л.В,",
+                        "group": "СА-37",
+                        "room": "114а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-11-09",
                 "number": 4,
                 "startTime": "14:10",
                 "endTime": "15:40",
-                "subject": "Администрирование сетевых операционных систем",
+                "subject": "Организация администрирования компьютерных систем",
                 "otUnits": [
                     {
-                        "teacher": "__",
+                        "teacher": "Савчук И.С.",
                         "group": "СА-37",
-                        "room": "Вак2",
-                        "additional": "Вак2",
+                        "room": "303",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:30",
-                "subject": "Администрирование сетевых операционных систем",
+                "subject": "Организация администрирования компьютерных систем",
                 "otUnits": [
                     {
-                        "teacher": "__",
+                        "teacher": "Савчук И.С.",
                         "group": "СА-37",
-                        "room": "Вак2",
-                        "additional": "Вак2",
+                        "room": "314",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
                 "number": 6,
                 "startTime": "17:40",
                 "endTime": "19:10",
-                "subject": "Администрирование сетевых операционных систем",
+                "subject": "Организация администрирования компьютерных систем",
                 "otUnits": [
                     {
-                        "teacher": "__",
+                        "teacher": "Савчук И.С.",
                         "group": "СА-37",
-                        "room": "Вак2",
-                        "additional": "Вак2",
+                        "room": "314",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -364,17 +320,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Лебедева М.В.",
+                        "teacher": "Черноштан О.Н.",
                         "group": "СА-37",
-                        "room": "104",
+                        "room": "106",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Лебедева М.В.",
                         "group": "СА-37",
-                        "room": "106",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

@@ -1,49 +1,5 @@
 [
     {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Инструментальные средства разработки программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "Черевко А.Д.",
-                        "group": "ИС-42",
-                        "room": "Общ1-4",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Инструментальные средства разработки программного обеспечения",
-                "otUnits": [
-                    {
-                        "teacher": "Черевко А.Д.",
-                        "group": "ИС-42",
-                        "room": "Общ1-1",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-07",
         "scheduleType": "COMMON",
         "lessons": [
@@ -177,14 +133,14 @@
                     {
                         "teacher": "Бойнар И.Н.",
                         "group": "ИС-42",
-                        "room": "303",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -196,14 +152,14 @@
                     {
                         "teacher": "Черевко А.Д.",
                         "group": "ИС-42",
-                        "room": "418",
+                        "room": "Общ1-1",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -211,9 +167,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Рыбальченко Т.Б.",
+                        "group": "ИС-42",
+                        "room": "210",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

@@ -1,49 +1,5 @@
 [
     {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Организационное и правовое обеспечение информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "Асташевская А.В.",
-                        "group": "ИБТ-32",
-                        "room": "21",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Организационное и правовое обеспечение информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "Асташевская А.В.",
-                        "group": "ИБТ-32",
-                        "room": "21",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-07",
         "scheduleType": "COMMON",
         "lessons": [
@@ -95,7 +51,7 @@
                     {
                         "teacher": "Смолянинов К.А.",
                         "group": "ИБТ-32",
-                        "room": "34",
+                        "room": "акт.зал",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -114,14 +70,14 @@
                     {
                         "teacher": "Смолянинов К.А.",
                         "group": "ИБТ-32",
-                        "room": "38",
+                        "room": "45",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-07",
@@ -133,14 +89,14 @@
                     {
                         "teacher": "Смолянинов К.А.",
                         "group": "ИБТ-32",
-                        "room": "38",
+                        "room": "45",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
+                "state": "REMOVED"
             }
         ]
     },
@@ -173,9 +129,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Рыбак Е.Ю.",
+                        "group": "ИБТ-32",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",

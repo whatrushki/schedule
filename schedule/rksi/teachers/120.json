@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Правовое обеспечение профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Хачикян Л.Г.",
-                        "group": "ИС-38",
-                        "room": "310",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Правовое обеспечение профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Хачикян Л.Г.",
-                        "group": "ИС-33",
-                        "room": "319",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Правовое обеспечение профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Хачикян Л.Г.",
-                        "group": "ИС-36",
-                        "room": "310",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Правовое обеспечение профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Хачикян Л.Г.",
-                        "group": "ИС-31",
-                        "room": "310",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-07",
         "scheduleType": "COMMON",
         "lessons": [
@@ -184,8 +102,35 @@
     },
     {
         "date": "2026-11-09",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
+            {
+                "date": "2026-11-09",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Хачикян Л.Г.",
+                        "group": "ИБА-34",
+                        "room": "32",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Хачикян Л.Г.",
+                        "group": "ИБА-43",
+                        "room": "32",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-11-09",
                 "number": 4,
@@ -194,7 +139,7 @@
                 "subject": "Правовое обеспечение профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Хачикян Лианна Григорьевна",
+                        "teacher": "Хачикян Л.Г.",
                         "group": "ИБТ-33",
                         "room": "32",
                         "additional": "2",
@@ -203,7 +148,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -213,7 +158,7 @@
                 "subject": "Правовое обеспечение профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Хачикян Лианна Григорьевна",
+                        "teacher": "Хачикян Л.Г.",
                         "group": "ТД-22",
                         "room": "32",
                         "additional": "2",
@@ -222,7 +167,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -232,7 +177,7 @@
                 "subject": "Правовое обеспечение профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Хачикян Лианна Григорьевна",
+                        "teacher": "Хачикян Л.Г.",
                         "group": "ТД-21",
                         "room": "32",
                         "additional": "2",
@@ -241,7 +186,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

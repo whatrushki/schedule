@@ -1,70 +1,7 @@
 [
     {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Основы безопасности и защиты Родины",
-                "otUnits": [
-                    {
-                        "teacher": "Бодло Анастасия Олеговна",
-                        "group": "БД-11",
-                        "room": "34",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Безопасность жизнедеятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Бодло Анастасия Олеговна",
-                        "group": "БД-21",
-                        "room": "24",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Безопасность жизнедеятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Бодло Анастасия Олеговна",
-                        "group": "БД-21",
-                        "room": "24",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-09",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-09",
@@ -74,16 +11,16 @@
                 "subject": "Основы безопасности и защиты Родины",
                 "otUnits": [
                     {
-                        "teacher": "Бодло Анастасия Олеговна",
+                        "teacher": "Бодло А.О.",
                         "group": "БД-11",
-                        "room": "21",
+                        "room": "38",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -93,16 +30,35 @@
                 "subject": "Безопасность жизнедеятельности",
                 "otUnits": [
                     {
-                        "teacher": "Бодло Анастасия Олеговна",
+                        "teacher": "Бодло А.О.",
                         "group": "БД-21",
-                        "room": "29",
+                        "room": "38",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Бодло О.О.",
+                        "group": "ТД-13",
+                        "room": "20",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             }
         ]
     },

@@ -1,57 +1,5 @@
 [
     {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Безопасность жизнедеятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Лютова Л.К.",
-                        "group": "ИБА-24",
-                        "room": "29",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Савченко А.А.",
-                        "group": "ИБА-24",
-                        "room": "38",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "ИБА-24",
-                        "room": "44",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-07",
         "scheduleType": "COMMON",
         "lessons": [
@@ -60,16 +8,8 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Доп.занятие",
+                "subject": "Предмет не указан",
                 "otUnits": [
-                    {
-                        "teacher": "Зурова А.Е.",
-                        "group": "ИБА-24",
-                        "room": "214",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "Лютова К.Л.",
                         "group": "ИБА-24",
@@ -79,7 +19,7 @@
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
+                "type": "COMMON",
                 "state": "CHANGED"
             },
             {
@@ -87,16 +27,8 @@
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Доп.занятие",
+                "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
-                    {
-                        "teacher": "Зурова А.Е.",
-                        "group": "ИБА-24",
-                        "room": "214",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "Гузов А.В.",
                         "group": "ИБА-24",
@@ -106,7 +38,7 @@
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
+                "type": "COMMON",
                 "state": "CHANGED"
             },
             {
@@ -119,14 +51,14 @@
                     {
                         "teacher": "Нохрина Ю.В.",
                         "group": "ИБА-24",
-                        "room": "307",
-                        "additional": "1",
+                        "room": "13",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "REMOVED"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-07",
@@ -138,14 +70,14 @@
                     {
                         "teacher": "Нохрина Ю.В.",
                         "group": "ИБА-24",
-                        "room": "307",
-                        "additional": "1",
+                        "room": "13",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "REMOVED"
+                "state": "CHANGED"
             }
         ]
     },
@@ -163,33 +95,33 @@
                     {
                         "teacher": "Ерёменко О.А.",
                         "group": "ИБА-24",
-                        "room": "17",
+                        "room": "43",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Основы информационной безопасности",
+                "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Шабалта А.В.",
+                        "teacher": "Гузов А.В.",
                         "group": "ИБА-24",
-                        "room": "41",
+                        "room": "с/з2",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -197,9 +129,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Леонова И.Ю.",
+                        "group": "ИБА-24",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -237,7 +178,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

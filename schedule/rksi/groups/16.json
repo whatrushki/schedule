@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Беспалова Н.В.",
-                        "group": "ИБА-31",
-                        "room": "с/з1",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Операционные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Рыбалка В.В.",
-                        "group": "ИБА-31",
-                        "room": "42",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Технические средства информатизации",
-                "otUnits": [
-                    {
-                        "teacher": "Рыбалка В.В.",
-                        "group": "ИБА-31",
-                        "room": "42",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 7,
-                "startTime": "18:20",
-                "endTime": "19:50",
-                "subject": "Технические средства информатизации",
-                "otUnits": [
-                    {
-                        "teacher": "Рыбалка В.В.",
-                        "group": "ИБА-31",
-                        "room": "42",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-07",
         "scheduleType": "COMMON",
         "lessons": [
@@ -169,6 +87,25 @@
         "lessons": [
             {
                 "date": "2026-11-09",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Операционные системы",
+                "otUnits": [
+                    {
+                        "teacher": "Рыбалка В.В.",
+                        "group": "ИБА-31",
+                        "room": "44",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-09",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -177,14 +114,14 @@
                     {
                         "teacher": "Рыбалка В.В.",
                         "group": "ИБА-31",
-                        "room": "40",
+                        "room": "44",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -196,14 +133,14 @@
                     {
                         "teacher": "Рыбалка В.В.",
                         "group": "ИБА-31",
-                        "room": "40",
+                        "room": "44",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -211,9 +148,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Чалая С.А.",
+                        "group": "ИБА-31",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

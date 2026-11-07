@@ -1,62 +1,26 @@
 [
     {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Телекоммуникационные системы и сети",
-                "otUnits": [
-                    {
-                        "teacher": "Гунько Д.Д.",
-                        "group": "ИБТ-31",
-                        "room": "214",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Телекоммуникационные системы и сети",
-                "otUnits": [
-                    {
-                        "teacher": "Гунько Д.Д.",
-                        "group": "ИБТ-31",
-                        "room": "214",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-09",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-09",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Эксплуатация компьютерных сетей",
+                "subject": "Сети и системы передачи информации",
                 "otUnits": [
                     {
-                        "teacher": "Гунько Дарья Дмитриевна",
+                        "teacher": "Гунько Д.Д.",
                         "group": "ИБА-32",
+                        "room": "214",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Гунько Д.Д.",
+                        "group": "ИБА-34",
                         "room": "214",
                         "additional": "1",
                         "onlineUrl": null,
@@ -64,18 +28,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Эксплуатация компьютерных сетей",
+                "subject": "Сети и системы передачи информации",
                 "otUnits": [
                     {
-                        "teacher": "Гунько Дарья Дмитриевна",
+                        "teacher": "Гунько Д.Д.",
                         "group": "ИБА-32",
+                        "room": "214",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Гунько Д.Д.",
+                        "group": "ИБА-34",
                         "room": "214",
                         "additional": "1",
                         "onlineUrl": null,
@@ -83,7 +55,34 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Гунько Д.Д.",
+                        "group": "ИС-41",
+                        "room": "214",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Гунько Д.Д.",
+                        "group": "СА-32",
+                        "room": "214",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             }
         ]
     },

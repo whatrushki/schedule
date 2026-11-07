@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Операционные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Рыбалка В.В.",
-                        "group": "ИБА-32",
-                        "room": "42",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Программные и программно-аппаратные средства защиты информации",
-                "otUnits": [
-                    {
-                        "teacher": "Шабалта А.В.",
-                        "group": "ИБА-32",
-                        "room": "45",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Программные и программно-аппаратные средства защиты информации",
-                "otUnits": [
-                    {
-                        "teacher": "Шабалта А.В.",
-                        "group": "ИБА-32",
-                        "room": "45",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-09",
         "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
@@ -110,9 +47,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Савченко А.А.",
+                        "group": "ИБА-32",
+                        "room": "38",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -128,17 +74,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Савченко А.А.",
+                        "teacher": "Крылова О.В.",
                         "group": "ИБА-32",
-                        "room": "38",
+                        "room": "33",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Крылова О.В.",
+                        "teacher": "Савченко А.А.",
                         "group": "ИБА-32",
-                        "room": "33",
+                        "room": "38",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null

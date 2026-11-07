@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-11-06",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-06",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Доп.занятие",
-                "otUnits": [
-                    {
-                        "teacher": "Файзуллин А.О.",
-                        "group": "ИКС-43",
-                        "room": "210а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Планирование и организация работы структурного подразделения",
-                "otUnits": [
-                    {
-                        "teacher": "Згонникова Т.Ф.",
-                        "group": "ИКС-43",
-                        "room": "216а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Планирование и организация работы структурного подразделения",
-                "otUnits": [
-                    {
-                        "teacher": "Згонникова Т.Ф.",
-                        "group": "ИКС-43",
-                        "room": "216а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-06",
-                "number": 7,
-                "startTime": "18:20",
-                "endTime": "19:50",
-                "subject": "Планирование и организация работы структурного подразделения",
-                "otUnits": [
-                    {
-                        "teacher": "Згонникова Т.Ф.",
-                        "group": "ИКС-43",
-                        "room": "216а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-09",
         "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
@@ -95,14 +13,14 @@
                     {
                         "teacher": "Згонникова Т.Ф.",
                         "group": "ИКС-43",
-                        "room": "109",
+                        "room": "420",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -114,14 +32,14 @@
                     {
                         "teacher": "Згонникова Т.Ф.",
                         "group": "ИКС-43",
-                        "room": "104",
+                        "room": "420",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -129,9 +47,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Байбекова И.Г.",
+                        "group": "ИКС-43",
+                        "room": "110",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -141,16 +68,16 @@
                 "subject": "Применение программно- аппаратных средств защиты информации в инфокоммуникационных системах и сетях связи",
                 "otUnits": [
                     {
-                        "teacher": "Бойнар И.Н.",
+                        "teacher": "Бойнар И.Н.,",
                         "group": "ИКС-43",
-                        "room": "210а",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -160,16 +87,16 @@
                 "subject": "Применение программно- аппаратных средств защиты информации в инфокоммуникационных системах и сетях связи",
                 "otUnits": [
                     {
-                        "teacher": "Бойнар И.Н.",
+                        "teacher": "Бойнар И.Н.,",
                         "group": "ИКС-43",
-                        "room": "109",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
