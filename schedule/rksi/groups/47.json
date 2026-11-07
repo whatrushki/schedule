@@ -87,13 +87,60 @@
         "lessons": [
             {
                 "date": "2026-11-09",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Теоретические основы конвергенции логических, интеллектуальных сетей и инфокоммуникационных технолог",
+                "otUnits": [
+                    {
+                        "teacher": "Файзуллин А.О.",
+                        "group": "ИКС-52",
+                        "room": "210а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Теоретические основы конвергенции логических, интеллектуальных сетей и инфокоммуникационных технолог",
+                "otUnits": [
+                    {
+                        "teacher": "Файзуллин А.О.",
+                        "group": "ИКС-52",
+                        "room": "210а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-09",
                 "number": 0,
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Попова А.Ю.",
+                        "group": "ИКС-52",
+                        "room": "121",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -105,14 +152,14 @@
                     {
                         "teacher": "Згонникова Т.Ф.",
                         "group": "ИКС-52",
-                        "room": "411",
+                        "room": "420",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-09",
@@ -131,7 +178,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-09",
@@ -150,7 +197,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

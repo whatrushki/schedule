@@ -110,9 +110,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Смолянинова В.А",
+                        "group": "ИС-43",
+                        "room": "406",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -185,17 +194,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ужегова Е.А.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "ИС-43",
-                        "room": "307",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Ужегова Е.А.",
                         "group": "ИС-43",
-                        "room": "104",
+                        "room": "307",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
