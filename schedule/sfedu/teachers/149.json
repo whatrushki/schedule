@@ -46,6 +46,25 @@
                 ],
                 "type": "LECTURE",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-11-03",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Романов Юрий Викторович",
+                        "group": "ПедМ",
+                        "room": "322",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": "Геометрия"
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
             }
         ]
     },
@@ -88,7 +107,7 @@
                         "subject": "Дополнительные главы элементарной математики"
                     }
                 ],
-                "type": "PRACTICE",
+                "type": "LECTURE",
                 "state": "COMMON"
             },
             {
@@ -157,6 +176,31 @@
         ]
     },
     {
+        "date": "2026-11-06",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-06",
+                "number": 3,
+                "startTime": "11:55",
+                "endTime": "13:30",
+                "subject": "Элементарная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Романов Юрий Викторович",
+                        "group": "ПедМ",
+                        "room": "322",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": "Элементарная математика"
+                    }
+                ],
+                "type": "LECTURE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-11-09",
         "scheduleType": "COMMON",
         "lessons": [
@@ -203,25 +247,6 @@
                 ],
                 "type": "LECTURE",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-11-10",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Геометрия",
-                "otUnits": [
-                    {
-                        "teacher": "Романов Юрий Викторович",
-                        "group": "ПедМ",
-                        "room": "322",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": "Геометрия"
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
             }
         ]
     },
@@ -264,7 +289,7 @@
                         "subject": "Дополнительные главы элементарной математики"
                     }
                 ],
-                "type": "LECTURE",
+                "type": "PRACTICE",
                 "state": "COMMON"
             },
             {
@@ -328,31 +353,6 @@
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-13",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-13",
-                "number": 3,
-                "startTime": "11:55",
-                "endTime": "13:30",
-                "subject": "Элементарная математика",
-                "otUnits": [
-                    {
-                        "teacher": "Романов Юрий Викторович",
-                        "group": "ПедМ",
-                        "room": "322",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": "Элементарная математика"
-                    }
-                ],
-                "type": "LECTURE",
                 "state": "COMMON"
             }
         ]

@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-11-09",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "scheduleType": "COMMON",
         "lessons": [
             {
                 "date": "2026-11-09",
@@ -11,43 +11,16 @@
                 "subject": "Компьютерное моделирование",
                 "otUnits": [
                     {
-                        "teacher": "Тодорова А.В.",
+                        "teacher": "Тодорова Анастасия Владимировна",
                         "group": "ИКС-24",
-                        "room": "110а",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-09",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [
-                    {
-                        "teacher": "Тодорова А.В,",
-                        "group": "СА-12",
-                        "room": "110а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Тодорова А.В,",
-                        "group": "СА-42",
-                        "room": "110а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CLASS_HOUR",
-                "state": "ADDED"
+                "state": "COMMON"
             }
         ]
     },
