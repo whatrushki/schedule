@@ -844,7 +844,26 @@
                     {
                         "teacher": "Дымникова О. В.",
                         "group": "БТБ42",
-                        "room": "407",
+                        "room": "227",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-09",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Процессы и аппараты очистки сточных вод",
+                "otUnits": [
+                    {
+                        "teacher": "Дымникова О. В.",
+                        "group": "БТБ42",
+                        "room": "217",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -871,24 +890,30 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-11-10",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-11-09",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Процессы и аппараты очистки сточных вод",
+                "date": "2026-11-10",
+                "number": 0,
+                "startTime": "10:00",
+                "endTime": "12:00",
+                "subject": "Ликвидация академических задолженностей",
                 "otUnits": [
                     {
                         "teacher": "Дымникова О. В.",
-                        "group": "БТБ42",
-                        "room": "217",
+                        "group": "",
+                        "room": "223",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
+                "type": "UNKNOWN",
                 "state": "COMMON"
             }
         ]
