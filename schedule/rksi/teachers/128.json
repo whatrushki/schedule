@@ -136,7 +136,7 @@
                 "subject": "Экономика и управление",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Елена Николаевна",
+                        "teacher": "Шумина Е.Н.",
                         "group": "ИБТ-22",
                         "room": "40",
                         "additional": "2",
@@ -145,7 +145,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-10",
@@ -155,7 +155,7 @@
                 "subject": "Экономика и управление",
                 "otUnits": [
                     {
-                        "teacher": "Шумина Елена Николаевна",
+                        "teacher": "Шумина Е.Н.",
                         "group": "ИБТ-21",
                         "room": "40",
                         "additional": "2",
@@ -164,7 +164,45 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-10",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Шумина О.О.",
+                        "group": "БД-31",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-10",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Шумина О.О.",
+                        "group": "БД-31",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
