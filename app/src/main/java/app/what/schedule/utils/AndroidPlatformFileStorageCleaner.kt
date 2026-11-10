@@ -60,8 +60,8 @@ class AndroidPlatformFileStorageCleaner(
     override suspend fun getDatabaseSizeBytes(): Long = withContext(Dispatchers.IO) {
         try {
             val dbFile = context.getDatabasePath("schedule.db")
-            val walFile = java.io.File(dbFile.path + "-wal")
-            val shmFile = java.io.File(dbFile.path + "-shm")
+            val walFile = File(dbFile.path + "-wal")
+            val shmFile = File(dbFile.path + "-shm")
             var size = 0L
             if (dbFile.exists()) size += dbFile.length()
             if (walFile.exists()) size += walFile.length()

@@ -48,6 +48,15 @@ import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.glance.appwidget.AppWidgetId
+import android.content.ComponentName
+import androidx.compose.foundation.layout.Row
+import app.what.domain.models.ScheduleResponse
+import app.what.foundation.services.AppLogger.Companion.Auditor
+import app.what.foundation.utils.LogCat
+import app.what.foundation.utils.LogScope
+import app.what.foundation.utils.buildTag
+import app.what.foundation.utils.currentLocalDate
+
 import androidx.glance.appwidget.GlanceAppWidgetManager
 import androidx.glance.appwidget.state.updateAppWidgetState
 import androidx.glance.appwidget.updateAll
@@ -157,8 +166,8 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
                             }
                             searchItems = items
                         } catch (e: Exception) {
-                            val tag = app.what.foundation.utils.buildTag(app.what.foundation.utils.LogScope.WIDGET, app.what.foundation.utils.LogCat.UI)
-                            app.what.foundation.services.AppLogger.Auditor.debug(tag, "Ошибка загрузки поиска для виджета: ${e.message}")
+                            val tag = buildTag(LogScope.WIDGET, LogCat.UI)
+                            Auditor.debug(tag, "Ошибка загрузки поиска для виджета: ${e.message}")
                         } finally {
                             isSearchesLoading = false
                         }
@@ -253,7 +262,7 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
                 text = {
                     LazyColumn {
                         items(institutions) { (id, name) ->
-                            androidx.compose.foundation.layout.Row(
+                            Row(
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .clip(RoundedCornerShape(8.dp))
@@ -309,7 +318,7 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
 
             // Выбор учебного заведения
             val currentInstName = institutions.firstOrNull { it.first == selectedInstitutionId }?.second ?: selectedInstitutionId
-            androidx.compose.foundation.layout.Row(
+            Row(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 18.dp)
@@ -381,10 +390,10 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
                     useCache = false,
                     requiresData = true
                 )
-                loaded = result is app.what.domain.models.ScheduleResponse.Available
+                loaded = result is ScheduleResponse.Available
             } catch (e: Exception) {
-                val tag = app.what.foundation.utils.buildTag(app.what.foundation.utils.LogScope.WIDGET, app.what.foundation.utils.LogCat.NET)
-                app.what.foundation.services.AppLogger.Auditor.debug(tag, "Ошибка предзагрузки расписания для виджета по ID: ${e.message}")
+                val tag = buildTag(LogScope.WIDGET, LogCat.NET)
+                Auditor.debug(tag, "Ошибка предзагрузки расписания для виджета по ID: ${e.message}")
             }
             // Попытка 2: загрузка по имени (если ID не дал результата)
             if (!loaded && effectiveSearch.name.isNotBlank() && effectiveSearch.name != effectiveSearch.id) {
@@ -398,10 +407,10 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
                         useCache = false,
                         requiresData = true
                     )
-                    loaded = result is app.what.domain.models.ScheduleResponse.Available
+                    loaded = result is ScheduleResponse.Available
                 } catch (e: Exception) {
-                    val tag = app.what.foundation.utils.buildTag(app.what.foundation.utils.LogScope.WIDGET, app.what.foundation.utils.LogCat.NET)
-                    app.what.foundation.services.AppLogger.Auditor.debug(tag, "Ошибка предзагрузки расписания для виджета по имени: ${e.message}")
+                    val tag = buildTag(LogScope.WIDGET, LogCat.NET)
+                    Auditor.debug(tag, "Ошибка предзагрузки расписания для виджета по имени: ${e.message}")
                 }
             }
         }
@@ -416,7 +425,7 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
                 prefs[stringPreferencesKey(INSTITUTION_ID_KEY)] = institutionId
                 prefs[stringPreferencesKey(SEARCH_KEY)] = Json.encodeToString(effectiveSearch)
                 prefs[intPreferencesKey(DAY_INDEX_KEY)] = 0
-                prefs[stringPreferencesKey(LAST_DATE_KEY)] = app.what.foundation.utils.currentLocalDate().toString()
+                prefs[stringPreferencesKey(LAST_DATE_KEY)] = currentLocalDate().toString()
                 prefs[longPreferencesKey("theme_timestamp")] = System.currentTimeMillis()
             }
             try {
@@ -428,13 +437,13 @@ class ScheduleWidgetConfigurationActivity : ComponentActivity() {
 
             // Явно посылаем broadcast ресиверу виджета, чтобы система Android гарантированно вызвала onUpdate
             val updateIntent = Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE).apply {
-                component = android.content.ComponentName(applicationContext, ScheduleWidgetReceiver::class.java)
+                component = ComponentName(applicationContext, ScheduleWidgetReceiver::class.java)
                 putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, intArrayOf(appWidgetId))
             }
             applicationContext.sendBroadcast(updateIntent)
         } catch (e: Exception) {
-            val tag = app.what.foundation.utils.buildTag(app.what.foundation.utils.LogScope.WIDGET, app.what.foundation.utils.LogCat.UI)
-            app.what.foundation.services.AppLogger.Auditor.err(tag, "Ошибка обновления виджета", e)
+            val tag = buildTag(LogScope.WIDGET, LogCat.UI)
+            Auditor.err(tag, "Ошибка обновления виджета", e)
         }
 
         // Возвращаем Intent с EXTRA_APPWIDGET_ID — обязательно по Android API

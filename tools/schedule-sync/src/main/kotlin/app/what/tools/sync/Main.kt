@@ -1,6 +1,7 @@
 package app.what.tools.sync
 
 import app.what.schedule.core.models.DayScheduleDto
+import app.what.schedule.core.models.LessonDto
 import app.what.schedule.core.models.GroupDto
 import app.what.schedule.core.models.LessonDto
 import app.what.schedule.core.models.LessonStateDto
@@ -20,9 +21,12 @@ import com.fleeksoft.ksoup.Ksoup
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.HttpTimeout
+import io.ktor.client.plugins.defaultRequest
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.request.get
+import io.ktor.client.request.header
 import io.ktor.client.statement.bodyAsText
+import io.ktor.http.HttpHeaders
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -79,8 +83,13 @@ fun main(args: Array<String>) = runBlocking(Dispatchers.IO) {
     val client = HttpClient(CIO) {
         install(HttpTimeout) {
             requestTimeoutMillis = 60_000
-            connectTimeoutMillis = 30_000
+            connectTimeoutMillis = 60_000
             socketTimeoutMillis = 60_000
+        }
+        defaultRequest {
+            header(HttpHeaders.UserAgent, "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36")
+            header(HttpHeaders.Accept, "*/*; application/json")
+            header(HttpHeaders.AcceptLanguage, "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7")
         }
         install(ContentNegotiation) {
             json(Json {
@@ -383,7 +392,7 @@ suspend fun syncIubip(client: HttpClient, rootDir: File, failOnError: Boolean = 
         var teacherCount = 0
         teachers.forEach { teacher ->
             val safeId = sanitizeFileName(teacher.id.ifEmpty { teacher.name })
-            val allDays = mutableMapOf<LocalDate, MutableList<app.what.schedule.core.models.LessonDto>>()
+            val allDays = mutableMapOf<LocalDate, MutableList<LessonDto>>()
             schedules.values.forEach { days ->
                 days.forEach { day ->
                     val teacherLessons = day.lessons.filter { lesson ->

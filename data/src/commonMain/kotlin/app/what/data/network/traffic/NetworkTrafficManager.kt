@@ -16,7 +16,7 @@ import kotlinx.serialization.json.Json
 interface NetworkTrafficManager {
     val stats: StateFlow<NetworkTrafficStats>
     fun record(category: TrafficCategory, transport: NetworkTransportType, sentBytes: Long, receivedBytes: Long)
-    fun resetStats()
+    fun resetStats(categories: Set<TrafficCategory>? = null)
 }
 
 class NetworkTrafficManagerImpl(
@@ -91,9 +91,17 @@ class NetworkTrafficManagerImpl(
         pendingPersist.value = currentTimeMillis()
     }
 
-    override fun resetStats() {
-        val fresh = NetworkTrafficStats(trackingStartedAt = currentTimeMillis())
-        _stats.value = fresh
+    override fun resetStats(categories: Set<TrafficCategory>?) {
+        if (categories == null || categories.isEmpty() || categories.size == TrafficCategory.entries.size) {
+            val fresh = NetworkTrafficStats(trackingStartedAt = currentTimeMillis())
+            _stats.value = fresh
+        } else {
+            _stats.update { current ->
+                val updatedMap = current.categories.toMutableMap()
+                categories.forEach { updatedMap.remove(it) }
+                current.copy(categories = updatedMap)
+            }
+        }
         persistCurrentStats()
     }
 }

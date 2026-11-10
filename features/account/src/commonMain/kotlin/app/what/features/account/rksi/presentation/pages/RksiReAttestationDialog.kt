@@ -1,4 +1,5 @@
 package app.what.schedule.features.insts.rksi.presentation.pages
+import androidx.compose.material3.MaterialTheme.typography
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -74,7 +75,7 @@ internal fun RksiReAttestationDialog(
             }
             Text(
                 "Переаттестация",
-                style = androidx.compose.material3.MaterialTheme.typography.titleLarge,
+                style = typography.titleLarge,
                 fontWeight = FontWeight.Bold,
                 color = colorScheme.onSurface,
                 modifier = Modifier.padding(start = 8.dp)

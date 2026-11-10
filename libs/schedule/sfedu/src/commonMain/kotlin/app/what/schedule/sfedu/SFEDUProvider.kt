@@ -5,6 +5,7 @@ import app.what.schedule.core.clients.NewsClient
 import app.what.schedule.core.clients.ScheduleClient
 import app.what.schedule.core.models.InstitutionMetaDto
 import app.what.schedule.core.models.SourceTypeDto
+import app.what.schedule.sfedu.grade.SfeduGradeClient
 import io.ktor.client.HttpClient
 
 class SFEDUProvider(
@@ -32,7 +33,7 @@ class SFEDUProvider(
         SFEDUNewsClient(client, newsBaseUrl, log)
     }
 
-    val gradeClient: app.what.schedule.sfedu.grade.SfeduGradeClient by lazy {
-        app.what.schedule.sfedu.grade.SfeduGradeClient(client)
+    val gradeClient: SfeduGradeClient by lazy {
+        SfeduGradeClient(client)
     }
 }

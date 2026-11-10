@@ -1,4 +1,5 @@
 package app.what.schedule.features.insts.dgtu.presentation.pages
+import androidx.compose.foundation.layout.PaddingValues
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -118,7 +119,7 @@ fun DgtuZachBookPage(
                     LazyColumn(
                         modifier = Modifier.fillMaxSize(),
                         verticalArrangement = Arrangement.spacedBy(16.dp),
-                        contentPadding = androidx.compose.foundation.layout.PaddingValues(vertical = 16.dp)
+                        contentPadding = PaddingValues(vertical = 16.dp)
                     ) {
                         // Student Info Card
                         item {
@@ -356,7 +357,7 @@ fun DgtuZachBookPage(
                                     LazyRow(
                                         modifier = Modifier.fillMaxWidth(),
                                         horizontalArrangement = Arrangement.spacedBy(8.dp),
-                                        contentPadding = androidx.compose.foundation.layout.PaddingValues(
+                                        contentPadding = PaddingValues(
                                             horizontal = 16.dp
                                         )
                                     ) {

@@ -48,7 +48,17 @@ jobs:
       - name: Test ${{ matrix.name }} Parser
         id: test_step
         run: |
-          ./gradlew :tools:schedule-sync:run --args="--target ${{ matrix.target }} --fail-on-error" --stacktrace
+          for i in 1 2 3; do
+            echo "Attempt $i of 3..."
+            ./gradlew :tools:schedule-sync:run --args="--target ${{ matrix.target }} --fail-on-error" --stacktrace && break || {
+              if [ $i -eq 3 ]; then
+                echo "All 3 attempts failed."
+                exit 1
+              fi
+              echo "Attempt $i failed, waiting 15s before retry..."
+              sleep 15
+            }
+          done
 
       - name: Record failure
         if: failure()

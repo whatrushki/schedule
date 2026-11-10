@@ -1,4 +1,5 @@
 package app.what.schedule.features.insts.rksi.domain.models
+import app.what.domain.models.NewListItem
 
 import app.what.foundation.data.RemoteState
 import app.what.schedule.core.models.AccountProfileDto
@@ -43,6 +44,6 @@ data class RksiState(
     val saveProfileSuccess: Boolean? = null,
 
     val newsFetchState: RemoteState = RemoteState.Idle,
-    val news: List<app.what.domain.models.NewListItem> = emptyList()
+    val news: List<NewListItem> = emptyList()
 )
 

@@ -5,6 +5,8 @@ plugins {
 kotlin {
     sourceSets {
         commonMain.dependencies {
+            implementation(libs.foundation.delivery)
+            implementation(libs.foundation.auth)
             implementation(project(":features:onboarding"))
         }
     }

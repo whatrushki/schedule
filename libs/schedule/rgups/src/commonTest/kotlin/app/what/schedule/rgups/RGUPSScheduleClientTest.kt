@@ -1,4 +1,6 @@
 package app.what.schedule.rgups
+import app.what.schedule.core.models.LessonStateDto
+import app.what.schedule.core.models.NewContentBlockDto
 
 import app.what.schedule.core.models.LessonTypeDto
 import kotlinx.datetime.LocalDate
@@ -169,7 +171,7 @@ class RGUPSScheduleClientTest {
         assertEquals(1, monLessons.size)
         assertEquals(4, monLessons[0].number)
         assertEquals("Управление эксплуатационной работой (практика)", monLessons[0].subject)
-        assertEquals(app.what.schedule.core.models.LessonStateDto.CHANGED, monLessons[0].state)
+        assertEquals(LessonStateDto.CHANGED, monLessons[0].state)
         assertEquals("Мусиенко Н.Н.", monLessons[0].otUnits[0].teacher)
 
         // Tuesday: 1 lesson with 2 otUnits (subgroups [1] and [2] stripped) with state CHANGED
@@ -177,7 +179,7 @@ class RGUPSScheduleClientTest {
         assertEquals(1, tueLessons.size)
         assertEquals(3, tueLessons[0].number)
         assertEquals("Безопасность жизнедеятельности (лабораторная)", tueLessons[0].subject)
-        assertEquals(app.what.schedule.core.models.LessonStateDto.CHANGED, tueLessons[0].state)
+        assertEquals(LessonStateDto.CHANGED, tueLessons[0].state)
         assertEquals(2, tueLessons[0].otUnits.size)
         assertEquals("Порческо А.А.", tueLessons[0].otUnits[0].teacher)
         assertEquals("Воробинская Л.И.", tueLessons[0].otUnits[1].teacher)
@@ -187,7 +189,7 @@ class RGUPSScheduleClientTest {
         assertEquals(1, wedLessons.size)
         assertEquals(4, wedLessons[0].number)
         assertEquals("Управление грузовой и коммерческой работой (практика)", wedLessons[0].subject)
-        assertEquals(app.what.schedule.core.models.LessonStateDto.REMOVED, wedLessons[0].state)
+        assertEquals(LessonStateDto.REMOVED, wedLessons[0].state)
         assertEquals("Пасечная Е.В.", wedLessons[0].otUnits[0].teacher)
     }
 
@@ -212,14 +214,14 @@ class RGUPSScheduleClientTest {
         val client = RGUPSNewsClient()
         val detail = client.parseNewsDetail(detailHtml, "https://www.rgups.ru/news/test/")
         assertEquals(4, detail.contentBlocks.size)
-        assertTrue(detail.contentBlocks[0] is app.what.schedule.core.models.NewContentBlockDto.Text)
-        assertTrue(detail.contentBlocks[1] is app.what.schedule.core.models.NewContentBlockDto.UnsortedList)
-        val listBlock = detail.contentBlocks[1] as app.what.schedule.core.models.NewContentBlockDto.UnsortedList
+        assertTrue(detail.contentBlocks[0] is NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[1] is NewContentBlockDto.UnsortedList)
+        val listBlock = detail.contentBlocks[1] as NewContentBlockDto.UnsortedList
         assertEquals(2, listBlock.items.size)
         assertEquals("Даниил Сапухин", listBlock.items[0])
         assertEquals("Савелий Шаров", listBlock.items[1])
-        assertTrue(detail.contentBlocks[2] is app.what.schedule.core.models.NewContentBlockDto.Text)
-        assertTrue(detail.contentBlocks[3] is app.what.schedule.core.models.NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[2] is NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[3] is NewContentBlockDto.Text)
     }
 
     @Test
@@ -246,23 +248,23 @@ class RGUPSScheduleClientTest {
         // Verify empty spacing paragraph was ignored
         // Expected blocks: Text(Начинается), Text(Цель), Text(Регистрация), Text(Призы), SortedList(4 items), Text(Контактное), Image
         assertEquals(7, detail.contentBlocks.size)
-        assertTrue(detail.contentBlocks[0] is app.what.schedule.core.models.NewContentBlockDto.Text)
-        assertTrue(detail.contentBlocks[1] is app.what.schedule.core.models.NewContentBlockDto.Text)
-        assertTrue(detail.contentBlocks[2] is app.what.schedule.core.models.NewContentBlockDto.Text)
-        assertTrue(detail.contentBlocks[3] is app.what.schedule.core.models.NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[0] is NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[1] is NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[2] is NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[3] is NewContentBlockDto.Text)
 
         // The 4 separate <p> items must be merged into 1 single SortedList
-        assertTrue(detail.contentBlocks[4] is app.what.schedule.core.models.NewContentBlockDto.SortedList)
-        val sortedList = detail.contentBlocks[4] as app.what.schedule.core.models.NewContentBlockDto.SortedList
+        assertTrue(detail.contentBlocks[4] is NewContentBlockDto.SortedList)
+        val sortedList = detail.contentBlocks[4] as NewContentBlockDto.SortedList
         assertEquals(4, sortedList.items.size)
         assertEquals("Денежные призы за 1 место в каждой номинации;", sortedList.items[0])
         assertEquals("Публикация лучших практик в сборнике;", sortedList.items[1])
         assertEquals("Дипломы для участников, призеров и победителей;", sortedList.items[2])
         assertEquals("Повышение квалификации с выдачей удостоверения.", sortedList.items[3])
 
-        assertTrue(detail.contentBlocks[5] is app.what.schedule.core.models.NewContentBlockDto.Text)
-        assertTrue(detail.contentBlocks[6] is app.what.schedule.core.models.NewContentBlockDto.Image)
-        val img = detail.contentBlocks[6] as app.what.schedule.core.models.NewContentBlockDto.Image
+        assertTrue(detail.contentBlocks[5] is NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[6] is NewContentBlockDto.Image)
+        val img = detail.contentBlocks[6] as NewContentBlockDto.Image
         assertEquals("https://www.rgups.ru/site/assets/files/237921/ped__konkurs_na_sait_page-0001-1.jpg", img.url)
     }
 
@@ -281,16 +283,16 @@ class RGUPSScheduleClientTest {
         val detail = client.parseNewsDetail(html, "https://www.rgups.ru/news/test/")
 
         assertEquals(4, detail.contentBlocks.size)
-        assertTrue(detail.contentBlocks[0] is app.what.schedule.core.models.NewContentBlockDto.Text)
-        assertTrue(detail.contentBlocks[1] is app.what.schedule.core.models.NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[0] is NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[1] is NewContentBlockDto.Text)
 
         // Header with <a> link must be preserved as Text with absolute URL so the link is clickable
-        assertTrue(detail.contentBlocks[2] is app.what.schedule.core.models.NewContentBlockDto.Text)
-        val headerText = (detail.contentBlocks[2] as app.what.schedule.core.models.NewContentBlockDto.Text).html
+        assertTrue(detail.contentBlocks[2] is NewContentBlockDto.Text)
+        val headerText = (detail.contentBlocks[2] as NewContentBlockDto.Text).html
         assertTrue(headerText.contains("https://www.rgups.ru/university/struktura-i-organy-upravleniia-1632/"))
         assertTrue(headerText.contains("Ознакомиться с кружком по ссылке"))
 
-        assertTrue(detail.contentBlocks[3] is app.what.schedule.core.models.NewContentBlockDto.Image)
+        assertTrue(detail.contentBlocks[3] is NewContentBlockDto.Image)
     }
 
     @Test
@@ -331,8 +333,8 @@ class RGUPSScheduleClientTest {
         val detail = client.parseNewsDetail(html, "https://www.rgups.ru/news/test/")
 
         assertEquals(1, detail.contentBlocks.size)
-        assertTrue(detail.contentBlocks[0] is app.what.schedule.core.models.NewContentBlockDto.Text)
-        val text = (detail.contentBlocks[0] as app.what.schedule.core.models.NewContentBlockDto.Text).html
+        assertTrue(detail.contentBlocks[0] is NewContentBlockDto.Text)
+        val text = (detail.contentBlocks[0] as NewContentBlockDto.Text).html
         assertTrue(text.startsWith("24.09.26 г."))
     }
 }

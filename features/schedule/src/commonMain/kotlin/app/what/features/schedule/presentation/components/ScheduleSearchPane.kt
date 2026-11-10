@@ -69,8 +69,18 @@ fun ScheduleSearchPane(
     val searches = state.value.scheduleSearches
     val favoriteList = remember(searches) { searches.filter { it.favorite } }
     val list = remember(selectedTab, searches, query) {
+        val q = query.trim().lowercase()
         (if (selectedTab == 0) searches.filterIsInstance<ScheduleSearch.Group>() else searches.filterIsInstance<ScheduleSearch.Teacher>())
-            .filter { !it.favorite && it.name.lowercase().contains(query.lowercase()) }
+            .filter { item ->
+                if (item.favorite) return@filter false
+                if (q.isEmpty()) return@filter true
+                val nameLower = item.name.lowercase()
+                if (nameLower.contains(q)) return@filter true
+                if (item is ScheduleSearch.Teacher && item.name.isNotBlank() && item.name.all { ch -> ch == '-' || ch == '—' || ch == '–' }) {
+                    if ("вакансия".contains(q) || "вакант".contains(q) || q.all { ch -> ch == '-' || ch == '—' || ch == '–' }) return@filter true
+                }
+                false
+            }
             .sortedBy { it.name }
     }
     val shimmer = rememberShimmer()
@@ -207,8 +217,10 @@ fun LazyGridScope.searchBlocks(
             if (favorite) "fav_${type}_$idPart" else "${type}_$idPart"
         }
     ) { it ->
+        val isVacancy = it is ScheduleSearch.Teacher && it.name.isNotBlank() && it.name.all { ch -> ch == '-' || ch == '—' || ch == '–' }
+        val displayName = if (isVacancy) "Вакансия (${it.name})" else it.name
         SearchItemChip(
-            name = it.name,
+            name = displayName,
             selected = state == it.name,
             favorite = favorite,
             modifier = Modifier

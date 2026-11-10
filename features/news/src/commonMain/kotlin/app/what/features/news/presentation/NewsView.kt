@@ -14,6 +14,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import org.koin.compose.koinInject
+import app.what.data.ads.YandexAdsConfig
+import app.what.data.ads.YandexBannerAd
+import app.what.schedule.data.local.settings.AppValues
+import app.what.schedule.data.local.settings.SupportAdsLevel
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
@@ -67,6 +74,8 @@ fun NewsView(
 
     val columns = if (isWide) GridCells.Adaptive(240.dp) else GridCells.Fixed(1)
     val displayNews = remember(state.news) { state.news.distinctBy { it.id } }
+    val appValues = koinInject<AppValues>()
+    val adsLevel by appValues.supportAdsLevel.collect()
 
     BoxWithConstraints(modifier = modifier) {
         val topSpacing = if (isWide) 0.dp else (maxHeight * 0.15f).coerceIn(36.dp, 130.dp)
@@ -119,21 +128,52 @@ fun NewsView(
                     }
                 }
 
-                else -> items(displayNews, key = { it.id }) {
-                    NewListItemView(
-                        modifier = Modifier.animateItem(),
-                        selected = selectedNewId == it.id,
-                        item = it,
-                        isWide = isWide,
-                        onClick = {
-                            Analytics.logNewsOpen(it.id, it.url, it.title)
-                            if (isWide) {
-                                onSelectNew?.invoke(it)
-                            } else {
-                                listener(NewsEvent.OnNewEnterClicked(it))
+                else -> {
+                    val currentLevel = adsLevel ?: SupportAdsLevel.NORMAL
+                    val chunkSize = when (currentLevel) {
+                        SupportAdsLevel.MAX -> 4
+                        SupportAdsLevel.NORMAL -> 8
+                        SupportAdsLevel.OFF -> Int.MAX_VALUE
+                    }
+                    val chunks = displayNews.chunked(chunkSize)
+                    chunks.forEachIndexed { chunkIndex, chunk ->
+                        items(chunk, key = { it.id }) {
+                            NewListItemView(
+                                modifier = Modifier.animateItem(),
+                                selected = selectedNewId == it.id,
+                                item = it,
+                                isWide = isWide,
+                                onClick = {
+                                    Analytics.logNewsOpen(it.id, it.url, it.title)
+                                    if (isWide) {
+                                        onSelectNew?.invoke(it)
+                                    } else {
+                                        listener(NewsEvent.OnNewEnterClicked(it))
+                                    }
+                                }
+                            )
+                        }
+
+                        if (currentLevel != SupportAdsLevel.OFF && (chunkIndex < chunks.size - 1 || chunk.size == chunkSize)) {
+                            item(key = "news_ad_${currentLevel.name}_$chunkIndex", span = { GridItemSpan(maxLineSpan) }) {
+                                Box(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(vertical = 12.dp),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Box(
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .clip(shapes.large),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        YandexBannerAd(adUnitId = YandexAdsConfig.NEWS_BANNER_ID)
+                                    }
+                                }
                             }
                         }
-                    )
+                    }
                 }
             }
         }

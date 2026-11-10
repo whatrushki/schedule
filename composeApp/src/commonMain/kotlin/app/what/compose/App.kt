@@ -1,4 +1,7 @@
 package app.what.compose
+import app.what.foundation.utils.buildTag
+import app.what.foundation.utils.LogScope
+import app.what.foundation.utils.LogCat
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -28,7 +31,7 @@ fun App(
     val navigator = rememberHostNavigator()
     val settings = koinInject<AppValues>()
 
-    val navTag = app.what.foundation.utils.buildTag(app.what.foundation.utils.LogScope.CORE, app.what.foundation.utils.LogCat.NAV)
+    val navTag = buildTag(LogScope.CORE, LogCat.NAV)
 
     LaunchedEffect(Unit) {
         navigator.c.addOnDestinationChangedListener { _, destination, _ ->

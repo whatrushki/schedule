@@ -1,0 +1,22 @@
+name = "what-schedule-bot"
+main = "src/index.ts"
+compatibility_date = "2026-02-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+ENVIRONMENT = "production"
+TELEGRAM_BOT_TOKEN = "8703598461:AAFXd-eF2T_2Qey5jPJ3mgWtxayNQkiHfm8"
+OWNER_CHAT_ID = "1715480053"
+SCHEDULE_CACHE_BASE_URL = "https://whatrushki.github.io/schedule"
+DELIVERY_RAW_URL = "https://raw.githubusercontent.com/whatrushki/delivery/main/notifications/active.json"
+SURVEY_SUBMIT_URL = "https://what-assistant.whatrushki-tech.workers.dev/api/surveys/submit"
+
+# Cron triggers for background schedule and replacement checks
+# Runs every 15 minutes between 06:00 and 23:00 MSK (03:00 - 20:00 UTC)
+[triggers]
+crons = ["*/15 3-20 * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "what-schedule-bot-db"
+database_id = "ef0d4215-f564-476a-8977-cf345e37896c"

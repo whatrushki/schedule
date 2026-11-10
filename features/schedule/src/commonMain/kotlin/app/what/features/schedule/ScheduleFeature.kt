@@ -1,4 +1,7 @@
 package app.what.schedule.features.schedule
+import app.what.foundation.utils.buildTag
+import app.what.foundation.utils.LogScope
+import app.what.foundation.utils.LogCat
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -23,7 +26,7 @@ class ScheduleFeature(
     override val controller: ScheduleController by inject()
     
     init {
-        val navTag = app.what.foundation.utils.buildTag(app.what.foundation.utils.LogScope.CORE, app.what.foundation.utils.LogCat.NAV)
+        val navTag = buildTag(LogScope.CORE, LogCat.NAV)
         Auditor.debug(navTag, "ScheduleFeature init: data=$data, search=${data.search}")
         val search = data.search
         if (search != null)
@@ -32,7 +35,7 @@ class ScheduleFeature(
     
     @Composable
     override fun content(modifier: Modifier) {
-        val navTag = app.what.foundation.utils.buildTag(app.what.foundation.utils.LogScope.CORE, app.what.foundation.utils.LogCat.NAV)
+        val navTag = buildTag(LogScope.CORE, LogCat.NAV)
         Auditor.debug(navTag, "ScheduleFeature.content() composed! modifier=$modifier, data=$data")
         Column(
             modifier.fillMaxSize()

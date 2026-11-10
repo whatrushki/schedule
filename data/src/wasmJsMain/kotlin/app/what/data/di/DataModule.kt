@@ -1,30 +1,59 @@
 package app.what.data.di
 
+import app.what.data.adapters.AdaptedScheduleService
 import app.what.data.libs.GoogleDriveParser
+import app.what.data.managers.CacheStorageManager
+import app.what.data.managers.CacheStorageManagerImpl
+import app.what.data.managers.NoOpPlatformFileStorageCleaner
+import app.what.data.managers.PlatformFileStorageCleaner
+import app.what.data.network.traffic.DefaultNetworkTypeProvider
+import app.what.data.network.traffic.NetworkTrafficManager
+import app.what.data.network.traffic.NetworkTrafficManagerImpl
+import app.what.data.network.traffic.NetworkTypeProvider
+import app.what.data.network.traffic.TrafficTrackerPlugin
+import app.what.data.remote.CloudScheduleClient
 import app.what.data.repositories.NewsRepositoryImpl
+import app.what.data.repositories.ScheduleRepositoryImpl
+import app.what.domain.constants.AppConstants
+import app.what.domain.models.MetaInfo
 import app.what.domain.repositories.NewsRepository
 import app.what.domain.repositories.ScheduleRepository
+import app.what.domain.services.NetworkConnectivity
 import app.what.foundation.data.settings.KeyValueStorage
 import app.what.foundation.data.settings.PreferenceStorage
 import app.what.foundation.data.settings.WasmKeyValueStorage
+import app.what.foundation.network.monitor.NetworkMonitorPlugin
 import app.what.foundation.services.AppLogger.Companion.Auditor
+import app.what.foundation.services.auto_update.AppUpdateManager
+import app.what.foundation.services.auto_update.GitHubUpdateService
+import app.what.foundation.services.auto_update.UpdateConfig
+import app.what.foundation.services.auto_update.WebUpdateManager
 import app.what.foundation.utils.AppUtils
 import app.what.foundation.utils.LogCat
 import app.what.foundation.utils.LogScope
 import app.what.foundation.utils.buildTag
 import app.what.schedule.core.cache.FileCache
 import app.what.schedule.core.cache.InMemoryFileCache
+import app.what.schedule.data.local.database.AppDatabaseSource
+import app.what.schedule.data.local.database.InMemoryAppDatabaseSource
 import app.what.schedule.data.local.settings.AppValues
+import app.what.schedule.data.remote.api.Institution
 import app.what.schedule.data.remote.api.InstitutionManager
+import app.what.schedule.data.remote.api.ScheduleService
+import app.what.schedule.data.remote.api.insts
 import app.what.schedule.dgtu.DGTUAccountClient
+import app.what.schedule.rksi.RKSIAccountClient
+import app.what.schedule.sfedu.grade.SfeduGradeClient
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.logging.Logger
 import io.ktor.client.plugins.logging.Logging
-import io.ktor.http.encodeURLPathPart
+import io.ktor.client.request.HttpRequestPipeline
+import io.ktor.http.Url
 import io.ktor.http.takeFrom
 import io.ktor.serialization.kotlinx.json.json
+import kotlinx.browser.window
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -32,22 +61,6 @@ import kotlinx.serialization.json.Json
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.bind
 import org.koin.dsl.module
-
-import app.what.schedule.data.local.database.AppDatabaseSource
-import app.what.schedule.data.local.database.InMemoryAppDatabaseSource
-import app.what.data.repositories.ScheduleRepositoryImpl
-
-import app.what.data.adapters.AdaptedScheduleService
-import app.what.data.remote.CloudScheduleClient
-import app.what.domain.models.MetaInfo
-import app.what.foundation.services.auto_update.AppUpdateManager
-import app.what.foundation.services.auto_update.UpdateConfig
-import app.what.foundation.services.auto_update.GitHubUpdateService
-import app.what.foundation.services.auto_update.WebUpdateManager
-import app.what.schedule.data.remote.api.Institution
-import app.what.schedule.data.remote.api.NewsService
-import app.what.schedule.data.remote.api.ScheduleService
-import app.what.schedule.data.remote.api.insts
 
 class WebInstitutionFactory(
     private val base: Institution.Factory,
@@ -58,8 +71,8 @@ class WebInstitutionFactory(
     override fun create(): Institution {
         val baseInst = base.create()
         val customUrls = try {
-            val origin = kotlinx.browser.window.location.origin
-            val path = kotlinx.browser.window.location.pathname.trimEnd('/')
+            val origin = window.location.origin
+            val path = window.location.pathname.trimEnd('/')
             listOf("$origin$path/schedule/${metadata.id}")
         } catch (_: Exception) {
             emptyList()
@@ -91,18 +104,18 @@ val dataModule = module {
 
     single<KeyValueStorage> { WasmKeyValueStorage() }
     single { AppValues(get<KeyValueStorage>()) } bind PreferenceStorage::class
-    single<app.what.data.network.traffic.NetworkTypeProvider> {
-        app.what.data.network.traffic.DefaultNetworkTypeProvider()
+    single<NetworkTypeProvider> {
+        DefaultNetworkTypeProvider()
     }
-    single<app.what.data.network.traffic.NetworkTrafficManager> {
-        app.what.data.network.traffic.NetworkTrafficManagerImpl(get(), get())
+    single<NetworkTrafficManager> {
+        NetworkTrafficManagerImpl(get(), get())
     }
 
     singleOf(::GoogleDriveParser)
     single<FileCache> { InMemoryFileCache() }
     single { DGTUAccountClient(get()) }
-    single { app.what.schedule.rksi.RKSIAccountClient(get()) }
-    single { app.what.schedule.sfedu.grade.SfeduGradeClient(get()) }
+    single { RKSIAccountClient(get()) }
+    single { SfeduGradeClient(get()) }
     
     single {
         val httpClient: HttpClient = get()
@@ -118,10 +131,10 @@ val dataModule = module {
             config = UpdateConfig(
                 githubOwner = "whatrushki",
                 githubRepo = "schedule",
-                currentVersion = app.what.domain.constants.AppConstants.VERSION_NAME
+                currentVersion = AppConstants.VERSION_NAME
             ),
             onReload = {
-                kotlinx.browser.window.location.reload()
+                window.location.reload()
             },
             scope = get()
         )
@@ -129,11 +142,11 @@ val dataModule = module {
 
     single<AppDatabaseSource> { InMemoryAppDatabaseSource() }
 
-    single<app.what.domain.services.NetworkConnectivity> {
-        object : app.what.domain.services.NetworkConnectivity {
+    single<NetworkConnectivity> {
+        object : NetworkConnectivity {
             override fun isConnected(): Boolean {
                 return try {
-                    kotlinx.browser.window.navigator.onLine
+                    window.navigator.onLine
                 } catch (_: Exception) {
                     true
                 }
@@ -150,7 +163,6 @@ val dataModule = module {
     }
 
     single {
-        val proxyBase = "https://schedule.whatrushki-tech.workers.dev/?url="
         HttpClient {
             install(Logging) {
                 logger = object : Logger {
@@ -160,11 +172,11 @@ val dataModule = module {
                 }
             }
 
-            install(app.what.foundation.network.monitor.NetworkMonitorPlugin)
+            install(NetworkMonitorPlugin)
 
-            val trafficManager = get<app.what.data.network.traffic.NetworkTrafficManager>()
-            val networkTypeProvider = get<app.what.data.network.traffic.NetworkTypeProvider>()
-            install(app.what.data.network.traffic.TrafficTrackerPlugin) {
+            val trafficManager = get<NetworkTrafficManager>()
+            val networkTypeProvider = get<NetworkTypeProvider>()
+            install(TrafficTrackerPlugin) {
                 this.trafficManager = trafficManager
                 this.networkTypeProvider = networkTypeProvider
             }
@@ -187,7 +199,7 @@ val dataModule = module {
                 socketTimeoutMillis = 15 * 1000
             }
         }.apply {
-            requestPipeline.intercept(io.ktor.client.request.HttpRequestPipeline.State) {
+            requestPipeline.intercept(HttpRequestPipeline.State) {
                 val cookie = context.headers["Cookie"]
                 if (cookie != null) {
                     context.headers.remove("Cookie")
@@ -212,9 +224,9 @@ val dataModule = module {
         }
     }
 
-    single<app.what.data.managers.PlatformFileStorageCleaner> { app.what.data.managers.NoOpPlatformFileStorageCleaner() }
-    single<app.what.data.managers.CacheStorageManager> {
-        app.what.data.managers.CacheStorageManagerImpl(
+    single<PlatformFileStorageCleaner> { NoOpPlatformFileStorageCleaner() }
+    single<CacheStorageManager> {
+        CacheStorageManagerImpl(
             scheduleRepository = get(),
             appValues = get(),
             platformCleaner = get(),
@@ -225,12 +237,12 @@ val dataModule = module {
 
 private fun shouldBypassProxy(url: String): Boolean {
     val host = try {
-        io.ktor.http.Url(url).host.lowercase()
+        Url(url).host.lowercase()
     } catch (_: Exception) {
         return false
     }
     val originHost = try {
-        kotlinx.browser.window.location.hostname.lowercase()
+        window.location.hostname.lowercase()
     } catch (_: Exception) {
         ""
     }

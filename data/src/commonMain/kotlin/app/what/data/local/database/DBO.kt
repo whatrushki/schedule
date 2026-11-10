@@ -1,4 +1,5 @@
 package app.what.schedule.data.local.database
+import app.what.schedule.data.remote.utils.currentLocalDate
 
 import androidx.room.Embedded
 import androidx.room.Entity
@@ -23,7 +24,7 @@ data class RequestDBO(
     val institutionId: String,
     val query: String,
     val lastModified: LocalDateTime,
-    val createdAt: LocalDate = app.what.schedule.data.remote.utils.currentLocalDate(),
+    val createdAt: LocalDate = currentLocalDate(),
 )
 
 @Entity(

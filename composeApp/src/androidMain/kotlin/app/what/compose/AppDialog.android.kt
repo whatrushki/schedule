@@ -9,7 +9,7 @@ actual fun platformDialogProperties(
     cancellable: Boolean
 ): DialogProperties = DialogProperties(
     usePlatformDefaultWidth = !full,
-    decorFitsSystemWindows = !full,
+    decorFitsSystemWindows = false,
     dismissOnBackPress = cancellable,
     dismissOnClickOutside = cancellable
 )

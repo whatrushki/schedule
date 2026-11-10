@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
@@ -35,7 +37,17 @@
             android:name=".ScheduleActivity"
             android:exported="true"
             android:enabled="true"
-            android:theme="@style/Theme.WHATSchedule" />
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.WHATSchedule">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="app.what.auth"
+                    android:host="callback" />
+            </intent-filter>
+        </activity>
 
         <!-- Основной / Тёмный алиас (дефолтная иконка) -->
         <activity-alias

@@ -58,6 +58,11 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
+
       - name: Determine Sync Target
         id: determine_target
         run: |
@@ -97,4 +102,10 @@ jobs:
           publish_branch: gh-pages
           keep_files: true
           commit_message: "[CI] Update schedule data ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+
+      - name: Trigger Bot Schedule Pusher
+        run: |
+          curl -s -X POST "https://what-schedule-bot.whatrushki-tech.workers.dev/api/cron/run" \
+            -H "User-Agent: GitHub-Actions-Schedule-Sync" || true
+
 

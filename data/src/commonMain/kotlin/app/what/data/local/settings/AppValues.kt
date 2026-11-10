@@ -38,6 +38,13 @@ enum class NotificationPeriod(val hours: Int, override val displayName: String) 
 }
 
 @Serializable
+enum class SupportAdsLevel(override val displayName: String, val description: String) : Named {
+    OFF("Выключена", "Реклама полностью отключена"),
+    NORMAL("Обычная", "Стандартная поддержка автора"),
+    MAX("Максимальная", "Максимальная помощь проекту")
+}
+
+@Serializable
 enum class SubgroupPreference(val value: Int?, override val displayName: String) : Named {
     All(null, "Все"),
     First(1, "1 подгруппа"),
@@ -167,6 +174,11 @@ class AppValues(
         "last_notified_replacements_hash", "", String.serializer()
     )
     
+    val supportAdsLevel = createValue(
+        "support_ads_level", SupportAdsLevel.NORMAL, SupportAdsLevel.serializer(),
+        "Поддержка автора", "Уровень показа рекламы для поддержки проекта"
+    )
+
     val thePolicy = createValue(
         "the_policy", null, String.serializer(),
         "Политика конфиденциальности", "Ознакомлены с политикой и условиями пользования"

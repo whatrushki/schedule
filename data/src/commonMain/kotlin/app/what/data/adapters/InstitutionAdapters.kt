@@ -14,6 +14,9 @@ import app.what.foundation.utils.LogScope
 import app.what.foundation.utils.buildTag
 import app.what.schedule.core.clients.NewsClient
 import app.what.schedule.core.clients.ScheduleClient
+import app.what.schedule.core.models.DayScheduleDto
+import app.what.schedule.core.models.LessonStateDto
+
 import app.what.schedule.data.remote.api.AdditionalData
 import app.what.schedule.data.remote.api.NewsService
 import app.what.schedule.data.remote.api.ScheduleService
@@ -107,7 +110,7 @@ class AdaptedScheduleService(
         }
     }
 
-    private fun List<app.what.schedule.core.models.DayScheduleDto>.mergeTeacherLessons(): List<app.what.schedule.core.models.DayScheduleDto> = map { day ->
+    private fun List<DayScheduleDto>.mergeTeacherLessons(): List<DayScheduleDto> = map { day ->
         val merged = day.lessons
             .groupBy { it.number to it.startTime }
             .map { (_, groupLessons) ->
@@ -116,8 +119,8 @@ class AdaptedScheduleService(
                 } else {
                     val first = groupLessons.first()
                     val state = when {
-                        groupLessons.any { it.state == app.what.schedule.core.models.LessonStateDto.CHANGED } -> app.what.schedule.core.models.LessonStateDto.CHANGED
-                        groupLessons.all { it.state == app.what.schedule.core.models.LessonStateDto.REMOVED } -> app.what.schedule.core.models.LessonStateDto.REMOVED
+                        groupLessons.any { it.state == LessonStateDto.CHANGED } -> LessonStateDto.CHANGED
+                        groupLessons.all { it.state == LessonStateDto.REMOVED } -> LessonStateDto.REMOVED
                         else -> first.state
                     }
                     val combinedUnits = groupLessons.flatMap { l ->

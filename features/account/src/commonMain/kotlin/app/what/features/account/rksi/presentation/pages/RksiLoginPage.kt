@@ -1,4 +1,5 @@
 package app.what.schedule.features.insts.rksi.presentation.pages
+import app.what.foundation.services.AppLogger.Companion.Auditor
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -46,7 +47,7 @@ internal fun RksiLoginScreen(
     state: State<RksiState>,
     listener: Listener<RksiEvent>
 ) {
-    app.what.foundation.services.AppLogger.Companion.Auditor.debug("RksiLoginScreen", "RksiLoginScreen composed! isLoggingIn=${state.value.isLoggingIn}")
+    Auditor.debug("RksiLoginScreen", "RksiLoginScreen composed! isLoggingIn=${state.value.isLoggingIn}")
     Column(
         modifier = Modifier
             .fillMaxSize()

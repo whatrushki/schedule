@@ -1,4 +1,5 @@
 package app.what.schedule.features.insts.sfedu.presentation.pages
+import androidx.compose.foundation.layout.PaddingValues
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -99,7 +100,7 @@ internal fun SfeduDisciplineDetailPage(
                 LazyColumn(
                     modifier = Modifier.fillMaxSize(),
                     verticalArrangement = Arrangement.spacedBy(12.dp),
-                    contentPadding = androidx.compose.foundation.layout.PaddingValues(16.dp)
+                    contentPadding = PaddingValues(16.dp)
                 ) {
                     // Discipline title
                     item {

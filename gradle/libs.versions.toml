@@ -1,5 +1,5 @@
 [versions]
-appVersion = "1.4.0"
+appVersion = "1.5.0"
 agp = "8.12.3"
 qrose = "1.1.2"
 rustoreBom = "2025.08.01"
@@ -33,6 +33,7 @@ room = "2.8.4"
 
 materialKolor = "2.0.2"
 kotlinx-serialization = "1.10.0"
+yandexMobileAds = "8.6.0"
 navigationCompose = "2.9.7"
 appcompatVersion = "1.7.1"
 materialVersion = "1.13.0"
@@ -42,10 +43,12 @@ workRuntimeKtx = "2.11.1"
 kotlinx-datetime = "0.6.2"
 okio = "3.10.2"
 compose-multiplatform = "1.8.2"
-composeFoundation = "1.1.6"
+composeFoundation = "1.1.15"
 
 [libraries]
+yandex-mobileads = { module = "com.yandex.android:mobileads", version.ref = "yandexMobileAds" }
 compose-foundation = { module = "app.what.foundation:compose-foundation", version.ref = "composeFoundation" }
+foundation-auth = { module = "app.what.foundation:foundation-auth", version.ref = "composeFoundation" }
 foundation-navigation = { module = "app.what.foundation:foundation-navigation", version.ref = "composeFoundation" }
 foundation-scraper = { module = "app.what.foundation:foundation-scraper", version.ref = "composeFoundation" }
 foundation-healthcheck = { module = "app.what.foundation:foundation-healthcheck", version.ref = "composeFoundation" }

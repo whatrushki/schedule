@@ -50,8 +50,8 @@ class CloudScheduleClientTest {
         val dummyLiveClient = object : ScheduleClient {
             override suspend fun getGroups(): List<GroupDto> = emptyList()
             override suspend fun getTeachers(): List<TeacherDto> = emptyList()
-            override suspend fun getGroupSchedule(group: String, showReplacements: Boolean): List<DayScheduleDto> = emptyList()
-            override suspend fun getTeacherSchedule(teacher: String, showReplacements: Boolean): List<DayScheduleDto> = emptyList()
+            override suspend fun getGroupSchedule(group: String, showReplacements: Boolean): List<DayScheduleDto> = throw RuntimeException("Live offline")
+            override suspend fun getTeacherSchedule(teacher: String, showReplacements: Boolean): List<DayScheduleDto> = throw RuntimeException("Live offline")
         }
 
         val service = AdaptedScheduleService(dummyLiveClient, cloudClient)

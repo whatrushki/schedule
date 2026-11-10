@@ -1,6 +1,11 @@
 package app.what.schedule
 
 import android.os.Build
+import android.Manifest
+import android.content.pm.PackageManager
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -31,6 +36,9 @@ import app.what.schedule.notifications.NotificationHelper
 import app.what.schedule.features.schedule.domain.ScheduleController
 import app.what.schedule.features.schedule.domain.models.ScheduleEvent
 import com.google.firebase.crashlytics.FirebaseCrashlytics
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
+import app.what.foundation.auth.client.WhatAuthManager
 import org.koin.android.ext.android.inject
 import org.koin.compose.koinInject
 import org.koin.java.KoinJavaComponent.getKoin
@@ -38,9 +46,10 @@ import org.koin.java.KoinJavaComponent.getKoin
 open class MainActivity : ComponentActivity() {
     private val crashlytics = FirebaseCrashlytics.getInstance()
     private val appValues: AppValues by inject()
+    private val whatAuthManager: WhatAuthManager by inject()
     
     private val notificationPermissionLauncher = registerForActivityResult(
-        androidx.activity.result.contract.ActivityResultContracts.RequestPermission()
+        ActivityResultContracts.RequestPermission()
     ) { isGranted ->
         if (!isGranted) {
             val tag = buildTag(LogScope.CORE, LogCat.STATE)
@@ -48,12 +57,12 @@ open class MainActivity : ComponentActivity() {
             appValues.enableReplacementNotifications.set(false)
             appValues.enableUniversityNotifications.set(false)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
-                !shouldShowRequestPermissionRationale(android.Manifest.permission.POST_NOTIFICATIONS)
+                !shouldShowRequestPermissionRationale(Manifest.permission.POST_NOTIFICATIONS)
             ) {
-                android.widget.Toast.makeText(
+                Toast.makeText(
                     this,
                     "Уведомления отключены в настройках устройства",
-                    android.widget.Toast.LENGTH_LONG
+                    Toast.LENGTH_LONG
                 ).show()
             }
         } else {
@@ -69,6 +78,10 @@ open class MainActivity : ComponentActivity() {
         Auditor.info(uiTag, "MainActivity создана")
         AppIconManager.updateIcon(this, appValues)
         handleNotificationIntent(intent)
+        handleAuthIntent(intent)
+        lifecycleScope.launch {
+            whatAuthManager.checkAndSyncSso(clientId = "what-schedule")
+        }
         
         enableEdgeToEdge()
         setContent {
@@ -96,8 +109,8 @@ open class MainActivity : ComponentActivity() {
                         settings.enableUniversityNotifications.observe()
                     ) { repl, univ -> repl == true || univ == true }
                         .collect { enabled ->
-                            if (enabled && checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
-                                notificationPermissionLauncher.launch(android.Manifest.permission.POST_NOTIFICATIONS)
+                            if (enabled && checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                                notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
                             }
                         }
                 }
@@ -131,6 +144,69 @@ open class MainActivity : ComponentActivity() {
         super.onNewIntent(intent)
         setIntent(intent)
         handleNotificationIntent(intent)
+        handleAuthIntent(intent)
+    }
+
+    private fun handleAuthIntent(intent: Intent?) {
+        val uri = intent?.data ?: return
+        if (uri.scheme == "app.what.auth" && uri.host == "callback") {
+            val code = uri.getQueryParameter("code")
+            val error = uri.getQueryParameter("error")
+            val errorDesc = uri.getQueryParameter("error_description")
+            val linked = uri.getQueryParameter("linked")
+            val merged = uri.getQueryParameter("merged")
+            val tag = buildTag(LogScope.CORE, LogCat.STATE)
+
+            if (code != null) {
+                lifecycleScope.launch {
+                    val result = whatAuthManager.handleAuthCallback(code)
+                    if (result.isSuccess) {
+                        val account = result.getOrNull()
+                        Auditor.info(tag, "WHAT ID авторизация успешна: ${account?.displayName}")
+                        Toast.makeText(
+                            this@MainActivity,
+                            "Вход выполнен: ${account?.displayName ?: "WHAT ID"}",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    } else {
+                        val ex = result.exceptionOrNull()
+                        Auditor.err(tag, "Ошибка входа WHAT ID: ${ex?.message}", ex)
+                        Toast.makeText(
+                            this@MainActivity,
+                            "Ошибка входа: ${ex?.message}",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
+            } else if (linked != null) {
+                Auditor.info(tag, "Сервис $linked успешно привязан")
+                Toast.makeText(
+                    this,
+                    "Сервис $linked успешно привязан",
+                    Toast.LENGTH_SHORT
+                ).show()
+                lifecycleScope.launch {
+                    whatAuthManager.fetchIdentities()
+                }
+            } else if (merged != null) {
+                Auditor.info(tag, "Аккаунты успешно объединены")
+                Toast.makeText(
+                    this,
+                    "Аккаунты успешно объединены",
+                    Toast.LENGTH_SHORT
+                ).show()
+                lifecycleScope.launch {
+                    whatAuthManager.fetchIdentities()
+                }
+            } else if (error != null) {
+                Auditor.warn(tag, "Вход WHAT ID отменен: $error ($errorDesc)")
+                Toast.makeText(
+                    this,
+                    "Авторизация отменена",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
     }
 
     private fun handleNotificationIntent(intent: Intent?) {

@@ -1,4 +1,6 @@
 package app.what.data.repositories
+import app.what.domain.repositories.ScheduleRepository
+import app.what.domain.services.NetworkConnectivity
 
 import app.what.domain.models.*
 import app.what.foundation.services.AppLogger.Companion.Auditor
@@ -15,15 +17,18 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.datetime.LocalDateTime
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 
 class ScheduleRepositoryImpl(
     private val db: AppDatabaseSource,
     private val institutionManager: InstitutionManager,
     private val scope: CoroutineScope,
-    private val connectivity: app.what.domain.services.NetworkConnectivity? = null
-) : app.what.domain.repositories.ScheduleRepository {
+    private val connectivity: NetworkConnectivity? = null
+) : ScheduleRepository {
     private val _scheduleUpdates = MutableSharedFlow<ScheduleSearch>(extraBufferCapacity = 1)
     override val scheduleUpdates: Flow<ScheduleSearch> = _scheduleUpdates.asSharedFlow()
+    private val saveMutex = Mutex()
 
     private val api
         get() = institutionManager.getSavedInstitution().orThrow { "No provider selected" }
@@ -124,7 +129,7 @@ class ScheduleRepositoryImpl(
                 for (g in fetched) {
                     val trimmedName = g.name.trim()
                     val id = if (g.id.trim().isNotEmpty()) g.id.trim() else trimmedName
-                    if (trimmedName.isNotEmpty() && seenNames.add(trimmedName) && seenIds.add(id)) {
+                    if (trimmedName.isNotEmpty() && trimmedName != "-" && seenNames.add(trimmedName) && seenIds.add(id)) {
                         uniqueFetched.add(g.copy(name = trimmedName, id = id, institutionId = targetFilialId))
                     }
                 }
@@ -253,12 +258,12 @@ class ScheduleRepositoryImpl(
         
         Auditor.debug(scheduleTag, "search_type=$searchType, search_id=${search.id}, institution=$targetFilialId")
         
-        val lastRequest = db.requestsDao.selectLastOfInstitution(targetFilialId)
         val cache: RequestSDBO? = db.requestsDao.selectLastWithData(targetFilialId, search.id)
+            ?: if (search.name != search.id) db.requestsDao.selectLastWithData(targetFilialId, search.name) else null
 
         val additional = mutableMapOf<String, Any?>()
-        if (cloudSync && lastRequest != null) {
-            additional["lastModified"] = lastRequest.lastModified
+        if (cloudSync && cache != null) {
+            additional["lastModified"] = cache.request.lastModified
         }
         if (forceLive) {
             additional["forceLive"] = true
@@ -380,7 +385,7 @@ class ScheduleRepositoryImpl(
         query: String,
         lastModified: LocalDateTime,
         daySchedules: List<DaySchedule>
-    ) {
+    ) = saveMutex.withLock {
         val dbTag = buildTag(LogScope.DATABASE, LogCat.DB)
         Auditor.debug(
             dbTag,
@@ -441,13 +446,8 @@ class ScheduleRepositoryImpl(
                 }
             }
             
-            // Удаляем старые запросы только после успешного сохранения нового
-            val oldRequests = db.requestsDao.selectAll().filter { 
-                it.institutionId == institutionId && it.query == query && it.id != requestId 
-            }
-            for (old in oldRequests) {
-                db.requestsDao.delete(old)
-            }
+            // Удаляем старые запросы только после успешного сохранения нового (строго старше текущего)
+            db.requestsDao.deleteOldRequests(institutionId, query, requestId)
             
             val totalLessons = daySchedules.sumOf { it.lessons.size }
             Auditor.debug(
@@ -465,41 +465,43 @@ class ScheduleRepositoryImpl(
     }
 
     private suspend fun getOrCreateGroupId(institutionId: String, group: Group): Long {
-        val trimmedGroupName = group.name.trim()
+        val trimmedGroupName = group.name.trim().ifEmpty { "—" }
+        val groupIdKey = group.id.trim().ifEmpty { trimmedGroupName }
         val existing = db.groupsDao.selectByName(institutionId, trimmedGroupName)?.id
-            ?: db.groupsDao.selectIdByGroupId(institutionId, group.id.trim())
+            ?: db.groupsDao.selectIdByGroupId(institutionId, groupIdKey)
         if (existing != null) return existing
 
         val newId = db.groupsDao.insert(
             GroupDBO(
                 institutionId = institutionId,
                 name = trimmedGroupName,
-                groupId = group.id.trim(),
+                groupId = groupIdKey,
                 year = group.year
             )
         )
         if (newId != -1L) return newId
         return db.groupsDao.selectByName(institutionId, trimmedGroupName)?.id
-            ?: db.groupsDao.selectIdByGroupId(institutionId, group.id.trim())
+            ?: db.groupsDao.selectIdByGroupId(institutionId, groupIdKey)
             ?: 0L
     }
 
     private suspend fun getOrCreateTeacherId(institutionId: String, teacher: Teacher): Long {
-        val trimmedTeacherName = teacher.name.trim()
+        val trimmedTeacherName = teacher.name.trim().ifEmpty { "—" }
+        val teacherIdKey = teacher.id.trim().ifEmpty { trimmedTeacherName }
         val existing = db.teachersDao.selectByName(institutionId, trimmedTeacherName)?.id
-            ?: db.teachersDao.selectIdByTeacherId(institutionId, teacher.id.trim())
+            ?: db.teachersDao.selectIdByTeacherId(institutionId, teacherIdKey)
         if (existing != null) return existing
 
         val newId = db.teachersDao.insert(
             TeacherDBO(
                 institutionId = institutionId,
                 name = trimmedTeacherName,
-                teacherId = teacher.id.trim()
+                teacherId = teacherIdKey
             )
         )
         if (newId != -1L) return newId
         return db.teachersDao.selectByName(institutionId, trimmedTeacherName)?.id
-            ?: db.teachersDao.selectIdByTeacherId(institutionId, teacher.id.trim())
+            ?: db.teachersDao.selectIdByTeacherId(institutionId, teacherIdKey)
             ?: 0L
     }
 

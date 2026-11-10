@@ -11,9 +11,8 @@ data class ScheduleState(
     val scheduleState: RemoteState = RemoteState.Empty,
     val isOffline: Boolean = false,
     val lastModified: LocalDateTime? = null,
+    val isRefreshing: Boolean = false,
     override val scheduleSearches: List<ScheduleSearch> = emptyList(),
     override val scheduleSearchesState: RemoteState = RemoteState.Idle,
     override val selectedSearch: ScheduleSearch? = null
 ) : ScheduleSearchData
-
-

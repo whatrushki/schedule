@@ -38,6 +38,7 @@ class WhatKmpFeaturePlugin : Plugin<Project> {
             sourceSets.named("androidMain") {
                 dependencies {
                     implementation(libs.findLibrary("androidx-core-ktx").get())
+                    implementation(libs.findLibrary("yandex-mobileads").get())
                 }
             }
 

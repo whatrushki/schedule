@@ -54,6 +54,24 @@ import androidx.work.Configuration
 import app.what.schedule.notifications.NotificationHelper
 import app.what.schedule.notifications.ScheduleWorkManager
 import com.jakewharton.processphoenix.ProcessPhoenix
+import android.content.res.Configuration as AndroidConfiguration
+import android.util.Log
+import app.what.data.managers.PlatformFileStorageCleaner
+import app.what.domain.services.FeedbackSharer
+import app.what.foundation.auth.client.WhatAuthManager
+import app.what.foundation.auth.di.createAndroidAuthPreferences
+import app.what.foundation.auth.di.createAndroidSsoBridge
+import app.what.foundation.auth.model.WhatAuthConfig
+import app.what.foundation.utils.CurrentActivityHolder
+import app.what.schedule.feedback.AndroidFeedbackSharer
+import app.what.schedule.launcher.AppIconManager
+import app.what.schedule.notifications.university.UniversityNotificationManager
+import app.what.schedule.notifications.university.checkers.DgtuNotificationChecker
+import app.what.schedule.notifications.university.checkers.SfeduNotificationChecker
+import app.what.schedule.updater.AppGitHubUpdateManager
+import app.what.schedule.utils.AndroidPlatformFileStorageCleaner
+import app.what.schedule.utils.AppUserIdProvider
+import com.yandex.mobile.ads.common.YandexAds
 import org.koin.dsl.module
 import java.util.UUID
 import kotlin.time.Duration.Companion.milliseconds
@@ -63,7 +81,7 @@ class ScheduleApp : Application(), Configuration.Provider {
 
     override val workManagerConfiguration: Configuration
         get() = Configuration.Builder()
-            .setMinimumLoggingLevel(android.util.Log.INFO)
+            .setMinimumLoggingLevel(Log.INFO)
             .build()
 
     @OptIn(FlowPreview::class)
@@ -86,12 +104,20 @@ class ScheduleApp : Application(), Configuration.Provider {
         CrashHandler.initialize(applicationContext, CrashActivity::class.java)
             .setSideEffect(crashlytics::recordException)
         
-        app.what.foundation.utils.CurrentActivityHolder.register(this)
+        CurrentActivityHolder.register(this)
         
         val initTag = buildTag(LogScope.CORE, LogCat.INIT)
+        try {
+            YandexAds.initialize(this) {
+                Auditor.info(initTag, "Yandex Mobile Ads initialized")
+            }
+        } catch (e: Exception) {
+            Auditor.warn(initTag, "Failed to initialize Yandex Mobile Ads: ${e.message}")
+        }
         Auditor.info(initTag, "Приложение запущено")
         
         startKoin {
+            allowOverride(true)
             androidContext(this@ScheduleApp)
             modules(dataModule, mainFeatureModule, appModule)
         }
@@ -99,15 +125,15 @@ class ScheduleApp : Application(), Configuration.Provider {
         val koin = getKoin()
         
         val appValues = koin.get<AppValues>()
-        if (appValues.userId.get() == null) {
-            val userId = UUID.randomUUID().toString()
-            crashlytics.setUserId(userId)
-            Firebase.analytics.setUserId(userId)
-            appValues.userId.set(userId)
-            Auditor.debug(initTag, "Создан новый пользователь: $userId")
+        val stableUserId = AppUserIdProvider.getOrCreateUserId(this, appValues.userId.get())
+        if (appValues.userId.get() != stableUserId) {
+            appValues.userId.set(stableUserId)
+            Auditor.debug(initTag, "Установлен стабильный ID пользователя: $stableUserId")
         } else {
-            Auditor.debug(initTag, "Пользователь уже существует: ${appValues.userId.get()}")
+            Auditor.debug(initTag, "Пользователь уже существует: $stableUserId")
         }
+        crashlytics.setUserId(stableUserId)
+        Firebase.analytics.setUserId(stableUserId)
         
         SingletonImageLoader.setSafe {
             ImageLoader.Builder(this)
@@ -161,7 +187,7 @@ class ScheduleApp : Application(), Configuration.Provider {
         }
 
         // Автоматическое переключение иконки приложения (алиаса) при смене темы в настройках
-        app.what.schedule.launcher.AppIconManager.init(this@ScheduleApp, appValues)
+        AppIconManager.init(this@ScheduleApp, appValues)
         appScope.launch {
             combine(
                 appValues.themeType.observe(),
@@ -169,7 +195,7 @@ class ScheduleApp : Application(), Configuration.Provider {
                 appValues.themeColor.observe()
             ) { _, _, _ -> }
                 .collect {
-                    app.what.schedule.launcher.AppIconManager.updateIcon(this@ScheduleApp, appValues)
+                    AppIconManager.updateIcon(this@ScheduleApp, appValues)
                 }
         }
 
@@ -245,12 +271,12 @@ class ScheduleApp : Application(), Configuration.Provider {
         }
     }
 
-    override fun onConfigurationChanged(newConfig: android.content.res.Configuration) {
+    override fun onConfigurationChanged(newConfig: AndroidConfiguration) {
         super.onConfigurationChanged(newConfig)
         try {
             val appValues = getKoin().getOrNull<AppValues>()
             if (appValues != null) {
-                app.what.schedule.launcher.AppIconManager.updateIcon(this, appValues)
+                AppIconManager.updateIcon(this, appValues)
             }
         } catch (_: Exception) {
         }
@@ -259,15 +285,33 @@ class ScheduleApp : Application(), Configuration.Provider {
 
 val appModule = module {
     singleOf(::AppUtils)
-    single<app.what.data.managers.PlatformFileStorageCleaner> { app.what.schedule.utils.AndroidPlatformFileStorageCleaner(androidContext()) }
+    single<PlatformFileStorageCleaner> { AndroidPlatformFileStorageCleaner(androidContext()) }
+    single<FeedbackSharer> { AndroidFeedbackSharer(androidContext(), get()) }
+    single { createAndroidAuthPreferences(androidContext()) }
+    single { createAndroidSsoBridge(androidContext()) }
+    single {
+        val config = WhatAuthConfig(
+            serverUrl = "https://what-id.whatrushki-tech.workers.dev",
+            clientId = "what-schedule",
+            redirectUri = "app.what.auth://callback",
+            appName = "WHAT Schedule"
+        )
+        WhatAuthManager(
+            config = config,
+            httpClient = get(),
+            prefs = get(),
+            ssoBridge = get()
+        )
+    }
     
     single<AppUpdateManager> {
         val context = androidContext()
-        val source = getInstallSource(context)
+        val isRuStore = BuildConfig.FLAVOR == "rustore" || getInstallSource(context) == InstallSource.RuStore
         
-        when (source) {
-            InstallSource.RuStore -> RuStoreUpdateManager(context, get())
-            InstallSource.APK -> app.what.schedule.updater.AppGitHubUpdateManager(
+        if (isRuStore) {
+            RuStoreUpdateManager(context, get())
+        } else {
+            AppGitHubUpdateManager(
                 context = androidContext(),
                 config = UpdateConfig(
                     BuildConfig.APP_GITHUB_URL.split("/").reversed()[1],
@@ -281,10 +325,10 @@ val appModule = module {
     }
 
     single {
-        app.what.schedule.notifications.university.UniversityNotificationManager(
+        UniversityNotificationManager(
             listOf(
-                app.what.schedule.notifications.university.checkers.DgtuNotificationChecker(get(), get()),
-                app.what.schedule.notifications.university.checkers.SfeduNotificationChecker(get(), get())
+                DgtuNotificationChecker(get(), get()),
+                SfeduNotificationChecker(get(), get())
             )
         )
     }

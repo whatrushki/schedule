@@ -1,4 +1,6 @@
 package app.what.schedule.rgups_tuapse
+import app.what.schedule.core.models.LessonStateDto
+import app.what.schedule.core.models.NewContentBlockDto
 
 import app.what.schedule.core.models.LessonTypeDto
 import app.what.schedule.rgups_tuapse.models.TuapseTimetableResponse
@@ -61,15 +63,15 @@ class RGUPSTuapseScheduleClientTest {
         val detail = client.parseNewsDetail(html, "https://rgups-tuapse.ru/news/test/")
 
         assertEquals(3, detail.contentBlocks.size)
-        assertTrue(detail.contentBlocks[0] is app.what.schedule.core.models.NewContentBlockDto.Text)
-        assertTrue(detail.contentBlocks[1] is app.what.schedule.core.models.NewContentBlockDto.Text)
-        assertTrue(detail.contentBlocks[2] is app.what.schedule.core.models.NewContentBlockDto.Text)
-        val linkBlock = (detail.contentBlocks[1] as app.what.schedule.core.models.NewContentBlockDto.Text).html
+        assertTrue(detail.contentBlocks[0] is NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[1] is NewContentBlockDto.Text)
+        assertTrue(detail.contentBlocks[2] is NewContentBlockDto.Text)
+        val linkBlock = (detail.contentBlocks[1] as NewContentBlockDto.Text).html
         assertTrue(linkBlock.contains("https://t.me/rgupsisxodnik"))
         assertTrue(linkBlock.contains("ссылка для скачивания"))
-        val thirdBlock = (detail.contentBlocks[2] as app.what.schedule.core.models.NewContentBlockDto.Text).html
+        val thirdBlock = (detail.contentBlocks[2] as NewContentBlockDto.Text).html
         assertTrue(thirdBlock.contains("фотографий с выпускного"))
-        kotlin.test.assertFalse(detail.contentBlocks.any { it is app.what.schedule.core.models.NewContentBlockDto.UnsortedList })
+        kotlin.test.assertFalse(detail.contentBlocks.any { it is NewContentBlockDto.UnsortedList })
     }
 
     @Test
@@ -88,8 +90,8 @@ class RGUPSTuapseScheduleClientTest {
         val detail = client.parseNewsDetail(html, "https://rgups-tuapse.ru/news/test/")
 
         assertEquals(1, detail.contentBlocks.size)
-        assertTrue(detail.contentBlocks[0] is app.what.schedule.core.models.NewContentBlockDto.Text)
-        val text = (detail.contentBlocks[0] as app.what.schedule.core.models.NewContentBlockDto.Text).html
+        assertTrue(detail.contentBlocks[0] is NewContentBlockDto.Text)
+        val text = (detail.contentBlocks[0] as NewContentBlockDto.Text).html
         assertTrue(text.contains("30 июня 2025 года"))
         kotlin.test.assertFalse(text.contains("Торжественная церемония вручения дипломов"))
     }

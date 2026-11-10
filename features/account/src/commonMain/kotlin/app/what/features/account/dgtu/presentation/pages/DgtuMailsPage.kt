@@ -1,4 +1,5 @@
 package app.what.schedule.features.insts.dgtu.presentation.pages
+import app.what.foundation.utils.currentLocalDate
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -237,7 +238,7 @@ fun formatName(value: String): String {
 }
 
 fun formatDateTime(value: LocalDateTime): String {
-    val today = app.what.foundation.utils.currentLocalDate()
+    val today = currentLocalDate()
     val date = value.date
     
     val timeStr = DateTimeUtils.formatTime(value.time)

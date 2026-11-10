@@ -45,6 +45,16 @@ android {
         buildConfigField("String", "APP_GITHUB_URL", "\"https://github.com/whatrushki/schedule\"")
     }
 
+    flavorDimensions += "distribution"
+    productFlavors {
+        create("standalone") {
+            dimension = "distribution"
+        }
+        create("rustore") {
+            dimension = "distribution"
+        }
+    }
+
     signingConfigs {
         create("release") {
             val keystorePropsFile = file("keystore/keystore_config.properties")
@@ -108,10 +118,12 @@ android {
 }
 
 dependencies {
+    implementation(libs.yandex.mobileads)
     implementation(project(":composeApp"))
     implementation(project(":domain"))
     implementation(project(":data"))
     implementation(libs.compose.foundation)
+    implementation(libs.foundation.auth)
     implementation(libs.foundation.navigation)
     implementation(project(":features:main"))
     implementation(project(":features:schedule"))

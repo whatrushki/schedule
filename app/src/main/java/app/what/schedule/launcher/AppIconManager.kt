@@ -2,6 +2,8 @@ package app.what.schedule.launcher
 
 import android.content.ComponentName
 import android.content.Context
+import androidx.compose.ui.graphics.Color as ComposeColor
+import android.graphics.Color as AndroidColor
 import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.os.Build
@@ -182,8 +184,8 @@ object AppIconManager {
                     val customColor = appValues.themeColor.get()
                     if (customColor != null) {
                         // Color.value хранит packed SRGB — извлекаем ARGB через Compose Color
-                        val color = androidx.compose.ui.graphics.Color(customColor)
-                        val argb = android.graphics.Color.argb(
+                        val color = ComposeColor(customColor)
+                        val argb = AndroidColor.argb(
                             (color.alpha * 255).toInt(),
                             (color.red * 255).toInt(),
                             (color.green * 255).toInt(),

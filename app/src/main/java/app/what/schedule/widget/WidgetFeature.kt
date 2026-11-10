@@ -1,4 +1,5 @@
 package app.what.schedule.features.widget
+import app.what.foundation.utils.currentLocalDate
 
 import android.annotation.SuppressLint
 import android.appwidget.AppWidgetManager
@@ -106,7 +107,7 @@ class ScheduleWidget : GlanceAppWidget(), KoinComponent {
         val search = prefs[stringPreferencesKey(SEARCH_KEY)]
         val savedInstitutionId = prefs[stringPreferencesKey(INSTITUTION_ID_KEY)]
         val lastDate = prefs[stringPreferencesKey(LAST_DATE_KEY)]
-        val todayStr = app.what.foundation.utils.currentLocalDate().toString()
+        val todayStr = currentLocalDate().toString()
 
         if (lastDate != todayStr) {
             try {
@@ -315,7 +316,7 @@ fun WidgetContent(
     }
 
     // Auto-detect today's index for smarter day navigation
-    val today = app.what.foundation.utils.currentLocalDate()
+    val today = currentLocalDate()
     val todayIndex = schedule.indexOfFirst { it.date == today }
     val effectiveIndex = if (currentDayIndex == 0) {
         if (todayIndex >= 0 && schedule[todayIndex].lessons.isNotEmpty()) {

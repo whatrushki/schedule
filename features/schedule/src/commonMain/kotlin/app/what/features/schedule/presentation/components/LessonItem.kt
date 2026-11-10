@@ -443,8 +443,13 @@ private fun SingleOtUnitView(
         contentAlignment = if (horizontalAlignment == Alignment.CenterHorizontally) Alignment.Center else Alignment.TopStart
     ) {
         Column(horizontalAlignment = Alignment.Start) {
-            val teacherOrGroup = if (viewType == ViewType.TEACHER) unit.group.name else unit.teacher.name
-            if (teacherOrGroup.isNotBlank() && teacherOrGroup != "-") {
+            val isVacancy = viewType == ViewType.STUDENT && unit.teacher.name.isNotBlank() && unit.teacher.name.all { ch -> ch == '-' || ch == '—' || ch == '–' }
+            val teacherOrGroup = when {
+                viewType == ViewType.TEACHER -> unit.group.name
+                isVacancy -> "Вакансия (${unit.teacher.name})"
+                else -> unit.teacher.name
+            }
+            if (teacherOrGroup.isNotBlank() && (viewType != ViewType.TEACHER || teacherOrGroup != "-")) {
                 AdditionalInfo(
                     color = color,
                     icon = if (viewType == ViewType.STUDENT) WHATIcons.Person else WHATIcons.Group,
@@ -454,7 +459,7 @@ private fun SingleOtUnitView(
                     onClick = {
                         onSearchClicked(
                             if (viewType == ViewType.TEACHER) ScheduleSearch.Group(it)
-                            else ScheduleSearch.Teacher(it)
+                            else ScheduleSearch.Teacher(unit.teacher.name)
                         )
                     }
                 )

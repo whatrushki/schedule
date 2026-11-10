@@ -1,4 +1,4 @@
-﻿package app.what.domain.services
+package app.what.domain.services
 
 import app.what.domain.models.Lesson
 import app.what.domain.models.LessonState

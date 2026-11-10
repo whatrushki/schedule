@@ -129,12 +129,12 @@ jobs:
             mkdir -p features/onboarding/src/commonMain/composeResources/files
             cp metadata/release-notes.json features/onboarding/src/commonMain/composeResources/files/release-notes.json
           fi
-          ./gradlew assembleRelease --stacktrace || ./gradlew assembleDebug --stacktrace
+          ./gradlew assembleStandaloneRelease assembleRustoreRelease --stacktrace || ./gradlew assembleStandaloneDebug assembleRustoreDebug --stacktrace
           mkdir -p release_assets
-          # Collect APKs (signed or unsigned)
-          find app/build/outputs/apk -name "*.apk" -exec cp {} release_assets/schedule_android_${{ steps.get_version.outputs.version }}.apk \; || true
-          # AAB upload is disabled until RuStore signing keys and certificates are configured:
-          # find app/build/outputs/bundle -name "*.aab" -exec cp {} release_assets/schedule_android_${{ steps.get_version.outputs.version }}.aab \; || true
+          # Collect Standalone APK for GitHub Release (self-updating via GitHub)
+          find app/build/outputs/apk/standalone -name "*.apk" -exec cp {} release_assets/schedule_android_${{ steps.get_version.outputs.version }}.apk \; || true
+          # Collect RuStore APK for RuStore publishing (clean manifest without REQUEST_INSTALL_PACKAGES)
+          find app/build/outputs/apk/rustore -name "*.apk" -exec cp {} release_assets/schedule_android_rustore_${{ steps.get_version.outputs.version }}.apk \; || true
 
       - name: Prepare Release Notes & Assets
         id: release_notes
@@ -147,9 +147,9 @@ jobs:
             RUSTORE_NOTES=$(node -e '
               try {
                 const data = JSON.parse(require("fs").readFileSync("metadata/release-notes.json", "utf8"));
-                const items = data.changelog || [];
-                const res = items.map(i => "• " + i).join("\n");
-                console.log(res.slice(0, 480));
+                const items = data.rustore_changelog || data.changelog || [];
+                const res = items.map(i => (i.startsWith("-") || i.startsWith("•") ? i : "- " + i)).join("\n");
+                console.log(res.length <= 480 ? res : res.slice(0, 480));
               } catch(e) { console.log(""); }
             ' 2>/dev/null || true)
           fi
@@ -178,8 +178,8 @@ jobs:
       - name: Determine RuStore Release File
         id: rustore_file
         run: |
-          # Use APK for RuStore publication (AAB requires RuStore App Signing setup)
-          APK="release_assets/schedule_android_${{ steps.get_version.outputs.version }}.apk"
+          # Use RuStore APK for RuStore publication (clean manifest without REQUEST_INSTALL_PACKAGES)
+          APK="release_assets/schedule_android_rustore_${{ steps.get_version.outputs.version }}.apk"
           if [ -f "$APK" ]; then
             echo "file=$APK" >> $GITHUB_OUTPUT
           fi

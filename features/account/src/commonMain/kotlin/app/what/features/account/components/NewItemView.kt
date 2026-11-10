@@ -1,4 +1,6 @@
 package app.what.features.account.components
+import androidx.compose.foundation.shape.CornerSize
+import androidx.compose.ui.text.style.TextOverflow
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -52,7 +54,7 @@ fun NewItemView(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(140.dp)
-                .clip(shapes.large.copy(bottomStart = androidx.compose.foundation.shape.CornerSize(0.dp), bottomEnd = androidx.compose.foundation.shape.CornerSize(0.dp)))
+                .clip(shapes.large.copy(bottomStart = CornerSize(0.dp), bottomEnd = CornerSize(0.dp)))
         )
         
         Column(
@@ -71,7 +73,7 @@ fun NewItemView(
                 fontWeight = FontWeight.Medium,
                 minLines = 2,
                 maxLines = 2,
-                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
+                overflow = TextOverflow.Ellipsis,
                 color = colorScheme.onSurface
             )
         }

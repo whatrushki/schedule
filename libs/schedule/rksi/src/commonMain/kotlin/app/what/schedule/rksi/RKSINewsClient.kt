@@ -103,7 +103,7 @@ class RKSINewsClient(
             Pair(emptyList(), emptyList())
         }
 
-        val bannerUrl = "$baseUrl/img/news/$id.jpg"
+        val bannerUrl = parsedImages.firstOrNull() ?: "$baseUrl/img/news/$id.jpg"
         val allImages = if (parsedImages.contains(bannerUrl)) parsedImages else listOf(bannerUrl) + parsedImages
 
         NewDetailDto(

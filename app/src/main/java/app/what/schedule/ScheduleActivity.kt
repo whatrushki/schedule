@@ -1,3 +1,3 @@
-﻿package app.what.schedule
+package app.what.schedule
 
 class ScheduleActivity : MainActivity()

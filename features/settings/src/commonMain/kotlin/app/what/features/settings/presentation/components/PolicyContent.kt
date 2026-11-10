@@ -1,0 +1,164 @@
+package app.what.features.settings.presentation.components
+
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.unit.dp
+import app.what.domain.constants.AppConstants
+import app.what.foundation.data.settings.KeyValueStorage
+import app.what.foundation.ui.components.Fallback
+import app.what.foundation.utils.StringUtils
+import io.ktor.client.HttpClient
+import io.ktor.client.plugins.HttpTimeout
+import io.ktor.client.request.get
+import io.ktor.client.statement.bodyAsText
+import kotlinx.coroutines.withTimeoutOrNull
+import org.koin.compose.koinInject
+
+const val WEB_PRIVACY_POLICY_URL = "https://github.com/whatrushki/schedule/blob/master/PRIVACY_POLICY.md"
+private const val KEY_CACHED_POLICY = "cached_privacy_policy_text"
+
+@Composable
+fun PolicyContent(
+    modifier: Modifier = Modifier
+) {
+    val uriHandler = LocalUriHandler.current
+    val colorScheme = MaterialTheme.colorScheme
+    val storage = koinInject<KeyValueStorage>()
+
+    val initialCached = remember {
+        storage.getString(KEY_CACHED_POLICY, "")?.takeIf { it.isNotBlank() } ?: BUNDLED_PRIVACY_POLICY
+    }
+    var contentText by remember { mutableStateOf(initialCached) }
+    var isError by remember { mutableStateOf(false) }
+
+    LaunchedEffect(Unit) {
+        val client = HttpClient {
+            install(HttpTimeout) {
+                requestTimeoutMillis = 3500
+                connectTimeoutMillis = 3500
+            }
+        }
+        try {
+            val responseText = withTimeoutOrNull(3500L) {
+                val res = client.get(AppConstants.PRIVACY_POLICY_URL)
+                res.bodyAsText()
+            }
+            if (!responseText.isNullOrBlank()) {
+                contentText = responseText
+                storage.putString(KEY_CACHED_POLICY, responseText)
+                isError = false
+            } else if (contentText.isBlank()) {
+                isError = true
+            }
+        } catch (_: Exception) {
+            if (contentText.isBlank()) {
+                isError = true
+            }
+        } finally {
+            client.close()
+        }
+    }
+
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .wrapContentHeight()
+            .padding(16.dp)
+    ) {
+        if (isError && contentText.isBlank()) {
+            Fallback(
+                "Не удалось загрузить политику конфиденциальности",
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .wrapContentHeight(),
+                action = "Посмотреть в браузере" to { uriHandler.openUri(WEB_PRIVACY_POLICY_URL) }
+            )
+        } else {
+            val annotated = remember(contentText, colorScheme) {
+                StringUtils.parseMarkdown(contentText, colorScheme)
+            }
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .verticalScroll(rememberScrollState())
+            ) {
+                Text(
+                    text = annotated,
+                    color = colorScheme.onSurface
+                )
+            }
+        }
+    }
+}
+
+private const val BUNDLED_PRIVACY_POLICY = """# Политика конфиденциальности приложения «Schedule»
+
+**Дата последнего обновления:** 30.01.2026
+
+Настоящая Политика конфиденциальности описывает, как приложение **«Schedule»** (далее — «Приложение») собирает, использует и защищает информацию о пользователях.
+
+### 1. Общие положения
+1.1. Приложение «Schedule» разработано Оганнисян Гор (далее — «Разработчик») как сервис для просмотра учебного расписания.
+
+1.2. Используя Приложение, вы соглашаетесь со сбором и использованием информации в соответствии с данной Политикой.
+
+1.3. Приложение не требует обязательной регистрации и не собирает ваши личные данные, такие как ФИО, номер телефона или адрес электронной почты, в явном виде, если вы сами не предоставите их при обращении в поддержку.
+
+### 2. Сбор и использование данных
+Для улучшения работы Приложения и анализа ошибок мы используем сторонние сервисы, которые могут собирать обезличенную информацию:
+
+**2.1. Google Analytics для Firebase**
+Используется для анализа поведения пользователей (какие экраны открываются чаще, какие функции популярны). Собираемые данные: идентификаторы экземпляра приложения, сведения о модели устройства и стране.
+
+**2.2. Firebase Crashlytics**
+Используется для сбора отчетов об ошибках и сбоях. Собираемые данные: состояние приложения в момент сбоя, сведения об устройстве (модель, версия ОС), стек вызовов (stack trace).
+
+**2.3. Рекламная сеть Яндекса (Yandex Mobile Ads)**
+(Если вы используете рекламу) Используется для показа персонализированной рекламы. Сервис может собирать рекламный идентификатор устройства (Advertising ID) и данные о местоположении на уровне города.
+
+### 3. Разрешения и согласие
+3.1. Приложение запрашивает доступ к уведомлениям и интернету для корректной работы функций (обновление расписания, получение пуш-уведомлений).
+
+3.2. Сбор аналитических данных и данных о сбоях производится только с согласия пользователя, которое запрашивается при первом запуске Приложения.
+
+### 4. Отказ от ответственности (Дисклеймер)
+4.1. **Источник данных:** Приложение получает информацию о расписании путем автоматизированного сбора (парсинга) данных из открытых источников, предоставляемых учебными заведениями (РКСИ, ДГТУ, РГЭУ и др.).
+
+4.2. **Точность данных:** Разработчик не является официальным представителем учебных заведений и **не несет ответственности** за достоверность, полноту или актуальность предоставляемого расписания. В случае расхождений между Приложением и официальным бумажным/электронным расписанием вуза, приоритет имеет официальное расписание учебного заведения.
+
+4.3. **Работа сервисов:** Разработчик не гарантирует бесперебойную работу парсеров в случае изменения структуры сайтов учебных заведений.
+
+### 5. Безопасность
+5.1. Приложение не собирает и не хранит личную информацию пользователей (имена, пароли, контактные данные), что исключает риск утечки персональной идентификационной информации.
+
+5.2. Все данные, собираемые аналитическими сервисами (Firebase, Яндекс), передаются по зашифрованным протоколам (HTTPS).
+
+5.3. Разработчик предпринимает все необходимые технические меры для защиты передаваемой обезличенной информации, однако уведомляет, что ни один метод передачи данных через интернет не является абсолютно защищенным.
+
+### 6. Ссылки на сторонние ресурсы
+Приложение может содержать ссылки на сторонние сайты (например, новости вузов). Если вы переходите по такой ссылке, вы будете направлены на этот сайт. Обратите внимание, что эти внешние сайты не управляются нами.
+
+### 7. Изменения в Политике
+Разработчик оставляет за собой право обновлять Политику конфиденциальности в любое время. Рекомендуется периодически просматривать эту страницу на предмет изменений.
+
+### 8. Контакты
+Если у вас есть вопросы или предложения по Политике конфиденциальности, свяжитесь с нами:
+
+**Telegram:** https://t.me/whatrushik
+
+**GitHub:** https://github.com/whatrushki/schedule
+"""

@@ -148,7 +148,9 @@ fun NewsDetailView(
     }
     Box {
         AsyncImageWithFallback(
-            url = state.newDetailInfo?.bannerUrl?.takeIf { it.isNotBlank() } ?: state.newListInfo.bannerUrl,
+            url = state.newListInfo.bannerUrl.takeIf { it.isNotBlank() }
+                ?: state.newDetailInfo?.bannerUrl?.takeIf { it.isNotBlank() }
+                ?: "",
             enableDetailView = true,
             modifier = Modifier
                 .fillMaxWidth()

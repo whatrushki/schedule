@@ -1,4 +1,4 @@
-﻿package app.what.schedule.notifications
+package app.what.schedule.notifications
 
 import android.app.AlarmManager
 import android.app.PendingIntent

@@ -1,4 +1,5 @@
 package app.what.schedule.features.newsDetail
+import app.what.navigation.core.rememberNavigator
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -53,7 +54,7 @@ class NewsDetailFeature(
                 listener(NewsDetailEvent.Init)
             }
             
-            val navigator = app.what.navigation.core.rememberNavigator()
+            val navigator = rememberNavigator()
             NewsDetailView(
                 viewState,
                 listener,

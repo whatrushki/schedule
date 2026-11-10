@@ -1,623 +1,1305 @@
 package app.what.schedule.features.schedule.presentation
 
+
+
 import androidx.compose.animation.animateContentSize
+
 import androidx.compose.foundation.background
+
 import androidx.compose.foundation.border
+
 import androidx.compose.foundation.layout.Arrangement
+
 import androidx.compose.foundation.layout.Box
+
 import androidx.compose.foundation.layout.Column
+
 import androidx.compose.foundation.layout.IntrinsicSize
+
 import androidx.compose.foundation.layout.PaddingValues
+
 import androidx.compose.foundation.layout.Row
+
 import androidx.compose.foundation.layout.Spacer
+
 import androidx.compose.foundation.layout.aspectRatio
+
 import androidx.compose.foundation.layout.fillMaxHeight
+
 import androidx.compose.foundation.layout.fillMaxSize
+
 import androidx.compose.foundation.layout.fillMaxWidth
+
 import androidx.compose.foundation.layout.height
+
 import androidx.compose.foundation.layout.heightIn
+
 import androidx.compose.foundation.layout.padding
+
 import androidx.compose.foundation.layout.size
+
 import androidx.compose.foundation.layout.statusBarsPadding
+
 import androidx.compose.foundation.layout.width
+
 import androidx.compose.foundation.layout.widthIn
+
 import androidx.compose.foundation.layout.wrapContentWidth
+
 import androidx.compose.foundation.pager.HorizontalPager
+
 import androidx.compose.foundation.pager.PagerState
+
 import androidx.compose.foundation.pager.rememberPagerState
+
 import androidx.compose.foundation.rememberScrollState
+
 import androidx.compose.foundation.shape.CircleShape
+
 import androidx.compose.foundation.shape.RoundedCornerShape
+
 import androidx.compose.foundation.verticalScroll
+
 import androidx.compose.material.icons.Icons
+
 import androidx.compose.material.icons.filled.Refresh
+
 import androidx.compose.material.icons.filled.Share
+
 import androidx.compose.material3.Button
+
 import androidx.compose.material3.Icon
+
 import androidx.compose.material3.LinearProgressIndicator
+
 import androidx.compose.material3.MaterialTheme.colorScheme
+
 import androidx.compose.material3.MaterialTheme.shapes
+
 import androidx.compose.material3.MaterialTheme.typography
+
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
+
 import androidx.compose.material3.Surface
+
 import androidx.compose.material3.Text
+
 import androidx.compose.runtime.Composable
+
 import androidx.compose.runtime.LaunchedEffect
+
 import androidx.compose.runtime.State
+
 import androidx.compose.runtime.getValue
+
 import androidx.compose.runtime.remember
+
 import androidx.compose.runtime.rememberCoroutineScope
+
 import androidx.compose.runtime.setValue
+
 import androidx.compose.ui.Alignment
+
 import androidx.compose.ui.Modifier
+
 import androidx.compose.ui.draw.clip
+
 import androidx.compose.ui.graphics.vector.ImageVector
+
 import androidx.compose.ui.text.font.FontFamily
+
 import androidx.compose.ui.text.font.FontWeight
+
 import androidx.compose.ui.unit.dp
+
 import androidx.compose.ui.unit.sp
+
 import app.what.domain.models.DaySchedule
+
 import app.what.domain.models.Lesson
+
 import app.what.domain.models.LessonState
+
 import app.what.domain.models.LessonsScheduleType
+
 import app.what.domain.models.ScheduleSearch
+
 import app.what.schedule.data.local.settings.rememberAppValues
+
 import app.what.foundation.data.RemoteState
+
 import app.what.foundation.ui.AppPullToRefresh
+
 import app.what.foundation.ui.Gap
+
 import app.what.foundation.ui.SegmentTab
+
 import app.what.foundation.ui.Show
+
 import app.what.foundation.ui.animations.AnimatedEnter
+
 import app.what.foundation.ui.bclick
+
 import app.what.foundation.ui.capplyIf
+
 import app.what.foundation.ui.controllers.rememberDialogController
+
 import app.what.foundation.ui.controllers.rememberSheetController
+
 import app.what.foundation.ui.useChange
+
 import app.what.foundation.ui.useSave
+
 import app.what.foundation.ui.useState
+
 import app.what.foundation.utils.Analytics
+import app.what.foundation.services.AppLogger.Companion.Auditor
+import app.what.foundation.utils.LogCat
+import app.what.foundation.utils.LogScope
+import app.what.foundation.utils.buildTag
+import app.what.foundation.utils.currentLocalDate
+import app.what.foundation.utils.currentLocalTime
+import app.what.foundation.utils.isDesktop
+
+
 import app.what.foundation.utils.DateTimeUtils
+
 import app.what.foundation.ui.useInterval
+
 import app.what.schedule.features.schedule.domain.models.ScheduleEvent
+
 import app.what.schedule.features.schedule.domain.models.ScheduleState
+
 import app.what.schedule.features.schedule.presentation.components.BreakInfo
+
 import app.what.schedule.features.schedule.presentation.components.LessonUI
+
 import app.what.schedule.features.schedule.presentation.components.ScheduleExportPane
+
 import app.what.schedule.features.schedule.presentation.components.ScheduleShimmer
+
 import app.what.schedule.features.schedule.presentation.components.SearchButton
+
+import app.what.data.ads.YandexAdsConfig
+import app.what.data.ads.YandexBannerAd
+
+import app.what.schedule.data.local.settings.SupportAdsLevel
+
+import androidx.compose.runtime.collectAsState
+
+import androidx.compose.runtime.getValue
+
 import app.what.schedule.features.schedule.presentation.components.ViewType
+
 import app.what.schedule.ui.components.Fallback
+
 import app.what.schedule.ui.components.ScheduleSearchPane
+
 import app.what.foundation.ui.icons.WHATIcons
+
 import app.what.foundation.ui.icons.filled.Network
+
 import app.what.foundation.ui.icons.filled.Run
+
 import app.what.foundation.ui.icons.filled.Warn
+
 import kotlinx.coroutines.launch
+
 import kotlinx.datetime.DateTimeUnit
+
 import kotlinx.datetime.LocalDate
+
 import kotlinx.datetime.isoDayNumber
+
 import kotlinx.datetime.plus
 
+
+
 @Composable
+
 fun ScheduleView(
+
     state: State<ScheduleState>,
+
     listener: (ScheduleEvent) -> Unit
+
 ) = AppPullToRefresh(
-    isRefreshing = state.value.scheduleState == RemoteState.Loading,
+
+    isRefreshing = state.value.isRefreshing,
+
     onRefresh = { listener(ScheduleEvent.OnRefresh) },
+
     modifier = Modifier.fillMaxSize(),
+
 ) {
+
     Column(
+
         horizontalAlignment = Alignment.CenterHorizontally,
+
         modifier = Modifier
+
             .fillMaxSize()
+
             .wrapContentWidth(Alignment.CenterHorizontally)
+
             .widthIn(max = 860.dp)
+
     ) {
+
         val curState = state.value
-        val navTag = app.what.foundation.utils.buildTag(app.what.foundation.utils.LogScope.CORE, app.what.foundation.utils.LogCat.NAV)
-        app.what.foundation.services.AppLogger.Companion.Auditor.debug(navTag, "ScheduleView composition: scheduleState=${curState.scheduleState}, schedulesCount=${curState.schedules.size}, selected=${curState.selectedSearch}")
+
+        val navTag = buildTag(LogScope.CORE, LogCat.NAV)
+
+        Auditor.debug(navTag, "ScheduleView composition: scheduleState=${curState.scheduleState}, schedulesCount=${curState.schedules.size}, selected=${curState.selectedSearch}")
+
         val sheet = rememberSheetController()
+
         val dialog = rememberDialogController()
+
         val appValues = rememberAppValues()
+
         val showCancelledLessons by appValues.showCancelledLessons.collect()
+
         val scheduleExportSheet = remember(state.value.schedules) {
+
             @Composable { ScheduleExportPane(state.value.selectedSearch, state.value.schedules) }
+
         }
+
         
+
         val scheduleSearchSheet: @Composable () -> Unit = {
+
             ScheduleSearchPane(
+
                 state,
+
                 {
+
                     listener(ScheduleEvent.OnSearchClicked(it))
+
                     sheet.animateClose()
+
                 },
+
                 { listener(ScheduleEvent.OnSearchLongPressed(it)) },
+
                 { listener(ScheduleEvent.OnRefreshSearches) }
+
             )
+
         }
+
         
+
         val (scheduleType, setScheduleType) = useState<LessonsScheduleType?>(null)
-        val currentDate = app.what.foundation.utils.currentLocalDate()
-        val currentTime by useInterval(app.what.foundation.utils.currentLocalTime(), 60) {
-            app.what.foundation.utils.currentLocalTime()
+
+        val currentDate = currentLocalDate()
+
+        val currentTime by useInterval(currentLocalTime(), 60) {
+
+            currentLocalTime()
+
         }
+
         val showBreaksPreference by appValues.showBreaks.collect()
+
         val showBreaks = showBreaksPreference == true
+
         val scope = rememberCoroutineScope()
+
         val weeks = remember(state.value.schedules) {
+
             state.value.schedules.groupBy { it.date.getWeekNumber() }
+
         }
+
         val daysPagerState = rememberPagerState { state.value.schedules.size }
+
         val weeksPagerState = rememberPagerState { weeks.size }
+
         
+
         @Composable
+
         fun Lesson.Show(date: LocalDate) = LessonUI(
+
             data = this,
+
             listener = listener,
+
             currentTime = if (date == currentDate)
+
                 currentTime else null,
+
             viewType = when (state.value.selectedSearch) {
+
                 is ScheduleSearch.Teacher -> ViewType.TEACHER
+
                 else -> ViewType.STUDENT
+
             }
+
         )
+
         
+
         LaunchedEffect(daysPagerState.currentPage, state.value.scheduleState) {
+
             if (state.value.schedules.isEmpty()) return@LaunchedEffect
+
             
+
             scope.launch {
+
                 weeks.values.forEachIndexed { index, it ->
+
                     if (state.value.schedules.getOrNull(daysPagerState.currentPage) in it) {
+
                         weeksPagerState.animateScrollToPage(index)
+
                         return@forEachIndexed
+
                     }
+
                 }
+
             }
+
             
+
             val currentDaySchedule =
+
                 state.value.schedules.getOrNull(daysPagerState.currentPage) ?: return@LaunchedEffect
+
             setScheduleType(currentDaySchedule.scheduleType)
+
         }
+
         
+
         var hasNavigatedToTodayInitially by useSave(false)
+
         var lastNavigatedSearchId by useSave<String?>(null)
+
         
+
         LaunchedEffect(state.value.schedules, state.value.selectedSearch?.id) {
+
             val schedules = state.value.schedules
+
             if (schedules.isEmpty()) return@LaunchedEffect
+
             
+
             val currentSearchId = state.value.selectedSearch?.id
+
             val isInitialForSearch =
+
                 !hasNavigatedToTodayInitially || lastNavigatedSearchId != currentSearchId
+
             
+
             if (isInitialForSearch) {
+
                 hasNavigatedToTodayInitially = true
+
                 lastNavigatedSearchId = currentSearchId
-                val today = app.what.foundation.utils.currentLocalDate()
-                val isEvening = appValues.showNextDayInEvening.get() == true &&
-                    app.what.foundation.utils.currentLocalTime().hour >= 18
+
+                val today = currentLocalDate()
+
+                val currentHour = currentLocalTime().hour
+
+                // Открывать завтрашний день только с 18:00 до 00:00 (18..23) при включенной настройке
+
+                val isEvening = appValues.showNextDayInEvening.get() == true && (currentHour in 18..23)
+
                 val targetDate = if (isEvening) today.plus(1, DateTimeUnit.DAY) else today
-                val targetIndex = schedules.indexOfFirst { it.date == targetDate }
-                    .takeIf { it != -1 }
-                    ?: schedules.indexOfFirst { it.date >= targetDate }.takeIf { it != -1 }
-                    ?: schedules.indexOfFirst { it.date == today }.takeIf { it != -1 }
-                    ?: 0
+
+                val targetIndex = if (isEvening) {
+
+                    schedules.indexOfFirst { it.date == targetDate }
+
+                        .takeIf { it != -1 }
+
+                        ?: schedules.indexOfFirst { it.date >= targetDate }.takeIf { it != -1 }
+
+                        ?: schedules.indexOfFirst { it.date == today }.takeIf { it != -1 }
+
+                        ?: 0
+
+                } else {
+
+                    schedules.indexOfFirst { it.date == today }
+
+                        .takeIf { it != -1 }
+
+                        ?: schedules.indexOfFirst { it.date >= today }.takeIf { it != -1 }
+
+                        ?: 0
+
+                }
+
                 daysPagerState.scrollToPage(targetIndex)
+
             } else {
+
                 val previousDate = schedules.getOrNull(daysPagerState.currentPage)?.date
+
                 if (previousDate != null) {
+
                     val matchingIndex = schedules.indexOfFirst { it.date == previousDate }
+
                     if (matchingIndex != -1 && matchingIndex != daysPagerState.currentPage) {
+
                         daysPagerState.scrollToPage(matchingIndex)
+
                     }
+
                 }
+
             }
+
         }
+
         
+
         Gap(16)
+
         
+
         Column(
+
             Modifier
+
                 .statusBarsPadding()
+
                 .fillMaxWidth()
+
                 .weight(1f)
+
         ) {
+
             Row(
+
                 Modifier
+
                     .height(IntrinsicSize.Min)
+
                     .padding(horizontal = 12.dp),
+
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
+
                 verticalAlignment = Alignment.CenterVertically
+
             ) {
+
                 SearchButton(
+
                     state.value.selectedSearch,
+
                     scheduleType,
+
                     Modifier
+
                         .animateContentSize()
+
                         .weight(1f)
+
                 ) {
+
                     sheet.open(content = scheduleSearchSheet, full = true)
+
                 }
+
                 
+
                 AnimatedEnter(state.value.schedules.isNotEmpty()) {
+
                     StyledIconButton(
+
                         WHATIcons.Run,
+
                         active = if (showBreaks) ActiveState.ACTIVE else ActiveState.DISABLED
+
                     ) { appValues.showBreaks.set(!showBreaks) }
+
                 }
+
                 
+
                 AnimatedEnter(state.value.schedules.isNotEmpty()) {
+
                     StyledIconButton(
+
                         Icons.Default.Share,
+
                         state.value.schedules.isNotEmpty()
+
                     ) {
+
                         Analytics.logShare("schedule", "")
+
                         sheet.open(content = scheduleExportSheet)
+
                     }
+
                 }
+
                 
-                if (app.what.foundation.utils.isDesktop) {
+
+                if (isDesktop) {
+
                     StyledIconButton(
+
                         Icons.Default.Refresh,
+
                         state.value.scheduleState != RemoteState.Loading
+
                     ) {
+
                         listener(ScheduleEvent.OnRefresh)
+
                     }
+
                 }
+
             }
+
             
+
             
+
             AnimatedEnter(state.value.schedules.isNotEmpty()) {
+
                 ScheduleCalendar(
+
                     weeks, weeksPagerState, daysPagerState, modifier = Modifier.padding(top = 8.dp)
+
                 ) {
+
                     scope.launch { daysPagerState.animateScrollToPage(it) }
+
                 }
+
             }
+
             
+
             val showLoadingBar =
+
                 state.value.scheduleState == RemoteState.Loading && state.value.schedules.isNotEmpty()
+
             val showOfflineBanner = state.value.isOffline && state.value.schedules.isNotEmpty()
+
             
+
             if (showLoadingBar || showOfflineBanner) {
+
                 Column(
+
                     modifier = Modifier
+
                         .fillMaxWidth()
+
                         .padding(horizontal = 12.dp, vertical = 6.dp),
+
                     verticalArrangement = Arrangement.spacedBy(6.dp)
+
                 ) {
+
                     if (showLoadingBar) {
+
                         LinearProgressIndicator(
+
                             modifier = Modifier
+
                                 .fillMaxWidth()
+
                                 .height(2.dp)
+
                                 .clip(CircleShape),
+
                             color = colorScheme.primary,
+
                             trackColor = colorScheme.surfaceVariant
+
                         )
+
                     }
+
                     
+
                     if (showOfflineBanner) {
+
                         Surface(
+
                             modifier = Modifier.fillMaxWidth(),
+
                             shape = RoundedCornerShape(12.dp),
+
                             color = colorScheme.surfaceVariant.copy(alpha = 0.7f),
+
                             onClick = { listener(ScheduleEvent.OnRefresh) }
+
                         ) {
+
                             Row(
+
                                 modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
+
                                 verticalAlignment = Alignment.CenterVertically,
+
                                 horizontalArrangement = Arrangement.spacedBy(8.dp)
+
                             ) {
+
                                 Icon(
+
                                     imageVector = WHATIcons.Network,
+
                                     contentDescription = "Оффлайн",
+
                                     modifier = Modifier.size(16.dp),
+
                                     tint = colorScheme.primary
+
                                 )
+
                                 Text(
+
                                     text = "Оффлайн • кэш от ${formatLastModified(state.value.lastModified)}",
+
                                     style = typography.labelMedium,
+
                                     color = colorScheme.onSurfaceVariant,
+
                                     modifier = Modifier.weight(1f)
+
                                 )
+
                                 Text(
+
                                     text = "Обновить",
+
                                     style = typography.labelSmall,
+
                                     color = colorScheme.primary,
+
                                     fontWeight = FontWeight.SemiBold
+
                                 )
+
                             }
+
                         }
+
                     }
+
                 }
+
             } else {
+
                 Gap(8)
+
             }
+
             
+
             when (state.value.scheduleState) {
+
                 RemoteState.Loading if state.value.schedules.isEmpty() -> ScheduleShimmer()
+
                 is RemoteState.Error if state.value.schedules.isEmpty() -> Fallback(
+
                     text = "Не удалось загрузить расписание.\nЕсли у вас включен VPN, попробуйте отключить его или проверьте подключение к сети.",
+
                     modifier = Modifier.fillMaxSize(),
+
                     action = "Повторить" to {
+
                         listener(ScheduleEvent.OnRefresh)
+
                     }
+
                 )
+
                 
+
                 RemoteState.Empty -> Fallback(
+
                     text = "На эту группу расписания нет",
+
                     modifier = Modifier.fillMaxSize(),
+
                     action = "Выбрать другую" to {
+
                         sheet.open(content = scheduleSearchSheet, full = true)
+
                     }
+
                 )
+
                 
+
                 RemoteState.Success if state.value.schedules.isEmpty() || state.value.schedules.all { it.lessons.isEmpty() } -> Fallback(
+
                     text = "На эту группу расписания нет",
+
                     modifier = Modifier.fillMaxSize(),
+
                     action = "Выбрать другую" to {
+
                         sheet.open(content = scheduleSearchSheet, full = true)
+
                     }
+
                 )
+
                 
+
                 RemoteState.Idle if state.value.schedules.isEmpty() -> Fallback(
+
                     text = "Для того чтобы появилось расписание нужно выбрать группу",
+
                     modifier = Modifier.fillMaxSize(),
+
                     action = "Выбрать" to {
+
                         sheet.open(content = scheduleSearchSheet, full = true)
+
                     }
+
                 )
+
                 
+
                 else -> AnimatedEnter {
+
                     HorizontalPager(
+
                         state = daysPagerState,
+
                         verticalAlignment = Alignment.Top,
+
                         key = { state.value.schedules[it].date.toString() },
+
                         modifier = Modifier
+
                             .fillMaxHeight()
+
                     ) {
+
                         val date = state.value.schedules[it].date
+
                         val rawLessons = state.value.schedules[it].lessons
+
                         val lessons = remember(rawLessons, showCancelledLessons) {
+
                             if (showCancelledLessons != false) rawLessons
+
                             else rawLessons.filter { it.state != LessonState.REMOVED }
+
                         }
+
                         
+
                         val lessonPairs = remember(lessons) { lessons.zipWithNext() }
+
                         val lastLesson = remember(lessons) { lessons.lastOrNull() }
+
                         
+
                         Column(
+
                             verticalArrangement = Arrangement.spacedBy(if (showBreaks) 4.dp else 12.dp),
+
                             modifier = Modifier
+
                                 .fillMaxSize()
+
                                 .padding(horizontal = 12.dp)
+
                                 .clip(shapes.large)
+
                                 .verticalScroll(rememberScrollState())
+
                         ) {
+
                             if (lessons.isEmpty()) {
+
                                 Box(
+
                                     modifier = Modifier
+
                                         .fillMaxWidth()
+
                                         .padding(vertical = 32.dp),
+
                                     contentAlignment = Alignment.Center
+
                                 ) {
+
                                     Text(
+
                                         text = "В этот день занятий нет 🎉",
+
                                         style = typography.bodyLarge,
+
                                         color = colorScheme.onSurfaceVariant
+
                                     )
+
                                 }
+
                             } else {
+
                                 lessonPairs.forEach { (first, second) ->
+
                                     first.Show(date)
+
                                     
+
                                     AnimatedEnter(showBreaks) {
+
                                         BreakInfo(
+
                                             (second.startTime.toSecondOfDay() - first.endTime.toSecondOfDay()) / 60,
+
                                             currentTime in first.startTime..second.startTime && currentDate == first.date
+
                                         )
+
                                     }
+
                                 }
+
                                 
+
                                 lastLesson?.Show(date)
+
                             }
+
                             
+
+                            val adsLevel by appValues.supportAdsLevel.collect()
+
+                            if (adsLevel == SupportAdsLevel.MAX) {
+
+                                Box(
+
+                                    modifier = Modifier
+
+                                        .fillMaxWidth()
+
+                                        .padding(top = 8.dp, bottom = 12.dp)
+
+                                        .clip(shapes.large),
+
+                                    contentAlignment = Alignment.Center
+
+                                ) {
+
+                                    YandexBannerAd(adUnitId = YandexAdsConfig.SCHEDULE_BANNER_ID)
+
+                                }
+
+                            }
+
+
+
                             Gap(132)
+
                         }
+
                     }
+
                 }
+
             }
+
         }
+
     }
+
 }
+
+
 
 enum class ActiveState {
+
     DISABLED, NEUTRAL, ACTIVE
+
 }
 
+
+
 @Composable
+
 fun StyledIconButton(
+
     icon: ImageVector,
+
     enabled: Boolean = true,
+
     active: ActiveState = ActiveState.NEUTRAL,
+
     onClick: () -> Unit
+
 ) {
+
     Box(
+
         contentAlignment = Alignment.Center,
+
         modifier = Modifier
+
             .fillMaxHeight()
+
             .aspectRatio(1f, true)
+
             .clip(CircleShape)
+
             .background(colorScheme.surfaceContainer)
+
             .bclick(enabled, onClick)
+
     ) {
+
         icon.Show(
+
             when (active) {
+
                 ActiveState.ACTIVE -> colorScheme.primary
+
                 ActiveState.NEUTRAL -> colorScheme.secondary
+
                 ActiveState.DISABLED -> colorScheme.secondary
+
             }
+
         )
+
     }
+
 }
 
+
+
 @Composable
+
 fun ScheduleCalendar(
+
     weeks: Map<Int, List<DaySchedule>>,
+
     weeksPagerState: PagerState,
+
     daysPagerState: PagerState,
+
     modifier: Modifier = Modifier,
+
     onClick: (day: Int) -> Unit
+
 ) {
+
     val schedules = weeks.values.flatten()
+
     
+
     HorizontalPager(
+
         weeksPagerState,
+
         key = { weeks.entries.elementAt(it).key },
+
         modifier = modifier.fillMaxWidth()
+
     ) {
+
         val thisWeek = weeks.entries.elementAt(it)
+
         
+
         SingleChoiceSegmentedButtonRow(
+
             space = (-4).dp,
+
             modifier = Modifier
+
                 .fillMaxWidth()
+
                 .padding(horizontal = 12.dp)
+
         ) {
+
             thisWeek.value.forEach { day ->
+
                 val realIndex = schedules.indexOfFirst { it.date == day.date }
+
                 val selected = daysPagerState.currentPage == realIndex
+
                 
+
                 val dayOfWeekStr = if (thisWeek.value.size > 2) {
+
                     DateTimeUtils.RUSSIAN_DAYS_SHORT.getOrElse(day.date.dayOfWeek.ordinal) { "" }
+
                 } else {
+
                     DateTimeUtils.RUSSIAN_DAYS_FULL.getOrElse(day.date.dayOfWeek.ordinal) { "" }
+
                 }
+
                 SegmentTab(
+
                     selected = selected,
+
                     index = realIndex,
+
                     count = schedules.size,
+
                     icon = null,
+
                     label = "${day.date.dayOfMonth}" + (if (thisWeek.value.size > 5) "\n" else " ") + dayOfWeekStr
+
                 ) {
+
                     onClick(realIndex)
+
                 }
+
             }
+
         }
+
     }
+
 }
+
+
 
 fun LocalDate.getWeekNumber(): Int {
+
     val jan1 = LocalDate(this.year, 1, 1)
+
     val jan1DayOfWeek = jan1.dayOfWeek.isoDayNumber
+
     return (this.dayOfYear + jan1DayOfWeek - 2) / 7 + 1
+
 }
+
+
 
 @Composable
+
 fun ErrorContent(
+
     error: Throwable,
+
     onCopyClick: () -> Unit
+
 ) {
+
     val stackTrace = remember(error) { error.stackTraceToString() }
+
     
+
     Column(
+
         modifier = Modifier
+
             .fillMaxWidth()
+
             .padding(horizontal = 24.dp, vertical = 16.dp)
+
     ) {
+
         Row(
+
             verticalAlignment = Alignment.CenterVertically
+
         ) {
+
             WHATIcons.Warn.Show(colorScheme.error, 28)
+
             Gap(12)
+
             Text(
+
                 text = "Ошибка загрузки",
+
                 style = typography.headlineSmall,
+
                 color = colorScheme.onSurface
+
             )
+
         }
+
         
+
         Gap(20)
+
         
+
         Text(
+
             text = error.message ?: "Произошла неизвестная ошибка",
+
             style = typography.bodyLarge,
+
             color = colorScheme.onSurfaceVariant
+
         )
+
         
+
         Gap(24)
+
         
+
         Text(
+
             text = "Полный стек-трейс",
+
             style = typography.titleMedium,
+
             color = colorScheme.primary
+
         )
+
         
+
         Gap(8)
+
         
+
         Box(
+
             modifier = Modifier
+
                 .fillMaxWidth()
+
                 .heightIn(max = 380.dp)
+
                 .background(
+
                     color = colorScheme.surfaceVariant,
+
                     shape = shapes.medium
+
                 )
+
                 .border(
+
                     width = 1.dp,
+
                     color = colorScheme.outlineVariant,
+
                     shape = shapes.medium
+
                 )
+
         ) {
+
             Text(
+
                 text = stackTrace,
+
                 modifier = Modifier
+
                     .verticalScroll(rememberScrollState())
+
                     .padding(16.dp),
+
                 style = typography.bodySmall.copy(
+
                     fontFamily = FontFamily.Monospace,
+
                     lineHeight = 18.sp
+
                 ),
+
                 color = colorScheme.onSurfaceVariant
+
             )
+
         }
+
         
+
         Gap(24)
+
         Button(
+
             onClick = onCopyClick,
+
             modifier = Modifier.fillMaxWidth(),
+
             contentPadding = PaddingValues(vertical = 14.dp)
+
         ) {
+
             Icons.Default.Share.Show(colorScheme.onPrimary, 20)
+
             Spacer(modifier = Modifier.width(10.dp))
+
             Text(
+
                 text = "Копировать стек-трейс",
+
                 style = typography.labelLarge
+
             )
+
         }
+
     }
+
 }
 
+
+
 private fun formatLastModified(dt: kotlinx.datetime.LocalDateTime?): String {
+
     if (dt == null) return "ранее"
+
     val day = dt.dayOfMonth
+
     val monthName = when (dt.monthNumber) {
+
         1 -> "янв"
+
         2 -> "фев"
+
         3 -> "мар"
+
         4 -> "апр"
+
         5 -> "мая"
+
         6 -> "июн"
+
         7 -> "июл"
+
         8 -> "авг"
+
         9 -> "сен"
+
         10 -> "окт"
+
         11 -> "ноя"
+
         12 -> "дек"
+
         else -> ""
+
     }
+
     val time = "${dt.hour.toString().padStart(2, '0')}:${dt.minute.toString().padStart(2, '0')}"
+
     return "$day $monthName, $time"
+
 }
+

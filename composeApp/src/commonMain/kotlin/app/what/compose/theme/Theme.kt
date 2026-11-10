@@ -1,4 +1,5 @@
 package app.what.compose.theme
+import androidx.compose.material3.ColorScheme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
@@ -87,7 +88,7 @@ fun getAppColorScheme(
     themeStyle: ThemeStyle?,
     themeColor: ULong?,
     isSystemDark: Boolean
-): androidx.compose.material3.ColorScheme {
+): ColorScheme {
     val isDarkTheme = when (themeType) {
         ThemeType.Dark -> true
         ThemeType.System -> isSystemDark

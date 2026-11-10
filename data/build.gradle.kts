@@ -69,6 +69,7 @@ kotlin {
             implementation(libs.koin.android)
             implementation(libs.koin.androidx.compose)
             implementation(libs.androidx.core.ktx)
+            implementation(libs.yandex.mobileads)
         }
         jvmMain.dependencies {
             implementation(libs.ktor.client.cio)

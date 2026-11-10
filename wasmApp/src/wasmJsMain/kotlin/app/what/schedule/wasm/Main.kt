@@ -1,6 +1,12 @@
 package app.what.schedule.wasm
 
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.LaunchedEffect
+import app.what.foundation.services.AppLogger.Companion.Auditor
+import app.what.foundation.utils.LogCat
+import app.what.foundation.utils.LogScope
+import app.what.foundation.utils.buildTag
+
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.platform.LocalTextInputService
@@ -164,11 +170,11 @@ private class WasmNetworkFetcher(
     private val options: Options
 ) : Fetcher {
     override suspend fun fetch(): FetchResult {
-        val navTag = app.what.foundation.utils.buildTag(app.what.foundation.utils.LogScope.NETWORK, app.what.foundation.utils.LogCat.NET)
-        app.what.foundation.services.AppLogger.Companion.Auditor.debug(navTag, "[WasmNetworkFetcher] Fetching: $url")
+        val navTag = buildTag(LogScope.NETWORK, LogCat.NET)
+        Auditor.debug(navTag, "[WasmNetworkFetcher] Fetching: $url")
         val response = client.get(url)
         val bytes = response.body<ByteArray>()
-        app.what.foundation.services.AppLogger.Companion.Auditor.debug(navTag, "[WasmNetworkFetcher] Status=${response.status}, bytes=${bytes.size} for $url")
+        Auditor.debug(navTag, "[WasmNetworkFetcher] Status=${response.status}, bytes=${bytes.size} for $url")
         if (bytes.isEmpty()) {
             throw IllegalStateException("Empty response body for image: $url")
         }
@@ -216,9 +222,9 @@ private class WasmSkiaDecoder(
     private val options: Options
 ) : Decoder {
     override suspend fun decode(): DecodeResult {
-        val navTag = app.what.foundation.utils.buildTag(app.what.foundation.utils.LogScope.NETWORK, app.what.foundation.utils.LogCat.NET)
+        val navTag = buildTag(LogScope.NETWORK, LogCat.NET)
         val bytes = source.source().use { it.readByteArray() }
-        app.what.foundation.services.AppLogger.Companion.Auditor.debug(navTag, "[WasmSkiaDecoder] Decoding image: ${bytes.size} bytes")
+        Auditor.debug(navTag, "[WasmSkiaDecoder] Decoding image: ${bytes.size} bytes")
 
         val skiaImage = SkiaImage.makeFromEncoded(bytes)
         val bitmap = try {
@@ -229,7 +235,7 @@ private class WasmSkiaDecoder(
             skiaImage.close()
         }
 
-        app.what.foundation.services.AppLogger.Companion.Auditor.debug(navTag, "[WasmSkiaDecoder] Successfully decoded full-res image: ${bitmap.width}x${bitmap.height}")
+        Auditor.debug(navTag, "[WasmSkiaDecoder] Successfully decoded full-res image: ${bitmap.width}x${bitmap.height}")
 
         return DecodeResult(
             image = bitmap.asImage(),
@@ -255,8 +261,8 @@ fun main() {
         modules(dataModule, mainFeatureModule)
     }
 
-    val navTag = app.what.foundation.utils.buildTag(app.what.foundation.utils.LogScope.CORE, app.what.foundation.utils.LogCat.NAV)
-    app.what.foundation.services.AppLogger.Companion.Auditor.debug(navTag, "Wasm main() started, Koin initialized")
+    val navTag = buildTag(LogScope.CORE, LogCat.NAV)
+    Auditor.debug(navTag, "Wasm main() started, Koin initialized")
 
     val imageHttpClient = HttpClient {
         install(HttpTimeout) {
@@ -306,7 +312,7 @@ fun main() {
         requestResize = null,
         applyDefaultStyles = true,
         content = {
-            androidx.compose.runtime.LaunchedEffect(Unit) {
+            LaunchedEffect(Unit) {
                 document.getElementById("app-loader")?.classList?.add("loaded")
             }
             if (mobileInputService != null) {

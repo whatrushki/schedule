@@ -1,4 +1,6 @@
 package app.what.schedule.features.settings.presentation.components
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.platform.UriHandler
 
 import app.what.foundation.services.LocalNotificationService
 import app.what.foundation.services.AppNotification
@@ -17,16 +19,23 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.rounded.ArrowForward
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.rounded.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.shapes
 import androidx.compose.material3.MaterialTheme.typography
@@ -68,7 +77,9 @@ import kotlin.math.sin
 @Composable
 fun AboutAppContent(
     appValues: AppValues,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onClose: (() -> Unit)? = null,
+    onFeedbackClick: (() -> Unit)? = null
 ) {
     val devSettingsUnlocked by appValues.devSettingsUnlocked.collect()
     val uriHandler = LocalUriHandler.current
@@ -96,45 +107,47 @@ fun AboutAppContent(
     }
     
     Box(
-        contentAlignment = Alignment.Center,
         modifier = modifier
-            .height(IntrinsicSize.Min)
             .fillMaxWidth()
-            .clip(shapes.medium)
+            .wrapContentHeight()
+            .background(colorScheme.surface)
     ) {
-        val layer1 = colorScheme.primaryContainer to colorScheme.tertiaryContainer
-        val layer2 = colorScheme.secondaryContainer to colorScheme.surfaceContainer
+        val layer1 = colorScheme.primary.copy(alpha = 0.16f) to colorScheme.tertiary.copy(alpha = 0.16f)
+        val layer2 = colorScheme.tertiary.copy(alpha = 0.12f) to colorScheme.primaryContainer.copy(alpha = 0.18f)
         
-        AdvancedLiquidBackground(layers = listOf(layer1, layer2))
-        
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .background(colorScheme.surface.copy(alpha = 0.65f))
-        )
+        Box(modifier = Modifier.matchParentSize()) {
+            AdvancedLiquidBackground(
+                layers = listOf(layer1, layer2),
+                modifier = Modifier.fillMaxSize()
+            )
+        }
         
         Column(
-            modifier = Modifier.padding(12.dp, 24.dp, 12.dp, 12.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 16.dp, end = 16.dp, top = 22.dp, bottom = 16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
             DevProfile(
                 avatarUrl = AppConstants.APP_OWNER_GITHUB_AVATAR_URL,
                 name = AppConstants.APP_OWNER_GITHUB_NICKNAME,
                 role = AppConstants.APP_OWNER_ROLE
             )
-            
+                
             Row(
                 horizontalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 SocialChip(
                     icon = WHATIcons.ImageRoller,
                     text = "GitHub",
+                    iconSize = 18.dp,
                     onClick = { uriHandler.openUri(AppConstants.APP_OWNER_GITHUB_URL) }
                 )
                 SocialChip(
                     icon = WHATIcons.Telegram,
                     text = "Telegram",
+                    iconSize = 22.dp,
                     color = Color(0xFF2AABEE),
                     onClick = { uriHandler.openUri(AppConstants.APP_OWNER_TELEGRAM_URL) }
                 )
@@ -147,36 +160,34 @@ fun AboutAppContent(
                 uriHandler = uriHandler
             )
             
-            JoinTeamCard(
-                onClick = { uriHandler.openUri(AppConstants.APP_OWNER_TELEGRAM_URL) }
+            FeedbackCard(
+                onClick = { onFeedbackClick?.invoke() }
             )
             
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(
-                    text = "schedule v${AppConstants.VERSION_NAME}",
-                    style = typography.labelMedium,
-                    color = colorScheme.secondary,
-                    modifier = Modifier
-                        .clip(CircleShape)
-                        .bclick(devSettingsUnlocked == false) {
-                            versionClickCount++
-                            if (versionClickCount in 3..9 step 3) {
-                                notificationService?.notify(
-                                    AppNotification(
-                                        title = "",
-                                        message = "${10 - versionClickCount}...",
-                                        urgency = Event.Urgency.LOW
-                                    )
+            Text(
+                text = "schedule v${AppConstants.VERSION_NAME}",
+                style = typography.labelMedium,
+                color = colorScheme.secondary,
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .bclick(devSettingsUnlocked == false) {
+                        versionClickCount++
+                        if (versionClickCount in 3..9 step 3) {
+                            notificationService?.notify(
+                                AppNotification(
+                                    title = "",
+                                    message = "${10 - versionClickCount}...",
+                                    urgency = Event.Urgency.LOW
                                 )
-                            }
+                            )
                         }
-                        .padding(8.dp)
-                )
-            }
+                    }
+                    .padding(horizontal = 16.dp, vertical = 8.dp)
+            )
         }
         
         if (showFireworks) {
-            SimpleFireworks(modifier = Modifier.fillMaxSize())
+            SimpleFireworks(modifier = Modifier.matchParentSize())
         }
     }
 }
@@ -221,6 +232,7 @@ private fun DevProfile(avatarUrl: String, name: String, role: String) {
 private fun SocialChip(
     icon: ImageVector,
     text: String,
+    iconSize: Dp = 18.dp,
     color: Color = colorScheme.primary,
     onClick: () -> Unit
 ) {
@@ -238,7 +250,7 @@ private fun SocialChip(
                 imageVector = icon,
                 contentDescription = null,
                 tint = color,
-                modifier = Modifier.size(18.dp)
+                modifier = Modifier.size(iconSize)
             )
             Gap(8)
             Text(
@@ -256,7 +268,7 @@ private fun RepoStatsCard(
     owner: String,
     repo: String,
     repoUrl: String,
-    uriHandler: androidx.compose.ui.platform.UriHandler
+    uriHandler: UriHandler
 ) {
     val stars = rememberGithubStars(owner, repo)
     
@@ -299,7 +311,7 @@ private fun RepoStatsCard(
 }
 
 @Composable
-private fun JoinTeamCard(onClick: () -> Unit) {
+private fun FeedbackCard(onClick: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -310,21 +322,23 @@ private fun JoinTeamCard(onClick: () -> Unit) {
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        Column {
+        Column(modifier = Modifier.weight(1f)) {
             Text(
-                "Хотите помочь проекту?",
+                "Обратная связь",
                 style = typography.titleSmall,
                 color = colorScheme.onPrimary,
                 fontWeight = FontWeight.Bold
             )
+            Gap(2)
             Text(
-                "Напишите мне в Telegram",
+                "Сообщить об ошибке или идее",
                 style = typography.bodySmall,
                 color = colorScheme.onPrimary.copy(alpha = 0.8f)
             )
         }
+        Gap(12)
         Icon(
-            imageVector = Icons.AutoMirrored.Rounded.ArrowForward,
+            imageVector = Icons.AutoMirrored.Rounded.KeyboardArrowRight,
             contentDescription = null,
             tint = colorScheme.onPrimary
         )

@@ -1,4 +1,5 @@
 package app.what.schedule.data.remote.providers.rksi
+import app.what.schedule.rksi.parser.XlsxReader
 
 import app.what.data.adapters.AdaptedNewsService
 import app.what.data.adapters.AdaptedScheduleService
@@ -32,7 +33,7 @@ class RKSI(
         override fun create(): Institution {
             val client: HttpClient = get()
             val fileCache: FileCache = get()
-            val xlsxReader = getKoin().getOrNull<app.what.schedule.rksi.parser.XlsxReader>()
+            val xlsxReader = getKoin().getOrNull<XlsxReader>()
             val provider = RKSIProvider(client, fileCache, xlsxReader = xlsxReader)
             val cloudClient = CloudScheduleClient(metadata.id, client)
             return RKSI(provider, cloudClient)

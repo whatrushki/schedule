@@ -1,4 +1,4 @@
-﻿package app.what.schedule.notifications
+package app.what.schedule.notifications
 
 import android.content.BroadcastReceiver
 import android.content.Context

@@ -1,0 +1,55 @@
+name: Deploy WHAT Schedule Bot
+
+on:
+  release:
+    types: [ published ]
+  push:
+    branches:
+      - master
+    paths:
+      - 'bot/**'
+      - '.github/workflows/deploy-bot.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy_schedule_bot:
+    name: Deploy Schedule Bot (Cloudflare Worker)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+          cache-dependency-path: 'bot/package-lock.json'
+
+      - name: Install dependencies
+        working-directory: bot
+        run: npm ci
+
+      - name: Typecheck
+        working-directory: bot
+        run: npm run typecheck
+
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: 'bot'
+          secrets: |
+            TELEGRAM_BOT_TOKEN
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN_SCHEDULE || '8703598461:AAFXd-eF2T_2Qey5jPJ3mgWtxayNQkiHfm8' }}
+
+      - name: Register Telegram Webhook
+        if: success()
+        run: |
+          BOT_TOKEN="${{ secrets.TELEGRAM_BOT_TOKEN_SCHEDULE || '8703598461:AAFXd-eF2T_2Qey5jPJ3mgWtxayNQkiHfm8' }}"
+          WORKER_URL="https://what-schedule-bot.whatrushki-tech.workers.dev/api/telegram/webhook"
+          echo "Registering webhook: $WORKER_URL"
+          curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/setWebhook" \
+            -d "url=${WORKER_URL}"

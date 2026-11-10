@@ -1,4 +1,5 @@
 package app.what.schedule.data.local.database
+import app.what.schedule.data.remote.utils.currentLocalDate
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -80,11 +81,14 @@ interface RequestsDAO {
     
     
     @Query("DELETE FROM requests WHERE requests.createdAt < :currentDate")
-    suspend fun deleteOld(currentDate: LocalDate = app.what.schedule.data.remote.utils.currentLocalDate())
+    suspend fun deleteOld(currentDate: LocalDate = currentLocalDate())
     
     @Delete
     suspend fun delete(request: RequestDBO)
     
+    @Query("DELETE FROM requests WHERE institutionId = :institutionId AND `query` = :query AND id < :newRequestId")
+    suspend fun deleteOldRequests(institutionId: String, query: String, newRequestId: Long)
+
     @Query("DELETE FROM requests WHERE institutionId = :institutionId AND `query` = :query")
     suspend fun deleteAll(institutionId: String, query: String)
 
@@ -106,6 +110,9 @@ interface DayScheduleDAO {
     @Delete
     suspend fun delete(daySchedule: DayScheduleDBO)
 
+    @Query("DELETE FROM days WHERE fromRequest NOT IN (SELECT id FROM requests)")
+    suspend fun deleteOrphans()
+
     @Query("DELETE FROM days")
     suspend fun clearAll()
 }
@@ -124,6 +131,9 @@ interface LessonDAO {
     @Delete
     suspend fun delete(lesson: LessonDBO)
 
+    @Query("DELETE FROM lessons WHERE fromDay NOT IN (SELECT id FROM days)")
+    suspend fun deleteOrphans()
+
     @Query("DELETE FROM lessons")
     suspend fun clearAll()
 }
@@ -141,6 +151,9 @@ interface OtUnitDAO {
     
     @Delete
     suspend fun delete(unit: OneTimeUnitDBO)
+
+    @Query("DELETE FROM ot_units WHERE lessonId NOT IN (SELECT id FROM lessons)")
+    suspend fun deleteOrphans()
 
     @Query("DELETE FROM ot_units")
     suspend fun clearAll()

@@ -1,4 +1,5 @@
 package app.what.schedule.notifications
+import app.what.schedule.notifications.university.UniversityNotificationManager
 
 import android.content.Context
 import androidx.glance.appwidget.updateAll
@@ -165,7 +166,7 @@ class ScheduleCheckWorker(
 
     private suspend fun checkUniversityNotifications(tag: String) {
         try {
-            val universityNotificationManager: app.what.schedule.notifications.university.UniversityNotificationManager? = getKoin().getOrNull()
+            val universityNotificationManager: UniversityNotificationManager? = getKoin().getOrNull()
             universityNotificationManager?.checkAll(applicationContext, tag)
         } catch (e: Exception) {
             Auditor.debug(tag, "ScheduleCheckWorker: ошибка проверки уведомлений университета: ${e.message}")

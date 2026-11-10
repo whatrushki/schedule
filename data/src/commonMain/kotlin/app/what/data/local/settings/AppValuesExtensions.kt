@@ -7,6 +7,7 @@ import app.what.foundation.data.settings.types.asSwitch
 import app.what.schedule.data.local.settings.AppValues
 import app.what.schedule.data.local.settings.NotificationPeriod
 import app.what.schedule.data.local.settings.SubgroupPreference
+import app.what.schedule.data.local.settings.SupportAdsLevel
 import app.what.schedule.data.local.settings.ThemeStyle
 import app.what.schedule.data.local.settings.ThemeType
 
@@ -36,6 +37,7 @@ fun AppValues.findSettingComponent(key: String, modifier: Modifier = Modifier): 
         themeStyle.key -> themeStyle.asSingleChoice(ThemeStyle.entries.toTypedArray(), onDisplay = { it.displayName })
         defaultSubgroup.key -> defaultSubgroup.asSingleChoice(SubgroupPreference.entries.toTypedArray(), onDisplay = { it.displayName })
         replacementNotificationsPeriod.key -> replacementNotificationsPeriod.asSingleChoice(NotificationPeriod.entries.toTypedArray(), onDisplay = { it.displayName })
+        supportAdsLevel.key -> supportAdsLevel.asSingleChoice(SupportAdsLevel.entries.toTypedArray(), onDisplay = { it.displayName })
 
         else -> null
     }

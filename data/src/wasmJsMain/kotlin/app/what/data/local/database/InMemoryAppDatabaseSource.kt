@@ -34,6 +34,11 @@ private class InMemoryRequestsDAO(private val db: InMemoryAppDatabaseSource) : R
 
     override suspend fun selectAll(): List<RequestDBO> = db.requests.values.toList()
 
+    override suspend fun deleteOldRequests(institutionId: String, query: String, newRequestId: Long) {
+        val toRemove = db.requests.filterValues { it.institutionId == institutionId && it.query == query && it.id != newRequestId }.keys
+        toRemove.forEach { db.requests.remove(it) }
+    }
+
     override suspend fun selectLastOfInstitution(institutionId: String): RequestDBO? =
         db.requests.values.filter { it.institutionId == institutionId }.maxByOrNull { it.id }
 
@@ -107,6 +112,12 @@ private class InMemoryDayScheduleDAO(private val db: InMemoryAppDatabaseSource) 
         db.daySchedules[daySchedule.id] = daySchedule
     }
 
+    override suspend fun deleteOrphans() {
+        val validRequestIds = db.requests.keys
+        val toRemove = db.daySchedules.filterValues { it.requestId !in validRequestIds }.keys
+        toRemove.forEach { db.daySchedules.remove(it) }
+    }
+
     override suspend fun delete(daySchedule: DayScheduleDBO) {
         db.daySchedules.remove(daySchedule.id)
     }
@@ -133,6 +144,8 @@ private class InMemoryLessonDAO : LessonDAO {
         lessons[lesson.id] = lesson
     }
 
+    override suspend fun deleteOrphans() {}
+
     override suspend fun delete(lesson: LessonDBO) {
         lessons.remove(lesson.id)
     }
@@ -158,6 +171,8 @@ private class InMemoryOtUnitDAO : OtUnitDAO {
     override suspend fun update(unit: OneTimeUnitDBO) {
         units[unit.id] = unit
     }
+
+    override suspend fun deleteOrphans() {}
 
     override suspend fun delete(unit: OneTimeUnitDBO) {
         units.remove(unit.id)

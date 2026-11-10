@@ -5,6 +5,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import app.what.domain.models.ScheduleSearch
+import app.what.data.remote.CloudScheduleClient
+import app.what.foundation.utils.currentTimeMillis
+
 import app.what.domain.repositories.NewsRepository
 import app.what.domain.repositories.ScheduleRepository
 import app.what.foundation.healthcheck.model.HealthCategory
@@ -61,7 +64,7 @@ fun HealthCheckPane(
 
                     override suspend fun run(): HealthResult {
                         return try {
-                            val testKey = "healthcheck_test_${app.what.foundation.utils.currentTimeMillis()}"
+                            val testKey = "healthcheck_test_${currentTimeMillis()}"
                             appValues.userId.set(appValues.userId.get() ?: "dev_user")
                             val read = appValues.userId.get()
                             if (!read.isNullOrEmpty()) {
@@ -121,10 +124,10 @@ fun HealthCheckPane(
 
                     override suspend fun run(): HealthResult {
                         return try {
-                            val start = app.what.foundation.utils.currentTimeMillis()
+                            val start = currentTimeMillis()
                             val currentInst = appValues.institution.get()
                             val groups = scheduleRepository.getGroups(currentInst, forceReload = false)
-                            val duration = app.what.foundation.utils.currentTimeMillis() - start
+                            val duration = currentTimeMillis() - start
                             if (groups.isNotEmpty()) {
                                 HealthResult.Passed(
                                     message = "Успешно получено ${groups.size} групп (${duration}ms)",
@@ -158,9 +161,9 @@ fun HealthCheckPane(
 
                     override suspend fun run(): HealthResult {
                         return try {
-                            val start = app.what.foundation.utils.currentTimeMillis()
+                            val start = currentTimeMillis()
                             val news = newsRepository.getNews(1)
-                            val duration = app.what.foundation.utils.currentTimeMillis() - start
+                            val duration = currentTimeMillis() - start
                             if (news.isNotEmpty()) {
                                 HealthResult.Passed(
                                     message = "Успешно получено ${news.size} новостей (${duration}ms)",
@@ -196,7 +199,7 @@ fun HealthCheckPane(
                     override suspend fun run(): HealthResult {
                         return try {
                             val currentInst = appValues.institution.get() ?: "rksi"
-                            val cloudClient = app.what.data.remote.CloudScheduleClient(currentInst, httpClient)
+                            val cloudClient = CloudScheduleClient(currentInst, httpClient)
                             val meta = cloudClient.getMeta()
                             if (meta == null) {
                                 HealthResult.Warning(message = "Метаданные синхронизации для $currentInst не найдены в gh-pages")

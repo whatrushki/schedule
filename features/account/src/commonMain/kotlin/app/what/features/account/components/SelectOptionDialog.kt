@@ -1,4 +1,5 @@
 package app.what.features.account.components
+import androidx.compose.material3.MaterialTheme.typography
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -121,7 +122,7 @@ fun OptionSelectionDialog(
         ) {
             Text(
                 title,
-                style = androidx.compose.material3.MaterialTheme.typography.titleMedium,
+                style = typography.titleMedium,
                 fontWeight = FontWeight.Bold,
                 color = colorScheme.onSurface,
                 maxLines = 1,

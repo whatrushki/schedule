@@ -7,6 +7,7 @@ kotlin {
         commonMain.dependencies {
             implementation(libs.qrose)
             implementation(libs.materialKolor)
+            implementation(libs.foundation.delivery)
         }
     }
 }

@@ -1,27 +1,46 @@
 package app.what.data.di
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import androidx.room.Room
+import app.what.data.cache.AndroidFileCache
 import app.what.data.libs.FileManager
 import app.what.data.libs.GoogleDriveParser
+import app.what.data.managers.CacheStorageManager
+import app.what.data.managers.CacheStorageManagerImpl
+import app.what.data.managers.NoOpPlatformFileStorageCleaner
+import app.what.data.managers.PlatformFileStorageCleaner
+import app.what.data.network.traffic.AndroidNetworkTypeProvider
+import app.what.data.network.traffic.NetworkTrafficManager
+import app.what.data.network.traffic.NetworkTrafficManagerImpl
+import app.what.data.network.traffic.NetworkTypeProvider
+import app.what.data.network.traffic.TrafficTrackerPlugin
+import app.what.data.repositories.NewsRepositoryImpl
+import app.what.data.repositories.ScheduleRepositoryImpl
 import app.what.domain.repositories.NewsRepository
 import app.what.domain.repositories.ScheduleRepository
-import app.what.foundation.data.settings.PreferenceStorage
-import app.what.foundation.services.AppLogger.Companion.Auditor
-import app.what.schedule.data.local.database.AppDatabase
-import app.what.schedule.data.local.settings.AppValues
-import app.what.schedule.data.remote.api.InstitutionManager
-import app.what.data.repositories.ScheduleRepositoryImpl
-import app.what.data.repositories.NewsRepositoryImpl
-import app.what.schedule.core.cache.FileCache
-import app.what.data.cache.AndroidFileCache
-import app.what.schedule.dgtu.DGTUAccountClient
-import app.what.foundation.utils.LogCat
-import app.what.foundation.utils.LogScope
-import app.what.foundation.utils.buildTag
+import app.what.domain.services.NetworkConnectivity
 import app.what.foundation.data.settings.AndroidKeyValueStorage
 import app.what.foundation.data.settings.AndroidPreferenceEncryptor
 import app.what.foundation.data.settings.KeyValueStorage
 import app.what.foundation.data.settings.PreferenceEncryptor
+import app.what.foundation.data.settings.PreferenceStorage
+import app.what.foundation.network.monitor.NetworkMonitorPlugin
+import app.what.foundation.services.AppLogger.Companion.Auditor
+import app.what.foundation.utils.LogCat
+import app.what.foundation.utils.LogScope
+import app.what.foundation.utils.buildTag
+import app.what.schedule.core.cache.FileCache
+import app.what.schedule.data.local.database.AppDatabase
+import app.what.schedule.data.local.database.AppDatabaseSource
+import app.what.schedule.data.local.settings.AppValues
+import app.what.schedule.data.remote.api.InstitutionManager
+import app.what.schedule.dgtu.DGTUAccountClient
+import app.what.schedule.rksi.RKSIAccountClient
+import app.what.schedule.rksi.parser.JvmXlsxReader
+import app.what.schedule.rksi.parser.XlsxReader
+import app.what.schedule.sfedu.grade.SfeduGradeClient
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.HttpRequestRetry
@@ -41,6 +60,9 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.bind
 import org.koin.dsl.module
+import java.net.ConnectException
+import java.net.SocketTimeoutException
+import java.net.UnknownHostException
 import java.security.cert.X509Certificate
 import javax.net.ssl.X509TrustManager
 
@@ -48,33 +70,33 @@ val dataModule = module {
     single<CoroutineScope> { CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate) }
     
     single<KeyValueStorage> {
-        val prefs = androidContext().getSharedPreferences("MY_APP_PREFERENCES", android.content.Context.MODE_PRIVATE)
+        val prefs = androidContext().getSharedPreferences("MY_APP_PREFERENCES", Context.MODE_PRIVATE)
         AndroidKeyValueStorage(prefs)
     }
     single<PreferenceEncryptor> { AndroidPreferenceEncryptor() }
     single { AppValues(get<KeyValueStorage>(), get<PreferenceEncryptor>()) } bind PreferenceStorage::class
-    single<app.what.data.network.traffic.NetworkTypeProvider> {
-        app.what.data.network.traffic.AndroidNetworkTypeProvider(androidContext())
+    single<NetworkTypeProvider> {
+        AndroidNetworkTypeProvider(androidContext())
     }
-    single<app.what.data.network.traffic.NetworkTrafficManager> {
-        app.what.data.network.traffic.NetworkTrafficManagerImpl(get(), get())
+    single<NetworkTrafficManager> {
+        NetworkTrafficManagerImpl(get(), get())
     }
     singleOf(::GoogleDriveParser)
     singleOf(::FileManager)
     single<FileCache> { AndroidFileCache(androidContext()) }
     single { DGTUAccountClient(get()) }
-    single { app.what.schedule.rksi.RKSIAccountClient(get()) }
-    single { app.what.schedule.sfedu.grade.SfeduGradeClient(get()) }
+    single { RKSIAccountClient(get()) }
+    single { SfeduGradeClient(get()) }
     single { InstitutionManager(get(), get()) }
-    single<app.what.schedule.rksi.parser.XlsxReader> { app.what.schedule.rksi.parser.JvmXlsxReader() }
+    single<XlsxReader> { JvmXlsxReader() }
     
-    single<app.what.domain.services.NetworkConnectivity> {
-        object : app.what.domain.services.NetworkConnectivity {
-            private val cm = androidContext().getSystemService(android.content.Context.CONNECTIVITY_SERVICE) as? android.net.ConnectivityManager
+    single<NetworkConnectivity> {
+        object : NetworkConnectivity {
+            private val cm = androidContext().getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
             override fun isConnected(): Boolean {
                 val network = cm?.activeNetwork ?: return false
                 val caps = cm.getNetworkCapabilities(network) ?: return false
-                return caps.hasCapability(android.net.NetworkCapabilities.NET_CAPABILITY_INTERNET)
+                return caps.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
             }
         }
     }
@@ -95,7 +117,7 @@ val dataModule = module {
         )
             .fallbackToDestructiveMigration(true)
             .build()
-    } bind app.what.schedule.data.local.database.AppDatabaseSource::class
+    } bind AppDatabaseSource::class
     
     single {
         HttpClient(CIO) {
@@ -103,9 +125,9 @@ val dataModule = module {
             install(HttpRequestRetry) {
                 maxRetries = 3
                 retryOnExceptionIf { _, cause ->
-                    cause is java.net.UnknownHostException ||
-                            cause is java.net.ConnectException ||
-                            cause is java.net.SocketTimeoutException
+                    cause is UnknownHostException ||
+                            cause is ConnectException ||
+                            cause is SocketTimeoutException
                 }
                 retryOnServerErrors(maxRetries = 2)
                 exponentialDelay(baseDelayMs = 300L, maxDelayMs = 4000L)
@@ -119,11 +141,11 @@ val dataModule = module {
                 }
             }
             
-            install(app.what.foundation.network.monitor.NetworkMonitorPlugin)
+            install(NetworkMonitorPlugin)
             
-            val trafficManager = get<app.what.data.network.traffic.NetworkTrafficManager>()
-            val networkTypeProvider = get<app.what.data.network.traffic.NetworkTypeProvider>()
-            install(app.what.data.network.traffic.TrafficTrackerPlugin) {
+            val trafficManager = get<NetworkTrafficManager>()
+            val networkTypeProvider = get<NetworkTypeProvider>()
+            install(TrafficTrackerPlugin) {
                 this.trafficManager = trafficManager
                 this.networkTypeProvider = networkTypeProvider
             }
@@ -167,12 +189,12 @@ val dataModule = module {
         }
     }
 
-    single<app.what.data.managers.CacheStorageManager> {
-        app.what.data.managers.CacheStorageManagerImpl(
+    single<CacheStorageManager> {
+        CacheStorageManagerImpl(
             scheduleRepository = get(),
             appValues = get(),
-            platformCleaner = getOrNull<app.what.data.managers.PlatformFileStorageCleaner>()
-                ?: app.what.data.managers.NoOpPlatformFileStorageCleaner(),
+            platformCleaner = getOrNull<PlatformFileStorageCleaner>()
+                ?: NoOpPlatformFileStorageCleaner(),
             storage = getOrNull<KeyValueStorage>()
         )
     }

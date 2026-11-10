@@ -1,4 +1,6 @@
 package app.what.schedule.features.insts.rksi
+import app.what.schedule.features.news.navigation.NewsProvider
+import app.what.schedule.features.newsDetail.navigation.NewsDetailProvider
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -82,10 +84,10 @@ fun RksiAccountContent(
                 )
             )
 
-            is RksiAction.OpenNews -> midNav.c.navigate(app.what.schedule.features.news.navigation.NewsProvider)
+            is RksiAction.OpenNews -> midNav.c.navigate(NewsProvider)
 
             is RksiAction.OpenNewDetail -> globalNav.c.navigate(
-                app.what.schedule.features.newsDetail.navigation.NewsDetailProvider(
+                NewsDetailProvider(
                     ac.id, ac.url, ac.bannerUrl, ac.title, ac.description
                 )
             )

@@ -1,4 +1,5 @@
 package app.what.schedule.features.insts.rksi.presentation.pages
+import androidx.compose.material3.MaterialTheme.typography
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -126,7 +127,7 @@ internal fun RksiProfileEditorDialog(
             }
             Text(
                 "Редактирование анкеты",
-                style = androidx.compose.material3.MaterialTheme.typography.titleLarge,
+                style = typography.titleLarge,
                 fontWeight = FontWeight.Bold,
                 color = colorScheme.onSurface,
                 modifier = Modifier.padding(start = 8.dp)
@@ -169,37 +170,41 @@ internal fun RksiProfileEditorDialog(
                 // Social Status Section
                 if (s.socialStatusOptions.isNotEmpty()) {
                     item {
-                        Text(
-                            "Социальный статус",
-                            fontSize = 18.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = colorScheme.onSurface,
-                            modifier = Modifier.padding(top = 8.dp)
-                        )
-                    }
-
-                    items(s.socialStatusOptions) { opt ->
-                        val isChecked = checkedSocialIds[opt.id] ?: opt.isChecked
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clip(shapes.medium)
-                                .bclick {
-                                    checkedSocialIds[opt.id] = !isChecked
-                                }
-                                .padding(vertical = 4.dp),
-                            verticalAlignment = Alignment.CenterVertically
+                        Column(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalArrangement = Arrangement.spacedBy(2.dp)
                         ) {
-                            Checkbox(
-                                checked = isChecked,
-                                onCheckedChange = { checkedSocialIds[opt.id] = it }
-                            )
-                            Gap(8)
                             Text(
-                                opt.title,
-                                fontSize = 14.sp,
-                                color = colorScheme.onSurface
+                                "Социальный статус",
+                                fontSize = 18.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = colorScheme.onSurface,
+                                modifier = Modifier.padding(top = 8.dp, bottom = 4.dp)
                             )
+                            s.socialStatusOptions.forEach { opt ->
+                                val isChecked = checkedSocialIds[opt.id] ?: opt.isChecked
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .clip(shapes.medium)
+                                        .bclick {
+                                            checkedSocialIds[opt.id] = !isChecked
+                                        }
+                                        .padding(vertical = 4.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Checkbox(
+                                        checked = isChecked,
+                                        onCheckedChange = { checkedSocialIds[opt.id] = it }
+                                    )
+                                    Gap(8)
+                                    Text(
+                                        opt.title,
+                                        fontSize = 14.sp,
+                                        color = colorScheme.onSurface
+                                    )
+                                }
+                            }
                         }
                     }
                 }

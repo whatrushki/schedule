@@ -1,4 +1,7 @@
 package app.what.schedule.features.news.navigation
+import app.what.foundation.utils.buildTag
+import app.what.foundation.utils.LogScope
+import app.what.foundation.utils.LogCat
 
 import app.what.navigation.core.NavProvider
 import app.what.navigation.core.Registry
@@ -15,7 +18,7 @@ import kotlinx.serialization.Serializable
 object NewsProvider : NavProvider()
 
 val newsRegistry: Registry = {
-    val navTag = app.what.foundation.utils.buildTag(app.what.foundation.utils.LogScope.CORE, app.what.foundation.utils.LogCat.NAV)
+    val navTag = buildTag(LogScope.CORE, LogCat.NAV)
     Auditor.debug(navTag, "newsRegistry executing")
     composable<NewsProvider> {
         val screen = remember { NewsFeature(NewsProvider) }

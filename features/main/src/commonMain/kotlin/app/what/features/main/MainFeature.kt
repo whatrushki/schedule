@@ -58,6 +58,21 @@ import app.what.schedule.features.settings.navigation.settingsRegistry
 import app.what.foundation.ui.icons.WHATIcons
 import app.what.foundation.ui.icons.filled.FrameBug
 import app.what.foundation.ui.icons.filled.News
+import app.what.domain.constants.AppConstants
+import app.what.domain.services.ReleaseNotes
+import app.what.features.onboarding.presentation.UpdateOnboardingContent
+import app.what.features.onboarding.presentation.loadBundledReleaseNotes
+import app.what.foundation.services.auto_update.GitHubUpdateService
+import app.what.foundation.ui.controllers.rememberDialogController
+import app.what.schedule.features.insts.dgtu.DgtuAccountContent
+import app.what.schedule.features.insts.dgtu.DgtuFeature
+import app.what.schedule.features.insts.rksi.RksiAccountContent
+import app.what.schedule.features.insts.rksi.RksiFeature
+import app.what.schedule.features.insts.sfedu.SfeduAccountContent
+import app.what.schedule.features.insts.sfedu.SfeduFeature
+import app.what.schedule.ui.components.Fallback
+import kotlinx.coroutines.withTimeoutOrNull
+
 import kotlinx.coroutines.flow.drop
 import app.what.foundation.ui.icons.filled.Person
 import app.what.foundation.utils.Analytics
@@ -102,24 +117,24 @@ class MainFeature(
             val ui = mainState.ui
             Auditor.debug(navTag, "AccountProvider composable entered: hasProfilePage=${mainState.hasProfilePage}, ui=$ui")
             when (val account = ui) {
-                is app.what.schedule.features.insts.rksi.RksiFeature -> {
+                is RksiFeature -> {
                     Auditor.debug(navTag, "Rendering RksiFeature directly: invoking RksiAccountContent...")
-                    app.what.schedule.features.insts.rksi.RksiAccountContent(Modifier.fillMaxSize())
+                    RksiAccountContent(Modifier.fillMaxSize())
                     Auditor.debug(navTag, "RksiAccountContent returned!")
                 }
-                is app.what.schedule.features.insts.dgtu.DgtuFeature -> {
+                is DgtuFeature -> {
                     Auditor.debug(navTag, "Rendering DgtuFeature directly: invoking DgtuAccountContent...")
-                    app.what.schedule.features.insts.dgtu.DgtuAccountContent(Modifier.fillMaxSize())
+                    DgtuAccountContent(Modifier.fillMaxSize())
                     Auditor.debug(navTag, "DgtuAccountContent returned!")
                 }
-                is app.what.schedule.features.insts.sfedu.SfeduFeature -> {
+                is SfeduFeature -> {
                     Auditor.debug(navTag, "Rendering SfeduFeature directly: invoking SfeduAccountContent...")
-                    app.what.schedule.features.insts.sfedu.SfeduAccountContent(Modifier.fillMaxSize())
+                    SfeduAccountContent(Modifier.fillMaxSize())
                     Auditor.debug(navTag, "SfeduAccountContent returned!")
                 }
                 null -> {
                     Auditor.debug(navTag, "Rendering Fallback (ui is null) for AccountProvider")
-                    app.what.schedule.ui.components.Fallback(
+                    Fallback(
                         text = "Профиль недоступен для выбранного учебного заведения",
                         modifier = Modifier.fillMaxSize()
                     )
@@ -183,24 +198,24 @@ class MainFeature(
                 }
             }
         }
-        val dialog = app.what.foundation.ui.controllers.rememberDialogController()
+        val dialog = rememberDialogController()
 
         LaunchedEffect(Unit) {
             val lastSeen = appValues.lastSeenVersion.get() ?: ""
-            val currentVersion = app.what.domain.constants.AppConstants.VERSION_NAME
+            val currentVersion = AppConstants.VERSION_NAME
             val isFirstLaunch = appValues.isFirstLaunch.get() ?: true
             Auditor.debug(navTag, "Onboarding check: isFirstLaunch=$isFirstLaunch, lastSeen=$lastSeen, currentVersion=$currentVersion")
 
             if (!isFirstLaunch && lastSeen.isNotBlank() && lastSeen != currentVersion) {
-                val bundledNotes = app.what.features.onboarding.presentation.loadBundledReleaseNotes()
+                val bundledNotes = loadBundledReleaseNotes()
                 val cachedJson = appValues.cachedReleaseNotes.get()
-                val cachedNotes = cachedJson?.let { app.what.domain.services.ReleaseNotes.fromJson(it) }
+                val cachedNotes = cachedJson?.let { ReleaseNotes.fromJson(it) }
 
                 // Пытаемся получить объединенные заметки через GitHubUpdateService с таймаутом
                 val fetchedMergedNotes = try {
-                    kotlinx.coroutines.withTimeoutOrNull(2500) {
-                        val gitHubService = getKoin().getOrNull<app.what.foundation.services.auto_update.GitHubUpdateService>()
-                            ?: app.what.foundation.services.auto_update.GitHubUpdateService(getKoin().get())
+                    withTimeoutOrNull(2500) {
+                        val gitHubService = getKoin().getOrNull<GitHubUpdateService>()
+                            ?: GitHubUpdateService(getKoin().get())
                         gitHubService.fetchMergedReleaseNotes(
                             owner = "whatrushki",
                             repo = "schedule",
@@ -223,7 +238,7 @@ class MainFeature(
                 Auditor.debug(navTag, "releaseNotes resolved: ${releaseNotes != null}")
                 if (releaseNotes != null) {
                     dialog.open(full = true) {
-                        app.what.features.onboarding.presentation.UpdateOnboardingContent(
+                        UpdateOnboardingContent(
                             releaseNotes = releaseNotes,
                             appValues = appValues,
                             onDismiss = {

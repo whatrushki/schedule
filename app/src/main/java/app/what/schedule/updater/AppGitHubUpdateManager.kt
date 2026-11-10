@@ -15,6 +15,9 @@ import app.what.foundation.services.auto_update.DownloadState
 import app.what.foundation.services.auto_update.UpdateConfig
 import app.what.foundation.services.auto_update.UpdateInfo
 import app.what.foundation.services.auto_update.UpdateResult
+import app.what.schedule.data.local.settings.AppValues
+import app.what.foundation.services.auto_update.ReleaseNotes
+
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
@@ -36,7 +39,7 @@ class AppGitHubUpdateManager(
     private val context: Context,
     private val config: UpdateConfig,
     private val httpClient: HttpClient,
-    private val appValues: app.what.schedule.data.local.settings.AppValues? = null,
+    private val appValues: AppValues? = null,
     private val scope: CoroutineScope = CoroutineScope(Dispatchers.Main)
 ) : AppUpdateManager {
 
@@ -105,12 +108,12 @@ class AppGitHubUpdateManager(
                 }
 
                 val jsonAsset = latestRelease.assets.firstOrNull { it.name == "release-notes.json" }
-                var parsedReleaseNotes: app.what.foundation.services.auto_update.ReleaseNotes? = null
+                var parsedReleaseNotes: ReleaseNotes? = null
 
                 if (jsonAsset != null) {
                     try {
                         val jsonString = httpClient.get(jsonAsset.browserDownloadUrl).body<String>()
-                        parsedReleaseNotes = app.what.foundation.services.auto_update.ReleaseNotes.fromJson(jsonString)
+                        parsedReleaseNotes = ReleaseNotes.fromJson(jsonString)
                         appValues?.cachedReleaseNotes?.set(jsonString)
                     } catch (e: Exception) {
                         Auditor.debug("updater", "Не удалось загрузить release-notes.json: ${e.message}")
@@ -119,9 +122,9 @@ class AppGitHubUpdateManager(
 
                 val releaseBody = latestRelease.body
                 if (parsedReleaseNotes == null && !releaseBody.isNullOrBlank()) {
-                    parsedReleaseNotes = app.what.foundation.services.auto_update.ReleaseNotes(
+                    parsedReleaseNotes = ReleaseNotes(
                         version = latestRelease.tagName,
-                        changelog = app.what.foundation.services.auto_update.ReleaseNotes.parseMarkdownChangelog(releaseBody)
+                        changelog = ReleaseNotes.parseMarkdownChangelog(releaseBody)
                     )
                 }
 

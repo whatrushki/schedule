@@ -25,16 +25,23 @@ class RINHScheduleClient(
 
     private suspend fun getGroupsAndTeachers(): List<RINHApi.Schedule.Responses.ScheduleSearch> {
         cachedGroupsAndTeachers?.let { return it }
-        return try {
-            val response = client
-                .get("$baseUrl/v1/schedule/search/?format=json")
-                .body<List<RINHApi.Schedule.Responses.ScheduleSearch>>()
-            cachedGroupsAndTeachers = response
-            response
-        } catch (e: Exception) {
-            log?.invoke("Ошибка загрузки поиска РГЭУ РИНХ: ${e.message}")
-            emptyList()
+        var attempts = 0
+        while (attempts < 3) {
+            attempts++
+            try {
+                val response = client
+                    .get("$baseUrl/v1/schedule/search/?format=json")
+                    .body<List<RINHApi.Schedule.Responses.ScheduleSearch>>()
+                cachedGroupsAndTeachers = response
+                return response
+            } catch (e: Exception) {
+                log?.invoke("Ошибка загрузки поиска РГЭУ РИНХ (попытка $attempts/3): ${e.message}")
+                if (attempts < 3) {
+                    kotlinx.coroutines.delay(2000L * attempts)
+                }
+            }
         }
+        return emptyList()
     }
 
     override suspend fun getGroups(): List<GroupDto> {
@@ -64,16 +71,23 @@ class RINHScheduleClient(
     ): List<DayScheduleDto> = fetchSchedule(teacher)
 
     private suspend fun fetchSchedule(value: String): List<DayScheduleDto> {
-        return try {
-            val encodedValue = value.encodeURLPathPart()
-            val schedule = client
-                .get("$baseUrl/v1/schedule/lessons/$encodedValue/?format=json")
-                .body<RINHApi.Schedule.Responses.GetSchedule>()
-            schedule.toDaySchedules()
-        } catch (e: Exception) {
-            log?.invoke("Ошибка загрузки расписания РГЭУ РИНХ для $value: ${e.message}")
-            emptyList()
+        val encodedValue = value.encodeURLPathPart()
+        var attempts = 0
+        while (attempts < 3) {
+            attempts++
+            try {
+                val schedule = client
+                    .get("$baseUrl/v1/schedule/lessons/$encodedValue/?format=json")
+                    .body<RINHApi.Schedule.Responses.GetSchedule>()
+                return schedule.toDaySchedules()
+            } catch (e: Exception) {
+                log?.invoke("Ошибка загрузки расписания РГЭУ РИНХ для $value (попытка $attempts/3): ${e.message}")
+                if (attempts < 3) {
+                    kotlinx.coroutines.delay(1000L * attempts)
+                }
+            }
         }
+        return emptyList()
     }
 
     private fun RINHApi.Schedule.Responses.GetSchedule.toDaySchedules(): List<DayScheduleDto> {
