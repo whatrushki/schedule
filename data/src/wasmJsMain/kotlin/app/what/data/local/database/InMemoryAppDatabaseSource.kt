@@ -114,7 +114,7 @@ private class InMemoryDayScheduleDAO(private val db: InMemoryAppDatabaseSource) 
 
     override suspend fun deleteOrphans() {
         val validRequestIds = db.requests.keys
-        val toRemove = db.daySchedules.filterValues { it.requestId !in validRequestIds }.keys
+        val toRemove = db.daySchedules.filterValues { it.fromRequest !in validRequestIds }.keys
         toRemove.forEach { db.daySchedules.remove(it) }
     }
 
