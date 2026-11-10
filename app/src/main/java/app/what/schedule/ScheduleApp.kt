@@ -306,7 +306,11 @@ val appModule = module {
     
     single<AppUpdateManager> {
         val context = androidContext()
-        val isRuStore = BuildConfig.FLAVOR == "rustore" || getInstallSource(context) == InstallSource.RuStore
+        val isRuStore = when (BuildConfig.FLAVOR) {
+            "rustore" -> true
+            "standalone" -> false
+            else -> getInstallSource(context) == InstallSource.RuStore
+        }
         
         if (isRuStore) {
             RuStoreUpdateManager(context, get())

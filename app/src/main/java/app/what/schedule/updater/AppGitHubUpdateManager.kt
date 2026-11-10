@@ -99,7 +99,9 @@ class AppGitHubUpdateManager(
             Auditor.debug("updater", "Текущая: $currentVersionParsed (${config.currentVersion}), Последняя: $latestVersion (${latestRelease.tagName})")
 
             if (latestVersion > currentVersionParsed) {
-                val matchedAsset = latestRelease.assets.firstOrNull { it.name.endsWith(".apk") }
+                val matchedAsset = latestRelease.assets.firstOrNull {
+                    it.name.endsWith(".apk") && !it.name.contains("rustore", ignoreCase = true)
+                }
                 if (matchedAsset == null) {
                     val err = UpdateResult.Error("Обновление ${latestRelease.tagName} найдено, но APK отсутствует в релизе")
                     lastCheckTime = now
