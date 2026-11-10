@@ -5,7 +5,6 @@ compatibility_flags = ["nodejs_compat"]
 
 [vars]
 ENVIRONMENT = "production"
-TELEGRAM_BOT_TOKEN = ""
 OWNER_CHAT_ID = "1715480053"
 SCHEDULE_CACHE_BASE_URL = "https://whatrushki.github.io/schedule"
 DELIVERY_RAW_URL = "https://raw.githubusercontent.com/whatrushki/delivery/main/notifications/active.json"
