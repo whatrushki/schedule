@@ -1,7 +1,6 @@
 package app.what.tools.sync
 
 import app.what.schedule.core.models.DayScheduleDto
-import app.what.schedule.core.models.LessonDto
 import app.what.schedule.core.models.GroupDto
 import app.what.schedule.core.models.LessonDto
 import app.what.schedule.core.models.LessonStateDto
