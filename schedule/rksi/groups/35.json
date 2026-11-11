@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-11-11",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-11",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Математика",
-                "otUnits": [
-                    {
-                        "teacher": "Марченко С.В.",
-                        "group": "ИКС-13",
-                        "room": "322",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-11",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Математика",
-                "otUnits": [
-                    {
-                        "teacher": "Марченко С.В.",
-                        "group": "ИКС-13",
-                        "room": "322",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-11",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "История",
-                "otUnits": [
-                    {
-                        "teacher": "Пильгун И.С.",
-                        "group": "ИКС-13",
-                        "room": "418",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-11",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "История",
-                "otUnits": [
-                    {
-                        "teacher": "Пильгун И.С.",
-                        "group": "ИКС-13",
-                        "room": "418",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-12",
         "scheduleType": "COMMON",
         "lessons": [
@@ -268,6 +186,440 @@
                         "teacher": "Кравченко И.Ю.",
                         "group": "ИКС-13",
                         "room": "411",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-16",
+        "scheduleType": "WITH_CLASS_HOUR",
+        "lessons": [
+            {
+                "date": "2026-11-16",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Гвоздецкая Г.И.",
+                        "group": "ИКС-13",
+                        "room": "216",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-16",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Кравченко И.Ю.",
+                        "group": "ИКС-13",
+                        "room": "411",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-16",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "История",
+                "otUnits": [
+                    {
+                        "teacher": "Пильгун И.С.",
+                        "group": "ИКС-13",
+                        "room": "410",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-16",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-17",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-17",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.В.",
+                        "group": "ИКС-13",
+                        "room": "314",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-17",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Гвоздецкая Г.И.",
+                        "group": "ИКС-13",
+                        "room": "210",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-17",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Основы безопасности и защиты Родины",
+                "otUnits": [
+                    {
+                        "teacher": "Рыбальченко Т.Б.",
+                        "group": "ИКС-13",
+                        "room": "316",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-17",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Русский язык",
+                "otUnits": [
+                    {
+                        "teacher": "Нефедова Е.М.",
+                        "group": "ИКС-13",
+                        "room": "209а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-18",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-18",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.В.",
+                        "group": "ИКС-13",
+                        "room": "401",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-18",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.В.",
+                        "group": "ИКС-13",
+                        "room": "401",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-18",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Шабранская П.Е.",
+                        "group": "ИКС-13",
+                        "room": "401",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-19",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-19",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Иностранный язык",
+                "otUnits": [
+                    {
+                        "teacher": "Новосельцева Е.Ф.",
+                        "group": "ИКС-13",
+                        "room": "209а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Ефремова О.П.",
+                        "group": "ИКС-13",
+                        "room": "111",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-19",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Инженерная и компьютерная графика",
+                "otUnits": [
+                    {
+                        "teacher": "Пустоветова С.Ю.",
+                        "group": "ИКС-13",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-19",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Литература",
+                "otUnits": [
+                    {
+                        "teacher": "Нефедова Е.М.",
+                        "group": "ИКС-13",
+                        "room": "110",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-19",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Корбан С.Н.",
+                        "group": "ИКС-13",
+                        "room": "с/з2",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-20",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-20",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Шабранская П.Е.",
+                        "group": "ИКС-13",
+                        "room": "325",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-20",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Индивидуальный проект",
+                "otUnits": [
+                    {
+                        "teacher": "Бакулярова И.Н.",
+                        "group": "ИКС-13",
+                        "room": "114",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-20",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Биология",
+                "otUnits": [
+                    {
+                        "teacher": "Хайлова Л.В.",
+                        "group": "ИКС-13",
+                        "room": "103",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-21",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Гвоздецкая Г.И.",
+                        "group": "ИКС-13",
+                        "room": "320",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-21",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Гвоздецкая Г.И.",
+                        "group": "ИКС-13",
+                        "room": "320",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-21",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "География",
+                "otUnits": [
+                    {
+                        "teacher": "Видинеева Е.А.",
+                        "group": "ИКС-13",
+                        "room": "216",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
