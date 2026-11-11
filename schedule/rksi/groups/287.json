@@ -1,49 +1,5 @@
 [
     {
-        "date": "2026-11-10",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-10",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Монтаж и эксплуатация направляющих систем",
-                "otUnits": [
-                    {
-                        "teacher": "Голиченко П.С.",
-                        "group": "ИКС-34",
-                        "room": "118",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-10",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Корбан С.Н.",
-                        "group": "ИКС-34",
-                        "room": "с/з3",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-11",
         "scheduleType": "COMMON",
         "lessons": [
@@ -57,14 +13,14 @@
                     {
                         "teacher": "Згонников Е.Ф.",
                         "group": "ИКС-34",
-                        "room": "216",
+                        "room": "Общ1-2",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-11",
@@ -76,14 +32,14 @@
                     {
                         "teacher": "Згонников Е.Ф.",
                         "group": "ИКС-34",
-                        "room": "216",
+                        "room": "Общ1-2",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-11",
@@ -95,14 +51,14 @@
                     {
                         "teacher": "Згонников Е.Ф.",
                         "group": "ИКС-34",
-                        "room": "216",
+                        "room": "Общ1-2",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-11",
@@ -114,14 +70,14 @@
                     {
                         "teacher": "Згонников Е.Ф.",
                         "group": "ИКС-34",
-                        "room": "216",
+                        "room": "Общ1-1",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -131,6 +87,25 @@
         "lessons": [
             {
                 "date": "2026-11-12",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Монтаж и эксплуатация компьютерных сетей",
+                "otUnits": [
+                    {
+                        "teacher": "Говорова О.А.",
+                        "group": "ИКС-34",
+                        "room": "212",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-12",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
@@ -184,7 +159,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

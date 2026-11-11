@@ -1,49 +1,5 @@
 [
     {
-        "date": "2026-11-10",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-10",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "История",
-                "otUnits": [
-                    {
-                        "teacher": "Ерёменко О.А.",
-                        "group": "ИБА-22",
-                        "room": "42",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-10",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "История",
-                "otUnits": [
-                    {
-                        "teacher": "Ерёменко О.А.",
-                        "group": "ИБА-22",
-                        "room": "42",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-11",
         "scheduleType": "COMMON",
         "lessons": [
@@ -52,38 +8,38 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Выполнение работ по профессии 16199 'Оператор вычислительных и электронно-вычислительных машин'",
+                "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Дьяченко Е.О.",
+                        "teacher": "Сенчукова Н.А.",
                         "group": "ИБА-22",
-                        "room": "118",
+                        "room": "314",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-11",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Выполнение работ по профессии 16199 'Оператор вычислительных и электронно-вычислительных машин'",
+                "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Дьяченко Е.О.",
+                        "teacher": "Сенчукова Н.А.",
                         "group": "ИБА-22",
-                        "room": "303",
+                        "room": "314",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-11",
@@ -95,14 +51,14 @@
                     {
                         "teacher": "Нохрина Ю.В.",
                         "group": "ИБА-22",
-                        "room": "324",
+                        "room": "214",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-11",
@@ -114,14 +70,14 @@
                     {
                         "teacher": "Нохрина Ю.В.",
                         "group": "ИБА-22",
-                        "room": "324",
+                        "room": "214",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -129,6 +85,25 @@
         "date": "2026-11-12",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-11-12",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Основы информационной безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Касьянова Е.Ю.",
+                        "group": "ИБА-22",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-11-12",
                 "number": 5,
@@ -139,7 +114,7 @@
                     {
                         "teacher": "Крылова О.В.",
                         "group": "ИБА-22",
-                        "room": "42",
+                        "room": "34",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -154,7 +129,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-12",
@@ -192,7 +167,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

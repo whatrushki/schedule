@@ -1,33 +1,27 @@
 [
     {
-        "date": "2026-11-10",
+        "date": "2026-11-12",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-10",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
+                "date": "2026-11-12",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
                 "subject": "Основы безопасности и защиты Родины",
                 "otUnits": [
                     {
                         "teacher": "Бодло А.О.",
-                        "group": "БУ-11",
-                        "room": "30",
+                        "group": "ТД-12",
+                        "room": "38",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-12",
-        "scheduleType": "COMMON",
-        "lessons": [
+                "type": "OTHER",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-11-12",
                 "number": 4,
@@ -36,16 +30,16 @@
                 "subject": "Безопасность жизнедеятельности",
                 "otUnits": [
                     {
-                        "teacher": "Бодло Анастасия Олеговна",
+                        "teacher": "Бодло А.О.",
                         "group": "БД-21",
-                        "room": "30",
+                        "room": "34",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

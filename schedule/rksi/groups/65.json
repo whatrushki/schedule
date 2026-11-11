@@ -1,13 +1,13 @@
 [
     {
-        "date": "2026-11-10",
+        "date": "2026-11-11",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-10",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "date": "2026-11-11",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
                 "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
@@ -19,34 +19,9 @@
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
-                "state": "COMMON"
+                "type": "OTHER",
+                "state": "ADDED"
             },
-            {
-                "date": "2026-11-10",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Информационные технологии",
-                "otUnits": [
-                    {
-                        "teacher": "Бурда Е.Г.",
-                        "group": "ИС-28",
-                        "room": "312",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-11",
-        "scheduleType": "COMMON",
-        "lessons": [
             {
                 "date": "2026-11-11",
                 "number": 2,
@@ -121,7 +96,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
@@ -139,14 +114,14 @@
                     {
                         "teacher": "Ляшенко П.А.",
                         "group": "ИС-28",
-                        "room": "310",
+                        "room": "414",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-12",
@@ -158,14 +133,14 @@
                     {
                         "teacher": "Ляшенко П.А.",
                         "group": "ИС-28",
-                        "room": "322",
+                        "room": "414",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-12",

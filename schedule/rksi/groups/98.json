@@ -1,108 +1,83 @@
 [
     {
-        "date": "2026-11-10",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-10",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "УП",
-                "otUnits": [
-                    {
-                        "teacher": "Комов Е.Ю.",
-                        "group": "СА-32",
-                        "room": "110а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-10",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "УП",
-                "otUnits": [
-                    {
-                        "teacher": "Комов Е.Ю.",
-                        "group": "СА-32",
-                        "room": "110а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-10",
-                "number": 7,
-                "startTime": "18:20",
-                "endTime": "19:50",
-                "subject": "УП",
-                "otUnits": [
-                    {
-                        "teacher": "Комов Е.Ю.",
-                        "group": "СА-32",
-                        "room": "110а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-12",
         "scheduleType": "COMMON",
         "lessons": [
             {
                 "date": "2026-11-12",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Дискретная математика с элементами математической логики",
+                "otUnits": [
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "СА-32",
+                        "room": "422",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-12",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Дискретная математика с элементами математической логики",
+                "otUnits": [
+                    {
+                        "teacher": "Долгополая А.С.",
+                        "group": "СА-32",
+                        "room": "422",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-12",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "УП",
+                "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Комов Е.Ю.",
+                        "teacher": "Махаева П.А.",
                         "group": "СА-32",
-                        "room": "110а",
+                        "room": "с/з7",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-12",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "УП",
+                "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Комов Е.Ю.",
+                        "teacher": "Махаева П.А.",
                         "group": "СА-32",
-                        "room": "110а",
+                        "room": "с/з2",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-12",
@@ -121,7 +96,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-12",
@@ -140,7 +115,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
