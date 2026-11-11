@@ -15,6 +15,10 @@ jobs:
   deploy_schedule_bot:
     name: Deploy Schedule Bot (Cloudflare Worker)
     runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      TELEGRAM_BOT_TOKEN_SCHEDULE: ${{ secrets.TELEGRAM_BOT_TOKEN_SCHEDULE }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -35,21 +39,21 @@ jobs:
         run: npm run typecheck
 
       - name: Deploy to Cloudflare Workers
-        if: secrets.CLOUDFLARE_API_TOKEN != ''
+        if: env.CLOUDFLARE_API_TOKEN != ''
         uses: cloudflare/wrangler-action@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ env.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ env.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: 'bot'
           secrets: |
             TELEGRAM_BOT_TOKEN
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN_SCHEDULE }}
+          TELEGRAM_BOT_TOKEN: ${{ env.TELEGRAM_BOT_TOKEN_SCHEDULE }}
 
       - name: Register Telegram Webhook
-        if: success() && secrets.CLOUDFLARE_API_TOKEN != '' && secrets.TELEGRAM_BOT_TOKEN_SCHEDULE != ''
+        if: success() && env.CLOUDFLARE_API_TOKEN != '' && env.TELEGRAM_BOT_TOKEN_SCHEDULE != ''
         run: |
-          BOT_TOKEN="${{ secrets.TELEGRAM_BOT_TOKEN_SCHEDULE }}"
+          BOT_TOKEN="${{ env.TELEGRAM_BOT_TOKEN_SCHEDULE }}"
           WORKER_URL="https://what-schedule-bot.whatrushki-tech.workers.dev/api/telegram/webhook"
           echo "Registering webhook: $WORKER_URL"
           curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/setWebhook" \
