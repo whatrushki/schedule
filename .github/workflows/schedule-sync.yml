@@ -40,6 +40,7 @@ jobs:
   sync_schedule:
     name: Parse & Sync Schedule Data
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     permissions:
       contents: write
 
@@ -77,7 +78,7 @@ jobs:
             elif [ "$HOUR" -eq "15" ]; then
               echo "target=others" >> $GITHUB_OUTPUT
             else
-              echo "target=all" >> $GITHUB_OUTPUT
+              echo "target=rksi" >> $GITHUB_OUTPUT
             fi
           fi
 

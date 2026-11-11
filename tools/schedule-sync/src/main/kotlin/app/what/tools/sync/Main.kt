@@ -81,9 +81,9 @@ fun main(args: Array<String>) = runBlocking(Dispatchers.IO) {
 
     val client = HttpClient(CIO) {
         install(HttpTimeout) {
-            requestTimeoutMillis = 60_000
-            connectTimeoutMillis = 60_000
-            socketTimeoutMillis = 60_000
+            requestTimeoutMillis = 30_000
+            connectTimeoutMillis = 15_000
+            socketTimeoutMillis = 30_000
         }
         defaultRequest {
             header(HttpHeaders.UserAgent, "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36")
@@ -158,7 +158,7 @@ suspend fun syncRksi(client: HttpClient, rootDir: File, failOnError: Boolean = f
             log = { println("  [RKSI] $it") }
         )
 
-        val nowStr = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString()
+        val nowStr = Clock.System.now().toString()
         println("  Fetching RKSI groups & teachers...")
         val groups = rksiClient.getGroups()
         val teachers = rksiClient.getTeachers()
@@ -229,7 +229,7 @@ suspend fun syncRksi(client: HttpClient, rootDir: File, failOnError: Boolean = f
         println("  [RKSI] Error syncing: ${it.message}")
         it.printStackTrace()
         val errorMeta = InstitutionMeta(
-            lastSync = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString(),
+            lastSync = Clock.System.now().toString(),
             institution = "rksi",
             status = "FAILED",
             errorMessage = it.message ?: "Unknown error",
@@ -259,7 +259,7 @@ suspend fun syncDgtu(client: HttpClient, rootDir: File, failOnError: Boolean = f
 
     runCatching {
         val dgtuClient = DGTUScheduleClient(client, log = { println("  [DGTU] $it") })
-        val nowStr = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString()
+        val nowStr = Clock.System.now().toString()
 
         println("  Fetching DGTU groups & teachers...")
         val groups = dgtuClient.getGroups()
@@ -331,7 +331,7 @@ suspend fun syncDgtu(client: HttpClient, rootDir: File, failOnError: Boolean = f
         println("  [DGTU] Error syncing: ${it.message}")
         it.printStackTrace()
         val errorMeta = InstitutionMeta(
-            lastSync = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString(),
+            lastSync = Clock.System.now().toString(),
             institution = "dgtu",
             status = "FAILED",
             errorMessage = it.message ?: "Unknown error",
@@ -351,7 +351,7 @@ suspend fun syncIubip(client: HttpClient, rootDir: File, failOnError: Boolean = 
 
     runCatching {
         val iubipClient = IUBIPScheduleClient(client, log = { println("  [IUBIP] $it") })
-        val nowStr = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString()
+        val nowStr = Clock.System.now().toString()
 
         println("  Fetching IUBIP groups & teachers...")
         val groups = iubipClient.getGroups()
@@ -430,7 +430,7 @@ suspend fun syncIubip(client: HttpClient, rootDir: File, failOnError: Boolean = 
         println("  [IUBIP] Error syncing: ${it.message}")
         it.printStackTrace()
         val errorMeta = InstitutionMeta(
-            lastSync = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString(),
+            lastSync = Clock.System.now().toString(),
             institution = "iubip",
             status = "FAILED",
             errorMessage = it.message ?: "Unknown error",
@@ -450,7 +450,7 @@ suspend fun syncRinh(client: HttpClient, rootDir: File, failOnError: Boolean = f
 
     runCatching {
         val rinhClient = RINHScheduleClient(client, log = { println("  [RINH] $it") })
-        val nowStr = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString()
+        val nowStr = Clock.System.now().toString()
 
         println("  Fetching RINH groups & teachers...")
         val groups = rinhClient.getGroups()
@@ -517,7 +517,7 @@ suspend fun syncRinh(client: HttpClient, rootDir: File, failOnError: Boolean = f
         println("  [RINH] Error syncing: ${it.message}")
         it.printStackTrace()
         val errorMeta = InstitutionMeta(
-            lastSync = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString(),
+            lastSync = Clock.System.now().toString(),
             institution = "rinh",
             status = "FAILED",
             errorMessage = it.message ?: "Unknown error",
@@ -537,7 +537,7 @@ suspend fun syncSfedu(client: HttpClient, rootDir: File, failOnError: Boolean = 
 
     runCatching {
         val sfeduClient = SFEDUScheduleClient(client, log = { println("  [SFEDU] $it") })
-        val nowStr = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString()
+        val nowStr = Clock.System.now().toString()
 
         println("  Fetching SFEDU groups & teachers...")
         val groups = sfeduClient.getGroups()
@@ -604,7 +604,7 @@ suspend fun syncSfedu(client: HttpClient, rootDir: File, failOnError: Boolean = 
         println("  [SFEDU] Error syncing: ${it.message}")
         it.printStackTrace()
         val errorMeta = InstitutionMeta(
-            lastSync = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString(),
+            lastSync = Clock.System.now().toString(),
             institution = "sfedu",
             status = "FAILED",
             errorMessage = it.message ?: "Unknown error",
@@ -624,7 +624,7 @@ suspend fun syncRgups(client: HttpClient, rootDir: File, failOnError: Boolean = 
 
     runCatching {
         val rgupsClient = RGUPSScheduleClient(client, log = { println("  [RGUPS] $it") })
-        val nowStr = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString()
+        val nowStr = Clock.System.now().toString()
 
         println("  Fetching RGUPS groups...")
         val groups = rgupsClient.getGroups()
@@ -729,7 +729,7 @@ suspend fun syncRgups(client: HttpClient, rootDir: File, failOnError: Boolean = 
         println("  [RGUPS] Error syncing: ${it.message}")
         it.printStackTrace()
         val errorMeta = InstitutionMeta(
-            lastSync = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString(),
+            lastSync = Clock.System.now().toString(),
             institution = "rgups",
             status = "FAILED",
             errorMessage = it.message ?: "Unknown error",
@@ -749,7 +749,7 @@ suspend fun syncRgupsTuapse(client: HttpClient, rootDir: File, failOnError: Bool
 
     runCatching {
         val tuapseClient = RGUPSTuapseScheduleClient(client, log = { println("  [Tuapse] $it") })
-        val nowStr = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString()
+        val nowStr = Clock.System.now().toString()
 
         println("  Fetching RGUPS Tuapse groups & teachers...")
         val groups = tuapseClient.getGroups()
@@ -813,7 +813,7 @@ suspend fun syncRgupsTuapse(client: HttpClient, rootDir: File, failOnError: Bool
         println("  [Tuapse] Error syncing: ${it.message}")
         it.printStackTrace()
         val errorMeta = InstitutionMeta(
-            lastSync = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString(),
+            lastSync = Clock.System.now().toString(),
             institution = "rgups_tuapse",
             status = "FAILED",
             errorMessage = it.message ?: "Unknown error",
@@ -833,7 +833,7 @@ suspend fun syncTvgu(client: HttpClient, rootDir: File, failOnError: Boolean = f
 
     runCatching {
         val tvguClient = TvGUScheduleClient(client, log = { println("  [TvGU] $it") })
-        val nowStr = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString()
+        val nowStr = Clock.System.now().toString()
 
         println("  Fetching TvGU groups...")
         val groups = tvguClient.getGroups()
@@ -948,7 +948,7 @@ suspend fun syncTvgu(client: HttpClient, rootDir: File, failOnError: Boolean = f
         println("  [TvGU] Error syncing: ${it.message}")
         it.printStackTrace()
         val errorMeta = InstitutionMeta(
-            lastSync = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).toString(),
+            lastSync = Clock.System.now().toString(),
             institution = "tvgu",
             status = "FAILED",
             errorMessage = it.message ?: "Unknown error",

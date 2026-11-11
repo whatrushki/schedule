@@ -30,7 +30,7 @@ data class CloudInstitutionMeta(
      * Проверяет валидность и актуальность синхронизации.
      * Если статус FAILED или данных нет — синхронизация считается нездоровой.
      */
-    fun isHealthy(maxAgeHours: Long = 3): Boolean {
+    fun isHealthy(maxAgeHours: Long = 24): Boolean {
         if (status.equals("FAILED", ignoreCase = true)) return false
         if (groupCount == 0) return false
         if (lastSync.isNullOrBlank()) return false
@@ -41,9 +41,8 @@ data class CloudInstitutionMeta(
                 kotlinx.datetime.Instant.parse(lastSync)
             } catch (_: Exception) {
                 val ldt = kotlinx.datetime.LocalDateTime.parse(lastSync)
-                val tz = kotlinx.datetime.TimeZone.currentSystemDefault()
                 with(kotlinx.datetime.TimeZone) {
-                    ldt.toInstant(tz)
+                    ldt.toInstant(kotlinx.datetime.TimeZone.UTC)
                 }
             }
             val diff = now - syncInstant
@@ -137,8 +136,9 @@ class CloudScheduleClient(
 
     suspend fun isSyncHealthy(): Boolean {
         val meta = getMeta() ?: return false
-        // Если воркер синхронизации gh-pages не запускался 3 часа — считаем облачный кеш устаревшим
-        val maxAge = 3L
+        // Для РКСИ замен больше, проверяем за последние 16 часов (учитывая ночной перерыв с 19 до 07 МСК)
+        // Для остальных вузов синхронизация идет 1-2 раза в сутки, даем окно в 30 часов
+        val maxAge = if (institutionId.equals("rksi", ignoreCase = true)) 16L else 30L
         return meta.isHealthy(maxAge)
     }
 
