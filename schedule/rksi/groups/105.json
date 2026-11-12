@@ -87,6 +87,25 @@
         "lessons": [
             {
                 "date": "2026-11-13",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Экономика отрасли",
+                "otUnits": [
+                    {
+                        "teacher": "Григорьева Л.Ф.",
+                        "group": "СА-42",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-13",
                 "number": 6,
                 "startTime": "16:40",
                 "endTime": "18:10",
@@ -95,14 +114,14 @@
                     {
                         "teacher": "Григорьева Л.Ф.",
                         "group": "СА-42",
-                        "room": "408",
-                        "additional": "1",
+                        "room": "13",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-13",
@@ -114,14 +133,14 @@
                     {
                         "teacher": "Григорьева Л.Ф.",
                         "group": "СА-42",
-                        "room": "408",
-                        "additional": "1",
+                        "room": "13",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -200,17 +219,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Новосельцева Е.Ф.",
+                        "teacher": "Ужегова Е.А.",
                         "group": "СА-42",
-                        "room": "316",
+                        "room": "307",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ужегова Е.А.",
+                        "teacher": "Новосельцева Е.Ф.",
                         "group": "СА-42",
-                        "room": "307",
+                        "room": "316",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
