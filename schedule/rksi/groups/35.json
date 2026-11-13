@@ -83,7 +83,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-14",
@@ -95,24 +95,24 @@
                     {
                         "teacher": "Шабранская П.Е.",
                         "group": "ИКС-13",
-                        "room": "303",
+                        "room": "314",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-14",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Химия",
+                "subject": "Математика",
                 "otUnits": [
                     {
-                        "teacher": "Кравченко И.Ю.",
+                        "teacher": "Марченко С.В.",
                         "group": "ИКС-13",
                         "room": "411",
                         "additional": "1",
@@ -121,7 +121,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.В.",
+                        "group": "ИКС-13",
+                        "room": "411",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

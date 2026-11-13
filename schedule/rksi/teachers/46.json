@@ -125,13 +125,32 @@
         "lessons": [
             {
                 "date": "2026-11-14",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Комов Е.Ю.",
+                        "group": "СА-32",
+                        "room": "110а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-14",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Комов Евгений Юрьевич",
+                        "teacher": "Комов Е.Ю.",
                         "group": "СА-32",
                         "room": "110а",
                         "additional": "1",
@@ -140,7 +159,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-14",
@@ -150,7 +169,7 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Комов Евгений Юрьевич",
+                        "teacher": "Комов Е.Ю.",
                         "group": "СА-32",
                         "room": "110а",
                         "additional": "1",
@@ -159,7 +178,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-14",
@@ -169,7 +188,7 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Комов Евгений Юрьевич",
+                        "teacher": "Комов Е.Ю.",
                         "group": "СА-32",
                         "room": "110а",
                         "additional": "1",
@@ -178,18 +197,18 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-14",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "УП",
+                "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Комов Евгений Юрьевич",
-                        "group": "СА-32",
+                        "teacher": "Комов Е.Ю.",
+                        "group": "СА-21",
                         "room": "110а",
                         "additional": "1",
                         "onlineUrl": null,
@@ -197,7 +216,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
