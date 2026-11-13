@@ -64,26 +64,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-14",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Бизнес планирование",
+                "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Леонова И.Ю.",
+                        "teacher": "Беспалова Н.В.",
                         "group": "БУ-31",
-                        "room": "41",
+                        "room": "с/з2",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-14",
@@ -95,14 +95,14 @@
                     {
                         "teacher": "Леонова И.Ю.",
                         "group": "БУ-31",
-                        "room": "41",
+                        "room": "40",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-14",
@@ -114,14 +114,33 @@
                     {
                         "teacher": "Леонова И.Ю.",
                         "group": "БУ-31",
-                        "room": "41",
+                        "room": "40",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Бизнес планирование",
+                "otUnits": [
+                    {
+                        "teacher": "Леонова И.Ю.",
+                        "group": "БУ-31",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

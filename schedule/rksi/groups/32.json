@@ -83,7 +83,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-14",
@@ -102,7 +102,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-14",
@@ -121,17 +121,36 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-14",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Защита информации в информационно-телекоммуникационных системах и сетях с использованием технических средств защиты",
+                "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Касьянова Е.Ю.",
+                        "teacher": "Беспалова Н.В.",
+                        "group": "ИБТ-42",
+                        "room": "с/з1",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Физическая защита линий связи информационно-телекоммуникационных систем и сетей",
+                "otUnits": [
+                    {
+                        "teacher": "Шабалта А.В.",
                         "group": "ИБТ-42",
                         "room": "30",
                         "additional": "2",
@@ -139,8 +158,46 @@
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
-                "state": "COMMON"
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Физическая защита линий связи информационно-телекоммуникационных систем и сетей",
+                "otUnits": [
+                    {
+                        "teacher": "Шабалта А.В.",
+                        "group": "ИБТ-42",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Физическая защита линий связи информационно-телекоммуникационных систем и сетей",
+                "otUnits": [
+                    {
+                        "teacher": "Шабалта А.В.",
+                        "group": "ИБТ-42",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

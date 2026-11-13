@@ -11,7 +11,7 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Растороцкий Владислав Владиславович",
+                        "teacher": "Растороцкий В.В.",
                         "group": "ИБА-11",
                         "room": "с/з1",
                         "additional": "2",
@@ -20,7 +20,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-14",
@@ -30,7 +30,7 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Растороцкий Владислав Владиславович",
+                        "teacher": "Растороцкий В.В.",
                         "group": "БД-11",
                         "room": "с/з1",
                         "additional": "2",
@@ -39,7 +39,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-14",
@@ -49,8 +49,16 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Растороцкий Владислав Владиславович",
-                        "group": "ИБА-12",
+                        "teacher": "Растороцкий В.В.",
+                        "group": "ТД-22",
+                        "room": "с/з1",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Растороцкий В.В.",
+                        "group": "ТД-32",
                         "room": "с/з1",
                         "additional": "2",
                         "onlineUrl": null,
@@ -58,7 +66,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-14",
@@ -77,7 +85,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-14",
@@ -87,8 +95,8 @@
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
-                        "teacher": "Растороцкий Владислав Владиславович",
-                        "group": "ТД-22",
+                        "teacher": "Растороцкий В.В.",
+                        "group": "ТД-31",
                         "room": "с/з2",
                         "additional": "2",
                         "onlineUrl": null,
@@ -96,7 +104,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-14",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Растороцкий В.В.",
+                        "group": "ИБТ-23",
+                        "room": "с/з2",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
