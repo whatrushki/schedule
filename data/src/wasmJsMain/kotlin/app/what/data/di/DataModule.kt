@@ -18,6 +18,8 @@ import app.what.domain.constants.AppConstants
 import app.what.domain.models.MetaInfo
 import app.what.domain.repositories.NewsRepository
 import app.what.domain.repositories.ScheduleRepository
+import app.what.domain.services.FeedbackSharer
+import app.what.domain.services.NoOpFeedbackSharer
 import app.what.domain.services.NetworkConnectivity
 import app.what.foundation.data.settings.KeyValueStorage
 import app.what.foundation.data.settings.PreferenceStorage
@@ -225,6 +227,7 @@ val dataModule = module {
     }
 
     single<PlatformFileStorageCleaner> { NoOpPlatformFileStorageCleaner() }
+    single<FeedbackSharer> { NoOpFeedbackSharer() }
     single<CacheStorageManager> {
         CacheStorageManagerImpl(
             scheduleRepository = get(),

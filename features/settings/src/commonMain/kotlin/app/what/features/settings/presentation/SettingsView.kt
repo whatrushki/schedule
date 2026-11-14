@@ -110,7 +110,6 @@ import app.what.foundation.ui.icons.filled.ImageRoller
 import kotlinx.coroutines.launch
 import org.koin.compose.koinInject
 import androidx.compose.runtime.collectAsState
-import app.what.foundation.auth.client.WhatAuthManager
 import app.what.foundation.auth.model.WhatAccount
 import app.what.foundation.auth.ui.WhatAccountChooserSheet
 
@@ -136,8 +135,6 @@ fun SettingsView(
     val appValues: AppValues = koinInject()
     val appUtils: AppUtils = koinInject()
     val deliveryClient: DeliveryClient = koinInject()
-    val whatAuthManager: WhatAuthManager = koinInject()
-    val activeAccount by whatAuthManager.activeAccountFlow.collectAsState()
     val adsLevel by appValues.supportAdsLevel.collect()
     val uriHandler = LocalUriHandler.current
     val dialog = rememberDialogController()

@@ -90,9 +90,10 @@ fun FeedbackFormContent(
     onClose: (() -> Unit)? = null,
     onSuccess: ((isBug: Boolean) -> Unit)? = null
 ) {
-    val feedbackSharer = koinInject<FeedbackSharer>()
-    val whatAuthManager = koinInject<WhatAuthManager>()
-    val activeAccount by whatAuthManager.activeAccountFlow.collectAsState()
+    val koin = remember { org.koin.mp.KoinPlatformTools.defaultContext().get() }
+    val feedbackSharer: FeedbackSharer = remember { koin.getOrNull() ?: app.what.domain.services.NoOpFeedbackSharer() }
+    val whatAuthManager: WhatAuthManager? = remember { koin.getOrNull() }
+    val activeAccount by (whatAuthManager?.activeAccountFlow ?: kotlinx.coroutines.flow.MutableStateFlow(null)).collectAsState()
     val coroutineScope = rememberCoroutineScope()
 
     // 0 = Предложение, 1 = Ошибка
