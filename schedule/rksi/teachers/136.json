@@ -83,8 +83,35 @@
     },
     {
         "date": "2026-11-16",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
+            {
+                "date": "2026-11-16",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Касьянова Е.Ю.",
+                        "group": "ИБТ-12",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Касьянова Е.Ю.",
+                        "group": "ИБТ-22",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-11-16",
                 "number": 4,
@@ -93,7 +120,7 @@
                 "subject": "Основы информационной безопасности",
                 "otUnits": [
                     {
-                        "teacher": "Касьянова Екатерина Юрьевна",
+                        "teacher": "Касьянова Е.Ю.",
                         "group": "ИБА-23",
                         "room": "30",
                         "additional": "2",
@@ -102,7 +129,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-16",
@@ -112,7 +139,7 @@
                 "subject": "Основы информационной безопасности",
                 "otUnits": [
                     {
-                        "teacher": "Касьянова Екатерина Юрьевна",
+                        "teacher": "Касьянова Е.Ю.",
                         "group": "ИБА-22",
                         "room": "30",
                         "additional": "2",
@@ -121,7 +148,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
