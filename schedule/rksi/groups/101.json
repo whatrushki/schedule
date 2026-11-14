@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-11-16",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-16",
@@ -11,16 +11,16 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "_",
+                        "teacher": "Казанин Н.А.",
                         "group": "СА-35",
-                        "room": "вак9",
-                        "additional": "вак9",
+                        "room": "312",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-16",
@@ -30,16 +30,16 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "_",
+                        "teacher": "Казанин Н.А.",
                         "group": "СА-35",
-                        "room": "вак9",
-                        "additional": "вак9",
+                        "room": "312",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-16",
@@ -49,16 +49,35 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "_",
+                        "teacher": "Казанин Н.А.",
                         "group": "СА-35",
-                        "room": "вак9",
-                        "additional": "вак9",
+                        "room": "312",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-16",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Трищук С.А.",
+                        "group": "СА-35",
+                        "room": "213",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-11-16",
@@ -68,16 +87,16 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "_",
+                        "teacher": "Казанин Н.А.",
                         "group": "СА-35",
-                        "room": "вак9",
-                        "additional": "вак9",
+                        "room": "306",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

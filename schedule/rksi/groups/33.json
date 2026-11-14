@@ -76,14 +76,14 @@
                     {
                         "teacher": "Пильгун И.С.",
                         "group": "ИКС-11",
-                        "room": "410",
+                        "room": "412",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-16",
@@ -129,9 +129,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Романенко Е.Л.",
+                        "group": "ИКС-11",
+                        "room": "418",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-16",
@@ -143,14 +152,14 @@
                     {
                         "teacher": "Гвоздецкая Г.И.",
                         "group": "ИКС-11",
-                        "room": "411",
+                        "room": "410",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

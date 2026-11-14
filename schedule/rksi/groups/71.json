@@ -72,9 +72,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Золотовская М.Ю.",
+                        "group": "ИС-35",
+                        "room": "319",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-16",
@@ -84,24 +93,32 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Черноштан О.Н.",
-                        "group": "ИС-35",
-                        "room": "111",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
                         "teacher": "Лебедева М.В.",
                         "group": "ИС-35",
                         "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
+                    },
+                    {
+                        "teacher": "Черноштан О.Н.",
+                        "group": "ИС-35",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Арутюнян М.М.",
+                        "group": "ИС-35",
+                        "room": "217",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-16",
@@ -113,14 +130,14 @@
                     {
                         "teacher": "Зинько Е.С.",
                         "group": "ИС-35",
-                        "room": "326",
+                        "room": "Общ1-4",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

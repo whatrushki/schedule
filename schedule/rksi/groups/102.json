@@ -8,7 +8,7 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Инструментальные средства разработки программного обеспечения",
+                "subject": "Программное обеспечение компьютерных сетей",
                 "otUnits": [
                     {
                         "teacher": "Болгов Д.Р.",
@@ -27,7 +27,7 @@
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Инструментальные средства разработки программного обеспечения",
+                "subject": "Программное обеспечение компьютерных сетей",
                 "otUnits": [
                     {
                         "teacher": "Болгов Д.Р.",
@@ -46,7 +46,7 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Инструментальные средства разработки программного обеспечения",
+                "subject": "Программное обеспечение компьютерных сетей",
                 "otUnits": [
                     {
                         "teacher": "Болгов Д.Р.",
@@ -125,30 +125,60 @@
         "lessons": [
             {
                 "date": "2026-11-16",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Иностранный язык в профессиональной деятельности",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Программное обеспечение компьютерных сетей",
                 "otUnits": [
                     {
-                        "teacher": "Чубарова А.Б.",
+                        "teacher": "Болгов Д.Р.",
                         "group": "СА-36",
-                        "room": "106",
+                        "room": "415",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
-                    },
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-16",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Программное обеспечение компьютерных сетей",
+                "otUnits": [
                     {
-                        "teacher": "Лебедева М.В.",
+                        "teacher": "Болгов Д.Р.",
                         "group": "СА-36",
-                        "room": "109",
+                        "room": "415",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-16",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Программное обеспечение компьютерных сетей",
+                "otUnits": [
+                    {
+                        "teacher": "Болгов Д.Р.",
+                        "group": "СА-36",
+                        "room": "415",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-16",
@@ -156,28 +186,45 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Самохвалова Д.Ю.",
+                        "group": "СА-36",
+                        "room": "416",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-16",
                 "number": 4,
                 "startTime": "14:10",
                 "endTime": "15:40",
-                "subject": "Администрирование сетевых операционных систем",
+                "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Савчук И.С.",
+                        "teacher": "Лебедева М.В.",
                         "group": "СА-36",
-                        "room": "420",
+                        "room": "104",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Чубарова А.Б.",
+                        "group": "СА-36",
+                        "room": "114",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-16",
@@ -196,7 +243,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-16",
@@ -215,7 +262,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

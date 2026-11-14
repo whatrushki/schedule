@@ -32,7 +32,7 @@
                     {
                         "teacher": "Коникова Е.А.",
                         "group": "СА-13",
-                        "room": "324",
+                        "room": "314",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -70,7 +70,7 @@
                     {
                         "teacher": "Коникова Е.А.",
                         "group": "СА-13",
-                        "room": "324",
+                        "room": "314",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -114,14 +114,14 @@
                     {
                         "teacher": "Барна Н.В.",
                         "group": "СА-13",
-                        "room": "326",
+                        "room": "114",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-16",
@@ -133,14 +133,14 @@
                     {
                         "teacher": "Щербакова Э.Н.",
                         "group": "СА-13",
-                        "room": "с/з2",
+                        "room": "с/з4",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-16",
@@ -148,9 +148,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "СА-13",
+                        "room": "Акт.зал",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
