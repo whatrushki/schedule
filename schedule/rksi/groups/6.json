@@ -1,14 +1,14 @@
 [
     {
-        "date": "2026-11-16",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "date": "2026-11-17",
+        "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-16",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
+                "date": "2026-11-17",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Основы бухгалтерского учета",
                 "otUnits": [
                     {
                         "teacher": "Хачадурова Е.В.",
@@ -19,53 +19,28 @@
                         "subject": null
                     }
                 ],
-                "type": "CLASS_HOUR",
-                "state": "CHANGED"
+                "type": "OTHER",
+                "state": "ADDED"
             },
             {
-                "date": "2026-11-16",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Документационное обеспечение управления",
+                "date": "2026-11-17",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Основы бухгалтерского учета",
                 "otUnits": [
                     {
-                        "teacher": "Селезень И.В.",
+                        "teacher": "Хачадурова Е.В.",
                         "group": "БУ-21",
-                        "room": "29",
+                        "room": "45",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
-                "state": "CHANGED"
+                "type": "OTHER",
+                "state": "ADDED"
             },
-            {
-                "date": "2026-11-16",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
-                "subject": "Статистика",
-                "otUnits": [
-                    {
-                        "teacher": "Шумина О.О.",
-                        "group": "БУ-21",
-                        "room": "17",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-17",
-        "scheduleType": "COMMON",
-        "lessons": [
             {
                 "date": "2026-11-17",
                 "number": 4,
@@ -76,14 +51,14 @@
                     {
                         "teacher": "Ерёменко О.А.",
                         "group": "БУ-21",
-                        "room": "32",
+                        "room": "27",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-17",
@@ -121,7 +96,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-17",
@@ -140,7 +115,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

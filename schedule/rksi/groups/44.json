@@ -1,63 +1,17 @@
 [
     {
-        "date": "2026-11-16",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "date": "2026-11-17",
+        "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-16",
+                "date": "2026-11-17",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Технология монтажа и настройки абонентского оборудования",
+                "subject": "Монтаж и обслуживание оптических систем передачи транспортных сетей",
                 "otUnits": [
                     {
                         "teacher": "Ермолина Л.В.",
-                        "group": "ИКС-41",
-                        "room": "210а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Чубарова А.Б.",
-                        "group": "ИКС-41",
-                        "room": "104",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Новосельцева Е.Ф.",
-                        "group": "ИКС-41",
-                        "room": "209а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [
-                    {
-                        "teacher": "Ермолина Л.В,",
                         "group": "ИКС-41",
                         "room": "114а",
                         "additional": "1",
@@ -65,15 +19,9 @@
                         "subject": null
                     }
                 ],
-                "type": "CLASS_HOUR",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-17",
-        "scheduleType": "COMMON",
-        "lessons": [
+                "type": "OTHER",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-11-17",
                 "number": 2,
@@ -117,19 +65,19 @@
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Планирование и организация работы структурного подразделения",
+                "subject": "Монтаж и обслуживание оптических систем передачи транспортных сетей",
                 "otUnits": [
                     {
-                        "teacher": "Згонникова Т.Ф.",
+                        "teacher": "Ермолина Л.В.",
                         "group": "ИКС-41",
-                        "room": "404",
+                        "room": "114а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-17",
@@ -148,7 +96,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

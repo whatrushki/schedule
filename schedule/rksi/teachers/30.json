@@ -1,10 +1,10 @@
 [
     {
-        "date": "2026-11-16",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "date": "2026-11-17",
+        "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-16",
+                "date": "2026-11-17",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
@@ -13,109 +13,6 @@
                     {
                         "teacher": "Ермолина Л.В.",
                         "group": "ИКС-41",
-                        "room": "210а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Монтаж и обслуживание оптических систем передачи транспортных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Ермолина Л.В.",
-                        "group": "ИКС-42",
-                        "room": "114а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Монтаж и обслуживание оптических систем передачи транспортных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Ермолина Л.В.",
-                        "group": "ИКС-42",
-                        "room": "114а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [
-                    {
-                        "teacher": "Ермолина Л.В,",
-                        "group": "ИКС-41",
-                        "room": "114а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Ермолина Л.В,",
-                        "group": "СА-37",
-                        "room": "114а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CLASS_HOUR",
-                "state": "ADDED"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Монтаж и обслуживание оптических систем передачи транспортных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Ермолина Л.В.",
-                        "group": "ИКС-42",
-                        "room": "114а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
-                "subject": "Монтаж и обслуживание оптических систем передачи транспортных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Ермолина Л.В.",
-                        "group": "ИКС-42",
                         "room": "114а",
                         "additional": "1",
                         "onlineUrl": null,
@@ -124,13 +21,7 @@
                 ],
                 "type": "OTHER",
                 "state": "ADDED"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-17",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
             {
                 "date": "2026-11-17",
                 "number": 2,
@@ -139,7 +30,7 @@
                 "subject": "Монтаж и обслуживание оптических систем передачи транспортных сетей",
                 "otUnits": [
                     {
-                        "teacher": "Ермолина Людмила Владимировна",
+                        "teacher": "Ермолина Л.В.",
                         "group": "ИКС-41",
                         "room": "114а",
                         "additional": "1",
@@ -148,7 +39,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-17",
@@ -158,7 +49,7 @@
                 "subject": "Монтаж и обслуживание оптических систем передачи транспортных сетей",
                 "otUnits": [
                     {
-                        "teacher": "Ермолина Людмила Владимировна",
+                        "teacher": "Ермолина Л.В.",
                         "group": "ИКС-41",
                         "room": "114а",
                         "additional": "1",
@@ -167,7 +58,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-17",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Монтаж и обслуживание оптических систем передачи транспортных сетей",
+                "otUnits": [
+                    {
+                        "teacher": "Ермолина Л.В.",
+                        "group": "ИКС-41",
+                        "room": "114а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

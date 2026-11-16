@@ -5,6 +5,44 @@
         "lessons": [
             {
                 "date": "2026-11-17",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Иностранный язык",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "ТД-11",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-17",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Иностранный язык",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "ИБТ-11",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-17",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
@@ -13,14 +51,22 @@
                     {
                         "teacher": "Ляшенко П.А.",
                         "group": "СА-23",
-                        "room": "420",
+                        "room": "415",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Крупицкая Н.А.,Ляшенко Д.И.",
+                        "group": "ИБА-13",
+                        "room": "13",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-17",
@@ -32,14 +78,14 @@
                     {
                         "teacher": "Ляшенко П.А.",
                         "group": "СА-24",
-                        "room": "303",
+                        "room": "401",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-17",
@@ -51,14 +97,14 @@
                     {
                         "teacher": "Ляшенко П.А.",
                         "group": "ИС-28",
-                        "room": "121",
+                        "room": "415",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-17",
@@ -70,14 +116,14 @@
                     {
                         "teacher": "Ляшенко П.А.",
                         "group": "СА-26",
-                        "room": "121",
+                        "room": "415",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

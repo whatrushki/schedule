@@ -1,76 +1,5 @@
 [
     {
-        "date": "2026-11-16",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-11-16",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Русский язык",
-                "otUnits": [
-                    {
-                        "teacher": "Чалая С.А.",
-                        "group": "ТД-13",
-                        "room": "24",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Литература",
-                "otUnits": [
-                    {
-                        "teacher": "Чалая С.А.",
-                        "group": "БУ-11",
-                        "room": "24",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [
-                    {
-                        "teacher": "Чалая С.А.",
-                        "group": "ИБА-31",
-                        "room": "24",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Чалая С.А.",
-                        "group": "БД-11",
-                        "room": "24",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CLASS_HOUR",
-                "state": "ADDED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-17",
         "scheduleType": "COMMON",
         "lessons": [
@@ -79,10 +8,10 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "Русский язык",
+                "subject": "Литература",
                 "otUnits": [
                     {
-                        "teacher": "Чалая Светлана Анатольевна",
+                        "teacher": "Чалая С.А.",
                         "group": "БД-11",
                         "room": "24",
                         "additional": "2",
@@ -91,7 +20,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-17",
@@ -101,7 +30,7 @@
                 "subject": "Литература",
                 "otUnits": [
                     {
-                        "teacher": "Чалая Светлана Анатольевна",
+                        "teacher": "Чалая С.А.",
                         "group": "БД-11",
                         "room": "24",
                         "additional": "2",
@@ -110,7 +39,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

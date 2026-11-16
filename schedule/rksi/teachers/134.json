@@ -1,147 +1,65 @@
 [
     {
-        "date": "2026-11-16",
-        "scheduleType": "WITH_CLASS_HOUR",
-        "lessons": [
-            {
-                "date": "2026-11-16",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Основы информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова А.В.",
-                        "group": "ИБА-12",
-                        "room": "31",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Основы информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова А.В.",
-                        "group": "ИБА-11",
-                        "room": "31",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Основы информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова А.В.",
-                        "group": "ИБА-13",
-                        "room": "31",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова А.В.",
-                        "group": "ИБА-21",
-                        "room": "27",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "CLASS_HOUR",
-                "state": "ADDED"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "УП",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова А.В.",
-                        "group": "ИБА-42",
-                        "room": "31",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
-                "subject": "УП",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова А.В.",
-                        "group": "ИБА-42",
-                        "room": "31",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 6,
-                "startTime": "17:40",
-                "endTime": "19:10",
-                "subject": "УП",
-                "otUnits": [
-                    {
-                        "teacher": "Кузнецова А.В.",
-                        "group": "ИБА-42",
-                        "room": "31",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-17",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-11-17",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова А.В.",
+                        "group": "ИБА-42",
+                        "room": "31",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-17",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова А.В.",
+                        "group": "ИБА-42",
+                        "room": "31",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-17",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова А.В.",
+                        "group": "ИБА-42",
+                        "room": "31",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-11-17",
                 "number": 4,
@@ -150,7 +68,7 @@
                 "subject": "УП",
                 "otUnits": [
                     {
-                        "teacher": "Кузнецова Ангелина Вячеславовна",
+                        "teacher": "Кузнецова А.В.",
                         "group": "ИБА-42",
                         "room": "31",
                         "additional": "2",
@@ -159,18 +77,18 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-17",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "УП",
+                "subject": "Криптографические средства защиты информации",
                 "otUnits": [
                     {
-                        "teacher": "Кузнецова Ангелина Вячеславовна",
-                        "group": "ИБА-42",
+                        "teacher": "Кузнецова А.В.",
+                        "group": "ИБА-41",
                         "room": "31",
                         "additional": "2",
                         "onlineUrl": null,
@@ -178,7 +96,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-17",
@@ -188,7 +106,7 @@
                 "subject": "Криптографические средства защиты информации",
                 "otUnits": [
                     {
-                        "teacher": "Кузнецова Ангелина Вячеславовна",
+                        "teacher": "Кузнецова А.В.",
                         "group": "ИБА-41",
                         "room": "31",
                         "additional": "2",
@@ -197,7 +115,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-17",
@@ -207,7 +125,7 @@
                 "subject": "Криптографические средства защиты информации",
                 "otUnits": [
                     {
-                        "teacher": "Кузнецова Ангелина Вячеславовна",
+                        "teacher": "Кузнецова А.В.",
                         "group": "ИБА-41",
                         "room": "31",
                         "additional": "2",
@@ -216,7 +134,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
