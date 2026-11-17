@@ -55,14 +55,6 @@
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
-                    },
-                    {
-                        "teacher": "Рыбалка В.В.",
-                        "group": "ИБА-34",
-                        "room": "45",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -95,41 +87,79 @@
         "lessons": [
             {
                 "date": "2026-11-18",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Кротенко Е.М.",
+                        "group": "ИБА-34",
+                        "room": "220",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-18",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Кротенко Е.М.",
+                        "group": "ИБА-34",
+                        "room": "220",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-18",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Эксплуатация компьютерных сетей",
+                "subject": "Сети и системы передачи информации",
                 "otUnits": [
                     {
-                        "teacher": "___",
+                        "teacher": "Гунько Д.Д.",
                         "group": "ИБА-34",
-                        "room": "Вак1",
-                        "additional": "Вак1",
+                        "room": "214",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-18",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Эксплуатация компьютерных сетей",
+                "subject": "Сети и системы передачи информации",
                 "otUnits": [
                     {
-                        "teacher": "___",
+                        "teacher": "Гунько Д.Д.",
                         "group": "ИБА-34",
-                        "room": "Вак3",
-                        "additional": "Вак3",
+                        "room": "214",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

@@ -87,6 +87,25 @@
         "lessons": [
             {
                 "date": "2026-11-18",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Экономика отрасли",
+                "otUnits": [
+                    {
+                        "teacher": "Григорьева Л.Ф.",
+                        "group": "СА-42",
+                        "room": "408",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-18",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -95,33 +114,33 @@
                     {
                         "teacher": "Савчук И.С.",
                         "group": "СА-42",
-                        "room": "121",
+                        "room": "314",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-18",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Организация администрирования компьютерных систем",
+                "subject": "Экономика отрасли",
                 "otUnits": [
                     {
-                        "teacher": "Савчук И.С.",
+                        "teacher": "Григорьева Л.Ф.",
                         "group": "СА-42",
-                        "room": "121",
+                        "room": "408",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-18",
@@ -140,7 +159,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
