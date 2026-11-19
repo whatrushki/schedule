@@ -38,19 +38,21 @@ import app.what.foundation.ui.icons.WHATIcons
 import app.what.foundation.ui.icons.filled.Features
 import app.what.foundation.ui.icons.filled.Logs
 import app.what.foundation.ui.icons.filled.Network
-
+import app.what.foundation.ui.icons.filled.ReleaseAlert
 import androidx.compose.material.icons.filled.CheckCircle
 import app.what.schedule.features.dev.presentation.HealthCheckPane
+import app.what.schedule.features.dev.presentation.UpdateTestPane
 
 enum class DevToolsTab(
     val title: String, val icon: ImageVector
 ) {
     LOGS("Логи", WHATIcons.Logs),
     NETWORK("Сеть", WHATIcons.Network),
-    HEALTH("Тесты", Icons.Default.CheckCircle);
+    HEALTH("Тесты", Icons.Default.CheckCircle),
+    UPDATES("Апдейты", WHATIcons.ReleaseAlert);
     
     companion object {
-        fun all() = listOf(LOGS, NETWORK, HEALTH)
+        fun all() = listOf(LOGS, NETWORK, HEALTH, UPDATES)
     }
 }
 
@@ -130,6 +132,7 @@ fun DevFeature(
             DevToolsTab.LOGS -> LogsPane(Modifier.fillMaxSize())
             DevToolsTab.NETWORK -> NetworksPane(Modifier.fillMaxSize())
             DevToolsTab.HEALTH -> HealthCheckPane(Modifier.fillMaxSize())
+            DevToolsTab.UPDATES -> UpdateTestPane(Modifier.fillMaxSize())
         }
     }
 }

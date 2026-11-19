@@ -5,6 +5,7 @@ plugins {
 kotlin {
     sourceSets {
         commonMain.dependencies {
+            implementation(project(":features:onboarding"))
             implementation(libs.foundation.healthcheck)
             implementation(libs.bundles.ktor)
         }
