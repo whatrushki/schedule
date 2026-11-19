@@ -1,5 +1,6 @@
 package app.what.data.ads
 
+import android.content.Context
 import android.view.ViewGroup
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
@@ -13,7 +14,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -30,6 +30,70 @@ import com.yandex.mobile.ads.banner.BannerAdView
 import com.yandex.mobile.ads.common.AdRequest
 import com.yandex.mobile.ads.common.AdRequestError
 import com.yandex.mobile.ads.common.ImpressionData
+
+class CachedBanner(
+    val adUnitId: String,
+    val bannerView: BannerAdView
+) {
+    var isLoaded by mutableStateOf(false)
+    var isFailed by mutableStateOf(false)
+    var currentAdSize: BannerAdSize? = null
+}
+
+object YandexAdManager {
+    private val banners = mutableMapOf<String, CachedBanner>()
+
+    fun getOrCreateBanner(
+        context: Context,
+        cacheKey: String,
+        adUnitId: String,
+        adSize: BannerAdSize
+    ): CachedBanner {
+        val existing = banners[cacheKey]
+        if (existing != null) {
+            if (existing.currentAdSize != adSize) {
+                existing.currentAdSize = adSize
+                existing.bannerView.setAdSize(adSize)
+            }
+            if (!existing.isLoaded && !existing.isFailed) {
+                return existing
+            }
+            if (existing.isLoaded) {
+                return existing
+            }
+            // Retry on failure
+            existing.isFailed = false
+            existing.bannerView.loadAd(AdRequest.Builder(adUnitId).build())
+            return existing
+        }
+
+        val bannerView = BannerAdView(context)
+        val cached = CachedBanner(adUnitId, bannerView)
+        cached.currentAdSize = adSize
+
+        bannerView.setBannerAdEventListener(object : BannerAdEventListener {
+            override fun onAdLoaded() {
+                cached.isLoaded = true
+                cached.isFailed = false
+            }
+
+            override fun onAdFailedToLoad(error: AdRequestError) {
+                cached.isLoaded = false
+                cached.isFailed = true
+            }
+
+            override fun onAdClicked() {}
+
+            override fun onImpression(impressionData: ImpressionData?) {}
+        })
+
+        bannerView.setAdSize(adSize)
+        bannerView.loadAd(AdRequest.Builder(adUnitId).build())
+
+        banners[cacheKey] = cached
+        return cached
+    }
+}
 
 @Composable
 actual fun YandexBannerAd(
@@ -53,38 +117,17 @@ actual fun YandexBannerAd(
             if (h > 0) (h / density).dp else 60.dp
         }
 
-        var isAdLoaded by remember(adUnitId) { mutableStateOf(false) }
-        var isAdFailed by remember(adUnitId) { mutableStateOf(false) }
-
-        val bannerView = remember(adUnitId, adSize) {
-            BannerAdView(context).apply {
-                setBannerAdEventListener(object : BannerAdEventListener {
-                    override fun onAdLoaded() {
-                        isAdLoaded = true
-                        isAdFailed = false
-                    }
-
-                    override fun onAdFailedToLoad(error: AdRequestError) {
-                        isAdLoaded = false
-                        isAdFailed = true
-                    }
-
-                    override fun onAdClicked() {}
-
-                    override fun onImpression(impressionData: ImpressionData?) {}
-                })
-                setAdSize(adSize)
-                loadAd(AdRequest.Builder(adUnitId).build())
-            }
+        // Shared cached banner for adUnitId: loaded once and reused across pager swipes
+        val cachedBanner = remember(adUnitId, adSize) {
+            YandexAdManager.getOrCreateBanner(
+                context = context,
+                cacheKey = adUnitId,
+                adUnitId = adUnitId,
+                adSize = adSize
+            )
         }
 
-        DisposableEffect(bannerView) {
-            onDispose {
-                bannerView.destroy()
-            }
-        }
-
-        if (!isAdFailed) {
+        if (!cachedBanner.isFailed) {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -92,7 +135,7 @@ actual fun YandexBannerAd(
                     .clip(MaterialTheme.shapes.large),
                 contentAlignment = Alignment.Center
             ) {
-                if (!isAdLoaded) {
+                if (!cachedBanner.isLoaded) {
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
@@ -101,17 +144,21 @@ actual fun YandexBannerAd(
                 }
 
                 AnimatedVisibility(
-                    visible = isAdLoaded,
+                    visible = cachedBanner.isLoaded,
                     enter = fadeIn(),
                     exit = fadeOut()
                 ) {
                     AndroidView(
                         modifier = Modifier.fillMaxSize(),
                         factory = {
-                            (bannerView.parent as? ViewGroup)?.removeView(bannerView)
-                            bannerView
+                            (cachedBanner.bannerView.parent as? ViewGroup)?.removeView(cachedBanner.bannerView)
+                            cachedBanner.bannerView
                         },
-                        update = {}
+                        update = { view ->
+                            (view.parent as? ViewGroup)?.let { parent ->
+                                // Ensure attached to the current active composable container
+                            }
+                        }
                     )
                 }
             }
