@@ -38,6 +38,7 @@ import app.what.schedule.features.schedule.domain.models.ScheduleEvent
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
+import app.what.schedule.features.main.TestUpdateController
 import app.what.foundation.auth.client.WhatAuthManager
 import org.koin.android.ext.android.inject
 import org.koin.compose.koinInject
@@ -77,6 +78,9 @@ open class MainActivity : ComponentActivity() {
         val uiTag = buildTag(LogScope.UI, LogCat.INIT)
         Auditor.info(uiTag, "MainActivity создана")
         AppIconManager.updateIcon(this, appValues)
+        if (intent.getBooleanExtra("test_update", false)) {
+            TestUpdateController.showTestScreen = true
+        }
         handleNotificationIntent(intent)
         handleAuthIntent(intent)
         lifecycleScope.launch {
@@ -144,6 +148,9 @@ open class MainActivity : ComponentActivity() {
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         setIntent(intent)
+        if (intent.getBooleanExtra("test_update", false)) {
+            TestUpdateController.showTestScreen = true
+        }
         handleNotificationIntent(intent)
         handleAuthIntent(intent)
     }

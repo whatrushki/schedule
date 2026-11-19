@@ -10,7 +10,8 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.runtime.Composable
@@ -98,7 +99,8 @@ object YandexAdManager {
 @Composable
 actual fun YandexBannerAd(
     modifier: Modifier,
-    adUnitId: String
+    adUnitId: String,
+    pageKey: String
 ) {
     val context = LocalContext.current
 
@@ -106,22 +108,27 @@ actual fun YandexBannerAd(
         modifier = modifier.fillMaxWidth(),
         contentAlignment = Alignment.Center
     ) {
-        val density = context.resources.displayMetrics.density
         val availableWidthDp = maxWidth.value.toInt().coerceAtLeast(320)
 
+        // Use adaptive inline banner size suitable for feed/schedule lists (max 180dp height)
         val adSize = remember(availableWidthDp) {
-            BannerAdSize.sticky(context, availableWidthDp)
+            BannerAdSize.inline(context, availableWidthDp, 180)
         }
-        val bannerHeightDp = remember(adSize, density) {
+        // getHeight(context) in Yandex Mobile Ads SDK returns height in DP directly
+        val bannerHeightDp = remember(adSize) {
             val h = adSize.getHeight(context)
-            if (h > 0) (h / density).dp else 60.dp
+            if (h > 0) h.dp else 160.dp
         }
 
-        // Shared cached banner for adUnitId: loaded once and reused across pager swipes
-        val cachedBanner = remember(adUnitId, adSize) {
+        // Each pager page has its own key so swiping across days doesn't tear down or conflict with other days
+        val cacheKey = remember(adUnitId, pageKey) {
+            if (pageKey.isNotBlank()) "$adUnitId#$pageKey" else "$adUnitId#default"
+        }
+
+        val cachedBanner = remember(cacheKey, adSize) {
             YandexAdManager.getOrCreateBanner(
                 context = context,
-                cacheKey = adUnitId,
+                cacheKey = cacheKey,
                 adUnitId = adUnitId,
                 adSize = adSize
             )
@@ -131,14 +138,15 @@ actual fun YandexBannerAd(
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(bannerHeightDp)
+                    .heightIn(min = bannerHeightDp)
                     .clip(MaterialTheme.shapes.large),
                 contentAlignment = Alignment.Center
             ) {
                 if (!cachedBanner.isLoaded) {
                     Box(
                         modifier = Modifier
-                            .fillMaxSize()
+                            .fillMaxWidth()
+                            .heightIn(min = bannerHeightDp)
                             .background(colorScheme.surfaceContainerLow.copy(alpha = 0.5f))
                     )
                 }
@@ -149,15 +157,15 @@ actual fun YandexBannerAd(
                     exit = fadeOut()
                 ) {
                     AndroidView(
-                        modifier = Modifier.fillMaxSize(),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .wrapContentHeight(),
                         factory = {
                             (cachedBanner.bannerView.parent as? ViewGroup)?.removeView(cachedBanner.bannerView)
                             cachedBanner.bannerView
                         },
-                        update = { view ->
-                            (view.parent as? ViewGroup)?.let { parent ->
-                                // Ensure attached to the current active composable container
-                            }
+                        update = { _ ->
+                            // Ensure bannerView stays attached
                         }
                     )
                 }

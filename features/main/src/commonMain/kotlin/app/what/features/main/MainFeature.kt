@@ -360,12 +360,20 @@ class MainFeature(
                         .zIndex(99f)
                 )
 
-                if (isMandatory && updateInfo != null && appUpdateManager != null) {
+                if ((isMandatory && updateInfo != null && appUpdateManager != null) || TestUpdateController.showTestScreen) {
+                    val activeInfo = if (TestUpdateController.showTestScreen) TestUpdateController.testInfo else updateInfo!!
+                    val activeManager = if (TestUpdateController.showTestScreen) TestUpdateController.mockManager else appUpdateManager!!
                     MandatoryUpdateScreen(
-                        info = updateInfo,
-                        manager = appUpdateManager,
+                        info = activeInfo,
+                        manager = activeManager,
                         isRuStore = installSource == InstallSource.RuStore,
-                        onExitApp = { appCloser?.exit() },
+                        onExitApp = {
+                            if (TestUpdateController.showTestScreen) {
+                                TestUpdateController.showTestScreen = false
+                            } else {
+                                appCloser?.exit()
+                            }
+                        },
                         modifier = Modifier
                             .fillMaxSize()
                             .zIndex(100f)

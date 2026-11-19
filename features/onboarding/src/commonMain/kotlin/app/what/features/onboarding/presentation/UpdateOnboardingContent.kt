@@ -69,6 +69,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import app.what.data.local.settings.findSettingComponent
 import app.what.domain.services.ReleaseHighlight
 import app.what.domain.services.ReleaseNotes
@@ -315,32 +316,33 @@ private fun UpdateIntroPage(releaseNotes: ReleaseNotes) {
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .padding(horizontal = 16.dp)
-            .padding(top = 24.dp, bottom = 16.dp)
+            .padding(horizontal = 20.dp)
+            .padding(top = 20.dp, bottom = 16.dp)
     ) {
         Box(
-            modifier = Modifier.size(160.dp),
+            modifier = Modifier.size(130.dp),
             contentAlignment = Alignment.Center
         ) {
-            Canvas(modifier = Modifier.size(160.dp)) {
+            Canvas(modifier = Modifier.size(130.dp)) {
                 drawCircle(brush = glowBrush)
             }
             Icon(
                 imageVector = Icons.Default.NewReleases,
                 contentDescription = null,
-                modifier = Modifier.size(90.dp),
+                modifier = Modifier.size(76.dp),
                 tint = primaryColor
             )
         }
 
-        Gap(28)
+        Gap(20)
 
         Text(
             text = releaseNotes.title ?: "Обновление",
-            style = typography.headlineMedium,
+            style = typography.titleLarge,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            color = colorScheme.onSurface
+            color = colorScheme.onSurface,
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp)
         )
 
         Gap(10)
@@ -366,8 +368,9 @@ private fun UpdateIntroPage(releaseNotes: ReleaseNotes) {
                 ?: "Познакомьтесь с новыми возможностями и улучшениями в этом выпуске.",
             style = typography.bodyLarge,
             textAlign = TextAlign.Center,
-            color = colorScheme.secondary,
-            modifier = Modifier.padding(horizontal = 8.dp)
+            color = colorScheme.onSurfaceVariant,
+            lineHeight = 22.sp,
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 6.dp)
         )
     }
 }
@@ -392,19 +395,20 @@ private fun UpdateHighlightPage(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .padding(top = 24.dp, bottom = 16.dp)
+            .padding(horizontal = 20.dp)
+            .padding(top = 20.dp, bottom = 16.dp)
     ) {
-        // Hero Icon with subtle glow - 160.dp matching UpdateIntroPage baseline
+        // Hero Icon with subtle glow
         Box(
-            modifier = Modifier.size(160.dp),
+            modifier = Modifier.size(130.dp),
             contentAlignment = Alignment.Center
         ) {
-            Canvas(modifier = Modifier.size(160.dp)) {
+            Canvas(modifier = Modifier.size(130.dp)) {
                 drawCircle(brush = glowBrush)
             }
             Box(
                 modifier = Modifier
-                    .size(96.dp)
+                    .size(80.dp)
                     .clip(CircleShape)
                     .background(colorScheme.primary.copy(alpha = 0.12f)),
                 contentAlignment = Alignment.Center
@@ -412,21 +416,21 @@ private fun UpdateHighlightPage(
                 Icon(
                     imageVector = icon,
                     contentDescription = null,
-                    modifier = Modifier.size(52.dp),
+                    modifier = Modifier.size(44.dp),
                     tint = primaryColor
                 )
             }
         }
 
-        Gap(28)
+        Gap(20)
 
         Text(
             text = highlight.title,
-            style = typography.headlineMedium,
+            style = typography.titleLarge,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
             color = colorScheme.onSurface,
-            modifier = Modifier.padding(horizontal = 16.dp)
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp)
         )
 
         Gap(12)
@@ -435,16 +439,17 @@ private fun UpdateHighlightPage(
             text = highlight.description,
             style = typography.bodyLarge,
             textAlign = TextAlign.Center,
-            color = colorScheme.secondary,
-            modifier = Modifier.padding(horizontal = 16.dp)
+            color = colorScheme.onSurfaceVariant,
+            lineHeight = 22.sp,
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 6.dp)
         )
 
         // Multiple settings without bulky card wrappers, edge-to-edge
         if (settingComponents.isNotEmpty()) {
-            Gap(12)
+            Gap(16)
             Column(
                 modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(2.dp)
+                verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
                 settingComponents.forEach { component ->
                     component.content(Modifier.fillMaxWidth())
@@ -548,7 +553,8 @@ private fun UpdateChangelogPage(
                     Text(
                         text = change,
                         style = typography.bodyMedium,
-                        color = colorScheme.onSurface
+                        color = colorScheme.onSurface,
+                        modifier = Modifier.weight(1f)
                     )
                 }
             }

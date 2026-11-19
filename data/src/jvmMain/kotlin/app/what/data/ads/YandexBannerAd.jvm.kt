@@ -6,7 +6,8 @@ import androidx.compose.ui.Modifier
 @Composable
 actual fun YandexBannerAd(
     modifier: Modifier,
-    adUnitId: String
+    adUnitId: String,
+    pageKey: String
 ) {
     // No-op on JVM/Desktop
 }

@@ -901,7 +901,10 @@ fun ScheduleView(
 
                                 ) {
 
-                                    YandexBannerAd(adUnitId = YandexAdsConfig.SCHEDULE_BANNER_ID)
+                                    YandexBannerAd(
+                                        adUnitId = YandexAdsConfig.SCHEDULE_BANNER_ID,
+                                        pageKey = date.toString()
+                                    )
 
                                 }
 
