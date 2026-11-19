@@ -20,7 +20,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-20",
@@ -30,16 +30,35 @@
                 "subject": "Основы философии",
                 "otUnits": [
                     {
-                        "teacher": "Куракова Галина Владимировна",
+                        "teacher": "Куракова Г.В.",
                         "group": "ИБА-34",
-                        "room": "35",
+                        "room": "36",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-20",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Основы философии",
+                "otUnits": [
+                    {
+                        "teacher": "Куракова Г.В.",
+                        "group": "ИБА-34",
+                        "room": "36",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

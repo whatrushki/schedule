@@ -93,24 +93,24 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Новосельцева Е.Ф.",
-                        "group": "СА-44",
-                        "room": "209а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
                         "teacher": "Черноштан О.Н.",
                         "group": "СА-44",
                         "room": "106",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
+                    },
+                    {
+                        "teacher": "Новосельцева Е.Ф.",
+                        "group": "СА-44",
+                        "room": "209а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-20",
@@ -130,6 +130,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-11-20",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Эксплуатация объектов сетевой инфраструктуры",
+                "otUnits": [
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "СА-44",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

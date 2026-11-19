@@ -87,13 +87,32 @@
         "lessons": [
             {
                 "date": "2026-11-20",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Монтаж и эксплуатация компьютерных сетей",
+                "otUnits": [
+                    {
+                        "teacher": "Байбекова И.Г.",
+                        "group": "ИКС-31",
+                        "room": "110",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-20",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
                 "subject": "Монтаж и эксплуатация компьютерных сетей",
                 "otUnits": [
                     {
-                        "teacher": "Байбекова Ирина Григорьевна",
+                        "teacher": "Байбекова И.Г.",
                         "group": "ИКС-31",
                         "room": "110",
                         "additional": "1",
@@ -102,7 +121,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-20",
@@ -112,7 +131,7 @@
                 "subject": "Монтаж и эксплуатация компьютерных сетей",
                 "otUnits": [
                     {
-                        "teacher": "Байбекова Ирина Григорьевна",
+                        "teacher": "Байбекова И.Г.",
                         "group": "ИКС-33",
                         "room": "110",
                         "additional": "1",
@@ -121,7 +140,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-20",
@@ -131,7 +150,7 @@
                 "subject": "Монтаж и эксплуатация компьютерных сетей",
                 "otUnits": [
                     {
-                        "teacher": "Байбекова Ирина Григорьевна",
+                        "teacher": "Байбекова И.Г.",
                         "group": "ИКС-33",
                         "room": "110",
                         "additional": "1",
@@ -140,7 +159,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-20",
@@ -159,7 +178,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
