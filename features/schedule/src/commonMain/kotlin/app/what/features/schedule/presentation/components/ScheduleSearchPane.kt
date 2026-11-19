@@ -206,17 +206,18 @@ fun LazyGridScope.searchBlocks(
     onClick: (ScheduleSearch) -> Unit,
     onLongClick: (ScheduleSearch) -> Unit
 ) {
-    items(
+    itemsIndexed(
         items = list,
-        key = { it ->
+        key = { index, it ->
             val type = when (it) {
                 is ScheduleSearch.Group -> "group"
                 is ScheduleSearch.Teacher -> "teacher"
             }
             val idPart = it.id.ifBlank { it.name }
-            if (favorite) "fav_${type}_$idPart" else "${type}_$idPart"
+            val prefix = if (favorite) "fav_" else ""
+            "${prefix}${type}_${idPart}_$index"
         }
-    ) { it ->
+    ) { _, it ->
         val isVacancy = it is ScheduleSearch.Teacher && it.name.isNotBlank() && it.name.all { ch -> ch == '-' || ch == '—' || ch == '–' }
         val displayName = if (isVacancy) "Вакансия (${it.name})" else it.name
         SearchItemChip(

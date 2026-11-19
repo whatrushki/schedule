@@ -689,7 +689,7 @@ fun NotificationItem(data: Notification) = Box(
                     if (data.link != null) {
                         Gap(8)
                         
-                        TextButton(onClick = { uriHandler.openUri(data.link.second) }) {
+                        TextButton(onClick = { runCatching { uriHandler.openUri(data.link.second) } }) {
                             Text(data.link.first)
                         }
                     }

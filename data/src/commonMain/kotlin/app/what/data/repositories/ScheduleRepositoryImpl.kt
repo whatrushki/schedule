@@ -411,6 +411,11 @@ class ScheduleRepositoryImpl(
                     )
                 )
                 
+                if (dayScheduleId <= 0) {
+                    Auditor.err(dbTag, "Не удалось вставить DayScheduleDBO для запроса $requestId")
+                    continue
+                }
+                
                 for (lesson in daySchedule.lessons) {
                     val lessonId = db.lessonsDao.insert(
                         LessonDBO(
@@ -423,6 +428,11 @@ class ScheduleRepositoryImpl(
                             state = lesson.state
                         )
                     )
+                    
+                    if (lessonId <= 0) {
+                        Auditor.err(dbTag, "Не удалось вставить LessonDBO для daySchedule $dayScheduleId")
+                        continue
+                    }
                     
                     val otUnitsToInsert = mutableListOf<OneTimeUnitDBO>()
                     for (otUnit in lesson.otUnits) {
