@@ -175,14 +175,22 @@ export class CronWorker {
           for (const item of newlyChanged) {
             const dayRu = formatRuDate(item.date);
             const dow = getDayOfWeekRuShort(item.date);
-            const statusLabel = item.state === 'CANCELLED' ? '❌ [ОТМЕНЕНО]' : '⚠️ [ЗАМЕНА]';
+            const isCancelled = item.state === 'CANCELLED' || item.state === 'REMOVED';
+            const isAdded = item.state === 'ADDED';
+            const statusLabel = isCancelled ? '❌ [ОТМЕНЕНО]' : (isAdded ? '⚡ [ДОБАВЛЕНА]' : '⚠️ [ЗАМЕНА]');
             const isClassHour = item.number === 0 || item.subject.toLowerCase().includes('классный час');
             const pairLabel = isClassHour ? 'Классный час' : `${item.number} пара`;
             const timeLabel = item.startTime ? ` (${item.startTime})` : '';
 
             lines.push(`📌 <b>${dayRu} (${dow})</b> · <b>${pairLabel}</b>${timeLabel} ${statusLabel}`);
             if (!isClassHour || item.subject.toLowerCase() !== 'классный час') {
-              lines.push(`<b>${escapeHtml(item.subject)}</b>`);
+              if (isCancelled) {
+                lines.push(`<s><b>${escapeHtml(item.subject)}</b></s> <i>(Пара отменена)</i>`);
+              } else if (isAdded) {
+                lines.push(`<b>${escapeHtml(item.subject)}</b> ⚡ <i>[Добавлена]</i>`);
+              } else {
+                lines.push(`<b>${escapeHtml(item.subject)}</b> ♻️ <i>[Замена]</i>`);
+              }
             }
             if (item.teacher) lines.push(`Преподаватель: ${escapeHtml(item.teacher)}`);
             if (item.room) lines.push(`Ауд. ${escapeHtml(item.room)}`);
@@ -283,14 +291,15 @@ function extractChangedLessons(days: DayDto[], todayStr: string, tomorrowStr: st
 
   for (const d of activeDays) {
     for (const l of (d.lessons || [])) {
-      if (l.state === 'CHANGED' || l.state === 'REPLACEMENT' || l.state === 'CANCELLED') {
+      const stateUpper = (l.state || '').toUpperCase();
+      if (stateUpper === 'CHANGED' || stateUpper === 'REPLACEMENT' || stateUpper === 'CANCELLED' || stateUpper === 'REMOVED' || stateUpper === 'ADDED') {
         const u = l.otUnits?.[0];
         changedLessons.push({
           date: d.date,
           number: l.number,
           startTime: l.startTime || '',
           subject: l.subject || '',
-          state: l.state,
+          state: stateUpper,
           room: u?.room || '',
           teacher: u?.teacher || '',
           group: u?.group || ''
