@@ -886,28 +886,11 @@ fun ScheduleView(
                             val adsLevel by appValues.supportAdsLevel.collect()
 
                             if (adsLevel == SupportAdsLevel.MAX) {
-
-                                Box(
-
-                                    modifier = Modifier
-
-                                        .fillMaxWidth()
-
-                                        .padding(top = 8.dp, bottom = 12.dp)
-
-                                        .clip(shapes.large),
-
-                                    contentAlignment = Alignment.Center
-
-                                ) {
-
-                                    YandexBannerAd(
-                                        adUnitId = YandexAdsConfig.SCHEDULE_BANNER_ID,
-                                        pageKey = date.toString()
-                                    )
-
-                                }
-
+                                YandexBannerAd(
+                                    modifier = Modifier.padding(top = 4.dp, bottom = 8.dp),
+                                    adUnitId = YandexAdsConfig.SCHEDULE_BANNER_ID,
+                                    pageKey = date.toString()
+                                )
                             }
 
 

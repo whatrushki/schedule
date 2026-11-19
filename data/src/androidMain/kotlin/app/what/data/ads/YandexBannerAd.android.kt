@@ -5,15 +5,11 @@ import android.view.ViewGroup
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -23,7 +19,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.yandex.mobile.ads.banner.BannerAdEventListener
 import com.yandex.mobile.ads.banner.BannerAdSize
@@ -110,17 +105,12 @@ actual fun YandexBannerAd(
     ) {
         val availableWidthDp = maxWidth.value.toInt().coerceAtLeast(320)
 
-        // Use adaptive inline banner size suitable for feed/schedule lists (max 180dp height)
+        // Standard sticky/compact banner size (~50dp) designed for mobile banners (R-M-20151304-3)
         val adSize = remember(availableWidthDp) {
-            BannerAdSize.inline(context, availableWidthDp, 180)
-        }
-        // getHeight(context) in Yandex Mobile Ads SDK returns height in DP directly
-        val bannerHeightDp = remember(adSize) {
-            val h = adSize.getHeight(context)
-            if (h > 0) h.dp else 160.dp
+            BannerAdSize.sticky(context, availableWidthDp)
         }
 
-        // Each pager page has its own key so swiping across days doesn't tear down or conflict with other days
+        // Each pager page has its own key so swiping across days doesn't conflict
         val cacheKey = remember(adUnitId, pageKey) {
             if (pageKey.isNotBlank()) "$adUnitId#$pageKey" else "$adUnitId#default"
         }
@@ -134,41 +124,33 @@ actual fun YandexBannerAd(
             )
         }
 
-        if (!cachedBanner.isFailed) {
+        // Only render when ad is actually loaded: zero space, no placeholders or gaps when waiting/empty
+        AnimatedVisibility(
+            visible = cachedBanner.isLoaded,
+            enter = fadeIn(),
+            exit = fadeOut()
+        ) {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .heightIn(min = bannerHeightDp)
                     .clip(MaterialTheme.shapes.large),
                 contentAlignment = Alignment.Center
             ) {
-                if (!cachedBanner.isLoaded) {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .heightIn(min = bannerHeightDp)
-                            .background(colorScheme.surfaceContainerLow.copy(alpha = 0.5f))
-                    )
-                }
-
-                AnimatedVisibility(
-                    visible = cachedBanner.isLoaded,
-                    enter = fadeIn(),
-                    exit = fadeOut()
-                ) {
-                    AndroidView(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .wrapContentHeight(),
-                        factory = {
-                            (cachedBanner.bannerView.parent as? ViewGroup)?.removeView(cachedBanner.bannerView)
-                            cachedBanner.bannerView
-                        },
-                        update = { _ ->
-                            // Ensure bannerView stays attached
+                AndroidView(
+                    modifier = Modifier
+                        .clip(MaterialTheme.shapes.large)
+                        .fillMaxWidth()
+                        .wrapContentHeight(),
+                    factory = {
+                        cachedBanner.bannerView.apply {
+                            (parent as? ViewGroup)?.removeView(this)
+                            clipToOutline = true
                         }
-                    )
-                }
+                    },
+                    update = { view ->
+                        view.clipToOutline = true
+                    }
+                )
             }
         }
     }

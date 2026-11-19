@@ -1,10 +1,6 @@
 package app.what.features.onboarding.presentation
 
-import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
-import androidx.compose.animation.core.tween
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -28,8 +24,19 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.rounded.ArrowForward
+import androidx.compose.material.icons.filled.AutoAwesome
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Palette
+import androidx.compose.material.icons.filled.School
+import androidx.compose.material.icons.filled.Security
+import androidx.compose.material.icons.filled.Speed
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.Sync
+import androidx.compose.material.icons.filled.Tune
+import androidx.compose.material.icons.filled.Widgets
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
@@ -39,13 +46,14 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.scale
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -62,7 +70,6 @@ import app.what.foundation.ui.icons.WHATIcons
 import app.what.foundation.ui.icons.filled.ApkInstall
 import app.what.foundation.ui.icons.filled.Download
 import app.what.foundation.ui.icons.filled.DownloadError
-import app.what.foundation.ui.icons.filled.ReleaseAlert
 import kotlin.math.roundToInt
 
 @Composable
@@ -73,7 +80,6 @@ fun MandatoryUpdateScreen(
     onExitApp: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    // Перехватываем системную кнопку "Назад", чтобы экран нельзя было закрыть
     PlatformBackHandler(enabled = true) {
         onExitApp()
     }
@@ -88,7 +94,6 @@ fun MandatoryUpdateScreen(
         val isWide = maxWidth >= 640.dp
 
         if (isWide) {
-            // Затемняющий фон (scrim) без закрытия по клику
             Box(
                 modifier = Modifier
                     .fillMaxSize()
@@ -96,16 +101,15 @@ fun MandatoryUpdateScreen(
                     .clickable(
                         interactionSource = remember { MutableInteractionSource() },
                         indication = null,
-                        onClick = {} // Намеренно пусто: клик мимо не закрывает обязательное обновление
+                        onClick = {}
                     )
             )
 
-            // Центрированная карточка для десктопа / веба
             Box(
                 modifier = Modifier
-                    .widthIn(max = 560.dp)
+                    .widthIn(max = 540.dp)
                     .fillMaxWidth(0.9f)
-                    .heightIn(max = 760.dp)
+                    .heightIn(max = 740.dp)
                     .fillMaxHeight(0.9f)
                     .clip(RoundedCornerShape(28.dp))
                     .background(colorScheme.surface)
@@ -116,6 +120,7 @@ fun MandatoryUpdateScreen(
                     )
                     .padding(24.dp)
             ) {
+                MandatoryUpdateAmbientBackground()
                 MandatoryUpdateCardContent(
                     info = info,
                     releaseNotes = releaseNotes,
@@ -126,15 +131,15 @@ fun MandatoryUpdateScreen(
                 )
             }
         } else {
-            // Полноэкранный вид для мобильных устройств
             Box(
                 modifier = Modifier
                     .fillMaxSize()
                     .background(colorScheme.surface)
                     .statusBarsPadding()
                     .navigationBarsPadding()
-                    .padding(horizontal = 20.dp, vertical = 16.dp)
+                    .padding(horizontal = 20.dp, vertical = 12.dp)
             ) {
+                MandatoryUpdateAmbientBackground()
                 MandatoryUpdateCardContent(
                     info = info,
                     releaseNotes = releaseNotes,
@@ -145,6 +150,22 @@ fun MandatoryUpdateScreen(
                 )
             }
         }
+    }
+}
+
+@Composable
+private fun MandatoryUpdateAmbientBackground() {
+    val color1 = colorScheme.primaryContainer.copy(0.35f)
+    val surface = colorScheme.surface
+
+    Canvas(modifier = Modifier.fillMaxSize()) {
+        drawRect(
+            brush = Brush.radialGradient(
+                colors = listOf(color1, surface),
+                center = Offset(size.width / 2f, size.height * 0.2f),
+                radius = size.maxDimension * 0.85f
+            )
+        )
     }
 }
 
@@ -161,172 +182,136 @@ private fun MandatoryUpdateCardContent(
         ?: info.releaseNotes?.let { ReleaseNotes.parseMarkdownChangelog(it) }
         ?: emptyList()
     val highlights = releaseNotes?.highlights ?: emptyList()
-    val title = releaseNotes?.title ?: "Важное обновление приложения"
-    val shortDesc = releaseNotes?.shortDescription
     val sizeStr = formatFileSize(info.fileSize)
+    val primaryColor = colorScheme.primary
 
-    val infiniteTransition = rememberInfiniteTransition()
-    val pulseScale by infiniteTransition.animateFloat(
-        initialValue = 0.95f,
-        targetValue = 1.05f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(1200),
-            repeatMode = RepeatMode.Reverse
-        )
+    val glowBrush = Brush.radialGradient(
+        colors = listOf(primaryColor.copy(0.25f), Color.Transparent)
     )
 
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.SpaceBetween
     ) {
-        // Верхняя часть со скроллом (информация о версии и изменениях)
         Column(
             modifier = Modifier
                 .weight(1f)
                 .fillMaxWidth()
                 .verticalScroll(rememberScrollState()),
-            horizontalAlignment = Alignment.Start
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Заголовок с пульсирующей иконкой и бейджем обязательности
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(14.dp)
+            Gap(12)
+
+            // Hero Icon with subtle ambient glow
+            Box(
+                modifier = Modifier.size(110.dp),
+                contentAlignment = Alignment.Center
             ) {
+                Canvas(modifier = Modifier.size(110.dp)) {
+                    drawCircle(brush = glowBrush)
+                }
                 Box(
                     modifier = Modifier
-                        .size(52.dp)
-                        .scale(pulseScale)
-                        .clip(RoundedCornerShape(16.dp))
-                        .background(colorScheme.errorContainer),
+                        .size(76.dp)
+                        .clip(CircleShape)
+                        .background(colorScheme.primary.copy(alpha = 0.12f)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
-                        imageVector = WHATIcons.ReleaseAlert,
+                        imageVector = WHATIcons.ApkInstall,
                         contentDescription = null,
-                        tint = colorScheme.error,
-                        modifier = Modifier.size(30.dp)
-                    )
-                }
-
-                Column(modifier = Modifier.weight(1f)) {
-                    Box(
-                        modifier = Modifier
-                            .clip(RoundedCornerShape(6.dp))
-                            .background(colorScheme.error.copy(alpha = 0.12f))
-                            .padding(horizontal = 8.dp, vertical = 2.dp)
-                    ) {
-                        Text(
-                            text = "ОБЯЗАТЕЛЬНОЕ ОБНОВЛЕНИЕ",
-                            style = typography.labelSmall,
-                            fontWeight = FontWeight.Bold,
-                            color = colorScheme.error
-                        )
-                    }
-                    Gap(4)
-                    Text(
-                        text = "Доступна версия ${info.version}",
-                        style = typography.titleLarge,
-                        fontWeight = FontWeight.Bold,
-                        color = colorScheme.onSurface
-                    )
-                    Text(
-                        text = "Ваша текущая версия: v${AppConstants.VERSION_NAME}$sizeStr",
-                        style = typography.bodySmall,
-                        color = colorScheme.onSurfaceVariant
+                        modifier = Modifier.size(40.dp),
+                        tint = primaryColor
                     )
                 }
             }
 
             Gap(16)
 
-            // Описание релиза
-            Text(
-                text = title,
-                style = typography.titleMedium,
-                fontWeight = FontWeight.SemiBold,
-                color = colorScheme.onSurface
-            )
-
-            if (!shortDesc.isNullOrBlank()) {
-                Gap(6)
+            Box(
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .background(colorScheme.primary.copy(alpha = 0.12f))
+                    .padding(horizontal = 14.dp, vertical = 5.dp)
+            ) {
                 Text(
-                    text = shortDesc,
-                    style = typography.bodyMedium,
-                    color = colorScheme.onSurfaceVariant,
-                    lineHeight = 20.sp
+                    text = "Версия ${info.version}",
+                    style = typography.labelLarge,
+                    fontWeight = FontWeight.SemiBold,
+                    color = colorScheme.primary
                 )
             }
 
-            Gap(16)
+            Gap(12)
 
-            // Блок "Что исправлено в следующей"
             Text(
-                text = "Что исправлено и улучшено:",
-                style = typography.labelLarge,
-                fontWeight = FontWeight.SemiBold,
-                color = colorScheme.onSurface
+                text = "Необходимо обновление",
+                style = typography.titleLarge,
+                fontWeight = FontWeight.Bold,
+                color = colorScheme.onSurface,
+                textAlign = TextAlign.Center
             )
 
-            Gap(8)
+            Gap(4)
+
+            Text(
+                text = "Для работы расписания установите актуальную версию$sizeStr",
+                style = typography.bodyMedium,
+                color = colorScheme.secondary,
+                textAlign = TextAlign.Center
+            )
+
+            Gap(20)
 
             if (highlights.isNotEmpty()) {
-                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
                     highlights.forEach { highlight ->
                         HighlightCard(highlight)
                     }
                 }
             } else if (items.isNotEmpty()) {
-                Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                    items.forEach { change ->
-                        ChangelogItem(change)
-                    }
-                }
-            } else {
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clip(RoundedCornerShape(12.dp))
-                        .background(colorScheme.surfaceContainerLow)
-                        .padding(14.dp)
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(6.dp)
                 ) {
-                    Text(
-                        text = "Данная версия содержит критические исправления для продолжения корректной работы расписания.",
-                        style = typography.bodySmall,
-                        color = colorScheme.onSurfaceVariant
-                    )
+                    items.forEach { item ->
+                        ChangelogItem(item)
+                    }
                 }
             }
 
             Gap(16)
         }
 
-        // Нижняя часть (действия и статус загрузки)
+        // Bottom action bar
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 12.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(8.dp)
+                .padding(top = 8.dp),
+            verticalArrangement = Arrangement.spacedBy(4.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
             if (isRuStore) {
                 RuStoreActionBlock(onAction = { manager.handleAction() })
             } else {
                 GitHubActionBlock(
-                    state = downloadState,
-                    onAction = { manager.handleAction() }
+                    downloadState = downloadState,
+                    onAction = { manager.handleAction() },
+                    onCancel = { manager.cancelDownload() }
                 )
             }
 
-            // Кнопка выхода из приложения
             TextButton(
                 onClick = onExitApp,
-                modifier = Modifier.padding(top = 2.dp)
+                modifier = Modifier.fillMaxWidth()
             ) {
                 Text(
                     text = "Закрыть приложение",
-                    style = typography.labelMedium,
-                    color = colorScheme.outline
+                    style = typography.labelLarge,
+                    color = colorScheme.secondary
                 )
             }
         }
@@ -335,55 +320,52 @@ private fun MandatoryUpdateCardContent(
 
 @Composable
 private fun HighlightCard(highlight: ReleaseHighlight) {
-    Column(
+    val icon = resolveHighlightIcon(highlight.icon)
+
+    Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(14.dp))
+            .clip(MaterialTheme.shapes.medium)
             .background(colorScheme.surfaceContainerLow)
-            .border(0.5.dp, colorScheme.outlineVariant.copy(alpha = 0.4f), RoundedCornerShape(14.dp))
-            .padding(12.dp)
+            .border(
+                1.dp,
+                colorScheme.outlineVariant.copy(alpha = 0.25f),
+                MaterialTheme.shapes.medium
+            )
+            .padding(14.dp),
+        verticalAlignment = Alignment.Top,
+        horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp)
+        Box(
+            modifier = Modifier
+                .size(36.dp)
+                .clip(CircleShape)
+                .background(colorScheme.primary.copy(alpha = 0.12f)),
+            contentAlignment = Alignment.Center
         ) {
-            val tag = highlight.tag ?: "FIX"
-            val (tagBg, tagFg) = when (tag.uppercase()) {
-                "NEW" -> colorScheme.primaryContainer to colorScheme.primary
-                "FIX" -> colorScheme.tertiaryContainer to colorScheme.tertiary
-                else -> colorScheme.secondaryContainer to colorScheme.secondary
-            }
-            Box(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(4.dp))
-                    .background(tagBg)
-                    .padding(horizontal = 6.dp, vertical = 2.dp)
-            ) {
-                Text(
-                    text = tag.uppercase(),
-                    style = typography.labelSmall,
-                    fontWeight = FontWeight.Bold,
-                    color = tagFg,
-                    fontSize = 10.sp
-                )
-            }
-
-            Text(
-                text = highlight.title,
-                style = typography.bodyMedium,
-                fontWeight = FontWeight.SemiBold,
-                color = colorScheme.onSurface
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                modifier = Modifier.size(20.dp),
+                tint = colorScheme.primary
             )
         }
 
-        Gap(4)
-
-        Text(
-            text = highlight.description,
-            style = typography.bodySmall,
-            color = colorScheme.onSurfaceVariant,
-            lineHeight = 18.sp
-        )
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = highlight.title,
+                style = typography.titleSmall,
+                fontWeight = FontWeight.Bold,
+                color = colorScheme.onSurface
+            )
+            Gap(2)
+            Text(
+                text = highlight.description,
+                style = typography.bodySmall,
+                color = colorScheme.onSurfaceVariant,
+                lineHeight = 18.sp
+            )
+        }
     }
 }
 
@@ -392,93 +374,61 @@ private fun ChangelogItem(text: String) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(10.dp))
+            .clip(MaterialTheme.shapes.medium)
             .background(colorScheme.surfaceContainerLow)
-            .padding(horizontal = 12.dp, vertical = 10.dp),
-        verticalAlignment = Alignment.Top
+            .padding(horizontal = 14.dp, vertical = 10.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         Box(
             modifier = Modifier
-                .padding(top = 6.dp)
                 .size(6.dp)
                 .clip(CircleShape)
                 .background(colorScheme.primary)
         )
-        Gap(10)
         Text(
             text = text,
             style = typography.bodySmall,
             color = colorScheme.onSurface,
-            lineHeight = 18.sp
+            lineHeight = 18.sp,
+            modifier = Modifier.weight(1f)
         )
     }
 }
 
 @Composable
 private fun RuStoreActionBlock(onAction: () -> Unit) {
-    Column(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(6.dp)
+    Button(
+        onClick = onAction,
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(50.dp),
+        shape = MaterialTheme.shapes.medium
     ) {
-        Button(
-            onClick = onAction,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(52.dp),
-            shape = RoundedCornerShape(16.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = colorScheme.primary)
-        ) {
-            Icon(WHATIcons.Download, contentDescription = null, modifier = Modifier.size(22.dp))
-            Gap(10)
-            Text(
-                text = "Обновить в RuStore",
-                style = typography.titleSmall,
-                fontWeight = FontWeight.Bold
-            )
-        }
-        Text(
-            text = "Вы перейдете в магазин RuStore для быстрой загрузки новой версии",
-            style = typography.labelSmall,
-            color = colorScheme.onSurfaceVariant,
-            textAlign = TextAlign.Center
-        )
+        Icon(WHATIcons.Download, contentDescription = null, modifier = Modifier.size(20.dp))
+        Gap(8)
+        Text("Обновить в RuStore", fontWeight = FontWeight.Bold)
     }
 }
 
 @Composable
 private fun GitHubActionBlock(
-    state: DownloadState,
-    onAction: () -> Unit
+    downloadState: DownloadState,
+    onAction: () -> Unit,
+    onCancel: () -> Unit
 ) {
-    when (state) {
+    when (downloadState) {
         is DownloadState.Idle -> {
-            Column(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(6.dp)
+            Button(
+                onClick = onAction,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(50.dp),
+                shape = MaterialTheme.shapes.medium
             ) {
-                Button(
-                    onClick = onAction,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(52.dp),
-                    shape = RoundedCornerShape(16.dp)
-                ) {
-                    Icon(WHATIcons.Download, contentDescription = null, modifier = Modifier.size(22.dp))
-                    Gap(10)
-                    Text(
-                        text = "Скачать и обновить",
-                        style = typography.titleSmall,
-                        fontWeight = FontWeight.Bold
-                    )
-                }
-                Text(
-                    text = "Обновление загрузится и автоматически откроется для установки",
-                    style = typography.labelSmall,
-                    color = colorScheme.onSurfaceVariant,
-                    textAlign = TextAlign.Center
-                )
+                Icon(WHATIcons.Download, contentDescription = null, modifier = Modifier.size(20.dp))
+                Gap(8)
+                Text("Скачать и обновить", fontWeight = FontWeight.Bold)
             }
         }
 
@@ -491,12 +441,12 @@ private fun GitHubActionBlock(
                 LinearProgressIndicator(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(8.dp)
+                        .height(6.dp)
                         .clip(CircleShape),
                     color = colorScheme.primary
                 )
                 Text(
-                    text = "Подготовка файла к загрузке...",
+                    text = "Подготовка к загрузке...",
                     style = typography.labelMedium,
                     color = colorScheme.primary
                 )
@@ -504,7 +454,7 @@ private fun GitHubActionBlock(
         }
 
         is DownloadState.Downloading -> {
-            val percent = state.progress
+            val percent = downloadState.progress
             val fraction = (percent / 100f).coerceIn(0f, 1f)
             Column(
                 modifier = Modifier.fillMaxWidth(),
@@ -514,7 +464,7 @@ private fun GitHubActionBlock(
                     progress = { fraction },
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(8.dp)
+                        .height(6.dp)
                         .clip(CircleShape),
                     color = colorScheme.primary,
                     trackColor = colorScheme.primary.copy(alpha = 0.2f)
@@ -525,48 +475,29 @@ private fun GitHubActionBlock(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
-                        text = "Загрузка обновления в реальном времени...",
+                        text = "Загрузка: $percent%",
                         style = typography.labelSmall,
-                        color = colorScheme.onSurfaceVariant
+                        color = colorScheme.primary,
+                        fontWeight = FontWeight.SemiBold
                     )
-                    Text(
-                        text = "$percent%",
-                        style = typography.labelMedium,
-                        fontWeight = FontWeight.Bold,
-                        color = colorScheme.primary
-                    )
+                    TextButton(onClick = onCancel) {
+                        Text("Отмена", style = typography.labelSmall, color = colorScheme.error)
+                    }
                 }
             }
         }
 
         is DownloadState.Completed -> {
-            Column(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(6.dp)
+            Button(
+                onClick = onAction,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(50.dp),
+                shape = MaterialTheme.shapes.medium
             ) {
-                Button(
-                    onClick = onAction,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(52.dp),
-                    shape = RoundedCornerShape(16.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = colorScheme.tertiary)
-                ) {
-                    Icon(WHATIcons.ApkInstall, contentDescription = null, modifier = Modifier.size(22.dp))
-                    Gap(10)
-                    Text(
-                        text = "Установить обновление",
-                        style = typography.titleSmall,
-                        fontWeight = FontWeight.Bold
-                    )
-                }
-                Text(
-                    text = "Загрузка завершена. Если системный установщик не открылся, нажмите кнопку",
-                    style = typography.labelSmall,
-                    color = colorScheme.onSurfaceVariant,
-                    textAlign = TextAlign.Center
-                )
+                Icon(WHATIcons.ApkInstall, contentDescription = null, modifier = Modifier.size(20.dp))
+                Gap(8)
+                Text("Установить обновление", fontWeight = FontWeight.Bold)
             }
         }
 
@@ -579,8 +510,8 @@ private fun GitHubActionBlock(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .clip(RoundedCornerShape(12.dp))
-                        .background(colorScheme.errorContainer.copy(alpha = 0.5f))
+                        .clip(MaterialTheme.shapes.medium)
+                        .background(colorScheme.errorContainer.copy(alpha = 0.4f))
                         .padding(12.dp),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(10.dp)
@@ -589,12 +520,13 @@ private fun GitHubActionBlock(
                         imageVector = WHATIcons.DownloadError,
                         contentDescription = null,
                         tint = colorScheme.error,
-                        modifier = Modifier.size(24.dp)
+                        modifier = Modifier.size(22.dp)
                     )
                     Text(
-                        text = state.message,
+                        text = downloadState.message,
                         style = typography.bodySmall,
-                        color = colorScheme.onErrorContainer
+                        color = colorScheme.onErrorContainer,
+                        modifier = Modifier.weight(1f)
                     )
                 }
 
@@ -603,12 +535,27 @@ private fun GitHubActionBlock(
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(48.dp),
-                    shape = RoundedCornerShape(14.dp)
+                    shape = MaterialTheme.shapes.medium
                 ) {
                     Text("Попробовать снова")
                 }
             }
         }
+    }
+}
+
+private fun resolveHighlightIcon(iconName: String?): ImageVector {
+    return when (iconName?.lowercase()?.trim()) {
+        "sync", "refresh" -> Icons.Default.Sync
+        "school", "academic", "teacher" -> Icons.Default.School
+        "palette", "theme", "color" -> Icons.Default.Palette
+        "security", "privacy", "lock" -> Icons.Default.Security
+        "tune", "settings", "sliders" -> Icons.Default.Tune
+        "widgets", "widget" -> Icons.Default.Widgets
+        "star", "heart", "favorite" -> Icons.Default.Star
+        "speed", "performance", "fast" -> Icons.Default.Speed
+        "sparkles", "magic", "auto_awesome" -> Icons.Default.AutoAwesome
+        else -> Icons.Default.AutoAwesome
     }
 }
 

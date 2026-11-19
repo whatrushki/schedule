@@ -127,27 +127,20 @@ val ScheduleExportPane = @Composable { scheduleSearch: ScheduleSearch?,
 fun createShareTextFromDaySchedules(
     scheduleSearch: ScheduleSearch?,
     schedules: List<DaySchedule>
-): String {
-    val searchHeader = when (scheduleSearch) {
-        is ScheduleSearch.Group -> "Расписание: ${scheduleSearch.name}"
-        is ScheduleSearch.Teacher -> "Расписание: ${scheduleSearch.name}"
-        null -> null
-    }
+) = schedules.sortedBy { it.date }.joinToString(
+    "\n---------------------------\n\n"
+) {
+    val day = it.date.dayOfMonth
+    val month = DateTimeUtils.RUSSIAN_MONTHS.getOrElse(it.date.monthNumber - 1) { "" }
+    val dayOfWeek = DateTimeUtils.RUSSIAN_DAYS_SHORT.getOrElse(it.date.dayOfWeek.ordinal) { "" }
 
-    val daysText = schedules.sortedBy { it.date }.joinToString("\n\n---------------------------\n\n") { daySchedule ->
-        val day = daySchedule.date.dayOfMonth
-        val month = DateTimeUtils.RUSSIAN_MONTHS.getOrElse(daySchedule.date.monthNumber - 1) { "" }
-        val dayOfWeek = DateTimeUtils.RUSSIAN_DAYS_SHORT.getOrElse(daySchedule.date.dayOfWeek.ordinal) { "" }
+    val sortedLessons = it.lessons.sortedWith(
+        compareBy({ if (it.number > 0) it.number else 99 }, { it.startTime })
+    )
 
-        val sortedLessons = daySchedule.lessons.sortedWith(
-            compareBy({ if (it.number > 0) it.number else 99 }, { it.startTime })
-        )
-
-        val lessonsContent = if (sortedLessons.isEmpty()) {
-            "🎉 Занятий нет — выходной!"
-        } else {
-            sortedLessons.joinToString("\n\n") { lesson ->
-                val typeEmoji = when (lesson.type) {
+    "**$day $month ($dayOfWeek)**\n\n" +
+            sortedLessons.joinToString("\n") { lesson ->
+                val typeEmoji = when (lesson.type) { //🌱🍂🪻🌼🌻☘️🌳🌴🌾🍁🍃
                     LessonType.COMMON, LessonType.PRACTISE, LessonType.LECTURE -> "🌱"
                     LessonType.ADDITIONAL -> "🌾"
                     LessonType.CLASS_HOUR -> "🍁"
@@ -155,66 +148,29 @@ fun createShareTextFromDaySchedules(
                     LessonType.CREDIT -> "🍂"
                     LessonType.OBLIGATION -> "💸"
                 }
-
-                val stateBadge = when (lesson.state) {
+                val stateTag = when (lesson.state) {
                     LessonState.COMMON -> ""
-                    LessonState.ADDED -> " ⚡ [Добавлена]"
-                    LessonState.CHANGED -> " ♻️ [Замена]"
-                    LessonState.REMOVED -> " ❌ [Отменена]"
+                    LessonState.ADDED -> " (⚡)"
+                    LessonState.REMOVED -> " (🛟)"
+                    LessonState.CHANGED -> " (♻️)"
                 }
-
-                val timeStr = "${lesson.startTime}–${lesson.endTime}"
-                val pairStr = if (lesson.number > 0) "${lesson.number} пара" else "Занятие"
-                val header = "$typeEmoji **$pairStr** ($timeStr)$stateBadge"
-
-                val subjectName = lesson.subject.ifBlank { "Не заполнено" }
-                val subjectText = if (lesson.state == LessonState.REMOVED) {
-                    "~$subjectName~"
-                } else {
-                    "**$subjectName**"
-                }
-
-                val details = if (lesson.state == LessonState.REMOVED) {
-                    null
-                } else when {
+                val unitsText = when {
                     lesson.otUnits.size == 1 -> {
                         val unit = lesson.otUnits.first()
                         val target = if (scheduleSearch is ScheduleSearch.Teacher) unit.group.name else unit.teacher.name
-                        val room = buildString {
-                            if (unit.auditory.isNotBlank()) {
-                                append("Ауд. ${unit.auditory}")
-                                if (unit.building.isNotBlank() && unit.building != "0") {
-                                    append(" (корп. ${unit.building})")
-                                }
-                            }
-                        }
-                        listOfNotNull(target.takeIf { it.isNotBlank() }, room.takeIf { it.isNotBlank() })
-                            .joinToString(" • ")
+                        val room = if (unit.auditory.isNotBlank()) "Ауд. ${unit.auditory} (корп.${unit.building})\n" else ""
+                        "${target.takeIf { it.isNotBlank() }?.let { "$it\n" } ?: ""}$room"
                     }
                     lesson.otUnits.isNotEmpty() -> {
                         lesson.otUnits.joinToString("\n") { unit ->
-                            val target = if (scheduleSearch is ScheduleSearch.Teacher) unit.group.name else unit.teacher.name
-                            val room = buildString {
-                                if (unit.auditory.isNotBlank()) {
-                                    append("Ауд. ${unit.auditory}")
-                                    if (unit.building.isNotBlank() && unit.building != "0") {
-                                        append(" (корп. ${unit.building})")
-                                    }
-                                }
-                            }
-                            "— " + listOfNotNull(target.takeIf { it.isNotBlank() }, room.takeIf { it.isNotBlank() })
-                                .joinToString(" • ")
-                        }
+                            "— ${if (scheduleSearch is ScheduleSearch.Teacher) unit.group.name else unit.teacher.name} — Ауд. ${unit.auditory}/${unit.building}"
+                        } + "\n"
                     }
-                    else -> null
+                    else -> ""
                 }
 
-                listOfNotNull(header, subjectText, details.takeIf { !it.isNullOrBlank() }).joinToString("\n")
+                "$typeEmoji **${lesson.number}** пара __${lesson.startTime}–${lesson.endTime}__$stateTag\n" +
+                "**${lesson.subject.takeIf { it.isNotBlank() } ?: "Не заполнено"}**\n" +
+                unitsText
             }
-        }
-
-        "📅 **$day $month ($dayOfWeek)**\n\n$lessonsContent"
-    }
-
-    return if (searchHeader != null) "$searchHeader\n\n$daysText" else daysText
 }
