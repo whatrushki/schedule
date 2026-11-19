@@ -5,8 +5,12 @@ import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -14,6 +18,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -25,7 +30,10 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PagerState
 import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowForward
 import androidx.compose.material.icons.filled.AutoAwesome
@@ -48,6 +56,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -83,94 +92,212 @@ fun UpdateOnboardingContent(
     val pagerState = rememberPagerState(pageCount = { totalPages })
     val scope = rememberCoroutineScope()
 
-    Box(
-        modifier = modifier
-            .fillMaxSize()
-            .background(colorScheme.surface),
-        contentAlignment = Alignment.TopCenter
+    BoxWithConstraints(
+        modifier = modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
     ) {
-        UpdateOnboardingBackground(pagerState.currentPage)
+        val isWide = maxWidth >= 640.dp
 
-        Column(
-            modifier = Modifier
-                .fillMaxHeight()
-                .fillMaxWidth()
-                .widthIn(max = 640.dp)
-        ) {
-            // Header: Skip button at top right
-            Row(
+        if (isWide) {
+            // Semi-transparent scrim backdrop behind modal card
+            Box(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .statusBarsPadding()
-                    .padding(horizontal = 16.dp, vertical = 4.dp),
-                horizontalArrangement = Arrangement.End,
-                verticalAlignment = Alignment.CenterVertically
+                    .fillMaxSize()
+                    .background(Color.Black.copy(alpha = 0.55f))
+                    .clickable(
+                        interactionSource = remember { MutableInteractionSource() },
+                        indication = null,
+                        onClick = onDismiss
+                    )
+            )
+
+            // Centered floating modal card
+            Box(
+                modifier = Modifier
+                    .widthIn(max = 560.dp)
+                    .fillMaxWidth(0.9f)
+                    .heightIn(max = 720.dp)
+                    .fillMaxHeight(0.85f)
+                    .clip(RoundedCornerShape(28.dp))
+                    .background(colorScheme.surface)
+                    .border(
+                        1.dp,
+                        colorScheme.outlineVariant.copy(alpha = 0.35f),
+                        RoundedCornerShape(28.dp)
+                    )
+                    .clickable(
+                        interactionSource = remember { MutableInteractionSource() },
+                        indication = null
+                    ) {},
+                contentAlignment = Alignment.TopCenter
             ) {
-                TextButton(onClick = onDismiss) {
-                    Text(
-                        text = "Пропустить",
-                        style = typography.labelLarge,
-                        color = colorScheme.secondary
+                UpdateOnboardingBackground(pagerState.currentPage)
+
+                Column(
+                    modifier = Modifier.fillMaxSize()
+                ) {
+                    // Header: Skip button at top right
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp, vertical = 6.dp),
+                        horizontalArrangement = Arrangement.End,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        TextButton(onClick = onDismiss) {
+                            Text(
+                                text = "Пропустить",
+                                style = typography.labelLarge,
+                                color = colorScheme.secondary
+                            )
+                        }
+                    }
+
+                    // Pager content with scale & alpha transitions
+                    HorizontalPager(
+                        state = pagerState,
+                        modifier = Modifier
+                            .weight(1f)
+                            .fillMaxWidth(),
+                        userScrollEnabled = true
+                    ) { page ->
+                        val pageOffset =
+                            (pagerState.currentPage - page) + pagerState.currentPageOffsetFraction
+                        val scale = 1f - (0.1f * pageOffset.absoluteValue).coerceIn(0f, 0.2f)
+                        val alpha = 1f - (0.5f * pageOffset.absoluteValue).coerceIn(0f, 0.5f)
+
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .graphicsLayer {
+                                    scaleX = scale
+                                    scaleY = scale
+                                    this.alpha = alpha
+                                },
+                            contentAlignment = Alignment.TopCenter
+                        ) {
+                            when {
+                                page == 0 -> {
+                                    UpdateIntroPage(releaseNotes = releaseNotes)
+                                }
+                                page <= releaseNotes.highlights.size -> {
+                                    val highlight = releaseNotes.highlights[page - 1]
+                                    UpdateHighlightPage(
+                                        highlight = highlight,
+                                        appValues = appValues,
+                                        onNavigate = onNavigate
+                                    )
+                                }
+                                else -> {
+                                    UpdateChangelogPage(
+                                        version = releaseNotes.version,
+                                        items = changelogItems
+                                    )
+                                }
+                            }
+                        }
+                    }
+
+                    // Bottom Navigation
+                    UpdateOnboardingNavigation(
+                        pagerState = pagerState,
+                        pagesCount = totalPages,
+                        onNext = {
+                            scope.launch {
+                                pagerState.animateScrollToPage(pagerState.currentPage + 1)
+                            }
+                        },
+                        onFinish = onDismiss
                     )
                 }
             }
-
-            // Pager content with scale & alpha transitions
-            HorizontalPager(
-                state = pagerState,
+        } else {
+            // Full-screen mobile layout
+            Box(
                 modifier = Modifier
-                    .weight(1f)
-                    .fillMaxWidth(),
-                userScrollEnabled = true
-            ) { page ->
-                val pageOffset =
-                    (pagerState.currentPage - page) + pagerState.currentPageOffsetFraction
-                val scale = 1f - (0.1f * pageOffset.absoluteValue).coerceIn(0f, 0.2f)
-                val alpha = 1f - (0.5f * pageOffset.absoluteValue).coerceIn(0f, 0.5f)
+                    .fillMaxSize()
+                    .background(colorScheme.surface),
+                contentAlignment = Alignment.TopCenter
+            ) {
+                UpdateOnboardingBackground(pagerState.currentPage)
 
-                Box(
+                Column(
                     modifier = Modifier
                         .fillMaxSize()
-                        .graphicsLayer {
-                            scaleX = scale
-                            scaleY = scale
-                            this.alpha = alpha
-                        },
-                    contentAlignment = Alignment.TopCenter
+                        .statusBarsPadding()
                 ) {
-                    when {
-                        page == 0 -> {
-                            UpdateIntroPage(releaseNotes = releaseNotes)
-                        }
-                        page <= releaseNotes.highlights.size -> {
-                            val highlight = releaseNotes.highlights[page - 1]
-                            UpdateHighlightPage(
-                                highlight = highlight,
-                                appValues = appValues,
-                                onNavigate = onNavigate
-                            )
-                        }
-                        else -> {
-                            UpdateChangelogPage(
-                                version = releaseNotes.version,
-                                items = changelogItems
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp, vertical = 4.dp),
+                        horizontalArrangement = Arrangement.End,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        TextButton(onClick = onDismiss) {
+                            Text(
+                                text = "Пропустить",
+                                style = typography.labelLarge,
+                                color = colorScheme.secondary
                             )
                         }
                     }
+
+                    HorizontalPager(
+                        state = pagerState,
+                        modifier = Modifier
+                            .weight(1f)
+                            .fillMaxWidth(),
+                        userScrollEnabled = true
+                    ) { page ->
+                        val pageOffset =
+                            (pagerState.currentPage - page) + pagerState.currentPageOffsetFraction
+                        val scale = 1f - (0.1f * pageOffset.absoluteValue).coerceIn(0f, 0.2f)
+                        val alpha = 1f - (0.5f * pageOffset.absoluteValue).coerceIn(0f, 0.5f)
+
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .graphicsLayer {
+                                    scaleX = scale
+                                    scaleY = scale
+                                    this.alpha = alpha
+                                },
+                            contentAlignment = Alignment.TopCenter
+                        ) {
+                            when {
+                                page == 0 -> {
+                                    UpdateIntroPage(releaseNotes = releaseNotes)
+                                }
+                                page <= releaseNotes.highlights.size -> {
+                                    val highlight = releaseNotes.highlights[page - 1]
+                                    UpdateHighlightPage(
+                                        highlight = highlight,
+                                        appValues = appValues,
+                                        onNavigate = onNavigate
+                                    )
+                                }
+                                else -> {
+                                    UpdateChangelogPage(
+                                        version = releaseNotes.version,
+                                        items = changelogItems
+                                    )
+                                }
+                            }
+                        }
+                    }
+
+                    UpdateOnboardingNavigation(
+                        pagerState = pagerState,
+                        pagesCount = totalPages,
+                        onNext = {
+                            scope.launch {
+                                pagerState.animateScrollToPage(pagerState.currentPage + 1)
+                            }
+                        },
+                        onFinish = onDismiss
+                    )
                 }
             }
-
-            // Bottom Navigation with animated pills and next/done button
-            UpdateOnboardingNavigation(
-                pagerState = pagerState,
-                pagesCount = totalPages,
-                onNext = {
-                    scope.launch {
-                        pagerState.animateScrollToPage(pagerState.currentPage + 1)
-                    }
-                },
-                onFinish = onDismiss
-            )
         }
     }
 }
@@ -187,8 +314,9 @@ private fun UpdateIntroPage(releaseNotes: ReleaseNotes) {
         verticalArrangement = Arrangement.Top,
         modifier = Modifier
             .fillMaxSize()
+            .verticalScroll(rememberScrollState())
             .padding(horizontal = 16.dp)
-            .padding(top = 24.dp)
+            .padding(top = 24.dp, bottom = 16.dp)
     ) {
         Box(
             modifier = Modifier.size(160.dp),
@@ -263,7 +391,8 @@ private fun UpdateHighlightPage(
         verticalArrangement = Arrangement.Top,
         modifier = Modifier
             .fillMaxSize()
-            .padding(top = 24.dp)
+            .verticalScroll(rememberScrollState())
+            .padding(top = 24.dp, bottom = 16.dp)
     ) {
         // Hero Icon with subtle glow - 160.dp matching UpdateIntroPage baseline
         Box(
