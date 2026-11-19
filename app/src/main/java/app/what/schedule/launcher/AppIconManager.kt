@@ -123,7 +123,7 @@ object AppIconManager {
             override fun onActivityStopped(activity: android.app.Activity) {
                 startedActivities--
                 isForeground = startedActivities > 0
-                if (!isForeground && pendingUpdate) {
+                if (!isForeground && pendingUpdate && appValues.isFirstLaunch.get() != true) {
                     pendingUpdate = false
                     updateIconInternal(activity.applicationContext, appValues)
                 }
@@ -142,10 +142,13 @@ object AppIconManager {
             init(context, appValues)
         }
 
-        if (isForeground && !force) {
-            // Приложение на переднем плане: откладываем переключение алиаса лаунчера до ухода в фон,
+        val isFirstLaunch = appValues.isFirstLaunch.get() == true
+        val inForeground = isForeground || app.what.foundation.utils.CurrentActivityHolder.currentActivity != null
+
+        if ((inForeground || isFirstLaunch) && !force) {
+            // Приложение на переднем плане или первый запуск: откладываем переключение алиаса лаунчера до ухода в фон,
             // иначе Android OS принудительно закроет текущую Activity (kill task)
-            Auditor.debug("AppIcon", "Приложение на переднем плане, обновление иконки отложено до ухода в фон")
+            Auditor.debug("AppIcon", "Приложение активно (inForeground=$inForeground, isFirstLaunch=$isFirstLaunch), обновление иконки отложено до ухода в фон")
             pendingUpdate = true
             return
         }

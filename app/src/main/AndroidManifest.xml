@@ -37,6 +37,7 @@
             android:exported="true"
             android:enabled="true"
             android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|keyboard|smallestScreenSize|uiMode"
             android:theme="@style/Theme.WHATSchedule">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

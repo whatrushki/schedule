@@ -110,16 +110,19 @@ actual fun YandexBannerAd(
             BannerAdSize.sticky(context, availableWidthDp)
         }
 
+        val isDebug = (context.applicationInfo.flags and android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE) != 0
+        val effectiveAdUnitId = if (isDebug) YandexAdsConfig.DEMO_BANNER_ID else adUnitId
+
         // Each pager page has its own key so swiping across days doesn't conflict
-        val cacheKey = remember(adUnitId, pageKey) {
-            if (pageKey.isNotBlank()) "$adUnitId#$pageKey" else "$adUnitId#default"
+        val cacheKey = remember(effectiveAdUnitId, pageKey) {
+            if (pageKey.isNotBlank()) "$effectiveAdUnitId#$pageKey" else "$effectiveAdUnitId#default"
         }
 
         val cachedBanner = remember(cacheKey, adSize) {
             YandexAdManager.getOrCreateBanner(
                 context = context,
                 cacheKey = cacheKey,
-                adUnitId = adUnitId,
+                adUnitId = effectiveAdUnitId,
                 adSize = adSize
             )
         }

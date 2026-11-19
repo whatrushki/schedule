@@ -88,58 +88,61 @@ fun MandatoryUpdateScreen(
     val downloadState = manager.downloadState
 
     BoxWithConstraints(
-        modifier = modifier.fillMaxSize(),
+        modifier = modifier
+            .fillMaxSize()
+            .background(colorScheme.surface),
         contentAlignment = Alignment.Center
     ) {
+        // Gradient covers entire device screen edge-to-edge with no padding clipping
+        MandatoryUpdateAmbientBackground()
+
         val isWide = maxWidth >= 640.dp
 
         if (isWide) {
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(Color.Black.copy(alpha = 0.65f))
+                    .background(colorScheme.scrim.copy(alpha = 0.35f))
                     .clickable(
                         interactionSource = remember { MutableInteractionSource() },
                         indication = null,
                         onClick = {}
-                    )
-            )
-
-            Box(
-                modifier = Modifier
-                    .widthIn(max = 540.dp)
-                    .fillMaxWidth(0.9f)
-                    .heightIn(max = 740.dp)
-                    .fillMaxHeight(0.9f)
-                    .clip(RoundedCornerShape(28.dp))
-                    .background(colorScheme.surface)
-                    .border(
-                        1.dp,
-                        colorScheme.outlineVariant.copy(alpha = 0.35f),
-                        RoundedCornerShape(28.dp)
-                    )
-                    .padding(24.dp)
+                    ),
+                contentAlignment = Alignment.Center
             ) {
-                MandatoryUpdateAmbientBackground()
-                MandatoryUpdateCardContent(
-                    info = info,
-                    releaseNotes = releaseNotes,
-                    manager = manager,
-                    downloadState = downloadState,
-                    isRuStore = isRuStore,
-                    onExitApp = onExitApp
-                )
+                Box(
+                    modifier = Modifier
+                        .widthIn(max = 500.dp)
+                        .fillMaxWidth(0.9f)
+                        .heightIn(max = 700.dp)
+                        .fillMaxHeight(0.88f)
+                        .clip(RoundedCornerShape(24.dp))
+                        .background(colorScheme.surface)
+                        .border(
+                            1.dp,
+                            colorScheme.outlineVariant.copy(alpha = 0.3f),
+                            RoundedCornerShape(24.dp)
+                        )
+                        .padding(horizontal = 24.dp, vertical = 20.dp)
+                ) {
+                    MandatoryUpdateCardContent(
+                        info = info,
+                        releaseNotes = releaseNotes,
+                        manager = manager,
+                        downloadState = downloadState,
+                        isRuStore = isRuStore,
+                        onExitApp = onExitApp
+                    )
+                }
             }
         } else {
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(colorScheme.surface)
                     .statusBarsPadding()
                     .navigationBarsPadding()
                     .padding(horizontal = 20.dp, vertical = 12.dp)
             ) {
-                MandatoryUpdateAmbientBackground()
                 MandatoryUpdateCardContent(
                     info = info,
                     releaseNotes = releaseNotes,
@@ -327,18 +330,13 @@ private fun HighlightCard(highlight: ReleaseHighlight) {
             .fillMaxWidth()
             .clip(MaterialTheme.shapes.medium)
             .background(colorScheme.surfaceContainerLow)
-            .border(
-                1.dp,
-                colorScheme.outlineVariant.copy(alpha = 0.25f),
-                MaterialTheme.shapes.medium
-            )
-            .padding(14.dp),
-        verticalAlignment = Alignment.Top,
-        horizontalArrangement = Arrangement.spacedBy(12.dp)
+            .padding(horizontal = 12.dp, vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         Box(
             modifier = Modifier
-                .size(36.dp)
+                .size(30.dp)
                 .clip(CircleShape)
                 .background(colorScheme.primary.copy(alpha = 0.12f)),
             contentAlignment = Alignment.Center
@@ -346,7 +344,7 @@ private fun HighlightCard(highlight: ReleaseHighlight) {
             Icon(
                 imageVector = icon,
                 contentDescription = null,
-                modifier = Modifier.size(20.dp),
+                modifier = Modifier.size(16.dp),
                 tint = colorScheme.primary
             )
         }
@@ -358,13 +356,15 @@ private fun HighlightCard(highlight: ReleaseHighlight) {
                 fontWeight = FontWeight.Bold,
                 color = colorScheme.onSurface
             )
-            Gap(2)
-            Text(
-                text = highlight.description,
-                style = typography.bodySmall,
-                color = colorScheme.onSurfaceVariant,
-                lineHeight = 18.sp
-            )
+            if (highlight.description.isNotBlank()) {
+                Gap(1)
+                Text(
+                    text = highlight.description,
+                    style = typography.bodySmall,
+                    color = colorScheme.onSurfaceVariant,
+                    lineHeight = 16.sp
+                )
+            }
         }
     }
 }
@@ -374,15 +374,15 @@ private fun ChangelogItem(text: String) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(MaterialTheme.shapes.medium)
-            .background(colorScheme.surfaceContainerLow)
-            .padding(horizontal = 14.dp, vertical = 10.dp),
+            .clip(MaterialTheme.shapes.small)
+            .background(colorScheme.surfaceContainerLow.copy(alpha = 0.7f))
+            .padding(horizontal = 10.dp, vertical = 6.dp),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(10.dp)
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         Box(
             modifier = Modifier
-                .size(6.dp)
+                .size(5.dp)
                 .clip(CircleShape)
                 .background(colorScheme.primary)
         )
@@ -390,7 +390,7 @@ private fun ChangelogItem(text: String) {
             text = text,
             style = typography.bodySmall,
             color = colorScheme.onSurface,
-            lineHeight = 18.sp,
+            lineHeight = 17.sp,
             modifier = Modifier.weight(1f)
         )
     }

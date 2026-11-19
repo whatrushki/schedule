@@ -126,6 +126,7 @@ open class MainActivity : ComponentActivity() {
                     ProvideAppDialog {
                         ProvideGlobalSheet {
                             NavigationHost(
+                                navigator = navigator,
                                 start = if (settings.isFirstLaunch.get() == true) OnboardingProvider
                                 else MainProvider
                             ) {
