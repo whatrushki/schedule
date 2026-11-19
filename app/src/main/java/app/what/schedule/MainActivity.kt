@@ -106,8 +106,9 @@ open class MainActivity : ComponentActivity() {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                     kotlinx.coroutines.flow.combine(
                         settings.enableReplacementNotifications.observe(),
-                        settings.enableUniversityNotifications.observe()
-                    ) { repl, univ -> repl == true || univ == true }
+                        settings.enableUniversityNotifications.observe(),
+                        settings.enableFirstLessonNotification.observe()
+                    ) { repl, univ, first -> repl == true || univ == true || first == true }
                         .collect { enabled ->
                             if (enabled && checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
                                 notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)

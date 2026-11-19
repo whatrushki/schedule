@@ -230,7 +230,8 @@
 
         <receiver
             android:name=".notifications.FirstLessonAlarmReceiver"
-            android:exported="false">
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
             <intent-filter>
                 <action android:name="app.what.schedule.FIRST_LESSON_ALARM" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

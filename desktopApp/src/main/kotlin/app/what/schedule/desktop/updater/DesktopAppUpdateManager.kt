@@ -46,10 +46,7 @@ class DesktopAppUpdateManager(
             }.body<List<GitHubRelease>>()
 
             val latest = releases.firstOrNull { !it.draft && !it.prerelease } ?: return UpdateResult.NotAvailable
-            val cleanLatest = latest.tagName.trimStart('v', 'V')
-            val cleanCurrent = config.currentVersion.trimStart('v', 'V')
-
-            if (cleanLatest > cleanCurrent) {
+            if (isNewer(latest.tagName, config.currentVersion)) {
                 val asset = latest.assets.firstOrNull {
                     it.name.endsWith(".jar") || it.name.endsWith(".msi") ||
                     it.name.endsWith(".deb") || it.name.endsWith(".zip") || it.name.endsWith(".exe")
@@ -99,4 +96,20 @@ class DesktopAppUpdateManager(
 
     override fun cancelDownload() {}
     override fun release() {}
+
+    private fun parseVersion(versionString: String): List<Int> {
+        val clean = versionString.trim().removePrefix("v").removePrefix("V").split("-")[0]
+        return clean.split(".").map { it.toIntOrNull() ?: 0 }
+    }
+
+    private fun isNewer(latest: String, current: String): Boolean {
+        val l = parseVersion(latest)
+        val c = parseVersion(current)
+        for (i in 0 until maxOf(l.size, c.size)) {
+            val lVal = l.getOrElse(i) { 0 }
+            val cVal = c.getOrElse(i) { 0 }
+            if (lVal != cVal) return lVal > cVal
+        }
+        return false
+    }
 }
