@@ -404,4 +404,19 @@ class RKSIScheduleClientTest {
         assertEquals("Иванова И.И.", merged.otUnits[0].teacher)
         assertEquals("Петрова П.П.", merged.otUnits[1].teacher)
     }
+
+    @Test
+    fun testExtractSurnameAndInitialsDistinctForSameSurnameDifferentInitials() {
+        val arutyunyanMM = RKSIScheduleClient.extractSurnameAndInitials("Арутюнян М.М.")
+        val arutyunyanMA = RKSIScheduleClient.extractSurnameAndInitials("Арутюнян М.А.")
+        val arutyunyanAE = RKSIScheduleClient.extractSurnameAndInitials("Арутюнян А.Э.")
+        val smolyaninovaFull = RKSIScheduleClient.extractSurnameAndInitials("Смолянинова Валентина Анатольевна")
+        val smolyaninovaShort = RKSIScheduleClient.extractSurnameAndInitials("Смолянинова В.А.")
+
+        assertEquals("арутюнянмм", arutyunyanMM)
+        assertEquals("арутюнянма", arutyunyanMA)
+        assertEquals("арутюнянаэ", arutyunyanAE)
+        assertFalse(arutyunyanMM == arutyunyanMA, "Арутюнян М.М. and М.А. must have distinct keys to avoid deduplication collision")
+        assertEquals(smolyaninovaFull, smolyaninovaShort)
+    }
 }

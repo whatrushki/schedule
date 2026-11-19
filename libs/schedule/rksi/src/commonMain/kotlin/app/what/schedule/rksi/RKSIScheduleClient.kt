@@ -87,39 +87,43 @@ class RKSIScheduleClient(
         return LocalTime(parts[0], parts[1])
     }
 
-    private fun normalizeName(name: String): String = name
-        .replace('\u00A0', ' ')  // non-breaking space
-        .replace(" ", "")
-        .replace("-", "")
-        .replace("—", "")
-        .replace("–", "")
-        .replace(".", "")
-        .replace("c", "с", ignoreCase = true)
-        .replace("a", "а", ignoreCase = true)
-        .replace("e", "е", ignoreCase = true)
-        .replace("o", "о", ignoreCase = true)
-        .replace("p", "р", ignoreCase = true)
-        .replace("x", "х", ignoreCase = true)
-        .trim()
-        .lowercase()
+    companion object {
+        internal fun normalizeName(name: String): String = name
+            .replace('\u00A0', ' ')  // non-breaking space
+            .replace(" ", "")
+            .replace("-", "")
+            .replace("—", "")
+            .replace("–", "")
+            .replace(".", "")
+            .replace("c", "с", ignoreCase = true)
+            .replace("a", "а", ignoreCase = true)
+            .replace("e", "е", ignoreCase = true)
+            .replace("o", "о", ignoreCase = true)
+            .replace("p", "р", ignoreCase = true)
+            .replace("x", "х", ignoreCase = true)
+            .trim()
+            .lowercase()
 
-    /**
-     * Извлекает фамилию и инициалы из имени преподавателя.
-     * "Смолянинова В.А." -> "смоляниновава"
-     * "Смолянинова Валентина Анатольевна" -> "смоляниновава"
-     * Returns null if parsing fails.
-     */
-    private fun extractSurnameAndInitials(name: String): String? {
-        val trimmed = name.trim().replace('\u00A0', ' ')
-        val parts = trimmed.split(WHITESPACE_REGEX).filter { it.isNotBlank() }
-        if (parts.isEmpty()) return null
-        val surname = normalizeName(parts[0])
-        if (parts.size == 1) return surname
-        val initials = parts.drop(1).mapNotNull { part ->
-            val clean = part.replace(".", "").trim()
-            if (clean.isNotEmpty()) normalizeName(clean.first().toString()) else null
+        /**
+         * Извлекает фамилию и инициалы из имени преподавателя.
+         * "Смолянинова В.А." -> "смоляниновава"
+         * "Смолянинова Валентина Анатольевна" -> "смоляниновава"
+         * Returns null if parsing fails.
+         */
+        internal fun extractSurnameAndInitials(name: String): String? {
+            val trimmed = name.trim().replace('\u00A0', ' ')
+            val parts = trimmed.split(WHITESPACE_REGEX).filter { it.isNotBlank() }
+            if (parts.isEmpty()) return null
+            val surname = normalizeName(parts[0])
+            if (parts.size == 1) return surname
+            val initials = parts.drop(1).flatMap { part ->
+                part.split('.').mapNotNull { token ->
+                    val clean = token.trim()
+                    if (clean.isNotEmpty()) normalizeName(clean.first().toString()) else null
+                }
+            }
+            return surname + initials.joinToString("")
         }
-        return surname + initials.joinToString("")
     }
 
 

@@ -53,19 +53,35 @@ class AdaptedScheduleService(
             }
         }
 
-        return try {
-            client.getGroupSchedule(group, showReplacements).toDomainResponse()
+        var liveException: Exception? = null
+        val liveSchedules = try {
+            client.getGroupSchedule(group, showReplacements)
         } catch (e: Exception) {
-            if (cloudClient != null) {
-                try {
-                    val cloudSchedules = cloudClient.getGroupSchedule(group, showReplacements)
-                    if (cloudSchedules.isNotEmpty()) {
-                        Auditor.debug(tag, "[AdaptedScheduleService] Live failed, loaded schedule for group $group from cloud fallback")
-                        return cloudSchedules.toDomainResponse()
-                    }
-                } catch (_: Exception) {}
+            liveException = e
+            Auditor.warn(tag, "[AdaptedScheduleService] Live schedule fetch failed for group $group: ${e.message}")
+            emptyList()
+        }
+
+        if (liveSchedules.isNotEmpty()) {
+            return liveSchedules.toDomainResponse()
+        }
+
+        if (cloudClient != null) {
+            try {
+                val cloudSchedules = cloudClient.getGroupSchedule(group, showReplacements)
+                if (cloudSchedules.isNotEmpty()) {
+                    Auditor.debug(tag, "[AdaptedScheduleService] Live failed/empty, loaded schedule for group $group from cloud fallback")
+                    return cloudSchedules.toDomainResponse()
+                }
+            } catch (ce: Exception) {
+                Auditor.warn(tag, "[AdaptedScheduleService] Cloud fallback also failed for group $group: ${ce.message}")
             }
-            ScheduleResponse.Error(null, null, e)
+        }
+
+        return if (liveException != null) {
+            ScheduleResponse.Error(null, null, liveException)
+        } else {
+            ScheduleResponse.Empty
         }
     }
 
@@ -94,19 +110,35 @@ class AdaptedScheduleService(
             }
         }
 
-        return try {
-            client.getTeacherSchedule(teacher, showReplacements).mergeTeacherLessons().toDomainResponse()
+        var liveException: Exception? = null
+        val liveSchedules = try {
+            client.getTeacherSchedule(teacher, showReplacements)
         } catch (e: Exception) {
-            if (cloudClient != null) {
-                try {
-                    val cloudSchedules = cloudClient.getTeacherSchedule(teacher, showReplacements)
-                    if (cloudSchedules.isNotEmpty()) {
-                        Auditor.debug(tag, "[AdaptedScheduleService] Live failed, loaded schedule for teacher $teacher from cloud fallback")
-                        return cloudSchedules.mergeTeacherLessons().toDomainResponse()
-                    }
-                } catch (_: Exception) {}
+            liveException = e
+            Auditor.warn(tag, "[AdaptedScheduleService] Live schedule fetch failed for teacher $teacher: ${e.message}")
+            emptyList()
+        }
+
+        if (liveSchedules.isNotEmpty()) {
+            return liveSchedules.mergeTeacherLessons().toDomainResponse()
+        }
+
+        if (cloudClient != null) {
+            try {
+                val cloudSchedules = cloudClient.getTeacherSchedule(teacher, showReplacements)
+                if (cloudSchedules.isNotEmpty()) {
+                    Auditor.debug(tag, "[AdaptedScheduleService] Live failed/empty, loaded schedule for teacher $teacher from cloud fallback")
+                    return cloudSchedules.mergeTeacherLessons().toDomainResponse()
+                }
+            } catch (ce: Exception) {
+                Auditor.warn(tag, "[AdaptedScheduleService] Cloud fallback also failed for teacher $teacher: ${ce.message}")
             }
-            ScheduleResponse.Error(null, null, e)
+        }
+
+        return if (liveException != null) {
+            ScheduleResponse.Error(null, null, liveException)
+        } else {
+            ScheduleResponse.Empty
         }
     }
 

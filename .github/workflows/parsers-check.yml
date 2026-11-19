@@ -26,6 +26,18 @@ jobs:
           - id: rinh
             name: "РИНХ"
             target: "rinh"
+          - id: sfedu
+            name: "ЮФУ"
+            target: "sfedu"
+          - id: rgups
+            name: "РГУПС"
+            target: "rgups"
+          - id: rgups_tuapse
+            name: "РГУПС Туапсе"
+            target: "rgups_tuapse"
+          - id: tvgu
+            name: "ТвГУ"
+            target: "tvgu"
 
     steps:
       - name: Checkout code

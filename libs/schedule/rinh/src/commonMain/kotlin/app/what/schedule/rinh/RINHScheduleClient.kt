@@ -26,6 +26,7 @@ class RINHScheduleClient(
     private suspend fun getGroupsAndTeachers(): List<RINHApi.Schedule.Responses.ScheduleSearch> {
         cachedGroupsAndTeachers?.let { return it }
         var attempts = 0
+        var lastException: Exception? = null
         while (attempts < 3) {
             attempts++
             try {
@@ -35,12 +36,14 @@ class RINHScheduleClient(
                 cachedGroupsAndTeachers = response
                 return response
             } catch (e: Exception) {
+                lastException = e
                 log?.invoke("Ошибка загрузки поиска РГЭУ РИНХ (попытка $attempts/3): ${e.message}")
                 if (attempts < 3) {
                     kotlinx.coroutines.delay(2000L * attempts)
                 }
             }
         }
+        if (lastException != null) throw lastException
         return emptyList()
     }
 
@@ -73,6 +76,7 @@ class RINHScheduleClient(
     private suspend fun fetchSchedule(value: String): List<DayScheduleDto> {
         val encodedValue = value.encodeURLPathPart()
         var attempts = 0
+        var lastException: Exception? = null
         while (attempts < 3) {
             attempts++
             try {
@@ -81,12 +85,14 @@ class RINHScheduleClient(
                     .body<RINHApi.Schedule.Responses.GetSchedule>()
                 return schedule.toDaySchedules()
             } catch (e: Exception) {
+                lastException = e
                 log?.invoke("Ошибка загрузки расписания РГЭУ РИНХ для $value (попытка $attempts/3): ${e.message}")
                 if (attempts < 3) {
                     kotlinx.coroutines.delay(1000L * attempts)
                 }
             }
         }
+        if (lastException != null) throw lastException
         return emptyList()
     }
 

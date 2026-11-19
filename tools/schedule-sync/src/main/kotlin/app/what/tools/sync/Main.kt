@@ -60,6 +60,27 @@ val json = Json {
     encodeDefaults = true
 }
 
+fun writeFailureMetaPreservingExisting(dir: File, institution: String, error: Throwable) {
+    val metaFile = File(dir, "meta.json")
+    val existingMeta = if (metaFile.exists()) {
+        runCatching { json.decodeFromString<InstitutionMeta>(metaFile.readText()) }.getOrNull()
+    } else null
+
+    if (existingMeta == null || existingMeta.groupCount == 0) {
+        val errorMeta = InstitutionMeta(
+            lastSync = Clock.System.now().toString(),
+            institution = institution,
+            status = "FAILED",
+            errorMessage = error.message ?: "Unknown error",
+            groupCount = 0,
+            teacherCount = 0
+        )
+        metaFile.writeText(json.encodeToString(errorMeta))
+    } else {
+        println("  [$institution] Retaining existing valid metadata with ${existingMeta.groupCount} groups instead of overwriting with FAILED.")
+    }
+}
+
 fun main(args: Array<String>) = runBlocking(Dispatchers.IO) {
     val targetIndex = args.indexOf("--target")
     val target = if (targetIndex in 0 until args.size - 1) args[targetIndex + 1] else "all"
@@ -228,15 +249,7 @@ suspend fun syncRksi(client: HttpClient, rootDir: File, failOnError: Boolean = f
     }.onFailure {
         println("  [RKSI] Error syncing: ${it.message}")
         it.printStackTrace()
-        val errorMeta = InstitutionMeta(
-            lastSync = Clock.System.now().toString(),
-            institution = "rksi",
-            status = "FAILED",
-            errorMessage = it.message ?: "Unknown error",
-            groupCount = 0,
-            teacherCount = 0
-        )
-        File(dir, "meta.json").writeText(json.encodeToString(errorMeta))
+        writeFailureMetaPreservingExisting(dir, "rksi", it)
         if (failOnError) throw it
     }
 }
@@ -330,15 +343,7 @@ suspend fun syncDgtu(client: HttpClient, rootDir: File, failOnError: Boolean = f
     }.onFailure {
         println("  [DGTU] Error syncing: ${it.message}")
         it.printStackTrace()
-        val errorMeta = InstitutionMeta(
-            lastSync = Clock.System.now().toString(),
-            institution = "dgtu",
-            status = "FAILED",
-            errorMessage = it.message ?: "Unknown error",
-            groupCount = 0,
-            teacherCount = 0
-        )
-        File(dir, "meta.json").writeText(json.encodeToString(errorMeta))
+        writeFailureMetaPreservingExisting(dir, "dgtu", it)
         if (failOnError) throw it
     }
 }
@@ -429,15 +434,7 @@ suspend fun syncIubip(client: HttpClient, rootDir: File, failOnError: Boolean = 
     }.onFailure {
         println("  [IUBIP] Error syncing: ${it.message}")
         it.printStackTrace()
-        val errorMeta = InstitutionMeta(
-            lastSync = Clock.System.now().toString(),
-            institution = "iubip",
-            status = "FAILED",
-            errorMessage = it.message ?: "Unknown error",
-            groupCount = 0,
-            teacherCount = 0
-        )
-        File(dir, "meta.json").writeText(json.encodeToString(errorMeta))
+        writeFailureMetaPreservingExisting(dir, "iubip", it)
         if (failOnError) throw it
     }
 }
@@ -516,15 +513,7 @@ suspend fun syncRinh(client: HttpClient, rootDir: File, failOnError: Boolean = f
     }.onFailure {
         println("  [RINH] Error syncing: ${it.message}")
         it.printStackTrace()
-        val errorMeta = InstitutionMeta(
-            lastSync = Clock.System.now().toString(),
-            institution = "rinh",
-            status = "FAILED",
-            errorMessage = it.message ?: "Unknown error",
-            groupCount = 0,
-            teacherCount = 0
-        )
-        File(dir, "meta.json").writeText(json.encodeToString(errorMeta))
+        writeFailureMetaPreservingExisting(dir, "rinh", it)
         if (failOnError) throw it
     }
 }
@@ -603,15 +592,7 @@ suspend fun syncSfedu(client: HttpClient, rootDir: File, failOnError: Boolean = 
     }.onFailure {
         println("  [SFEDU] Error syncing: ${it.message}")
         it.printStackTrace()
-        val errorMeta = InstitutionMeta(
-            lastSync = Clock.System.now().toString(),
-            institution = "sfedu",
-            status = "FAILED",
-            errorMessage = it.message ?: "Unknown error",
-            groupCount = 0,
-            teacherCount = 0
-        )
-        File(dir, "meta.json").writeText(json.encodeToString(errorMeta))
+        writeFailureMetaPreservingExisting(dir, "sfedu", it)
         if (failOnError) throw it
     }
 }
@@ -728,15 +709,7 @@ suspend fun syncRgups(client: HttpClient, rootDir: File, failOnError: Boolean = 
     }.onFailure {
         println("  [RGUPS] Error syncing: ${it.message}")
         it.printStackTrace()
-        val errorMeta = InstitutionMeta(
-            lastSync = Clock.System.now().toString(),
-            institution = "rgups",
-            status = "FAILED",
-            errorMessage = it.message ?: "Unknown error",
-            groupCount = 0,
-            teacherCount = 0
-        )
-        File(dir, "meta.json").writeText(json.encodeToString(errorMeta))
+        writeFailureMetaPreservingExisting(dir, "rgups", it)
         if (failOnError) throw it
     }
 }
@@ -812,15 +785,7 @@ suspend fun syncRgupsTuapse(client: HttpClient, rootDir: File, failOnError: Bool
     }.onFailure {
         println("  [Tuapse] Error syncing: ${it.message}")
         it.printStackTrace()
-        val errorMeta = InstitutionMeta(
-            lastSync = Clock.System.now().toString(),
-            institution = "rgups_tuapse",
-            status = "FAILED",
-            errorMessage = it.message ?: "Unknown error",
-            groupCount = 0,
-            teacherCount = 0
-        )
-        File(dir, "meta.json").writeText(json.encodeToString(errorMeta))
+        writeFailureMetaPreservingExisting(dir, "rgups_tuapse", it)
         if (failOnError) throw it
     }
 }
@@ -947,15 +912,7 @@ suspend fun syncTvgu(client: HttpClient, rootDir: File, failOnError: Boolean = f
     }.onFailure {
         println("  [TvGU] Error syncing: ${it.message}")
         it.printStackTrace()
-        val errorMeta = InstitutionMeta(
-            lastSync = Clock.System.now().toString(),
-            institution = "tvgu",
-            status = "FAILED",
-            errorMessage = it.message ?: "Unknown error",
-            groupCount = 0,
-            teacherCount = 0
-        )
-        File(dir, "meta.json").writeText(json.encodeToString(errorMeta))
+        writeFailureMetaPreservingExisting(dir, "tvgu", it)
         if (failOnError) throw it
     }
 }
