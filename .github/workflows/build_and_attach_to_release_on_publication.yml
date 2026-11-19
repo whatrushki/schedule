@@ -144,8 +144,9 @@ jobs:
           fi
           ./gradlew assembleStandaloneRelease assembleRustoreRelease --stacktrace || ./gradlew assembleStandaloneDebug assembleRustoreDebug --stacktrace
           mkdir -p release_assets
-          # Collect Standalone APK for GitHub Release (self-updating via GitHub)
+          # Collect Standalone APK for GitHub Release (clean APK without flavor name for legacy updaters + standalone copy)
           find app/build/outputs/apk/standalone -name "*.apk" -exec cp {} release_assets/schedule_android_${{ steps.get_version.outputs.version }}.apk \; || true
+          find app/build/outputs/apk/standalone -name "*.apk" -exec cp {} release_assets/schedule_android_standalone_${{ steps.get_version.outputs.version }}.apk \; || true
           # Collect RuStore APK for RuStore publishing (clean manifest without REQUEST_INSTALL_PACKAGES)
           find app/build/outputs/apk/rustore -name "*.apk" -exec cp {} release_assets/schedule_android_rustore_${{ steps.get_version.outputs.version }}.apk \; || true
 

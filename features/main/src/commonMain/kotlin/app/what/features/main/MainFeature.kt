@@ -206,11 +206,12 @@ class MainFeature(
             val isFirstLaunch = appValues.isFirstLaunch.get() ?: true
             Auditor.debug(navTag, "Onboarding check: isFirstLaunch=$isFirstLaunch, lastSeen=$lastSeen, currentVersion=$currentVersion")
 
-            if (!isFirstLaunch && lastSeen.isNotBlank() && lastSeen != currentVersion) {
+            if (!isFirstLaunch && lastSeen != currentVersion) {
                 val bundledNotes = loadBundledReleaseNotes()
                 val cachedJson = appValues.cachedReleaseNotes.get()
                 val cachedNotes = cachedJson?.let { ReleaseNotes.fromJson(it) }
 
+                val fromVer = if (lastSeen.isNotBlank()) lastSeen else "1.3.17"
                 // Пытаемся получить объединенные заметки через GitHubUpdateService с таймаутом
                 val fetchedMergedNotes = try {
                     withTimeoutOrNull(2500) {
@@ -219,7 +220,7 @@ class MainFeature(
                         gitHubService.fetchMergedReleaseNotes(
                             owner = "whatrushki",
                             repo = "schedule",
-                            fromVersion = lastSeen,
+                            fromVersion = fromVer,
                             toVersion = currentVersion
                         )
                     }
@@ -259,8 +260,6 @@ class MainFeature(
                 } else {
                     appValues.lastSeenVersion.set(currentVersion)
                 }
-            } else if (lastSeen.isBlank()) {
-                appValues.lastSeenVersion.set(currentVersion)
             }
         }
         
