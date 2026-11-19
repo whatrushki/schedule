@@ -1,19 +1,38 @@
 [
     {
-        "date": "2026-10-12",
-        "scheduleType": "WITH_CLASS_HOUR",
+        "date": "2026-11-20",
+        "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-12",
+                "date": "2026-11-20",
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян М.А.",
+                        "group": "СА-15",
+                        "room": "324",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-20",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
                 "subject": "Математика",
                 "otUnits": [
                     {
                         "teacher": "Арутюнян М.А.",
                         "group": "ИКС-14",
-                        "room": "418",
+                        "room": "324",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -23,97 +42,43 @@
                 "state": "ADDED"
             },
             {
-                "date": "2026-10-12",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Информатика",
-                "otUnits": [
-                    {
-                        "teacher": "Арутюнян М.А.",
-                        "group": "СА-16",
-                        "room": "418",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            },
-            {
-                "date": "2026-10-12",
+                "date": "2026-11-20",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Основы алгоритмизации и программирования",
+                "subject": "Математика",
                 "otUnits": [
-                    {
-                        "teacher": "Арутюнян М.М.",
-                        "group": "СА-35",
-                        "room": "110",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "Арутюнян М.А.",
-                        "group": "ИКС-24",
-                        "room": "412",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-10-12",
-                "number": 0,
-                "startTime": "13:05",
-                "endTime": "14:05",
-                "subject": "Классный час",
-                "otUnits": [
-                    {
-                        "teacher": "Арутюнян М.А",
-                        "group": "ТЭС-12",
-                        "room": "118",
+                        "group": "ИКС-14",
+                        "room": "324",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Арутюнян М.М.",
+                        "teacher": "Арутюнян А.Э.",
                         "group": "ИС-26",
-                        "room": "217",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Арутюнян М.М.",
-                        "group": "ИС-37",
-                        "room": "217",
+                        "room": "210",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "CLASS_HOUR",
+                "type": "OTHER",
                 "state": "ADDED"
             },
             {
-                "date": "2026-10-12",
+                "date": "2026-11-20",
                 "number": 4,
-                "startTime": "14:10",
-                "endTime": "15:40",
-                "subject": "Основы алгоритмизации и программирования",
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Численные методы",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян М.М.",
-                        "group": "СА-35",
-                        "room": "110",
+                        "teacher": "Арутюнян А.Э.",
+                        "group": "ИС-21",
+                        "room": "210",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -123,16 +88,35 @@
                 "state": "CHANGED"
             },
             {
-                "date": "2026-10-12",
+                "date": "2026-11-20",
                 "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:30",
-                "subject": "Основы алгоритмизации и программирования",
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Численные методы",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян М.М.",
-                        "group": "СА-35",
-                        "room": "325",
+                        "teacher": "Арутюнян А.Э.",
+                        "group": "ИС-25",
+                        "room": "210",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-20",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян А.Э.",
+                        "group": "ИС-24",
+                        "room": "210",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -142,16 +126,16 @@
                 "state": "CHANGED"
             },
             {
-                "date": "2026-10-12",
-                "number": 6,
-                "startTime": "17:40",
-                "endTime": "19:10",
-                "subject": "Основы алгоритмизации и программирования",
+                "date": "2026-11-20",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Численные методы",
                 "otUnits": [
                     {
-                        "teacher": "Арутюнян М.М.",
-                        "group": "СА-35",
-                        "room": "325",
+                        "teacher": "Арутюнян А.Э.",
+                        "group": "ИС-28",
+                        "room": "210",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -163,11 +147,11 @@
         ]
     },
     {
-        "date": "2026-10-13",
+        "date": "2026-11-24",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-13",
+                "date": "2026-11-24",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -186,7 +170,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-13",
+                "date": "2026-11-24",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
@@ -205,7 +189,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-13",
+                "date": "2026-11-24",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -224,7 +208,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-13",
+                "date": "2026-11-24",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
@@ -243,7 +227,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-13",
+                "date": "2026-11-24",
                 "number": 6,
                 "startTime": "16:40",
                 "endTime": "18:10",
@@ -262,7 +246,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-13",
+                "date": "2026-11-24",
                 "number": 7,
                 "startTime": "18:20",
                 "endTime": "19:50",
@@ -283,11 +267,11 @@
         ]
     },
     {
-        "date": "2026-10-15",
+        "date": "2026-11-26",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-15",
+                "date": "2026-11-26",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -306,7 +290,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-15",
+                "date": "2026-11-26",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
@@ -314,7 +298,7 @@
                 "otUnits": [
                     {
                         "teacher": "Арутюнян Мария Михайловна",
-                        "group": "СА-33",
+                        "group": "СА-34",
                         "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
@@ -325,7 +309,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-15",
+                "date": "2026-11-26",
                 "number": 6,
                 "startTime": "16:40",
                 "endTime": "18:10",
@@ -333,7 +317,7 @@
                 "otUnits": [
                     {
                         "teacher": "Арутюнян Мария Михайловна",
-                        "group": "СА-33",
+                        "group": "СА-34",
                         "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
@@ -344,7 +328,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-15",
+                "date": "2026-11-26",
                 "number": 7,
                 "startTime": "18:20",
                 "endTime": "19:50",
@@ -352,7 +336,7 @@
                 "otUnits": [
                     {
                         "teacher": "Арутюнян Мария Михайловна",
-                        "group": "СА-33",
+                        "group": "СА-35",
                         "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
@@ -365,11 +349,11 @@
         ]
     },
     {
-        "date": "2026-10-16",
+        "date": "2026-11-27",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-10-16",
+                "date": "2026-11-27",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
@@ -388,7 +372,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-16",
+                "date": "2026-11-27",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -407,7 +391,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-16",
+                "date": "2026-11-27",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
@@ -426,7 +410,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-10-16",
+                "date": "2026-11-27",
                 "number": 6,
                 "startTime": "16:40",
                 "endTime": "18:10",
@@ -434,7 +418,26 @@
                 "otUnits": [
                     {
                         "teacher": "Арутюнян Мария Михайловна",
-                        "group": "СА-33",
+                        "group": "СА-34",
+                        "room": "217",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-27",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Основы алгоритмизации и программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Арутюнян Мария Михайловна",
+                        "group": "СА-34",
                         "room": "217",
                         "additional": "1",
                         "onlineUrl": null,
