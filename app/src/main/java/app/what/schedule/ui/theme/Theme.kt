@@ -93,6 +93,18 @@ fun getAppColorScheme(
 ): ColorScheme {
     return when (themeStyle) {
         ThemeStyle.Monochrome -> if (isDarkTheme) DarkMonochromeScheme else LightMonochromeScheme
+        ThemeStyle.Material -> {
+            val accentColor = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                try {
+                    Color(context.getColor(android.R.color.system_accent1_500))
+                } catch (_: Exception) {
+                    Color(0xFF1F2137)
+                }
+            } else {
+                Color(0xFF1F2137)
+            }
+            getBrandColorScheme(accentColor, isDarkTheme)
+        }
         else -> getBrandColorScheme(themeColor?.let { Color(it) } ?: Color(0xFF1F2137), isDarkTheme)
     }
 }
@@ -117,7 +129,7 @@ fun AppTheme(
     
     WHATTheme(
         theme = theme,
-        dynamicColor = themeStyle == ThemeStyle.Material,
+        dynamicColor = false,
         isDarkTheme = isDarkTheme,
         content = content
     )

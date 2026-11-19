@@ -12,6 +12,7 @@ import app.what.foundation.services.auto_update.UpdateResult
 
 object TestUpdateController {
     var showTestScreen by mutableStateOf(false)
+    var showTestOnboarding by mutableStateOf(false)
 
     val testInfo = UpdateInfo(
         version = "1.6.0",
@@ -28,6 +29,13 @@ object TestUpdateController {
                     icon = "school",
                     title = "Синхронизация РКСИ и РГЭУ РИНХ",
                     description = "Устранена коллизия инициалов при дедупликации преподавателей со схожими фамилиями. Добавлен надежный облачный фоллбэк при недоступности серверов."
+                ),
+                ReleaseHighlight(
+                    tag = "NEW",
+                    icon = "star",
+                    title = "Поддержка автора и настройки",
+                    description = "Настройте комфортный для вас уровень поддержки проекта прямо из онбординга.",
+                    settingKey = "support_ads_level"
                 ),
                 ReleaseHighlight(
                     tag = "NEW",

@@ -281,6 +281,25 @@ class MainFeature(
                 }
             }
         }
+
+        LaunchedEffect(TestUpdateController.showTestOnboarding) {
+            if (TestUpdateController.showTestOnboarding) {
+                dialog.open(full = true) {
+                    UpdateOnboardingContent(
+                        releaseNotes = TestUpdateController.testInfo.releaseNotesData!!,
+                        appValues = appValues,
+                        onDismiss = {
+                            TestUpdateController.showTestOnboarding = false
+                            dialog.close()
+                        },
+                        onNavigate = { _ ->
+                            TestUpdateController.showTestOnboarding = false
+                            dialog.close()
+                        }
+                    )
+                }
+            }
+        }
         
         val notificationService = rememberAppNotificationService()
 

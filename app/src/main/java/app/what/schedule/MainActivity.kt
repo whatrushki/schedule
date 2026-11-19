@@ -81,6 +81,12 @@ open class MainActivity : ComponentActivity() {
         if (intent.getBooleanExtra("test_update", false)) {
             TestUpdateController.showTestScreen = true
         }
+        if (intent.getBooleanExtra("test_onboarding", false)) {
+            TestUpdateController.showTestOnboarding = true
+        }
+        if (intent.getBooleanExtra("test_onboarding", false)) {
+            TestUpdateController.showTestOnboarding = true
+        }
         handleNotificationIntent(intent)
         handleAuthIntent(intent)
         lifecycleScope.launch {
@@ -151,6 +157,9 @@ open class MainActivity : ComponentActivity() {
         setIntent(intent)
         if (intent.getBooleanExtra("test_update", false)) {
             TestUpdateController.showTestScreen = true
+        }
+        if (intent.getBooleanExtra("test_onboarding", false)) {
+            TestUpdateController.showTestOnboarding = true
         }
         handleNotificationIntent(intent)
         handleAuthIntent(intent)

@@ -52,9 +52,11 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.typography
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -70,10 +72,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import app.what.data.local.settings.findSettingComponent
 import app.what.domain.services.ReleaseHighlight
 import app.what.domain.services.ReleaseNotes
 import app.what.foundation.ui.Gap
+import app.what.foundation.ui.controllers.LocalDialogController
+import app.what.foundation.ui.controllers.rememberDialogHostController
 import app.what.schedule.data.local.settings.AppValues
 import kotlinx.coroutines.launch
 import kotlin.math.absoluteValue
@@ -92,6 +98,11 @@ fun UpdateOnboardingContent(
 
     val pagerState = rememberPagerState(pageCount = { totalPages })
     val scope = rememberCoroutineScope()
+    val localDialog = rememberDialogHostController()
+
+    CompositionLocalProvider(
+        LocalDialogController provides localDialog
+    ) {
 
     BoxWithConstraints(
         modifier = modifier.fillMaxSize(),
@@ -300,6 +311,32 @@ fun UpdateOnboardingContent(
                 }
             }
         }
+
+        if (localDialog.opened) {
+            Dialog(
+                onDismissRequest = { localDialog.close() },
+                properties = DialogProperties(usePlatformDefaultWidth = false)
+            ) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(24.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Surface(
+                        shape = MaterialTheme.shapes.large,
+                        color = colorScheme.surface,
+                        tonalElevation = 6.dp,
+                        modifier = Modifier
+                            .widthIn(max = 440.dp)
+                            .fillMaxWidth()
+                    ) {
+                        localDialog.content?.invoke()
+                    }
+                }
+            }
+        }
+    }
     }
 }
 

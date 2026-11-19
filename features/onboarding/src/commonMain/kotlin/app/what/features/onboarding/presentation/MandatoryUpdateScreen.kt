@@ -28,6 +28,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowForward
 import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.NewReleases
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Security
@@ -93,8 +94,8 @@ fun MandatoryUpdateScreen(
             .background(colorScheme.surface),
         contentAlignment = Alignment.Center
     ) {
-        // Gradient covers entire device screen edge-to-edge with no padding clipping
-        MandatoryUpdateAmbientBackground()
+        // Smooth ambient animated background matching UpdateOnboarding
+        UpdateOnboardingBackground(0)
 
         val isWide = maxWidth >= 640.dp
 
@@ -112,16 +113,16 @@ fun MandatoryUpdateScreen(
             ) {
                 Box(
                     modifier = Modifier
-                        .widthIn(max = 500.dp)
+                        .widthIn(max = 520.dp)
                         .fillMaxWidth(0.9f)
-                        .heightIn(max = 700.dp)
+                        .heightIn(max = 720.dp)
                         .fillMaxHeight(0.88f)
-                        .clip(RoundedCornerShape(24.dp))
+                        .clip(RoundedCornerShape(28.dp))
                         .background(colorScheme.surface)
                         .border(
                             1.dp,
                             colorScheme.outlineVariant.copy(alpha = 0.3f),
-                            RoundedCornerShape(24.dp)
+                            RoundedCornerShape(28.dp)
                         )
                         .padding(horizontal = 24.dp, vertical = 20.dp)
                 ) {
@@ -141,7 +142,7 @@ fun MandatoryUpdateScreen(
                     .fillMaxSize()
                     .statusBarsPadding()
                     .navigationBarsPadding()
-                    .padding(horizontal = 20.dp, vertical = 12.dp)
+                    .padding(horizontal = 24.dp, vertical = 16.dp)
             ) {
                 MandatoryUpdateCardContent(
                     info = info,
@@ -153,22 +154,6 @@ fun MandatoryUpdateScreen(
                 )
             }
         }
-    }
-}
-
-@Composable
-private fun MandatoryUpdateAmbientBackground() {
-    val color1 = colorScheme.primaryContainer.copy(0.35f)
-    val surface = colorScheme.surface
-
-    Canvas(modifier = Modifier.fillMaxSize()) {
-        drawRect(
-            brush = Brush.radialGradient(
-                colors = listOf(color1, surface),
-                center = Offset(size.width / 2f, size.height * 0.2f),
-                radius = size.maxDimension * 0.85f
-            )
-        )
     }
 }
 
@@ -203,34 +188,9 @@ private fun MandatoryUpdateCardContent(
                 .verticalScroll(rememberScrollState()),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Gap(12)
+            Gap(8)
 
-            // Hero Icon with subtle ambient glow
-            Box(
-                modifier = Modifier.size(110.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                Canvas(modifier = Modifier.size(110.dp)) {
-                    drawCircle(brush = glowBrush)
-                }
-                Box(
-                    modifier = Modifier
-                        .size(76.dp)
-                        .clip(CircleShape)
-                        .background(colorScheme.primary.copy(alpha = 0.12f)),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Icon(
-                        imageVector = WHATIcons.ApkInstall,
-                        contentDescription = null,
-                        modifier = Modifier.size(40.dp),
-                        tint = primaryColor
-                    )
-                }
-            }
-
-            Gap(16)
-
+            // Version chip at top
             Box(
                 modifier = Modifier
                     .clip(CircleShape)
@@ -238,38 +198,60 @@ private fun MandatoryUpdateCardContent(
                     .padding(horizontal = 14.dp, vertical = 5.dp)
             ) {
                 Text(
-                    text = "Версия ${info.version}",
-                    style = typography.labelLarge,
-                    fontWeight = FontWeight.SemiBold,
+                    text = "Обязательное обновление • v${info.version}",
+                    style = typography.labelMedium,
+                    fontWeight = FontWeight.Bold,
                     color = colorScheme.primary
                 )
             }
 
-            Gap(12)
+            Gap(20)
+
+            // Hero icon with subtle glow
+            Box(
+                modifier = Modifier.size(100.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Canvas(modifier = Modifier.size(100.dp)) {
+                    drawCircle(brush = glowBrush)
+                }
+                Icon(
+                    imageVector = Icons.Default.NewReleases,
+                    contentDescription = null,
+                    modifier = Modifier.size(64.dp),
+                    tint = primaryColor
+                )
+            }
+
+            Gap(16)
 
             Text(
-                text = "Необходимо обновление",
+                text = releaseNotes?.title ?: "Обновление расписания",
                 style = typography.titleLarge,
                 fontWeight = FontWeight.Bold,
                 color = colorScheme.onSurface,
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp)
             )
 
-            Gap(4)
+            Gap(8)
 
             Text(
-                text = "Для работы расписания установите актуальную версию$sizeStr",
+                text = releaseNotes?.shortDescription
+                    ?: "Для продолжения работы приложения требуется установить актуальную версию расписания$sizeStr.",
                 style = typography.bodyMedium,
-                color = colorScheme.secondary,
-                textAlign = TextAlign.Center
+                color = colorScheme.onSurfaceVariant,
+                textAlign = TextAlign.Center,
+                lineHeight = 20.sp,
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp)
             )
 
-            Gap(20)
+            Gap(24)
 
             if (highlights.isNotEmpty()) {
                 Column(
                     modifier = Modifier.fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                    verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
                     highlights.forEach { highlight ->
                         HighlightCard(highlight)
@@ -278,7 +260,7 @@ private fun MandatoryUpdateCardContent(
             } else if (items.isNotEmpty()) {
                 Column(
                     modifier = Modifier.fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(6.dp)
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     items.forEach { item ->
                         ChangelogItem(item)
@@ -293,8 +275,8 @@ private fun MandatoryUpdateCardContent(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 8.dp),
-            verticalArrangement = Arrangement.spacedBy(4.dp),
+                .padding(top = 12.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             if (isRuStore) {
