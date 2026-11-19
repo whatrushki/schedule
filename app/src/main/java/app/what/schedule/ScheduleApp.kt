@@ -57,6 +57,7 @@ import com.jakewharton.processphoenix.ProcessPhoenix
 import android.content.res.Configuration as AndroidConfiguration
 import android.util.Log
 import app.what.data.managers.PlatformFileStorageCleaner
+import app.what.domain.services.AppCloser
 import app.what.domain.services.FeedbackSharer
 import app.what.foundation.auth.client.WhatAuthManager
 import app.what.foundation.auth.di.createAndroidAuthPreferences
@@ -69,6 +70,7 @@ import app.what.schedule.notifications.university.UniversityNotificationManager
 import app.what.schedule.notifications.university.checkers.DgtuNotificationChecker
 import app.what.schedule.notifications.university.checkers.SfeduNotificationChecker
 import app.what.schedule.updater.AppGitHubUpdateManager
+import app.what.schedule.updater.AppRuStoreUpdateManager
 import app.what.schedule.utils.AndroidPlatformFileStorageCleaner
 import app.what.schedule.utils.AppUserIdProvider
 import com.yandex.mobile.ads.common.YandexAds
@@ -285,6 +287,7 @@ class ScheduleApp : Application(), Configuration.Provider {
 
 val appModule = module {
     singleOf(::AppUtils)
+    single<AppCloser> { AppCloser { CurrentActivityHolder.currentActivity?.finishAffinity() } }
     single<PlatformFileStorageCleaner> { AndroidPlatformFileStorageCleaner(androidContext()) }
     single<FeedbackSharer> { AndroidFeedbackSharer(androidContext(), get()) }
     single { createAndroidAuthPreferences(androidContext()) }
@@ -304,24 +307,36 @@ val appModule = module {
         )
     }
     
+    single<InstallSource> {
+        val context = androidContext()
+        when (BuildConfig.FLAVOR) {
+            "rustore" -> InstallSource.RuStore
+            "standalone" -> InstallSource.APK
+            else -> getInstallSource(context)
+        }
+    }
+
     single<AppUpdateManager> {
         val context = androidContext()
-        val isRuStore = when (BuildConfig.FLAVOR) {
-            "rustore" -> true
-            "standalone" -> false
-            else -> getInstallSource(context) == InstallSource.RuStore
-        }
+        val installSource = get<InstallSource>()
+        val isRuStore = installSource == InstallSource.RuStore
+        val updateConfig = UpdateConfig(
+            BuildConfig.APP_GITHUB_URL.split("/").reversed()[1],
+            BuildConfig.APP_GITHUB_URL.split("/").reversed()[0],
+            BuildConfig.VERSION_NAME
+        )
         
         if (isRuStore) {
-            RuStoreUpdateManager(context, get())
+            AppRuStoreUpdateManager(
+                context = context,
+                config = updateConfig,
+                httpClient = get(),
+                appValues = get()
+            )
         } else {
             AppGitHubUpdateManager(
-                context = androidContext(),
-                config = UpdateConfig(
-                    BuildConfig.APP_GITHUB_URL.split("/").reversed()[1],
-                    BuildConfig.APP_GITHUB_URL.split("/").reversed()[0],
-                    BuildConfig.VERSION_NAME
-                ),
+                context = context,
+                config = updateConfig,
                 httpClient = get(),
                 appValues = get()
             )

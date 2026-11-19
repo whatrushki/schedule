@@ -18,6 +18,7 @@ import app.what.data.repositories.ScheduleRepositoryImpl
 import app.what.domain.constants.AppConstants
 import app.what.domain.repositories.NewsRepository
 import app.what.domain.repositories.ScheduleRepository
+import app.what.domain.services.AppCloser
 import app.what.domain.services.FeedbackSharer
 import app.what.domain.services.NoOpFeedbackSharer
 import app.what.domain.services.NetworkConnectivity
@@ -92,6 +93,7 @@ val dataModule = module {
     single { SfeduGradeClient(get()) }
     single { InstitutionManager(get(), get()) }
     singleOf(::AppUtils)
+    single<AppCloser> { AppCloser { kotlin.system.exitProcess(0) } }
     single<XlsxReader> { JvmXlsxReader() }
     
     single<AppUpdateManager> {

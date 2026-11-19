@@ -118,6 +118,8 @@ android {
 }
 
 dependencies {
+    implementation(platform(libs.bom))
+    implementation(libs.appupdate)
     implementation(libs.yandex.mobileads)
     implementation(project(":composeApp"))
     implementation(project(":domain"))

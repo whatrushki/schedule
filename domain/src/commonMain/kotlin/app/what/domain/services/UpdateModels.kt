@@ -8,3 +8,4 @@ public typealias UpdateConfig = app.what.foundation.services.auto_update.UpdateC
 public typealias GitHubRelease = app.what.foundation.services.auto_update.GitHubRelease
 public typealias GitHubAsset = app.what.foundation.services.auto_update.GitHubAsset
 public typealias DownloadProgress = app.what.foundation.services.auto_update.DownloadProgress
+public typealias InstallSource = app.what.foundation.services.auto_update.InstallSource

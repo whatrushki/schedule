@@ -18,6 +18,7 @@ import app.what.domain.constants.AppConstants
 import app.what.domain.models.MetaInfo
 import app.what.domain.repositories.NewsRepository
 import app.what.domain.repositories.ScheduleRepository
+import app.what.domain.services.AppCloser
 import app.what.domain.services.FeedbackSharer
 import app.what.domain.services.NoOpFeedbackSharer
 import app.what.domain.services.NetworkConnectivity
@@ -126,6 +127,7 @@ val dataModule = module {
     }
     
     singleOf(::AppUtils)
+    single<AppCloser> { AppCloser { } }
 
     single<AppUpdateManager> {
         WebUpdateManager(

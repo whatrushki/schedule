@@ -59,9 +59,14 @@ import app.what.foundation.ui.icons.WHATIcons
 import app.what.foundation.ui.icons.filled.FrameBug
 import app.what.foundation.ui.icons.filled.News
 import app.what.domain.constants.AppConstants
+import app.what.domain.services.AppCloser
+import app.what.domain.services.InstallSource
 import app.what.domain.services.ReleaseNotes
+import app.what.domain.services.UpdatePolicy
+import app.what.features.onboarding.presentation.MandatoryUpdateScreen
 import app.what.features.onboarding.presentation.UpdateOnboardingContent
 import app.what.features.onboarding.presentation.loadBundledReleaseNotes
+import app.what.foundation.services.auto_update.AppUpdateManager
 import app.what.foundation.services.auto_update.GitHubUpdateService
 import app.what.foundation.ui.controllers.rememberDialogController
 import app.what.schedule.features.insts.dgtu.DgtuAccountContent
@@ -199,6 +204,20 @@ class MainFeature(
             }
         }
         val dialog = rememberDialogController()
+        val appUpdateManager = remember { getKoin().getOrNull<AppUpdateManager>() }
+        val installSource = remember { getKoin().getOrNull<InstallSource>() }
+        val appCloser = remember { getKoin().getOrNull<AppCloser>() }
+        val updateInfo = appUpdateManager?.updateInfo
+        val cachedNotesJson = appValues.cachedReleaseNotes.get()
+
+        val isMandatory = remember(updateInfo, cachedNotesJson) {
+            if (updateInfo == null) false
+            else UpdatePolicy.isMandatory(
+                info = updateInfo,
+                currentVersion = AppConstants.VERSION_NAME,
+                cachedNotesJson = cachedNotesJson
+            )
+        }
 
         LaunchedEffect(Unit) {
             val lastSeen = appValues.lastSeenVersion.get() ?: ""
@@ -206,7 +225,7 @@ class MainFeature(
             val isFirstLaunch = appValues.isFirstLaunch.get() ?: true
             Auditor.debug(navTag, "Onboarding check: isFirstLaunch=$isFirstLaunch, lastSeen=$lastSeen, currentVersion=$currentVersion")
 
-            if (!isFirstLaunch && lastSeen != currentVersion) {
+            if (!isFirstLaunch && lastSeen != currentVersion && !isMandatory) {
                 val bundledNotes = loadBundledReleaseNotes()
                 val cachedJson = appValues.cachedReleaseNotes.get()
                 val cachedNotes = cachedJson?.let { ReleaseNotes.fromJson(it) }
@@ -340,6 +359,18 @@ class MainFeature(
                         .padding(top = 8.dp)
                         .zIndex(99f)
                 )
+
+                if (isMandatory && updateInfo != null && appUpdateManager != null) {
+                    MandatoryUpdateScreen(
+                        info = updateInfo,
+                        manager = appUpdateManager,
+                        isRuStore = installSource == InstallSource.RuStore,
+                        onExitApp = { appCloser?.exit() },
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .zIndex(100f)
+                    )
+                }
             }
         }
     }

@@ -8,6 +8,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.core.content.FileProvider
 import app.what.domain.services.GitHubRelease
+import app.what.domain.services.SemanticVersion
 import app.what.foundation.services.AppLogger.Companion.Auditor
 import app.what.foundation.services.auto_update.AppUpdateManager
 import app.what.foundation.services.auto_update.DownloadProgress
@@ -227,6 +228,9 @@ class AppGitHubUpdateManager(
                 _downloadState.value = result.fold(
                     onSuccess = { file ->
                         if (isArchiveValid(file)) {
+                            scope.launch(Dispatchers.Main) {
+                                installUpdate(file)
+                            }
                             DownloadState.Completed(file)
                         } else {
                             file.delete()
@@ -348,69 +352,6 @@ class AppGitHubUpdateManager(
         scope.cancel()
     }
 
-    private fun parseVersion(versionString: String): Version {
-        val cleanVersion = versionString.trim().removePrefix("v").removePrefix("V")
-        try {
-            val mainAndPreRelease = cleanVersion.split("-", limit = 2)
-            val mainPart = mainAndPreRelease[0]
-
-            val versionDigitsRegex = Regex("""\d+(\.\d+)*""")
-            val matchedNumbers = versionDigitsRegex.find(mainPart)?.value ?: mainPart
-            val mainParts = matchedNumbers.split(".").map { it.toIntOrNull() ?: 0 }
-
-            var preReleaseType = PreReleaseType.STABLE
-            var preReleaseNumber = 0
-
-            if (mainAndPreRelease.size > 1) {
-                val preReleasePart = mainAndPreRelease[1]
-                val preReleaseParts = preReleasePart.split(".")
-
-                preReleaseType = when (preReleaseParts[0].lowercase()) {
-                    "alpha" -> PreReleaseType.ALPHA
-                    "beta" -> PreReleaseType.BETA
-                    "rc" -> PreReleaseType.RELEASE_CANDIDATE
-                    "stable" -> PreReleaseType.STABLE
-                    else -> PreReleaseType.STABLE
-                }
-
-                preReleaseNumber = preReleaseParts.getOrElse(1) { "0" }.toIntOrNull() ?: 0
-            }
-
-            return Version(
-                major = mainParts.getOrElse(0) { 0 },
-                minor = mainParts.getOrElse(1) { 0 },
-                patch = mainParts.getOrElse(2) { 0 },
-                preReleaseType = preReleaseType,
-                preReleaseNumber = preReleaseNumber
-            )
-        } catch (_: Exception) {
-            return Version(0, 0, 0, PreReleaseType.ALPHA, 0)
-        }
-    }
-
-    private data class Version(
-        val major: Int,
-        val minor: Int,
-        val patch: Int,
-        val preReleaseType: PreReleaseType = PreReleaseType.STABLE,
-        val preReleaseNumber: Int = 0
-    ) : Comparable<Version> {
-        override fun compareTo(other: Version): Int {
-            return compareValuesBy(
-                this, other,
-                { it.major },
-                { it.minor },
-                { it.patch },
-                { it.preReleaseType.ordinal },
-                { it.preReleaseNumber }
-            )
-        }
-    }
-
-    private enum class PreReleaseType {
-        ALPHA,
-        BETA,
-        RELEASE_CANDIDATE,
-        STABLE
-    }
+    private fun parseVersion(versionString: String): SemanticVersion =
+        SemanticVersion.parse(versionString)
 }
