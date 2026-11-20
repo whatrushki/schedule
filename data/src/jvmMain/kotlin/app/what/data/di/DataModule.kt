@@ -15,6 +15,7 @@ import app.what.data.network.traffic.NetworkTypeProvider
 import app.what.data.network.traffic.TrafficTrackerPlugin
 import app.what.data.repositories.NewsRepositoryImpl
 import app.what.data.repositories.ScheduleRepositoryImpl
+import app.what.data.updater.DesktopAppUpdateManager
 import app.what.domain.constants.AppConstants
 import app.what.domain.repositories.NewsRepository
 import app.what.domain.repositories.ScheduleRepository
@@ -97,20 +98,13 @@ val dataModule = module {
     single<XlsxReader> { JvmXlsxReader() }
     
     single<AppUpdateManager> {
-        DesktopUpdateManager(
-            gitHubService = GitHubUpdateService(get()),
+        DesktopAppUpdateManager(
+            httpClient = get(),
             config = UpdateConfig(
                 githubOwner = "whatrushki",
                 githubRepo = "schedule",
                 currentVersion = AppConstants.VERSION_NAME
             ),
-            openUrl = { url ->
-                try {
-                    if (Desktop.isDesktopSupported()) {
-                        Desktop.getDesktop().browse(URI(url))
-                    }
-                } catch (_: Exception) {}
-            },
             scope = get()
         )
     }
