@@ -236,7 +236,7 @@ fun SettingsView(
                 val headerDesc = if (pagerState.currentPage == 0) defaultDesc
                 else subScreen?.description ?: ""
                 
-                val showAd = adsLevel != SupportAdsLevel.OFF && pagerState.currentPage == 0
+                val showAd = adsLevel != SupportAdsLevel.OFF
 
                 SettingsHeader(
                     title = headerTitle,
