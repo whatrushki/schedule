@@ -129,31 +129,39 @@ fun createShareTextFromDaySchedules(
     schedules: List<DaySchedule>
 ) = schedules.sortedBy { it.date }.joinToString(
     "\n---------------------------\n\n"
-) {
-    val day = it.date.dayOfMonth
-    val month = DateTimeUtils.RUSSIAN_MONTHS.getOrElse(it.date.monthNumber - 1) { "" }
-    val dayOfWeek = DateTimeUtils.RUSSIAN_DAYS_SHORT.getOrElse(it.date.dayOfWeek.ordinal) { "" }
+) { daySchedule ->
+    val day = daySchedule.date.dayOfMonth
+    val month = DateTimeUtils.RUSSIAN_MONTHS.getOrElse(daySchedule.date.monthNumber - 1) { "" }
+    val dayOfWeek = DateTimeUtils.RUSSIAN_DAYS_SHORT.getOrElse(daySchedule.date.dayOfWeek.ordinal) { "" }
 
-    val sortedLessons = it.lessons.sortedWith(
-        compareBy({ if (it.number > 0) it.number else 99 }, { it.startTime })
-    )
+    // Группируем пары по номеру
+    val slots = daySchedule.lessons
+        .groupBy { if (it.number > 0) it.number else 0 }
+        .toSortedMap(compareBy { if (it > 0) it else 99 })
 
-    "**$day $month ($dayOfWeek)**\n\n" +
-            sortedLessons.joinToString("\n") { lesson ->
-                val typeEmoji = when (lesson.type) { //🌱🍂🪻🌼🌻☘️🌳🌴🌾🍁🍃
-                    LessonType.COMMON, LessonType.PRACTISE, LessonType.LECTURE -> "🌱"
-                    LessonType.ADDITIONAL -> "🌾"
-                    LessonType.CLASS_HOUR -> "🍁"
-                    LessonType.LABORATORY -> "🪻"
-                    LessonType.CREDIT -> "🍂"
-                    LessonType.OBLIGATION -> "💸"
-                }
+    val slotStrings = mutableListOf<String>()
+
+    for ((pairNum, lessonsInSlot) in slots) {
+        val activeLessons = lessonsInSlot.filter { it.state != LessonState.REMOVED }
+
+        if (activeLessons.isEmpty()) {
+            // Если все занятия слота отменены — аккуратно отмечаем одной строкой
+            val pairLabel = if (pairNum == 0) "Классный час" else "$pairNum пара"
+            slotStrings.add("$pairLabel — отмена")
+        } else {
+            // При замене показываем актуальные занятия без мусора
+            for (lesson in activeLessons) {
                 val stateTag = when (lesson.state) {
                     LessonState.COMMON -> ""
-                    LessonState.ADDED -> " (⚡)"
-                    LessonState.REMOVED -> " (🛟)"
-                    LessonState.CHANGED -> " (♻️)"
+                    LessonState.ADDED -> " (добавлена)"
+                    LessonState.CHANGED -> " (замена)"
+                    LessonState.REMOVED -> ""
                 }
+
+                val timeStr = " __${lesson.startTime}–${lesson.endTime}__"
+
+                val pairTitle = if (lesson.number == 0) "Классный час" else "${lesson.number} пара"
+
                 val unitsText = when {
                     lesson.otUnits.size == 1 -> {
                         val unit = lesson.otUnits.first()
@@ -163,14 +171,21 @@ fun createShareTextFromDaySchedules(
                     }
                     lesson.otUnits.isNotEmpty() -> {
                         lesson.otUnits.joinToString("\n") { unit ->
-                            "— ${if (scheduleSearch is ScheduleSearch.Teacher) unit.group.name else unit.teacher.name} — Ауд. ${unit.auditory}/${unit.building}"
+                            val target = if (scheduleSearch is ScheduleSearch.Teacher) unit.group.name else unit.teacher.name
+                            "— $target — Ауд. ${unit.auditory}/${unit.building}"
                         } + "\n"
                     }
                     else -> ""
                 }
 
-                "$typeEmoji **${lesson.number}** пара __${lesson.startTime}–${lesson.endTime}__$stateTag\n" +
-                "**${lesson.subject.takeIf { it.isNotBlank() } ?: "Не заполнено"}**\n" +
-                unitsText
+                val lessonBlock = "**$pairTitle**$timeStr$stateTag\n" +
+                        "**${lesson.subject.takeIf { it.isNotBlank() } ?: "Не заполнено"}**\n" +
+                        unitsText
+
+                slotStrings.add(lessonBlock.trimEnd())
             }
+        }
+    }
+
+    "**$day $month ($dayOfWeek)**\n\n" + slotStrings.joinToString("\n\n")
 }

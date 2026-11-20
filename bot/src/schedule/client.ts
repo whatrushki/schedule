@@ -391,28 +391,22 @@ export class ScheduleClient {
       const isReplacement = lessons.some(l => isLessonChanged(l.state));
       const isAdded = lessons.some(l => isLessonAdded(l.state));
 
-      let icon = '🌱';
       let statusTag = '';
       if (isCancelled) {
-        icon = '❌';
-        statusTag = '  <s>(Отменено)</s>';
+        statusTag = ' · <s>Отмена</s>';
       } else if (isReplacement) {
-        icon = '♻️';
-        statusTag = '  <i>(Замена)</i>';
+        statusTag = ' · <i>(Замена)</i>';
       } else if (isAdded) {
-        icon = '⚡';
-        statusTag = '  <i>(Добавлена)</i>';
-      } else if (slot.isClassHour) {
-        icon = '🍁';
+        statusTag = ' · <i>(Добавлена)</i>';
       }
 
       let slotHeader: string;
       if (slot.isClassHour) {
-        slotHeader = `${icon} <b>Классный час</b> <i>${timeStr}</i>${statusTag}`.trim();
+        slotHeader = `<b>Классный час</b> <i>${timeStr}</i>${statusTag}`.trim();
       } else if (slot.number === 0) {
-        slotHeader = `${icon} <b>0 пара</b> <i>${timeStr}</i>${statusTag}`.trim();
+        slotHeader = `<b>0 пара</b> <i>${timeStr}</i>${statusTag}`.trim();
       } else {
-        slotHeader = `${icon} <b>${slot.number} пара</b> <i>${timeStr}</i>${statusTag}`.trim();
+        slotHeader = `<b>${slot.number} пара</b> <i>${timeStr}</i>${statusTag}`.trim();
       }
 
       // Collect all distinct subjects across this slot
@@ -424,11 +418,7 @@ export class ScheduleClient {
 
         let subjFormatted: string;
         if (isCancelled) {
-          subjFormatted = `<s><b>${escapeHtml(subject)}</b></s> <i>(❌ Отменена)</i>`;
-        } else if (isReplacement) {
-          subjFormatted = `<b>${escapeHtml(subject)}</b> ♻️ <i>[Замена]</i>`;
-        } else if (isAdded) {
-          subjFormatted = `<b>${escapeHtml(subject)}</b> ⚡ <i>[Добавлена]</i>`;
+          subjFormatted = `<s><b>${escapeHtml(subject)}</b></s>`;
         } else {
           subjFormatted = `<b>${escapeHtml(subject)}</b>`;
         }
@@ -509,7 +499,11 @@ export class ScheduleClient {
         blocks.push(lines.join('\n'));
       } else {
         // Multiple different subjects in one slot (collision / replacements)
-        const lines: string[] = [slotHeader];
+        const slotHeaderMulti = slot.isClassHour
+          ? `<b>Классный час</b> <i>${timeStr}</i>`.trim()
+          : (slot.number === 0 ? `<b>0 пара</b> <i>${timeStr}</i>`.trim() : `<b>${slot.number} пара</b> <i>${timeStr}</i>`.trim());
+
+        const lines: string[] = [slotHeaderMulti];
 
         for (const l of lessons) {
           const subjName = escapeHtml(l.subject || 'Предмет не указан');
@@ -519,22 +513,18 @@ export class ScheduleClient {
           const lessonChanged = isLessonChanged(l.state);
           const lessonAdded = isLessonAdded(l.state);
 
-          let bullet = '•';
           let subjFmt = `<b>${subjName}</b>`;
           let tag = '';
 
           if (lessonCancelled) {
-            bullet = '❌';
             subjFmt = `<s><b>${subjName}</b></s>`;
-            tag = ' <i>(Отменено)</i>';
+            tag = ' <i>(Отмена)</i>';
           } else if (lessonChanged) {
-            bullet = '♻️';
             subjFmt = `<b>${subjName}</b>`;
-            tag = ' <i>[Замена]</i>';
+            tag = ' <i>(Замена)</i>';
           } else if (lessonAdded) {
-            bullet = '⚡';
             subjFmt = `<b>${subjName}</b>`;
-            tag = ' <i>[Добавлена]</i>';
+            tag = ' <i>(Добавлена)</i>';
           }
 
           for (const u of units) {
@@ -547,9 +537,9 @@ export class ScheduleClient {
               }
               const grp = this.renderGroupLink(u.group, institution, botUsername);
               if (lessonCancelled) {
-                lines.push(`${bullet} ${subjFmt} — <s>Ауд. ${roomStr} — ${grp}${sub}</s>${tag}`);
+                lines.push(`• ${subjFmt}${tag} — <s>Ауд. ${roomStr} — ${grp}${sub}</s>`);
               } else {
-                lines.push(`${bullet} ${subjFmt} — Ауд. ${roomStr} — ${grp}${sub}${tag}`);
+                lines.push(`• ${subjFmt}${tag} — Ауд. ${roomStr} — ${grp}${sub}`);
               }
             } else {
               if (u.teacher && u.teacher.trim().length > 0 && u.teacher !== '-') {
@@ -560,9 +550,9 @@ export class ScheduleClient {
               }
               const teacherDisplay = await this.formatTeacherLink(u.teacher, institution, botUsername);
               if (lessonCancelled) {
-                lines.push(`${bullet} ${subjFmt} — <s>Ауд. ${roomStr} — ${teacherDisplay}${sub}</s>${tag}`);
+                lines.push(`• ${subjFmt}${tag} — <s>Ауд. ${roomStr} — ${teacherDisplay}${sub}</s>`);
               } else {
-                lines.push(`${bullet} ${subjFmt} — Ауд. ${roomStr} — ${teacherDisplay}${sub}${tag}`);
+                lines.push(`• ${subjFmt}${tag} — Ауд. ${roomStr} — ${teacherDisplay}${sub}`);
               }
             }
           }

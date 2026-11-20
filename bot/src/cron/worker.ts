@@ -177,19 +177,17 @@ export class CronWorker {
             const dow = getDayOfWeekRuShort(item.date);
             const isCancelled = item.state === 'CANCELLED' || item.state === 'REMOVED';
             const isAdded = item.state === 'ADDED';
-            const statusLabel = isCancelled ? '❌ [ОТМЕНЕНО]' : (isAdded ? '⚡ [ДОБАВЛЕНА]' : '⚠️ [ЗАМЕНА]');
+            const statusLabel = isCancelled ? 'Отмена' : (isAdded ? 'Добавлена' : 'Замена');
             const isClassHour = item.number === 0 || item.subject.toLowerCase().includes('классный час');
             const pairLabel = isClassHour ? 'Классный час' : `${item.number} пара`;
             const timeLabel = item.startTime ? ` (${item.startTime})` : '';
 
-            lines.push(`📌 <b>${dayRu} (${dow})</b> · <b>${pairLabel}</b>${timeLabel} ${statusLabel}`);
+            lines.push(`📌 <b>${dayRu} (${dow})</b> · <b>${pairLabel}</b>${timeLabel} — <i>[${statusLabel}]</i>`);
             if (!isClassHour || item.subject.toLowerCase() !== 'классный час') {
               if (isCancelled) {
-                lines.push(`<s><b>${escapeHtml(item.subject)}</b></s> <i>(Пара отменена)</i>`);
-              } else if (isAdded) {
-                lines.push(`<b>${escapeHtml(item.subject)}</b> ⚡ <i>[Добавлена]</i>`);
+                lines.push(`<s><b>${escapeHtml(item.subject)}</b></s>`);
               } else {
-                lines.push(`<b>${escapeHtml(item.subject)}</b> ♻️ <i>[Замена]</i>`);
+                lines.push(`<b>${escapeHtml(item.subject)}</b>`);
               }
             }
             if (item.teacher) lines.push(`Преподаватель: ${escapeHtml(item.teacher)}`);
