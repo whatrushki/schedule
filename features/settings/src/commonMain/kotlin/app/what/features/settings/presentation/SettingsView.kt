@@ -248,7 +248,7 @@ fun SettingsView(
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .clip(shapes.large),
-                                contentAlignment = Alignment.CenterStart
+                                contentAlignment = Alignment.Center
                             ) {
                                 YandexBannerAd(adUnitId = YandexAdsConfig.SETTINGS_BANNER_ID)
                             }
@@ -383,69 +383,65 @@ private fun SettingsHeader(
     headerHeight: Dp,
     adBanner: (@Composable () -> Unit)? = null,
     actions: @Composable () -> Unit = {}
-) = Box(
+) = Column(
     Modifier
         .fillMaxWidth()
-        .height(headerHeight)
+        .statusBarsPadding()
 ) {
-    Row(
+    // Верхняя строка действий (уведомления)
+    Box(
         modifier = Modifier
             .fillMaxWidth()
-            .statusBarsPadding()
-            .padding(start = 16.dp, end = 16.dp, top = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.SpaceBetween
+            .padding(start = 16.dp, end = 16.dp, top = 6.dp)
     ) {
-        if (adBanner != null) {
-            Box(
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(end = 10.dp),
-                contentAlignment = Alignment.CenterStart
-            ) {
-                adBanner()
-            }
-        } else {
-            Spacer(modifier = Modifier.weight(1f))
+        Box(modifier = Modifier.align(Alignment.CenterEnd)) {
+            actions()
         }
-
-        actions()
     }
 
-    Column(
-        Modifier
-            .fillMaxWidth()
-            .padding(top = (headerHeight - 90.dp).coerceAtLeast(16.dp))
-    ) {
-        AnimatedEnter {
-            Text(
-                text = title,
-                style = typography.headlineLarge,
-                fontWeight = FontWeight.Bold,
-                fontSize = 46.sp,
-                color = colorScheme.primary,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(start = 18.dp, end = 16.dp)
-            )
+    // Свободное пространство сверху над заголовком — полноценный рекламный баннер
+    if (adBanner != null) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = 6.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            adBanner()
         }
-        
-        AnimatedEnter(delay = 100) {
-            Text(
-                text = description,
-                style = typography.titleLarge,
-                fontStyle = FontStyle.Italic,
-                fontFamily = FontFamily.Monospace,
-                color = colorScheme.secondary,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(start = 18.dp, end = 16.dp, top = 2.dp)
-            )
-        }
+    } else {
+        Spacer(Modifier.height(28.dp))
+    }
+
+    // Заголовок и подзаголовок
+    AnimatedEnter {
+        Text(
+            text = title,
+            style = typography.headlineLarge,
+            fontWeight = FontWeight.Bold,
+            fontSize = 46.sp,
+            color = colorScheme.primary,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 18.dp, end = 16.dp)
+        )
+    }
+    
+    AnimatedEnter(delay = 100) {
+        Text(
+            text = description,
+            style = typography.titleLarge,
+            fontStyle = FontStyle.Italic,
+            fontFamily = FontFamily.Monospace,
+            color = colorScheme.secondary,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 18.dp, end = 16.dp, top = 2.dp, bottom = 8.dp)
+        )
     }
 }
 
