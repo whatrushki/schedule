@@ -15,39 +15,27 @@ object TestUpdateController {
     var showTestOnboarding by mutableStateOf(false)
 
     val testInfo = UpdateInfo(
-        version = "1.6.0",
+        version = "1.5.3",
         fileSize = 48_234_496L,
         downloadUrl = "https://github.com/whatrushki/schedule/releases",
         releaseNotes = "Регулярное обновление с улучшением стабильности и исправлением ошибок.",
         releaseNotesData = ReleaseNotes(
-            version = "1.6.0",
-            title = "Критическое обновление расписания",
-            shortDescription = "В этой версии полностью переработан механизм синхронизации с серверами вузов и устранена потеря пар.",
+            version = "1.5.3",
+            title = "Что нового",
+            shortDescription = "Мы добавили гибкую настройку рекламы для поддержки разработки и улучшили синхронизацию расписания.",
             highlights = listOf(
-                ReleaseHighlight(
-                    tag = "FIX",
-                    icon = "school",
-                    title = "Синхронизация РКСИ и РГЭУ РИНХ",
-                    description = "Устранена коллизия инициалов при дедупликации преподавателей со схожими фамилиями. Добавлен надежный облачный фоллбэк при недоступности серверов."
-                ),
                 ReleaseHighlight(
                     tag = "NEW",
                     icon = "star",
                     title = "Поддержка автора и настройки",
                     description = "Настройте комфортный для вас уровень поддержки проекта прямо из онбординга.",
                     settingKey = "support_ads_level"
-                ),
-                ReleaseHighlight(
-                    tag = "NEW",
-                    icon = "sync",
-                    title = "Управляемые обязательные обновления",
-                    description = "Критические патчи теперь доставляются мгновенно в реальном времени с автоматической установкой."
                 )
             ),
             changelog = listOf(
-                "РКСИ: Устранена потеря преподавателей с одинаковой фамилией",
+                "РКСИ: Исправлен поиск и дублирование преподавателей с одинаковой фамилией",
                 "РИНХ: Надежный облачный кэш при сбоях вузовских серверов",
-                "Веб: Улучшена производительность и загрузка расписания"
+                "Веб: Устранена ошибка NoDefinitionFoundException в Wasm-версии"
             )
         )
     )

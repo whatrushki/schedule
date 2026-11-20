@@ -226,8 +226,8 @@ private fun MandatoryUpdateCardContent(
             Gap(16)
 
             Text(
-                text = releaseNotes?.title ?: "Обновление расписания",
-                style = typography.titleLarge,
+                text = "Требуется обновление",
+                style = typography.headlineSmall,
                 fontWeight = FontWeight.Bold,
                 color = colorScheme.onSurface,
                 textAlign = TextAlign.Center,
@@ -237,33 +237,48 @@ private fun MandatoryUpdateCardContent(
             Gap(8)
 
             Text(
-                text = releaseNotes?.shortDescription
-                    ?: "Для продолжения работы приложения требуется установить актуальную версию расписания$sizeStr.",
+                text = "Для продолжения работы необходимо обновить приложение до актуальной версии$sizeStr.",
                 style = typography.bodyMedium,
                 color = colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center,
                 lineHeight = 20.sp,
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp)
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp)
             )
 
-            Gap(24)
+            Gap(20)
 
-            if (highlights.isNotEmpty()) {
+            if (items.isNotEmpty()) {
+                Text(
+                    text = "Что нового:",
+                    style = typography.titleSmall,
+                    fontWeight = FontWeight.Bold,
+                    color = colorScheme.primary,
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp, vertical = 4.dp)
+                )
+                Gap(4)
                 Column(
                     modifier = Modifier.fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(10.dp)
+                    verticalArrangement = Arrangement.spacedBy(6.dp)
                 ) {
-                    highlights.forEach { highlight ->
-                        HighlightCard(highlight)
+                    items.forEach { item ->
+                        ChangelogItem(item)
                     }
                 }
-            } else if (items.isNotEmpty()) {
+            } else if (highlights.isNotEmpty()) {
+                Text(
+                    text = "Что нового:",
+                    style = typography.titleSmall,
+                    fontWeight = FontWeight.Bold,
+                    color = colorScheme.primary,
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp, vertical = 4.dp)
+                )
+                Gap(4)
                 Column(
                     modifier = Modifier.fillMaxWidth(),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    items.forEach { item ->
-                        ChangelogItem(item)
+                    highlights.forEach { highlight ->
+                        HighlightCard(highlight)
                     }
                 }
             }
@@ -310,15 +325,14 @@ private fun HighlightCard(highlight: ReleaseHighlight) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(MaterialTheme.shapes.medium)
-            .background(colorScheme.surfaceContainerLow)
-            .padding(horizontal = 12.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(10.dp)
+            .padding(vertical = 4.dp, horizontal = 2.dp),
+        verticalAlignment = Alignment.Top,
+        horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         Box(
             modifier = Modifier
-                .size(30.dp)
+                .padding(top = 2.dp)
+                .size(28.dp)
                 .clip(CircleShape)
                 .background(colorScheme.primary.copy(alpha = 0.12f)),
             contentAlignment = Alignment.Center
@@ -335,16 +349,16 @@ private fun HighlightCard(highlight: ReleaseHighlight) {
             Text(
                 text = highlight.title,
                 style = typography.titleSmall,
-                fontWeight = FontWeight.Bold,
+                fontWeight = FontWeight.SemiBold,
                 color = colorScheme.onSurface
             )
             if (highlight.description.isNotBlank()) {
-                Gap(1)
+                Gap(2)
                 Text(
                     text = highlight.description,
-                    style = typography.bodySmall,
+                    style = typography.bodyMedium,
                     color = colorScheme.onSurfaceVariant,
-                    lineHeight = 16.sp
+                    lineHeight = 18.sp
                 )
             }
         }
@@ -356,23 +370,22 @@ private fun ChangelogItem(text: String) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(MaterialTheme.shapes.small)
-            .background(colorScheme.surfaceContainerLow.copy(alpha = 0.7f))
-            .padding(horizontal = 10.dp, vertical = 6.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
+            .padding(vertical = 4.dp, horizontal = 2.dp),
+        verticalAlignment = Alignment.Top,
+        horizontalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         Box(
             modifier = Modifier
-                .size(5.dp)
+                .padding(top = 7.dp)
+                .size(6.dp)
                 .clip(CircleShape)
                 .background(colorScheme.primary)
         )
         Text(
             text = text,
-            style = typography.bodySmall,
+            style = typography.bodyMedium,
             color = colorScheme.onSurface,
-            lineHeight = 17.sp,
+            lineHeight = 20.sp,
             modifier = Modifier.weight(1f)
         )
     }

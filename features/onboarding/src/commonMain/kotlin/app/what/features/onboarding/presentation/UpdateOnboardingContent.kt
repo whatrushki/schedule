@@ -373,8 +373,15 @@ private fun UpdateIntroPage(releaseNotes: ReleaseNotes) {
 
         Gap(20)
 
+        val rawTitle = releaseNotes.title
+        val introTitle = if (rawTitle.isNullOrBlank() || rawTitle.contains("критическ", ignoreCase = true)) {
+            "Что нового"
+        } else {
+            rawTitle
+        }
+
         Text(
-            text = releaseNotes.title ?: "Обновление",
+            text = introTitle,
             style = typography.titleLarge,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
@@ -432,7 +439,6 @@ private fun UpdateHighlightPage(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .padding(horizontal = 20.dp)
             .padding(top = 20.dp, bottom = 16.dp)
     ) {
         // Hero Icon with subtle glow
@@ -467,7 +473,7 @@ private fun UpdateHighlightPage(
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
             color = colorScheme.onSurface,
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp)
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp)
         )
 
         Gap(12)
@@ -478,7 +484,7 @@ private fun UpdateHighlightPage(
             textAlign = TextAlign.Center,
             color = colorScheme.onSurfaceVariant,
             lineHeight = 22.sp,
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 6.dp)
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp)
         )
 
         // Multiple settings without bulky card wrappers, edge-to-edge
