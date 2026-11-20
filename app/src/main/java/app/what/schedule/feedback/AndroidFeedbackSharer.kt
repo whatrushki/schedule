@@ -175,14 +175,18 @@ class AndroidFeedbackSharer(
 
         // User-attached files
         for ((index, att) in attachedFiles.withIndex()) {
-            val f = File(att.path)
-            if (f.exists()) {
+            val fileBytes = att.bytes ?: if (att.path.isNotBlank()) {
+                val f = File(att.path)
+                if (f.exists()) f.readBytes() else null
+            } else null
+
+            if (fileBytes != null) {
                 val fieldName = "file_${index + 1}"
                 addFilePart(
                     name = fieldName,
                     filename = att.name,
                     contentType = att.mimeType ?: "application/octet-stream",
-                    bytes = f.readBytes()
+                    bytes = fileBytes
                 )
             }
         }

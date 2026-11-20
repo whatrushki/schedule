@@ -1,6 +1,7 @@
 package app.what.data.di
 
 import app.what.data.adapters.AdaptedScheduleService
+import app.what.data.feedback.WebFeedbackSharer
 import app.what.data.libs.GoogleDriveParser
 import app.what.data.managers.CacheStorageManager
 import app.what.data.managers.CacheStorageManagerImpl
@@ -229,7 +230,7 @@ val dataModule = module {
     }
 
     single<PlatformFileStorageCleaner> { NoOpPlatformFileStorageCleaner() }
-    single<FeedbackSharer> { NoOpFeedbackSharer() }
+    single<FeedbackSharer> { WebFeedbackSharer(httpClient = get()) }
     single<CacheStorageManager> {
         CacheStorageManagerImpl(
             scheduleRepository = get(),

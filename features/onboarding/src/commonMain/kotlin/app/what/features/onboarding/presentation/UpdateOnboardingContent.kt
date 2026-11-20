@@ -315,12 +315,20 @@ fun UpdateOnboardingContent(
         if (localDialog.opened) {
             Dialog(
                 onDismissRequest = { localDialog.close() },
-                properties = DialogProperties(usePlatformDefaultWidth = false)
+                properties = DialogProperties(
+                    dismissOnBackPress = true,
+                    dismissOnClickOutside = true,
+                    usePlatformDefaultWidth = false
+                )
             ) {
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(24.dp),
+                        .clickable(
+                            interactionSource = remember { MutableInteractionSource() },
+                            indication = null,
+                            onClick = { localDialog.close() }
+                        ),
                     contentAlignment = Alignment.Center
                 ) {
                     Surface(
@@ -328,8 +336,14 @@ fun UpdateOnboardingContent(
                         color = colorScheme.surface,
                         tonalElevation = 6.dp,
                         modifier = Modifier
+                            .padding(24.dp)
                             .widthIn(max = 440.dp)
                             .fillMaxWidth()
+                            .clickable(
+                                interactionSource = remember { MutableInteractionSource() },
+                                indication = null,
+                                onClick = {}
+                            )
                     ) {
                         localDialog.content?.invoke()
                     }

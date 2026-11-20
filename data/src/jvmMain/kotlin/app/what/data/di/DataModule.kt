@@ -16,6 +16,7 @@ import app.what.data.network.traffic.TrafficTrackerPlugin
 import app.what.data.repositories.NewsRepositoryImpl
 import app.what.data.repositories.ScheduleRepositoryImpl
 import app.what.data.updater.DesktopAppUpdateManager
+import app.what.data.feedback.DesktopFeedbackSharer
 import app.what.domain.constants.AppConstants
 import app.what.domain.repositories.NewsRepository
 import app.what.domain.repositories.ScheduleRepository
@@ -212,7 +213,7 @@ val dataModule = module {
     }
 
     single<PlatformFileStorageCleaner> { NoOpPlatformFileStorageCleaner() }
-    single<FeedbackSharer> { NoOpFeedbackSharer() }
+    single<FeedbackSharer> { DesktopFeedbackSharer(httpClient = get()) }
     single<CacheStorageManager> {
         CacheStorageManagerImpl(
             scheduleRepository = get(),
