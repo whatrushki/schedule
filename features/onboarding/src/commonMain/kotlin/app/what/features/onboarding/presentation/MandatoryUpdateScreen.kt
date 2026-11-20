@@ -188,24 +188,7 @@ private fun MandatoryUpdateCardContent(
                 .verticalScroll(rememberScrollState()),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Gap(8)
-
-            // Version chip at top
-            Box(
-                modifier = Modifier
-                    .clip(CircleShape)
-                    .background(colorScheme.primary.copy(alpha = 0.12f))
-                    .padding(horizontal = 14.dp, vertical = 5.dp)
-            ) {
-                Text(
-                    text = "Обязательное обновление • v${info.version}",
-                    style = typography.labelMedium,
-                    fontWeight = FontWeight.Bold,
-                    color = colorScheme.primary
-                )
-            }
-
-            Gap(20)
+            Gap(16)
 
             // Hero icon with subtle glow
             Box(
@@ -229,7 +212,7 @@ private fun MandatoryUpdateCardContent(
                 text = "Требуется обновление",
                 style = typography.headlineSmall,
                 fontWeight = FontWeight.Bold,
-                color = colorScheme.onSurface,
+                color = colorScheme.primary,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp)
             )
@@ -237,13 +220,30 @@ private fun MandatoryUpdateCardContent(
             Gap(8)
 
             Text(
-                text = "Для продолжения работы необходимо обновить приложение до актуальной версии$sizeStr.",
+                text = "Для продолжения работы необходимо обновить приложение до актуальной версии.",
                 style = typography.bodyMedium,
                 color = colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center,
                 lineHeight = 20.sp,
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp)
             )
+
+            Gap(12)
+
+            // Version and download size chip under the description
+            Box(
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .background(colorScheme.primary.copy(alpha = 0.12f))
+                    .padding(horizontal = 14.dp, vertical = 6.dp)
+            ) {
+                Text(
+                    text = "Версия ${info.version}$sizeStr",
+                    style = typography.labelMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = colorScheme.primary
+                )
+            }
 
             Gap(20)
 
