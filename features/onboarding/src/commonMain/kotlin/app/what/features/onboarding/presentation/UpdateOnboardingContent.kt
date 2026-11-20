@@ -385,7 +385,7 @@ private fun UpdateIntroPage(releaseNotes: ReleaseNotes) {
             style = typography.titleLarge,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            color = colorScheme.onSurface,
+            color = colorScheme.primary,
             modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp)
         )
 
@@ -472,7 +472,7 @@ private fun UpdateHighlightPage(
             style = typography.titleLarge,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            color = colorScheme.onSurface,
+            color = colorScheme.primary,
             modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp)
         )
 
@@ -554,7 +554,7 @@ private fun UpdateChangelogPage(
             text = "Все изменения",
             style = typography.headlineSmall,
             fontWeight = FontWeight.Bold,
-            color = colorScheme.onSurface,
+            color = colorScheme.primary,
             textAlign = TextAlign.Center
         )
 

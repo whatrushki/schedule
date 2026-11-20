@@ -60,7 +60,7 @@ fun ProvideAppDialog(
                 }
             ) {
                 if (controller.full) {
-                    Box(modifier = Modifier.fillMaxSize().systemBarsPadding()) {
+                    Box(modifier = Modifier.fillMaxSize()) {
                         AnimatedContent(
                             targetState = controller.content,
                             transitionSpec = transitionSpec,
