@@ -215,7 +215,7 @@ fun SettingsView(
                 .widthIn(max = 760.dp)
         ) {
             val isKeyboardOpen = keyboardAsState().value
-            val headerHeight = if (isKeyboardOpen) 20.dp else (maxHeight * 0.28f).coerceIn(160.dp, 240.dp)
+            val headerHeight = if (isKeyboardOpen) 20.dp else (maxHeight * 0.33f).coerceIn(245.dp, 290.dp)
 
             Column(Modifier.fillMaxSize()) {
                 val defaultDesc = remember {
@@ -236,10 +236,24 @@ fun SettingsView(
                 val headerDesc = if (pagerState.currentPage == 0) defaultDesc
                 else subScreen?.description ?: ""
                 
+                val showAd = adsLevel != SupportAdsLevel.OFF && pagerState.currentPage == 0
+
                 SettingsHeader(
                     title = headerTitle,
                     description = headerDesc,
                     headerHeight = headerHeight,
+                    adBanner = if (showAd) {
+                        {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clip(shapes.large),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                YandexBannerAd(adUnitId = YandexAdsConfig.SETTINGS_BANNER_ID)
+                            }
+                        }
+                    } else null,
                     actions = {
                         if (pagerState.currentPage == 0) {
                             Row(
@@ -329,18 +343,6 @@ fun SettingsView(
                     }
                 )
                 
-                if (adsLevel != SupportAdsLevel.OFF) {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 16.dp, vertical = 8.dp)
-                            .clip(shapes.large),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        YandexBannerAd(adUnitId = YandexAdsConfig.SETTINGS_BANNER_ID)
-                    }
-                }
-
                 HorizontalPager(
                     state = pagerState,
                     userScrollEnabled = pagerState.currentPage != 0,
@@ -377,16 +379,32 @@ private fun SettingsHeader(
     title: String,
     description: String,
     headerHeight: Dp,
+    adBanner: (@Composable () -> Unit)? = null,
     actions: @Composable () -> Unit = {}
 ) = Box(
     Modifier
         .fillMaxWidth()
         .height(headerHeight)
 ) {
+    // Рекламный баннер — над заголовком, по центру на всю ширину
+    if (adBanner != null) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .statusBarsPadding()
+                .padding(top = 46.dp, start = 16.dp, end = 16.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            adBanner()
+        }
+    }
+
+    // Заголовок и подзаголовок — строго внизу хедера с одинаковым отступом на всех вкладках
     Column(
-        Modifier
+        modifier = Modifier
             .fillMaxWidth()
-            .padding(top = (headerHeight - 90.dp).coerceAtLeast(16.dp))
+            .align(Alignment.BottomStart)
+            .padding(bottom = 12.dp)
     ) {
         AnimatedEnter {
             Text(
