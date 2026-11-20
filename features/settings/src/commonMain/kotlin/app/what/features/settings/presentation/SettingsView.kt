@@ -386,25 +386,27 @@ private fun SettingsHeader(
         .fillMaxWidth()
         .height(headerHeight)
 ) {
-    // Рекламный баннер — над заголовком, по центру на всю ширину
+    val titleTopPadding = (headerHeight - 90.dp).coerceAtLeast(16.dp)
+
+    // Рекламный баннер — над заголовком в свободном верхнем пространстве
     if (adBanner != null) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .statusBarsPadding()
-                .padding(top = 46.dp, start = 16.dp, end = 16.dp),
+                .height(titleTopPadding)
+                .padding(horizontal = 16.dp),
             contentAlignment = Alignment.Center
         ) {
             adBanner()
         }
     }
 
-    // Заголовок и подзаголовок — строго внизу хедера с одинаковым отступом на всех вкладках
+    // Заголовок и подзаголовок — ВСЕГДА на одном строго фиксированном уровне от верха
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .align(Alignment.BottomStart)
-            .padding(bottom = 12.dp)
+            .padding(top = titleTopPadding)
     ) {
         AnimatedEnter {
             Text(
