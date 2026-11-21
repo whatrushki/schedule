@@ -8,7 +8,7 @@
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Сети и системы передачи информации",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
                         "teacher": "Гунько Д.Д.",
@@ -27,7 +27,7 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Сети и системы передачи информации",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
                         "teacher": "Гунько Д.Д.",
@@ -64,26 +64,45 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-23",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Эксплуатация компьютерных сетей",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
-                        "teacher": "___",
+                        "teacher": "Гунько Д.Д.",
                         "group": "ИБА-34",
-                        "room": "Вак4",
-                        "additional": "Вак4",
+                        "room": "214",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-23",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Предмет не указан",
+                "otUnits": [
+                    {
+                        "teacher": "Гунько Д.Д.",
+                        "group": "ИБА-34",
+                        "room": "214",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

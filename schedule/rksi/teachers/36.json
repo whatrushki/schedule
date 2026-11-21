@@ -118,8 +118,27 @@
     },
     {
         "date": "2026-11-23",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
+            {
+                "date": "2026-11-23",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Эксплуатация объектов сетевой инфраструктуры",
+                "otUnits": [
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "СА-47",
+                        "room": "212",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-11-23",
                 "number": 2,
@@ -128,16 +147,16 @@
                 "subject": "Эксплуатация объектов сетевой инфраструктуры",
                 "otUnits": [
                     {
-                        "teacher": "Зурова Алина Евгеньевна",
+                        "teacher": "Зурова А.Е.",
                         "group": "СА-47",
-                        "room": "106",
+                        "room": "212",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-23",
@@ -147,16 +166,62 @@
                 "subject": "Эксплуатация объектов сетевой инфраструктуры",
                 "otUnits": [
                     {
-                        "teacher": "Зурова Алина Евгеньевна",
+                        "teacher": "Зурова А.Е.",
                         "group": "СА-47",
-                        "room": "420",
+                        "room": "212",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-23",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "СА-17",
+                        "room": "411",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "СА-13",
+                        "room": "412",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-23",
+                "number": 4,
+                "startTime": "14:10",
+                "endTime": "15:40",
+                "subject": "Эксплуатация объектов сетевой инфраструктуры",
+                "otUnits": [
+                    {
+                        "teacher": "Зурова А.Е.",
+                        "group": "СА-47",
+                        "room": "212",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
@@ -274,7 +339,7 @@
                 "otUnits": [
                     {
                         "teacher": "Зурова Алина Евгеньевна",
-                        "group": "СА-42",
+                        "group": "СА-44",
                         "room": "303",
                         "additional": "1",
                         "onlineUrl": null,
@@ -282,7 +347,7 @@
                     },
                     {
                         "teacher": "Зурова Алина Евгеньевна",
-                        "group": "СА-44",
+                        "group": "СА-42",
                         "room": "303",
                         "additional": "1",
                         "onlineUrl": null,
