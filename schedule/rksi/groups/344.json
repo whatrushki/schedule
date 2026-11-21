@@ -87,22 +87,41 @@
         "lessons": [
             {
                 "date": "2026-11-23",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Доп.занятие",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Автоматизация торгово-технологических процессов",
                 "otUnits": [
                     {
-                        "teacher": "Таппасханова П.П.",
+                        "teacher": "Доценко Л.А.",
                         "group": "ТД-33",
-                        "room": "44",
+                        "room": "17",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-23",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Автоматизация торгово-технологических процессов",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-33",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-23",
@@ -112,7 +131,7 @@
                 "subject": "Классный час",
                 "otUnits": [],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-23",
@@ -124,33 +143,33 @@
                     {
                         "teacher": "Таппасханова П.П.",
                         "group": "ТД-33",
-                        "room": "34",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-23",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:30",
-                "subject": "Интернет-маркетинг",
+                "subject": "Организация и управление коммерческой деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Доценко Л.А.",
+                        "teacher": "Таппасханова П.П.",
                         "group": "ТД-33",
-                        "room": "34",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-23",
@@ -169,7 +188,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
