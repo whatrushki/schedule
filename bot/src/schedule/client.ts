@@ -391,22 +391,28 @@ export class ScheduleClient {
       const isReplacement = lessons.some(l => isLessonChanged(l.state));
       const isAdded = lessons.some(l => isLessonAdded(l.state));
 
+      let icon = '🌱';
       let statusTag = '';
       if (isCancelled) {
-        statusTag = ' · <s>Отмена</s>';
+        icon = '❌';
+        statusTag = ' · <s>(Отменено)</s>';
       } else if (isReplacement) {
+        icon = '♻️';
         statusTag = ' · <i>(Замена)</i>';
       } else if (isAdded) {
+        icon = '⚡';
         statusTag = ' · <i>(Добавлена)</i>';
+      } else if (slot.isClassHour) {
+        icon = '🍁';
       }
 
       let slotHeader: string;
       if (slot.isClassHour) {
-        slotHeader = `<b>Классный час</b> <i>${timeStr}</i>${statusTag}`.trim();
+        slotHeader = `${icon} <b>Классный час</b> <i>${timeStr}</i>${statusTag}`.trim();
       } else if (slot.number === 0) {
-        slotHeader = `<b>0 пара</b> <i>${timeStr}</i>${statusTag}`.trim();
+        slotHeader = `${icon} <b>0 пара</b> <i>${timeStr}</i>${statusTag}`.trim();
       } else {
-        slotHeader = `<b>${slot.number} пара</b> <i>${timeStr}</i>${statusTag}`.trim();
+        slotHeader = `${icon} <b>${slot.number} пара</b> <i>${timeStr}</i>${statusTag}`.trim();
       }
 
       // Collect all distinct subjects across this slot
@@ -499,9 +505,15 @@ export class ScheduleClient {
         blocks.push(lines.join('\n'));
       } else {
         // Multiple different subjects in one slot (collision / replacements)
+        let multiIcon = '🌱';
+        if (slot.isClassHour) multiIcon = '🍁';
+        else if (lessons.every(l => isLessonCancelled(l.state))) multiIcon = '❌';
+        else if (lessons.some(l => isLessonChanged(l.state))) multiIcon = '♻️';
+        else if (lessons.some(l => isLessonAdded(l.state))) multiIcon = '⚡';
+
         const slotHeaderMulti = slot.isClassHour
-          ? `<b>Классный час</b> <i>${timeStr}</i>`.trim()
-          : (slot.number === 0 ? `<b>0 пара</b> <i>${timeStr}</i>`.trim() : `<b>${slot.number} пара</b> <i>${timeStr}</i>`.trim());
+          ? `${multiIcon} <b>Классный час</b> <i>${timeStr}</i>`.trim()
+          : (slot.number === 0 ? `${multiIcon} <b>0 пара</b> <i>${timeStr}</i>`.trim() : `${multiIcon} <b>${slot.number} пара</b> <i>${timeStr}</i>`.trim());
 
         const lines: string[] = [slotHeaderMulti];
 

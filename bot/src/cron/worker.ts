@@ -177,12 +177,12 @@ export class CronWorker {
             const dow = getDayOfWeekRuShort(item.date);
             const isCancelled = item.state === 'CANCELLED' || item.state === 'REMOVED';
             const isAdded = item.state === 'ADDED';
-            const statusLabel = isCancelled ? 'Отмена' : (isAdded ? 'Добавлена' : 'Замена');
+            const statusLabel = isCancelled ? '❌ [ОТМЕНЕНО]' : (isAdded ? '⚡ [ДОБАВЛЕНА]' : '♻️ [ЗАМЕНА]');
             const isClassHour = item.number === 0 || item.subject.toLowerCase().includes('классный час');
             const pairLabel = isClassHour ? 'Классный час' : `${item.number} пара`;
             const timeLabel = item.startTime ? ` (${item.startTime})` : '';
 
-            lines.push(`📌 <b>${dayRu} (${dow})</b> · <b>${pairLabel}</b>${timeLabel} — <i>[${statusLabel}]</i>`);
+            lines.push(`📌 <b>${dayRu} (${dow})</b> · <b>${pairLabel}</b>${timeLabel} ${statusLabel}`);
             if (!isClassHour || item.subject.toLowerCase() !== 'классный час') {
               if (isCancelled) {
                 lines.push(`<s><b>${escapeHtml(item.subject)}</b></s>`);

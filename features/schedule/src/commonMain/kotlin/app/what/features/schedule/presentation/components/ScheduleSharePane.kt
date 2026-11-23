@@ -151,10 +151,18 @@ fun createShareTextFromDaySchedules(
         } else {
             // При замене показываем актуальные занятия без мусора
             for (lesson in activeLessons) {
+                val typeEmoji = when (lesson.type) { //🌱🍂🪻🌼🌻☘️🌳🌴🌾🍁🍃
+                    LessonType.COMMON, LessonType.PRACTISE, LessonType.LECTURE -> "🌱"
+                    LessonType.ADDITIONAL -> "🌾"
+                    LessonType.CLASS_HOUR -> "🍁"
+                    LessonType.LABORATORY -> "🪻"
+                    LessonType.CREDIT -> "🍂"
+                    LessonType.OBLIGATION -> "💸"
+                }
                 val stateTag = when (lesson.state) {
                     LessonState.COMMON -> ""
-                    LessonState.ADDED -> " (добавлена)"
-                    LessonState.CHANGED -> " (замена)"
+                    LessonState.ADDED -> " (⚡)"
+                    LessonState.CHANGED -> " (♻️)"
                     LessonState.REMOVED -> ""
                 }
 
@@ -178,7 +186,7 @@ fun createShareTextFromDaySchedules(
                     else -> ""
                 }
 
-                val lessonBlock = "**$pairTitle**$timeStr$stateTag\n" +
+                val lessonBlock = "$typeEmoji **$pairTitle**$timeStr$stateTag\n" +
                         "**${lesson.subject.takeIf { it.isNotBlank() } ?: "Не заполнено"}**\n" +
                         unitsText
 
