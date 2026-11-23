@@ -35,8 +35,10 @@ import app.what.foundation.utils.ShareData
 import app.what.foundation.utils.executeShare
 import app.what.foundation.utils.rememberPlatformContext
 import app.what.domain.models.DaySchedule
+import app.what.domain.models.Lesson
 import app.what.domain.models.LessonState
 import app.what.domain.models.LessonType
+import app.what.domain.models.OneTimeUnit
 import app.what.domain.models.ScheduleSearch
 import app.what.foundation.ui.icons.WHATIcons
 import app.what.foundation.ui.icons.filled.Telegram
@@ -134,10 +136,10 @@ fun createShareTextFromDaySchedules(
     val month = DateTimeUtils.RUSSIAN_MONTHS.getOrElse(daySchedule.date.monthNumber - 1) { "" }
     val dayOfWeek = DateTimeUtils.RUSSIAN_DAYS_SHORT.getOrElse(daySchedule.date.dayOfWeek.ordinal) { "" }
 
-    // Группируем пары по номеру
-    val slots = daySchedule.lessons
+    // Группируем пары по номеру с сохранением хронологического порядка
+    val slots: Map<Int, List<Lesson>> = daySchedule.lessons
+        .sortedWith(compareBy({ if (it.number > 0) it.number else 99 }, { it.startTime }))
         .groupBy { if (it.number > 0) it.number else 0 }
-        .toSortedMap(compareBy { if (it > 0) it else 99 })
 
     val slotStrings = mutableListOf<String>()
 
@@ -173,21 +175,23 @@ fun createShareTextFromDaySchedules(
                 val unitsText = when {
                     lesson.otUnits.size == 1 -> {
                         val unit = lesson.otUnits.first()
-                        val target = if (scheduleSearch is ScheduleSearch.Teacher) unit.group.name else unit.teacher.name
+                        val target: String = if (scheduleSearch is ScheduleSearch.Teacher) unit.group.name else unit.teacher.name
                         val room = if (unit.auditory.isNotBlank()) "Ауд. ${unit.auditory} (корп.${unit.building})\n" else ""
-                        "${target.takeIf { it.isNotBlank() }?.let { "$it\n" } ?: ""}$room"
+                        val targetStr = if (target.isNotBlank()) "$target\n" else ""
+                        "$targetStr$room"
                     }
                     lesson.otUnits.isNotEmpty() -> {
-                        lesson.otUnits.joinToString("\n") { unit ->
-                            val target = if (scheduleSearch is ScheduleSearch.Teacher) unit.group.name else unit.teacher.name
+                        lesson.otUnits.joinToString("\n") { unit: OneTimeUnit ->
+                            val target: String = if (scheduleSearch is ScheduleSearch.Teacher) unit.group.name else unit.teacher.name
                             "— $target — Ауд. ${unit.auditory}/${unit.building}"
                         } + "\n"
                     }
                     else -> ""
                 }
 
+                val subjName = lesson.subject.ifBlank { "Не заполнено" }
                 val lessonBlock = "$typeEmoji **$pairTitle**$timeStr$stateTag\n" +
-                        "**${lesson.subject.takeIf { it.isNotBlank() } ?: "Не заполнено"}**\n" +
+                        "**$subjName**\n" +
                         unitsText
 
                 slotStrings.add(lessonBlock.trimEnd())
