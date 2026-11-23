@@ -30,6 +30,63 @@
         "lessons": [
             {
                 "date": "2026-11-24",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Иностранный язык",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "ТД-11",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-24",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Иностранный язык",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "ИБТ-11",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-24",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Иностранный язык",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "ИБА-13",
+                        "room": "27",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-24",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
@@ -45,26 +102,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-24",
                 "number": 5,
                 "startTime": "15:00",
                 "endTime": "16:30",
-                "subject": "Операционные системы и среды",
+                "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко П.А.",
-                        "group": "СА-24",
-                        "room": "412",
-                        "additional": "1",
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "ИБТ-32",
+                        "room": "34",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-24",
@@ -76,14 +133,14 @@
                     {
                         "teacher": "Ляшенко П.А.",
                         "group": "СА-26",
-                        "room": "322",
+                        "room": "122",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-24",
@@ -95,14 +152,14 @@
                     {
                         "teacher": "Ляшенко П.А.",
                         "group": "СА-26",
-                        "room": "322",
+                        "room": "122",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -304,6 +361,794 @@
                         "teacher": "Ляшенко П.А.",
                         "group": "ИС-29",
                         "room": "326",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-01",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-23",
+                        "room": "420",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-01",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-24",
+                        "room": "408",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-01",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "ИС-28",
+                        "room": "121",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-01",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-26",
+                        "room": "121",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-02",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-25",
+                        "room": "214",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-24",
+                        "room": "214",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-26",
+                        "room": "306",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "ИС-29",
+                        "room": "306",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-04",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-04",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "ИС-28",
+                        "room": "422",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-04",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-25",
+                        "room": "422",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-04",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "ИС-29",
+                        "room": "422",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-05",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-27",
+                        "room": "110",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-27",
+                        "room": "110",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-23",
+                        "room": "110",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "ИС-29",
+                        "room": "110",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-24",
+                        "room": "416",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-07",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-27",
+                        "room": "110",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-08",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-24",
+                        "room": "316",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-24",
+                        "room": "412",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-26",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-26",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-10",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-25",
+                        "room": "109",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-25",
+                        "room": "310",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "ИС-28",
+                        "room": "310",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "ИС-28",
+                        "room": "322",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-11",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "ИС-28",
+                        "room": "324",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-11",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-27",
+                        "room": "109",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-11",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-25",
+                        "room": "109",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-12",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "ИС-29",
+                        "room": "418",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-12",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-23",
+                        "room": "418",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-12",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-23",
+                        "room": "418",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-12",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "ИС-29",
+                        "room": "326",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-15",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-15",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "ИС-28",
+                        "room": "121",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-15",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-26",
+                        "room": "121",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-19",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-19",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-23",
+                        "room": "110",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-19",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "СА-27",
+                        "room": "110",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-19",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "ИС-29",
+                        "room": "110",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-19",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Операционные системы и среды",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко П.А.",
+                        "group": "ИС-29",
+                        "room": "110",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

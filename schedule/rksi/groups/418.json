@@ -66,9 +66,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Бодло.А.О.",
+                        "group": "ТД-13",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "REMOVED"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-23",
@@ -138,19 +147,19 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Литература",
+                "subject": "История",
                 "otUnits": [
                     {
-                        "teacher": "Чалая С.А.",
+                        "teacher": "Иванов Д.Н.",
                         "group": "ТД-13",
-                        "room": "24",
+                        "room": "28",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -429,6 +438,1341 @@
                     }
                 ],
                 "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-30",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Литература",
+                "otUnits": [
+                    {
+                        "teacher": "Чалая С.А.",
+                        "group": "ТД-13",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Дущенков Д.А.",
+                        "group": "ТД-13",
+                        "room": "42",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Нохрина Ю.В.",
+                        "group": "ТД-13",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-01",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Основы безопасности и защиты Родины",
+                "otUnits": [
+                    {
+                        "teacher": "Мельникова С.М.",
+                        "group": "ТД-13",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-01",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Биология",
+                "otUnits": [
+                    {
+                        "teacher": "Хайлова Л.В.",
+                        "group": "ТД-13",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-01",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Обществознание",
+                "otUnits": [
+                    {
+                        "teacher": "Иванов Д.Н.",
+                        "group": "ТД-13",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-02",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Обществознание",
+                "otUnits": [
+                    {
+                        "teacher": "Иванов Д.Н.",
+                        "group": "ТД-13",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Нохрина Ю.В.",
+                        "group": "ТД-13",
+                        "room": "35",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Иностранный язык",
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "ТД-13",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Крылова О.В.",
+                        "group": "ТД-13",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-03",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-13",
+                        "room": "43",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-03",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Литература",
+                "otUnits": [
+                    {
+                        "teacher": "Чалая С.А.",
+                        "group": "ТД-13",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-03",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Бережная А.В.",
+                        "group": "ТД-13",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-03",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Мугутдинова Н.Ш.",
+                        "group": "ТД-13",
+                        "room": "35",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-04",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-04",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Бережная А.В.",
+                        "group": "ТД-13",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-04",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Русский язык",
+                "otUnits": [
+                    {
+                        "teacher": "Чалая С.А.",
+                        "group": "ТД-13",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-04",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-13",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-05",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Бережная А.В.",
+                        "group": "ТД-13",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "История",
+                "otUnits": [
+                    {
+                        "teacher": "Иванов Д.Н.",
+                        "group": "ТД-13",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Гузов А.В.",
+                        "group": "ТД-13",
+                        "room": "с/з1",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Дущенков Д.А.",
+                        "group": "ТД-13",
+                        "room": "35",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-07",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Гузов А.В.",
+                        "group": "ТД-13",
+                        "room": "с/з2",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Дущенков Д.А.",
+                        "group": "ТД-13",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Дущенков Д.А.",
+                        "group": "ТД-13",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-13",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-08",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Биология",
+                "otUnits": [
+                    {
+                        "teacher": "Хайлова Л.В.",
+                        "group": "ТД-13",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Русский язык",
+                "otUnits": [
+                    {
+                        "teacher": "Чалая С.А.",
+                        "group": "ТД-13",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Литература",
+                "otUnits": [
+                    {
+                        "teacher": "Чалая С.А.",
+                        "group": "ТД-13",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-09",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-09",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "История",
+                "otUnits": [
+                    {
+                        "teacher": "Иванов Д.Н.",
+                        "group": "ТД-13",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Мугутдинова Н.Ш.",
+                        "group": "ТД-13",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Иностранный язык",
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "ТД-13",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Крылова О.В.",
+                        "group": "ТД-13",
+                        "room": "42",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-10",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Бережная А.В.",
+                        "group": "ТД-13",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Индивидуальный проект",
+                "otUnits": [
+                    {
+                        "teacher": "Бережная А.В.",
+                        "group": "ТД-13",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Основы безопасности и защиты Родины",
+                "otUnits": [
+                    {
+                        "teacher": "Мельникова С.М.",
+                        "group": "ТД-13",
+                        "room": "27",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-11",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Бережная А.В.",
+                        "group": "ТД-13",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-11",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Нохрина Ю.В.",
+                        "group": "ТД-13",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-11",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "География",
+                "otUnits": [
+                    {
+                        "teacher": "Видинеева Е.А.",
+                        "group": "ТД-13",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-12",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-12",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Бережная А.В.",
+                        "group": "ТД-13",
+                        "room": "20",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-12",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "История",
+                "otUnits": [
+                    {
+                        "teacher": "Иванов Д.Н.",
+                        "group": "ТД-13",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-12",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Обществознание",
+                "otUnits": [
+                    {
+                        "teacher": "Иванов Д.Н.",
+                        "group": "ТД-13",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-12",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-13",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-14",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-14",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Литература",
+                "otUnits": [
+                    {
+                        "teacher": "Чалая С.А.",
+                        "group": "ТД-13",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Дущенков Д.А.",
+                        "group": "ТД-13",
+                        "room": "42",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Нохрина Ю.В.",
+                        "group": "ТД-13",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-15",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-15",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Основы безопасности и защиты Родины",
+                "otUnits": [
+                    {
+                        "teacher": "Мельникова С.М.",
+                        "group": "ТД-13",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-15",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Биология",
+                "otUnits": [
+                    {
+                        "teacher": "Хайлова Л.В.",
+                        "group": "ТД-13",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-15",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Обществознание",
+                "otUnits": [
+                    {
+                        "teacher": "Иванов Д.Н.",
+                        "group": "ТД-13",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-16",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Обществознание",
+                "otUnits": [
+                    {
+                        "teacher": "Иванов Д.Н.",
+                        "group": "ТД-13",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-16",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Нохрина Ю.В.",
+                        "group": "ТД-13",
+                        "room": "35",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-16",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Иностранный язык",
+                "otUnits": [
+                    {
+                        "teacher": "Крылова О.В.",
+                        "group": "ТД-13",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "ТД-13",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-17",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-17",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-13",
+                        "room": "43",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-17",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Литература",
+                "otUnits": [
+                    {
+                        "teacher": "Чалая С.А.",
+                        "group": "ТД-13",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-17",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Бережная А.В.",
+                        "group": "ТД-13",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-17",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Химия",
+                "otUnits": [
+                    {
+                        "teacher": "Мугутдинова Н.Ш.",
+                        "group": "ТД-13",
+                        "room": "35",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-18",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-18",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Бережная А.В.",
+                        "group": "ТД-13",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-18",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Русский язык",
+                "otUnits": [
+                    {
+                        "teacher": "Чалая С.А.",
+                        "group": "ТД-13",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-18",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-13",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-19",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-19",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Математика",
+                "otUnits": [
+                    {
+                        "teacher": "Бережная А.В.",
+                        "group": "ТД-13",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-19",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "История",
+                "otUnits": [
+                    {
+                        "teacher": "Иванов Д.Н.",
+                        "group": "ТД-13",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-19",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Гузов А.В.",
+                        "group": "ТД-13",
+                        "room": "с/з1",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-19",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Дущенков Д.А.",
+                        "group": "ТД-13",
+                        "room": "35",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-21",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Гузов А.В.",
+                        "group": "ТД-13",
+                        "room": "с/з2",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-21",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Дущенков Д.А.",
+                        "group": "ТД-13",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-21",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Дущенков Д.А.",
+                        "group": "ТД-13",
+                        "room": "33",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
                 "state": "COMMON"
             }
         ]

@@ -8,7 +8,7 @@
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "Автоматизация торгово-технологических процессов",
+                "subject": "Маркетинговые исследования",
                 "otUnits": [
                     {
                         "teacher": "Доценко Л.А.",
@@ -27,7 +27,7 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Автоматизация торгово-технологических процессов",
+                "subject": "Маркетинговые исследования",
                 "otUnits": [
                     {
                         "teacher": "Доценко Л.А.",
@@ -119,6 +119,44 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
+                "subject": "Маркетинговые исследования",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-33",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-24",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Организация торговли",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-33",
+                        "room": "45",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-24",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
                 "subject": "Организация продаж информационно-коммуникационных продуктов и технологий и координация работы с клие",
                 "otUnits": [
                     {
@@ -131,45 +169,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-24",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Организация торговли",
-                "otUnits": [
-                    {
-                        "teacher": "Доценко Л.А.",
-                        "group": "ТД-33",
-                        "room": "32",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-24",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Логистика",
-                "otUnits": [
-                    {
-                        "teacher": "Доценко Л.А.",
-                        "group": "ТД-33",
-                        "room": "32",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-24",
@@ -188,7 +188,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
@@ -442,6 +442,438 @@
                         "teacher": "Доценко Л.А.",
                         "group": "ТД-33",
                         "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-30",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова П.П.",
+                        "group": "ТД-33",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова П.П.",
+                        "group": "ТД-33",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова П.П.",
+                        "group": "ТД-33",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова П.П.",
+                        "group": "ТД-33",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-01",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Интернет-маркетинг",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-33",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-01",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Интернет-маркетинг",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-33",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-02",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Бизнес планирование",
+                "otUnits": [
+                    {
+                        "teacher": "Шемякина Н.Ю.",
+                        "group": "ТД-33",
+                        "room": "43",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Бизнес планирование",
+                "otUnits": [
+                    {
+                        "teacher": "Шемякина Н.Ю.",
+                        "group": "ТД-33",
+                        "room": "43",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Организация продаж информационно-коммуникационных продуктов и технологий и координация работы с клие",
+                "otUnits": [
+                    {
+                        "teacher": "Згонникова Т.Ф.",
+                        "group": "ТД-33",
+                        "room": "29",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Организация продаж информационно-коммуникационных продуктов и технологий и координация работы с клие",
+                "otUnits": [
+                    {
+                        "teacher": "Згонникова Т.Ф.",
+                        "group": "ТД-33",
+                        "room": "29",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-03",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Маркетинговые исследования",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-33",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-03",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "ТД-33",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Крылова О.В.",
+                        "group": "ТД-33",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-03",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Организация и управление коммерческой деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова П.П.",
+                        "group": "ТД-33",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-03",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Беспалова Н.В.",
+                        "group": "ТД-33",
+                        "room": "с/з1",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-04",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-04",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "ФИЗКУЛЬТУРА",
+                "otUnits": [
+                    {
+                        "teacher": "Беспалова Н.В.",
+                        "group": "ТД-33",
+                        "room": "с/з1",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-04",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Ляшенко Д.И.",
+                        "group": "ТД-33",
+                        "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Крылова О.В.",
+                        "group": "ТД-33",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-05",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Организация торговли",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-33",
+                        "room": "29",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Организация торговли",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-33",
+                        "room": "29",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Логистика",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-33",
+                        "room": "29",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Маркетинговые исследования",
+                "otUnits": [
+                    {
+                        "teacher": "Доценко Л.А.",
+                        "group": "ТД-33",
+                        "room": "21",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null

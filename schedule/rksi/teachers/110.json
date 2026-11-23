@@ -8,7 +8,7 @@
                 "number": 1,
                 "startTime": "08:00",
                 "endTime": "09:30",
-                "subject": "УП",
+                "subject": "Доп.занятие",
                 "otUnits": [
                     {
                         "teacher": "Таппасханова П.П.",
@@ -27,7 +27,7 @@
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
-                "subject": "УП",
+                "subject": "Доп.занятие",
                 "otUnits": [
                     {
                         "teacher": "Таппасханова П.П.",
@@ -70,7 +70,7 @@
                     {
                         "teacher": "Таппасханова П.П.",
                         "group": "ТД-22",
-                        "room": "32",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -78,7 +78,7 @@
                     {
                         "teacher": "Таппасханова П.П.",
                         "group": "ТД-32",
-                        "room": "32",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -138,7 +138,7 @@
                 "number": 6,
                 "startTime": "17:40",
                 "endTime": "19:10",
-                "subject": "Доп.занятие",
+                "subject": "УП",
                 "otUnits": [
                     {
                         "teacher": "Таппасханова П.П.",
@@ -160,22 +160,60 @@
         "lessons": [
             {
                 "date": "2026-11-24",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова П.П.",
+                        "group": "ТД-32",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-24",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова П.П.",
+                        "group": "ТД-32",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-24",
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "УП",
+                "subject": "Доп.занятие",
                 "otUnits": [
                     {
-                        "teacher": "Таппасханова Полина Петровна",
+                        "teacher": "Таппасханова П.П.",
                         "group": "ТД-32",
-                        "room": "31",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-24",
@@ -194,7 +232,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-24",
@@ -213,7 +251,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-24",
@@ -232,7 +270,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-24",
@@ -242,7 +280,7 @@
                 "subject": "Товароведение",
                 "otUnits": [
                     {
-                        "teacher": "Таппасханова Полина Петровна",
+                        "teacher": "Таппасханова П.П.",
                         "group": "ТД-21",
                         "room": "41",
                         "additional": "2",
@@ -251,7 +289,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
@@ -649,6 +687,731 @@
                         "teacher": "Таппасханова Полина Петровна",
                         "group": "ТД-33",
                         "room": "24",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-30",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-30",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-33",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-33",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-33",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-33",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-01",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-01",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Товароведение",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-22",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-01",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Товароведение",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-22",
+                        "room": "28",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-01",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-01",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-01",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-01",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-02",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-02",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Товароведение",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-21",
+                        "room": "41",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-03",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "44",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-03",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "44",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-03",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "44",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-03",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Организация и управление коммерческой деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-33",
+                        "room": "21",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-04",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-04",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-32",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-04",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-32",
+                        "room": "40",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-04",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-04",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-04",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-04",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-05",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-05",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Организация и управление коммерческой деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-32",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-32",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-32",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-07",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "42",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
+                "number": 2,
+                "startTime": "09:40",
+                "endTime": "11:10",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "42",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-31",
+                        "room": "42",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-08",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Товароведение",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-22",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 5,
+                "startTime": "15:00",
+                "endTime": "16:30",
+                "subject": "Товароведение",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-21",
+                        "room": "13",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-11",
+                "number": 6,
+                "startTime": "16:40",
+                "endTime": "18:10",
+                "subject": "Товароведение",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-21",
+                        "room": "43",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-15",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-15",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Товароведение",
+                "otUnits": [
+                    {
+                        "teacher": "Таппасханова Полина Петровна",
+                        "group": "ТД-22",
+                        "room": "28",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
