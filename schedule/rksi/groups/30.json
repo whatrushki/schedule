@@ -40,7 +40,7 @@
                     {
                         "teacher": "Крупицкая Н.А.",
                         "group": "ИБТ-32",
-                        "room": "47",
+                        "room": "38",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -76,22 +76,41 @@
         "lessons": [
             {
                 "date": "2026-11-25",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Электрорадиоизмерения и метрология",
+                "otUnits": [
+                    {
+                        "teacher": "Скороходов Г.Ю.",
+                        "group": "ИБТ-32",
+                        "room": "30",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-25",
                 "number": 4,
                 "startTime": "13:10",
                 "endTime": "14:40",
-                "subject": "Телекоммуникационные системы и сети",
+                "subject": "Электрорадиоизмерения и метрология",
                 "otUnits": [
                     {
-                        "teacher": "Смолянинов К.А.",
+                        "teacher": "Скороходов Г.Ю.,Смолянинов К.А.",
                         "group": "ИБТ-32",
-                        "room": "17",
+                        "room": "29",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-25",
@@ -110,7 +129,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },

@@ -83,7 +83,7 @@
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-25",
@@ -95,14 +95,14 @@
                     {
                         "teacher": "Рыбак Е.Ю.",
                         "group": "ИБТ-23",
-                        "room": "29",
+                        "room": "АКТ.ЗАЛ",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-25",
@@ -114,14 +114,14 @@
                     {
                         "teacher": "Рыбак Е.Ю.",
                         "group": "ИБТ-23",
-                        "room": "29",
+                        "room": "13",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-25",
@@ -131,16 +131,35 @@
                 "subject": "Инженерная и компьютерная графика",
                 "otUnits": [
                     {
-                        "teacher": "Пустоветова С.Ю.",
+                        "teacher": "Пустоветова С.Ю.,",
                         "group": "ИБТ-23",
-                        "room": "20",
+                        "room": "21",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Доп.занятие",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова А.В.",
+                        "group": "ИБТ-23",
+                        "room": "31",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

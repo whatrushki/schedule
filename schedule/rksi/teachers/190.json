@@ -160,6 +160,33 @@
         "lessons": [
             {
                 "date": "2026-11-25",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Эксплуатация объектов сетевой инфраструктуры",
+                "otUnits": [
+                    {
+                        "teacher": "Савчук И.С.",
+                        "group": "СА-45",
+                        "room": "314",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Савчук И.С.",
+                        "group": "СА-46",
+                        "room": "314",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-25",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -168,14 +195,22 @@
                     {
                         "teacher": "Савчук И.С.",
                         "group": "СА-45",
-                        "room": "420",
+                        "room": "314",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Савчук И.С.",
+                        "group": "СА-46",
+                        "room": "314",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-25",
@@ -187,14 +222,22 @@
                     {
                         "teacher": "Савчук И.С.",
                         "group": "СА-45",
-                        "room": "420",
+                        "room": "314",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Савчук И.С.",
+                        "group": "СА-46",
+                        "room": "314",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

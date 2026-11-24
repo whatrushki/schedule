@@ -32,7 +32,7 @@
                     {
                         "teacher": "Барна Н.В.",
                         "group": "СА-16",
-                        "room": "118",
+                        "room": "216",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -51,7 +51,7 @@
                     {
                         "teacher": "Барна Н.В.",
                         "group": "СА-13",
-                        "room": "210",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -68,22 +68,41 @@
         "lessons": [
             {
                 "date": "2026-11-25",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Барна Н.В.",
+                        "group": "СА-13",
+                        "room": "121",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-25",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
                 "subject": "Физика",
                 "otUnits": [
                     {
-                        "teacher": "Барна Наталья Владимировна",
+                        "teacher": "Барна Н.В.",
                         "group": "СА-13",
-                        "room": "422",
+                        "room": "121",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },
