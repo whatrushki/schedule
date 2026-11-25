@@ -16,6 +16,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.datetime.Clock
 import kotlinx.datetime.LocalDateTime
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -29,6 +30,8 @@ class ScheduleRepositoryImpl(
     private val _scheduleUpdates = MutableSharedFlow<ScheduleSearch>(extraBufferCapacity = 1)
     override val scheduleUpdates: Flow<ScheduleSearch> = _scheduleUpdates.asSharedFlow()
     private val saveMutex = Mutex()
+    private val catalogSyncMutex = Mutex()
+    private val syncedCatalogs = mutableMapOf<String, Long>()
 
     private val api
         get() = institutionManager.getSavedInstitution().orThrow { "No provider selected" }
@@ -36,32 +39,7 @@ class ScheduleRepositoryImpl(
     private fun getFilialId() = api.metadata.id
     
     companion object {
-        private val WHITESPACE_REGEX = Regex("\\s+")
-    }
-
-    /**
-     * Нормализует имя преподавателя для дедупликации.
-     * "Смолянинова В.А." и "Смолянинова Валентина Анатольевна" → "смоляниноваВА"
-     * Убирает невидимые символы, заменяет латинские lookalikes.
-     */
-    private fun normalizeTeacherKey(name: String): String {
-        val cleaned = name.trim()
-            .replace('\u00A0', ' ')  // non-breaking space
-            .replace("c", "с", ignoreCase = true)
-            .replace("a", "а", ignoreCase = true)
-            .replace("e", "е", ignoreCase = true)
-            .replace("o", "о", ignoreCase = true)
-            .replace("p", "р", ignoreCase = true)
-            .replace("x", "х", ignoreCase = true)
-            .trim()
-        val parts = cleaned.split(WHITESPACE_REGEX).filter { it.isNotBlank() }
-        if (parts.isEmpty()) return cleaned.lowercase()
-        val surname = parts[0].lowercase()
-        val initials = parts.drop(1).mapNotNull { part ->
-            val clean = part.replace(".", "").trim()
-            if (clean.isNotEmpty()) clean.first().lowercaseChar().toString() else null
-        }
-        return surname + initials.joinToString("")
+        private const val CATALOG_TTL_MS = 12L * 60L * 60L * 1000L
     }
     
     override suspend fun toggleFavorites(value: ScheduleSearch.Group) {
@@ -96,8 +74,6 @@ class ScheduleRepositoryImpl(
         )
     }
     
-    private val syncedCatalogs = mutableSetOf<String>()
-
     override suspend fun getGroups(institutionId: String?, forceReload: Boolean): List<Group> {
         val targetApi = (institutionId?.let { institutionManager.getInstitution(it) }) ?: api
         val targetFilialId = targetApi.metadata.id
@@ -107,54 +83,97 @@ class ScheduleRepositoryImpl(
             syncedCatalogs.remove(syncKey)
             targetApi.scheduleService.clearCache()
         }
-        val needsSync = forceReload || !syncedCatalogs.contains(syncKey)
-        
+        val now = Clock.System.now().toEpochMilliseconds()
+        val cachedCatalog = db.groupsDao.selectCatalogByInstitution(targetFilialId)
+        val lastSyncedAt = syncedCatalogs[syncKey] ?: 0L
+        val needsSync = forceReload || cachedCatalog.isEmpty() || (now - lastSyncedAt) > CATALOG_TTL_MS
+
         if (needsSync) {
-            Auditor.debug(dbTag, "Синхронизация каталога групп из API/Cloud для $targetFilialId (force=$forceReload)")
-            var errorOccurred = false
-            val fetched = try {
-                targetApi.scheduleService.getGroups()
-            } catch (e: Exception) {
-                Auditor.err(dbTag, "Ошибка при загрузке групп из API для $targetFilialId", e)
-                errorOccurred = true
-                emptyList()
-            }
-            if (!errorOccurred) {
-                syncedCatalogs.add(syncKey)
-            }
-            if (fetched.isNotEmpty()) {
-                val seenNames = mutableSetOf<String>()
-                val seenIds = mutableSetOf<String>()
-                val uniqueFetched = mutableListOf<Group>()
-                for (g in fetched) {
-                    val trimmedName = g.name.trim()
-                    val id = if (g.id.trim().isNotEmpty()) g.id.trim() else trimmedName
-                    if (trimmedName.isNotEmpty() && trimmedName != "-" && seenNames.add(trimmedName) && seenIds.add(id)) {
-                        uniqueFetched.add(g.copy(name = trimmedName, id = id, institutionId = targetFilialId))
+            catalogSyncMutex.withLock {
+                val currentNow = Clock.System.now().toEpochMilliseconds()
+                val currentCatalog = db.groupsDao.selectCatalogByInstitution(targetFilialId)
+                val freshLastSync = syncedCatalogs[syncKey] ?: 0L
+                if (forceReload || currentCatalog.isEmpty() || (currentNow - freshLastSync) > CATALOG_TTL_MS) {
+                    if (forceReload) {
+                        targetApi.scheduleService.clearCache()
+                    }
+                    Auditor.debug(dbTag, "Синхронизация каталога групп из API/Cloud для $targetFilialId (force=$forceReload)")
+                    var errorOccurred = false
+                    val fetched = try {
+                        targetApi.scheduleService.getGroups()
+                    } catch (e: Exception) {
+                        Auditor.err(dbTag, "Ошибка при загрузке групп из API для $targetFilialId", e)
+                        errorOccurred = true
+                        emptyList()
+                    }
+                    if (!errorOccurred) {
+                        syncedCatalogs[syncKey] = currentNow
+                    }
+                    if (fetched.isNotEmpty()) {
+                        syncGroupsCatalog(targetFilialId, fetched)
                     }
                 }
-                val toInsert = uniqueFetched.map {
-                    GroupDBO(
-                        institutionId = targetFilialId,
-                        name = it.name,
-                        groupId = it.id,
-                        year = it.year
-                    )
-                }
-                db.groupsDao.insert(toInsert)
-                Auditor.debug(dbTag, "Загружено и сохранено групп в БД: ${uniqueFetched.size}")
             }
         }
-        
+
         val groups = db.groupsDao
-            .selectByInstitution(targetFilialId)
+            .selectCatalogByInstitution(targetFilialId)
             .map { it.toModel() }
-            .distinctBy { it.name.trim() }
-            .sortedBy { it.name }
         Auditor.debug(dbTag, "Группы отданы из БД: ${groups.size}")
         return groups
     }
-    
+
+    private suspend fun syncGroupsCatalog(targetFilialId: String, fetched: List<Group>) {
+        val dbTag = buildTag(LogScope.DATABASE, LogCat.DB)
+        val seenIds = mutableSetOf<String>()
+        val canonicalList = mutableListOf<Group>()
+        for (g in fetched) {
+            val trimmedName = g.name.trim()
+            val id = g.id.trim().ifEmpty { trimmedName }
+            if (trimmedName.isNotEmpty() && trimmedName != "-" && seenIds.add(id)) {
+                canonicalList.add(g.copy(name = trimmedName, id = id, institutionId = targetFilialId))
+            }
+        }
+        if (canonicalList.isEmpty()) return
+
+        val existingAll = db.groupsDao.selectByInstitution(targetFilialId)
+        val existingByGroupId = existingAll.associateBy { it.groupId }
+        val incomingIds = canonicalList.mapTo(mutableSetOf()) { it.id }
+
+        val toInsert = mutableListOf<GroupDBO>()
+        val toUpdate = mutableListOf<GroupDBO>()
+
+        for (g in canonicalList) {
+            val existing = existingByGroupId[g.id]
+            if (existing != null) {
+                if (existing.name != g.name || existing.year != g.year || !existing.inCatalog) {
+                    toUpdate.add(existing.copy(name = g.name, year = g.year, inCatalog = true))
+                }
+            } else {
+                toInsert.add(
+                    GroupDBO(
+                        institutionId = targetFilialId,
+                        name = g.name,
+                        groupId = g.id,
+                        year = g.year,
+                        inCatalog = true
+                    )
+                )
+            }
+        }
+
+        // Убираем из поискового каталога устаревшие или ошибочные записи, которых больше нет у провайдера
+        for (old in existingAll) {
+            if (old.inCatalog && old.groupId !in incomingIds) {
+                toUpdate.add(old.copy(inCatalog = false))
+            }
+        }
+
+        if (toUpdate.isNotEmpty()) db.groupsDao.update(toUpdate)
+        if (toInsert.isNotEmpty()) db.groupsDao.insert(toInsert)
+        Auditor.debug(dbTag, "Каталог групп $targetFilialId синхронизирован: добавлено=${toInsert.size}, обновлено=${toUpdate.size}")
+    }
+
     override suspend fun getTeachers(institutionId: String?, forceReload: Boolean): List<Teacher> {
         val targetApi = (institutionId?.let { institutionManager.getInstitution(it) }) ?: api
         val targetFilialId = targetApi.metadata.id
@@ -164,51 +183,94 @@ class ScheduleRepositoryImpl(
             syncedCatalogs.remove(syncKey)
             targetApi.scheduleService.clearCache()
         }
-        val needsSync = forceReload || !syncedCatalogs.contains(syncKey)
-        
+        val now = Clock.System.now().toEpochMilliseconds()
+        val cachedCatalog = db.teachersDao.selectCatalogByInstitution(targetFilialId)
+        val lastSyncedAt = syncedCatalogs[syncKey] ?: 0L
+        val needsSync = forceReload || cachedCatalog.isEmpty() || (now - lastSyncedAt) > CATALOG_TTL_MS
+
         if (needsSync) {
-            Auditor.debug(dbTag, "Синхронизация каталога преподавателей из API/Cloud для $targetFilialId (force=$forceReload)")
-            var errorOccurred = false
-            val fetched = try {
-                targetApi.scheduleService.getTeachers()
-            } catch (e: Exception) {
-                Auditor.err(dbTag, "Ошибка при загрузке преподавателей из API для $targetFilialId", e)
-                errorOccurred = true
-                emptyList()
-            }
-            if (!errorOccurred) {
-                syncedCatalogs.add(syncKey)
-            }
-            if (fetched.isNotEmpty()) {
-                val seenNames = mutableSetOf<String>()
-                val seenIds = mutableSetOf<String>()
-                val uniqueFetched = mutableListOf<Teacher>()
-                for (t in fetched) {
-                    val trimmedName = t.name.trim()
-                    val id = if (t.id.trim().isNotEmpty()) t.id.trim() else trimmedName
-                    if (trimmedName.isNotEmpty() && seenNames.add(trimmedName) && seenIds.add(id)) {
-                        uniqueFetched.add(t.copy(name = trimmedName, id = id, institutionId = targetFilialId))
+            catalogSyncMutex.withLock {
+                val currentNow = Clock.System.now().toEpochMilliseconds()
+                val currentCatalog = db.teachersDao.selectCatalogByInstitution(targetFilialId)
+                val freshLastSync = syncedCatalogs[syncKey] ?: 0L
+                if (forceReload || currentCatalog.isEmpty() || (currentNow - freshLastSync) > CATALOG_TTL_MS) {
+                    if (forceReload) {
+                        targetApi.scheduleService.clearCache()
+                    }
+                    Auditor.debug(dbTag, "Синхронизация каталога преподавателей из API/Cloud для $targetFilialId (force=$forceReload)")
+                    var errorOccurred = false
+                    val fetched = try {
+                        targetApi.scheduleService.getTeachers()
+                    } catch (e: Exception) {
+                        Auditor.err(dbTag, "Ошибка при загрузке преподавателей из API для $targetFilialId", e)
+                        errorOccurred = true
+                        emptyList()
+                    }
+                    if (!errorOccurred) {
+                        syncedCatalogs[syncKey] = currentNow
+                    }
+                    if (fetched.isNotEmpty()) {
+                        syncTeachersCatalog(targetFilialId, fetched)
                     }
                 }
-                val toInsert = uniqueFetched.map {
-                    TeacherDBO(
-                        institutionId = targetFilialId,
-                        name = it.name,
-                        teacherId = it.id
-                    )
-                }
-                db.teachersDao.insert(toInsert)
-                Auditor.debug(dbTag, "Загружено и сохранено преподавателей в БД: ${uniqueFetched.size}")
             }
         }
-        
+
         val teachers = db.teachersDao
-            .selectByInstitution(targetFilialId)
+            .selectCatalogByInstitution(targetFilialId)
             .map { it.toModel() }
-            .distinctBy { normalizeTeacherKey(it.name) }
-            .sortedBy { it.name }
         Auditor.debug(dbTag, "Преподаватели отданы из БД: ${teachers.size}")
         return teachers
+    }
+
+    private suspend fun syncTeachersCatalog(targetFilialId: String, fetched: List<Teacher>) {
+        val dbTag = buildTag(LogScope.DATABASE, LogCat.DB)
+        val seenIds = mutableSetOf<String>()
+        val canonicalList = mutableListOf<Teacher>()
+        for (t in fetched) {
+            val trimmedName = t.name.trim()
+            val id = t.id.trim().ifEmpty { trimmedName }
+            if (trimmedName.isNotEmpty() && seenIds.add(id)) {
+                canonicalList.add(t.copy(name = trimmedName, id = id, institutionId = targetFilialId))
+            }
+        }
+        if (canonicalList.isEmpty()) return
+
+        val existingAll = db.teachersDao.selectByInstitution(targetFilialId)
+        val existingByTeacherId = existingAll.associateBy { it.teacherId }
+        val incomingIds = canonicalList.mapTo(mutableSetOf()) { it.id }
+
+        val toInsert = mutableListOf<TeacherDBO>()
+        val toUpdate = mutableListOf<TeacherDBO>()
+
+        for (t in canonicalList) {
+            val existing = existingByTeacherId[t.id]
+            if (existing != null) {
+                if (existing.name != t.name || !existing.inCatalog) {
+                    toUpdate.add(existing.copy(name = t.name, inCatalog = true))
+                }
+            } else {
+                toInsert.add(
+                    TeacherDBO(
+                        institutionId = targetFilialId,
+                        name = t.name,
+                        teacherId = t.id,
+                        inCatalog = true
+                    )
+                )
+            }
+        }
+
+        // Убираем из поискового каталога старые/посторонние записи (в т.ч. полные ФИО, попавшие из пар)
+        for (old in existingAll) {
+            if (old.inCatalog && old.teacherId !in incomingIds) {
+                toUpdate.add(old.copy(inCatalog = false))
+            }
+        }
+
+        if (toUpdate.isNotEmpty()) db.teachersDao.update(toUpdate)
+        if (toInsert.isNotEmpty()) db.teachersDao.insert(toInsert)
+        Auditor.debug(dbTag, "Каталог преподавателей $targetFilialId синхронизирован: добавлено=${toInsert.size}, обновлено=${toUpdate.size}")
     }
 
     override suspend fun getAllFavoriteGroups(): List<Group> {
@@ -477,8 +539,8 @@ class ScheduleRepositoryImpl(
     private suspend fun getOrCreateGroupId(institutionId: String, group: Group): Long {
         val trimmedGroupName = group.name.trim().ifEmpty { "—" }
         val groupIdKey = group.id.trim().ifEmpty { trimmedGroupName }
-        val existing = db.groupsDao.selectByName(institutionId, trimmedGroupName)?.id
-            ?: db.groupsDao.selectIdByGroupId(institutionId, groupIdKey)
+        val existing = db.groupsDao.selectIdByGroupId(institutionId, groupIdKey)
+            ?: db.groupsDao.selectByName(institutionId, trimmedGroupName)?.id
         if (existing != null) return existing
 
         val newId = db.groupsDao.insert(
@@ -486,32 +548,34 @@ class ScheduleRepositoryImpl(
                 institutionId = institutionId,
                 name = trimmedGroupName,
                 groupId = groupIdKey,
-                year = group.year
+                year = group.year,
+                inCatalog = false
             )
         )
         if (newId != -1L) return newId
-        return db.groupsDao.selectByName(institutionId, trimmedGroupName)?.id
-            ?: db.groupsDao.selectIdByGroupId(institutionId, groupIdKey)
+        return db.groupsDao.selectIdByGroupId(institutionId, groupIdKey)
+            ?: db.groupsDao.selectByName(institutionId, trimmedGroupName)?.id
             ?: 0L
     }
 
     private suspend fun getOrCreateTeacherId(institutionId: String, teacher: Teacher): Long {
         val trimmedTeacherName = teacher.name.trim().ifEmpty { "—" }
         val teacherIdKey = teacher.id.trim().ifEmpty { trimmedTeacherName }
-        val existing = db.teachersDao.selectByName(institutionId, trimmedTeacherName)?.id
-            ?: db.teachersDao.selectIdByTeacherId(institutionId, teacherIdKey)
+        val existing = db.teachersDao.selectIdByTeacherId(institutionId, teacherIdKey)
+            ?: db.teachersDao.selectByName(institutionId, trimmedTeacherName)?.id
         if (existing != null) return existing
 
         val newId = db.teachersDao.insert(
             TeacherDBO(
                 institutionId = institutionId,
                 name = trimmedTeacherName,
-                teacherId = teacherIdKey
+                teacherId = teacherIdKey,
+                inCatalog = false
             )
         )
         if (newId != -1L) return newId
-        return db.teachersDao.selectByName(institutionId, trimmedTeacherName)?.id
-            ?: db.teachersDao.selectIdByTeacherId(institutionId, teacherIdKey)
+        return db.teachersDao.selectIdByTeacherId(institutionId, teacherIdKey)
+            ?: db.teachersDao.selectByName(institutionId, trimmedTeacherName)?.id
             ?: 0L
     }
 

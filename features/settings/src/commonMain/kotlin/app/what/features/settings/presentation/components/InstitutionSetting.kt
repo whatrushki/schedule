@@ -21,6 +21,7 @@ import app.what.foundation.ui.controllers.rememberDialogController
 import app.what.schedule.data.remote.api.insts
 
 fun PreferenceStorage.Value<String>.asInstitutionChoice(
+    onBeforeChange: (String?) -> Unit = {},
     sideEffect: (String?) -> Unit
 ) = asDialog { value, set ->
     val dialog = rememberDialogController()
@@ -33,9 +34,13 @@ fun PreferenceStorage.Value<String>.asInstitutionChoice(
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(12.dp))
                     .bclick {
-                        set(it.metadata.id)
+                        val targetId = it.metadata.id
+                        if (selected != targetId) {
+                            onBeforeChange(targetId)
+                            set(targetId)
+                            sideEffect(targetId)
+                        }
                         dialog.close()
-                        sideEffect(it.metadata.id)
                     }
                     .padding(12.dp, 12.dp),
                 verticalAlignment = Alignment.CenterVertically

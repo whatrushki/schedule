@@ -124,6 +124,45 @@ class RKSIScheduleClient(
             }
             return surname + initials.joinToString("")
         }
+
+        internal fun matchActiveTeachers(
+            mobileTeachers: List<TeacherDto>,
+            activeNames: List<String>
+        ): List<TeacherDto> {
+            if (activeNames.isEmpty()) {
+                return mobileTeachers.distinctBy { it.id }.sortedBy { it.name }
+            }
+            val activeExactMap = activeNames.associateBy { it.trim().replace('\u00A0', ' ').lowercase() }
+            val activeNormMap = activeNames.groupBy { normalizeName(it) }
+            val activeInitialsMap = activeNames.groupBy { extractSurnameAndInitials(it) ?: normalizeName(it) }
+
+            val filtered = mobileTeachers.mapNotNull { teacher ->
+                val cleanExact = teacher.name.trim().replace('\u00A0', ' ').lowercase()
+                val exact = activeExactMap[cleanExact]
+                if (exact != null) {
+                    teacher.copy(name = exact)
+                } else {
+                    val normMatches = activeNormMap[normalizeName(teacher.name)]
+                    if (normMatches != null) {
+                        val resolvedName = if (normMatches.size == 1) normMatches.first() else teacher.name.trim()
+                        teacher.copy(name = resolvedName)
+                    } else {
+                        val teacherKey = extractSurnameAndInitials(teacher.name)
+                        val matches = teacherKey?.let { activeInitialsMap[it] }
+                        if (!matches.isNullOrEmpty()) {
+                            val best = if (matches.size == 1) matches.first() else teacher.name.trim()
+                            teacher.copy(name = best)
+                        } else null
+                    }
+                }
+            }
+            return if (filtered.isNotEmpty()) {
+                // Дедуплицируем по id провайдера, чтобы не склеивать разных преподавателей (напр. "Костромина В.А." и "Костромина В.А")
+                filtered.distinctBy { it.id }.sortedBy { it.name }
+            } else {
+                mobileTeachers.distinctBy { it.id }.sortedBy { it.name }
+            }
+        }
     }
 
 
@@ -152,37 +191,7 @@ class RKSIScheduleClient(
             emptyList()
         }
 
-        val result = if (activeNames.isNotEmpty()) {
-            val activeNormMap = activeNames.associateBy { normalizeName(it) }
-            // Карта инициалов для сопоставления коротких и полных имён
-            val activeInitialsMap = activeNames.groupBy { extractSurnameAndInitials(it) ?: normalizeName(it) }
-            val filtered = mobileTeachers.mapNotNull { teacher ->
-                // Прямое совпадение по нормализованному имени
-                val canonical = activeNormMap[normalizeName(teacher.name)]
-                if (canonical != null) {
-                    teacher.copy(name = canonical)
-                } else {
-                    // Пробуем сопоставить по фамилии + инициалам
-                    val teacherKey = extractSurnameAndInitials(teacher.name)
-                    if (teacherKey != null) {
-                        val matches = activeInitialsMap[teacherKey]
-                        if (matches != null && matches.isNotEmpty()) {
-                            // Предпочитаем короткую форму (с инициалами)
-                            val best = matches.minByOrNull { it.length } ?: matches.first()
-                            teacher.copy(name = best)
-                        } else null
-                    } else null
-                }
-            }
-            if (filtered.isNotEmpty()) {
-                // Дедупликация по фамилии+инициалам
-                filtered.distinctBy { extractSurnameAndInitials(it.name) ?: normalizeName(it.name) }.sortedBy { it.name }
-            } else {
-                mobileTeachers.distinctBy { it.name.trim() }.sortedBy { it.name }
-            }
-        } else {
-            mobileTeachers.distinctBy { it.name.trim() }.sortedBy { it.name }
-        }
+        val result = matchActiveTeachers(mobileTeachers, activeNames)
 
         if (result.isNotEmpty()) {
             cachedTeachers = result
@@ -255,7 +264,12 @@ class RKSIScheduleClient(
             if (isGroup) {
                 getGroups().firstOrNull { normalizeName(it.name) == cleanT }?.id ?: target
             } else {
-                getTeachers().firstOrNull { normalizeName(it.name).contains(cleanT) || cleanT.contains(normalizeName(it.name)) }?.id ?: target
+                val cleanExact = target.trim().replace('\u00A0', ' ').lowercase()
+                val teachers = getTeachers()
+                teachers.firstOrNull { it.name.trim().replace('\u00A0', ' ').lowercase() == cleanExact }?.id
+                    ?: teachers.firstOrNull { normalizeName(it.name) == cleanT }?.id
+                    ?: teachers.firstOrNull { normalizeName(it.name).contains(cleanT) || cleanT.contains(normalizeName(it.name)) }?.id
+                    ?: target
             }
         }
 

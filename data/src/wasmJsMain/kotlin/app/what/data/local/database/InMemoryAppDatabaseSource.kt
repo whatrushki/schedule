@@ -202,8 +202,15 @@ private class InMemoryGroupsDAO : GroupsDAO {
         groups[group.id] = group
     }
 
+    override suspend fun update(groups: List<GroupDBO>) {
+        groups.forEach { update(it) }
+    }
+
     override suspend fun selectByInstitution(institutionId: String): List<GroupDBO> =
         groups.values.filter { it.institutionId == institutionId }
+
+    override suspend fun selectCatalogByInstitution(institutionId: String): List<GroupDBO> =
+        groups.values.filter { it.institutionId == institutionId && it.inCatalog }.sortedBy { it.name }
 
     override suspend fun selectAllFavorites(): List<GroupDBO> =
         groups.values.filter { it.favorite }
@@ -217,7 +224,9 @@ private class InMemoryGroupsDAO : GroupsDAO {
         groups.values.find { it.institutionId == institutionId && it.groupId == id }?.id
 
     override suspend fun selectByName(institutionId: String, name: String): GroupDBO? =
-        groups.values.find { it.institutionId == institutionId && it.name == name }
+        groups.values.filter { it.institutionId == institutionId && it.name == name }
+            .sortedByDescending { it.inCatalog }
+            .firstOrNull()
 
     override suspend fun selectByYear(year: Int): GroupDBO =
         groups.values.first { it.year == year }
@@ -246,8 +255,15 @@ private class InMemoryTeachersDAO : TeachersDAO {
         teachers[teacher.id] = teacher
     }
 
+    override suspend fun update(teachers: List<TeacherDBO>) {
+        teachers.forEach { update(it) }
+    }
+
     override suspend fun selectByInstitution(institutionId: String): List<TeacherDBO> =
         teachers.values.filter { it.institutionId == institutionId }
+
+    override suspend fun selectCatalogByInstitution(institutionId: String): List<TeacherDBO> =
+        teachers.values.filter { it.institutionId == institutionId && it.inCatalog }.sortedBy { it.name }
 
     override suspend fun selectAllFavorites(): List<TeacherDBO> =
         teachers.values.filter { it.favorite }
@@ -261,7 +277,9 @@ private class InMemoryTeachersDAO : TeachersDAO {
         teachers.values.find { it.institutionId == institutionId && it.teacherId == id }?.id
 
     override suspend fun selectByName(institutionId: String, name: String): TeacherDBO? =
-        teachers.values.find { it.institutionId == institutionId && it.name == name }
+        teachers.values.filter { it.institutionId == institutionId && it.name == name }
+            .sortedByDescending { it.inCatalog }
+            .firstOrNull()
 
     override suspend fun delete(teacher: TeacherDBO) {
         teachers.remove(teacher.id)

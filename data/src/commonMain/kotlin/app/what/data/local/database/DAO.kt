@@ -169,9 +169,15 @@ interface GroupsDAO {
     
     @Update
     suspend fun update(group: GroupDBO)
+
+    @Update
+    suspend fun update(groups: List<GroupDBO>)
     
     @Query("SELECT * FROM `groups` WHERE `groups`.institutionId = :institutionId")
     suspend fun selectByInstitution(institutionId: String): List<GroupDBO>
+
+    @Query("SELECT * FROM `groups` WHERE `groups`.institutionId = :institutionId AND `groups`.inCatalog = 1 ORDER BY `groups`.name ASC")
+    suspend fun selectCatalogByInstitution(institutionId: String): List<GroupDBO>
     
     @Query("SELECT * FROM `groups` WHERE `groups`.id = :id")
     suspend fun selectById(id: Long): GroupDBO
@@ -182,7 +188,7 @@ interface GroupsDAO {
     @Query("SELECT `groups`.id FROM `groups` WHERE `groups`.institutionId = :institutionId AND `groups`.groupId = :id")
     suspend fun selectIdByGroupId(institutionId: String, id: String): Long?
     
-    @Query("SELECT * FROM `groups` WHERE  `groups`.institutionId = :institutionId AND `groups`.name = :name")
+    @Query("SELECT * FROM `groups` WHERE `groups`.institutionId = :institutionId AND `groups`.name = :name ORDER BY `groups`.inCatalog DESC LIMIT 1")
     suspend fun selectByName(institutionId: String, name: String): GroupDBO?
     
     @Query("SELECT * FROM `groups` WHERE `groups`.favorite = 1")
@@ -205,9 +211,15 @@ interface TeachersDAO {
     
     @Update
     suspend fun update(teacher: TeacherDBO)
+
+    @Update
+    suspend fun update(teachers: List<TeacherDBO>)
     
     @Query("SELECT * FROM teachers WHERE teachers.institutionId = :institutionId")
     suspend fun selectByInstitution(institutionId: String): List<TeacherDBO>
+
+    @Query("SELECT * FROM teachers WHERE teachers.institutionId = :institutionId AND teachers.inCatalog = 1 ORDER BY teachers.name ASC")
+    suspend fun selectCatalogByInstitution(institutionId: String): List<TeacherDBO>
 
     @Query("SELECT * FROM teachers WHERE teachers.favorite = 1")
     suspend fun selectAllFavorites(): List<TeacherDBO>
@@ -221,7 +233,7 @@ interface TeachersDAO {
     @Query("SELECT teachers.id FROM teachers WHERE teachers.institutionId = :institutionId AND teachers.teacherId = :id")
     suspend fun selectIdByTeacherId(institutionId: String, id: String): Long?
     
-    @Query("SELECT * FROM teachers WHERE  teachers.institutionId = :institutionId AND teachers.name = :name")
+    @Query("SELECT * FROM teachers WHERE teachers.institutionId = :institutionId AND teachers.name = :name ORDER BY teachers.inCatalog DESC LIMIT 1")
     suspend fun selectByName(institutionId: String, name: String): TeacherDBO?
     
     @Delete

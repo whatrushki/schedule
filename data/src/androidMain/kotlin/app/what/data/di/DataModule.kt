@@ -34,6 +34,7 @@ import app.what.foundation.utils.buildTag
 import app.what.schedule.core.cache.FileCache
 import app.what.schedule.data.local.database.AppDatabase
 import app.what.schedule.data.local.database.AppDatabaseSource
+import app.what.schedule.data.local.database.MIGRATION_5_6
 import app.what.schedule.data.local.settings.AppValues
 import app.what.schedule.data.remote.api.InstitutionManager
 import app.what.schedule.dgtu.DGTUAccountClient
@@ -115,6 +116,7 @@ val dataModule = module {
             AppDatabase::class.java,
             "schedule.db"
         )
+            .addMigrations(MIGRATION_5_6)
             .fallbackToDestructiveMigration(true)
             .build()
     } bind AppDatabaseSource::class

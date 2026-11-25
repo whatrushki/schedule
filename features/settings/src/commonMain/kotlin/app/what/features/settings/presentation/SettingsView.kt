@@ -361,8 +361,12 @@ fun SettingsView(
                                 rootComponents[index].content(Modifier)
                             }
                         } else {
-                            // Вторая страница
-                            val components = subScreen?.content ?: emptyList()
+                            // Вторая страница: берём актуальный список компонентов из rootComponents
+                            val liveComponents = activeCategoryTitle?.let { title ->
+                                rootComponents.filterIsInstance<SettingsCategoryComponent>()
+                                    .firstOrNull { it.title == title }?.content
+                            }
+                            val components = liveComponents ?: subScreen?.content ?: emptyList()
                             items(components.size) { index ->
                                 components[index].content(Modifier)
                             }
@@ -461,9 +465,12 @@ fun getSettingsList(
         category(
             "Расписание", "вуз, подгруппа, пары", Icons.Default.DateRange,
             content = listOf(
-                app.institution.asInstitutionChoice {
+                app.institution.asInstitutionChoice(
+                    onBeforeChange = {
+                        app.lastSearch.set(null)
+                    }
+                ) {
                     Analytics.logUniversitySelect(it ?: "not selected")
-                    app.lastSearch.set(null)
                 },
                 app.defaultSubgroup.asSingleChoice(
                     enumValues<SubgroupPreference>(),

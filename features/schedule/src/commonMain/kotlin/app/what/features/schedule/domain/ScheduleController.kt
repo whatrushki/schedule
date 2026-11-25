@@ -32,6 +32,7 @@ class ScheduleController(
 ) {
     private val scheduleTag = buildTag(LogScope.SCHEDULE, LogCat.STATE)
     private var lastStaleCheckTime: Long = 0L
+    private var currentLoadedInstitution: String? = settings.institution.get()
     private var syncScheduleJob: Job? = null
     private var searchesJob: Job? = null
     private var staleCheckJob: Job? = null
@@ -61,22 +62,7 @@ class ScheduleController(
         init()
         viewModelScope.launch {
             settings.institution.observe().drop(1).collect { newInstitution ->
-                Auditor.info(scheduleTag, "ScheduleController: смена института на $newInstitution, отмена активных задач")
-                syncScheduleJob?.cancel()
-                staleCheckJob?.cancel()
-                searchesJob?.cancel()
-                settings.lastSearch.set(null)
-                updateState {
-                    copy(
-                        selectedSearch = null,
-                        scheduleState = RemoteState.Idle,
-                        schedules = emptyList(),
-                        scheduleSearches = emptyList(),
-                        scheduleSearchesState = RemoteState.Loading,
-                        isRefreshing = false
-                    )
-                }
-                updateSearches(showLoading = true, forceReload = true)
+                handleInstitutionChange(newInstitution)
             }
         }
         viewModelScope.launch {
@@ -115,28 +101,74 @@ class ScheduleController(
     val debugMode: Boolean
         get() = settings.debugMode.get() == true
     
+    private fun handleInstitutionChange(newInstitution: String?) {
+        if (currentLoadedInstitution == newInstitution) return
+        currentLoadedInstitution = newInstitution
+        Auditor.info(scheduleTag, "ScheduleController: смена института на $newInstitution, отмена активных задач")
+        syncScheduleJob?.cancel()
+        staleCheckJob?.cancel()
+        searchesJob?.cancel()
+        lastStaleCheckTime = 0L
+        settings.lastSearch.set(null)
+        updateState {
+            copy(
+                selectedSearch = null,
+                scheduleState = RemoteState.Idle,
+                schedules = emptyList(),
+                scheduleSearches = emptyList(),
+                scheduleSearchesState = RemoteState.Loading,
+                isRefreshing = false
+            )
+        }
+        updateSearches(showLoading = true, forceReload = true)
+    }
+
     private fun init() {
-        val lastSearch = settings.lastSearch.get()
-        Auditor.debug(scheduleTag, "ScheduleController.init() called! lastSearch=$lastSearch")
-        
+        val currentInst = settings.institution.get()
+        currentLoadedInstitution = currentInst
+        val rawLastSearch = settings.lastSearch.get()
+        val lastSearch = rawLastSearch?.takeIf {
+            it.institutionId == null || it.institutionId == currentInst
+        }
+        if (rawLastSearch != null && lastSearch == null) {
+            settings.lastSearch.set(null)
+        }
+        Auditor.debug(scheduleTag, "ScheduleController.init() called! lastSearch=$lastSearch, institution=$currentInst")
+
         updateState {
             if (lastSearch == null) copy(scheduleState = RemoteState.Idle)
             else copy(selectedSearch = lastSearch)
         }
-        
+
         updateSearches()
         syncSchedule(viewState.selectedSearch, true)
     }
 
     private fun onScreenResumeOrInit() {
-        val lastSearch = settings.lastSearch.get()
+        val currentInst = settings.institution.get()
+        if (currentLoadedInstitution != currentInst) {
+            handleInstitutionChange(currentInst)
+            return
+        }
+
+        val lastSearch = settings.lastSearch.get()?.takeIf {
+            it.institutionId == null || it.institutionId == currentInst
+        }
         if (viewState.selectedSearch != lastSearch && lastSearch != null) {
             updateState { copy(selectedSearch = lastSearch) }
             syncSchedule(lastSearch, true)
             return
         }
 
-        val search = viewState.selectedSearch ?: lastSearch ?: return
+        val activeSearch = viewState.selectedSearch?.takeIf {
+            it.institutionId == null || it.institutionId == currentInst
+        } ?: lastSearch ?: return
+
+        if (viewState.selectedSearch != null && viewState.selectedSearch != activeSearch) {
+            updateState { copy(selectedSearch = activeSearch, schedules = emptyList()) }
+        }
+
+        val search = activeSearch
         if (viewState.schedules.isEmpty()) {
             syncSchedule(search, true)
             return
@@ -422,7 +454,9 @@ class ScheduleController(
                 Auditor.debug(scheduleTag, "updateSearches: учебное заведение сменилось, результат сброшен")
                 return@launchSafe
             }
-            val data = (teachers + groups).distinctBy { "${it::class.simpleName}_${it.name.trim()}" }
+            val data = (teachers + groups).distinctBy {
+                "${it::class.simpleName}_${it.id.trim().ifEmpty { it.name.trim() }}"
+            }
             if (data.isEmpty()) {
                 throw Exception("Не удалось загрузить список групп")
             }

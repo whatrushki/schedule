@@ -419,4 +419,25 @@ class RKSIScheduleClientTest {
         assertFalse(arutyunyanMM == arutyunyanMA, "Арутюнян М.М. and М.А. must have distinct keys to avoid deduplication collision")
         assertEquals(smolyaninovaFull, smolyaninovaShort)
     }
+
+    @Test
+    fun testMatchActiveTeachersPreservesDistinctIdsAndTrailingDotDifference() {
+        val mobile = listOf(
+            TeacherDto(id = "101", name = "Костромина В.А."),
+            TeacherDto(id = "102", name = "Костромина В.А"),
+            TeacherDto(id = "103", name = "Смолянинова Валентина Анатольевна")
+        )
+        val active = listOf(
+            "Костромина В.А.",
+            "Костромина В.А",
+            "Смолянинова В.А."
+        )
+
+        val result = RKSIScheduleClient.matchActiveTeachers(mobile, active)
+
+        assertEquals(3, result.size)
+        assertEquals("Костромина В.А", result.first { it.id == "102" }.name)
+        assertEquals("Костромина В.А.", result.first { it.id == "101" }.name)
+        assertEquals("Смолянинова В.А.", result.first { it.id == "103" }.name)
+    }
 }

@@ -92,7 +92,8 @@ data class OneTimeUnitDBO(
     tableName = "groups",
     indices = [
         Index(value = ["institutionId", "groupId"], unique = true),
-        Index(value = ["institutionId", "name"], unique = true)
+        Index(value = ["institutionId", "name"]),
+        Index(value = ["institutionId", "inCatalog"])
     ]
 )
 data class GroupDBO(
@@ -102,14 +103,16 @@ data class GroupDBO(
     val name: String,
     val groupId: String = name,
     val year: Int? = null,
-    val favorite: Boolean = false
+    val favorite: Boolean = false,
+    val inCatalog: Boolean = true
 )
 
 @Entity(
     tableName = "teachers",
     indices = [
         Index(value = ["institutionId", "teacherId"], unique = true),
-        Index(value = ["institutionId", "name"], unique = true)
+        Index(value = ["institutionId", "name"]),
+        Index(value = ["institutionId", "inCatalog"])
     ]
 )
 data class TeacherDBO(
@@ -118,7 +121,8 @@ data class TeacherDBO(
     val institutionId: String,
     val name: String,
     val teacherId: String = name,
-    val favorite: Boolean = false
+    val favorite: Boolean = false,
+    val inCatalog: Boolean = true
 )
 
 data class RequestSDBO(
