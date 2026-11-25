@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-11-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-25",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Технические средства информатизации",
-                "otUnits": [
-                    {
-                        "teacher": "Рыбалка В.В.",
-                        "group": "ИБА-32",
-                        "room": "41",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "REMOVED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Основы философии",
-                "otUnits": [
-                    {
-                        "teacher": "Куракова Г.В.,",
-                        "group": "ИБА-32",
-                        "room": "24",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Программные и программно-аппаратные средства защиты информации",
-                "otUnits": [
-                    {
-                        "teacher": "Шабалта А.В.",
-                        "group": "ИБА-32",
-                        "room": "30",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Операционные системы",
-                "otUnits": [
-                    {
-                        "teacher": "Рыбалка В.В.",
-                        "group": "ИБА-32",
-                        "room": "41",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "REMOVED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-26",
         "scheduleType": "COMMON",
         "lessons": [
@@ -133,7 +51,7 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБА-32",
-                        "room": "20",
+                        "room": "17",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -152,7 +70,7 @@
                     {
                         "teacher": "Шабалта А.В.",
                         "group": "ИБА-32",
-                        "room": "20",
+                        "room": "17",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -291,7 +209,7 @@
     },
     {
         "date": "2026-11-30",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-30",
@@ -352,9 +270,19 @@
             },
             {
                 "date": "2026-11-30",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "УП",
                 "otUnits": [
                     {
@@ -663,7 +591,7 @@
     },
     {
         "date": "2026-12-07",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-07",
@@ -724,9 +652,19 @@
             },
             {
                 "date": "2026-12-07",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "УП",
                 "otUnits": [
                     {
@@ -1035,13 +973,23 @@
     },
     {
         "date": "2026-12-14",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-14",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Базы данных",
                 "otUnits": [
                     {
@@ -1059,8 +1007,8 @@
             {
                 "date": "2026-12-14",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "16:00",
+                "endTime": "17:30",
                 "subject": "Базы данных",
                 "otUnits": [
                     {

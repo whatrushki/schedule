@@ -1,106 +1,5 @@
 [
     {
-        "date": "2026-11-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-25",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Телекоммуникационные системы и сети",
-                "otUnits": [
-                    {
-                        "teacher": "Гунько Д.Д.",
-                        "group": "ИБТ-31",
-                        "room": "214",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Телекоммуникационные системы и сети",
-                "otUnits": [
-                    {
-                        "teacher": "Гунько Д.Д.",
-                        "group": "ИБТ-31",
-                        "room": "214",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Телекоммуникационные системы и сети",
-                "otUnits": [
-                    {
-                        "teacher": "Гунько Д.Д.",
-                        "group": "ИБТ-31",
-                        "room": "214",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Телекоммуникационные системы и сети",
-                "otUnits": [
-                    {
-                        "teacher": "Гунько Д.Д.",
-                        "group": "ИБТ-31",
-                        "room": "214",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Телекоммуникационные системы и сети",
-                "otUnits": [
-                    {
-                        "teacher": "Гунько Д.Д.",
-                        "group": "ИБТ-31",
-                        "room": "214",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "REMOVED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-26",
         "scheduleType": "COMMON",
         "lessons": [
@@ -299,7 +198,7 @@
     },
     {
         "date": "2026-11-30",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-30",
@@ -341,9 +240,19 @@
             },
             {
                 "date": "2026-11-30",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Телекоммуникационные системы и сети",
                 "otUnits": [
                     {
@@ -517,17 +426,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Крылова О.В.",
                         "group": "ИБТ-31",
-                        "room": "31",
+                        "room": "13",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Крылова О.В.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ИБТ-31",
-                        "room": "13",
+                        "room": "31",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -685,13 +594,23 @@
     },
     {
         "date": "2026-12-07",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-07",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Организационное и правовое обеспечение информационной безопасности",
                 "otUnits": [
                     {
@@ -709,8 +628,8 @@
             {
                 "date": "2026-12-07",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "16:00",
+                "endTime": "17:30",
                 "subject": "Организационное и правовое обеспечение информационной безопасности",
                 "otUnits": [
                     {
@@ -922,17 +841,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крылова О.В.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ИБТ-31",
-                        "room": "27",
+                        "room": "29",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Крылова О.В.",
                         "group": "ИБТ-31",
-                        "room": "29",
+                        "room": "27",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -1071,7 +990,7 @@
     },
     {
         "date": "2026-12-14",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-14",
@@ -1113,9 +1032,19 @@
             },
             {
                 "date": "2026-12-14",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Телекоммуникационные системы и сети",
                 "otUnits": [
                     {

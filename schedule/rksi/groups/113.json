@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-11-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-25",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Бухгалтерский учет",
-                "otUnits": [
-                    {
-                        "teacher": "Ревнивцева О.А.,",
-                        "group": "ТД-22",
-                        "room": "33",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Бухгалтерский учет",
-                "otUnits": [
-                    {
-                        "teacher": "Ревнивцева О.А.,",
-                        "group": "ТД-22",
-                        "room": "33",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Бухгалтерский учет",
-                "otUnits": [
-                    {
-                        "teacher": "Ревнивцева О.А.,",
-                        "group": "ТД-22",
-                        "room": "33",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 7,
-                "startTime": "18:20",
-                "endTime": "19:50",
-                "subject": "Товароведение",
-                "otUnits": [
-                    {
-                        "teacher": "Таппасханова П.П.,",
-                        "group": "ТД-22",
-                        "room": "41",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-26",
         "scheduleType": "COMMON",
         "lessons": [
@@ -261,13 +179,23 @@
     },
     {
         "date": "2026-11-30",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-30",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Правовое обеспечение профессиональной деятельности",
                 "otUnits": [
                     {
@@ -285,8 +213,8 @@
             {
                 "date": "2026-11-30",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "16:00",
+                "endTime": "17:30",
                 "subject": "ФИЗКУЛЬТУРА",
                 "otUnits": [
                     {
@@ -304,8 +232,8 @@
             {
                 "date": "2026-11-30",
                 "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
+                "startTime": "17:40",
+                "endTime": "19:10",
                 "subject": "Основы финансовой грамотности",
                 "otUnits": [
                     {
@@ -624,17 +552,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.П.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ТД-22",
-                        "room": "13",
+                        "room": "20",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Марченко С.П.",
                         "group": "ТД-22",
-                        "room": "20",
+                        "room": "13",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -647,7 +575,7 @@
     },
     {
         "date": "2026-12-07",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-07",
@@ -670,9 +598,19 @@
             },
             {
                 "date": "2026-12-07",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Основы финансовой грамотности",
                 "otUnits": [
                     {
@@ -690,8 +628,8 @@
             {
                 "date": "2026-12-07",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "16:00",
+                "endTime": "17:30",
                 "subject": "Правовое обеспечение профессиональной деятельности",
                 "otUnits": [
                     {
@@ -1025,7 +963,7 @@
     },
     {
         "date": "2026-12-14",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-14",
@@ -1048,9 +986,19 @@
             },
             {
                 "date": "2026-12-14",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Правовое обеспечение профессиональной деятельности",
                 "otUnits": [
                     {
@@ -1068,8 +1016,8 @@
             {
                 "date": "2026-12-14",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "16:00",
+                "endTime": "17:30",
                 "subject": "Основы финансовой грамотности",
                 "otUnits": [
                     {
@@ -1087,8 +1035,8 @@
             {
                 "date": "2026-12-14",
                 "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
+                "startTime": "17:40",
+                "endTime": "19:10",
                 "subject": "Основы финансовой грамотности",
                 "otUnits": [
                     {

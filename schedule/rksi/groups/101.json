@@ -1,57 +1,5 @@
 [
     {
-        "date": "2026-11-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-25",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Программное обеспечение компьютерных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Болгов Д.Р.",
-                        "group": "СА-35",
-                        "room": "314",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ефремова О.П.",
-                        "group": "СА-35",
-                        "room": "104",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Новосельцева Е.Ф.",
-                        "group": "СА-35",
-                        "room": "209а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-26",
         "scheduleType": "COMMON",
         "lessons": [
@@ -261,7 +209,7 @@
     },
     {
         "date": "2026-11-30",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-30",
@@ -284,9 +232,19 @@
             },
             {
                 "date": "2026-11-30",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Администрирование сетевых операционных систем",
                 "otUnits": [
                     {
@@ -304,8 +262,8 @@
             {
                 "date": "2026-11-30",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "16:00",
+                "endTime": "17:30",
                 "subject": "Администрирование сетевых операционных систем",
                 "otUnits": [
                     {
@@ -323,8 +281,8 @@
             {
                 "date": "2026-11-30",
                 "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
+                "startTime": "17:40",
+                "endTime": "19:10",
                 "subject": "Администрирование сетевых операционных систем",
                 "otUnits": [
                     {
@@ -473,17 +431,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ефремова О.П.",
+                        "teacher": "Новосельцева Е.Ф.",
                         "group": "СА-35",
-                        "room": "111",
+                        "room": "209а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Новосельцева Е.Ф.",
+                        "teacher": "Ефремова О.П.",
                         "group": "СА-35",
-                        "room": "209а",
+                        "room": "111",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -641,13 +599,23 @@
     },
     {
         "date": "2026-12-07",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-07",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
@@ -665,8 +633,8 @@
             {
                 "date": "2026-12-07",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "16:00",
+                "endTime": "17:30",
                 "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
@@ -684,8 +652,8 @@
             {
                 "date": "2026-12-07",
                 "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
+                "startTime": "17:40",
+                "endTime": "19:10",
                 "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
@@ -796,17 +764,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ефремова О.П.",
+                        "teacher": "Новосельцева Е.Ф.",
                         "group": "СА-35",
-                        "room": "111",
+                        "room": "209а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Новосельцева Е.Ф.",
+                        "teacher": "Ефремова О.П.",
                         "group": "СА-35",
-                        "room": "209а",
+                        "room": "111",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1027,7 +995,7 @@
     },
     {
         "date": "2026-12-14",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-14",
@@ -1050,9 +1018,19 @@
             },
             {
                 "date": "2026-12-14",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Администрирование сетевых операционных систем",
                 "otUnits": [
                     {
@@ -1070,8 +1048,8 @@
             {
                 "date": "2026-12-14",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "16:00",
+                "endTime": "17:30",
                 "subject": "Администрирование сетевых операционных систем",
                 "otUnits": [
                     {
@@ -1089,8 +1067,8 @@
             {
                 "date": "2026-12-14",
                 "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
+                "startTime": "17:40",
+                "endTime": "19:10",
                 "subject": "Администрирование сетевых операционных систем",
                 "otUnits": [
                     {
@@ -1407,13 +1385,23 @@
     },
     {
         "date": "2026-12-21",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-21",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-21",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
@@ -1431,8 +1419,8 @@
             {
                 "date": "2026-12-21",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "16:00",
+                "endTime": "17:30",
                 "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
@@ -1450,8 +1438,8 @@
             {
                 "date": "2026-12-21",
                 "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
+                "startTime": "17:40",
+                "endTime": "19:10",
                 "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {

@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-11-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-25",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Монтаж и обслуживание оптических систем передачи транспортных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Ермолина Л.В.,",
-                        "group": "ИКС-42",
-                        "room": "114а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Монтаж и обслуживание оптических систем передачи транспортных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Ермолина Л.В.,",
-                        "group": "ИКС-42",
-                        "room": "114",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Планирование и организация работы структурного подразделения",
-                "otUnits": [
-                    {
-                        "teacher": "Згонникова Т.Ф.",
-                        "group": "ИКС-42",
-                        "room": "319",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Монтаж и обслуживание оптических систем передачи транспортных сетей",
-                "otUnits": [
-                    {
-                        "teacher": "Ермолина Л.В.,",
-                        "group": "ИКС-42",
-                        "room": "114а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-26",
         "scheduleType": "COMMON",
         "lessons": [
@@ -291,7 +209,7 @@
     },
     {
         "date": "2026-11-30",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-30",
@@ -348,6 +266,16 @@
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
                 "state": "COMMON"
             }
         ]
@@ -669,7 +597,7 @@
     },
     {
         "date": "2026-12-07",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-07",
@@ -711,9 +639,19 @@
             },
             {
                 "date": "2026-12-07",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Доп.занятие",
                 "otUnits": [
                     {

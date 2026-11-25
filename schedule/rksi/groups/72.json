@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-11-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-25",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Правовое обеспечение профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Хачикян Л.Г.",
-                        "group": "ИС-36",
-                        "room": "408",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "ФИЗКУЛЬТУРА",
-                "otUnits": [
-                    {
-                        "teacher": "Турянский И.П.",
-                        "group": "ИС-36",
-                        "room": "с/з3",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Разработка программных модулей",
-                "otUnits": [
-                    {
-                        "teacher": "Трифанкова А.А.",
-                        "group": "ИС-36",
-                        "room": "Общ1-2",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-26",
         "scheduleType": "COMMON",
         "lessons": [
@@ -253,13 +190,23 @@
     },
     {
         "date": "2026-11-30",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-30",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Разработка программных модулей",
                 "otUnits": [
                     {
@@ -277,8 +224,8 @@
             {
                 "date": "2026-11-30",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "16:00",
+                "endTime": "17:30",
                 "subject": "Разработка мобильных приложений",
                 "otUnits": [
                     {
@@ -296,8 +243,8 @@
             {
                 "date": "2026-11-30",
                 "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
+                "startTime": "17:40",
+                "endTime": "19:10",
                 "subject": "Системное программирование",
                 "otUnits": [
                     {
@@ -326,17 +273,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ефремова О.П.",
+                        "teacher": "Черноштан О.Н.",
                         "group": "ИС-36",
-                        "room": "111",
+                        "room": "315а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Ефремова О.П.",
                         "group": "ИС-36",
-                        "room": "315а",
+                        "room": "111",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -639,7 +586,7 @@
     },
     {
         "date": "2026-12-07",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-07",
@@ -662,9 +609,19 @@
             },
             {
                 "date": "2026-12-07",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Разработка мобильных приложений",
                 "otUnits": [
                     {
@@ -682,8 +639,8 @@
             {
                 "date": "2026-12-07",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "16:00",
+                "endTime": "17:30",
                 "subject": "Разработка мобильных приложений",
                 "otUnits": [
                     {
@@ -701,8 +658,8 @@
             {
                 "date": "2026-12-07",
                 "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
+                "startTime": "17:40",
+                "endTime": "19:10",
                 "subject": "Разработка программных модулей",
                 "otUnits": [
                     {
@@ -731,17 +688,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ефремова О.П.",
+                        "teacher": "Черноштан О.Н.",
                         "group": "ИС-36",
-                        "room": "111",
+                        "room": "315а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Ефремова О.П.",
                         "group": "ИС-36",
-                        "room": "315а",
+                        "room": "111",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1025,7 +982,7 @@
     },
     {
         "date": "2026-12-14",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-14",
@@ -1048,9 +1005,19 @@
             },
             {
                 "date": "2026-12-14",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Разработка программных модулей",
                 "otUnits": [
                     {
@@ -1068,8 +1035,8 @@
             {
                 "date": "2026-12-14",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "16:00",
+                "endTime": "17:30",
                 "subject": "Разработка мобильных приложений",
                 "otUnits": [
                     {
@@ -1087,8 +1054,8 @@
             {
                 "date": "2026-12-14",
                 "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
+                "startTime": "17:40",
+                "endTime": "19:10",
                 "subject": "Системное программирование",
                 "otUnits": [
                     {
@@ -1155,17 +1122,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ефремова О.П.",
+                        "teacher": "Черноштан О.Н.",
                         "group": "ИС-36",
-                        "room": "111",
+                        "room": "315а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Ефремова О.П.",
                         "group": "ИС-36",
-                        "room": "315а",
+                        "room": "111",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

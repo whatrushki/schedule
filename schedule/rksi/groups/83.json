@@ -1,87 +1,5 @@
 [
     {
-        "date": "2026-11-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-25",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Литература",
-                "otUnits": [
-                    {
-                        "teacher": "Рожченко Т.В.",
-                        "group": "СА-11",
-                        "room": "217",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Математика",
-                "otUnits": [
-                    {
-                        "teacher": "Путинцева Ю.М.",
-                        "group": "СА-11",
-                        "room": "316",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Русский язык",
-                "otUnits": [
-                    {
-                        "teacher": "Рожченко Т.В.",
-                        "group": "СА-11",
-                        "room": "217",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Доп.занятие",
-                "otUnits": [
-                    {
-                        "teacher": "Путинцева Ю.М.",
-                        "group": "СА-11",
-                        "room": "411",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-26",
         "scheduleType": "COMMON",
         "lessons": [
@@ -291,7 +209,7 @@
     },
     {
         "date": "2026-11-30",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-30",
@@ -348,6 +266,16 @@
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
                 "state": "COMMON"
             }
         ]
@@ -528,17 +456,17 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Ужегова Е.А.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "СА-11",
-                        "room": "307",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Ужегова Е.А.",
                         "group": "СА-11",
-                        "room": "104",
+                        "room": "307",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -715,7 +643,7 @@
     },
     {
         "date": "2026-12-07",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-07",
@@ -753,6 +681,16 @@
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
                 "state": "COMMON"
             }
         ]
@@ -1120,7 +1058,7 @@
     },
     {
         "date": "2026-12-14",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-14",
@@ -1177,6 +1115,16 @@
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
                 "state": "COMMON"
             }
         ]
@@ -1338,17 +1286,17 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Ужегова Е.А.",
                         "group": "СА-11",
-                        "room": "104",
+                        "room": "307",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ужегова Е.А.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "СА-11",
-                        "room": "307",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1525,7 +1473,7 @@
     },
     {
         "date": "2026-12-21",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-21",
@@ -1582,6 +1530,16 @@
                     }
                 ],
                 "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-21",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
                 "state": "COMMON"
             }
         ]

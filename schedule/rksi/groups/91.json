@@ -1,68 +1,5 @@
 [
     {
-        "date": "2026-11-25",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-25",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Основы теории информации",
-                "otUnits": [
-                    {
-                        "teacher": "Толкачев В.Н.",
-                        "group": "СА-22",
-                        "room": "316",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Основы финансовой грамотности",
-                "otUnits": [
-                    {
-                        "teacher": "Каверзнева Е.Ю.",
-                        "group": "СА-22",
-                        "room": "410",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
-                "subject": "Доп.занятие",
-                "otUnits": [
-                    {
-                        "teacher": "Комов Е.Ю.",
-                        "group": "СА-22",
-                        "room": "110а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-11-26",
         "scheduleType": "COMMON",
         "lessons": [
@@ -253,13 +190,23 @@
     },
     {
         "date": "2026-11-30",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-30",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Элементы высшей математики",
                 "otUnits": [
                     {
@@ -277,8 +224,8 @@
             {
                 "date": "2026-11-30",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "16:00",
+                "endTime": "17:30",
                 "subject": "Информационные технологии",
                 "otUnits": [
                     {
@@ -296,8 +243,8 @@
             {
                 "date": "2026-11-30",
                 "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
+                "startTime": "17:40",
+                "endTime": "19:10",
                 "subject": "Дискретная математика с элементами математической логики",
                 "otUnits": [
                     {
@@ -364,17 +311,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Лебедева М.В.",
+                        "teacher": "Чубарова А.Б.",
                         "group": "СА-22",
-                        "room": "320",
+                        "room": "106",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Чубарова А.Б.",
+                        "teacher": "Лебедева М.В.",
                         "group": "СА-22",
-                        "room": "106",
+                        "room": "320",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -677,7 +624,7 @@
     },
     {
         "date": "2026-12-07",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-07",
@@ -700,9 +647,19 @@
             },
             {
                 "date": "2026-12-07",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Дискретная математика с элементами математической логики",
                 "otUnits": [
                     {
@@ -720,8 +677,8 @@
             {
                 "date": "2026-12-07",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "16:00",
+                "endTime": "17:30",
                 "subject": "Элементы высшей математики",
                 "otUnits": [
                     {
@@ -739,8 +696,8 @@
             {
                 "date": "2026-12-07",
                 "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
+                "startTime": "17:40",
+                "endTime": "19:10",
                 "subject": "Информационные технологии",
                 "otUnits": [
                     {
@@ -788,17 +745,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Лебедева М.В.",
+                        "teacher": "Чубарова А.Б.",
                         "group": "СА-22",
-                        "room": "320",
+                        "room": "106",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Чубарова А.Б.",
+                        "teacher": "Лебедева М.В.",
                         "group": "СА-22",
-                        "room": "106",
+                        "room": "320",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1082,13 +1039,23 @@
     },
     {
         "date": "2026-12-14",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-12-14",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [],
+                "type": "CLASS_HOUR",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
                 "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
+                "startTime": "14:10",
+                "endTime": "15:40",
                 "subject": "Элементы высшей математики",
                 "otUnits": [
                     {
@@ -1106,8 +1073,8 @@
             {
                 "date": "2026-12-14",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "16:00",
+                "endTime": "17:30",
                 "subject": "Элементы высшей математики",
                 "otUnits": [
                     {
@@ -1125,8 +1092,8 @@
             {
                 "date": "2026-12-14",
                 "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
+                "startTime": "17:40",
+                "endTime": "19:10",
                 "subject": "Дискретная математика с элементами математической логики",
                 "otUnits": [
                     {
@@ -1155,17 +1122,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Лебедева М.В.",
+                        "teacher": "Чубарова А.Б.",
                         "group": "СА-22",
-                        "room": "320",
+                        "room": "106",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Чубарова А.Б.",
+                        "teacher": "Лебедева М.В.",
                         "group": "СА-22",
-                        "room": "106",
+                        "room": "320",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
