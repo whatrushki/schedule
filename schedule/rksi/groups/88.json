@@ -102,7 +102,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-27",
@@ -114,7 +114,7 @@
                     {
                         "teacher": "Ефремова О.П.",
                         "group": "СА-16",
-                        "room": "315а",
+                        "room": "209а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -122,14 +122,14 @@
                     {
                         "teacher": "Крупицкая Н.А.",
                         "group": "СА-16",
-                        "room": "111",
+                        "room": "307",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-27",
@@ -141,14 +141,33 @@
                     {
                         "teacher": "Турянский И.П.",
                         "group": "СА-16",
-                        "room": "с/з2",
+                        "room": "с/з4",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-27",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Барна Н.В.",
+                        "group": "СА-16",
+                        "room": "210",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
@@ -961,17 +980,17 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Ефремова О.П.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "СА-16",
-                        "room": "315а",
+                        "room": "111",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Ефремова О.П.",
                         "group": "СА-16",
-                        "room": "111",
+                        "room": "315а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
