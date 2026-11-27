@@ -13,7 +13,7 @@
                     {
                         "teacher": "Бойнар И.Н.",
                         "group": "ИКС-41",
-                        "room": "214",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -32,7 +32,7 @@
                     {
                         "teacher": "Бойнар И.Н.",
                         "group": "ИКС-41",
-                        "room": "401",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -68,41 +68,79 @@
         "lessons": [
             {
                 "date": "2026-11-28",
+                "number": 3,
+                "startTime": "11:30",
+                "endTime": "13:00",
+                "subject": "Применение программно- аппаратных средств защиты информации в инфокоммуникационных системах и сетях связи",
+                "otUnits": [
+                    {
+                        "teacher": "Бойнар И.Н.",
+                        "group": "ИКС-41",
+                        "room": "326",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-28",
                 "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
+                "startTime": "12:00",
+                "endTime": "12:50",
                 "subject": "УП",
                 "otUnits": [
                     {
                         "teacher": "Бойнар И.Н.",
                         "group": "ИКС-41",
-                        "room": "110",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-28",
                 "number": 6,
-                "startTime": "16:40",
-                "endTime": "18:10",
+                "startTime": "13:00",
+                "endTime": "13:50",
                 "subject": "УП",
                 "otUnits": [
                     {
                         "teacher": "Бойнар И.Н.",
                         "group": "ИКС-41",
-                        "room": "110",
+                        "room": "326",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-28",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Применение программно- аппаратных средств защиты информации в инфокоммуникационных системах и сетях связи",
+                "otUnits": [
+                    {
+                        "teacher": "Бойнар И.Н.",
+                        "group": "ИКС-41",
+                        "room": "326",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
