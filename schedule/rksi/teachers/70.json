@@ -1,15 +1,23 @@
 [
     {
-        "date": "2026-11-27",
-        "scheduleType": "COMMON",
+        "date": "2026-11-28",
+        "scheduleType": "SHORTENED",
         "lessons": [
             {
-                "date": "2026-11-27",
+                "date": "2026-11-28",
                 "number": 1,
                 "startTime": "08:00",
-                "endTime": "09:30",
-                "subject": "Математика",
+                "endTime": "08:50",
+                "subject": "Иностранный язык",
                 "otUnits": [
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "ТД-12",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
                     {
                         "teacher": "Марченко С.В.",
                         "group": "ИБТ-13",
@@ -19,35 +27,24 @@
                         "subject": null
                     }
                 ],
-                "type": "OTHER",
-                "state": "ADDED"
+                "type": "COMMON",
+                "state": "CHANGED"
             },
             {
-                "date": "2026-11-27",
+                "date": "2026-11-28",
                 "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Математика",
+                "startTime": "09:00",
+                "endTime": "09:50",
+                "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Марченко С.В.",
-                        "group": "ИБТ-11",
-                        "room": "42",
+                        "teacher": "Марченко С.П.",
+                        "group": "ИБТ-13",
+                        "room": "34",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
-                    }
-                ],
-                "type": "OTHER",
-                "state": "ADDED"
-            },
-            {
-                "date": "2026-11-27",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Математика",
-                "otUnits": [
+                    },
                     {
                         "teacher": "Марченко С.В.",
                         "group": "ИБТ-12",
@@ -61,88 +58,6 @@
                 "state": "CHANGED"
             },
             {
-                "date": "2026-11-27",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Марченко Сергей Петрович",
-                        "group": "ТД-31",
-                        "room": "27",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "REMOVED"
-            },
-            {
-                "date": "2026-11-27",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "Марченко С.П.",
-                        "group": "БД-21",
-                        "room": "33",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-28",
-        "scheduleType": "SHORTENED",
-        "lessons": [
-            {
-                "date": "2026-11-28",
-                "number": 1,
-                "startTime": "08:00",
-                "endTime": "08:50",
-                "subject": "Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "Марченко Сергей Петрович",
-                        "group": "ТД-12",
-                        "room": "17",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "REMOVED"
-            },
-            {
-                "date": "2026-11-28",
-                "number": 2,
-                "startTime": "09:00",
-                "endTime": "09:50",
-                "subject": "Иностранный язык",
-                "otUnits": [
-                    {
-                        "teacher": "Марченко Сергей Петрович",
-                        "group": "ИБТ-13",
-                        "room": "17",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "REMOVED"
-            },
-            {
                 "date": "2026-11-28",
                 "number": 3,
                 "startTime": "10:00",
@@ -150,16 +65,24 @@
                 "subject": "Иностранный язык",
                 "otUnits": [
                     {
-                        "teacher": "Марченко Сергей Петрович",
+                        "teacher": "Марченко С.П.",
                         "group": "БУ-11",
-                        "room": "17",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Марченко С.В.",
+                        "group": "ИБТ-11",
+                        "room": "42",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "REMOVED"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-28",
@@ -175,10 +98,37 @@
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
+                    },
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "ТД-22",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
                 "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-28",
+                "number": 6,
+                "startTime": "13:00",
+                "endTime": "13:50",
+                "subject": "Иностранный язык в профессиональной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Марченко С.П.",
+                        "group": "ТД-22",
+                        "room": "34",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },

@@ -1,95 +1,5 @@
 [
     {
-        "date": "2026-11-27",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-27",
-                "number": 2,
-                "startTime": "09:40",
-                "endTime": "11:10",
-                "subject": "Социальная психология",
-                "otUnits": [
-                    {
-                        "teacher": "Рыбак Е.Ю.",
-                        "group": "ИБА-23",
-                        "room": "17",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-27",
-                "number": 3,
-                "startTime": "11:30",
-                "endTime": "13:00",
-                "subject": "Безопасность жизнедеятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Смирнов В.П.",
-                        "group": "ИБА-23",
-                        "room": "13",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-27",
-                "number": 4,
-                "startTime": "13:10",
-                "endTime": "14:40",
-                "subject": "Иностранный язык в профессиональной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Ляшенко Д.И.",
-                        "group": "ИБА-23",
-                        "room": "24",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Савченко А.А.",
-                        "group": "ИБА-23",
-                        "room": "38",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            },
-            {
-                "date": "2026-11-27",
-                "number": 5,
-                "startTime": "15:00",
-                "endTime": "16:30",
-                "subject": "Основы информационной безопасности",
-                "otUnits": [
-                    {
-                        "teacher": "Касьянова Е.Ю.",
-                        "group": "ИБА-23",
-                        "room": "30",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "CHANGED"
-            }
-        ]
-    },
-    {
         "date": "2026-11-28",
         "scheduleType": "COMMON",
         "lessons": [
@@ -110,7 +20,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-28",
@@ -129,26 +39,45 @@
                     }
                 ],
                 "type": "PRACTICE",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-28",
                 "number": 6,
                 "startTime": "13:00",
                 "endTime": "13:50",
-                "subject": "Доп.занятие",
+                "subject": "Выполнение работ по профессии 16199 'Оператор вычислительных и электронно-вычислительных машин'",
                 "otUnits": [
                     {
-                        "teacher": "Зурова А.Е.",
+                        "teacher": "Дьяченко Е.О.",
                         "group": "ИБА-23",
-                        "room": "17",
-                        "additional": "2",
+                        "room": "415",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
-                "state": "COMMON"
+                "type": "COMMON",
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-28",
+                "number": 7,
+                "startTime": "18:20",
+                "endTime": "19:50",
+                "subject": "Выполнение работ по профессии 16199 'Оператор вычислительных и электронно-вычислительных машин'",
+                "otUnits": [
+                    {
+                        "teacher": "Дьяченко Е.О.",
+                        "group": "ИБА-23",
+                        "room": "415",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
@@ -464,17 +393,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Савченко А.А.",
                         "group": "ИБА-23",
-                        "room": "28",
+                        "room": "38",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Савченко А.А.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ИБА-23",
-                        "room": "38",
+                        "room": "28",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -917,17 +846,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Савченко А.А.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ИБА-23",
-                        "room": "38",
+                        "room": "32",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Савченко А.А.",
                         "group": "ИБА-23",
-                        "room": "32",
+                        "room": "38",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -1294,17 +1223,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Савченко А.А.",
+                        "teacher": "Ляшенко Д.И.",
                         "group": "ИБА-23",
-                        "room": "38",
+                        "room": "28",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Ляшенко Д.И.",
+                        "teacher": "Савченко А.А.",
                         "group": "ИБА-23",
-                        "room": "28",
+                        "room": "38",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
