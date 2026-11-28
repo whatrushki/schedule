@@ -2388,8 +2388,8 @@
                     {
                         "teacher": "Харитонов А. А.",
                         "group": "Т26ОПЗ -2build-01",
-                        "room": "аудитория",
-                        "additional": "Главный",
+                        "room": "205",
+                        "additional": "23",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2407,8 +2407,8 @@
                     {
                         "teacher": "Харитонов А. А.",
                         "group": "Т26ОПЗ -2build-01",
-                        "room": "аудитория",
-                        "additional": "Главный",
+                        "room": "119",
+                        "additional": "25",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2443,6 +2443,25 @@
             },
             {
                 "date": "2026-11-11",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Экспертиза качества строительных растворов и сухих строительных смесей",
+                "otUnits": [
+                    {
+                        "teacher": "Харитонов А. А.",
+                        "group": "ИСТСЭ41",
+                        "room": "125",
+                        "additional": "21",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
@@ -2465,31 +2484,12 @@
                 "number": 6,
                 "startTime": "17:45",
                 "endTime": "19:20",
-                "subject": "лаб Экспертиза качества строительных растворов и сухих строительных смесей",
-                "otUnits": [
-                    {
-                        "teacher": "Харитонов А. А.",
-                        "group": "ИСТСЭ41",
-                        "room": "125",
-                        "additional": "21",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-11",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
                 "subject": "лек Технология бетонов и растворов",
                 "otUnits": [
                     {
                         "teacher": "Харитонов А. А.",
                         "group": "ИСОЗМКS31",
-                        "room": "220",
+                        "room": "219",
                         "additional": "23",
                         "onlineUrl": null,
                         "subject": null
@@ -2955,8 +2955,8 @@
                     {
                         "teacher": "Харитонов А. А.",
                         "group": "Т26ОПЗ -2build-02",
-                        "room": "аудитория",
-                        "additional": "Главный",
+                        "room": "219",
+                        "additional": "23",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2973,9 +2973,9 @@
                 "otUnits": [
                     {
                         "teacher": "Харитонов А. А.",
-                        "group": "Т26ОПЗ -2build-02",
-                        "room": "аудитория",
-                        "additional": "Главный",
+                        "group": "Т26ОПЗ -2build-01",
+                        "room": "219",
+                        "additional": "23",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2999,7 +2999,7 @@
                     {
                         "teacher": "Харитонов А. А.",
                         "group": "ИСТСЭ41",
-                        "room": "219",
+                        "room": "210",
                         "additional": "23",
                         "onlineUrl": null,
                         "subject": null
@@ -3045,6 +3045,44 @@
                         "group": "ИСТК31",
                         "room": "220",
                         "additional": "23",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "Строительное материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Харитонов А. А.",
+                        "group": "Т26ОПЗ -2build-02",
+                        "room": "125",
+                        "additional": "21",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "Строительное материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Харитонов А. А.",
+                        "group": "Т26ОПЗ -2build-02",
+                        "room": "125",
+                        "additional": "21",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3624,6 +3662,138 @@
                         "group": "ИСПСМ41",
                         "room": "125",
                         "additional": "21",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-21",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "зач Сухие строительные смеси",
+                "otUnits": [
+                    {
+                        "teacher": "Харитонов А. А.",
+                        "group": "ИСПСМS31",
+                        "room": "125",
+                        "additional": "21",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-21",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "зач Сухие строительные смеси",
+                "otUnits": [
+                    {
+                        "teacher": "Харитонов А. А.",
+                        "group": "ИСПСМS31",
+                        "room": "125",
+                        "additional": "21",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-23",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "зач Технология бетонов и растворов",
+                "otUnits": [
+                    {
+                        "teacher": "Харитонов А. А.",
+                        "group": "ИСОЗМКS31",
+                        "room": "211",
+                        "additional": "23",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-23",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "зач Технология бетонов и растворов",
+                "otUnits": [
+                    {
+                        "teacher": "Харитонов А. А.",
+                        "group": "ИСОЗМКS31",
+                        "room": "211",
+                        "additional": "23",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-24",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-24",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "зач Современные отделочные строительные материалы",
+                "otUnits": [
+                    {
+                        "teacher": "Харитонов А. А.",
+                        "group": "ИСТК31",
+                        "room": "219",
+                        "additional": "23",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-24",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "зач Современные отделочные строительные материалы",
+                "otUnits": [
+                    {
+                        "teacher": "Харитонов А. А.",
+                        "group": "ИСТК31",
+                        "room": "219",
+                        "additional": "23",
                         "onlineUrl": null,
                         "subject": null
                     }

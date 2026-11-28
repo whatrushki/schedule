@@ -1961,7 +1961,7 @@
                     {
                         "teacher": "Раскита Е. П.",
                         "group": "ЕВ21",
-                        "room": "манеж",
+                        "room": "манеж1",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
@@ -1969,7 +1969,7 @@
                     {
                         "teacher": "Раскита Е. П.",
                         "group": "ЕВ21",
-                        "room": "манеж1",
+                        "room": "манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
@@ -2888,7 +2888,7 @@
                     {
                         "teacher": "Чемисова О. С.",
                         "group": "ЕВ21",
-                        "room": "402",
+                        "room": "501",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
@@ -3184,15 +3184,15 @@
         "lessons": [
             {
                 "date": "2026-11-14",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
                 "subject": "пр Иностранный язык в профессиональной сфере (английский), п/г 1",
                 "otUnits": [
                     {
                         "teacher": "Ковальчук Н. В.",
                         "group": "ЕВ21",
-                        "room": "449",
+                        "room": "261",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3200,27 +3200,8 @@
                     {
                         "teacher": "Фомина О. А.",
                         "group": "ЕВ21",
-                        "room": "257а",
+                        "room": "445",
                         "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-14",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Цитология и гистология",
-                "otUnits": [
-                    {
-                        "teacher": "Герасименко И. И.",
-                        "group": "ЕВ21",
-                        "room": "403",
-                        "additional": "6",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3263,8 +3244,8 @@
                     {
                         "teacher": "Ковальчук Н. В.",
                         "group": "ЕВ21",
-                        "room": "319",
-                        "additional": "8",
+                        "room": "445",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3288,8 +3269,8 @@
                     {
                         "teacher": "Гетманов И. П.",
                         "group": "ЕВ21",
-                        "room": "141",
-                        "additional": "8",
+                        "room": "202",
+                        "additional": "6",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3303,6 +3284,25 @@
         "date": "2026-11-18",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-11-18",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Философия",
+                "otUnits": [
+                    {
+                        "teacher": "Гетманов И. П.",
+                        "group": "ЕВ21",
+                        "room": "424",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-11-18",
                 "number": 3,
@@ -3338,7 +3338,7 @@
                     {
                         "teacher": "Вакуленко М. Ю.",
                         "group": "ЕВ21",
-                        "room": "302а",
+                        "room": "403",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
@@ -3357,8 +3357,8 @@
                     {
                         "teacher": "Вакуленко М. Ю.",
                         "group": "ЕВ21",
-                        "room": "Кафедра",
-                        "additional": "Главный",
+                        "room": "492",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3447,25 +3447,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-11-20",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Философия",
-                "otUnits": [
-                    {
-                        "teacher": "Гетманов И. П.",
-                        "group": "ЕВ21",
-                        "room": "331",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -3483,7 +3464,26 @@
                     {
                         "teacher": "Герасименко И. И.",
                         "group": "ЕВ21",
-                        "room": "406",
+                        "room": "206",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-21",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Цитология и гистология",
+                "otUnits": [
+                    {
+                        "teacher": "Герасименко И. И.",
+                        "group": "ЕВ21",
+                        "room": "205",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
@@ -3527,8 +3527,8 @@
                     {
                         "teacher": "Дубравная Г. А.",
                         "group": "ЕВ21",
-                        "room": "506",
-                        "additional": "6",
+                        "room": "412",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3591,14 +3591,6 @@
                         "teacher": "Раскита Е. П.",
                         "group": "ЕВ21",
                         "room": "манеж",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Раскита Е. П.",
-                        "group": "ЕВ21",
-                        "room": "манеж1",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
@@ -3743,7 +3735,7 @@
                     {
                         "teacher": "Вакуленко М. Ю.",
                         "group": "ЕВ21",
-                        "room": "402",
+                        "room": "302а",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
@@ -3768,7 +3760,7 @@
                     {
                         "teacher": "Ковальчук Н. В.",
                         "group": "ЕВ21",
-                        "room": "449",
+                        "room": "220в",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3776,27 +3768,8 @@
                     {
                         "teacher": "Фомина О. А.",
                         "group": "ЕВ21",
-                        "room": "257а",
+                        "room": "340",
                         "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-28",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Технологии точных и естественных наук в исследовательской деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Середа А. А.",
-                        "group": "ЕВ21",
-                        "room": "403",
-                        "additional": "6",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3839,7 +3812,7 @@
                     {
                         "teacher": "Гарская Н. А.",
                         "group": "ЕВ21",
-                        "room": "402",
+                        "room": "302а",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
@@ -3853,12 +3826,20 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "пр Иностранный язык в профессиональной сфере (английский)",
+                "subject": "пр Иностранный язык в профессиональной сфере (английский), п/г 1",
                 "otUnits": [
                     {
                         "teacher": "Ковальчук Н. В.",
                         "group": "ЕВ21",
-                        "room": "362",
+                        "room": "167",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Фомина О. А.",
+                        "group": "ЕВ21",
+                        "room": "445",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3883,7 +3864,7 @@
                     {
                         "teacher": "Гетманов И. П.",
                         "group": "ЕВ21",
-                        "room": "412",
+                        "room": "109",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3902,7 +3883,7 @@
                     {
                         "teacher": "Гетманов И. П.",
                         "group": "ЕВ21",
-                        "room": "142",
+                        "room": "418",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3952,7 +3933,7 @@
                     {
                         "teacher": "Вакуленко М. Ю.",
                         "group": "ЕВ21",
-                        "room": "406",
+                        "room": "302а",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
@@ -4042,25 +4023,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-12-04",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Технологии точных и естественных наук в исследовательской деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Середа А. А.",
-                        "group": "ЕВ21",
-                        "room": "301",
-                        "additional": "6",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -4078,8 +4040,8 @@
                     {
                         "teacher": "Герасименко И. И.",
                         "group": "ЕВ21",
-                        "room": "403",
-                        "additional": "6",
+                        "room": "8",
+                        "additional": "",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4170,14 +4132,6 @@
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
-                    },
-                    {
-                        "teacher": "Раскита Е. П.",
-                        "group": "ЕВ21",
-                        "room": "манеж1",
-                        "additional": "Главный",
-                        "onlineUrl": null,
-                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -4218,8 +4172,8 @@
                     {
                         "teacher": "Вакуленко М. Ю.",
                         "group": "ЕВ21",
-                        "room": "507",
-                        "additional": "6",
+                        "room": "223",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4262,8 +4216,8 @@
                     {
                         "teacher": "Гетманов И. П.",
                         "group": "ЕВ21",
-                        "room": "206",
-                        "additional": "6",
+                        "room": "231",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4298,24 +4252,24 @@
         "lessons": [
             {
                 "date": "2026-12-12",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
                 "subject": "пр Иностранный язык в профессиональной сфере (английский), п/г 1",
                 "otUnits": [
                     {
                         "teacher": "Ковальчук Н. В.",
                         "group": "ЕВ21",
-                        "room": "449",
-                        "additional": "1",
+                        "room": "319",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
                         "teacher": "Фомина О. А.",
                         "group": "ЕВ21",
-                        "room": "257а",
-                        "additional": "1",
+                        "room": "327",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4339,7 +4293,7 @@
                     {
                         "teacher": "Гарская Н. А.",
                         "group": "ЕВ21",
-                        "room": "402",
+                        "room": "302а",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
@@ -4358,8 +4312,8 @@
                     {
                         "teacher": "Ковальчук Н. В.",
                         "group": "ЕВ21",
-                        "room": "362",
-                        "additional": "1",
+                        "room": "319",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4452,7 +4406,7 @@
                     {
                         "teacher": "Вакуленко М. Ю.",
                         "group": "ЕВ21",
-                        "room": "406",
+                        "room": "507",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
@@ -4521,7 +4475,7 @@
                     {
                         "teacher": "Герасименко И. И.",
                         "group": "ЕВ21",
-                        "room": "403",
+                        "room": "302а",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null

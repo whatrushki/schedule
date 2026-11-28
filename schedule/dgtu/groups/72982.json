@@ -2833,7 +2833,7 @@
                 "subject": "лаб Физика",
                 "otUnits": [
                     {
-                        "teacher": "Гордикова П. В.",
+                        "teacher": "Лемешко Г. Ф.",
                         "group": "БТБ21",
                         "room": "436",
                         "additional": "1",
@@ -2923,8 +2923,8 @@
                     {
                         "teacher": "Попова О. В.",
                         "group": "БТБ21",
-                        "room": "536",
-                        "additional": "8",
+                        "room": "8",
+                        "additional": "",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2965,7 +2965,7 @@
                 "subject": "лаб Физика",
                 "otUnits": [
                     {
-                        "teacher": "Гордикова П. В.",
+                        "teacher": "Лемешко Г. Ф.",
                         "group": "БТБ21",
                         "room": "467",
                         "additional": "1",
@@ -3171,6 +3171,31 @@
                         "group": "БТБ21",
                         "room": "204",
                         "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-07",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-07",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Русский язык как иностранный",
+                "otUnits": [
+                    {
+                        "teacher": "Николенко О. В.",
+                        "group": "БТБ21",
+                        "room": "406",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3473,8 +3498,8 @@
                     {
                         "teacher": "Глызина М. П.",
                         "group": "БТБ21",
-                        "room": "292",
-                        "additional": "1",
+                        "room": "204",
+                        "additional": "6",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3509,7 +3534,7 @@
                 "subject": "лаб Физика",
                 "otUnits": [
                     {
-                        "teacher": "Гордикова П. В.",
+                        "teacher": "Лемешко Г. Ф.",
                         "group": "БТБ21",
                         "room": "436",
                         "additional": "1",
@@ -3580,45 +3605,7 @@
                     {
                         "teacher": "Лемешко Г. Ф.",
                         "group": "БТБ21",
-                        "room": "460",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Основы научно-исследовательской работы",
-                "otUnits": [
-                    {
-                        "teacher": "Попова О. В.",
-                        "group": "БТБ21",
-                        "room": "8",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Организация и управление на производстве",
-                "otUnits": [
-                    {
-                        "teacher": "Глызина М. П.",
-                        "group": "БТБ21",
-                        "room": "467",
+                        "room": "421",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3633,25 +3620,6 @@
         "date": "2026-11-17",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-11-17",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лаб Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Гордикова П. В.",
-                        "group": "БТБ21",
-                        "room": "436",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-11-17",
                 "number": 4,
@@ -3678,6 +3646,132 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-11-17",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Основы научно-исследовательской работы",
+                "otUnits": [
+                    {
+                        "teacher": "Попова О. В.",
+                        "group": "БТБ21",
+                        "room": "218",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-18",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-18",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Физиология человека и медико-биологические основы безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Патюченко О. Ю.",
+                        "group": "БТБ21",
+                        "room": "406",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-18",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Физиология человека и медико-биологические основы безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Патюченко О. Ю.",
+                        "group": "БТБ21",
+                        "room": "406",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-19",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-19",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Лемешко Г. Ф.",
+                        "group": "БТБ21",
+                        "room": "438",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-19",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Лемешко Г. Ф.",
+                        "group": "БТБ21",
+                        "room": "436",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-19",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Философия",
+                "otUnits": [
+                    {
+                        "teacher": "Тер-Аракельянц А. В.",
+                        "group": "БТБ21",
+                        "room": "422",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -3697,6 +3791,25 @@
                         "group": "БТБ21",
                         "room": "405",
                         "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-20",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Организация и управление на производстве",
+                "otUnits": [
+                    {
+                        "teacher": "Глызина М. П.",
+                        "group": "БТБ21",
+                        "room": "527",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3739,7 +3852,7 @@
                     {
                         "teacher": "Николенко О. В.",
                         "group": "БТБ21",
-                        "room": "430",
+                        "room": "331",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3841,13 +3954,13 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "пр Гидрогазодинамика",
+                "subject": "лек Физиология человека и медико-биологические основы безопасности",
                 "otUnits": [
                     {
-                        "teacher": "Приходько С. П.",
+                        "teacher": "Патюченко О. Ю.",
                         "group": "БТБ21",
-                        "room": "498",
-                        "additional": "1",
+                        "room": "402",
+                        "additional": "6",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3890,15 +4003,15 @@
         "lessons": [
             {
                 "date": "2026-11-25",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Метрология, стандартизация и сертификация",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Философия",
                 "otUnits": [
                     {
-                        "teacher": "Хубиян К. Л.",
+                        "teacher": "Тер-Аракельянц А. В.",
                         "group": "БТБ21",
-                        "room": "305",
+                        "room": "321",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3909,16 +4022,73 @@
             },
             {
                 "date": "2026-11-25",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лаб Гидрогазодинамика",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физиология человека и медико-биологические основы безопасности",
                 "otUnits": [
                     {
-                        "teacher": "Приходько С. П.",
+                        "teacher": "Патюченко О. Ю.",
                         "group": "БТБ21",
-                        "room": "356",
+                        "room": "204",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Метрология, стандартизация и сертификация",
+                "otUnits": [
+                    {
+                        "teacher": "Харахашян Н. М.",
+                        "group": "БТБ21",
+                        "room": "460а",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Метрология, стандартизация и сертификация",
+                "otUnits": [
+                    {
+                        "teacher": "Харахашян Н. М.",
+                        "group": "БТБ21",
+                        "room": "460а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Метрология, стандартизация и сертификация",
+                "otUnits": [
+                    {
+                        "teacher": "Хубиян К. Л.",
+                        "group": "БТБ21",
+                        "room": "606",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3942,7 +4112,7 @@
                     {
                         "teacher": "Лемешко Г. Ф.",
                         "group": "БТБ21",
-                        "room": "413",
+                        "room": "436",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3961,8 +4131,8 @@
                     {
                         "teacher": "Климкина Е. А.",
                         "group": "БТБ21",
-                        "room": "510",
-                        "additional": "2",
+                        "room": "010",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4005,8 +4175,8 @@
                     {
                         "teacher": "Глызина М. П.",
                         "group": "БТБ21",
-                        "room": "292",
-                        "additional": "1",
+                        "room": "231",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4041,7 +4211,7 @@
                 "subject": "лаб Физика",
                 "otUnits": [
                     {
-                        "teacher": "Гордикова П. В.",
+                        "teacher": "Лемешко Г. Ф.",
                         "group": "БТБ21",
                         "room": "436",
                         "additional": "1",
@@ -4120,44 +4290,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-11-30",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Основы научно-исследовательской работы",
-                "otUnits": [
-                    {
-                        "teacher": "Попова О. В.",
-                        "group": "БТБ21",
-                        "room": "8",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-30",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Организация и управление на производстве",
-                "otUnits": [
-                    {
-                        "teacher": "Глызина М. П.",
-                        "group": "БТБ21",
-                        "room": "467",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -4173,9 +4305,9 @@
                 "subject": "лаб Физика",
                 "otUnits": [
                     {
-                        "teacher": "Гордикова П. В.",
+                        "teacher": "Лемешко Г. Ф.",
                         "group": "БТБ21",
-                        "room": "445",
+                        "room": "436",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4214,9 +4346,53 @@
         ]
     },
     {
+        "date": "2026-12-03",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-03",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Основы научно-исследовательской работы",
+                "otUnits": [
+                    {
+                        "teacher": "Попова О. В.",
+                        "group": "БТБ21",
+                        "room": "226",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-12-04",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-12-04",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Организация и управление на производстве",
+                "otUnits": [
+                    {
+                        "teacher": "Глызина М. П.",
+                        "group": "БТБ21",
+                        "room": "8",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-12-04",
                 "number": 3,
@@ -4227,7 +4403,7 @@
                     {
                         "teacher": "Патюченко О. Ю.",
                         "group": "БТБ21",
-                        "room": "403",
+                        "room": "505",
                         "additional": "6",
                         "onlineUrl": null,
                         "subject": null
@@ -4244,6 +4420,25 @@
         "lessons": [
             {
                 "date": "2026-12-07",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Гидрогазодинамика",
+                "otUnits": [
+                    {
+                        "teacher": "Приходько С. П.",
+                        "group": "БТБ21",
+                        "room": "8",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-07",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -4252,7 +4447,7 @@
                     {
                         "teacher": "Тер-Аракельянц А. В.",
                         "group": "БТБ21",
-                        "room": "424",
+                        "room": "402",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -4271,7 +4466,7 @@
                     {
                         "teacher": "Лемешко Г. Ф.",
                         "group": "БТБ21",
-                        "room": "292",
+                        "room": "492",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4296,8 +4491,8 @@
                     {
                         "teacher": "Глызина М. П.",
                         "group": "БТБ21",
-                        "room": "467",
-                        "additional": "1",
+                        "room": "208",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4329,13 +4524,13 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "пр Гидрогазодинамика",
+                "subject": "лек Физиология человека и медико-биологические основы безопасности",
                 "otUnits": [
                     {
-                        "teacher": "Приходько С. П.",
+                        "teacher": "Патюченко О. Ю.",
                         "group": "БТБ21",
-                        "room": "498",
-                        "additional": "1",
+                        "room": "402",
+                        "additional": "6",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4369,6 +4564,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Физиология человека и медико-биологические основы безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Патюченко О. Ю.",
+                        "group": "БТБ21",
+                        "room": "204",
+                        "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -4386,26 +4600,7 @@
                     {
                         "teacher": "Хубиян К. Л.",
                         "group": "БТБ21",
-                        "room": "305",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-09",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лаб Гидрогазодинамика",
-                "otUnits": [
-                    {
-                        "teacher": "Приходько С. П.",
-                        "group": "БТБ21",
-                        "room": "356",
+                        "room": "460",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4474,7 +4669,7 @@
                     {
                         "teacher": "Попова О. В.",
                         "group": "БТБ21",
-                        "room": "022",
+                        "room": "227",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -4493,8 +4688,8 @@
                     {
                         "teacher": "Глызина М. П.",
                         "group": "БТБ21",
-                        "room": "292",
-                        "additional": "1",
+                        "room": "204",
+                        "additional": "6",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4512,8 +4707,8 @@
                     {
                         "teacher": "Маркво И. А.",
                         "group": "БТБ21",
-                        "room": "022",
-                        "additional": "8",
+                        "room": "465а",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4529,7 +4724,7 @@
                 "subject": "лаб Физика",
                 "otUnits": [
                     {
-                        "teacher": "Гордикова П. В.",
+                        "teacher": "Лемешко Г. Ф.",
                         "group": "БТБ21",
                         "room": "436",
                         "additional": "1",
@@ -4581,8 +4776,8 @@
                     {
                         "teacher": "Глызина М. П.",
                         "group": "БТБ21",
-                        "room": "467",
-                        "additional": "1",
+                        "room": "8",
+                        "additional": "",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4606,7 +4801,7 @@
                     {
                         "teacher": "Лемешко Г. Ф.",
                         "group": "БТБ21",
-                        "room": "445",
+                        "room": "319",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4658,8 +4853,33 @@
                     {
                         "teacher": "Патюченко О. Ю.",
                         "group": "БТБ21",
-                        "room": "403",
+                        "room": "204",
                         "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-22",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-22",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "зач Общая физическая подготовка (ОФП1)",
+                "otUnits": [
+                    {
+                        "teacher": "Иванова Т. А.",
+                        "group": "БТБ21",
+                        "room": "Л/А Манеж",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }

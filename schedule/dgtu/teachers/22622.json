@@ -1389,6 +1389,25 @@
             },
             {
                 "date": "2026-11-13",
+                "number": 0,
+                "startTime": "10:15",
+                "endTime": "12:00",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Верещагина Л. Н.",
+                        "group": "",
+                        "room": "308",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "UNKNOWN",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -1521,44 +1540,6 @@
         "lessons": [
             {
                 "date": "2026-11-25",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Гражданское право",
-                "otUnits": [
-                    {
-                        "teacher": "Верещагина Л. Н.",
-                        "group": "ЮЮ36, ЮЮ39, ЮЮ3B",
-                        "room": "208",
-                        "additional": "21",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-25",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Гражданское право",
-                "otUnits": [
-                    {
-                        "teacher": "Верещагина Л. Н.",
-                        "group": "ЮЮ32",
-                        "room": "505",
-                        "additional": "25",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-25",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -1575,6 +1556,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Гражданское право",
+                "otUnits": [
+                    {
+                        "teacher": "Верещагина Л. Н.",
+                        "group": "ЮЮ32",
+                        "room": "613",
+                        "additional": "26",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -1584,9 +1584,9 @@
         "lessons": [
             {
                 "date": "2026-11-26",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
                 "subject": "лек Гражданское право",
                 "otUnits": [
                     {
@@ -1609,21 +1609,21 @@
         "lessons": [
             {
                 "date": "2026-11-27",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Гражданское право",
+                "number": 0,
+                "startTime": "10:15",
+                "endTime": "12:00",
+                "subject": "Ликвидация академических задолженностей",
                 "otUnits": [
                     {
                         "teacher": "Верещагина Л. Н.",
-                        "group": "ЮЮ2C",
-                        "room": "122",
+                        "group": "",
+                        "room": "308",
                         "additional": "25",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "COMMON",
+                "type": "UNKNOWN",
                 "state": "COMMON"
             },
             {
@@ -1637,7 +1637,7 @@
                         "teacher": "Верещагина Л. Н.",
                         "group": "ЮЮ3B",
                         "room": "311",
-                        "additional": "25",
+                        "additional": "26",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1680,7 +1680,7 @@
                     {
                         "teacher": "Верещагина Л. Н.",
                         "group": "ЮЮ41",
-                        "room": "206",
+                        "room": "410",
                         "additional": "25",
                         "onlineUrl": null,
                         "subject": null
@@ -1919,7 +1919,7 @@
                     {
                         "teacher": "Верещагина Л. Н.",
                         "group": "ЮЮ41",
-                        "room": "206",
+                        "room": "119",
                         "additional": "25",
                         "onlineUrl": null,
                         "subject": null
@@ -1984,6 +1984,182 @@
                         "group": "ЮЮ33",
                         "room": "311",
                         "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-23",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-23",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "зач Гражданское право",
+                "otUnits": [
+                    {
+                        "teacher": "Верещагина Л. Н.",
+                        "group": "ЮЮ39",
+                        "room": "710",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-23",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "зач Гражданское право",
+                "otUnits": [
+                    {
+                        "teacher": "Верещагина Л. Н.",
+                        "group": "ЮЮ39",
+                        "room": "710",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-24",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-24",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "зач Гражданское право",
+                "otUnits": [
+                    {
+                        "teacher": "Верещагина Л. Н.",
+                        "group": "ЮЮ36",
+                        "room": "710",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-24",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "зач Гражданское право",
+                "otUnits": [
+                    {
+                        "teacher": "Верещагина Л. Н.",
+                        "group": "ЮЮ36",
+                        "room": "710",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-26",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-26",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "зач Гражданское право",
+                "otUnits": [
+                    {
+                        "teacher": "Верещагина Л. Н.",
+                        "group": "ЮЮ31",
+                        "room": "316",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-26",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "зач Гражданское право",
+                "otUnits": [
+                    {
+                        "teacher": "Верещагина Л. Н.",
+                        "group": "ЮЮ31",
+                        "room": "316",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-28",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "зач Гражданское право",
+                "otUnits": [
+                    {
+                        "teacher": "Верещагина Л. Н.",
+                        "group": "ЮЮ3B",
+                        "room": "705",
+                        "additional": "26",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-28",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "зач Гражданское право",
+                "otUnits": [
+                    {
+                        "teacher": "Верещагина Л. Н.",
+                        "group": "ЮЮ3B",
+                        "room": "705",
+                        "additional": "26",
                         "onlineUrl": null,
                         "subject": null
                     }

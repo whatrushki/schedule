@@ -3414,6 +3414,14 @@
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
+                    },
+                    {
+                        "teacher": "Токарев Г. Н.",
+                        "group": "ВПИ11",
+                        "room": "Л/А Манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -3563,7 +3571,7 @@
                     {
                         "teacher": "Колесникова О. В.",
                         "group": "ВПИ11",
-                        "room": "498",
+                        "room": "458",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3583,12 +3591,31 @@
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Потанина О. Ю.",
+                        "group": "ВПИ11",
+                        "room": "465б",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
                 "subject": "пр Математический анализ",
                 "otUnits": [
                     {
                         "teacher": "Фролова Н. В.",
                         "group": "ВПИ11",
-                        "room": "402",
+                        "room": "465б",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3607,7 +3634,26 @@
                     {
                         "teacher": "Зубарева Е. Г.",
                         "group": "ВПИ11",
-                        "room": "213",
+                        "room": "392",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Потанина О. Ю.",
+                        "group": "ВПИ11",
+                        "room": "465б",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3624,15 +3670,15 @@
         "lessons": [
             {
                 "date": "2026-11-13",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Иностранный язык (английский)",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Дискретная математика",
                 "otUnits": [
                     {
-                        "teacher": "Потанина О. Ю.",
+                        "teacher": "Пожарская Е. Д.",
                         "group": "ВПИ11",
-                        "room": "213",
+                        "room": "305",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3643,78 +3689,15 @@
             },
             {
                 "date": "2026-11-13",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
                 "subject": "лек Информатика и программирование",
                 "otUnits": [
                     {
                         "teacher": "Соболь Б. В.",
                         "group": "ВПИ11",
                         "room": "305",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-14",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-14",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр История России",
-                "otUnits": [
-                    {
-                        "teacher": "Воскобойников С. Г.",
-                        "group": "ВПИ11",
-                        "room": "701",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-14",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Дискретная математика",
-                "otUnits": [
-                    {
-                        "teacher": "Пожарская Е. Д.",
-                        "group": "ВПИ11",
-                        "room": "310",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-14",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Иностранный язык (английский)",
-                "otUnits": [
-                    {
-                        "teacher": "Потанина О. Ю.",
-                        "group": "ВПИ11",
-                        "room": "402",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3759,6 +3742,14 @@
                         "teacher": "Токарев Г. Н.",
                         "group": "ВПИ11",
                         "room": "манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Токарев Г. Н.",
+                        "group": "ВПИ11",
+                        "room": "Л/А Манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
@@ -3840,7 +3831,32 @@
                     {
                         "teacher": "Зубарева Е. Г.",
                         "group": "ВПИ11",
-                        "room": "167",
+                        "room": "304",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-18",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-18",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Фролова Н. В.",
+                        "group": "ВПИ11",
+                        "room": "177",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3865,7 +3881,7 @@
                     {
                         "teacher": "Соболь Б. В.",
                         "group": "ВПИ11",
-                        "room": "478",
+                        "room": "305",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3917,6 +3933,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-11-20",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Дискретная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Пожарская Е. Д.",
+                        "group": "ВПИ11",
+                        "room": "421",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -3948,13 +3983,13 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "пр Математический анализ",
+                "subject": "лек Физика",
                 "otUnits": [
                     {
-                        "teacher": "Фролова Н. В.",
+                        "teacher": "Лемешко Г. Ф.",
                         "group": "ВПИ11",
-                        "room": "211",
-                        "additional": "1",
+                        "room": "423",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4020,6 +4055,14 @@
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
+                    },
+                    {
+                        "teacher": "Токарев Г. Н.",
+                        "group": "ВПИ11",
+                        "room": "Л/А Манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -4035,7 +4078,7 @@
                     {
                         "teacher": "Фролова Н. В.",
                         "group": "ВПИ11",
-                        "room": "140",
+                        "room": "109",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4150,7 +4193,7 @@
                     {
                         "teacher": "Фролова Н. В.",
                         "group": "ВПИ11",
-                        "room": "498",
+                        "room": "402",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4169,7 +4212,7 @@
                     {
                         "teacher": "Колесникова О. В.",
                         "group": "ВПИ11",
-                        "room": "498",
+                        "room": "358",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4194,7 +4237,26 @@
                     {
                         "teacher": "Зубарева Е. Г.",
                         "group": "ВПИ11",
-                        "room": "213",
+                        "room": "458",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Потанина О. Ю.",
+                        "group": "ВПИ11",
+                        "room": "177",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4211,15 +4273,34 @@
         "lessons": [
             {
                 "date": "2026-11-27",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек История России",
+                "otUnits": [
+                    {
+                        "teacher": "Воскобойников С. Г.",
+                        "group": "ВПИ11",
+                        "room": "313",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-27",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Иностранный язык (английский)",
+                "subject": "лек Информатика и программирование",
                 "otUnits": [
                     {
-                        "teacher": "Потанина О. Ю.",
+                        "teacher": "Соболь Б. В.",
                         "group": "ВПИ11",
-                        "room": "213",
+                        "room": "310",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4233,12 +4314,12 @@
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
-                "subject": "лек Информатика и программирование",
+                "subject": "пр Иностранный язык (английский)",
                 "otUnits": [
                     {
-                        "teacher": "Соболь Б. В.",
+                        "teacher": "Потанина О. Ю.",
                         "group": "ВПИ11",
-                        "room": "305",
+                        "room": "213",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4290,25 +4371,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-11-28",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Иностранный язык (английский)",
-                "otUnits": [
-                    {
-                        "teacher": "Потанина О. Ю.",
-                        "group": "ВПИ11",
-                        "room": "402",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -4349,6 +4411,14 @@
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
+                    },
+                    {
+                        "teacher": "Токарев Г. Н.",
+                        "group": "ВПИ11",
+                        "room": "Л/А Манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -4370,7 +4440,7 @@
                     {
                         "teacher": "Фролова Н. В.",
                         "group": "ВПИ11",
-                        "room": "480б",
+                        "room": "257а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4389,7 +4459,7 @@
                     {
                         "teacher": "Потанина О. Ю.",
                         "group": "ВПИ11",
-                        "room": "355",
+                        "room": "161",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4408,8 +4478,8 @@
                     {
                         "teacher": "Воскобойников С. Г.",
                         "group": "ВПИ11",
-                        "room": "402",
-                        "additional": "2",
+                        "room": "193",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4444,6 +4514,25 @@
         "lessons": [
             {
                 "date": "2026-12-03",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Лемешко Г. Ф.",
+                        "group": "ВПИ11",
+                        "room": "410",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-03",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -4452,7 +4541,7 @@
                     {
                         "teacher": "Соболь Б. В.",
                         "group": "ВПИ11",
-                        "room": "338",
+                        "room": "478",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4477,7 +4566,7 @@
                     {
                         "teacher": "Рябых Г. Ю.",
                         "group": "ВПИ11",
-                        "room": "140",
+                        "room": "177",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4496,7 +4585,7 @@
                     {
                         "teacher": "Рябых Г. Ю.",
                         "group": "ВПИ11",
-                        "room": "460а",
+                        "room": "177",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4521,7 +4610,7 @@
                     {
                         "teacher": "Лемешко Г. Ф.",
                         "group": "ВПИ11",
-                        "room": "402",
+                        "room": "427а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4540,7 +4629,7 @@
                     {
                         "teacher": "Фролова Н. В.",
                         "group": "ВПИ11",
-                        "room": "211",
+                        "room": "402",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4604,6 +4693,14 @@
                         "teacher": "Токарев Г. Н.",
                         "group": "ВПИ11",
                         "room": "манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Токарев Г. Н.",
+                        "group": "ВПИ11",
+                        "room": "Л/А Манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
@@ -4674,7 +4771,7 @@
                     {
                         "teacher": "Фролова Н. В.",
                         "group": "ВПИ11",
-                        "room": "123",
+                        "room": "177",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4737,7 +4834,7 @@
                     {
                         "teacher": "Фролова Н. В.",
                         "group": "ВПИ11",
-                        "room": "498",
+                        "room": "177",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4756,7 +4853,7 @@
                     {
                         "teacher": "Колесникова О. В.",
                         "group": "ВПИ11",
-                        "room": "498",
+                        "room": "458",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4773,6 +4870,25 @@
         "lessons": [
             {
                 "date": "2026-12-10",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Потанина О. Ю.",
+                        "group": "ВПИ11",
+                        "room": "465б",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -4781,7 +4897,26 @@
                     {
                         "teacher": "Зубарева Е. Г.",
                         "group": "ВПИ11",
-                        "room": "213",
+                        "room": "392",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Иностранный язык (английский)",
+                "otUnits": [
+                    {
+                        "teacher": "Потанина О. Ю.",
+                        "group": "ВПИ11",
+                        "room": "465б",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4798,15 +4933,15 @@
         "lessons": [
             {
                 "date": "2026-12-11",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Иностранный язык (английский)",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Дискретная математика",
                 "otUnits": [
                     {
-                        "teacher": "Потанина О. Ю.",
+                        "teacher": "Пожарская Е. Д.",
                         "group": "ВПИ11",
-                        "room": "213",
+                        "room": "305",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4817,78 +4952,15 @@
             },
             {
                 "date": "2026-12-11",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
                 "subject": "лек Информатика и программирование",
                 "otUnits": [
                     {
                         "teacher": "Соболь Б. В.",
                         "group": "ВПИ11",
                         "room": "305",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-12",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-12",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр История России",
-                "otUnits": [
-                    {
-                        "teacher": "Воскобойников С. Г.",
-                        "group": "ВПИ11",
-                        "room": "701",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-12",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лек Дискретная математика",
-                "otUnits": [
-                    {
-                        "teacher": "Пожарская Е. Д.",
-                        "group": "ВПИ11",
-                        "room": "310",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-12",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Иностранный язык (английский)",
-                "otUnits": [
-                    {
-                        "teacher": "Потанина О. Ю.",
-                        "group": "ВПИ11",
-                        "room": "402",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4936,6 +5008,14 @@
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
+                    },
+                    {
+                        "teacher": "Токарев Г. Н.",
+                        "group": "ВПИ11",
+                        "room": "Л/А Манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -4957,7 +5037,7 @@
                     {
                         "teacher": "Фролова Н. В.",
                         "group": "ВПИ11",
-                        "room": "480б",
+                        "room": "177",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5020,7 +5100,7 @@
                     {
                         "teacher": "Соболь Б. В.",
                         "group": "ВПИ11",
-                        "room": "338",
+                        "room": "238",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5045,7 +5125,7 @@
                     {
                         "teacher": "Рябых Г. Ю.",
                         "group": "ВПИ11",
-                        "room": "140",
+                        "room": "177",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5064,7 +5144,7 @@
                     {
                         "teacher": "Рябых Г. Ю.",
                         "group": "ВПИ11",
-                        "room": "460а",
+                        "room": "177",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5108,8 +5188,33 @@
                     {
                         "teacher": "Фролова Н. В.",
                         "group": "ВПИ11",
-                        "room": "211",
+                        "room": "402",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-21",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "зач Физическая культура и спорт (ОФП2)",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев Г. Н.",
+                        "group": "ВПИ11",
+                        "room": "Л/А Манеж",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }

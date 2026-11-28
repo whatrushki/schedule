@@ -27,7 +27,7 @@
                 "number": 3,
                 "startTime": "10:00",
                 "endTime": "10:50",
-                "subject": "Бизнес-аналитика",
+                "subject": "Предмет не указан",
                 "otUnits": [
                     {
                         "teacher": "Чумаченко С.Г.",
@@ -106,6 +106,25 @@
         "lessons": [
             {
                 "date": "2026-11-30",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Инструментальные средства разработки программного обеспечения",
+                "otUnits": [
+                    {
+                        "teacher": "Павлова В.А.",
+                        "group": "ИС-46",
+                        "room": "306",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-30",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -148,9 +167,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Марышева О.В.",
+                        "group": "ИС-46",
+                        "room": "316",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-30",
@@ -188,7 +216,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
@@ -311,17 +339,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "ИС-46",
-                        "room": "104",
+                        "room": "111",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "ИС-46",
-                        "room": "111",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -653,17 +681,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Прыгунова Т.А.",
                         "group": "ИС-46",
-                        "room": "111",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Прыгунова Т.А.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "ИС-46",
-                        "room": "104",
+                        "room": "111",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

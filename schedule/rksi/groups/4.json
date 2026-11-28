@@ -78,7 +78,7 @@
                     {
                         "teacher": "Доценко Л.А.",
                         "group": "БУ-11",
-                        "room": "40",
+                        "room": "29",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -103,14 +103,14 @@
                     {
                         "teacher": "Мугутдинова Н.Ш.",
                         "group": "БУ-11",
-                        "room": "13",
+                        "room": "32",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-30",
@@ -156,9 +156,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Шумина О.О.",
+                        "group": "БУ-11",
+                        "room": "17",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

@@ -32,7 +32,7 @@
                     {
                         "teacher": "Дущенков Д.А.",
                         "group": "ИБА-11",
-                        "room": "21",
+                        "room": "29",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -51,7 +51,7 @@
                     {
                         "teacher": "Дущенков Д.А.",
                         "group": "ИБА-13",
-                        "room": "21",
+                        "room": "29",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -70,7 +70,7 @@
                     {
                         "teacher": "Дущенков Д.А.",
                         "group": "ИБА-24",
-                        "room": "21",
+                        "room": "33",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -89,7 +89,7 @@
                     {
                         "teacher": "Дущенков Д.А.",
                         "group": "ИБА-24",
-                        "room": "21",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -108,7 +108,7 @@
                     {
                         "teacher": "Дущенков Д.А.",
                         "group": "ИБТ-23",
-                        "room": "21",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -127,7 +127,7 @@
                     {
                         "teacher": "Дущенков Д.А.",
                         "group": "ИБТ-21",
-                        "room": "21",
+                        "room": "41",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
@@ -140,8 +140,27 @@
     },
     {
         "date": "2026-11-30",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
+            {
+                "date": "2026-11-30",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "Информатика",
+                "otUnits": [
+                    {
+                        "teacher": "Дущенков Д.А",
+                        "group": "ТД-13",
+                        "room": "20",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
             {
                 "date": "2026-11-30",
                 "number": 2,
@@ -150,16 +169,16 @@
                 "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Дущенков Даниил Александрович",
+                        "teacher": "Дущенков Д.А.",
                         "group": "ТД-13",
-                        "room": "42",
+                        "room": "20",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-30",
@@ -169,7 +188,7 @@
                 "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
-                        "teacher": "Дущенков Даниил Александрович",
+                        "teacher": "Дущенков Д.А.",
                         "group": "ИБТ-22",
                         "room": "42",
                         "additional": "2",
@@ -178,7 +197,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Дущенков Д.А.",
+                        "group": "ИБА-13",
+                        "room": "36",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             },
             {
                 "date": "2026-11-30",
@@ -188,16 +226,16 @@
                 "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
-                        "teacher": "Дущенков Даниил Александрович",
+                        "teacher": "Дущенков Д.А.",
                         "group": "ИБТ-22",
-                        "room": "42",
+                        "room": "31",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-30",
@@ -207,16 +245,16 @@
                 "subject": "Информатика",
                 "otUnits": [
                     {
-                        "teacher": "Дущенков Даниил Александрович",
+                        "teacher": "Дущенков Д.А.",
                         "group": "ИБА-24",
-                        "room": "42",
+                        "room": "31",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-30",
@@ -226,16 +264,16 @@
                 "subject": "Основы алгоритмизации и программирования",
                 "otUnits": [
                     {
-                        "teacher": "Дущенков Даниил Александрович",
+                        "teacher": "Дущенков Д.А.",
                         "group": "ИБТ-23",
-                        "room": "42",
+                        "room": "31",
                         "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

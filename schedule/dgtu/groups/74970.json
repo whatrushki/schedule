@@ -3361,8 +3361,8 @@
                     {
                         "teacher": "Гоголь Е. Г.",
                         "group": "СБД-32",
-                        "room": "318",
-                        "additional": "23",
+                        "room": "106",
+                        "additional": "15",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3380,8 +3380,8 @@
                     {
                         "teacher": "Гоголь Е. Г.",
                         "group": "СБД-32",
-                        "room": "318",
-                        "additional": "23",
+                        "room": "106",
+                        "additional": "15",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3575,8 +3575,8 @@
                     {
                         "teacher": "Цыбрий И. Г.",
                         "group": "СБД-32",
-                        "room": "212",
-                        "additional": "25",
+                        "room": "304",
+                        "additional": "23",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3594,8 +3594,8 @@
                     {
                         "teacher": "Цыбрий И. Г.",
                         "group": "СБД-32",
-                        "room": "212",
-                        "additional": "25",
+                        "room": "304",
+                        "additional": "23",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3632,8 +3632,8 @@
                     {
                         "teacher": "Цыбрий И. Г.",
                         "group": "СБД-32",
-                        "room": "212",
-                        "additional": "25",
+                        "room": "417",
+                        "additional": "23",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3647,6 +3647,25 @@
         "date": "2026-12-02",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-12-02",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр УП.03",
+                "otUnits": [
+                    {
+                        "teacher": "Цыбрий И. Г.",
+                        "group": "СБД-32",
+                        "room": "304",
+                        "additional": "23",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-12-02",
                 "number": 5,
@@ -3775,44 +3794,6 @@
         "lessons": [
             {
                 "date": "2026-12-05",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр УП.03",
-                "otUnits": [
-                    {
-                        "teacher": "Цыбрий И. Г.",
-                        "group": "СБД-32",
-                        "room": "219",
-                        "additional": "25",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-05",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр УП.03",
-                "otUnits": [
-                    {
-                        "teacher": "Цыбрий И. Г.",
-                        "group": "СБД-32",
-                        "room": "219",
-                        "additional": "25",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-05",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -3840,8 +3821,71 @@
                     {
                         "teacher": "Цыбрий И. Г.",
                         "group": "СБД-32",
-                        "room": "219",
-                        "additional": "25",
+                        "room": "304",
+                        "additional": "23",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр УП.03",
+                "otUnits": [
+                    {
+                        "teacher": "Цыбрий И. Г.",
+                        "group": "СБД-32",
+                        "room": "304",
+                        "additional": "23",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-28",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "экз ПМ 03",
+                "otUnits": [
+                    {
+                        "teacher": "Иванченко Н. А.",
+                        "group": "СБД-32",
+                        "room": "402",
+                        "additional": "23",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-28",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "экз ПМ 03",
+                "otUnits": [
+                    {
+                        "teacher": "Иванченко Н. А.",
+                        "group": "СБД-32",
+                        "room": "402",
+                        "additional": "23",
                         "onlineUrl": null,
                         "subject": null
                     }

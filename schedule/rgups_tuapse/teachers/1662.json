@@ -1,13 +1,32 @@
 [
     {
-        "date": "2026-11-11",
+        "date": "2026-11-23",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-11",
+                "date": "2026-11-23",
                 "number": 1,
                 "startTime": "08:20",
                 "endTime": "09:50",
+                "subject": "Основы геодезии",
+                "otUnits": [
+                    {
+                        "teacher": "Дьяченко В.А.",
+                        "group": "СЭЗ-2-026",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-23",
+                "number": 2,
+                "startTime": "10:05",
+                "endTime": "11:35",
                 "subject": "Эксплуатация зданий и сооружений",
                 "otUnits": [
                     {
@@ -29,9 +48,67 @@
                 ],
                 "type": "LECTURE",
                 "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-24",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-24",
+                "number": 1,
+                "startTime": "08:20",
+                "endTime": "09:50",
+                "subject": "Основы геодезии",
+                "otUnits": [
+                    {
+                        "teacher": "Дьяченко В.А.",
+                        "group": "СЭЗ-2-025",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
             },
             {
-                "date": "2026-11-11",
+                "date": "2026-11-24",
+                "number": 2,
+                "startTime": "10:05",
+                "endTime": "11:35",
+                "subject": "Эксплуатация зданий и сооружений",
+                "otUnits": [
+                    {
+                        "teacher": "Дьяченко В.А.",
+                        "group": "СЭЗ-4-021",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Дьяченко В.А.",
+                        "group": "СЭЗ-4-022",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-25",
                 "number": 2,
                 "startTime": "10:05",
                 "endTime": "11:35",
@@ -52,46 +129,38 @@
         ]
     },
     {
-        "date": "2026-11-12",
+        "date": "2026-11-30",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-12",
+                "date": "2026-11-30",
                 "number": 1,
                 "startTime": "08:20",
                 "endTime": "09:50",
-                "subject": "Эксплуатация зданий и сооружений",
+                "subject": "Основы геодезии",
                 "otUnits": [
                     {
                         "teacher": "Дьяченко В.А.",
-                        "group": "СЭЗ-4-021",
-                        "room": "-",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Дьяченко В.А.",
-                        "group": "СЭЗ-4-022",
+                        "group": "СЭЗ-2-026",
                         "room": "-",
                         "additional": "",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
-                "type": "LECTURE",
+                "type": "PRACTICE",
                 "state": "COMMON"
             },
             {
-                "date": "2026-11-12",
+                "date": "2026-11-30",
                 "number": 2,
                 "startTime": "10:05",
                 "endTime": "11:35",
-                "subject": "Основы геодезии",
+                "subject": "Эксплуатация зданий и сооружений",
                 "otUnits": [
                     {
                         "teacher": "Дьяченко В.А.",
-                        "group": "СЭЗ-2-026",
+                        "group": "СЭЗ-4-022",
                         "room": "-",
                         "additional": "",
                         "onlineUrl": null,
@@ -104,33 +173,14 @@
         ]
     },
     {
-        "date": "2026-11-13",
+        "date": "2026-12-01",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-13",
+                "date": "2026-12-01",
                 "number": 1,
                 "startTime": "08:20",
                 "endTime": "09:50",
-                "subject": "Основы геодезии",
-                "otUnits": [
-                    {
-                        "teacher": "Дьяченко В.А.",
-                        "group": "СЭЗ-2-026",
-                        "room": "-",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "PRACTICE",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-13",
-                "number": 2,
-                "startTime": "10:05",
-                "endTime": "11:35",
                 "subject": "Основы геодезии",
                 "otUnits": [
                     {
@@ -144,56 +194,17 @@
                 ],
                 "type": "PRACTICE",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-18",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
             {
-                "date": "2026-11-18",
-                "number": 1,
-                "startTime": "08:20",
-                "endTime": "09:50",
-                "subject": "Эксплуатация зданий и сооружений",
+                "date": "2026-12-01",
+                "number": 2,
+                "startTime": "10:05",
+                "endTime": "11:35",
+                "subject": "Реконструкция зданий и сооружений",
                 "otUnits": [
                     {
                         "teacher": "Дьяченко В.А.",
                         "group": "СЭЗ-4-021",
-                        "room": "-",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Дьяченко В.А.",
-                        "group": "СЭЗ-4-022",
-                        "room": "-",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-19",
-                "number": 1,
-                "startTime": "08:20",
-                "endTime": "09:50",
-                "subject": "Основы геодезии",
-                "otUnits": [
-                    {
-                        "teacher": "Дьяченко В.А.",
-                        "group": "СЭЗ-2-026",
                         "room": "-",
                         "additional": "",
                         "onlineUrl": null,
@@ -202,42 +213,15 @@
                 ],
                 "type": "PRACTICE",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-11-19",
-                "number": 2,
-                "startTime": "10:05",
-                "endTime": "11:35",
-                "subject": "Эксплуатация зданий и сооружений",
-                "otUnits": [
-                    {
-                        "teacher": "Дьяченко В.А.",
-                        "group": "СЭЗ-4-021",
-                        "room": "-",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Дьяченко В.А.",
-                        "group": "СЭЗ-4-022",
-                        "room": "-",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "LECTURE",
-                "state": "COMMON"
             }
         ]
     },
     {
-        "date": "2026-11-20",
+        "date": "2026-12-02",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-20",
+                "date": "2026-12-02",
                 "number": 1,
                 "startTime": "08:20",
                 "endTime": "09:50",
@@ -264,15 +248,40 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-11-20",
+                "date": "2026-12-02",
                 "number": 2,
                 "startTime": "10:05",
                 "endTime": "11:35",
-                "subject": "Основы геодезии",
+                "subject": "Реконструкция зданий и сооружений",
                 "otUnits": [
                     {
                         "teacher": "Дьяченко В.А.",
-                        "group": "СЭЗ-2-025",
+                        "group": "СЭЗ-4-022",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "PRACTICE",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-04",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-04",
+                "number": 2,
+                "startTime": "10:05",
+                "endTime": "11:35",
+                "subject": "Эксплуатация зданий и сооружений",
+                "otUnits": [
+                    {
+                        "teacher": "Дьяченко В.А.",
+                        "group": "СЭЗ-4-021",
                         "room": "-",
                         "additional": "",
                         "onlineUrl": null,

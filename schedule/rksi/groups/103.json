@@ -5,6 +5,25 @@
         "lessons": [
             {
                 "date": "2026-11-30",
+                "number": 1,
+                "startTime": "08:00",
+                "endTime": "09:30",
+                "subject": "УП",
+                "otUnits": [
+                    {
+                        "teacher": "Карачевцева Д.Г.",
+                        "group": "СА-37",
+                        "room": "326",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-30",
                 "number": 2,
                 "startTime": "09:40",
                 "endTime": "11:10",
@@ -47,9 +66,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Ермолина Л.В,",
+                        "group": "СА-37",
+                        "room": "114а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-30",
@@ -68,7 +96,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-30",
@@ -87,7 +115,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             }
         ]
     },
@@ -1312,17 +1340,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Лебедева М.В.",
+                        "teacher": "Черноштан О.Н.",
                         "group": "СА-37",
-                        "room": "103",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Лебедева М.В.",
                         "group": "СА-37",
-                        "room": "104",
+                        "room": "103",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1339,17 +1367,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Лебедева М.В.",
+                        "teacher": "Черноштан О.Н.",
                         "group": "СА-37",
-                        "room": "103",
+                        "room": "104",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Лебедева М.В.",
                         "group": "СА-37",
-                        "room": "104",
+                        "room": "103",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

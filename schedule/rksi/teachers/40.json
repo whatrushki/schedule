@@ -87,13 +87,32 @@
         "lessons": [
             {
                 "date": "2026-11-30",
+                "number": 4,
+                "startTime": "13:10",
+                "endTime": "14:40",
+                "subject": "Основы финансовой грамотности",
+                "otUnits": [
+                    {
+                        "teacher": "Каверзнева Е.Ю.",
+                        "group": "БУ-21",
+                        "room": "47",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
+            },
+            {
+                "date": "2026-11-30",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:30",
                 "subject": "Основы финансовой грамотности",
                 "otUnits": [
                     {
-                        "teacher": "Каверзнева Елена Юрьевна",
+                        "teacher": "Каверзнева Е.Ю.",
                         "group": "ТД-21",
                         "room": "47",
                         "additional": "2",
@@ -102,7 +121,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-30",
@@ -112,7 +131,7 @@
                 "subject": "Основы финансовой грамотности",
                 "otUnits": [
                     {
-                        "teacher": "Каверзнева Елена Юрьевна",
+                        "teacher": "Каверзнева Е.Ю.",
                         "group": "ТД-22",
                         "room": "47",
                         "additional": "2",
@@ -121,7 +140,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             }
         ]
     },

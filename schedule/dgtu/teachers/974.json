@@ -1751,7 +1751,7 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВПР12",
-                        "room": "143",
+                        "room": "138",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1938,6 +1938,25 @@
         "lessons": [
             {
                 "date": "2026-11-10",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Бедоидзе М. В.",
+                        "group": "ВМО12",
+                        "room": "388",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -1954,37 +1973,24 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-11-11",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-11-10",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
+                "date": "2026-11-11",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
                 "subject": "пр Математический анализ",
                 "otUnits": [
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВМО12",
-                        "room": "317",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-10",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Математический анализ",
-                "otUnits": [
-                    {
-                        "teacher": "Бедоидзе М. В.",
-                        "group": "ВМО12",
-                        "room": "317",
+                        "room": "330",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2152,34 +2158,15 @@
         "lessons": [
             {
                 "date": "2026-11-17",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Математический анализ",
-                "otUnits": [
-                    {
-                        "teacher": "Бедоидзе М. В.",
-                        "group": "ВМО12",
-                        "room": "219а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-17",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Математический анализ",
+                "subject": "пр Алгебра и аналитическая геометрия",
                 "otUnits": [
                     {
                         "teacher": "Бедоидзе М. В.",
-                        "group": "ВМО12",
-                        "room": "219а",
+                        "group": "ВИ11",
+                        "room": "367а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2212,12 +2199,75 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "пр Алгебра и аналитическая геометрия",
+                "subject": "пр Математический анализ",
                 "otUnits": [
                     {
                         "teacher": "Бедоидзе М. В.",
-                        "group": "ВИ11",
-                        "room": "394",
+                        "group": "ВПР11",
+                        "room": "115",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-18",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-18",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Бедоидзе М. В.",
+                        "group": "ВПР12",
+                        "room": "317",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-18",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Бедоидзе М. В.",
+                        "group": "ВМО12",
+                        "room": "317",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-18",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Бедоидзе М. В.",
+                        "group": "ВМО12",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2261,7 +2311,7 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВПР11",
-                        "room": "219",
+                        "room": "492",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2280,26 +2330,7 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВПР12",
-                        "room": "394",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-19",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Математический анализ",
-                "otUnits": [
-                    {
-                        "teacher": "Бедоидзе М. В.",
-                        "group": "ВПР12",
-                        "room": "219",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2324,7 +2355,7 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВПР11",
-                        "room": "323",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2343,7 +2374,7 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВПР13",
-                        "room": "219",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2362,7 +2393,7 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВПР13",
-                        "room": "219",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2559,18 +2590,24 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-11-26",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-11-25",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
+                "date": "2026-11-26",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "пр Математический анализ",
                 "otUnits": [
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВПР11",
-                        "room": "394",
+                        "room": "492",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2620,7 +2657,7 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВМО12",
-                        "room": "394",
+                        "room": "355",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2702,7 +2739,7 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВИ11",
-                        "room": "394",
+                        "room": "427",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2727,7 +2764,7 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВПР13",
-                        "room": "438",
+                        "room": "388",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2746,7 +2783,7 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВПР11",
-                        "room": "413",
+                        "room": "130",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2765,7 +2802,7 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВПР12",
-                        "room": "485",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2784,7 +2821,7 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВПР12",
-                        "room": "485",
+                        "room": "219а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2809,7 +2846,7 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВПР11",
-                        "room": "343",
+                        "room": "323",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2828,7 +2865,7 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВПР13",
-                        "room": "484",
+                        "room": "355",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2847,8 +2884,8 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВПР13",
-                        "room": "305",
-                        "additional": "6",
+                        "room": "355",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2885,7 +2922,7 @@
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВПР12",
-                        "room": "115",
+                        "room": "218а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2900,44 +2937,6 @@
         "date": "2026-12-08",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-12-08",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Математический анализ",
-                "otUnits": [
-                    {
-                        "teacher": "Бедоидзе М. В.",
-                        "group": "ВПР11",
-                        "room": "394",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-08",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Алгебра и аналитическая геометрия",
-                "otUnits": [
-                    {
-                        "teacher": "Бедоидзе М. В.",
-                        "group": "ВИ12",
-                        "room": "358",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-12-08",
                 "number": 4,
@@ -2960,19 +2959,57 @@
         ]
     },
     {
-        "date": "2026-12-09",
+        "date": "2026-12-11",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-12-09",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
+                "date": "2026-12-11",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
                 "subject": "пр Математический анализ",
                 "otUnits": [
                     {
                         "teacher": "Бедоидзе М. В.",
                         "group": "ВПР11",
+                        "room": "424",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-11",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Бедоидзе М. В.",
+                        "group": "ВИ12",
+                        "room": "427",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-11",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Бедоидзе М. В.",
+                        "group": "ВПР13",
                         "room": "427",
                         "additional": "1",
                         "onlineUrl": null,
@@ -2985,20 +3022,20 @@
         ]
     },
     {
-        "date": "2026-12-11",
+        "date": "2026-12-12",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-12-11",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
+                "date": "2026-12-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
                 "subject": "пр Математический анализ",
                 "otUnits": [
                     {
                         "teacher": "Бедоидзе М. В.",
-                        "group": "ВПР13",
-                        "room": "427",
+                        "group": "ВПР11",
+                        "room": "433",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

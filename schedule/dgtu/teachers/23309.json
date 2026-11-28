@@ -823,31 +823,6 @@
         ]
     },
     {
-        "date": "2026-10-29",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-10-29",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек История России",
-                "otUnits": [
-                    {
-                        "teacher": "Русакова А. А.",
-                        "group": "ДПП11, ДПП12",
-                        "room": "405",
-                        "additional": "2",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-10-30",
         "scheduleType": "COMMON",
         "lessons": [
@@ -1068,9 +1043,9 @@
                 "otUnits": [
                     {
                         "teacher": "Русакова А. А.",
-                        "group": "ДПП11, ДПП12",
-                        "room": "405",
-                        "additional": "2",
+                        "group": "ДПО15, ДПП11, ДПП12",
+                        "room": "283",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1086,15 +1061,15 @@
         "lessons": [
             {
                 "date": "2026-11-13",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
                 "subject": "лек История России",
                 "otUnits": [
                     {
                         "teacher": "Русакова А. А.",
                         "group": "ДПО13, ДПО14",
-                        "room": "422",
+                        "room": "412",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -1106,14 +1081,33 @@
         ]
     },
     {
-        "date": "2026-11-20",
+        "date": "2026-11-17",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-20",
+                "date": "2026-11-17",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
+                "subject": "лек История России",
+                "otUnits": [
+                    {
+                        "teacher": "Русакова А. А.",
+                        "group": "ДПО13, ДПО14",
+                        "room": "353",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-17",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
                 "subject": "пр Отечественная история",
                 "otUnits": [
                     {
@@ -1127,7 +1121,13 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-11-20",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
                 "date": "2026-11-20",
                 "number": 2,
@@ -1146,25 +1146,38 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-23",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
             {
-                "date": "2026-11-23",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
+                "date": "2026-11-20",
+                "number": 0,
+                "startTime": "12:00",
+                "endTime": "13:00",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Русакова А. А.",
+                        "group": "",
+                        "room": "308Б",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "UNKNOWN",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-20",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "пр Отечественная история",
                 "otUnits": [
                     {
                         "teacher": "Русакова А. А.",
                         "group": "ГПО21",
-                        "room": "8",
-                        "additional": "",
+                        "room": "407",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1175,11 +1188,55 @@
         ]
     },
     {
-        "date": "2026-11-26",
+        "date": "2026-11-21",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-26",
+                "date": "2026-11-21",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек История России",
+                "otUnits": [
+                    {
+                        "teacher": "Русакова А. А.",
+                        "group": "ДПО15, ДПП11, ДПП12",
+                        "room": "507",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-10",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек История России",
+                "otUnits": [
+                    {
+                        "teacher": "Русакова А. А.",
+                        "group": "ДСО11, ДСО12",
+                        "room": "363",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -1187,9 +1244,34 @@
                 "otUnits": [
                     {
                         "teacher": "Русакова А. А.",
-                        "group": "ДПП11, ДПП12",
-                        "room": "405",
-                        "additional": "2",
+                        "group": "ДПО15, ДПП11, ДПП12",
+                        "room": "283",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-11",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-11",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек История России",
+                "otUnits": [
+                    {
+                        "teacher": "Русакова А. А.",
+                        "group": "ДПО13, ДПО14",
+                        "room": "016",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }

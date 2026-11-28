@@ -2487,7 +2487,7 @@
                     {
                         "teacher": "Баранов И. В.",
                         "group": "ВПМ32",
-                        "room": "438",
+                        "room": "407",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2607,7 +2607,7 @@
                     {
                         "teacher": "Нурутдинова И. Н.",
                         "group": "ВПМ32",
-                        "room": "313",
+                        "room": "413",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2781,6 +2781,14 @@
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
+                    },
+                    {
+                        "teacher": "Корбан А. Н.",
+                        "group": "ВПМ32",
+                        "room": "Л/А Манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -2797,12 +2805,12 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лек Математическое моделирование",
+                "subject": "пр Исследование операций и теория игр",
                 "otUnits": [
                     {
-                        "teacher": "Дорофеев А. А.",
+                        "teacher": "Богданец Д. А.",
                         "group": "ВПМ32",
-                        "room": "413",
+                        "room": "447",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2841,12 +2849,12 @@
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "пр Программные технологии математического моделирования",
+                "subject": "пр Математическое моделирование",
                 "otUnits": [
                     {
-                        "teacher": "Короткова А. С.",
+                        "teacher": "Дорофеев А. А.",
                         "group": "ВПМ32",
-                        "room": "392",
+                        "room": "467а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2865,7 +2873,7 @@
                     {
                         "teacher": "Богданец Д. А.",
                         "group": "ВПМ32",
-                        "room": "017",
+                        "room": "465а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2879,12 +2887,37 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "пр Исследование операций и теория игр",
+                "subject": "пр Программные технологии математического моделирования",
+                "otUnits": [
+                    {
+                        "teacher": "Короткова А. С.",
+                        "group": "ВПМ32",
+                        "room": "402",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-18",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-18",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Методы оптимизации",
                 "otUnits": [
                     {
                         "teacher": "Богданец Д. А.",
                         "group": "ВПМ32",
-                        "room": "465б",
+                        "room": "356",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2894,16 +2927,35 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-11-14",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Математическое моделирование",
+                "date": "2026-11-18",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Методы оптимизации",
+                "otUnits": [
+                    {
+                        "teacher": "Богданец Д. А.",
+                        "group": "ВПМ32",
+                        "room": "467а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-18",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Математическое моделирование",
                 "otUnits": [
                     {
                         "teacher": "Дорофеев А. А.",
                         "group": "ВПМ32",
-                        "room": "213",
+                        "room": "427",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2920,6 +2972,25 @@
         "lessons": [
             {
                 "date": "2026-11-19",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Численные методы",
+                "otUnits": [
+                    {
+                        "teacher": "Баранов И. В.",
+                        "group": "ВПМ32",
+                        "room": "374",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-19",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -2929,6 +3000,14 @@
                         "teacher": "Корбан А. Н.",
                         "group": "ВПМ32",
                         "room": "манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Корбан А. Н.",
+                        "group": "ВПМ32",
+                        "room": "Л/А Манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
@@ -2947,7 +3026,7 @@
                     {
                         "teacher": "Баранов И. В.",
                         "group": "ВПМ32",
-                        "room": "419",
+                        "room": "109",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2993,18 +3072,43 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-20",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-20",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Методы оптимизации",
+                "otUnits": [
+                    {
+                        "teacher": "Азимова Н. Н.",
+                        "group": "ВПМ32",
+                        "room": "338",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             },
             {
-                "date": "2026-11-19",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "лек Численные методы",
+                "date": "2026-11-20",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Теория алгоритмов",
                 "otUnits": [
                     {
                         "teacher": "Баранов И. В.",
                         "group": "ВПМ32",
-                        "room": "323",
+                        "room": "467а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3043,12 +3147,12 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "лаб Программные технологии математического моделирования",
+                "subject": "лек Исследование операций и теория игр",
                 "otUnits": [
                     {
-                        "teacher": "Короткова А. С.",
+                        "teacher": "Нурутдинова И. Н.",
                         "group": "ВПМ32",
-                        "room": "356",
+                        "room": "313",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3062,13 +3166,13 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "пр Исследование операций и теория игр",
+                "subject": "лаб Программные технологии математического моделирования",
                 "otUnits": [
                     {
-                        "teacher": "Богданец Д. А.",
+                        "teacher": "Короткова А. С.",
                         "group": "ВПМ32",
-                        "room": "211",
-                        "additional": "1",
+                        "room": "205",
+                        "additional": "6",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3081,12 +3185,12 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лек Исследование операций и теория игр",
+                "subject": "пр Исследование операций и теория игр",
                 "otUnits": [
                     {
-                        "teacher": "Нурутдинова И. Н.",
+                        "teacher": "Богданец Д. А.",
                         "group": "ВПМ32",
-                        "room": "413",
+                        "room": "177",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3212,7 +3316,45 @@
                     {
                         "teacher": "Короткова А. С.",
                         "group": "ВПМ32",
-                        "room": "419",
+                        "room": "388",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Прикладная механика",
+                "otUnits": [
+                    {
+                        "teacher": "Савенков М. В.",
+                        "group": "ВПМ32",
+                        "room": "130",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Прикладная механика",
+                "otUnits": [
+                    {
+                        "teacher": "Савенков М. В.",
+                        "group": "ВПМ32",
+                        "room": "130",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3260,6 +3402,14 @@
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
+                    },
+                    {
+                        "teacher": "Корбан А. Н.",
+                        "group": "ВПМ32",
+                        "room": "Л/А Манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -3281,7 +3431,7 @@
                     {
                         "teacher": "Дорофеев А. А.",
                         "group": "ВПМ32",
-                        "room": "413",
+                        "room": "402",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3300,7 +3450,7 @@
                     {
                         "teacher": "Богданец Д. А.",
                         "group": "ВПМ32",
-                        "room": "358",
+                        "room": "356",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3325,7 +3475,7 @@
                     {
                         "teacher": "Короткова А. С.",
                         "group": "ВПМ32",
-                        "room": "392",
+                        "room": "213",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3344,7 +3494,7 @@
                     {
                         "teacher": "Богданец Д. А.",
                         "group": "ВПМ32",
-                        "room": "017",
+                        "room": "490",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3358,10 +3508,10 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "пр Исследование операций и теория игр",
+                "subject": "пр Математическое моделирование",
                 "otUnits": [
                     {
-                        "teacher": "Богданец Д. А.",
+                        "teacher": "Дорофеев А. А.",
                         "group": "ВПМ32",
                         "room": "465б",
                         "additional": "1",
@@ -3374,13 +3524,13 @@
             },
             {
                 "date": "2026-11-28",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Математическое моделирование",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Исследование операций и теория игр",
                 "otUnits": [
                     {
-                        "teacher": "Дорофеев А. А.",
+                        "teacher": "Богданец Д. А.",
                         "group": "ВПМ32",
                         "room": "213",
                         "additional": "1",
@@ -3411,6 +3561,14 @@
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
+                    },
+                    {
+                        "teacher": "Корбан А. Н.",
+                        "group": "ВПМ32",
+                        "room": "Л/А Манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -3426,8 +3584,8 @@
                     {
                         "teacher": "Баранов И. В.",
                         "group": "ВПМ32",
-                        "room": "419",
-                        "additional": "1",
+                        "room": "8",
+                        "additional": "",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3483,7 +3641,7 @@
                     {
                         "teacher": "Баранов И. В.",
                         "group": "ВПМ32",
-                        "room": "143",
+                        "room": "130",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3508,7 +3666,7 @@
                     {
                         "teacher": "Михалев А. И.",
                         "group": "ВПМ32",
-                        "room": "211",
+                        "room": "402",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3527,7 +3685,7 @@
                     {
                         "teacher": "Короткова А. С.",
                         "group": "ВПМ32",
-                        "room": "356",
+                        "room": "392",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3546,7 +3704,7 @@
                     {
                         "teacher": "Богданец Д. А.",
                         "group": "ВПМ32",
-                        "room": "140",
+                        "room": "211",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3565,7 +3723,7 @@
                     {
                         "teacher": "Нурутдинова И. Н.",
                         "group": "ВПМ32",
-                        "room": "282",
+                        "room": "438",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3609,7 +3767,7 @@
                     {
                         "teacher": "Нурутдинова И. Н.",
                         "group": "ВПМ32",
-                        "room": "282",
+                        "room": "458",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3691,7 +3849,7 @@
                     {
                         "teacher": "Короткова А. С.",
                         "group": "ВПМ32",
-                        "room": "419",
+                        "room": "388",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3739,6 +3897,14 @@
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
+                    },
+                    {
+                        "teacher": "Корбан А. Н.",
+                        "group": "ВПМ32",
+                        "room": "Л/А Манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -3755,12 +3921,12 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лек Математическое моделирование",
+                "subject": "пр Исследование операций и теория игр",
                 "otUnits": [
                     {
-                        "teacher": "Дорофеев А. А.",
+                        "teacher": "Богданец Д. А.",
                         "group": "ВПМ32",
-                        "room": "413",
+                        "room": "402",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3779,7 +3945,7 @@
                     {
                         "teacher": "Богданец Д. А.",
                         "group": "ВПМ32",
-                        "room": "358",
+                        "room": "351",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3799,12 +3965,12 @@
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "пр Программные технологии математического моделирования",
+                "subject": "пр Математическое моделирование",
                 "otUnits": [
                     {
-                        "teacher": "Короткова А. С.",
+                        "teacher": "Дорофеев А. А.",
                         "group": "ВПМ32",
-                        "room": "392",
+                        "room": "467а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3823,7 +3989,7 @@
                     {
                         "teacher": "Богданец Д. А.",
                         "group": "ВПМ32",
-                        "room": "017",
+                        "room": "356",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3837,31 +4003,12 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "пр Исследование операций и теория игр",
+                "subject": "пр Программные технологии математического моделирования",
                 "otUnits": [
                     {
-                        "teacher": "Богданец Д. А.",
+                        "teacher": "Короткова А. С.",
                         "group": "ВПМ32",
-                        "room": "465б",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-12",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Математическое моделирование",
-                "otUnits": [
-                    {
-                        "teacher": "Дорофеев А. А.",
-                        "group": "ВПМ32",
-                        "room": "213",
+                        "room": "402",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3890,6 +4037,14 @@
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
+                    },
+                    {
+                        "teacher": "Корбан А. Н.",
+                        "group": "ВПМ32",
+                        "room": "Л/А Манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
                 "type": "COMMON",
@@ -3905,7 +4060,7 @@
                     {
                         "teacher": "Баранов И. В.",
                         "group": "ВПМ32",
-                        "room": "419",
+                        "room": "362",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3962,7 +4117,7 @@
                     {
                         "teacher": "Баранов И. В.",
                         "group": "ВПМ32",
-                        "room": "143",
+                        "room": "130",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3987,7 +4142,7 @@
                     {
                         "teacher": "Короткова А. С.",
                         "group": "ВПМ32",
-                        "room": "356",
+                        "room": "355",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4006,7 +4161,7 @@
                     {
                         "teacher": "Богданец Д. А.",
                         "group": "ВПМ32",
-                        "room": "140",
+                        "room": "211",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4025,7 +4180,7 @@
                     {
                         "teacher": "Нурутдинова И. Н.",
                         "group": "ВПМ32",
-                        "room": "282",
+                        "room": "130",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

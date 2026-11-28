@@ -3054,7 +3054,7 @@
                     {
                         "teacher": "Егорова С. И.",
                         "group": "УА21",
-                        "room": "374",
+                        "room": "402",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3090,6 +3090,25 @@
         "lessons": [
             {
                 "date": "2026-11-12",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Гордикова П. В.",
+                        "group": "УА21",
+                        "room": "427а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -3107,25 +3126,6 @@
                         "teacher": "Гордикова П. В.",
                         "group": "УА21",
                         "room": "402",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-12",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Гордикова П. В.",
-                        "group": "УА21",
-                        "room": "427а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3152,25 +3152,6 @@
                         "group": "УА21",
                         "room": "283",
                         "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-13",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Персональный имидж и карьерный менеджмент",
-                "otUnits": [
-                    {
-                        "teacher": "Пивоварова И. А.",
-                        "group": "УА21",
-                        "room": "405",
-                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3213,8 +3194,8 @@
                     {
                         "teacher": "Киященко Т. А.",
                         "group": "УА21",
-                        "room": "467",
-                        "additional": "1",
+                        "room": "501",
+                        "additional": "6",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3331,6 +3312,25 @@
         "lessons": [
             {
                 "date": "2026-11-17",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Персональный имидж и карьерный менеджмент",
+                "otUnits": [
+                    {
+                        "teacher": "Шубина О. В.",
+                        "group": "УА21",
+                        "room": "406",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-17",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -3347,50 +3347,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-11-17",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Бажин И. В.",
-                        "group": "УА21",
-                        "room": "449",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-19",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-19",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Основы взаимозаменяемости",
-                "otUnits": [
-                    {
-                        "teacher": "Алиев М. М.",
-                        "group": "УА21",
-                        "room": "477",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -3400,15 +3356,34 @@
         "lessons": [
             {
                 "date": "2026-11-20",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Основы взаимозаменяемости",
+                "otUnits": [
+                    {
+                        "teacher": "Алиев М. М.",
+                        "group": "УА21",
+                        "room": "460а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-20",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "пр Физика",
+                "subject": "лек Техническая механика",
                 "otUnits": [
                     {
-                        "teacher": "Гордикова П. В.",
+                        "teacher": "Полушкин О. А.",
                         "group": "УА21",
-                        "room": "460а",
+                        "room": "292",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3447,12 +3422,39 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Основы научных исследований",
+                "subject": "лаб Физика, п/г 1",
                 "otUnits": [
                     {
-                        "teacher": "Мерзликина А. Е.",
+                        "teacher": "Бажин И. В.",
                         "group": "УА21",
-                        "room": "140",
+                        "room": "427а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Гордикова П. В.",
+                        "group": "УА21",
+                        "room": "427а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-21",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Гордикова П. В.",
+                        "group": "УА21",
+                        "room": "358",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3559,7 +3561,7 @@
                     {
                         "teacher": "Лапшин В. П.",
                         "group": "УА21",
-                        "room": "413",
+                        "room": "444",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3578,7 +3580,7 @@
                     {
                         "teacher": "Полушкин О. А.",
                         "group": "УА21",
-                        "room": "238",
+                        "room": "374",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3603,7 +3605,7 @@
                     {
                         "teacher": "Егорова С. И.",
                         "group": "УА21",
-                        "room": "374",
+                        "room": "310",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3623,6 +3625,25 @@
                         "teacher": "Ковалева В. В.",
                         "group": "УА21",
                         "room": "215",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Материаловедение",
+                "otUnits": [
+                    {
+                        "teacher": "Щербакова Е. Е.",
+                        "group": "УА21",
+                        "room": "223",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3658,24 +3679,54 @@
         "lessons": [
             {
                 "date": "2026-11-26",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Физика, п/г 1",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Основы научных исследований",
                 "otUnits": [
                     {
-                        "teacher": "Бажин И. В.",
+                        "teacher": "Лапшин В. П.",
                         "group": "УА21",
-                        "room": "402",
+                        "room": "336",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
-                    },
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Основы научных исследований",
+                "otUnits": [
                     {
-                        "teacher": "Гордикова П. В.",
+                        "teacher": "Мерзликина А. Е.",
                         "group": "УА21",
-                        "room": "402",
+                        "room": "392",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Персональный имидж и карьерный менеджмент",
+                "otUnits": [
+                    {
+                        "teacher": "Пивоварова И. А.",
+                        "group": "УА21",
+                        "room": "507",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3691,16 +3742,16 @@
         "lessons": [
             {
                 "date": "2026-11-27",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Персональный имидж и карьерный менеджмент",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Основы инклюзивной культуры и дефектологических знаний",
                 "otUnits": [
                     {
-                        "teacher": "Пивоварова И. А.",
+                        "teacher": "Романова Е. А.",
                         "group": "УА21",
-                        "room": "423",
-                        "additional": "8",
+                        "room": "406",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3710,16 +3761,16 @@
             },
             {
                 "date": "2026-11-27",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Персональный имидж и карьерный менеджмент",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Основы инклюзивной культуры и дефектологических знаний",
                 "otUnits": [
                     {
-                        "teacher": "Шубина О. В.",
+                        "teacher": "Романова Е. А.",
                         "group": "УА21",
-                        "room": "024",
-                        "additional": "8",
+                        "room": "405",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3738,12 +3789,20 @@
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
-                "subject": "пр Основы взаимозаменяемости",
+                "subject": "лаб Физика, п/г 1",
                 "otUnits": [
                     {
-                        "teacher": "Алиев М. М.",
+                        "teacher": "Бажин И. В.",
                         "group": "УА21",
-                        "room": "140",
+                        "room": "408",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Гордикова П. В.",
+                        "group": "УА21",
+                        "room": "445",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3762,7 +3821,7 @@
                     {
                         "teacher": "Киященко Т. А.",
                         "group": "УА21",
-                        "room": "467",
+                        "room": "219",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3776,13 +3835,51 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лек Технологическое предпринимательство",
+                "subject": "пр Физика",
                 "otUnits": [
                     {
-                        "teacher": "Киященко Т. А.",
+                        "teacher": "Гордикова П. В.",
                         "group": "УА21",
-                        "room": "510",
-                        "additional": "2",
+                        "room": "171",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-28",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Основы научных исследований",
+                "otUnits": [
+                    {
+                        "teacher": "Мерзликина А. Е.",
+                        "group": "УА21",
+                        "room": "171",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-28",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Персональный имидж и карьерный менеджмент",
+                "otUnits": [
+                    {
+                        "teacher": "Шубина О. В.",
+                        "group": "УА21",
+                        "room": "141",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3806,7 +3903,7 @@
                     {
                         "teacher": "Вислоусова И. Н.",
                         "group": "УА21",
-                        "room": "388",
+                        "room": "171",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3883,12 +3980,20 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "лаб Физика",
+                "subject": "лаб Физика, п/г 1",
                 "otUnits": [
                     {
                         "teacher": "Бажин И. В.",
                         "group": "УА21",
-                        "room": "356",
+                        "room": "446",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Гордикова П. В.",
+                        "group": "УА21",
+                        "room": "427",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3963,7 +4068,7 @@
                     {
                         "teacher": "Рыжова О. С.",
                         "group": "УА21",
-                        "room": "606",
+                        "room": "432",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -4034,6 +4139,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-12-08",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Персональный имидж и карьерный менеджмент",
+                "otUnits": [
+                    {
+                        "teacher": "Шубина О. В.",
+                        "group": "УА21",
+                        "room": "141",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -4051,7 +4175,7 @@
                     {
                         "teacher": "Егорова С. И.",
                         "group": "УА21",
-                        "room": "374",
+                        "room": "402",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4078,25 +4202,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-12-09",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Техническая механика",
-                "otUnits": [
-                    {
-                        "teacher": "Вислоусова И. Н.",
-                        "group": "УА21",
-                        "room": "477",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -4114,7 +4219,7 @@
                     {
                         "teacher": "Бажин И. В.",
                         "group": "УА21",
-                        "room": "402",
+                        "room": "436",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4131,35 +4236,16 @@
         "lessons": [
             {
                 "date": "2026-12-11",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Персональный имидж и карьерный менеджмент",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Материаловедение",
                 "otUnits": [
                     {
-                        "teacher": "Пивоварова И. А.",
+                        "teacher": "Щербакова Е. Е.",
                         "group": "УА21",
-                        "room": "423",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-11",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Персональный имидж и карьерный менеджмент",
-                "otUnits": [
-                    {
-                        "teacher": "Шубина О. В.",
-                        "group": "УА21",
-                        "room": "024",
-                        "additional": "8",
+                        "room": "283",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4182,6 +4268,25 @@
                 "otUnits": [
                     {
                         "teacher": "Алиев М. М.",
+                        "group": "УА21",
+                        "room": "161",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-12",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Техническая механика",
+                "otUnits": [
+                    {
+                        "teacher": "Вислоусова И. Н.",
                         "group": "УА21",
                         "room": "140",
                         "additional": "1",
@@ -4208,7 +4313,7 @@
                     {
                         "teacher": "Вислоусова И. Н.",
                         "group": "УА21",
-                        "room": "388",
+                        "room": "171",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4290,7 +4395,7 @@
                     {
                         "teacher": "Бажин И. В.",
                         "group": "УА21",
-                        "room": "356",
+                        "room": "445",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

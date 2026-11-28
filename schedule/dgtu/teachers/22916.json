@@ -777,6 +777,50 @@
         ]
     },
     {
+        "date": "2026-10-24",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-10-24",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Основы программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Арушанян А. С.",
+                        "group": "ЭМФ21",
+                        "room": "419",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-10-24",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лаб Основы программирования",
+                "otUnits": [
+                    {
+                        "teacher": "Арушанян А. С.",
+                        "group": "ЭМФ21",
+                        "room": "419",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
         "date": "2026-10-27",
         "scheduleType": "COMMON",
         "lessons": [
@@ -997,26 +1041,7 @@
                     {
                         "teacher": "Арушанян А. С.",
                         "group": "ВМО12",
-                        "room": "130",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-05",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "пр Основы проектной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Арушанян А. С.",
-                        "group": "ВМО12",
-                        "room": "130",
+                        "room": "323",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1042,31 +1067,6 @@
                         "teacher": "Арушанян А. С.",
                         "group": "ВПР13",
                         "room": "355",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-12",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-12",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Основы проектной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Арушанян А. С.",
-                        "group": "ВМО13",
-                        "room": "394",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1129,8 +1129,8 @@
                     {
                         "teacher": "Арушанян А. С.",
                         "group": "ВМО12",
-                        "room": "317",
-                        "additional": "1",
+                        "room": "402",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1148,32 +1148,26 @@
                     {
                         "teacher": "Арушанян А. С.",
                         "group": "ВПР12",
-                        "room": "302",
-                        "additional": "8",
+                        "room": "109",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-16",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
             {
-                "date": "2026-11-16",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Информационные системы автоматизации предприятий народного хозяйства",
+                "date": "2026-11-14",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Основы проектной деятельности",
                 "otUnits": [
                     {
                         "teacher": "Арушанян А. С.",
-                        "group": "ВПР13",
-                        "room": "388",
+                        "group": "ВМО13",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1197,6 +1191,56 @@
                 "otUnits": [
                     {
                         "teacher": "Арушанян А. С.",
+                        "group": "ВМО12",
+                        "room": "355",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-18",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-18",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Информационные системы автоматизации предприятий народного хозяйства",
+                "otUnits": [
+                    {
+                        "teacher": "Арушанян А. С.",
+                        "group": "ВПР13",
+                        "room": "388",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-20",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-20",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Основы проектной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Арушанян А. С.",
                         "group": "ВМО13",
                         "room": "317",
                         "additional": "1",
@@ -1210,39 +1254,20 @@
         ]
     },
     {
-        "date": "2026-11-19",
+        "date": "2026-11-21",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-19",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
+                "date": "2026-11-21",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "пр Основы проектной деятельности",
                 "otUnits": [
                     {
                         "teacher": "Арушанян А. С.",
                         "group": "ВМО12",
-                        "room": "130",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-19",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "пр Основы проектной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Арушанян А. С.",
-                        "group": "ВМО12",
-                        "room": "130",
+                        "room": "330",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1279,11 +1304,11 @@
         ]
     },
     {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-26",
+                "date": "2026-11-27",
                 "number": 6,
                 "startTime": "17:45",
                 "endTime": "19:20",
@@ -1292,7 +1317,7 @@
                     {
                         "teacher": "Арушанян А. С.",
                         "group": "ВМО13",
-                        "room": "394",
+                        "room": "218а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1374,8 +1399,8 @@
                     {
                         "teacher": "Арушанян А. С.",
                         "group": "ВПР12",
-                        "room": "302",
-                        "additional": "8",
+                        "room": "330",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1449,7 +1474,7 @@
                     {
                         "teacher": "Арушанян А. С.",
                         "group": "ВМО12",
-                        "room": "130",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1468,7 +1493,7 @@
                     {
                         "teacher": "Арушанян А. С.",
                         "group": "ВМО12",
-                        "room": "130",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1494,31 +1519,6 @@
                         "teacher": "Арушанян А. С.",
                         "group": "ВПР13",
                         "room": "355",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-12-10",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-10",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Основы проектной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Арушанян А. С.",
-                        "group": "ВМО13",
-                        "room": "394",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1581,7 +1581,7 @@
                     {
                         "teacher": "Арушанян А. С.",
                         "group": "ВМО12",
-                        "room": "317",
+                        "room": "388",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1600,8 +1600,27 @@
                     {
                         "teacher": "Арушанян А. С.",
                         "group": "ВПР12",
-                        "room": "302",
-                        "additional": "8",
+                        "room": "130",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-12",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Основы проектной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Арушанян А. С.",
+                        "group": "ВМО13",
+                        "room": "317",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1675,7 +1694,7 @@
                     {
                         "teacher": "Арушанян А. С.",
                         "group": "ВМО12",
-                        "room": "130",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1694,7 +1713,7 @@
                     {
                         "teacher": "Арушанян А. С.",
                         "group": "ВМО12",
-                        "room": "130",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

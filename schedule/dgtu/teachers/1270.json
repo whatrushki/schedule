@@ -1654,7 +1654,7 @@
                     {
                         "teacher": "Болдырихин Н. В.",
                         "group": "ВКБ53",
-                        "room": "447",
+                        "room": "356",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1679,7 +1679,7 @@
                     {
                         "teacher": "Болдырихин Н. В.",
                         "group": "ВКБ51",
-                        "room": "419",
+                        "room": "105",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1968,7 +1968,7 @@
                     {
                         "teacher": "Болдырихин Н. В.",
                         "group": "ВКБ51",
-                        "room": "467",
+                        "room": "447",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1987,7 +1987,7 @@
                     {
                         "teacher": "Болдырихин Н. В.",
                         "group": "ВКБ52",
-                        "room": "467",
+                        "room": "490",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2087,20 +2087,20 @@
         ]
     },
     {
-        "date": "2026-12-07",
+        "date": "2026-12-10",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-12-07",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "лек Программные и программно-аппаратные средства защиты информации",
+                "date": "2026-12-10",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лаб Information protection (ВИК43)",
                 "otUnits": [
                     {
                         "teacher": "Болдырихин Н. В.",
-                        "group": "ВКБ51, ВКБ52, ВКБ53",
-                        "room": "223",
+                        "group": "ВИК43",
+                        "room": "424",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2117,16 +2117,35 @@
         "lessons": [
             {
                 "date": "2026-12-11",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "лаб Программные и программно-аппаратные средства защиты информации",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Information protection (ВИК41), п/г 2",
                 "otUnits": [
                     {
                         "teacher": "Болдырихин Н. В.",
-                        "group": "ВКБ52",
-                        "room": "447",
-                        "additional": "1",
+                        "group": "ВИК41",
+                        "room": "Онлайн (ссылка)",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-11",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Information protection (ВИК42), п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Болдырихин Н. В.",
+                        "group": "ВИК42",
+                        "room": "Онлайн (ссылка)",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2175,8 +2194,8 @@
                     {
                         "teacher": "Болдырихин Н. В.",
                         "group": "ВКБ51",
-                        "room": "467",
-                        "additional": "1",
+                        "room": "8",
+                        "additional": "",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2215,6 +2234,75 @@
                         "group": "ВКБ31, ВКБ32, ВКБ33, ВКБ34",
                         "room": "384",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-17",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-17",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Information protection (ВИК41), п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Болдырихин Н. В.",
+                        "group": "ВИК41",
+                        "room": "Онлайн (ссылка)",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-17",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Information protection (ВИК43)",
+                "otUnits": [
+                    {
+                        "teacher": "Болдырихин Н. В.",
+                        "group": "ВИК43",
+                        "room": "424",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-18",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-18",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Information protection (ВИК42), п/г 2",
+                "otUnits": [
+                    {
+                        "teacher": "Болдырихин Н. В.",
+                        "group": "ВИК42",
+                        "room": "Онлайн (ссылка)",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }

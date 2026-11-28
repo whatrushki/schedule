@@ -64,7 +64,7 @@
     },
     {
         "date": "2026-11-30",
-        "scheduleType": "COMMON",
+        "scheduleType": "WITH_CLASS_HOUR",
         "lessons": [
             {
                 "date": "2026-11-30",
@@ -83,7 +83,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "REMOVED"
             },
             {
                 "date": "2026-11-30",
@@ -93,7 +93,7 @@
                 "subject": "Основы информационной безопасности",
                 "otUnits": [
                     {
-                        "teacher": "Кузнецова Ангелина Вячеславовна",
+                        "teacher": "Кузнецова А.В.",
                         "group": "ИБА-11",
                         "room": "31",
                         "additional": "2",
@@ -102,7 +102,7 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-30",
@@ -112,7 +112,7 @@
                 "subject": "Основы информационной безопасности",
                 "otUnits": [
                     {
-                        "teacher": "Кузнецова Ангелина Вячеславовна",
+                        "teacher": "Кузнецова А.В.",
                         "group": "ИБА-13",
                         "room": "31",
                         "additional": "2",
@@ -121,7 +121,26 @@
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 0,
+                "startTime": "13:05",
+                "endTime": "14:05",
+                "subject": "Классный час",
+                "otUnits": [
+                    {
+                        "teacher": "Кузнецова А.В.",
+                        "group": "ИБА-21",
+                        "room": "31",
+                        "additional": "2",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "CLASS_HOUR",
+                "state": "ADDED"
             }
         ]
     },

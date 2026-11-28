@@ -90,27 +90,19 @@
                 "number": 3,
                 "startTime": "11:30",
                 "endTime": "13:00",
-                "subject": "Иностранный язык в профессиональной деятельности",
+                "subject": "Монтаж и эксплуатация направляющих систем",
                 "otUnits": [
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Голиченко П.С.",
                         "group": "ИКС-33",
-                        "room": "315а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Крупицкая Н.А.",
-                        "group": "ИКС-33",
-                        "room": "111",
+                        "room": "5",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
                 ],
                 "type": "COMMON",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-30",
@@ -118,9 +110,18 @@
                 "startTime": "13:05",
                 "endTime": "14:05",
                 "subject": "Классный час",
-                "otUnits": [],
+                "otUnits": [
+                    {
+                        "teacher": "Шабранская П.Е.",
+                        "group": "ИКС-33",
+                        "room": "122",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
                 "type": "CLASS_HOUR",
-                "state": "COMMON"
+                "state": "CHANGED"
             },
             {
                 "date": "2026-11-30",
@@ -140,6 +141,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-11-30",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:30",
+                "subject": "Монтаж и эксплуатация направляющих систем",
+                "otUnits": [
+                    {
+                        "teacher": "Голиченко П.С.",
+                        "group": "ИКС-33",
+                        "room": "118",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "OTHER",
+                "state": "ADDED"
             }
         ]
     },
@@ -489,17 +509,17 @@
                 "subject": "Иностранный язык в профессиональной деятельности",
                 "otUnits": [
                     {
-                        "teacher": "Крупицкая Н.А.",
+                        "teacher": "Черноштан О.Н.",
                         "group": "ИКС-33",
-                        "room": "111",
+                        "room": "315а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     },
                     {
-                        "teacher": "Черноштан О.Н.",
+                        "teacher": "Крупицкая Н.А.",
                         "group": "ИКС-33",
-                        "room": "315а",
+                        "room": "111",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

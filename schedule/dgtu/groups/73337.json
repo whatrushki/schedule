@@ -136,21 +136,21 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "пр Иностранный язык (английский), п/г 1",
+                "subject": "пр Иностранный язык (английский), п/г 2",
                 "otUnits": [
-                    {
-                        "teacher": "Мануйлова Н. С.",
-                        "group": "ВИС13",
-                        "room": "484",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
                     {
                         "teacher": "Вакансия_77020 (каф.126)",
                         "group": "ВИС13",
                         "room": "502",
                         "additional": "6",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Мануйлова Н. С.",
+                        "group": "ВИС13",
+                        "room": "484",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2959,6 +2959,25 @@
             },
             {
                 "date": "2026-11-05",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Пожарский Д. А.",
+                        "group": "ВИС13",
+                        "room": "492",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -2981,12 +3000,12 @@
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
-                "subject": "лек Математический анализ",
+                "subject": "пр Иностранный язык (английский)",
                 "otUnits": [
                     {
-                        "teacher": "Пожарский Д. А.",
+                        "teacher": "Мануйлова Н. С.",
                         "group": "ВИС13",
-                        "room": "374",
+                        "room": "436",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3038,6 +3057,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-11-06",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Дискретная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Паниотова В. Ю.",
+                        "group": "ВИС13",
+                        "room": "419",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -3069,12 +3107,12 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Иностранный язык (английский)",
+                "subject": "пр Алгебра и аналитическая геометрия",
                 "otUnits": [
                     {
-                        "teacher": "Мануйлова Н. С.",
+                        "teacher": "Коленникова Н. В.",
                         "group": "ВИС13",
-                        "room": "392",
+                        "room": "105",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3113,12 +3151,12 @@
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
-                "subject": "пр Физическая культура и спорт",
+                "subject": "пр Физическая культура и спорт (ОФП1)",
                 "otUnits": [
                     {
                         "teacher": "Токарев Г. Н.",
                         "group": "ВИС13",
-                        "room": "манеж",
+                        "room": "Л/А Манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
@@ -3164,25 +3202,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-11-09",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Николаенко А. В.",
-                        "group": "ВИС13",
-                        "room": "317",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -3190,25 +3209,6 @@
         "date": "2026-11-10",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-11-10",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Формирование базы знаний на основе модели искусственного интеллекта",
-                "otUnits": [
-                    {
-                        "teacher": "Зубарева Е. Г.",
-                        "group": "ВИС13",
-                        "room": "367а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-11-10",
                 "number": 2,
@@ -3238,7 +3238,26 @@
                     {
                         "teacher": "Рытикова М. А.",
                         "group": "ВИС13",
-                        "room": "484",
+                        "room": "476а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-10",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Дискретная математика",
+                "otUnits": [
+                    {
+                        "teacher": "Паниотова В. Ю.",
+                        "group": "ВИС13",
+                        "room": "367а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3252,12 +3271,12 @@
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
-                "subject": "пр Дискретная математика",
+                "subject": "пр Формирование базы знаний на основе модели искусственного интеллекта",
                 "otUnits": [
                     {
-                        "teacher": "Паниотова В. Ю.",
+                        "teacher": "Зубарева Е. Г.",
                         "group": "ВИС13",
-                        "room": "367а",
+                        "room": "392",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3309,6 +3328,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-11-11",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Формирование базы знаний на основе модели искусственного интеллекта",
+                "otUnits": [
+                    {
+                        "teacher": "Зубарева Е. Г.",
+                        "group": "ВИС13",
+                        "room": "304",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -3326,7 +3364,7 @@
                     {
                         "teacher": "Пожарский Д. А.",
                         "group": "ВИС13",
-                        "room": "310",
+                        "room": "490",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3345,8 +3383,8 @@
                     {
                         "teacher": "Колесникова О. В.",
                         "group": "ВИС13",
-                        "room": "467",
-                        "additional": "1",
+                        "room": "232",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3364,7 +3402,7 @@
                     {
                         "teacher": "Соболь Б. В.",
                         "group": "ВИС13",
-                        "room": "105",
+                        "room": "305",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3381,15 +3419,15 @@
         "lessons": [
             {
                 "date": "2026-11-13",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Иностранный язык (английский)",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Алгебра и аналитическая геометрия",
                 "otUnits": [
                     {
-                        "teacher": "Мануйлова Н. С.",
+                        "teacher": "Ермилова О. В.",
                         "group": "ВИС13",
-                        "room": "392",
+                        "room": "413",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3466,13 +3504,13 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "пр Формирование базы знаний на основе модели искусственного интеллекта",
+                "subject": "пр Иностранный язык (английский)",
                 "otUnits": [
                     {
-                        "teacher": "Зубарева Е. Г.",
+                        "teacher": "Мануйлова Н. С.",
                         "group": "ВИС13",
-                        "room": "398",
-                        "additional": "1",
+                        "room": "1",
+                        "additional": "",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3516,6 +3554,14 @@
                         "teacher": "Токарев Г. Н.",
                         "group": "ВИС13",
                         "room": "манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Токарев Г. Н.",
+                        "group": "ВИС13",
+                        "room": "Л/А Манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
@@ -3622,7 +3668,7 @@
                     {
                         "teacher": "Зубарева Е. Г.",
                         "group": "ВИС13",
-                        "room": "427",
+                        "room": "388",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3641,7 +3687,7 @@
                     {
                         "teacher": "Пожарский Д. А.",
                         "group": "ВИС13",
-                        "room": "374",
+                        "room": "492",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3666,7 +3712,7 @@
                     {
                         "teacher": "Мануйлова Н. С.",
                         "group": "ВИС13",
-                        "room": "219а",
+                        "room": "323",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3729,8 +3775,46 @@
                     {
                         "teacher": "Мануйлова Н. С.",
                         "group": "ВИС13",
-                        "room": "219а",
+                        "room": "367а",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-21",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ВИС13",
+                        "room": "374",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-21",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Лемешко Г. Ф.",
+                        "group": "ВИС13",
+                        "room": "423",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3774,6 +3858,14 @@
                         "teacher": "Токарев Г. Н.",
                         "group": "ВИС13",
                         "room": "манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Токарев Г. Н.",
+                        "group": "ВИС13",
+                        "room": "Л/А Манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
@@ -3893,7 +3985,7 @@
                     {
                         "teacher": "Рытикова М. А.",
                         "group": "ВИС13",
-                        "room": "484",
+                        "room": "223",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3937,7 +4029,7 @@
                     {
                         "teacher": "Рытикова М. А.",
                         "group": "ВИС13",
-                        "room": "130",
+                        "room": "367а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -3981,7 +4073,7 @@
                     {
                         "teacher": "Пожарский Д. А.",
                         "group": "ВИС13",
-                        "room": "310",
+                        "room": "492",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4000,7 +4092,7 @@
                     {
                         "teacher": "Колесникова О. В.",
                         "group": "ВИС13",
-                        "room": "467",
+                        "room": "424",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4019,7 +4111,7 @@
                     {
                         "teacher": "Соболь Б. В.",
                         "group": "ВИС13",
-                        "room": "105",
+                        "room": "305",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4036,6 +4128,25 @@
         "lessons": [
             {
                 "date": "2026-11-27",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ВИС13",
+                        "room": "305",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-27",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -4044,7 +4155,7 @@
                     {
                         "teacher": "Мануйлова Н. С.",
                         "group": "ВИС13",
-                        "room": "392",
+                        "room": "039",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4107,7 +4218,7 @@
                     {
                         "teacher": "Мануйлова Н. С.",
                         "group": "ВИС13",
-                        "room": "317",
+                        "room": "492",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4145,7 +4256,7 @@
                     {
                         "teacher": "Пожарский Д. А.",
                         "group": "ВИС13",
-                        "room": "338",
+                        "room": "492",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4171,6 +4282,14 @@
                         "teacher": "Токарев Г. Н.",
                         "group": "ВИС13",
                         "room": "манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Токарев Г. Н.",
+                        "group": "ВИС13",
+                        "room": "Л/А Манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
@@ -4250,6 +4369,25 @@
         "lessons": [
             {
                 "date": "2026-12-03",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Физика",
+                "otUnits": [
+                    {
+                        "teacher": "Лемешко Г. Ф.",
+                        "group": "ВИС13",
+                        "room": "410",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-03",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -4277,7 +4415,7 @@
                     {
                         "teacher": "Зубарева Е. Г.",
                         "group": "ВИС13",
-                        "room": "484",
+                        "room": "219а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4321,7 +4459,7 @@
                     {
                         "teacher": "Мануйлова Н. С.",
                         "group": "ВИС13",
-                        "room": "413",
+                        "room": "330",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4346,7 +4484,7 @@
                     {
                         "teacher": "Лемешко Г. Ф.",
                         "group": "ВИС13",
-                        "room": "448",
+                        "room": "436",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4365,7 +4503,26 @@
                     {
                         "teacher": "Мануйлова Н. С.",
                         "group": "ВИС13",
-                        "room": "416",
+                        "room": "219а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ВИС13",
+                        "room": "374",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4455,25 +4612,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-12-07",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Физика",
-                "otUnits": [
-                    {
-                        "teacher": "Николаенко А. В.",
-                        "group": "ВИС13",
-                        "room": "317",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -4481,25 +4619,6 @@
         "date": "2026-12-08",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-12-08",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Формирование базы знаний на основе модели искусственного интеллекта",
-                "otUnits": [
-                    {
-                        "teacher": "Зубарева Е. Г.",
-                        "group": "ВИС13",
-                        "room": "367а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-12-08",
                 "number": 2,
@@ -4529,7 +4648,7 @@
                     {
                         "teacher": "Рытикова М. А.",
                         "group": "ВИС13",
-                        "room": "484",
+                        "room": "367а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4540,9 +4659,9 @@
             },
             {
                 "date": "2026-12-08",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
                 "subject": "пр Дискретная математика",
                 "otUnits": [
                     {
@@ -4573,7 +4692,7 @@
                     {
                         "teacher": "Рытикова М. А.",
                         "group": "ВИС13",
-                        "room": "130",
+                        "room": "438",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4600,6 +4719,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-12-09",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Формирование базы знаний на основе модели искусственного интеллекта",
+                "otUnits": [
+                    {
+                        "teacher": "Зубарева Е. Г.",
+                        "group": "ВИС13",
+                        "room": "304",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -4617,7 +4755,7 @@
                     {
                         "teacher": "Пожарский Д. А.",
                         "group": "ВИС13",
-                        "room": "310",
+                        "room": "490",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4636,8 +4774,8 @@
                     {
                         "teacher": "Колесникова О. В.",
                         "group": "ВИС13",
-                        "room": "467",
-                        "additional": "1",
+                        "room": "231",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4655,7 +4793,7 @@
                     {
                         "teacher": "Соболь Б. В.",
                         "group": "ВИС13",
-                        "room": "105",
+                        "room": "305",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4672,15 +4810,15 @@
         "lessons": [
             {
                 "date": "2026-12-11",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Иностранный язык (английский)",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лек Алгебра и аналитическая геометрия",
                 "otUnits": [
                     {
-                        "teacher": "Мануйлова Н. С.",
+                        "teacher": "Ермилова О. В.",
                         "group": "ВИС13",
-                        "room": "392",
+                        "room": "492",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4757,13 +4895,13 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "пр Формирование базы знаний на основе модели искусственного интеллекта",
+                "subject": "пр Иностранный язык (английский)",
                 "otUnits": [
                     {
-                        "teacher": "Зубарева Е. Г.",
+                        "teacher": "Мануйлова Н. С.",
                         "group": "ВИС13",
-                        "room": "398",
-                        "additional": "1",
+                        "room": "1",
+                        "additional": "",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4781,7 +4919,7 @@
                     {
                         "teacher": "Пожарский Д. А.",
                         "group": "ВИС13",
-                        "room": "338",
+                        "room": "305",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4807,6 +4945,14 @@
                         "teacher": "Токарев Г. Н.",
                         "group": "ВИС13",
                         "room": "манеж",
+                        "additional": "Главный",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Токарев Г. Н.",
+                        "group": "ВИС13",
+                        "room": "Л/А Манеж",
                         "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
@@ -4894,8 +5040,8 @@
                     {
                         "teacher": "Топчий И. В.",
                         "group": "ВИС13",
-                        "room": "310",
-                        "additional": "1",
+                        "room": "402",
+                        "additional": "2",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4913,7 +5059,7 @@
                     {
                         "teacher": "Зубарева Е. Г.",
                         "group": "ВИС13",
-                        "room": "484",
+                        "room": "219а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4932,7 +5078,7 @@
                     {
                         "teacher": "Пожарский Д. А.",
                         "group": "ВИС13",
-                        "room": "374",
+                        "room": "313",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4957,7 +5103,7 @@
                     {
                         "teacher": "Мануйлова Н. С.",
                         "group": "ВИС13",
-                        "room": "413",
+                        "room": "219а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4982,7 +5128,7 @@
                     {
                         "teacher": "Лемешко Г. Ф.",
                         "group": "ВИС13",
-                        "room": "448",
+                        "room": "436",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5001,8 +5147,52 @@
                     {
                         "teacher": "Мануйлова Н. С.",
                         "group": "ВИС13",
-                        "room": "416",
+                        "room": "219а",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-19",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ВИС13",
+                        "room": "374",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-21",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-21",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "зач Физическая культура и спорт (ОФП1)",
+                "otUnits": [
+                    {
+                        "teacher": "Токарев Г. Н.",
+                        "group": "ВИС13",
+                        "room": "Л/А Манеж",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }

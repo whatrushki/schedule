@@ -2214,8 +2214,8 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "АКТ41",
-                        "room": "535",
-                        "additional": "8",
+                        "room": "8",
+                        "additional": "",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2239,8 +2239,8 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "ТМП21",
-                        "room": "542",
-                        "additional": "8",
+                        "room": "8",
+                        "additional": "",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2277,8 +2277,8 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "БТБ32",
-                        "room": "517",
-                        "additional": "8",
+                        "room": "8",
+                        "additional": "",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2479,8 +2479,8 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "ТКТ41, АКТ41",
-                        "room": "531",
-                        "additional": "8",
+                        "room": "8",
+                        "additional": "",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2561,8 +2561,8 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "БТБ42",
-                        "room": "528",
-                        "additional": "8",
+                        "room": "8",
+                        "additional": "",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2599,8 +2599,8 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "ТКТ41",
-                        "room": "535",
-                        "additional": "8",
+                        "room": "8",
+                        "additional": "",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -2698,15 +2698,34 @@
         "lessons": [
             {
                 "date": "2026-11-05",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Промышленная экология",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "ТМТ21",
+                        "room": "208",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-05",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "лаб Математическое моделирование процессов окружающей среды",
                 "otUnits": [
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "БТБ32",
-                        "room": "227",
+                        "room": "231",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -2721,6 +2740,25 @@
         "date": "2026-11-06",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-11-06",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Промышленная экология",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "ТМТ21",
+                        "room": "227",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-11-06",
                 "number": 4,
@@ -2813,7 +2851,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "БПБ51",
-                        "room": "227",
+                        "room": "015",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -2906,15 +2944,40 @@
         "lessons": [
             {
                 "date": "2026-11-09",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "пр Промышленная экология",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Экология",
                 "otUnits": [
                     {
                         "teacher": "Лазуренко Р. Р.",
-                        "group": "АКТ41",
-                        "room": "535",
+                        "group": "УМТ21, УП21",
+                        "room": "224",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-10",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-10",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Программное обеспечение природоохранной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "БТБ42",
+                        "room": "232",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -2939,7 +3002,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "ТМП21",
-                        "room": "542",
+                        "room": "227",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -2958,7 +3021,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "УП21",
-                        "room": "321",
+                        "room": "226",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -2977,7 +3040,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "БТБ32",
-                        "room": "517",
+                        "room": "219",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3051,25 +3114,6 @@
         "lessons": [
             {
                 "date": "2026-11-12",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Экология",
-                "otUnits": [
-                    {
-                        "teacher": "Лазуренко Р. Р.",
-                        "group": "УМТ21, УП21",
-                        "room": "226",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-12",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -3078,8 +3122,8 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "ТКТ41",
-                        "room": "422",
-                        "additional": "8",
+                        "room": "8",
+                        "additional": "",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3098,6 +3142,25 @@
                         "teacher": "Лазуренко Р. Р.",
                         "group": "ТМП21",
                         "room": "610",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-12",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Промышленная экология",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "АКТ41",
+                        "room": "016",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3152,6 +3215,25 @@
         "lessons": [
             {
                 "date": "2026-11-13",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Промышленная экология",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "ТКТ41",
+                        "room": "231",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-13",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -3160,7 +3242,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "ТМТ21",
-                        "room": "423",
+                        "room": "208",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3179,7 +3261,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "ТКТ41, АКТ41",
-                        "room": "531",
+                        "room": "226",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3248,20 +3330,20 @@
         ]
     },
     {
-        "date": "2026-11-14",
+        "date": "2026-11-17",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-14",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Программное обеспечение природоохранной деятельности",
+                "date": "2026-11-17",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Экология",
                 "otUnits": [
                     {
                         "teacher": "Лазуренко Р. Р.",
-                        "group": "БТБ42",
-                        "room": "528",
+                        "group": "УМТ21",
+                        "room": "016",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3271,15 +3353,15 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-11-14",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Прогнозирование опасных факторов пожара",
+                "date": "2026-11-17",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лаб Математическое моделирование процессов окружающей среды",
                 "otUnits": [
                     {
                         "teacher": "Лазуренко Р. Р.",
-                        "group": "БПБ41",
+                        "group": "БТБ32",
                         "room": "231",
                         "additional": "8",
                         "onlineUrl": null,
@@ -3290,16 +3372,161 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-11-14",
+                "date": "2026-11-17",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
-                "subject": "лаб Промышленная экология",
+                "subject": "лек Программное обеспечение природоохранной деятельности",
                 "otUnits": [
                     {
                         "teacher": "Лазуренко Р. Р.",
-                        "group": "ТКТ41",
-                        "room": "535",
+                        "group": "БТБ42",
+                        "room": "219",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-17",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лаб Математическое моделирование развития пожаров и взрывов",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "БПБ51",
+                        "room": "224",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-17",
+                "number": 7,
+                "startTime": "19:30",
+                "endTime": "21:05",
+                "subject": "пр Программное обеспечение в области пожарной безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "БПБ51",
+                        "room": "224",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-18",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-18",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Программное обеспечение в области пожарной безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "БПБ51",
+                        "room": "218",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-18",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Математическое моделирование развития пожаров и взрывов",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "БПБ51",
+                        "room": "224",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-18",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лаб Математическое моделирование процессов окружающей среды",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "БТБ32",
+                        "room": "231",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-11-20",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-11-20",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Математическое моделирование развития пожаров и взрывов",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "БПБ51",
+                        "room": "015",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-20",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "лек Математическое моделирование развития пожаров и взрывов",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "БПБ51",
+                        "room": "015",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3316,15 +3543,15 @@
         "lessons": [
             {
                 "date": "2026-11-21",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Программное обеспечение в области пожарной безопасности",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Промышленная экология",
                 "otUnits": [
                     {
                         "teacher": "Лазуренко Р. Р.",
-                        "group": "БПБ51",
-                        "room": "546",
+                        "group": "ТМП21",
+                        "room": "610",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3335,15 +3562,34 @@
             },
             {
                 "date": "2026-11-21",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Программное обеспечение природоохранной деятельности",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "лек Прогнозирование опасных факторов пожара",
                 "otUnits": [
                     {
                         "teacher": "Лазуренко Р. Р.",
-                        "group": "БТБ42",
-                        "room": "528",
+                        "group": "БПБ41",
+                        "room": "226",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-21",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Прогнозирование опасных факторов пожара",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "БПБ41",
+                        "room": "226",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3360,15 +3606,15 @@
         "lessons": [
             {
                 "date": "2026-11-23",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "пр Промышленная экология",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лек Математическое моделирование процессов окружающей среды",
                 "otUnits": [
                     {
                         "teacher": "Лазуренко Р. Р.",
-                        "group": "АКТ41",
-                        "room": "535",
+                        "group": "БТБ32",
+                        "room": "303",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3393,7 +3639,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "ТМП21",
-                        "room": "542",
+                        "room": "540",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3423,6 +3669,25 @@
             },
             {
                 "date": "2026-11-25",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Прогнозирование опасных факторов пожара",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "БПБ41",
+                        "room": "219",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-25",
                 "number": 4,
                 "startTime": "14:15",
                 "endTime": "15:50",
@@ -3431,8 +3696,8 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "БТБ32",
-                        "room": "517",
-                        "additional": "8",
+                        "room": "8",
+                        "additional": "",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3532,7 +3797,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "ТКТ41",
-                        "room": "422",
+                        "room": "529",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3559,6 +3824,63 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Промышленная экология",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "АКТ41",
+                        "room": "219",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Программное обеспечение в области пожарной безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "МПБ21",
+                        "room": "217",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-26",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Программное обеспечение в области пожарной безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "МПБ21",
+                        "room": "217",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -3566,6 +3888,44 @@
         "date": "2026-11-27",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-11-27",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "лаб Программное обеспечение природоохранной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "БТБ42",
+                        "room": "217",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-27",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Промышленная экология",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "ТКТ41",
+                        "room": "426",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-11-27",
                 "number": 3,
@@ -3576,7 +3936,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "ТМТ21",
-                        "room": "423",
+                        "room": "226",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3595,7 +3955,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "ТКТ41, АКТ41",
-                        "room": "531",
+                        "room": "606",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3669,53 +4029,15 @@
         "lessons": [
             {
                 "date": "2026-11-28",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Программное обеспечение природоохранной деятельности",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Экология",
                 "otUnits": [
                     {
                         "teacher": "Лазуренко Р. Р.",
-                        "group": "БТБ42",
-                        "room": "528",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-28",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Прогнозирование опасных факторов пожара",
-                "otUnits": [
-                    {
-                        "teacher": "Лазуренко Р. Р.",
-                        "group": "БПБ41",
-                        "room": "231",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-28",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Промышленная экология",
-                "otUnits": [
-                    {
-                        "teacher": "Лазуренко Р. Р.",
-                        "group": "ТКТ41",
-                        "room": "535",
+                        "group": "УМТ21",
+                        "room": "406",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3740,7 +4062,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "БПБ51",
-                        "room": "305",
+                        "room": "430а",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3759,7 +4081,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "БТБ42",
-                        "room": "528",
+                        "room": "217",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3776,15 +4098,40 @@
         "lessons": [
             {
                 "date": "2026-12-07",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "пр Промышленная экология",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "лек Экология",
                 "otUnits": [
                     {
                         "teacher": "Лазуренко Р. Р.",
-                        "group": "АКТ41",
-                        "room": "535",
+                        "group": "УМТ21, УП21",
+                        "room": "224",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-08",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-08",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лаб Программное обеспечение природоохранной деятельности",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "БТБ42",
+                        "room": "232",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3809,7 +4156,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "ТМП21",
-                        "room": "542",
+                        "room": "302",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3847,7 +4194,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "БТБ32",
-                        "room": "517",
+                        "room": "219",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3921,25 +4268,6 @@
         "lessons": [
             {
                 "date": "2026-12-10",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Экология",
-                "otUnits": [
-                    {
-                        "teacher": "Лазуренко Р. Р.",
-                        "group": "УМТ21, УП21",
-                        "room": "226",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-10",
                 "number": 2,
                 "startTime": "10:15",
                 "endTime": "11:50",
@@ -3948,7 +4276,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "ТКТ41",
-                        "room": "422",
+                        "room": "321",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -3975,6 +4303,63 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Промышленная экология",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "АКТ41",
+                        "room": "016",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "лек Программное обеспечение в области пожарной безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "МПБ21",
+                        "room": "217",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 6,
+                "startTime": "17:45",
+                "endTime": "19:20",
+                "subject": "пр Программное обеспечение в области пожарной безопасности",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "МПБ21",
+                        "room": "217",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -3982,6 +4367,25 @@
         "date": "2026-12-11",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-12-11",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "лаб Промышленная экология",
+                "otUnits": [
+                    {
+                        "teacher": "Лазуренко Р. Р.",
+                        "group": "ТКТ41",
+                        "room": "231",
+                        "additional": "8",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-12-11",
                 "number": 4,
@@ -3992,7 +4396,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "ТКТ41, АКТ41",
-                        "room": "531",
+                        "room": "226",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null
@@ -4042,69 +4446,6 @@
         ]
     },
     {
-        "date": "2026-12-12",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-12",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лаб Программное обеспечение природоохранной деятельности",
-                "otUnits": [
-                    {
-                        "teacher": "Лазуренко Р. Р.",
-                        "group": "БТБ42",
-                        "room": "528",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-12",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Прогнозирование опасных факторов пожара",
-                "otUnits": [
-                    {
-                        "teacher": "Лазуренко Р. Р.",
-                        "group": "БПБ41",
-                        "room": "231",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-12",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лаб Промышленная экология",
-                "otUnits": [
-                    {
-                        "teacher": "Лазуренко Р. Р.",
-                        "group": "ТКТ41",
-                        "room": "535",
-                        "additional": "8",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-12-19",
         "scheduleType": "COMMON",
         "lessons": [
@@ -4118,7 +4459,7 @@
                     {
                         "teacher": "Лазуренко Р. Р.",
                         "group": "БТБ42",
-                        "room": "528",
+                        "room": "426",
                         "additional": "8",
                         "onlineUrl": null,
                         "subject": null

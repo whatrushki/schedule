@@ -1,10 +1,10 @@
 [
     {
-        "date": "2026-09-28",
+        "date": "2026-11-23",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-28",
+                "date": "2026-11-23",
                 "number": 1,
                 "startTime": "08:20",
                 "endTime": "09:50",
@@ -12,15 +12,7 @@
                 "otUnits": [
                     {
                         "teacher": "Чеботников В.А.",
-                        "group": "ЗГС-2-415",
-                        "room": "-",
-                        "additional": "",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Чеботников В.А.",
-                        "group": "ЗЛС-2-415",
+                        "group": "ЗМС-2-415",
                         "room": "-",
                         "additional": "",
                         "onlineUrl": null,
@@ -36,7 +28,15 @@
                     },
                     {
                         "teacher": "Чеботников В.А.",
-                        "group": "ЗМС-2-415",
+                        "group": "ЗЛС-2-415",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Чеботников В.А.",
+                        "group": "ЗГС-2-415",
                         "room": "-",
                         "additional": "",
                         "onlineUrl": null,
@@ -47,7 +47,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-28",
+                "date": "2026-11-23",
                 "number": 2,
                 "startTime": "10:05",
                 "endTime": "11:35",
@@ -55,12 +55,23 @@
                 "otUnits": [
                     {
                         "teacher": "Чеботников В.А.",
-                        "group": "ЗГС-2-415",
+                        "group": "ЗЛС-2-415",
                         "room": "-",
                         "additional": "",
                         "onlineUrl": null,
                         "subject": null
-                    },
+                    }
+                ],
+                "type": "LABORATORY",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-23",
+                "number": 3,
+                "startTime": "12:05",
+                "endTime": "13:35",
+                "subject": "Управление эксплуатационной работой",
+                "otUnits": [
                     {
                         "teacher": "Чеботников В.А.",
                         "group": "ЗЛС-2-415",
@@ -68,7 +79,18 @@
                         "additional": "",
                         "onlineUrl": null,
                         "subject": null
-                    },
+                    }
+                ],
+                "type": "LABORATORY",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-23",
+                "number": 4,
+                "startTime": "13:50",
+                "endTime": "15:20",
+                "subject": "Управление эксплуатационной работой",
+                "otUnits": [
                     {
                         "teacher": "Чеботников В.А.",
                         "group": "ЗМС-2-415",
@@ -84,9 +106,17 @@
                         "additional": "",
                         "onlineUrl": null,
                         "subject": null
+                    },
+                    {
+                        "teacher": "Чеботников В.А.",
+                        "group": "ЗГС-2-415",
+                        "room": "-",
+                        "additional": "",
+                        "onlineUrl": null,
+                        "subject": null
                     }
                 ],
-                "type": "LECTURE",
+                "type": "LABORATORY",
                 "state": "COMMON"
             }
         ]

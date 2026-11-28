@@ -1687,8 +1687,8 @@
                     {
                         "teacher": "Гризодуб Н. В.",
                         "group": "ДПО22",
-                        "room": "392",
-                        "additional": "1",
+                        "room": "206",
+                        "additional": "6",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1725,8 +1725,8 @@
                     {
                         "teacher": "Гризодуб Н. В.",
                         "group": "ДСО22",
-                        "room": "438",
-                        "additional": "1",
+                        "room": "305",
+                        "additional": "6",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1769,7 +1769,7 @@
                     {
                         "teacher": "Гризодуб Н. В.",
                         "group": "ДСО21",
-                        "room": "392",
+                        "room": "492",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1906,6 +1906,25 @@
         "lessons": [
             {
                 "date": "2026-11-06",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Физиология детского возраста",
+                "otUnits": [
+                    {
+                        "teacher": "Гризодуб Н. В.",
+                        "group": "ДПП21",
+                        "room": "105",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-06",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
@@ -1929,25 +1948,6 @@
         "date": "2026-11-09",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-11-09",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "пр Физиология детского возраста",
-                "otUnits": [
-                    {
-                        "teacher": "Гризодуб Н. В.",
-                        "group": "ДПП21",
-                        "room": "427",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-11-09",
                 "number": 4,
@@ -2008,11 +2008,11 @@
         ]
     },
     {
-        "date": "2026-11-10",
+        "date": "2026-11-12",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-11-10",
+                "date": "2026-11-12",
                 "number": 1,
                 "startTime": "08:30",
                 "endTime": "10:05",
@@ -2021,7 +2021,7 @@
                     {
                         "teacher": "Гризодуб Н. В.",
                         "group": "ДПО21, ДПО22",
-                        "room": "123",
+                        "room": "143",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2031,7 +2031,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-11-10",
+                "date": "2026-11-12",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -2040,7 +2040,7 @@
                     {
                         "teacher": "Гризодуб Н. В.",
                         "group": "ДПО21",
-                        "room": "483",
+                        "room": "171",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2048,13 +2048,7 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-12",
-        "scheduleType": "COMMON",
-        "lessons": [
+            },
             {
                 "date": "2026-11-12",
                 "number": 4,
@@ -2092,25 +2086,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-11-12",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "лек Физиология детского возраста",
-                "otUnits": [
-                    {
-                        "teacher": "Гризодуб Н. В.",
-                        "group": "ДПИ21",
-                        "room": "289",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -2118,25 +2093,6 @@
         "date": "2026-11-16",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-11-16",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Физиология детского возраста",
-                "otUnits": [
-                    {
-                        "teacher": "Гризодуб Н. В.",
-                        "group": "ДПП21",
-                        "room": "438",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-11-16",
                 "number": 2,
@@ -2147,7 +2103,7 @@
                     {
                         "teacher": "Гризодуб Н. В.",
                         "group": "ДПО22",
-                        "room": "257",
+                        "room": "433",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2193,56 +2149,24 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-11-18",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-11-16",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "лек Физиология детского возраста",
+                "date": "2026-11-18",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Физиология детского возраста",
                 "otUnits": [
                     {
                         "teacher": "Гризодуб Н. В.",
                         "group": "ДПИ21",
-                        "room": "289",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 6,
-                "startTime": "17:45",
-                "endTime": "19:20",
-                "subject": "пр Физиология детского возраста",
-                "otUnits": [
-                    {
-                        "teacher": "Гризодуб Н. В.",
-                        "group": "ДОЗСО21",
-                        "room": "211",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-16",
-                "number": 7,
-                "startTime": "19:30",
-                "endTime": "21:05",
-                "subject": "пр Физиология детского возраста",
-                "otUnits": [
-                    {
-                        "teacher": "Гризодуб Н. В.",
-                        "group": "ДОЗПП21",
-                        "room": "211",
+                        "room": "408",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2275,69 +2199,6 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
-            },
-            {
-                "date": "2026-11-19",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Физиология детского возраста",
-                "otUnits": [
-                    {
-                        "teacher": "Гризодуб Н. В.",
-                        "group": "ДПО21",
-                        "room": "367",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-19",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Физиология детского возраста",
-                "otUnits": [
-                    {
-                        "teacher": "Гризодуб Н. В.",
-                        "group": "ДСО21",
-                        "room": "219",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-20",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-20",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Физиология детского возраста",
-                "otUnits": [
-                    {
-                        "teacher": "Гризодуб Н. В.",
-                        "group": "ДСО21",
-                        "room": "355",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
             }
         ]
     },
@@ -2356,69 +2217,6 @@
                         "teacher": "Гризодуб Н. В.",
                         "group": "ДСО22",
                         "room": "388",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-23",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Физиология детского возраста",
-                "otUnits": [
-                    {
-                        "teacher": "Гризодуб Н. В.",
-                        "group": "ДПО22",
-                        "room": "427а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
-        "date": "2026-11-26",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-11-26",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
-                "subject": "пр Физиология детского возраста",
-                "otUnits": [
-                    {
-                        "teacher": "Гризодуб Н. В.",
-                        "group": "ДСО21",
-                        "room": "367а",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-11-26",
-                "number": 5,
-                "startTime": "16:00",
-                "endTime": "17:35",
-                "subject": "пр Физиология детского возраста",
-                "otUnits": [
-                    {
-                        "teacher": "Гризодуб Н. В.",
-                        "group": "ДПИ21",
-                        "room": "476а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null

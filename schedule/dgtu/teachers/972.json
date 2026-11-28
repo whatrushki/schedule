@@ -1131,6 +1131,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-09-22",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ИПБП11",
+                        "room": "161",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -1148,7 +1167,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ИПБГ31",
-                        "room": "257а",
+                        "room": "444",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1156,8 +1175,8 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ИПБГ31",
-                        "room": "257а",
-                        "additional": "1",
+                        "room": "",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1233,7 +1252,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ИПБГ21",
-                        "room": "220в",
+                        "room": "043",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -1241,8 +1260,8 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ИПБГ21",
-                        "room": "220в",
-                        "additional": "1",
+                        "room": "",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -1288,14 +1307,6 @@
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ11",
                         "room": "035/1",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    },
-                    {
-                        "teacher": "Ермилова О. В.",
-                        "group": "ИПБП11",
-                        "room": "413",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -2760,13 +2771,21 @@
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
-                "subject": "Пр. Высшая математика",
+                "subject": "пр Высшая математика",
                 "otUnits": [
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ИПБГ31",
-                        "room": "220в",
+                        "room": "213",
                         "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    },
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ИПБГ31",
+                        "room": "",
+                        "additional": "Главный",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -3297,25 +3316,6 @@
         "date": "2026-10-30",
         "scheduleType": "COMMON",
         "lessons": [
-            {
-                "date": "2026-10-30",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "лек Алгебра и аналитическая геометрия",
-                "otUnits": [
-                    {
-                        "teacher": "Ермилова О. В.",
-                        "group": "ВИС11",
-                        "room": "413",
-                        "additional": "1",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
             {
                 "date": "2026-10-30",
                 "number": 2,
@@ -4075,7 +4075,7 @@
                 "otUnits": [
                     {
                         "teacher": "Ермилова О. В.",
-                        "group": "ВИС11",
+                        "group": "ВИС11, ВИС12, ВИС13",
                         "room": "413",
                         "additional": "1",
                         "onlineUrl": null,
@@ -4114,7 +4114,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ11",
-                        "room": "105",
+                        "room": "470",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4188,15 +4188,15 @@
             },
             {
                 "date": "2026-11-14",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "пр Математический анализ",
                 "otUnits": [
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИ12",
-                        "room": "323",
+                        "room": "427",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4240,7 +4240,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИ12",
-                        "room": "317",
+                        "room": "218а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4278,7 +4278,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ23",
-                        "room": "219а",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4303,7 +4303,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ21",
-                        "room": "323",
+                        "room": "219а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4322,7 +4322,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ24",
-                        "room": "317",
+                        "room": "394",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4341,7 +4341,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИС11",
-                        "room": "355",
+                        "room": "362",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4352,15 +4352,15 @@
             },
             {
                 "date": "2026-11-17",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
+                "number": 5,
+                "startTime": "16:00",
+                "endTime": "17:35",
                 "subject": "лек Теория вероятностей и математическая статистика",
                 "otUnits": [
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИАС21, ВИАС22, ВПР24",
-                        "room": "282",
+                        "room": "319",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4412,6 +4412,25 @@
                 ],
                 "type": "COMMON",
                 "state": "COMMON"
+            },
+            {
+                "date": "2026-11-18",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Алгебра и аналитическая геометрия",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ВИАС11",
+                        "room": "219а",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
             }
         ]
     },
@@ -4429,8 +4448,8 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ24",
-                        "room": "438",
-                        "additional": "1",
+                        "room": "016",
+                        "additional": "8",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -4473,7 +4492,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ13, ВКБ14",
-                        "room": "123",
+                        "room": "467",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4511,7 +4530,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИ12",
-                        "room": "433",
+                        "room": "447",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4573,7 +4592,7 @@
                 "otUnits": [
                     {
                         "teacher": "Ермилова О. В.",
-                        "group": "ВИС11",
+                        "group": "ВИС11, ВИС12, ВИС13",
                         "room": "374",
                         "additional": "1",
                         "onlineUrl": null,
@@ -4725,7 +4744,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИАС11",
-                        "room": "330",
+                        "room": "219а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4740,6 +4759,25 @@
         "date": "2026-11-26",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-11-26",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Математический анализ",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ВКБ24",
+                        "room": "130",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-11-26",
                 "number": 3,
@@ -4812,8 +4850,8 @@
                 "otUnits": [
                     {
                         "teacher": "Ермилова О. В.",
-                        "group": "ВИС11",
-                        "room": "413",
+                        "group": "ВИС11, ВИС12, ВИС13",
+                        "room": "305",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4933,7 +4971,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ11",
-                        "room": "143",
+                        "room": "115",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4952,7 +4990,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИ12",
-                        "room": "323",
+                        "room": "424",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -4996,7 +5034,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИ12",
-                        "room": "413",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5015,7 +5053,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИАС11",
-                        "room": "484",
+                        "room": "219а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5034,7 +5072,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ23",
-                        "room": "485",
+                        "room": "219а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5059,7 +5097,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ21",
-                        "room": "436",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5078,8 +5116,8 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ24",
-                        "room": "109",
-                        "additional": "8",
+                        "room": "218а",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -5097,7 +5135,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИС11",
-                        "room": "358",
+                        "room": "323",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5116,7 +5154,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИАС21, ВИАС22, ВПР24",
-                        "room": "283",
+                        "room": "223",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5135,7 +5173,32 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИАС22",
-                        "room": "410",
+                        "room": "398",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-02",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-02",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ИПБГ31",
+                        "room": "220в",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5160,7 +5223,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ24",
-                        "room": "394",
+                        "room": "362",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5179,7 +5242,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИАС21",
-                        "room": "427а",
+                        "room": "398",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5204,7 +5267,26 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ13, ВКБ14",
-                        "room": "238",
+                        "room": "123",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-04",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ИПБП11",
+                        "room": "219",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5223,7 +5305,26 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИ12",
-                        "room": "433",
+                        "room": "317",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-04",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ИПБГ21",
+                        "room": "219",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5240,6 +5341,25 @@
         "lessons": [
             {
                 "date": "2026-12-05",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ИПБП11",
+                        "room": "323",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-05",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -5247,7 +5367,7 @@
                 "otUnits": [
                     {
                         "teacher": "Ермилова О. В.",
-                        "group": "ВИС11",
+                        "group": "ВИС11, ВИС12, ВИС13",
                         "room": "374",
                         "additional": "1",
                         "onlineUrl": null,
@@ -5317,7 +5437,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ21",
-                        "room": "317",
+                        "room": "218а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5336,7 +5456,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИАС21",
-                        "room": "402",
+                        "room": "319",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5355,7 +5475,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИС11",
-                        "room": "355",
+                        "room": "478",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5374,7 +5494,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ23",
-                        "room": "330",
+                        "room": "355",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5416,6 +5536,25 @@
         "lessons": [
             {
                 "date": "2026-12-10",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ВКБ11",
+                        "room": "427",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -5425,6 +5564,25 @@
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ24",
                         "room": "378",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-10",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ИПБГ31",
+                        "room": "408",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5467,8 +5625,27 @@
                 "otUnits": [
                     {
                         "teacher": "Ермилова О. В.",
-                        "group": "ВИС11",
-                        "room": "413",
+                        "group": "ВИС11, ВИС12, ВИС13",
+                        "room": "492",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-11",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ИПБП11",
+                        "room": "323",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5487,8 +5664,8 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ11",
-                        "room": "403",
-                        "additional": "6",
+                        "room": "458",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -5523,15 +5700,15 @@
         "lessons": [
             {
                 "date": "2026-12-12",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
                 "subject": "пр Высшая математика",
                 "otUnits": [
                     {
                         "teacher": "Ермилова О. В.",
-                        "group": "ВКБ11",
-                        "room": "143",
+                        "group": "ИПБГ31",
+                        "room": "115",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5542,15 +5719,34 @@
             },
             {
                 "date": "2026-12-12",
-                "number": 4,
-                "startTime": "14:15",
-                "endTime": "15:50",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ИПБГ21",
+                        "room": "220в",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-12",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
                 "subject": "пр Математический анализ",
                 "otUnits": [
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИ12",
-                        "room": "323",
+                        "room": "317",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5575,7 +5771,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ11",
-                        "room": "330",
+                        "room": "427",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5594,7 +5790,26 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИ12",
-                        "room": "413",
+                        "room": "219",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-14",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ИПБГ21",
+                        "room": "109",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5613,7 +5828,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИАС11",
-                        "room": "484",
+                        "room": "130",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5632,7 +5847,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ23",
-                        "room": "485",
+                        "room": "109",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5676,8 +5891,8 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ24",
-                        "room": "109",
-                        "additional": "8",
+                        "room": "362",
+                        "additional": "1",
                         "onlineUrl": null,
                         "subject": null
                     }
@@ -5695,7 +5910,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИС11",
-                        "room": "358",
+                        "room": "218а",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5714,7 +5929,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИАС21, ВИАС22, ВПР24",
-                        "room": "283",
+                        "room": "319",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5733,7 +5948,51 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИАС22",
-                        "room": "410",
+                        "room": "398",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-16",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-16",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ИПБП11",
+                        "room": "219",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-16",
+                "number": 3,
+                "startTime": "12:00",
+                "endTime": "13:35",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ИПБГ31",
+                        "room": "220в",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5758,7 +6017,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ24",
-                        "room": "394",
+                        "room": "436",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5777,7 +6036,7 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИАС21",
-                        "room": "427а",
+                        "room": "398",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5802,7 +6061,26 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВКБ13, ВКБ14",
-                        "room": "238",
+                        "room": "123",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-18",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ИПБП11",
+                        "room": "219",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5821,7 +6099,26 @@
                     {
                         "teacher": "Ермилова О. В.",
                         "group": "ВИ12",
-                        "room": "433",
+                        "room": "317",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-18",
+                "number": 4,
+                "startTime": "14:15",
+                "endTime": "15:50",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ИПБГ21",
+                        "room": "219",
                         "additional": "1",
                         "onlineUrl": null,
                         "subject": null
@@ -5838,6 +6135,25 @@
         "lessons": [
             {
                 "date": "2026-12-19",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "пр Высшая математика",
+                "otUnits": [
+                    {
+                        "teacher": "Ермилова О. В.",
+                        "group": "ИПБГ31",
+                        "room": "109",
+                        "additional": "1",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-19",
                 "number": 3,
                 "startTime": "12:00",
                 "endTime": "13:35",
@@ -5845,7 +6161,7 @@
                 "otUnits": [
                     {
                         "teacher": "Ермилова О. В.",
-                        "group": "ВИС11",
+                        "group": "ВИС11, ВИС12, ВИС13",
                         "room": "374",
                         "additional": "1",
                         "onlineUrl": null,

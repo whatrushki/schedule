@@ -1,10 +1,10 @@
 [
     {
-        "date": "2026-09-28",
+        "date": "2026-11-25",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-28",
+                "date": "2026-11-25",
                 "number": 5,
                 "startTime": "15:30",
                 "endTime": "17:00",
@@ -23,7 +23,7 @@
                 "state": "COMMON"
             },
             {
-                "date": "2026-09-28",
+                "date": "2026-11-25",
                 "number": 6,
                 "startTime": "17:10",
                 "endTime": "18:40",
@@ -38,17 +38,17 @@
                         "subject": null
                     }
                 ],
-                "type": "LECTURE",
+                "type": "PRACTICE",
                 "state": "COMMON"
             }
         ]
     },
     {
-        "date": "2026-09-30",
+        "date": "2026-12-01",
         "scheduleType": "COMMON",
         "lessons": [
             {
-                "date": "2026-09-30",
+                "date": "2026-12-01",
                 "number": 5,
                 "startTime": "15:30",
                 "endTime": "17:00",
@@ -63,11 +63,17 @@
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
+                "type": "CONSULTATION",
                 "state": "COMMON"
-            },
+            }
+        ]
+    },
+    {
+        "date": "2026-12-02",
+        "scheduleType": "COMMON",
+        "lessons": [
             {
-                "date": "2026-09-30",
+                "date": "2026-12-02",
                 "number": 6,
                 "startTime": "17:10",
                 "endTime": "18:40",
@@ -82,7 +88,7 @@
                         "subject": null
                     }
                 ],
-                "type": "PRACTICE",
+                "type": "EXAM",
                 "state": "COMMON"
             }
         ]

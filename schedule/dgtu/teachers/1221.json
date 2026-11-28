@@ -1019,6 +1019,25 @@
         "lessons": [
             {
                 "date": "2026-11-06",
+                "number": 0,
+                "startTime": "16:00",
+                "endTime": "17:00",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Григоренко Т. Н.",
+                        "group": "",
+                        "room": "118",
+                        "additional": "25",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "UNKNOWN",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-11-06",
                 "number": 5,
                 "startTime": "16:00",
                 "endTime": "17:35",
@@ -1124,6 +1143,25 @@
         "date": "2026-11-14",
         "scheduleType": "COMMON",
         "lessons": [
+            {
+                "date": "2026-11-14",
+                "number": 0,
+                "startTime": "08:30",
+                "endTime": "10:00",
+                "subject": "Ликвидация академических задолженностей",
+                "otUnits": [
+                    {
+                        "teacher": "Григоренко Т. Н.",
+                        "group": "",
+                        "room": "206",
+                        "additional": "21",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "UNKNOWN",
+                "state": "COMMON"
+            },
             {
                 "date": "2026-11-14",
                 "number": 1,
@@ -1398,69 +1436,6 @@
         ]
     },
     {
-        "date": "2026-12-05",
-        "scheduleType": "COMMON",
-        "lessons": [
-            {
-                "date": "2026-12-05",
-                "number": 1,
-                "startTime": "08:30",
-                "endTime": "10:05",
-                "subject": "пр Экономика предприятий сервиса, туризма и индустрии гостеприимства",
-                "otUnits": [
-                    {
-                        "teacher": "Григоренко Т. Н.",
-                        "group": "ПСТ21",
-                        "room": "206",
-                        "additional": "21",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-05",
-                "number": 2,
-                "startTime": "10:15",
-                "endTime": "11:50",
-                "subject": "лек Экономика предприятий сервиса, туризма и индустрии гостеприимства",
-                "otUnits": [
-                    {
-                        "teacher": "Григоренко Т. Н.",
-                        "group": "ПСТ21, ПСТ22",
-                        "room": "705",
-                        "additional": "26",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            },
-            {
-                "date": "2026-12-05",
-                "number": 3,
-                "startTime": "12:00",
-                "endTime": "13:35",
-                "subject": "пр Экономика предприятий сервиса, туризма и индустрии гостеприимства",
-                "otUnits": [
-                    {
-                        "teacher": "Григоренко Т. Н.",
-                        "group": "ПСТ22",
-                        "room": "206",
-                        "additional": "21",
-                        "onlineUrl": null,
-                        "subject": null
-                    }
-                ],
-                "type": "COMMON",
-                "state": "COMMON"
-            }
-        ]
-    },
-    {
         "date": "2026-12-12",
         "scheduleType": "COMMON",
         "lessons": [
@@ -1621,6 +1596,50 @@
                         "group": "ПСТ22",
                         "room": "206",
                         "additional": "21",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            }
+        ]
+    },
+    {
+        "date": "2026-12-28",
+        "scheduleType": "COMMON",
+        "lessons": [
+            {
+                "date": "2026-12-28",
+                "number": 1,
+                "startTime": "08:30",
+                "endTime": "10:05",
+                "subject": "экз Экономика предприятий сервиса, туризма и индустрии гостеприимства",
+                "otUnits": [
+                    {
+                        "teacher": "Григоренко Т. Н.",
+                        "group": "ПСТ22",
+                        "room": "610",
+                        "additional": "26",
+                        "onlineUrl": null,
+                        "subject": null
+                    }
+                ],
+                "type": "COMMON",
+                "state": "COMMON"
+            },
+            {
+                "date": "2026-12-28",
+                "number": 2,
+                "startTime": "10:15",
+                "endTime": "11:50",
+                "subject": "экз Экономика предприятий сервиса, туризма и индустрии гостеприимства",
+                "otUnits": [
+                    {
+                        "teacher": "Григоренко Т. Н.",
+                        "group": "ПСТ22",
+                        "room": "610",
+                        "additional": "26",
                         "onlineUrl": null,
                         "subject": null
                     }
