@@ -1,7 +1,7 @@
 import { TelegramApi } from './api';
 import { DatabaseService } from '../db/d1';
 import { BotHandlers } from './handlers';
-import { ScheduleClient } from '../schedule/client';
+import { ScheduleClient, getNextStudyDayOffset } from '../schedule/client';
 import { DeliveryBotClient } from '../delivery/client';
 
 export class BotCallbacks {
@@ -176,7 +176,7 @@ export class BotCallbacks {
     if (data.startsWith('t_tomorrow:')) {
       const [, inst, teacherId] = data.split(':');
       await this.tg.answerCallbackQuery({ callback_query_id: queryId });
-      await this.handlers.showTeacherSchedule(chatId, inst, teacherId, 1, messageId);
+      await this.handlers.showTeacherSchedule(chatId, inst, teacherId, getNextStudyDayOffset(), messageId);
       return;
     }
 
@@ -208,7 +208,7 @@ export class BotCallbacks {
       const [, inst, ...grpParts] = data.split(':');
       const groupIdOrName = grpParts.join(':');
       await this.tg.answerCallbackQuery({ callback_query_id: queryId });
-      await this.handlers.showGroupSchedule(chatId, inst, groupIdOrName, 1, messageId);
+      await this.handlers.showGroupSchedule(chatId, inst, groupIdOrName, getNextStudyDayOffset(), messageId);
       return;
     }
 

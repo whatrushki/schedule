@@ -1,6 +1,6 @@
 import { TelegramApi, InlineKeyboardMarkup } from '../telegram/api';
 import { DatabaseService } from '../db/d1';
-import { ScheduleClient, formatRuDate, getDayOfWeekRuShort, escapeHtml } from '../schedule/client';
+import { ScheduleClient, formatRuDate, getDayOfWeekRuShort, getNextStudyDayOffset, getNextStudyDayLabel, escapeHtml } from '../schedule/client';
 import { DeliveryBotClient } from '../delivery/client';
 import { Env, ChatConfig, DayDto } from '../types';
 
@@ -27,8 +27,10 @@ export class CronWorker {
   async run(forceMode?: string): Promise<{ replacementsChecked: number; replacementsSent: number; dailySent: number; deliveryPushed: number }> {
     const todayInfo = getMoscowDate(0);
     const tomorrowInfo = getMoscowDate(1);
+    const nextStudyInfo = getMoscowDate(getNextStudyDayOffset());
     const todayStr = todayInfo.dateStr;
     const tomorrowStr = tomorrowInfo.dateStr;
+    const nextStudyStr = nextStudyInfo.dateStr;
 
     let replacementsSent = 0;
     let dailySent = 0;
@@ -114,7 +116,7 @@ export class CronWorker {
         await this.db.markDailySent(chat.chat_id, hourTag, chat.last_daily_sent_date);
 
         // Synchronize replacement hash with full current schedule so daily notifications don't trigger redundant alerts
-        const currentHash = computeReplacementsHash(days, todayStr, tomorrowStr, moscowHour);
+        const currentHash = computeReplacementsHash(days, todayStr, nextStudyStr, moscowHour);
         await this.db.updateChatReplacementsHash(chat.chat_id, currentHash);
         chat.last_replacements_hash = currentHash;
       } catch (e) {
@@ -135,7 +137,7 @@ export class CronWorker {
       const days = await getCachedOrFetchSchedule(chat.institution, targetId, isTeacher);
       if (!days || days.length === 0) continue;
 
-      const changedLessons = extractChangedLessons(days, todayStr, tomorrowStr, moscowHour);
+      const changedLessons = extractChangedLessons(days, todayStr, nextStudyStr, moscowHour);
       const currentHash = JSON.stringify(changedLessons);
 
       if (chat.last_replacements_hash === null || chat.last_replacements_hash === undefined) {
@@ -199,7 +201,7 @@ export class CronWorker {
             inline_keyboard: [
               [
                 { text: '📅 Сегодня', callback_data: 'cmd:today' },
-                { text: '🗓 Завтра', callback_data: 'cmd:tomorrow' }
+                { text: getNextStudyDayLabel(false), callback_data: 'cmd:tomorrow' }
               ],
               [
                 { text: '🗓 Вся неделя', callback_data: 'cmd:week' }
@@ -339,7 +341,7 @@ function buildDailyKeyboard(isMorning: boolean): InlineKeyboardMarkup {
 
   if (isMorning) {
     rows.push([
-      { text: '🗓 На завтра', callback_data: 'cmd:tomorrow' },
+      { text: getNextStudyDayLabel(true), callback_data: 'cmd:tomorrow' },
       { text: '🗓 Вся неделя', callback_data: 'cmd:week' }
     ]);
   } else {

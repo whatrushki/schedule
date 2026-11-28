@@ -1,6 +1,16 @@
 import { TelegramApi, InlineKeyboardMarkup } from './api';
 import { DatabaseService } from '../db/d1';
-import { ScheduleClient, INSTITUTIONS, escapeHtml, formatRuDate, getDayOfWeekRuShort, fromHex, toHex } from '../schedule/client';
+import {
+  ScheduleClient,
+  INSTITUTIONS,
+  escapeHtml,
+  formatRuDate,
+  getDayOfWeekRuShort,
+  getNextStudyDayOffset,
+  getNextStudyDayLabel,
+  fromHex,
+  toHex
+} from '../schedule/client';
 import { DeliveryBotClient } from '../delivery/client';
 import { Env, ChatConfig, GroupMetaDto, TeacherMetaDto } from '../types';
 
@@ -503,7 +513,7 @@ export class BotHandlers {
     const inline_keyboard: any[][] = [
       [
         { text: '📅 Сегодня', callback_data: 'cmd:today' },
-        { text: '🗓 Завтра', callback_data: 'cmd:tomorrow' }
+        { text: getNextStudyDayLabel(false), callback_data: 'cmd:tomorrow' }
       ],
       [
         { text: '🗓 Вся неделя', callback_data: 'cmd:week' }
@@ -706,19 +716,23 @@ export class BotHandlers {
     const todayDateStr = getMoscowDateString(0);
     const day = scheduleDays.find(d => d.date === todayDateStr) || { date: todayDateStr, lessons: [] };
 
-    const res = await this.schedule.formatDaySchedule(
-      day,
-      chat.group_name,
-      isTeacher,
-      this.botUsername,
-      chat.institution
-    );
+    const [res, stalenessNote] = await Promise.all([
+      this.schedule.formatDaySchedule(
+        day,
+        chat.group_name,
+        isTeacher,
+        this.botUsername,
+        chat.institution
+      ),
+      this.schedule.getStalenessNote(chat.institution)
+    ]);
 
+    const finalText = stalenessNote ? `${res.text}\n\n${stalenessNote}` : res.text;
     const keyboard = this.buildScheduleCardKeyboard('today');
     if (messageId) {
-      await this.tg.editMessageText({ chat_id: chatId, message_id: messageId, text: res.text, parse_mode: 'HTML', reply_markup: keyboard });
+      await this.tg.editMessageText({ chat_id: chatId, message_id: messageId, text: finalText, parse_mode: 'HTML', reply_markup: keyboard });
     } else {
-      await this.tg.sendMessage({ chat_id: chatId, text: res.text, parse_mode: 'HTML', reply_markup: keyboard });
+      await this.tg.sendMessage({ chat_id: chatId, text: finalText, parse_mode: 'HTML', reply_markup: keyboard });
     }
   }
 
@@ -744,22 +758,26 @@ export class BotHandlers {
       return;
     }
 
-    const tomorrowDateStr = getMoscowDateString(1);
+    const tomorrowDateStr = getMoscowDateString(getNextStudyDayOffset());
     const day = scheduleDays.find(d => d.date === tomorrowDateStr) || { date: tomorrowDateStr, lessons: [] };
 
-    const res = await this.schedule.formatDaySchedule(
-      day,
-      chat.group_name,
-      isTeacher,
-      this.botUsername,
-      chat.institution
-    );
+    const [res, stalenessNote] = await Promise.all([
+      this.schedule.formatDaySchedule(
+        day,
+        chat.group_name,
+        isTeacher,
+        this.botUsername,
+        chat.institution
+      ),
+      this.schedule.getStalenessNote(chat.institution)
+    ]);
 
+    const finalText = stalenessNote ? `${res.text}\n\n${stalenessNote}` : res.text;
     const keyboard = this.buildScheduleCardKeyboard('tomorrow');
     if (messageId) {
-      await this.tg.editMessageText({ chat_id: chatId, message_id: messageId, text: res.text, parse_mode: 'HTML', reply_markup: keyboard });
+      await this.tg.editMessageText({ chat_id: chatId, message_id: messageId, text: finalText, parse_mode: 'HTML', reply_markup: keyboard });
     } else {
-      await this.tg.sendMessage({ chat_id: chatId, text: res.text, parse_mode: 'HTML', reply_markup: keyboard });
+      await this.tg.sendMessage({ chat_id: chatId, text: finalText, parse_mode: 'HTML', reply_markup: keyboard });
     }
   }
 
@@ -797,7 +815,7 @@ export class BotHandlers {
       inline_keyboard: [
         [
           { text: '📅 Сегодня', callback_data: 'cmd:today' },
-          { text: '🗓 Завтра', callback_data: 'cmd:tomorrow' }
+          { text: getNextStudyDayLabel(false), callback_data: 'cmd:tomorrow' }
         ],
         [
           { text: '« В главное меню', callback_data: 'cmd:menu' }
@@ -846,19 +864,23 @@ export class BotHandlers {
     const dayOfWeekShort = getDayOfWeekRuShort(day.date);
     const customHeader = `<blockquote>${escapeHtml(teacherName)} · ${dateFormatted} (${dayOfWeekShort})</blockquote>`;
 
-    const res = await this.schedule.formatDaySchedule(
-      day,
-      teacherName,
-      true,
-      this.botUsername,
-      inst,
-      customHeader
-    );
+    const [res, stalenessNote] = await Promise.all([
+      this.schedule.formatDaySchedule(
+        day,
+        teacherName,
+        true,
+        this.botUsername,
+        inst,
+        customHeader
+      ),
+      this.schedule.getStalenessNote(inst)
+    ]);
 
+    const finalText = stalenessNote ? `${res.text}\n\n${stalenessNote}` : res.text;
     const navButtons: any[][] = [
       [
         { text: '📅 Сегодня', callback_data: `t_today:${inst}:${teacherId}` },
-        { text: '🗓 Завтра', callback_data: `t_tomorrow:${inst}:${teacherId}` }
+        { text: getNextStudyDayLabel(false), callback_data: `t_tomorrow:${inst}:${teacherId}` }
       ],
       [
         { text: '🗓 Вся неделя', callback_data: `t_week:${inst}:${teacherId}` }
@@ -874,9 +896,9 @@ export class BotHandlers {
     const keyboard: InlineKeyboardMarkup = { inline_keyboard: navButtons };
 
     if (messageId) {
-      await this.tg.editMessageText({ chat_id: chatId, message_id: messageId, text: res.text, parse_mode: 'HTML', reply_markup: keyboard });
+      await this.tg.editMessageText({ chat_id: chatId, message_id: messageId, text: finalText, parse_mode: 'HTML', reply_markup: keyboard });
     } else {
-      await this.tg.sendMessage({ chat_id: chatId, text: res.text, parse_mode: 'HTML', reply_markup: keyboard });
+      await this.tg.sendMessage({ chat_id: chatId, text: finalText, parse_mode: 'HTML', reply_markup: keyboard });
     }
   }
 
@@ -903,7 +925,7 @@ export class BotHandlers {
       inline_keyboard: [
         [
           { text: '📅 Сегодня', callback_data: `t_today:${inst}:${teacherId}` },
-          { text: '🗓 Завтра', callback_data: `t_tomorrow:${inst}:${teacherId}` }
+          { text: getNextStudyDayLabel(false), callback_data: `t_tomorrow:${inst}:${teacherId}` }
         ],
         [
           { text: '« В главное меню', callback_data: 'cmd:menu' }
@@ -949,19 +971,23 @@ export class BotHandlers {
     const dayOfWeekShort = getDayOfWeekRuShort(day.date);
     const customHeader = `<blockquote>${escapeHtml(resolvedName)} · ${dateFormatted} (${dayOfWeekShort})</blockquote>`;
 
-    const res = await this.schedule.formatDaySchedule(
-      day,
-      resolvedName,
-      false,
-      this.botUsername,
-      inst,
-      customHeader
-    );
+    const [res, stalenessNote] = await Promise.all([
+      this.schedule.formatDaySchedule(
+        day,
+        resolvedName,
+        false,
+        this.botUsername,
+        inst,
+        customHeader
+      ),
+      this.schedule.getStalenessNote(inst)
+    ]);
 
+    const finalText = stalenessNote ? `${res.text}\n\n${stalenessNote}` : res.text;
     const navButtons: any[][] = [
       [
         { text: '📅 Сегодня', callback_data: `g_today:${inst}:${resolvedId}` },
-        { text: '🗓 Завтра', callback_data: `g_tomorrow:${inst}:${resolvedId}` }
+        { text: getNextStudyDayLabel(false), callback_data: `g_tomorrow:${inst}:${resolvedId}` }
       ],
       [
         { text: '🗓 Вся неделя', callback_data: `g_week:${inst}:${resolvedId}` }
@@ -977,9 +1003,9 @@ export class BotHandlers {
     const keyboard: InlineKeyboardMarkup = { inline_keyboard: navButtons };
 
     if (messageId) {
-      await this.tg.editMessageText({ chat_id: chatId, message_id: messageId, text: res.text, parse_mode: 'HTML', reply_markup: keyboard });
+      await this.tg.editMessageText({ chat_id: chatId, message_id: messageId, text: finalText, parse_mode: 'HTML', reply_markup: keyboard });
     } else {
-      await this.tg.sendMessage({ chat_id: chatId, text: res.text, parse_mode: 'HTML', reply_markup: keyboard });
+      await this.tg.sendMessage({ chat_id: chatId, text: finalText, parse_mode: 'HTML', reply_markup: keyboard });
     }
   }
 
@@ -1007,7 +1033,7 @@ export class BotHandlers {
       inline_keyboard: [
         [
           { text: '📅 Сегодня', callback_data: `g_today:${inst}:${resolvedId}` },
-          { text: '🗓 Завтра', callback_data: `g_tomorrow:${inst}:${resolvedId}` }
+          { text: getNextStudyDayLabel(false), callback_data: `g_tomorrow:${inst}:${resolvedId}` }
         ],
         [
           { text: '« В главное меню', callback_data: 'cmd:menu' }
@@ -1029,7 +1055,7 @@ export class BotHandlers {
 
     if (currentDay === 'today') {
       rows.push([
-        { text: '🗓 На завтра', callback_data: 'cmd:tomorrow' },
+        { text: getNextStudyDayLabel(true), callback_data: 'cmd:tomorrow' },
         { text: '🗓 Вся неделя', callback_data: 'cmd:week' }
       ]);
     } else {
@@ -1070,7 +1096,9 @@ export class BotHandlers {
     }
 
     const todayStr = getMoscowDateString(0);
-    const tomorrowStr = getMoscowDateString(1);
+    const nextOffset = getNextStudyDayOffset();
+    const tomorrowStr = getMoscowDateString(nextOffset);
+    const nextLabel = nextOffset === 2 ? 'Послезавтра' : 'Завтра';
 
     const todayDay = scheduleDays.find(d => d.date === todayStr) || scheduleDays[0];
     const tomorrowDay = scheduleDays.find(d => d.date === tomorrowStr) || scheduleDays[1] || scheduleDays[0];
@@ -1089,7 +1117,7 @@ export class BotHandlers {
       {
         type: 'article',
         id: `tomorrow_${matchedGroup.name}`,
-        title: `🗓 ${matchedGroup.name} — Завтра (${tomorrowDay.date})`,
+        title: `🗓 ${matchedGroup.name} — ${nextLabel} (${tomorrowDay.date})`,
         description: `${tomorrowDay.lessons?.length || 0} пар · Нажмите для отправки`,
         input_message_content: { message_text: tomorrowRes.text, parse_mode: 'HTML' }
       }

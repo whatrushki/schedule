@@ -4,13 +4,14 @@ on:
   release:
     types: [ published ]
   schedule:
-    # РКСИ (частые изменения и планшетки замен):
-    # 07:00, 10:00, 13:00, 16:00, 19:00 МСК (UTC+3) -> 04:00, 07:00, 10:00, 13:00, 16:00 UTC
-    # Ночью (с 19:01 до 06:59 МСК) запросы СТРОГО ОТКЛЮЧЕНЫ.
-    - cron: '0 4,7,10,13,16 * * *'
-    # Остальные ВУЗы (ДГТУ, ИУБиП, РИНХ, ЮФУ):
-    # 07:00 и 18:00 МСК (UTC+3) -> 04:00 и 15:00 UTC
-    - cron: '0 4,15 * * *'
+    # РКСИ + все остальные ВУЗы утром (07:23 МСК = 04:23 UTC)
+    # Используем ненулевые минуты (:23/:43), чтобы избегать пиковой очереди GitHub Actions в :00
+    - cron: '23 4 * * *'
+    # РКСИ в течение дня (замены): 10:23, 13:23, 16:23, 19:23 МСК
+    # Ночью (с 19:30 до 07:00 МСК) запросы ОТКЛЮЧЕНЫ.
+    - cron: '23 7,10,13,16 * * *'
+    # Остальные ВУЗы вечером: 18:43 МСК (15:43 UTC)
+    - cron: '43 15 * * *'
 
   workflow_dispatch:
     inputs:
@@ -72,14 +73,19 @@ jobs:
           elif [ "${{ github.event_name }}" = "release" ]; then
             echo "target=all" >> $GITHUB_OUTPUT
           else
-            HOUR=$(date -u +%H)
-            if [ "$HOUR" -eq "04" ]; then
-              echo "target=all" >> $GITHUB_OUTPUT
-            elif [ "$HOUR" -eq "15" ]; then
-              echo "target=others" >> $GITHUB_OUTPUT
-            else
-              echo "target=rksi" >> $GITHUB_OUTPUT
-            fi
+            # Опираемся на точный cron-триггер, а не на текущее время запуска,
+            # иначе при задержке очереди GitHub Actions утренний 'all' сбрасывался в 'rksi'.
+            case "${{ github.event.schedule }}" in
+              "23 4 * * *")
+                echo "target=all" >> $GITHUB_OUTPUT
+                ;;
+              "43 15 * * *")
+                echo "target=others" >> $GITHUB_OUTPUT
+                ;;
+              *)
+                echo "target=rksi" >> $GITHUB_OUTPUT
+                ;;
+            esac
           fi
 
       - name: Run Schedule Sync CLI

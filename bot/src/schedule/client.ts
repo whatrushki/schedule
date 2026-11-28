@@ -33,23 +33,86 @@ function isLessonAdded(state?: string | null): boolean {
   return s === 'ADDED';
 }
 
+export interface InstitutionMetaDto {
+  lastSync?: string;
+  institution?: string;
+  status?: string;
+  errorMessage?: string | null;
+  groupCount?: number;
+  teacherCount?: number;
+}
+
 export class ScheduleClient {
-  private rawCdnBase = 'https://raw.githubusercontent.com/whatrushki/WHAT-Schedule-android/gh-pages/schedule';
   private teachersCache: Map<string, { list: TeacherMetaDto[]; keyMap: Map<string, string>; timestamp: number }> = new Map();
   private groupsCache: Map<string, { list: GroupMetaDto[]; timestamp: number }> = new Map();
+  private metaCache: Map<string, { meta: InstitutionMetaDto | null; timestamp: number }> = new Map();
 
   constructor(private fallbackBaseUrl: string) {}
 
-  private getUrls(inst: string, path: string): string[] {
+  private getUrls(inst: string, path: string, bustCache = false): string[] {
+    const suffix = bustCache ? `?cb=${Math.floor(Date.now() / 60000)}` : '';
     const list: string[] = [
-      `https://raw.githubusercontent.com/whatrushki/WHAT-Schedule-android/gh-pages/schedule/${inst}/${path}`,
-      `https://raw.githubusercontent.com/whatrushki/schedule/gh-pages/schedule/${inst}/${path}`,
-      `https://cdn.jsdelivr.net/gh/whatrushki/schedule@gh-pages/schedule/${inst}/${path}`
+      `https://raw.githubusercontent.com/whatrushki/schedule/gh-pages/schedule/${inst}/${path}${suffix}`,
+      `https://cdn.jsdelivr.net/gh/whatrushki/schedule@gh-pages/schedule/${inst}/${path}${suffix}`
     ];
     if (this.fallbackBaseUrl && !this.fallbackBaseUrl.includes('whatrushki.github.io')) {
-      list.push(`${this.fallbackBaseUrl}/${inst}/${path}`);
+      list.push(`${this.fallbackBaseUrl}/${inst}/${path}${suffix}`);
     }
     return list;
+  }
+
+  private async fetchNoCache(url: string): Promise<Response> {
+    return fetch(url, {
+      headers: {
+        'Cache-Control': 'no-cache, no-store',
+        'Pragma': 'no-cache',
+        'User-Agent': 'WHAT-Schedule-Bot/2.0'
+      },
+      // @ts-ignore Cloudflare Workers cf fetch options
+      cf: { cacheTtl: 0, cacheEverything: false }
+    });
+  }
+
+  async fetchMeta(institution: string): Promise<InstitutionMetaDto | null> {
+    const inst = institution.toLowerCase();
+    const cached = this.metaCache.get(inst);
+    if (cached && Date.now() - cached.timestamp < 2 * 60 * 1000) {
+      return cached.meta;
+    }
+
+    const urls = this.getUrls(inst, 'meta.json', true);
+    for (const url of urls) {
+      try {
+        const res = await this.fetchNoCache(url);
+        if (res.ok) {
+          const meta: InstitutionMetaDto = await res.json();
+          this.metaCache.set(inst, { meta, timestamp: Date.now() });
+          return meta;
+        }
+      } catch (_) {}
+    }
+    return null;
+  }
+
+  async getStalenessNote(institution: string): Promise<string | null> {
+    const meta = await this.fetchMeta(institution);
+    if (!meta || !meta.lastSync) return null;
+
+    const maxAgeHours = institution.toLowerCase() === 'rksi' ? 16 : 30;
+    const syncMs = Date.parse(meta.lastSync);
+    if (Number.isNaN(syncMs)) return null;
+
+    const ageHours = (Date.now() - syncMs) / (1000 * 60 * 60);
+    if (meta.status?.toUpperCase() !== 'FAILED' && ageHours < maxAgeHours) {
+      return null;
+    }
+
+    const msk = new Date(syncMs + 3 * 3600 * 1000);
+    const dd = String(msk.getUTCDate()).padStart(2, '0');
+    const mm = String(msk.getUTCMonth() + 1).padStart(2, '0');
+    const hh = String(msk.getUTCHours()).padStart(2, '0');
+    const min = String(msk.getUTCMinutes()).padStart(2, '0');
+    return `⚠️ <i>Кэш расписания не обновлялся с ${dd}.${mm} ${hh}:${min} МСК — возможны устаревшие данные.</i>`;
   }
 
   // --- GROUPS ---
@@ -60,11 +123,11 @@ export class ScheduleClient {
       return cached.list;
     }
 
-    const urls = this.getUrls(inst, 'groups.json');
+    const urls = this.getUrls(inst, 'groups.json', true);
 
     for (const url of urls) {
       try {
-        const res = await fetch(url, { headers: { 'Cache-Control': 'no-cache', 'User-Agent': 'WHAT-Schedule-Bot/2.0' } });
+        const res = await this.fetchNoCache(url);
         if (res.ok) {
           const list: any[] = await res.json();
           const parsed = list.map(item => ({
@@ -138,11 +201,11 @@ export class ScheduleClient {
   }
 
   private async tryFetchGroupJson(inst: string, safeKey: string): Promise<DayDto[] | null> {
-    const urls = this.getUrls(inst, `groups/${safeKey}.json`);
+    const urls = this.getUrls(inst, `groups/${safeKey}.json`, true);
 
     for (const url of urls) {
       try {
-        const res = await fetch(url, { headers: { 'Cache-Control': 'no-cache', 'User-Agent': 'WHAT-Schedule-Bot/2.0' } });
+        const res = await this.fetchNoCache(url);
         if (res.ok) {
           const data: any = await res.json();
           if (Array.isArray(data)) return data as DayDto[];
@@ -161,11 +224,11 @@ export class ScheduleClient {
       return cached.list;
     }
 
-    const urls = this.getUrls(inst, 'teachers.json');
+    const urls = this.getUrls(inst, 'teachers.json', true);
 
     for (const url of urls) {
       try {
-        const res = await fetch(url, { headers: { 'Cache-Control': 'no-cache', 'User-Agent': 'WHAT-Schedule-Bot/2.0' } });
+        const res = await this.fetchNoCache(url);
         if (res.ok) {
           const list: any[] = await res.json();
           const parsed: TeacherMetaDto[] = list.map(item => ({
@@ -246,11 +309,11 @@ export class ScheduleClient {
   }
 
   private async tryFetchTeacherJson(inst: string, safeKey: string): Promise<DayDto[] | null> {
-    const urls = this.getUrls(inst, `teachers/${safeKey}.json`);
+    const urls = this.getUrls(inst, `teachers/${safeKey}.json`, true);
 
     for (const url of urls) {
       try {
-        const res = await fetch(url, { headers: { 'Cache-Control': 'no-cache', 'User-Agent': 'WHAT-Schedule-Bot/2.0' } });
+        const res = await this.fetchNoCache(url);
         if (res.ok) {
           const data: any = await res.json();
           if (Array.isArray(data)) return data as DayDto[];
@@ -673,6 +736,26 @@ export function getDayOfWeekRuShort(dateStr: string): string {
   const d = new Date(dateStr + 'T12:00:00Z');
   const daysShort = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
   return daysShort[d.getUTCDay()] || '';
+}
+
+export function getMoscowDateParts(offsetDays = 0): { dateStr: string; dayOfWeek: number } {
+  const d = new Date(Date.now() + 3 * 3600 * 1000 + offsetDays * 24 * 3600 * 1000);
+  return {
+    dateStr: d.toISOString().split('T')[0],
+    dayOfWeek: d.getUTCDay()
+  };
+}
+
+export function getNextStudyDayOffset(): number {
+  return getMoscowDateParts(0).dayOfWeek === 6 ? 2 : 1;
+}
+
+export function getNextStudyDayLabel(withPreposition = false): string {
+  const isSaturday = getMoscowDateParts(0).dayOfWeek === 6;
+  if (isSaturday) {
+    return withPreposition ? '🗓 На послезавтра' : '🗓 Послезавтра';
+  }
+  return withPreposition ? '🗓 На завтра' : '🗓 Завтра';
 }
 
 function formatSubgroup(subgroup?: string | null): string {
